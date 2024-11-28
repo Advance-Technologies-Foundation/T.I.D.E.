@@ -397,7 +397,9 @@ FodyWeavers.xsd
 *.sln.iml
 
 
-**./.idea
+**/.idea
+**/.idea/*
+
 
 resource.??-??.xml
 !resource.en-US.xml

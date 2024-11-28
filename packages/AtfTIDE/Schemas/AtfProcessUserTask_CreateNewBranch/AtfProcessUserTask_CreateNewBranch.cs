@@ -17,6 +17,14 @@ namespace Terrasoft.Core.Process.Configuration
 	/// <exclude/>
 	public partial class AtfProcessUserTask_CreateNewBranch
 	{
+
+		protected override bool InternalExecute(ProcessExecutingContext context){
+			
+			ErrorMessage = "Error";
+			IsError = true;
+			return true;
+		}
+
 	}
 
 	#endregion
