@@ -1,0 +1,28 @@
+{
+  "MetaData": {
+    "Schema": {
+      "ManagerName": "AddonSchemaManager",
+      "UId": "3fe8cdf5-90d4-40a8-a31d-887f652cfa68",
+      "A2": "AtfTIDERelatedPage",
+      "A5": "6f71e54c-1960-40c9-94f6-073fd67699ab",
+      "B1": [],
+      "B2": [],
+      "B3": [],
+      "B6": "5530927f-22ea-e7c9-4ccf-506d3a6c2ed2",
+      "B8": "0.0.0.0",
+      "AD1": "d7d9045c-6aa7-4fce-99af-5f48f26fab3c",
+      "AD2": "EntitySchemaManager",
+      "AD3": "RelatedPage",
+      "AD5": "3a2d6f51-1bfc-4c17-aacb-b53de4866b7c",
+      "AD4": {
+        "Pages": [
+          {
+            "UId": "0a373a2c-4213-404a-9c06-4e375f501a12",
+            "PageSchemaUId": "9f761e8a-5728-4e7a-8177-2ace96221846",
+            "IsDefault": true
+          }
+        ]
+      }
+    }
+  }
+}

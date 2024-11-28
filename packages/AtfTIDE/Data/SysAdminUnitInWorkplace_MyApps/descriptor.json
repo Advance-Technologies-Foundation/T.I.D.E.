@@ -1,0 +1,35 @@
+﻿{
+  "Descriptor": {
+    "UId": "739eb35d-9035-4dfd-9a3c-bd14826308b9",
+    "Name": "SysAdminUnitInWorkplace_MyApps",
+    "ModifiedOnUtc": "\/Date(1632479437000)\/",
+    "InstallType": 0,
+    "Schema": {
+      "UId": "c24608d4-6299-45ab-8b08-84cbdff67d9a",
+      "Name": "SysAdminUnitInWorkplace"
+    },
+    "Columns": [
+      {
+        "ColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+        "IsForceUpdate": false,
+        "IsKey": true,
+        "ColumnName": "Id",
+        "DataTypeValueUId": "23018567-a13c-4320-8687-fd6f9e3699bd"
+      },
+      {
+        "ColumnUId": "d5cfaf4a-0900-4ef9-aee8-2ede7f9d97fb",
+        "IsForceUpdate": false,
+        "IsKey": false,
+        "ColumnName": "SysWorkplace",
+        "DataTypeValueUId": "b295071f-7ea9-4e62-8d1a-919bf3732ff2"
+      },
+      {
+        "ColumnUId": "b96bb4ca-a133-44f1-aa7d-24495d89e278",
+        "IsForceUpdate": false,
+        "IsKey": false,
+        "ColumnName": "SysAdminUnit",
+        "DataTypeValueUId": "b295071f-7ea9-4e62-8d1a-919bf3732ff2"
+      }
+    ]
+  }
+}

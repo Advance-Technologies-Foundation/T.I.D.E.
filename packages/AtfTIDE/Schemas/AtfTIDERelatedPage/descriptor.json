@@ -1,0 +1,10 @@
+﻿{
+  "Descriptor": {
+    "UId": "3fe8cdf5-90d4-40a8-a31d-887f652cfa68",
+    "Name": "AtfTIDERelatedPage",
+    "ModifiedOnUtc": "\/Date(1732828297000)\/",
+    "ManagerName": "AddonSchemaManager",
+    "Caption": "T.I.D.E. (Page settings)",
+    "DependsOn": []
+  }
+}

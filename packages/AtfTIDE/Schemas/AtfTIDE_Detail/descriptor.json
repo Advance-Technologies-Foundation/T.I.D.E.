@@ -1,0 +1,14 @@
+﻿{
+  "Descriptor": {
+    "UId": "c6ca6613-3ede-44e9-9c4a-fc437cb863ff",
+    "Name": "AtfTIDE_Detail",
+    "ModifiedOnUtc": "\/Date(1732828297000)\/",
+    "Parent": {
+      "UId": "01eb38ee-668a-42f0-999d-c2534f979089",
+      "Name": "BaseGridDetailV2"
+    },
+    "ManagerName": "ClientUnitSchemaManager",
+    "Caption": "T.I.D.E. detail",
+    "DependsOn": []
+  }
+}

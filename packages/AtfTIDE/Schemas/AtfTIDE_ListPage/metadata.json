@@ -1,0 +1,9 @@
+= MetaData.Schema.UId "2079e94d-751e-46aa-a6ce-40da6753f458"
+= MetaData.Schema.A2 "AtfTIDE_ListPage"
+= MetaData.Schema.A5 "6f71e54c-1960-40c9-94f6-073fd67699ab"
+~ MetaData.Schema.B2 ["9b477847-6327-3cd8-1638-324f62e3d420"]
+= MetaData.Schema.B6 "5530927f-22ea-e7c9-4ccf-506d3a6c2ed2"
+= MetaData.Schema.HD1 "3334b6c0-c8ab-4b59-a367-0c9182102552"
+- MetaData.Schema.B7
+- MetaData.Schema.HD12
++ MetaData.Schema.B7 false

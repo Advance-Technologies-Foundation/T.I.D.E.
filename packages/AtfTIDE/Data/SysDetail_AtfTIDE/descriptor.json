@@ -1,0 +1,42 @@
+﻿{
+  "Descriptor": {
+    "UId": "ed63425f-68c0-498f-ac12-3e85e324d5d6",
+    "Name": "SysDetail_AtfTIDE",
+    "ModifiedOnUtc": "\/Date(1635759508000)\/",
+    "InstallType": 0,
+    "Schema": {
+      "UId": "363c2008-c733-407d-9b01-9e6a7cd9a77a",
+      "Name": "SysDetail"
+    },
+    "Columns": [
+      {
+        "ColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+        "IsForceUpdate": false,
+        "IsKey": true,
+        "ColumnName": "Id",
+        "DataTypeValueUId": "23018567-a13c-4320-8687-fd6f9e3699bd"
+      },
+      {
+        "ColumnUId": "631e7238-2751-4a21-b6d6-9f1ac0c84f95",
+        "IsForceUpdate": false,
+        "IsKey": false,
+        "ColumnName": "EntitySchemaUId",
+        "DataTypeValueUId": "23018567-a13c-4320-8687-fd6f9e3699bd"
+      },
+      {
+        "ColumnUId": "49ad8ee2-65a6-4cdd-b8f6-85c2f10a54dc",
+        "IsForceUpdate": false,
+        "IsKey": false,
+        "ColumnName": "Caption",
+        "DataTypeValueUId": "ddb3a1ee-07e8-4d62-b7a9-d0e618b00fbd"
+      },
+      {
+        "ColumnUId": "8585929c-62ae-4673-ae8d-bb37f87e5144",
+        "IsForceUpdate": false,
+        "IsKey": false,
+        "ColumnName": "DetailSchemaUId",
+        "DataTypeValueUId": "23018567-a13c-4320-8687-fd6f9e3699bd"
+      }
+    ]
+  }
+}

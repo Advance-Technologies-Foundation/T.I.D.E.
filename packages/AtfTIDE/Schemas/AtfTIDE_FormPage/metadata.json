@@ -1,0 +1,8 @@
+= MetaData.Schema.UId "9f761e8a-5728-4e7a-8177-2ace96221846"
+= MetaData.Schema.A2 "AtfTIDE_FormPage"
+= MetaData.Schema.A5 "6f71e54c-1960-40c9-94f6-073fd67699ab"
+~ MetaData.Schema.B2 ["eb6d9dd1-7b3d-47e7-90d0-c217ef67bb44","326516ca-44c5-46fa-914e-d45d484779b0","ce058cbe-b41d-400b-ae64-d3511d2feb13","400992bb-4af1-491f-b958-e5c721381b14"]
+= MetaData.Schema.B6 "5530927f-22ea-e7c9-4ccf-506d3a6c2ed2"
+= MetaData.Schema.HD1 "3b2e117f-8c6b-4ca5-80a2-7ebb497cddf9"
+- MetaData.Schema.B7
++ MetaData.Schema.B7 false

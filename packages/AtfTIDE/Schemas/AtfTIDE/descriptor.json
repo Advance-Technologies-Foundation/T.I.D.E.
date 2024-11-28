@@ -1,0 +1,14 @@
+﻿{
+  "Descriptor": {
+    "UId": "d7d9045c-6aa7-4fce-99af-5f48f26fab3c",
+    "Name": "AtfTIDE",
+    "ModifiedOnUtc": "\/Date(1635762253000)\/",
+    "Parent": {
+      "UId": "1bab9dcf-17d5-49f8-9536-8e0064f1dce0",
+      "Name": "BaseEntity"
+    },
+    "ManagerName": "EntitySchemaManager",
+    "Caption": "T.I.D.E.",
+    "DependsOn": []
+  }
+}
