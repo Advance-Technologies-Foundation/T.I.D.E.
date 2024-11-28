@@ -1,9 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
-  <!-- Background Square -->
-  <rect x="0" y="0" width="100" height="100" rx="15" fill="#FF6F00" />
+<?xml version="1.0" encoding="UTF-8"?>
+<svg height="800px" width="800px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+	 viewBox="0 0 512 512" xml:space="preserve">
+  <!-- Background -->
+  <rect width="512" height="512" fill="#FFFFFF"/>
 
-  <!-- Curling Wave -->
-  <path d="M50 70 Q60 40 80 60 Q70 30 50 40 Q30 50 40 70 Z" fill="#FFFFFF" />
-  <circle cx="75" cy="45" r="6" fill="#FFFFFF" />
-  <circle cx="85" cy="50" r="3" fill="#FFFFFF" opacity="0.8" />
-</svg>
+  <!-- Orange Wave -->
+  <path style="fill:#FF6F00;" d="M0,413.249c0,0,99.571-7.286,135.999-84.999S166.356,98.751,343.641,98.751
+	c38.871,0,81.438,18.386,104.731,34.602c116.875,81.362,61.625,248.326-75.589,205.523c0,0,49.786-2.125,49.786-67.697
+	s-82.091-75.285-94.714-20.643c-8.992,38.927-3.643,156.643,167.571,162.713"/>
+
+  <path style="fill:#FF8A
