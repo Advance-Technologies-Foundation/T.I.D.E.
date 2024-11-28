@@ -3,9 +3,10 @@
     "AdministratedByColumns": "False",
     "AdministratedByOperations": "False",
     "AdministratedByRecords": "False",
-    "CreatedInVersion": "0.0.0.0",
+    "CreatedInVersion": "8.2.1.5258",
     "IsSSPAvailable": "False",
     "IsTrackChangesInDB": "False",
-    "IsVirtual": "False"
+    "IsVirtual": "False",
+    "UseLiveEditing": "False"
   }
 }

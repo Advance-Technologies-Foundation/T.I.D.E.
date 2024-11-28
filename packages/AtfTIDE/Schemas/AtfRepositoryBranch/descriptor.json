@@ -1,14 +1,13 @@
 ﻿{
   "Descriptor": {
-    "UId": "d7d9045c-6aa7-4fce-99af-5f48f26fab3c",
-    "Name": "AtfTIDE",
-    "ModifiedOnUtc": "\/Date(1635762253000)\/",
+    "UId": "6fada173-e0cf-4a5f-af7b-f158cbc78f30",
+    "Name": "AtfRepositoryBranch",
+    "ModifiedOnUtc": "\/Date(1732830892000)\/",
     "Parent": {
       "UId": "1bab9dcf-17d5-49f8-9536-8e0064f1dce0",
       "Name": "BaseEntity"
     },
     "ManagerName": "EntitySchemaManager",
-    "Caption": "T.I.D.E.",
-    "DependsOn": []
+    "Caption": "Repository Branch"
   }
 }

@@ -34,7 +34,7 @@ define("AtfTIDE_ListPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHEMA
 					"clicked": {
 						"request": "crt.ImportDataRequest",
 						"params": {
-							"entitySchemaName": "AtfTIDE"
+							"entitySchemaName": "AtfRepository"
 						}
 					}
 				}
@@ -44,7 +44,7 @@ define("AtfTIDE_ListPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHEMA
 				"name": "FolderTree",
 				"values": {
 					"sourceSchemaName": "FolderTree",
-					"rootSchemaName": "AtfTIDE"
+					"rootSchemaName": "AtfRepository"
 				}
 			}
 		]/**SCHEMA_VIEW_CONFIG_DIFF*/,
@@ -85,7 +85,7 @@ define("AtfTIDE_ListPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHEMA
 					"config"
 				],
 				"values": {
-					"entitySchemaName": "AtfTIDE"
+					"entitySchemaName": "AtfRepository"
 				}
 			}
 		]/**SCHEMA_MODEL_CONFIG_DIFF*/,

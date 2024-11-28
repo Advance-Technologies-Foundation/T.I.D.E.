@@ -1,5 +1,6 @@
 <Project>
 	<ItemGroup Label="Entity Files" Condition="'$(PkgPath)' != ''">
-		<Compile Include="$(PkgPath)/AtfTIDE/Schemas/AtfTIDE/AtfTIDE.cs" Condition="Exists('$(PkgPath)/AtfTIDE/Schemas/AtfTIDE/AtfTIDE.cs')" />
+		<Compile Include="$(PkgPath)/AtfTIDE/Schemas/AtfRepository/AtfRepository.cs" Condition="Exists('$(PkgPath)/AtfTIDE/Schemas/AtfRepository/AtfRepository.cs')" />
+		<Compile Include="$(PkgPath)/AtfTIDE/Schemas/AtfRepositoryBranch/AtfRepositoryBranch.cs" Condition="Exists('$(PkgPath)/AtfTIDE/Schemas/AtfRepositoryBranch/AtfRepositoryBranch.cs')" />
 	</ItemGroup>
 </Project>

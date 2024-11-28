@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="en-US">
+	<Group Type="String">
+		<Items>
+			<Item Name="Caption" Value="Repository" />
+			<Item Name="Columns.AtfAccessToken.Caption" Value="Access Token" />
+			<Item Name="Columns.AtfName.Caption" Value="Name" />
+			<Item Name="Columns.AtfRepositoryUrl.Caption" Value="Repository Url" />
+		</Items>
+	</Group>
+</Resources>

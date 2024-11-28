@@ -552,11 +552,10 @@
 			<Private>False</Private>
 		</Reference>
 	</ItemGroup>
-	<ItemGroup Label="Standalone package external assembly references">
-	  <Folder Include="cs\" />
-	</ItemGroup>
+	<ItemGroup Label="Standalone package external assembly references"></ItemGroup>
 	<ItemGroup Label="Entity Files">
-		<Compile Remove="$(RelativePkgFolderPath)/AtfTIDE/Schemas/AtfTIDE/AtfTIDE.cs" Condition="Exists('$(RelativePkgFolderPath)/AtfTIDE/Schemas/AtfTIDE/AtfTIDE.cs')" />
+		<Compile Remove="$(RelativePkgFolderPath)/AtfTIDE/Schemas/AtfRepository/AtfRepository.cs" Condition="Exists('$(RelativePkgFolderPath)/AtfTIDE/Schemas/AtfRepository/AtfRepository.cs')" />
+		<Compile Remove="$(RelativePkgFolderPath)/AtfTIDE/Schemas/AtfRepositoryBranch/AtfRepositoryBranch.cs" Condition="Exists('$(RelativePkgFolderPath)/AtfTIDE/Schemas/AtfRepositoryBranch/AtfRepositoryBranch.cs')" />
 	</ItemGroup>
 	<ItemGroup Label="3rd Party References"></ItemGroup>
 	<Target Name="Paths" BeforeTargets="BeforeCompile">

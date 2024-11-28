@@ -2,8 +2,10 @@
 <Resources Culture="en-US">
 	<Group Type="String">
 		<Items>
-			<Item Name="Caption" Value="T.I.D.E." />
+			<Item Name="Caption" Value="Repository Branch" />
 			<Item Name="Columns.AtfName.Caption" Value="Name" />
+			<Item Name="Columns.AtfRepository.Caption" Value="Repository" />
+			<Item Name="Description" Value="Repository Branch" />
 		</Items>
 	</Group>
 </Resources>

@@ -3,6 +3,14 @@
 	<Group Type="String">
 		<Items>
 			<Item Name="Caption" Value="T.I.D.E. form page" />
+			<Item Name="LocalizableStrings.ExpansionPanel_srhpdgo_title.Value" Value="Repository Branch" />
+			<Item Name="LocalizableStrings.GridDetailAddBtn_3ky6mp6_caption.Value" Value="New" />
+			<Item Name="LocalizableStrings.GridDetailExportDataBtn_cqxwofy_caption.Value" Value="Export to Excel" />
+			<Item Name="LocalizableStrings.GridDetailImportDataBtn_nk414hp_caption.Value" Value="Data import" />
+			<Item Name="LocalizableStrings.GridDetailRefreshBtn_bpq27gy_caption.Value" Value="Refresh" />
+			<Item Name="LocalizableStrings.GridDetailSearchFilter_m373eyy_placeholder.Value" Value="Search" />
+			<Item Name="LocalizableStrings.GridDetailSettingsBtn_n0jlqjb_caption.Value" Value="Actions" />
+			<Item Name="LocalizableStrings.WebInput_RepositoryUrl_tooltip.Value" Value="Repository URL to " />
 		</Items>
 	</Group>
 </Resources>
