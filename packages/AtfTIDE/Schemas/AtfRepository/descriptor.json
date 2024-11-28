@@ -8,6 +8,7 @@
       "Name": "BaseEntity"
     },
     "ManagerName": "EntitySchemaManager",
-    "Caption": "Repository"
+    "Caption": "Repository",
+    "DependsOn": []
   }
 }
