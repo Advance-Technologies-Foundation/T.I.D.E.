@@ -4,6 +4,7 @@
     "Name": "AtfProcessUserTask_CreateNewBranch",
     "ModifiedOnUtc": "\/Date(1732832456000)\/",
     "ManagerName": "ProcessUserTaskSchemaManager",
-    "Caption": "Create new branch"
+    "Caption": "Create new branch",
+    "DependsOn": []
   }
 }
