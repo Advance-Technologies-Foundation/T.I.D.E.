@@ -6,7 +6,7 @@
 
   <!-- Title and description on the right -->
   <div style="flex: 1; text-align: left;">
-    <h1 style="font-size: 2.5em; font-weight: bold; margin: 0; color: #FFFFFF;">T.I.D.E. 🌊</h1>
+    <h1 style="font-size: 2.5em; font-weight: bold; margin: 0; color: #FFFFFF;">T.I.D.E. </h1>
     <p style="font-size: 1.2em; margin-top: 10px; margin-bottom: 0; color: #FFFFFF;">Team Integration Developer Environment for Creatio Developers</p>
   </div>
 </div>
