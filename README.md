@@ -1,18 +1,15 @@
-<table style="width: 100%; background-color: #1E1E1E; color: #FFFFFF; padding: 20px; font-family: Arial, sans-serif; border-spacing: 0; border-collapse: collapse; border: none; border-radius: 8px;">
-  <tr style="border: none;">
-    <!-- Logo Column -->
-    <td style="width: 150px; text-align: center; vertical-align: middle; padding: 10px; border: none;">
-      <a href="/icons/tide.svg" target="_blank" style="text-decoration: none;">
-        <img src="/icons/tide.svg" alt="T.I.D.E. Logo" style="width: 100px; height: auto; border-radius: 8px;" />
-      </a>
-    </td>
-    <!-- Text Column -->
-    <td style="vertical-align: middle; text-align: left; padding: 10px; border: none;">
-      <h1 style="font-size: 2em; font-weight: bold; margin: 0;">T.I.D.E.</h1>
-      <p style="font-size: 1.2em; margin: 10px 0 0 0;">Team Integration Developer Environment for Creatio Developers</p>
-    </td>
-  </tr>
-</table>
+<div style="display: flex; align-items: center; justify-content: start; background: #1E1E1E; color: #FFFFFF; padding: 20px; font-family: Arial, sans-serif; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.2);">
+  <!-- Logo on the left -->
+  <a href="/icons/tide.svg" target="_blank" style="flex-shrink: 0; margin-right: 20px; text-decoration: none;">
+    <img src="/icons/tide.svg" alt="T.I.D.E. Logo" style="width: 128px; height: auto; border-radius: 8px; display: block;" />
+  </a>
+
+  <!-- Title and description on the right -->
+  <div style="flex: 1; text-align: left;">
+    <h1 style="font-size: 2.5em; font-weight: bold; margin: 0; color: #FFFFFF;">T.I.D.E. 🌊</h1>
+    <p style="font-size: 1.2em; margin-top: 10px; margin-bottom: 0; color: #FFFFFF;">Team Integration Developer Environment for Creatio Developers</p>
+  </div>
+</div>
 
 
 
