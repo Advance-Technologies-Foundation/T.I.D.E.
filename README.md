@@ -6,7 +6,7 @@
 
   <!-- Title and description on the right -->
   <div style="flex: 1;">
-    <h1 style="font-size: 2.5em; font-weight: bold; margin: 0;">T.I.D.E. 🌊</h1>
+    <h1 style="font-size: 2.5em; font-weight: bold; margin: 0;">T.I.D.E.</h1>
     <p style="font-size: 1.2em; margin-top: 10px;">Team Integration Developer Environment for Creatio Developers</p>
   </div>
 </div>
@@ -42,4 +42,4 @@ Start managing your project with version control tools designed for simplicity.
 Ready to revolutionize your Creatio development workflow?
 T.I.D.E. is your one-stop solution for effortless Git integration and team collaboration.
 
-Make waves in development with T.I.D.E.!
+Make waves in development with T.I.D.E. 🌊!
