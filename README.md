@@ -1,3 +1,4 @@
+<a href="/icons/tide.svg" target="_blank" style="float: right; margin-left: 10px;"> <img src="/icons/tide.svg" alt="T.I.D.E. Logo" style="width: 25%; max-width: 128px;" /> </a>
 T.I.D.E. 🌊
 Team Integration Developer Environment for Creatio Developers
 
