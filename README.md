@@ -8,7 +8,7 @@
     </td>
     <!-- Text Column -->
     <td style="vertical-align: middle; text-align: left; padding: 10px; border: none;">
-      <h1 style="font-size: 2em; font-weight: bold; margin: 0;">T.I.D.E. 🌊</h1>
+      <h1 style="font-size: 2em; font-weight: bold; margin: 0;">T.I.D.E.</h1>
       <p style="font-size: 1.2em; margin: 10px 0 0 0;">Team Integration Developer Environment for Creatio Developers</p>
     </td>
   </tr>
