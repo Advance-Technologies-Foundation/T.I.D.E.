@@ -6,7 +6,7 @@
 
   <!-- Title and description on the right -->
   <div>
-    <a style="font-size: 2.5em; font-weight: bold; margin: 0;">T.I.D.E.</a>
+    <div style="font-size: 2.5em; font-weight: bold; margin: 0;">T.I.D.E.</div>
     <p style="font-size: 1.2em; margin-top: 10px;">Team Integration Developer Environment for Creatio Developers</p>
   </div>
 </div>
