@@ -1,1 +1,1 @@
-clio install-nuget-pkg AtfTIDE -e tide
+clio-dev install-nuget-pkg AtfTIDE -e tide
