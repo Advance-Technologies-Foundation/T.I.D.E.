@@ -1,14 +1,16 @@
-<div style="display: flex; align-items: center; justify-content: space-between; background: #FF6F00; color: #FFFFFF; padding: 50px 20px; font-family: Arial, sans-serif; border-radius: 8px;">
-  <!-- Logo on the right -->
-  <a href="/icons/tide.svg" target="_blank" style="margin-left: 20px;">
-    <img src="/icons/tide.svg" alt="T.I.D.E. Logo" style="width: 25%; max-width: 128px;" />
+<div style="display: flex; align-items: center; background: #1E1E1E; color: #FFFFFF; padding: 20px; font-family: Arial, sans-serif; border-radius: 8px;">
+  <!-- Logo on the left -->
+  <a href="/icons/tide.svg" target="_blank" style="margin-right: 20px;">
+    <img src="/icons/tide.svg" alt="T.I.D.E. Logo" style="width: 128px; height: auto; border-radius: 8px;" />
   </a>
-  <!-- Title and description centered -->
-  <div style="flex: 1; text-align: center;">
-    <h1 style="font-size: 4em; font-weight: bold; margin: 0;">T.I.D.E. 🌊</h1>
-    <p style="font-size: 1.5em; margin-top: 10px;">Team Integration Developer Environment for Creatio Developers</p>
+
+  <!-- Title and description on the right -->
+  <div>
+    <h1 style="font-size: 2.5em; font-weight: bold; margin: 0;">T.I.D.E. 🌊</h1>
+    <p style="font-size: 1.2em; margin-top: 10px;">Team Integration Developer Environment for Creatio Developers</p>
   </div>
 </div>
+
 
 🚀 About T.I.D.E.
 T.I.D.E. is a powerful application designed to bridge the gap for NOCODE developers working in Creatio. It empowers teams to seamlessly integrate with GIT directly from the Creatio environment, eliminating the need for additional external tools.
