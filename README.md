@@ -1,13 +1,13 @@
-<div style="display: flex; align-items: center; background: #1E1E1E; color: #FFFFFF; padding: 20px; font-family: Arial, sans-serif; border-radius: 8px;">
+<div style="display: flex; align-items: center; justify-content: start; background: #1E1E1E; color: #FFFFFF; padding: 20px; font-family: Arial, sans-serif; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.2);">
   <!-- Logo on the left -->
-  <a href="/icons/tide.svg" target="_blank" style="margin-right: 20px;">
-    <img src="/icons/tide.svg" alt="T.I.D.E. Logo" style="width: 128px; height: auto; border-radius: 8px;" />
+  <a href="/icons/tide.svg" target="_blank" style="flex-shrink: 0; margin-right: 20px; text-decoration: none;">
+    <img src="/icons/tide.svg" alt="T.I.D.E. Logo" style="width: 128px; height: auto; border-radius: 8px; display: block;" />
   </a>
 
   <!-- Title and description on the right -->
-  <div>
-    <div style="font-size: 2.5em; font-weight: bold; margin: 0;">T.I.D.E.</div>
-    <p style="font-size: 1.2em; margin-top: 10px;">Team Integration Developer Environment for Creatio Developers</p>
+  <div style="flex: 1; text-align: left;">
+    <h1 style="font-size: 2.5em; font-weight: bold; margin: 0; color: #FFFFFF;">T.I.D.E.</h1>
+    <p style="font-size: 1.2em; margin-top: 10px; margin-bottom: 0; color: #FFFFFF;">Team Integration Developer Environment for Creatio Developers</p>
   </div>
 </div>
 
