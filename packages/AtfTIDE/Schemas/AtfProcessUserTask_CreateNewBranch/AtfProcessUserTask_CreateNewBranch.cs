@@ -1,3 +1,7 @@
+using System.IO;
+using System.Reflection;
+using AtfTIDE;
+
 namespace Terrasoft.Core.Process.Configuration
 {
 
@@ -20,8 +24,35 @@ namespace Terrasoft.Core.Process.Configuration
 
 		protected override bool InternalExecute(ProcessExecutingContext context){
 			
-			ErrorMessage = "Error";
-			IsError = true;
+			var baseDir = AppDomain.CurrentDomain.BaseDirectory;
+			var pkgFolderPath = Path.Combine(baseDir, "Terrasoft.Configuration", "Pkg", "AtfTIDE","Files");
+			var clioFolderPath = Path.Combine(baseDir, "Terrasoft.Configuration", "Pkg", "AtfTIDE","Files","clio");
+			var confFolderPath = Path.Combine(baseDir, "conf");
+			var tideFolderPath = Path.Combine(confFolderPath,"tide");
+			
+			if(!Directory.Exists(tideFolderPath)) {
+				Directory.CreateDirectory(tideFolderPath);
+			}
+			string repositoryFolderPath = Path.Combine(tideFolderPath, RepositoryName);
+			if(!Directory.Exists(repositoryFolderPath)) {
+				Directory.CreateDirectory(repositoryFolderPath);
+			}
+			
+			string branchFolderPath = Path.Combine(repositoryFolderPath, BranchName);
+			if(!Directory.Exists(branchFolderPath)) {
+				Directory.CreateDirectory(branchFolderPath);
+			}
+			
+			// Clone
+			// new branch
+			
+			
+			
+			
+			
+			
+			ErrorMessage = string.Empty;
+			IsError = false;
 			return true;
 		}
 

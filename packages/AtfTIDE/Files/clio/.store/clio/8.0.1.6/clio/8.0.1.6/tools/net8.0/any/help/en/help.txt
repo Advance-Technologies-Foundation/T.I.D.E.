@@ -1,0 +1,63 @@
+Creatio CLI
+
+DESCRIPTION
+    clio - is a Creatio command line interface utility that makes possible
+    development in the local file system and to build automation CI.
+
+COMMANDS
+    Name                    Short name  Description
+    ---------------------   ----------  ---------------------------------------
+
+    restart-web-app         restart     Restart a web application
+
+    clear-redis-db          flushdb     Clear redis database
+
+    reg-web-app             reg         Configure a web application settings
+
+    unreg-web-app           unreg       Unregister application's settings from
+                                        the list
+
+    show-web-app-list       apps        Show the list of web applications and
+                                        their settings
+
+    generate-pkg-zip        compress    Prepare an archive of creatio
+                                        package
+
+    push-pkg                install     Install package on a web application
+
+    delete-pkg-remote       delete      Delete package from a web application
+
+    new-pkg                 init        Create a new creatio package in
+                                        local file system
+
+    pull-pkg                download    Download package from a web application
+
+    update-cli              update      Update clio to new available version
+
+    execute-sql-script      sql         Execute SQL script on a web application
+
+    install-gate            gate        Install clio api gateway package on a
+                                        web application(website)
+
+    add-item                create      Create item in a project
+
+    set-dev-mode            dev         Activate developer mode for selected
+                                        web application(website)
+
+    set-syssetting          syssetting  Set setting value
+
+    set-feature             feature     Set feature state
+
+    pack-nuget-pkg          pack        Pack NuGet package
+
+    push-nuget-pkg          push        Push package on NuGet server
+
+    restore-nuget-pkg       restore     Restore NuGet package to a folder 
+
+    set-pkg-version			pkgversion	Set package version
+
+    install-nuget-pkg       installng   Restore NuGet package to  
+                                        a web application (website)
+
+AUTHOR
+    https://github.com/Advance-Technologies-Foundation/clio

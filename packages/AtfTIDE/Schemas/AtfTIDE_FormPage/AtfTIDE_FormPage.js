@@ -3,6 +3,21 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHEMA
 		viewConfigDiff: /**SCHEMA_VIEW_CONFIG_DIFF*/[
 			{
 				"operation": "merge",
+				"name": "SideAreaProfileContainer",
+				"values": {
+					"columns": [
+						"minmax(64px, 1fr)"
+					],
+					"gap": {
+						"columnGap": "large",
+						"rowGap": "none"
+					},
+					"visible": true,
+					"alignItems": "stretch"
+				}
+			},
+			{
+				"operation": "merge",
 				"name": "Tabs",
 				"values": {
 					"styleType": "default",
@@ -78,6 +93,202 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHEMA
 			},
 			{
 				"operation": "insert",
+				"name": "GridContainer_07cf22a",
+				"values": {
+					"type": "crt.GridContainer",
+					"columns": [
+						"minmax(32px, 1fr)"
+					],
+					"rows": "minmax(max-content, 32px)",
+					"gap": {
+						"columnGap": "large",
+						"rowGap": "none"
+					},
+					"items": [],
+					"fitContent": true,
+					"visible": true,
+					"color": "transparent",
+					"borderRadius": "none",
+					"padding": {
+						"top": "none",
+						"right": "none",
+						"bottom": "none",
+						"left": "none"
+					},
+					"alignItems": "stretch"
+				},
+				"parentName": "SideContainer",
+				"propertyName": "items",
+				"index": 1
+			},
+			{
+				"operation": "insert",
+				"name": "ExpansionPanel_w1nj9pl",
+				"values": {
+					"layoutConfig": {
+						"column": 1,
+						"row": 1,
+						"colSpan": 1,
+						"rowSpan": 1
+					},
+					"type": "crt.ExpansionPanel",
+					"tools": [],
+					"items": [],
+					"title": "#ResourceString(ExpansionPanel_w1nj9pl_title)#",
+					"toggleType": "default",
+					"togglePosition": "before",
+					"expanded": true,
+					"labelColor": "auto",
+					"fullWidthHeader": false,
+					"titleWidth": 20,
+					"padding": {
+						"top": "small",
+						"bottom": "small",
+						"left": "none",
+						"right": "none"
+					},
+					"fitContent": true
+				},
+				"parentName": "GridContainer_07cf22a",
+				"propertyName": "items",
+				"index": 0
+			},
+			{
+				"operation": "insert",
+				"name": "GridContainer_ejvgf2o",
+				"values": {
+					"type": "crt.GridContainer",
+					"rows": "minmax(max-content, 24px)",
+					"columns": [
+						"minmax(32px, 1fr)"
+					],
+					"gap": {
+						"columnGap": "large",
+						"rowGap": 0
+					},
+					"styles": {
+						"overflow-x": "hidden"
+					},
+					"items": []
+				},
+				"parentName": "ExpansionPanel_w1nj9pl",
+				"propertyName": "tools",
+				"index": 0
+			},
+			{
+				"operation": "insert",
+				"name": "FlexContainer_qp4lnra",
+				"values": {
+					"type": "crt.FlexContainer",
+					"direction": "row",
+					"gap": "none",
+					"alignItems": "center",
+					"items": [],
+					"layoutConfig": {
+						"colSpan": 1,
+						"column": 1,
+						"row": 1,
+						"rowSpan": 1
+					}
+				},
+				"parentName": "GridContainer_ejvgf2o",
+				"propertyName": "items",
+				"index": 0
+			},
+			{
+				"operation": "insert",
+				"name": "GridContainer_lv08x1q",
+				"values": {
+					"type": "crt.GridContainer",
+					"rows": "minmax(max-content, 32px)",
+					"columns": [
+						"minmax(32px, 1fr)",
+						"minmax(32px, 1fr)"
+					],
+					"gap": {
+						"columnGap": "large",
+						"rowGap": "none"
+					},
+					"styles": {
+						"overflow-x": "hidden"
+					},
+					"items": [],
+					"visible": true,
+					"color": "transparent",
+					"borderRadius": "none",
+					"padding": {
+						"top": "none",
+						"right": "none",
+						"bottom": "none",
+						"left": "none"
+					},
+					"alignItems": "stretch"
+				},
+				"parentName": "ExpansionPanel_w1nj9pl",
+				"propertyName": "items",
+				"index": 0
+			},
+			{
+				"operation": "insert",
+				"name": "Input_Login",
+				"values": {
+					"layoutConfig": {
+						"column": 1,
+						"row": 1,
+						"colSpan": 2,
+						"rowSpan": 1
+					},
+					"type": "crt.Input",
+					"label": "$Resources.Strings.PDS_AtfLogin_g255988",
+					"labelPosition": "auto",
+					"control": "$PDS_AtfLogin_g255988",
+					"multiline": false
+				},
+				"parentName": "GridContainer_lv08x1q",
+				"propertyName": "items",
+				"index": 0
+			},
+			{
+				"operation": "insert",
+				"name": "Input_Password",
+				"values": {
+					"layoutConfig": {
+						"column": 1,
+						"row": 2,
+						"colSpan": 2,
+						"rowSpan": 1
+					},
+					"type": "crt.Input",
+					"label": "$Resources.Strings.PDS_AtfPassword_rrf2i89",
+					"labelPosition": "auto",
+					"control": "$PDS_AtfPassword_rrf2i89",
+					"multiline": false
+				},
+				"parentName": "GridContainer_lv08x1q",
+				"propertyName": "items",
+				"index": 1
+			},
+			{
+				"operation": "insert",
+				"name": "WebInput_CreatioUrl",
+				"values": {
+					"layoutConfig": {
+						"column": 1,
+						"row": 3,
+						"colSpan": 2,
+						"rowSpan": 1
+					},
+					"type": "crt.WebInput",
+					"label": "$Resources.Strings.PDS_AtfCreatioUrl_hgv046w",
+					"labelPosition": "auto",
+					"control": "$PDS_AtfCreatioUrl_hgv046w"
+				},
+				"parentName": "GridContainer_lv08x1q",
+				"propertyName": "items",
+				"index": 2
+			},
+			{
+				"operation": "insert",
 				"name": "WebInput_RepositoryUrl",
 				"values": {
 					"layoutConfig": {
@@ -98,12 +309,36 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHEMA
 			},
 			{
 				"operation": "insert",
-				"name": "Input_AtfAccessToken",
+				"name": "Input_irahwlv",
 				"values": {
 					"layoutConfig": {
 						"column": 1,
 						"row": 2,
-						"colSpan": 2,
+						"colSpan": 1,
+						"rowSpan": 1
+					},
+					"type": "crt.Input",
+					"label": "$Resources.Strings.PDS_AtfUserName_zwx7r4g",
+					"labelPosition": "above",
+					"control": "$PDS_AtfUserName_zwx7r4g",
+					"multiline": false,
+					"visible": true,
+					"readonly": false,
+					"placeholder": "",
+					"tooltip": ""
+				},
+				"parentName": "GeneralInfoTabContainer",
+				"propertyName": "items",
+				"index": 1
+			},
+			{
+				"operation": "insert",
+				"name": "Input_AtfAccessToken",
+				"values": {
+					"layoutConfig": {
+						"column": 2,
+						"row": 2,
+						"colSpan": 1,
 						"rowSpan": 1
 					},
 					"type": "crt.Input",
@@ -114,7 +349,7 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHEMA
 				},
 				"parentName": "GeneralInfoTabContainer",
 				"propertyName": "items",
-				"index": 1
+				"index": 2
 			},
 			{
 				"operation": "insert",
@@ -426,6 +661,26 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHEMA
 									}
 								}
 							}
+						}
+					},
+					"PDS_AtfUserName_zwx7r4g": {
+						"modelConfig": {
+							"path": "PDS.AtfUserName"
+						}
+					},
+					"PDS_AtfLogin_g255988": {
+						"modelConfig": {
+							"path": "PDS.AtfLogin"
+						}
+					},
+					"PDS_AtfPassword_rrf2i89": {
+						"modelConfig": {
+							"path": "PDS.AtfPassword"
+						}
+					},
+					"PDS_AtfCreatioUrl_hgv046w": {
+						"modelConfig": {
+							"path": "PDS.AtfCreatioUrl"
 						}
 					}
 				}

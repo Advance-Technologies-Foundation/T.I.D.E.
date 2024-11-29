@@ -19,6 +19,11 @@
 	[DesignModeProperty(Name = "BranchName", Group = "", ValuesProvider = "ProcessSchemaParameterValueProvider", Editor="xtype=processschemaparametervalueedit;dataProvider=processschemaparametervalueprovider", ResourceManager = "0988a3e0cf0d4d9d9e243dcdd5606e3c", CaptionResourceItem = "Parameters.BranchName.Caption", DescriptionResourceItem = "Parameters.BranchName.Caption", UseSolutionStorage = true)]
 	[DesignModeProperty(Name = "ErrorMessage", Group = "", ValuesProvider = "ProcessSchemaParameterValueProvider", Editor="xtype=processschemaparametervalueedit;dataProvider=processschemaparametervalueprovider", ResourceManager = "0988a3e0cf0d4d9d9e243dcdd5606e3c", CaptionResourceItem = "Parameters.ErrorMessage.Caption", DescriptionResourceItem = "Parameters.ErrorMessage.Caption", UseSolutionStorage = true)]
 	[DesignModeProperty(Name = "IsError", Group = "", ValuesProvider = "ProcessSchemaParameterValueProvider", Editor="xtype=processschemaparametervalueedit;dataProvider=processschemaparametervalueprovider", ResourceManager = "0988a3e0cf0d4d9d9e243dcdd5606e3c", CaptionResourceItem = "Parameters.IsError.Caption", DescriptionResourceItem = "Parameters.IsError.Caption", UseSolutionStorage = true)]
+	[DesignModeProperty(Name = "UserName", Group = "", ValuesProvider = "ProcessSchemaParameterValueProvider", Editor="xtype=processschemaparametervalueedit;dataProvider=processschemaparametervalueprovider", ResourceManager = "0988a3e0cf0d4d9d9e243dcdd5606e3c", CaptionResourceItem = "Parameters.UserName.Caption", DescriptionResourceItem = "Parameters.UserName.Caption", UseSolutionStorage = true)]
+	[DesignModeProperty(Name = "RepositoryName", Group = "", ValuesProvider = "ProcessSchemaParameterValueProvider", Editor="xtype=processschemaparametervalueedit;dataProvider=processschemaparametervalueprovider", ResourceManager = "0988a3e0cf0d4d9d9e243dcdd5606e3c", CaptionResourceItem = "Parameters.RepositoryName.Caption", DescriptionResourceItem = "Parameters.RepositoryName.Caption", UseSolutionStorage = true)]
+	[DesignModeProperty(Name = "CreatioLogin", Group = "", ValuesProvider = "ProcessSchemaParameterValueProvider", Editor="xtype=processschemaparametervalueedit;dataProvider=processschemaparametervalueprovider", ResourceManager = "0988a3e0cf0d4d9d9e243dcdd5606e3c", CaptionResourceItem = "Parameters.CreatioLogin.Caption", DescriptionResourceItem = "Parameters.CreatioLogin.Caption", UseSolutionStorage = true)]
+	[DesignModeProperty(Name = "CreatioPassword", Group = "", ValuesProvider = "ProcessSchemaParameterValueProvider", Editor="xtype=processschemaparametervalueedit;dataProvider=processschemaparametervalueprovider", ResourceManager = "0988a3e0cf0d4d9d9e243dcdd5606e3c", CaptionResourceItem = "Parameters.CreatioPassword.Caption", DescriptionResourceItem = "Parameters.CreatioPassword.Caption", UseSolutionStorage = true)]
+	[DesignModeProperty(Name = "CreatioUrl", Group = "", ValuesProvider = "ProcessSchemaParameterValueProvider", Editor="xtype=processschemaparametervalueedit;dataProvider=processschemaparametervalueprovider", ResourceManager = "0988a3e0cf0d4d9d9e243dcdd5606e3c", CaptionResourceItem = "Parameters.CreatioUrl.Caption", DescriptionResourceItem = "Parameters.CreatioUrl.Caption", UseSolutionStorage = true)]
 	/// <exclude/>
 	public partial class AtfProcessUserTask_CreateNewBranch : ProcessUserTask
 	{
@@ -59,6 +64,31 @@
 			set;
 		}
 
+		public virtual string UserName {
+			get;
+			set;
+		}
+
+		public virtual string RepositoryName {
+			get;
+			set;
+		}
+
+		public virtual string CreatioLogin {
+			get;
+			set;
+		}
+
+		public virtual string CreatioPassword {
+			get;
+			set;
+		}
+
+		public virtual string CreatioUrl {
+			get;
+			set;
+		}
+
 		#endregion
 
 		#region Methods: Public
@@ -93,6 +123,31 @@
 			if (UseFlowEngineMode) {
 				if (!HasMapping("IsError")) {
 					writer.WriteValue("IsError", IsError, false);
+				}
+			}
+			if (UseFlowEngineMode) {
+				if (!HasMapping("UserName")) {
+					writer.WriteValue("UserName", UserName, null);
+				}
+			}
+			if (UseFlowEngineMode) {
+				if (!HasMapping("RepositoryName")) {
+					writer.WriteValue("RepositoryName", RepositoryName, null);
+				}
+			}
+			if (UseFlowEngineMode) {
+				if (!HasMapping("CreatioLogin")) {
+					writer.WriteValue("CreatioLogin", CreatioLogin, null);
+				}
+			}
+			if (UseFlowEngineMode) {
+				if (!HasMapping("CreatioPassword")) {
+					writer.WriteValue("CreatioPassword", CreatioPassword, null);
+				}
+			}
+			if (UseFlowEngineMode) {
+				if (!HasMapping("CreatioUrl")) {
+					writer.WriteValue("CreatioUrl", CreatioUrl, null);
 				}
 			}
 			writer.WriteFinishObject();
@@ -134,6 +189,36 @@
 						break;
 					}
 					IsError = reader.GetBoolValue();
+				break;
+				case "UserName":
+					if (!UseFlowEngineMode) {
+						break;
+					}
+					UserName = reader.GetStringValue();
+				break;
+				case "RepositoryName":
+					if (!UseFlowEngineMode) {
+						break;
+					}
+					RepositoryName = reader.GetStringValue();
+				break;
+				case "CreatioLogin":
+					if (!UseFlowEngineMode) {
+						break;
+					}
+					CreatioLogin = reader.GetStringValue();
+				break;
+				case "CreatioPassword":
+					if (!UseFlowEngineMode) {
+						break;
+					}
+					CreatioPassword = reader.GetStringValue();
+				break;
+				case "CreatioUrl":
+					if (!UseFlowEngineMode) {
+						break;
+					}
+					CreatioUrl = reader.GetStringValue();
 				break;
 			}
 		}

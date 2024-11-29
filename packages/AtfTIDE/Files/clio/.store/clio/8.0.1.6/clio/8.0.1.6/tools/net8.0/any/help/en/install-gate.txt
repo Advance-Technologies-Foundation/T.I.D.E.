@@ -1,0 +1,17 @@
+﻿COMMAND TYPE
+    Service commands
+
+NAME
+    install-gate - installs a service package that expands clio commands
+
+DESCRIPTION
+    Installs on the selected web application(website) a service package 
+    "cliogate" that makes available all Creatio's commands.
+
+EXAMPLE
+    clio install-gate
+
+    clio install-gate -e <ENVIRONMENT NAME>
+
+REPORTING BUGS
+    https://github.com/Advance-Technologies-Foundation/clio

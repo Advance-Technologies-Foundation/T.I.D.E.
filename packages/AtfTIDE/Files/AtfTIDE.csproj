@@ -16,6 +16,9 @@
 		<MSBuildWarningsAsMessages>MSB3277;MSB3245;MSB3243</MSBuildWarningsAsMessages>
 		<NoWarn>CS1522,CS0162</NoWarn>
 	</PropertyGroup>
+	<PropertyGroup>
+		<RootNamespace>$(AssemblyName)</RootNamespace>
+	</PropertyGroup>
 	<ItemGroup>
 		<AssemblyAttribute Include="Terrasoft.Core.Attributes.PackageReferenceAssemblyAttribute">
 			<_Parameter1>All</_Parameter1>
@@ -38,6 +41,7 @@
 				<CoreLibPath Condition="'$(CoreLibPath)' == ''">$(RelativePkgFolderPath)/../..</CoreLibPath>
 				<MSBuildWarningsAsMessages Condition=" '$(Configuration)' == 'Release' ">MSB3277;MSB3245;MSB3243</MSBuildWarningsAsMessages>
 				<StandalonePackageAssemblyPath Condition="'$(StandalonePackageAssemblyPath)' == ''">Files/Bin/netstandard</StandalonePackageAssemblyPath>
+				<CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
 			</PropertyGroup>
 		</When>
 	</Choose>
@@ -552,12 +556,43 @@
 			<Private>False</Private>
 		</Reference>
 	</ItemGroup>
-	<ItemGroup Label="Standalone package external assembly references"></ItemGroup>
+	<ItemGroup Label="Standalone package external assembly references" />
 	<ItemGroup Label="Entity Files">
 		<Compile Remove="$(RelativePkgFolderPath)/AtfTIDE/Schemas/AtfRepository/AtfRepository.cs" Condition="Exists('$(RelativePkgFolderPath)/AtfTIDE/Schemas/AtfRepository/AtfRepository.cs')" />
 		<Compile Remove="$(RelativePkgFolderPath)/AtfTIDE/Schemas/AtfRepositoryBranch/AtfRepositoryBranch.cs" Condition="Exists('$(RelativePkgFolderPath)/AtfTIDE/Schemas/AtfRepositoryBranch/AtfRepositoryBranch.cs')" />
 	</ItemGroup>
-	<ItemGroup Label="3rd Party References"></ItemGroup>
+	<ItemGroup Label="3rd Party References">
+		<Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions">
+			<HintPath>$(CoreLibPath)/Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
+			<SpecificVersion>False</SpecificVersion>
+			<Private>False</Private>
+		</Reference>
+		<Reference Include="Microsoft.Extensions.DependencyInjection">
+			<HintPath>$(CoreLibPath)/Microsoft.Extensions.DependencyInjection.dll</HintPath>
+			<SpecificVersion>False</SpecificVersion>
+			<Private>False</Private>
+		</Reference>
+		<Reference Include="System.Memory">
+			<HintPath>$(CoreLibPath)/System.Memory.dll</HintPath>
+			<SpecificVersion>False</SpecificVersion>
+			<Private>False</Private>
+		</Reference>
+		<Reference Include="Microsoft.Extensions.Http">
+			<HintPath>$(CoreLibPath)/Microsoft.Extensions.Http.dll</HintPath>
+			<SpecificVersion>False</SpecificVersion>
+			<Private>False</Private>
+		</Reference>
+		<Reference Include="Microsoft.Extensions.Options">
+			<HintPath>$(CoreLibPath)/Microsoft.Extensions.Options.dll</HintPath>
+			<SpecificVersion>False</SpecificVersion>
+			<Private>False</Private>
+		</Reference>
+		<Reference Include="System.Text.Json">
+			<HintPath>$(CoreLibPath)/System.Text.Json.dll</HintPath>
+			<SpecificVersion>False</SpecificVersion>
+			<Private>False</Private>
+		</Reference>
+	</ItemGroup>
 	<Target Name="Paths" BeforeTargets="BeforeCompile">
 		<Message Importance="High" Text="*********** Project [$(MSBuildProjectFile)] TargetFramework [$(TargetFramework)] CoreTargetFramework [$(CoreTargetFramework)]" />
 		<!--
