@@ -1,1 +1,1 @@
-clio-dev pack "../packages/AtfTIDE" -n "D:/Projects/GitLab/TIDE/publish/"
+clio pack "../packages/AtfTIDE" -n "D:/Projects/GitLab/TIDE/publish/"

@@ -1,1 +1,1 @@
-clio-dev set-icon -i "../icons/tide.svg" -f "../packages" -p "AtfTIDE"
+clio set-icon -i "../icons/tide.svg" -f "../packages" -p "AtfTIDE"
