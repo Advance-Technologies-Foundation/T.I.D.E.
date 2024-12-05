@@ -1,0 +1,82 @@
+﻿{
+  "MetaData": {
+    "Schema": {
+      "ManagerName": "ProcessUserTaskSchemaManager",
+      "UId": "ad6a7f03-7b14-4d06-96c0-bf1c01c1d8f8",
+      "A2": "AtfProcessUserTask_RunOSCommand",
+      "A5": "107aae31-0c74-4422-acf4-c8d817b5e08d",
+      "B1": [],
+      "B2": [],
+      "B3": [],
+      "B6": "57902d1e-ea0c-4991-b367-992c12d68fb2",
+      "B8": "8.2.0.4183",
+      "FJ1": [
+        {
+          "BL1": "Terrasoft.Core.Process.ProcessSchemaParameter",
+          "UId": "f51a5674-58a5-3be3-4c6f-969176e456cb",
+          "A2": "FileName",
+          "A3": "ad6a7f03-7b14-4d06-96c0-bf1c01c1d8f8",
+          "A4": "ad6a7f03-7b14-4d06-96c0-bf1c01c1d8f8",
+          "L1": "8b3f29bb-ea14-4ce5-a5c5-293a929b6ba2",
+          "L8": {},
+          "L6": true,
+          "L11": false
+        },
+        {
+          "BL1": "Terrasoft.Core.Process.ProcessSchemaParameter",
+          "UId": "1c6de97d-2d01-cbc2-9b46-edb5adc9fa38",
+          "A2": "Arguments",
+          "A3": "ad6a7f03-7b14-4d06-96c0-bf1c01c1d8f8",
+          "A4": "ad6a7f03-7b14-4d06-96c0-bf1c01c1d8f8",
+          "L1": "8b3f29bb-ea14-4ce5-a5c5-293a929b6ba2",
+          "L8": {},
+          "L11": false
+        },
+        {
+          "BL1": "Terrasoft.Core.Process.ProcessSchemaParameter",
+          "UId": "50b29541-ac03-b37c-4753-df108dc43e6b",
+          "A2": "WorkingDirectory",
+          "A3": "ad6a7f03-7b14-4d06-96c0-bf1c01c1d8f8",
+          "A4": "ad6a7f03-7b14-4d06-96c0-bf1c01c1d8f8",
+          "L1": "8b3f29bb-ea14-4ce5-a5c5-293a929b6ba2",
+          "L8": {},
+          "L11": false
+        },
+        {
+          "BL1": "Terrasoft.Core.Process.ProcessSchemaParameter",
+          "UId": "a956e318-3536-d766-60dd-4b58b9c3de6d",
+          "A2": "IsError",
+          "A3": "ad6a7f03-7b14-4d06-96c0-bf1c01c1d8f8",
+          "A4": "ad6a7f03-7b14-4d06-96c0-bf1c01c1d8f8",
+          "L1": "90b65bf8-0ffc-4141-8779-2420877af907",
+          "L8": {},
+          "L11": false
+        },
+        {
+          "BL1": "Terrasoft.Core.Process.ProcessSchemaParameter",
+          "UId": "5af81394-dec1-bca3-738d-32700261d3c2",
+          "A2": "ErrorMessage",
+          "A3": "ad6a7f03-7b14-4d06-96c0-bf1c01c1d8f8",
+          "A4": "ad6a7f03-7b14-4d06-96c0-bf1c01c1d8f8",
+          "L1": "8b3f29bb-ea14-4ce5-a5c5-293a929b6ba2",
+          "L8": {},
+          "L11": false
+        },
+        {
+          "BL1": "Terrasoft.Core.Process.ProcessSchemaParameter",
+          "UId": "8283106d-c12b-4622-950c-afaa8beab20d",
+          "A2": "Output",
+          "A3": "ad6a7f03-7b14-4d06-96c0-bf1c01c1d8f8",
+          "A4": "ad6a7f03-7b14-4d06-96c0-bf1c01c1d8f8",
+          "L1": "8b3f29bb-ea14-4ce5-a5c5-293a929b6ba2",
+          "L8": {},
+          "L11": false
+        }
+      ],
+      "FK4": true,
+      "FK7": true,
+      "FK12": "#839DC3",
+      "FK16": true
+    }
+  }
+}
