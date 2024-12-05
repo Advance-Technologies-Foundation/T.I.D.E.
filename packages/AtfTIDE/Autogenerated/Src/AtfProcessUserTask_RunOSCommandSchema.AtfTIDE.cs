@@ -19,7 +19,6 @@
 	[DesignModeProperty(Name = "WorkingDirectory", Group = "", ValuesProvider = "ProcessSchemaParameterValueProvider", Editor="xtype=processschemaparametervalueedit;dataProvider=processschemaparametervalueprovider", ResourceManager = "ad6a7f037b144d0696c0bf1c01c1d8f8", CaptionResourceItem = "Parameters.WorkingDirectory.Caption", DescriptionResourceItem = "Parameters.WorkingDirectory.Caption", UseSolutionStorage = true)]
 	[DesignModeProperty(Name = "IsError", Group = "", ValuesProvider = "ProcessSchemaParameterValueProvider", Editor="xtype=processschemaparametervalueedit;dataProvider=processschemaparametervalueprovider", ResourceManager = "ad6a7f037b144d0696c0bf1c01c1d8f8", CaptionResourceItem = "Parameters.IsError.Caption", DescriptionResourceItem = "Parameters.IsError.Caption", UseSolutionStorage = true)]
 	[DesignModeProperty(Name = "ErrorMessage", Group = "", ValuesProvider = "ProcessSchemaParameterValueProvider", Editor="xtype=processschemaparametervalueedit;dataProvider=processschemaparametervalueprovider", ResourceManager = "ad6a7f037b144d0696c0bf1c01c1d8f8", CaptionResourceItem = "Parameters.ErrorMessage.Caption", DescriptionResourceItem = "Parameters.ErrorMessage.Caption", UseSolutionStorage = true)]
-	[DesignModeProperty(Name = "Output", Group = "", ValuesProvider = "ProcessSchemaParameterValueProvider", Editor="xtype=processschemaparametervalueedit;dataProvider=processschemaparametervalueprovider", ResourceManager = "ad6a7f037b144d0696c0bf1c01c1d8f8", CaptionResourceItem = "Parameters.Output.Caption", DescriptionResourceItem = "Parameters.Output.Caption", UseSolutionStorage = true)]
 	/// <exclude/>
 	public partial class AtfProcessUserTask_RunOSCommand : ProcessUserTask
 	{
@@ -60,11 +59,6 @@
 			set;
 		}
 
-		public virtual string Output {
-			get;
-			set;
-		}
-
 		#endregion
 
 		#region Methods: Public
@@ -99,11 +93,6 @@
 			if (UseFlowEngineMode) {
 				if (!HasMapping("ErrorMessage")) {
 					writer.WriteValue("ErrorMessage", ErrorMessage, null);
-				}
-			}
-			if (UseFlowEngineMode) {
-				if (!HasMapping("Output")) {
-					writer.WriteValue("Output", Output, null);
 				}
 			}
 			writer.WriteFinishObject();
@@ -145,12 +134,6 @@
 						break;
 					}
 					ErrorMessage = reader.GetStringValue();
-				break;
-				case "Output":
-					if (!UseFlowEngineMode) {
-						break;
-					}
-					Output = reader.GetStringValue();
 				break;
 			}
 		}

@@ -10,11 +10,11 @@ namespace AtfTIDE.Tests {
 	public class AtfProcessUserTask_CreateNewBranch_Tests : BaseMarketplaceTestFixture{
 
 	
-		private AtfProcessUserTask_CreateNewBranchWrapper _sut;
+		private AtfProcessUserTask_CloneRepositoryWrapper _sut;
 
 		protected override void SetUp(){
 			base.SetUp();
-			_sut = new AtfProcessUserTask_CreateNewBranchWrapper(UserConnection);
+			_sut = new AtfProcessUserTask_CloneRepositoryWrapper(UserConnection);
 		}
 
 		[Test]
@@ -31,9 +31,9 @@ namespace AtfTIDE.Tests {
 
 	}
 
-	public class AtfProcessUserTask_CreateNewBranchWrapper: AtfProcessUserTask_CreateNewBranch {
+	public class AtfProcessUserTask_CloneRepositoryWrapper: AtfProcessUserTask_CloneRepository {
 
-		public AtfProcessUserTask_CreateNewBranchWrapper(UserConnection userConnection)
+		public AtfProcessUserTask_CloneRepositoryWrapper(UserConnection userConnection)
 			: base(userConnection){ }
 
 		public void Execute(){

@@ -2,8 +2,9 @@
   "Descriptor": {
     "UId": "ad6a7f03-7b14-4d06-96c0-bf1c01c1d8f8",
     "Name": "AtfProcessUserTask_RunOSCommand",
-    "ModifiedOnUtc": "\/Date(1733433223000)\/",
+    "ModifiedOnUtc": "\/Date(1733437515000)\/",
     "ManagerName": "ProcessUserTaskSchemaManager",
-    "Caption": "Run OS Command"
+    "Caption": "Run OS Command",
+    "DependsOn": []
   }
 }
