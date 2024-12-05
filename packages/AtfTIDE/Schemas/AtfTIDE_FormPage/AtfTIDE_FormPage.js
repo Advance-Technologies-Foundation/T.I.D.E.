@@ -194,13 +194,23 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHEMA
 				"name": "Button_LOADFROMGIT",
 				"values": {
 					"type": "crt.Button",
-					"caption": "#ResourceString(Button_2shb3kw_caption)#",
+					"caption": "#ResourceString(Button_LOADFROMGIT_caption)#",
 					"color": "primary",
 					"disabled": false,
 					"size": "large",
 					"iconPosition": "left-icon",
 					"visible": true,
-					"icon": "export-data-button-icon"
+					"icon": "export-data-button-icon",
+					"clicked": {
+						"request": "crt.RunBusinessProcessRequest",
+						"params": {
+							"processName": "AtfProcess_LoadWorkspaceFromGit",
+							"processRunType": "ForTheSelectedPage",
+							"showNotification": true,
+							"recordIdProcessParameterName": "Repository"
+						}
+					},
+					"clickMode": "default"
 				},
 				"parentName": "FlexContainer_fqhq5qf",
 				"propertyName": "items",
