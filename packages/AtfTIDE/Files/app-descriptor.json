@@ -1,20 +1,20 @@
 {
-  "Code": "AtfTIDE",
-  "Color": "#22AC14",
-  "Description": "Team Integration Developer Environment for Creatio Developers",
-  "HelpLink": "https://github.com/Advance-Technologies-Foundation/T.I.D.E./blob/main/README.md",
-  "Icon": "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4NCjxzdmcgaGVpZ2h0PSI4MDBweCIgd2lkdGg9IjgwMHB4IiB2ZXJzaW9uPSIxLjEiIGlkPSJMYXllcl8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiANCgkgdmlld0JveD0iMCAwIDUxMiA1MTIiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KICA8IS0tIEJhY2tncm91bmQgLS0+DQogIDxyZWN0IHdpZHRoPSI1MTIiIGhlaWdodD0iNTEyIiBmaWxsPSIjRkZGRkZGIi8+DQoNCiAgPCEtLSBPcmFuZ2UgV2F2ZSAtLT4NCiAgPHBhdGggc3R5bGU9ImZpbGw6I0ZGNkYwMDsiIGQ9Ik00MCw0MDBjMCwwLDgwLTcsMTEwLTcwUzE0MCwxMzAsMzAwLDEzMA0KCWMzMCwwLDcwLDE1LDkwLDMwYzEwMCw3MCw1MCwyMTAtNjAsMTgwYzAsMCw0MC0yLDQwLTYwcy03MC02NS04MC0yMGMtOCwzMC0zLDE0MCwxNDAsMTUwIiANCiAgICB0cmFuc2Zvcm09InNjYWxlKDAuOCkgdHJhbnNsYXRlKDUwLDUwKSIgLz4NCg0KICA8IS0tIFNlY29uZGFyeSBXYXZlIC0tPg0KICA8cGF0aCBzdHlsZT0iZmlsbDojRkY4QTY1OyIgZD0iTTQwLDQwMGMwLDAsODAtNywxMTAtNzBTMTQwLDEzMCwzMDAsMTMwIiANCiAgICB0cmFuc2Zvcm09InNjYWxlKDAuOCkgdHJhbnNsYXRlKDUwLDUwKSIgLz4NCjwvc3ZnPg0K",
-  "IconName": "tide_20241129022653.svg",
-  "Maintainer": "ATF",
-  "MarketplaceLink": "",
   "Name": "T.I.D.E.",
+  "Description": "Team Integration Developer Environment for Creatio Developers",
+  "Maintainer": "ATF",
+  "Icon": "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayINCiAgICAgdmlld0JveD0iMCAwIDMyIDMyIiB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KICA8IS0tIEJhY2tncm91bmQgLS0+DQogIDxyZWN0IHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgZmlsbD0iI0ZGRkZGRiIvPg0KDQogIDwhLS0gT3JhbmdlIFdhdmUgLS0+DQogIDxwYXRoIHN0eWxlPSJmaWxsOiNGRjZGMDA7IiBkPSJNMi41LDI1YzAsMCw1LTAuNDQsNi44OC00LjM4UzguNzUsOC4xMiwxOC43NSw4LjEyDQogICAgYzEuODgsMCw0LjM4LDAuOTQsNS42MywxLjg4YzYuMjUsNC4zOCwzLjEyLDEzLjEyLTMuNzUsMTEuMjVjMCwwLDIuNS0wLjEzLDIuNS0zLjc1cy00LjM4LTQuMDYtNS0xLjI1Yy0wLjUsMS44OC0wLjE5LDguNzUsOC43NSw5LjM4IiANCiAgICB0cmFuc2Zvcm09InNjYWxlKDAuMDUpIHRyYW5zbGF0ZSgyLjUsMi41KSIgLz4NCg0KICA8IS0tIFNlY29uZGFyeSBXYXZlIC0tPg0KICA8cGF0aCBzdHlsZT0iZmlsbDojRkY4QTY1OyIgZD0iTTIuNSwyNWMwLDAsNS0wLjQ0LDYuODgtNC4zOFM4Ljc1LDguMTIsMTguNzUsOC4xMiIgDQogICAgdHJhbnNmb3JtPSJzY2FsZSgwLjA1KSB0cmFuc2xhdGUoMi41LDIuNSkiIC8+DQo8L3N2Zz4NCg==",
+  "IconName": "tide_20241205232807.svg",
+  "Color": "#22AC14",
+  "Version": "1.0.4",
+  "MarketplaceLink": "",
+  "HelpLink": "https://github.com/Advance-Technologies-Foundation/T.I.D.E./blob/main/README.md",
   "OrderLink": "",
+  "SupportEmail": "",
+  "Code": "AtfTIDE",
   "Packages": [
     {
-      "Name": "AtfTIDE",
-      "UId": "57902d1e-ea0c-4991-b367-992c12d68fb2"
+      "UId": "57902d1e-ea0c-4991-b367-992c12d68fb2",
+      "Name": "AtfTIDE"
     }
-  ],
-  "SupportEmail": "",
-  "Version": "1.0.4"
+  ]
 }
