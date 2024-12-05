@@ -2,6 +2,7 @@
 = MetaData.Schema.A2 "AtfRepository"
 = MetaData.Schema.A5 "6f71e54c-1960-40c9-94f6-073fd67699ab"
 = MetaData.Schema.B6 "57902d1e-ea0c-4991-b367-992c12d68fb2"
+= MetaData.Schema.B8 "7.7.0.0"
 = MetaData.Schema.EG1.UId "35ed072d-b64b-48d9-a321-be185b27409b"
 = MetaData.Schema.EG1.A2 "AtfTIDEEventsProcess"
 = MetaData.Schema.EG1.A5 "6f71e54c-1960-40c9-94f6-073fd67699ab"
@@ -9,6 +10,7 @@
 = MetaData.Schema.EG1.B3 []
 + MetaData.Schema.EG1.B8 "0.0.0.0"
 = MetaData.Schema.EG1.FJ1 []
+= MetaData.Schema.EG1.BK8 "7bb7d6a5-e7a3-4837-83bc-7f785d688165"
 = MetaData.Schema.EG1.BK37.A3 "bb4d6607-026b-4b27-b640-8f5c77c1e89d"
 = MetaData.Schema.EG1.BK37.A4 "bb4d6607-026b-4b27-b640-8f5c77c1e89d"
 = MetaData.Schema.EG1.BK3 []

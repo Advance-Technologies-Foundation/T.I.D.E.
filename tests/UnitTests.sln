@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AtfTIDE.Tests", "AtfTIDE\At
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AtfTIDE", "..\packages\AtfTIDE\Files\AtfTIDE.csproj", "{7DB46196-EACE-4CB5-B970-26CA93CDB497}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GitAbstraction", "..\ConsoleGit\GitAbstraction\GitAbstraction.csproj", "{5BAB2BBF-E81E-4E32-8ED3-5C00EFA0A1A0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleGit", "..\ConsoleGit\ConsoleGit\ConsoleGit.csproj", "{E4DF8E7A-3BEC-46EC-90EA-D3D7F5357CFB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +28,11 @@ Global
 		{7DB46196-EACE-4CB5-B970-26CA93CDB497}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7DB46196-EACE-4CB5-B970-26CA93CDB497}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7DB46196-EACE-4CB5-B970-26CA93CDB497}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5BAB2BBF-E81E-4E32-8ED3-5C00EFA0A1A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5BAB2BBF-E81E-4E32-8ED3-5C00EFA0A1A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5BAB2BBF-E81E-4E32-8ED3-5C00EFA0A1A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E4DF8E7A-3BEC-46EC-90EA-D3D7F5357CFB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4DF8E7A-3BEC-46EC-90EA-D3D7F5357CFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4DF8E7A-3BEC-46EC-90EA-D3D7F5357CFB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

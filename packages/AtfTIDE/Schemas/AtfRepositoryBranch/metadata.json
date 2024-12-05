@@ -6,10 +6,47 @@
 = MetaData.Schema.EG1.UId "f34d4589-984d-490c-a84d-6cacb0e880b2"
 = MetaData.Schema.EG1.A2 "AtfEntity_b35769bEventsProcess"
 = MetaData.Schema.EG1.A5 "40b61c90-7dc7-4611-a919-1123299691cf"
+= MetaData.Schema.EG1.B1.["fe742d1c-4346-4cc5-894e-217df991856c"].C4 "var lmHelper = new Terrasoft.Configuration.LocalMessageHelper(this.Entity, UserConnection, changeType);\nlmHelper.CreateLocalMessage();"
 + MetaData.Schema.EG1.B8 "8.2.1.5258"
 = MetaData.Schema.EG1.BK8 "7bb7d6a5-e7a3-4837-83bc-7f785d688165"
 = MetaData.Schema.EG1.BK37.A3 "bb4d6607-026b-4b27-b640-8f5c77c1e89d"
 = MetaData.Schema.EG1.BK37.A4 "bb4d6607-026b-4b27-b640-8f5c77c1e89d"
++ MetaData.Schema.EG1.BK3 {
+  "BL1": "Terrasoft.Core.Process.ProcessSchemaLaneSet",
+  "UId": "079c1a2b-96d1-4935-9764-180b73ed11ac",
+  "A2": "LaneSet1253567487",
+  "A3": "66f58f21-6ed1-4e29-b506-6b9f6426d463",
+  "A4": "66f58f21-6ed1-4e29-b506-6b9f6426d463",
+  "A5": "3644c994-8f85-41ec-8125-47013bac161f",
+  "BL3": "5;5",
+  "BL5": 1,
+  "BL6": "LaneSet",
+  "BL7": "11a47caf-a0d5-41fa-a274-a0b11f77447a",
+  "BL8": "7bb7d6a5-e7a3-4837-83bc-7f785d688165",
+  "BM1": 0,
+  "BM3": "970;454",
+  "BM4": [
+    {
+      "BL1": "Terrasoft.Core.Process.ProcessSchemaLane",
+      "UId": "6a2146bb-1688-4388-9946-29409f61d0fb",
+      "A2": "Lane1i78907890789",
+      "A3": "66f58f21-6ed1-4e29-b506-6b9f6426d463",
+      "A4": "66f58f21-6ed1-4e29-b506-6b9f6426d463",
+      "A5": "3644c994-8f85-41ec-8125-47013bac161f",
+      "IL2": "079c1a2b-96d1-4935-9764-180b73ed11ac",
+      "BL3": "29;0",
+      "BL5": 1,
+      "BL6": "Lane",
+      "BL7": "abcd74b9-5912-414b-82ac-f1aa4dcd554e",
+      "CD1": [],
+      "CD2": [],
+      "CD4": "079c1a2b-96d1-4935-9764-180b73ed11ac",
+      "CD6": "941;454",
+      "CD7": []
+    }
+  ]
+}
+~ MetaData.Schema.EG1.BK3 ["619c2403-5046-4076-b4ec-5421200d9785","079c1a2b-96d1-4935-9764-180b73ed11ac"]
 = MetaData.Schema.EG1.BK4.["08594d74-60b0-45ce-bf17-bac1a8b127f7"].CK2.["496d4a3c-b644-4a65-b0ed-2534d9236da5"].BL7 "53818048-7868-48f6-ada0-0ebaa65af628"
 = MetaData.Schema.EG1.BK4.["90027ac8-c9c3-4d21-a4f9-da1cde752cd1"].CK2.["d8b8410f-5c8a-4ddc-8fc2-353483452aed"].BL7 "53818048-7868-48f6-ada0-0ebaa65af628"
 = MetaData.Schema.EG1.BK4.["5f3bfbbe-1820-44ca-92f1-6f993169b2dd"].CK2.["d7c806b7-a29b-4ce5-9167-b3319472e772"].BL7 "53818048-7868-48f6-ada0-0ebaa65af628"

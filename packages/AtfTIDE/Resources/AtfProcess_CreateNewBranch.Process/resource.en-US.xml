@@ -56,8 +56,13 @@
 			<Item Name="BaseElements.UserTask1.Parameters.AccessToken.DisplayValue" Value="[#Read repository.First item of resulting collection.Access Token#]" />
 			<Item Name="BaseElements.UserTask1.Parameters.BranchName.Caption" Value="Branch name" />
 			<Item Name="BaseElements.UserTask1.Parameters.BranchName.DisplayValue" Value="[#Read branch.First item of resulting collection.Name#]" />
+			<Item Name="BaseElements.UserTask1.Parameters.CreatioLogin.Caption" Value="Creatio Login" />
+			<Item Name="BaseElements.UserTask1.Parameters.CreatioPassword.Caption" Value="Creatio Password" />
+			<Item Name="BaseElements.UserTask1.Parameters.CreatioUrl.Caption" Value="Creatio Url" />
 			<Item Name="BaseElements.UserTask1.Parameters.ErrorMessage.Caption" Value="Error message" />
 			<Item Name="BaseElements.UserTask1.Parameters.IsError.Caption" Value="Is error" />
+			<Item Name="BaseElements.UserTask1.Parameters.RepositoryName.Caption" Value="Repository Name" />
+			<Item Name="BaseElements.UserTask1.Parameters.RepositoryName.DisplayValue" Value="[#Read repository.First item of resulting collection.Name#]" />
 			<Item Name="BaseElements.UserTask1.Parameters.RepositoryUrl.Caption" Value="Repository Url" />
 			<Item Name="BaseElements.UserTask1.Parameters.RepositoryUrl.DisplayValue" Value="[#Read repository.First item of resulting collection.Repository Url#]" />
 			<Item Name="BaseElements.UserTask1.Parameters.UserName.Caption" Value="User name" />
