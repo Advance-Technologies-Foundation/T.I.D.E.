@@ -21,13 +21,13 @@ namespace Terrasoft.Core.Process.Configuration
 	#region Class: AtfProcessUserTask_CreateNewBranch
 
 	/// <exclude/>
-	public partial class AtfProcessUserTask_CreateNewBranch
+	public partial class AtfProcessUserTask_CloneRepository
 	{
 
 		protected override bool InternalExecute(ProcessExecutingContext context){
 			string baseDir = AppDomain.CurrentDomain.BaseDirectory;
 			string repositoryDirectory = Path.Combine(baseDir, "conf","tide", RepositoryName);
-			
+			RepositoryFolderPath = repositoryDirectory;
 			
 			ConsoleGitArgs args = new ConsoleGitArgs {
 				Command = AtfTIDE.Commands.Clone,

@@ -3,6 +3,25 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHEMA
 		viewConfigDiff: /**SCHEMA_VIEW_CONFIG_DIFF*/[
 			{
 				"operation": "merge",
+				"name": "SideContainer",
+				"values": {
+					"visible": true,
+					"color": "transparent",
+					"borderRadius": "none",
+					"padding": {
+						"top": "none",
+						"right": "none",
+						"bottom": "none",
+						"left": "none"
+					},
+					"alignItems": "stretch",
+					"justifyContent": "start",
+					"gap": "small",
+					"wrap": "nowrap"
+				}
+			},
+			{
+				"operation": "merge",
 				"name": "SideAreaProfileContainer",
 				"values": {
 					"columns": [
@@ -93,7 +112,7 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHEMA
 			},
 			{
 				"operation": "insert",
-				"name": "GridContainer_07cf22a",
+				"name": "GridContainer_5wijoep",
 				"values": {
 					"type": "crt.GridContainer",
 					"columns": [
@@ -106,6 +125,35 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHEMA
 					},
 					"items": [],
 					"fitContent": true,
+					"padding": {
+						"top": "medium",
+						"right": "large",
+						"bottom": "medium",
+						"left": "large"
+					},
+					"color": "primary",
+					"borderRadius": "medium",
+					"visible": true,
+					"alignItems": "stretch"
+				},
+				"parentName": "SideContainer",
+				"propertyName": "items",
+				"index": 1
+			},
+			{
+				"operation": "insert",
+				"name": "FlexContainer_fqhq5qf",
+				"values": {
+					"layoutConfig": {
+						"column": 1,
+						"row": 1,
+						"colSpan": 1,
+						"rowSpan": 1
+					},
+					"type": "crt.FlexContainer",
+					"direction": "column",
+					"items": [],
+					"fitContent": true,
 					"visible": true,
 					"color": "transparent",
 					"borderRadius": "none",
@@ -115,9 +163,46 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHEMA
 						"bottom": "none",
 						"left": "none"
 					},
-					"alignItems": "stretch"
+					"alignItems": "stretch",
+					"justifyContent": "center",
+					"gap": "medium",
+					"wrap": "nowrap"
 				},
-				"parentName": "SideContainer",
+				"parentName": "GridContainer_5wijoep",
+				"propertyName": "items",
+				"index": 0
+			},
+			{
+				"operation": "insert",
+				"name": "Button_SaveToGit",
+				"values": {
+					"type": "crt.Button",
+					"caption": "#ResourceString(Button_nemrkb0_caption)#",
+					"color": "accent",
+					"disabled": false,
+					"size": "large",
+					"iconPosition": "left-icon",
+					"visible": true,
+					"icon": "import-data-button-icon"
+				},
+				"parentName": "FlexContainer_fqhq5qf",
+				"propertyName": "items",
+				"index": 0
+			},
+			{
+				"operation": "insert",
+				"name": "Button_LOADFROMGIT",
+				"values": {
+					"type": "crt.Button",
+					"caption": "#ResourceString(Button_2shb3kw_caption)#",
+					"color": "primary",
+					"disabled": false,
+					"size": "large",
+					"iconPosition": "left-icon",
+					"visible": true,
+					"icon": "export-data-button-icon"
+				},
+				"parentName": "FlexContainer_fqhq5qf",
 				"propertyName": "items",
 				"index": 1
 			},
@@ -127,7 +212,7 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHEMA
 				"values": {
 					"layoutConfig": {
 						"column": 1,
-						"row": 1,
+						"row": 2,
 						"colSpan": 1,
 						"rowSpan": 1
 					},
@@ -149,9 +234,9 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHEMA
 					},
 					"fitContent": true
 				},
-				"parentName": "GridContainer_07cf22a",
+				"parentName": "GridContainer_5wijoep",
 				"propertyName": "items",
-				"index": 0
+				"index": 1
 			},
 			{
 				"operation": "insert",
@@ -371,7 +456,9 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHEMA
 						"left": "none",
 						"right": "none"
 					},
-					"fitContent": true
+					"fitContent": true,
+					"visible": false,
+					"alignItems": "stretch"
 				},
 				"parentName": "GeneralInfoTab",
 				"propertyName": "items",

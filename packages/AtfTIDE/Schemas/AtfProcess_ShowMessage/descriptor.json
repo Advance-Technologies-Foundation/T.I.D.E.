@@ -1,0 +1,10 @@
+﻿{
+  "Descriptor": {
+    "UId": "8ba5afd0-7941-416d-807d-91def27b48e0",
+    "Name": "AtfProcess_ShowMessage",
+    "ModifiedOnUtc": "\/Date(1733435348000)\/",
+    "ManagerName": "ProcessSchemaManager",
+    "Caption": "Clio Callback",
+    "DependsOn": []
+  }
+}

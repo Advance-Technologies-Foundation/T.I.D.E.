@@ -3,7 +3,7 @@
     "Schema": {
       "ManagerName": "ProcessUserTaskSchemaManager",
       "UId": "0988a3e0-cf0d-4d9d-9e24-3dcdd5606e3c",
-      "A2": "AtfProcessUserTask_CreateNewBranch",
+      "A2": "AtfProcessUserTask_CloneRepository",
       "A5": "40b61c90-7dc7-4611-a919-1123299691cf",
       "B1": [],
       "B2": [],
@@ -27,17 +27,6 @@
           "BL1": "Terrasoft.Core.Process.ProcessSchemaParameter",
           "UId": "ee315102-c3f2-26bb-2888-332d860d2472",
           "A2": "AccessToken",
-          "A3": "0988a3e0-cf0d-4d9d-9e24-3dcdd5606e3c",
-          "A4": "0988a3e0-cf0d-4d9d-9e24-3dcdd5606e3c",
-          "L1": "8b3f29bb-ea14-4ce5-a5c5-293a929b6ba2",
-          "L8": {},
-          "L11": false,
-          "L12": 0
-        },
-        {
-          "BL1": "Terrasoft.Core.Process.ProcessSchemaParameter",
-          "UId": "06d7216e-c634-2a5c-d88a-f23e64b9e0ad",
-          "A2": "BranchName",
           "A3": "0988a3e0-cf0d-4d9d-9e24-3dcdd5606e3c",
           "A4": "0988a3e0-cf0d-4d9d-9e24-3dcdd5606e3c",
           "L1": "8b3f29bb-ea14-4ce5-a5c5-293a929b6ba2",
@@ -121,6 +110,17 @@
           "L8": {},
           "L11": false,
           "L12": 0
+        },
+        {
+          "BL1": "Terrasoft.Core.Process.ProcessSchemaParameter",
+          "UId": "31b9a167-f802-2a91-fa51-f731b89c670b",
+          "A2": "RepositoryFolderPath",
+          "A3": "0988a3e0-cf0d-4d9d-9e24-3dcdd5606e3c",
+          "A4": "0988a3e0-cf0d-4d9d-9e24-3dcdd5606e3c",
+          "L1": "8b3f29bb-ea14-4ce5-a5c5-293a929b6ba2",
+          "L8": {},
+          "L11": false,
+          "L12": 1
         }
       ],
       "FK7": true,

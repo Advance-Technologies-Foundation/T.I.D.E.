@@ -12,11 +12,10 @@
 	using Terrasoft.Core.Entities;
 	using Terrasoft.Core.Process;
 
-	#region Class: AtfProcessUserTask_CreateNewBranch
+	#region Class: AtfProcessUserTask_CloneRepository
 
 	[DesignModeProperty(Name = "RepositoryUrl", Group = "", ValuesProvider = "ProcessSchemaParameterValueProvider", Editor="xtype=processschemaparametervalueedit;dataProvider=processschemaparametervalueprovider", ResourceManager = "0988a3e0cf0d4d9d9e243dcdd5606e3c", CaptionResourceItem = "Parameters.RepositoryUrl.Caption", DescriptionResourceItem = "Parameters.RepositoryUrl.Caption", UseSolutionStorage = true)]
 	[DesignModeProperty(Name = "AccessToken", Group = "", ValuesProvider = "ProcessSchemaParameterValueProvider", Editor="xtype=processschemaparametervalueedit;dataProvider=processschemaparametervalueprovider", ResourceManager = "0988a3e0cf0d4d9d9e243dcdd5606e3c", CaptionResourceItem = "Parameters.AccessToken.Caption", DescriptionResourceItem = "Parameters.AccessToken.Caption", UseSolutionStorage = true)]
-	[DesignModeProperty(Name = "BranchName", Group = "", ValuesProvider = "ProcessSchemaParameterValueProvider", Editor="xtype=processschemaparametervalueedit;dataProvider=processschemaparametervalueprovider", ResourceManager = "0988a3e0cf0d4d9d9e243dcdd5606e3c", CaptionResourceItem = "Parameters.BranchName.Caption", DescriptionResourceItem = "Parameters.BranchName.Caption", UseSolutionStorage = true)]
 	[DesignModeProperty(Name = "ErrorMessage", Group = "", ValuesProvider = "ProcessSchemaParameterValueProvider", Editor="xtype=processschemaparametervalueedit;dataProvider=processschemaparametervalueprovider", ResourceManager = "0988a3e0cf0d4d9d9e243dcdd5606e3c", CaptionResourceItem = "Parameters.ErrorMessage.Caption", DescriptionResourceItem = "Parameters.ErrorMessage.Caption", UseSolutionStorage = true)]
 	[DesignModeProperty(Name = "IsError", Group = "", ValuesProvider = "ProcessSchemaParameterValueProvider", Editor="xtype=processschemaparametervalueedit;dataProvider=processschemaparametervalueprovider", ResourceManager = "0988a3e0cf0d4d9d9e243dcdd5606e3c", CaptionResourceItem = "Parameters.IsError.Caption", DescriptionResourceItem = "Parameters.IsError.Caption", UseSolutionStorage = true)]
 	[DesignModeProperty(Name = "UserName", Group = "", ValuesProvider = "ProcessSchemaParameterValueProvider", Editor="xtype=processschemaparametervalueedit;dataProvider=processschemaparametervalueprovider", ResourceManager = "0988a3e0cf0d4d9d9e243dcdd5606e3c", CaptionResourceItem = "Parameters.UserName.Caption", DescriptionResourceItem = "Parameters.UserName.Caption", UseSolutionStorage = true)]
@@ -24,13 +23,14 @@
 	[DesignModeProperty(Name = "CreatioLogin", Group = "", ValuesProvider = "ProcessSchemaParameterValueProvider", Editor="xtype=processschemaparametervalueedit;dataProvider=processschemaparametervalueprovider", ResourceManager = "0988a3e0cf0d4d9d9e243dcdd5606e3c", CaptionResourceItem = "Parameters.CreatioLogin.Caption", DescriptionResourceItem = "Parameters.CreatioLogin.Caption", UseSolutionStorage = true)]
 	[DesignModeProperty(Name = "CreatioPassword", Group = "", ValuesProvider = "ProcessSchemaParameterValueProvider", Editor="xtype=processschemaparametervalueedit;dataProvider=processschemaparametervalueprovider", ResourceManager = "0988a3e0cf0d4d9d9e243dcdd5606e3c", CaptionResourceItem = "Parameters.CreatioPassword.Caption", DescriptionResourceItem = "Parameters.CreatioPassword.Caption", UseSolutionStorage = true)]
 	[DesignModeProperty(Name = "CreatioUrl", Group = "", ValuesProvider = "ProcessSchemaParameterValueProvider", Editor="xtype=processschemaparametervalueedit;dataProvider=processschemaparametervalueprovider", ResourceManager = "0988a3e0cf0d4d9d9e243dcdd5606e3c", CaptionResourceItem = "Parameters.CreatioUrl.Caption", DescriptionResourceItem = "Parameters.CreatioUrl.Caption", UseSolutionStorage = true)]
+	[DesignModeProperty(Name = "RepositoryFolderPath", Group = "", ValuesProvider = "ProcessSchemaParameterValueProvider", Editor="xtype=processschemaparametervalueedit;dataProvider=processschemaparametervalueprovider", ResourceManager = "0988a3e0cf0d4d9d9e243dcdd5606e3c", CaptionResourceItem = "Parameters.RepositoryFolderPath.Caption", DescriptionResourceItem = "Parameters.RepositoryFolderPath.Caption", UseSolutionStorage = true)]
 	/// <exclude/>
-	public partial class AtfProcessUserTask_CreateNewBranch : ProcessUserTask
+	public partial class AtfProcessUserTask_CloneRepository : ProcessUserTask
 	{
 
 		#region Constructors: Public
 
-		public AtfProcessUserTask_CreateNewBranch(UserConnection userConnection)
+		public AtfProcessUserTask_CloneRepository(UserConnection userConnection)
 			: base(userConnection) {
 			SchemaUId = new Guid("0988a3e0-cf0d-4d9d-9e24-3dcdd5606e3c");
 		}
@@ -45,11 +45,6 @@
 		}
 
 		public virtual string AccessToken {
-			get;
-			set;
-		}
-
-		public virtual string BranchName {
 			get;
 			set;
 		}
@@ -89,6 +84,11 @@
 			set;
 		}
 
+		public virtual string RepositoryFolderPath {
+			get;
+			set;
+		}
+
 		#endregion
 
 		#region Methods: Public
@@ -108,11 +108,6 @@
 			if (UseFlowEngineMode) {
 				if (!HasMapping("AccessToken")) {
 					writer.WriteValue("AccessToken", AccessToken, null);
-				}
-			}
-			if (UseFlowEngineMode) {
-				if (!HasMapping("BranchName")) {
-					writer.WriteValue("BranchName", BranchName, null);
 				}
 			}
 			if (UseFlowEngineMode) {
@@ -150,6 +145,11 @@
 					writer.WriteValue("CreatioUrl", CreatioUrl, null);
 				}
 			}
+			if (UseFlowEngineMode) {
+				if (!HasMapping("RepositoryFolderPath")) {
+					writer.WriteValue("RepositoryFolderPath", RepositoryFolderPath, null);
+				}
+			}
 			writer.WriteFinishObject();
 		}
 
@@ -171,12 +171,6 @@
 						break;
 					}
 					AccessToken = reader.GetStringValue();
-				break;
-				case "BranchName":
-					if (!UseFlowEngineMode) {
-						break;
-					}
-					BranchName = reader.GetStringValue();
 				break;
 				case "ErrorMessage":
 					if (!UseFlowEngineMode) {
@@ -219,6 +213,12 @@
 						break;
 					}
 					CreatioUrl = reader.GetStringValue();
+				break;
+				case "RepositoryFolderPath":
+					if (!UseFlowEngineMode) {
+						break;
+					}
+					RepositoryFolderPath = reader.GetStringValue();
 				break;
 			}
 		}
