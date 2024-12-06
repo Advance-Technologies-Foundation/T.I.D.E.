@@ -93,6 +93,42 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHEMA
 			},
 			{
 				"operation": "insert",
+				"name": "Label_s7pm1mk",
+				"values": {
+					"type": "crt.Label",
+					"caption": "#MacrosTemplateString(#ResourceString(Label_s7pm1mk_caption)#)#",
+					"labelType": "headline-1",
+					"labelThickness": "default",
+					"labelEllipsis": false,
+					"labelColor": "#FF4013",
+					"labelBackgroundColor": "transparent",
+					"labelTextAlign": "center",
+					"visible": true
+				},
+				"parentName": "MainHeader",
+				"propertyName": "items",
+				"index": 1
+			},
+			{
+				"operation": "insert",
+				"name": "Label_at1vc3c",
+				"values": {
+					"type": "crt.Label",
+					"caption": "#MacrosTemplateString(#ResourceString(Label_at1vc3c_caption)#)#",
+					"labelType": "headline-1-small",
+					"labelThickness": "default",
+					"labelEllipsis": false,
+					"labelColor": "#FFFFFF",
+					"labelBackgroundColor": "#FDAB06",
+					"labelTextAlign": "center",
+					"visible": true
+				},
+				"parentName": "MainHeader",
+				"propertyName": "items",
+				"index": 2
+			},
+			{
+				"operation": "insert",
 				"name": "AtfName",
 				"values": {
 					"layoutConfig": {
@@ -177,13 +213,23 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHEMA
 				"name": "Button_SaveToGit",
 				"values": {
 					"type": "crt.Button",
-					"caption": "#ResourceString(Button_nemrkb0_caption)#",
+					"caption": "#ResourceString(Button_SaveToGit_caption)#",
 					"color": "accent",
 					"disabled": false,
 					"size": "large",
 					"iconPosition": "left-icon",
 					"visible": true,
-					"icon": "import-data-button-icon"
+					"icon": "import-data-button-icon",
+					"clicked": {
+						"request": "crt.RunBusinessProcessRequest",
+						"params": {
+							"processName": "AtfProcess_SaveWorkspaceToGit",
+							"processRunType": "ForTheSelectedPage",
+							"showNotification": true,
+							"recordIdProcessParameterName": "Repository"
+						}
+					},
+					"clickMode": "default"
 				},
 				"parentName": "FlexContainer_fqhq5qf",
 				"propertyName": "items",

@@ -19,6 +19,7 @@
 	[DesignModeProperty(Name = "WorkingDirectory", Group = "", ValuesProvider = "ProcessSchemaParameterValueProvider", Editor="xtype=processschemaparametervalueedit;dataProvider=processschemaparametervalueprovider", ResourceManager = "ad6a7f037b144d0696c0bf1c01c1d8f8", CaptionResourceItem = "Parameters.WorkingDirectory.Caption", DescriptionResourceItem = "Parameters.WorkingDirectory.Caption", UseSolutionStorage = true)]
 	[DesignModeProperty(Name = "IsError", Group = "", ValuesProvider = "ProcessSchemaParameterValueProvider", Editor="xtype=processschemaparametervalueedit;dataProvider=processschemaparametervalueprovider", ResourceManager = "ad6a7f037b144d0696c0bf1c01c1d8f8", CaptionResourceItem = "Parameters.IsError.Caption", DescriptionResourceItem = "Parameters.IsError.Caption", UseSolutionStorage = true)]
 	[DesignModeProperty(Name = "ErrorMessage", Group = "", ValuesProvider = "ProcessSchemaParameterValueProvider", Editor="xtype=processschemaparametervalueedit;dataProvider=processschemaparametervalueprovider", ResourceManager = "ad6a7f037b144d0696c0bf1c01c1d8f8", CaptionResourceItem = "Parameters.ErrorMessage.Caption", DescriptionResourceItem = "Parameters.ErrorMessage.Caption", UseSolutionStorage = true)]
+	[DesignModeProperty(Name = "WaitForExit", Group = "", ValuesProvider = "ProcessSchemaParameterValueProvider", Editor="xtype=processschemaparametervalueedit;dataProvider=processschemaparametervalueprovider", ResourceManager = "ad6a7f037b144d0696c0bf1c01c1d8f8", CaptionResourceItem = "Parameters.WaitForExit.Caption", DescriptionResourceItem = "Parameters.WaitForExit.Caption", UseSolutionStorage = true)]
 	/// <exclude/>
 	public partial class AtfProcessUserTask_RunOSCommand : ProcessUserTask
 	{
@@ -59,6 +60,11 @@
 			set;
 		}
 
+		public virtual bool WaitForExit {
+			get;
+			set;
+		}
+
 		#endregion
 
 		#region Methods: Public
@@ -93,6 +99,11 @@
 			if (UseFlowEngineMode) {
 				if (!HasMapping("ErrorMessage")) {
 					writer.WriteValue("ErrorMessage", ErrorMessage, null);
+				}
+			}
+			if (UseFlowEngineMode) {
+				if (!HasMapping("WaitForExit")) {
+					writer.WriteValue("WaitForExit", WaitForExit, false);
 				}
 			}
 			writer.WriteFinishObject();
@@ -134,6 +145,12 @@
 						break;
 					}
 					ErrorMessage = reader.GetStringValue();
+				break;
+				case "WaitForExit":
+					if (!UseFlowEngineMode) {
+						break;
+					}
+					WaitForExit = reader.GetBoolValue();
 				break;
 			}
 		}

@@ -32,7 +32,6 @@
 			<Item Name="BaseElements.UserTask1.Caption" Value="Clone Master" />
 			<Item Name="BaseElements.UserTask1.Parameters.AccessToken.Caption" Value="Access token" />
 			<Item Name="BaseElements.UserTask1.Parameters.AccessToken.DisplayValue" Value="[#Read repository.First item of resulting collection.Access Token#]" />
-			<Item Name="BaseElements.UserTask1.Parameters.BranchName.Caption" Value="Branch name" />
 			<Item Name="BaseElements.UserTask1.Parameters.CreatioLogin.Caption" Value="Creatio Login" />
 			<Item Name="BaseElements.UserTask1.Parameters.CreatioLogin.DisplayValue" Value="[#Read repository.First item of resulting collection.Creatio Login#]" />
 			<Item Name="BaseElements.UserTask1.Parameters.CreatioPassword.Caption" Value="Creatio Password" />
@@ -50,11 +49,11 @@
 			<Item Name="BaseElements.UserTask1.Parameters.UserName.DisplayValue" Value="[#Read repository.First item of resulting collection.User name#]" />
 			<Item Name="BaseElements.UserTask2.Caption" Value="clio pushw" />
 			<Item Name="BaseElements.UserTask2.Parameters.Arguments.Caption" Value="Arguments" />
-			<Item Name="BaseElements.UserTask2.Parameters.Arguments.DisplayValue" Value="&quot;pushw -u &quot;+[#Read repository.First item of resulting collection.Creatio Url#]+&quot; -l &quot;+[#Read repository.First item of resulting collection.Creatio Login#]+&quot; -p &quot;+[#Read repository.First item of resulting collection.Creatio Password#]" />
+			<Item Name="BaseElements.UserTask2.Parameters.Arguments.DisplayValue" Value="&quot;pushw -c true -u &quot;+[#Read repository.First item of resulting collection.Creatio Url#]+&quot; -l &quot;+[#Read repository.First item of resulting collection.Creatio Login#]+&quot; -p &quot;+[#Read repository.First item of resulting collection.Creatio Password#]" />
 			<Item Name="BaseElements.UserTask2.Parameters.ErrorMessage.Caption" Value="Error Message" />
 			<Item Name="BaseElements.UserTask2.Parameters.FileName.Caption" Value="File Name" />
-			<Item Name="BaseElements.UserTask2.Parameters.FileName.DisplayValue" Value="C:\Tools\clio.exe" />
-			<Item Name="BaseElements.UserTask2.Parameters.FileName.Value" Value="C:\Tools\clio.exe" />
+			<Item Name="BaseElements.UserTask2.Parameters.FileName.DisplayValue" Value="clio" />
+			<Item Name="BaseElements.UserTask2.Parameters.FileName.Value" Value="clio" />
 			<Item Name="BaseElements.UserTask2.Parameters.IsError.Caption" Value="Is Error" />
 			<Item Name="BaseElements.UserTask2.Parameters.WorkingDirectory.Caption" Value="WorkingDirectory" />
 			<Item Name="BaseElements.UserTask2.Parameters.WorkingDirectory.DisplayValue" Value="[#Clone Master.Repository Folder Path#]" />

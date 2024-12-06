@@ -70,7 +70,7 @@
 		<None Remove="$(RelativeCurrentPkgFolderPath)Resources/**" />
 		<Compile Remove="..\Schemas\AtfProcessUserTask_CreateNewBranch\**" />
 		<Compile Update="..\Schemas\AtfProcessUserTask_CloneRepository\AtfProcessUserTask_CloneRepository.cs">
-		  <Link>AtfProcessUserTask_CloneRepository\AtfProcessUserTask_CloneRepository.cs</Link>
+			<Link>AtfProcessUserTask_CloneRepository\AtfProcessUserTask_CloneRepository.cs</Link>
 		</Compile>
 	</ItemGroup>
 	<ItemGroup Label="Package Assembly References">
@@ -785,8 +785,8 @@
 			<SpecificVersion>False</SpecificVersion>
 			<Private>False</Private>
 		</Reference>
-		<Reference Include="CrtSalesInC360">
-			<HintPath>$(RelativePkgFolderPath)/CrtSalesInC360/$(StandalonePackageAssemblyPath)/CrtSalesInC360.dll</HintPath>
+		<Reference Include="CrtGoogleAnalytics">
+			<HintPath>$(RelativePkgFolderPath)/CrtGoogleAnalytics/$(StandalonePackageAssemblyPath)/CrtGoogleAnalytics.dll</HintPath>
 			<SpecificVersion>False</SpecificVersion>
 			<Private>False</Private>
 		</Reference>
@@ -795,18 +795,8 @@
 			<SpecificVersion>False</SpecificVersion>
 			<Private>False</Private>
 		</Reference>
-		<Reference Include="CrtGoogleAnalytics">
-			<HintPath>$(RelativePkgFolderPath)/CrtGoogleAnalytics/$(StandalonePackageAssemblyPath)/CrtGoogleAnalytics.dll</HintPath>
-			<SpecificVersion>False</SpecificVersion>
-			<Private>False</Private>
-		</Reference>
 		<Reference Include="CrtPlaybook">
 			<HintPath>$(RelativePkgFolderPath)/CrtPlaybook/$(StandalonePackageAssemblyPath)/CrtPlaybook.dll</HintPath>
-			<SpecificVersion>False</SpecificVersion>
-			<Private>False</Private>
-		</Reference>
-		<Reference Include="CrtOpportunityInvoice">
-			<HintPath>$(RelativePkgFolderPath)/CrtOpportunityInvoice/$(StandalonePackageAssemblyPath)/CrtOpportunityInvoice.dll</HintPath>
 			<SpecificVersion>False</SpecificVersion>
 			<Private>False</Private>
 		</Reference>
@@ -815,13 +805,18 @@
 			<SpecificVersion>False</SpecificVersion>
 			<Private>False</Private>
 		</Reference>
+		<Reference Include="CrtSalesInC360">
+			<HintPath>$(RelativePkgFolderPath)/CrtSalesInC360/$(StandalonePackageAssemblyPath)/CrtSalesInC360.dll</HintPath>
+			<SpecificVersion>False</SpecificVersion>
+			<Private>False</Private>
+		</Reference>
 		<Reference Include="CrtOCMInLeadOppMgmt">
 			<HintPath>$(RelativePkgFolderPath)/CrtOCMInLeadOppMgmt/$(StandalonePackageAssemblyPath)/CrtOCMInLeadOppMgmt.dll</HintPath>
 			<SpecificVersion>False</SpecificVersion>
 			<Private>False</Private>
 		</Reference>
-		<Reference Include="SalesMainShell">
-			<HintPath>$(RelativePkgFolderPath)/SalesMainShell/$(StandalonePackageAssemblyPath)/SalesMainShell.dll</HintPath>
+		<Reference Include="CrtOpportunityInvoice">
+			<HintPath>$(RelativePkgFolderPath)/CrtOpportunityInvoice/$(StandalonePackageAssemblyPath)/CrtOpportunityInvoice.dll</HintPath>
 			<SpecificVersion>False</SpecificVersion>
 			<Private>False</Private>
 		</Reference>
@@ -880,6 +875,11 @@
 			<SpecificVersion>False</SpecificVersion>
 			<Private>False</Private>
 		</Reference>
+		<Reference Include="SalesMainShell">
+			<HintPath>$(RelativePkgFolderPath)/SalesMainShell/$(StandalonePackageAssemblyPath)/SalesMainShell.dll</HintPath>
+			<SpecificVersion>False</SpecificVersion>
+			<Private>False</Private>
+		</Reference>
 		<Reference Include="CrtCasesInC360">
 			<HintPath>$(RelativePkgFolderPath)/CrtCasesInC360/$(StandalonePackageAssemblyPath)/CrtCasesInC360.dll</HintPath>
 			<SpecificVersion>False</SpecificVersion>
@@ -887,11 +887,6 @@
 		</Reference>
 		<Reference Include="CrtEngagementInC360">
 			<HintPath>$(RelativePkgFolderPath)/CrtEngagementInC360/$(StandalonePackageAssemblyPath)/CrtEngagementInC360.dll</HintPath>
-			<SpecificVersion>False</SpecificVersion>
-			<Private>False</Private>
-		</Reference>
-		<Reference Include="CrtCaseKnowledgeCopilot">
-			<HintPath>$(RelativePkgFolderPath)/CrtCaseKnowledgeCopilot/$(StandalonePackageAssemblyPath)/CrtCaseKnowledgeCopilot.dll</HintPath>
 			<SpecificVersion>False</SpecificVersion>
 			<Private>False</Private>
 		</Reference>
@@ -930,13 +925,18 @@
 			<SpecificVersion>False</SpecificVersion>
 			<Private>False</Private>
 		</Reference>
-		<Reference Include="CrtCampaignInC360">
-			<HintPath>$(RelativePkgFolderPath)/CrtCampaignInC360/$(StandalonePackageAssemblyPath)/CrtCampaignInC360.dll</HintPath>
+		<Reference Include="CrtC360InUiV2">
+			<HintPath>$(RelativePkgFolderPath)/CrtC360InUiV2/$(StandalonePackageAssemblyPath)/CrtC360InUiV2.dll</HintPath>
 			<SpecificVersion>False</SpecificVersion>
 			<Private>False</Private>
 		</Reference>
-		<Reference Include="CrtC360InUiV2">
-			<HintPath>$(RelativePkgFolderPath)/CrtC360InUiV2/$(StandalonePackageAssemblyPath)/CrtC360InUiV2.dll</HintPath>
+		<Reference Include="CrtCaseKnowledgeCopilot">
+			<HintPath>$(RelativePkgFolderPath)/CrtCaseKnowledgeCopilot/$(StandalonePackageAssemblyPath)/CrtCaseKnowledgeCopilot.dll</HintPath>
+			<SpecificVersion>False</SpecificVersion>
+			<Private>False</Private>
+		</Reference>
+		<Reference Include="CrtCampaignInC360">
+			<HintPath>$(RelativePkgFolderPath)/CrtCampaignInC360/$(StandalonePackageAssemblyPath)/CrtCampaignInC360.dll</HintPath>
 			<SpecificVersion>False</SpecificVersion>
 			<Private>False</Private>
 		</Reference>
@@ -946,17 +946,7 @@
 			<Private>False</Private>
 		</Reference>
 	</ItemGroup>
-	<ItemGroup Label="Standalone package external assembly references">
-	  <Content Include="..\Schemas\AtfProcessUserTask_CloneRepository\descriptor.json">
-	    <Link>AtfProcessUserTask_CloneRepository\descriptor.json</Link>
-	  </Content>
-	  <Content Include="..\Schemas\AtfProcessUserTask_CloneRepository\metadata.json">
-	    <Link>AtfProcessUserTask_CloneRepository\metadata.json</Link>
-	  </Content>
-	  <Content Include="..\Schemas\AtfProcessUserTask_CloneRepository\properties.json">
-	    <Link>AtfProcessUserTask_CloneRepository\properties.json</Link>
-	  </Content>
-	</ItemGroup>
+	<ItemGroup Label="Standalone package external assembly references"></ItemGroup>
 	<ItemGroup Label="Entity Files">
 		<Compile Remove="$(RelativePkgFolderPath)/AtfTIDE/Schemas/AtfRepository/AtfRepository.cs" Condition="Exists('$(RelativePkgFolderPath)/AtfTIDE/Schemas/AtfRepository/AtfRepository.cs')" />
 		<Compile Remove="$(RelativePkgFolderPath)/AtfTIDE/Schemas/AtfRepositoryBranch/AtfRepositoryBranch.cs" Condition="Exists('$(RelativePkgFolderPath)/AtfTIDE/Schemas/AtfRepositoryBranch/AtfRepositoryBranch.cs')" />

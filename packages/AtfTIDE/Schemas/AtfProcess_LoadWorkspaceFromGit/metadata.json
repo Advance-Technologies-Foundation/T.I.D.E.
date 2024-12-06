@@ -62,20 +62,6 @@
         },
         {
           "BL1": "Terrasoft.Core.Process.ProcessSchemaMapping",
-          "UId": "0a764b24-fee8-4e53-8f55-ac49344cf93e",
-          "A2": "UserTask1",
-          "A3": "69282d5a-b25b-4730-8001-c39307b78fc4",
-          "A4": "69282d5a-b25b-4730-8001-c39307b78fc4",
-          "GT2": "[Element:{2d72c03e-7e10-4f4a-9a26-0d8c27e034e2}].[Parameter:{5e0fc569-0f75-4b5e-bcbd-44d7ae548645}]",
-          "GT3": "5e0fc569-0f75-4b5e-bcbd-44d7ae548645",
-          "GT5": "06d7216e-c634-2a5c-d88a-f23e64b9e0ad",
-          "GT4": "0988a3e0-cf0d-4d9d-9e24-3dcdd5606e3c",
-          "GT1": {
-            "GS5": "69282d5a-b25b-4730-8001-c39307b78fc4"
-          }
-        },
-        {
-          "BL1": "Terrasoft.Core.Process.ProcessSchemaMapping",
           "UId": "deacd93f-08d7-4e63-8b10-840cc563aaa5",
           "A2": "UserTask1",
           "A3": "69282d5a-b25b-4730-8001-c39307b78fc4",
@@ -446,6 +432,7 @@
           "GT4": "ad6a7f03-7b14-4d06-96c0-bf1c01c1d8f8",
           "GT1": {
             "GS1": 1,
+            "GS2": "clio",
             "GS5": "69282d5a-b25b-4730-8001-c39307b78fc4"
           }
         },
@@ -461,7 +448,7 @@
           "GT4": "ad6a7f03-7b14-4d06-96c0-bf1c01c1d8f8",
           "GT1": {
             "GS1": 3,
-            "GS2": "\"pushw -u \"+[#[IsOwnerSchema:false].[IsSchema:false].[Element:{fda5cf60-182c-4e51-b81d-ce914a4ad453}].[Parameter:{79e37bb9-ef96-4b87-9ace-70f0d5ac0bf3}].[EntityColumn:{50c8ab0b-f709-0669-75c4-f6f23fa0abb3}]#]+\" -l \"+[#[IsOwnerSchema:false].[IsSchema:false].[Element:{fda5cf60-182c-4e51-b81d-ce914a4ad453}].[Parameter:{79e37bb9-ef96-4b87-9ace-70f0d5ac0bf3}].[EntityColumn:{233b33ac-e288-33e6-fa2f-f6058c3cd6dc}]#]+\" -p \"+[#[IsOwnerSchema:false].[IsSchema:false].[Element:{fda5cf60-182c-4e51-b81d-ce914a4ad453}].[Parameter:{79e37bb9-ef96-4b87-9ace-70f0d5ac0bf3}].[EntityColumn:{1ec2e4c3-7746-3d66-4e82-1564399aa06a}]#]",
+            "GS2": "\"pushw -c true -u \"+[#[IsOwnerSchema:false].[IsSchema:false].[Element:{fda5cf60-182c-4e51-b81d-ce914a4ad453}].[Parameter:{79e37bb9-ef96-4b87-9ace-70f0d5ac0bf3}].[EntityColumn:{50c8ab0b-f709-0669-75c4-f6f23fa0abb3}]#]+\" -l \"+[#[IsOwnerSchema:false].[IsSchema:false].[Element:{fda5cf60-182c-4e51-b81d-ce914a4ad453}].[Parameter:{79e37bb9-ef96-4b87-9ace-70f0d5ac0bf3}].[EntityColumn:{233b33ac-e288-33e6-fa2f-f6058c3cd6dc}]#]+\" -p \"+[#[IsOwnerSchema:false].[IsSchema:false].[Element:{fda5cf60-182c-4e51-b81d-ce914a4ad453}].[Parameter:{79e37bb9-ef96-4b87-9ace-70f0d5ac0bf3}].[EntityColumn:{1ec2e4c3-7746-3d66-4e82-1564399aa06a}]#]",
             "GS5": "69282d5a-b25b-4730-8001-c39307b78fc4"
           }
         },
@@ -638,20 +625,6 @@
               "L8": {
                 "GS1": 3,
                 "GS2": "[#[IsOwnerSchema:false].[IsSchema:false].[Element:{fda5cf60-182c-4e51-b81d-ce914a4ad453}].[Parameter:{79e37bb9-ef96-4b87-9ace-70f0d5ac0bf3}].[EntityColumn:{501f4ea6-d4af-2def-4875-a1b828376aea}]#]",
-                "GS5": "69282d5a-b25b-4730-8001-c39307b78fc4"
-              },
-              "L11": false,
-              "L12": 0
-            },
-            {
-              "BL1": "Terrasoft.Core.Process.ProcessSchemaParameter",
-              "UId": "5e0fc569-0f75-4b5e-bcbd-44d7ae548645",
-              "A2": "BranchName",
-              "A3": "0988a3e0-cf0d-4d9d-9e24-3dcdd5606e3c",
-              "A4": "0988a3e0-cf0d-4d9d-9e24-3dcdd5606e3c",
-              "IL2": "2d72c03e-7e10-4f4a-9a26-0d8c27e034e2",
-              "L1": "8b3f29bb-ea14-4ce5-a5c5-293a929b6ba2",
-              "L8": {
                 "GS5": "69282d5a-b25b-4730-8001-c39307b78fc4"
               },
               "L11": false,
@@ -1070,7 +1043,7 @@
               "L1": "8b3f29bb-ea14-4ce5-a5c5-293a929b6ba2",
               "L8": {
                 "GS1": 3,
-                "GS2": "\"pushw -u \"+[#[IsOwnerSchema:false].[IsSchema:false].[Element:{fda5cf60-182c-4e51-b81d-ce914a4ad453}].[Parameter:{79e37bb9-ef96-4b87-9ace-70f0d5ac0bf3}].[EntityColumn:{50c8ab0b-f709-0669-75c4-f6f23fa0abb3}]#]+\" -l \"+[#[IsOwnerSchema:false].[IsSchema:false].[Element:{fda5cf60-182c-4e51-b81d-ce914a4ad453}].[Parameter:{79e37bb9-ef96-4b87-9ace-70f0d5ac0bf3}].[EntityColumn:{233b33ac-e288-33e6-fa2f-f6058c3cd6dc}]#]+\" -p \"+[#[IsOwnerSchema:false].[IsSchema:false].[Element:{fda5cf60-182c-4e51-b81d-ce914a4ad453}].[Parameter:{79e37bb9-ef96-4b87-9ace-70f0d5ac0bf3}].[EntityColumn:{1ec2e4c3-7746-3d66-4e82-1564399aa06a}]#]",
+                "GS2": "\"pushw -c true -u \"+[#[IsOwnerSchema:false].[IsSchema:false].[Element:{fda5cf60-182c-4e51-b81d-ce914a4ad453}].[Parameter:{79e37bb9-ef96-4b87-9ace-70f0d5ac0bf3}].[EntityColumn:{50c8ab0b-f709-0669-75c4-f6f23fa0abb3}]#]+\" -l \"+[#[IsOwnerSchema:false].[IsSchema:false].[Element:{fda5cf60-182c-4e51-b81d-ce914a4ad453}].[Parameter:{79e37bb9-ef96-4b87-9ace-70f0d5ac0bf3}].[EntityColumn:{233b33ac-e288-33e6-fa2f-f6058c3cd6dc}]#]+\" -p \"+[#[IsOwnerSchema:false].[IsSchema:false].[Element:{fda5cf60-182c-4e51-b81d-ce914a4ad453}].[Parameter:{79e37bb9-ef96-4b87-9ace-70f0d5ac0bf3}].[EntityColumn:{1ec2e4c3-7746-3d66-4e82-1564399aa06a}]#]",
                 "GS5": "69282d5a-b25b-4730-8001-c39307b78fc4"
               },
               "L11": false,

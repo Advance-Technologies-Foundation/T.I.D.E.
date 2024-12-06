@@ -66,6 +66,17 @@
           "L8": {},
           "L11": false,
           "L12": 1
+        },
+        {
+          "BL1": "Terrasoft.Core.Process.ProcessSchemaParameter",
+          "UId": "c2ab04f6-8618-94c2-50c2-fdd2ec8e1875",
+          "A2": "WaitForExit",
+          "A3": "ad6a7f03-7b14-4d06-96c0-bf1c01c1d8f8",
+          "A4": "ad6a7f03-7b14-4d06-96c0-bf1c01c1d8f8",
+          "L1": "90b65bf8-0ffc-4141-8779-2420877af907",
+          "L8": {},
+          "L11": false,
+          "L12": 0
         }
       ],
       "FK4": true,

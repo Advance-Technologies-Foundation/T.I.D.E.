@@ -31,17 +31,46 @@ namespace Terrasoft.Core.Process.Configuration
 			// respond appropriately to cancellation requests using the context.CancellationToken mechanism.
 			// For more detailed information and examples, please, refer to our documentation.
 			
+			StringBuilder output = new StringBuilder();
+			StringBuilder error = new StringBuilder();
 			try {
 				ProcessStartInfo startInfo = new ProcessStartInfo {
 					FileName = FileName,
 					Arguments = Arguments,
 					UseShellExecute = false,
 					CreateNoWindow = true,
-					WorkingDirectory = WorkingDirectory
+					WorkingDirectory = WorkingDirectory,
+					RedirectStandardError = true,
+					RedirectStandardOutput = true,
 				};
 				using (System.Diagnostics.Process process = new System.Diagnostics.Process()) {
 					process.StartInfo = startInfo;
-					process.Start();
+					
+					if(WaitForExit) {
+						
+						process.OutputDataReceived += (sender, e) => {
+							if (!string.IsNullOrEmpty(e.Data)) {
+								output.AppendLine(e.Data);
+							}
+						};
+						
+						process.ErrorDataReceived += (sender, e) => {
+							if (!string.IsNullOrEmpty(e.Data)) {
+								error.AppendLine(e.Data);
+							}
+						};
+						
+						process.Start();
+						process.BeginOutputReadLine();
+						process.BeginErrorReadLine();
+						process.WaitForExit();
+						
+						
+						ErrorMessage = error + "\n"+output;
+						
+					}else {
+						process.Start();
+					}
 				}
 			} catch (Exception ex) {
 				SetError(ex.Message);
