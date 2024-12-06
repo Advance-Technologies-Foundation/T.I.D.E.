@@ -1,15 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg height="800px" width="800px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
-	 viewBox="0 0 512 512" xml:space="preserve">
-  <!-- Background -->
-  <rect width="512" height="512" fill="#FFFFFF"/>
-
-  <!-- Orange Wave -->
-  <path style="fill:#FF6F00;" d="M40,400c0,0,80-7,110-70S140,130,300,130
-	c30,0,70,15,90,30c100,70,50,210-60,180c0,0,40-2,40-60s-70-65-80-20c-8,30-3,140,140,150" 
-    transform="scale(0.8) translate(50,50)" />
-
-  <!-- Secondary Wave -->
-  <path style="fill:#FF8A65;" d="M40,400c0,0,80-7,110-70S140,130,300,130" 
-    transform="scale(0.8) translate(50,50)" />
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+     width="32" height="32" viewBox="0 0 32 32" version="1.1">
+  <!-- Рамка -->
+  <rect x="0" y="0" width="32" height="32" fill="none" stroke="#FFFFFF" stroke-width="1" />
+  <!-- Центральная волна -->
+  <path d="M0,16 C4,12 12,12 16,16 C20,20 28,20 32,16 L32,32 L0,32 Z" fill="#FFFFFF" fill-opacity="1" />
 </svg>

@@ -1,20 +1,20 @@
 {
-  "Code": "AtfTIDE",
-  "Color": "#22AC14",
-  "Description": "Team Integration Developer Environment for Creatio Developers",
-  "HelpLink": "https://github.com/Advance-Technologies-Foundation/T.I.D.E./blob/main/README.md",
-  "Icon": "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4NCjxzdmcgaGVpZ2h0PSI4MDBweCIgd2lkdGg9IjgwMHB4IiB2ZXJzaW9uPSIxLjEiIGlkPSJMYXllcl8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiANCgkgdmlld0JveD0iMCAwIDUxMiA1MTIiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KICA8IS0tIEJhY2tncm91bmQgLS0+DQogIDxyZWN0IHdpZHRoPSI1MTIiIGhlaWdodD0iNTEyIiBmaWxsPSIjRkZGRkZGIi8+DQoNCiAgPCEtLSBPcmFuZ2UgV2F2ZSAtLT4NCiAgPHBhdGggc3R5bGU9ImZpbGw6I0ZGNkYwMDsiIGQ9Ik00MCw0MDBjMCwwLDgwLTcsMTEwLTcwUzE0MCwxMzAsMzAwLDEzMA0KCWMzMCwwLDcwLDE1LDkwLDMwYzEwMCw3MCw1MCwyMTAtNjAsMTgwYzAsMCw0MC0yLDQwLTYwcy03MC02NS04MC0yMGMtOCwzMC0zLDE0MCwxNDAsMTUwIiANCiAgICB0cmFuc2Zvcm09InNjYWxlKDAuOCkgdHJhbnNsYXRlKDUwLDUwKSIgLz4NCg0KICA8IS0tIFNlY29uZGFyeSBXYXZlIC0tPg0KICA8cGF0aCBzdHlsZT0iZmlsbDojRkY4QTY1OyIgZD0iTTQwLDQwMGMwLDAsODAtNywxMTAtNzBTMTQwLDEzMCwzMDAsMTMwIiANCiAgICB0cmFuc2Zvcm09InNjYWxlKDAuOCkgdHJhbnNsYXRlKDUwLDUwKSIgLz4NCjwvc3ZnPg0K",
-  "IconName": "tide_20241129022653.svg",
-  "Maintainer": "ATF",
-  "MarketplaceLink": "",
   "Name": "T.I.D.E.",
+  "Description": "Team Integration Developer Environment for Creatio Developers",
+  "Maintainer": "ATF",
+  "Icon": "PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIg0KICAgICB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgdmVyc2lvbj0iMS4xIj4NCiAgPCEtLSDQoNCw0LzQutCwIC0tPg0KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI0ZGRkZGRiIgc3Ryb2tlLXdpZHRoPSIxIiAvPg0KICA8IS0tINCm0LXQvdGC0YDQsNC70YzQvdCw0Y8g0LLQvtC70L3QsCAtLT4NCiAgPHBhdGggZD0iTTAsMTYgQzQsMTIgMTIsMTIgMTYsMTYgQzIwLDIwIDI4LDIwIDMyLDE2IEwzMiwzMiBMMCwzMiBaIiBmaWxsPSIjRkZGRkZGIiBmaWxsLW9wYWNpdHk9IjEiIC8+DQo8L3N2Zz4NCg==",
+  "IconName": "tide_20241206000623.svg",
+  "Color": "#22AC14",
+  "Version": "1.0.4",
+  "MarketplaceLink": "",
+  "HelpLink": "https://github.com/Advance-Technologies-Foundation/T.I.D.E./blob/main/README.md",
   "OrderLink": "",
+  "SupportEmail": "",
+  "Code": "AtfTIDE",
   "Packages": [
     {
-      "Name": "AtfTIDE",
-      "UId": "57902d1e-ea0c-4991-b367-992c12d68fb2"
+      "UId": "57902d1e-ea0c-4991-b367-992c12d68fb2",
+      "Name": "AtfTIDE"
     }
-  ],
-  "SupportEmail": "",
-  "Version": "1.0.4"
+  ]
 }

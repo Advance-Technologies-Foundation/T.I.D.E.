@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleGit", "ConsoleGit\ConsoleGit.csproj", "{22739983-4F1B-40FF-9237-19C526689133}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GitAbstraction", "GitAbstraction\GitAbstraction.csproj", "{158ABC0F-F3F1-4D7C-9EEB-3D704FACF894}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{22739983-4F1B-40FF-9237-19C526689133}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22739983-4F1B-40FF-9237-19C526689133}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22739983-4F1B-40FF-9237-19C526689133}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22739983-4F1B-40FF-9237-19C526689133}.Release|Any CPU.Build.0 = Release|Any CPU
+		{158ABC0F-F3F1-4D7C-9EEB-3D704FACF894}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{158ABC0F-F3F1-4D7C-9EEB-3D704FACF894}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{158ABC0F-F3F1-4D7C-9EEB-3D704FACF894}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{158ABC0F-F3F1-4D7C-9EEB-3D704FACF894}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
