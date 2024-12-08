@@ -9,12 +9,13 @@ using ErrorOr;
 // args[3] - password
 // args[4] - repoDir
 
-ErrorOr<CommandLineArgs> consoleArgsOrError  = CommandLineArgs.Parse(args);
-if(consoleArgsOrError.IsError){
-	await Console.Error.WriteAsync($"{consoleArgsOrError.FirstError.Code} - {consoleArgsOrError.FirstError.Description}");
-	return 1;
-}
-CommandLineArgs consoleArgs = consoleArgsOrError.Value;
+// ErrorOr<CommandLineArgs> consoleArgsOrError  = CommandLineArgs.Parse(args);
+// if(consoleArgsOrError.IsError){
+// 	await Console.Error.WriteAsync($"{consoleArgsOrError.FirstError.Code} - {consoleArgsOrError.FirstError.Description}");
+// 	return 1;
+// }
+//CommandLineArgs consoleArgs = consoleArgsOrError.Value;
+CommandLineArgs consoleArgs = new CommandLineArgs();
 using ICommand command = consoleArgs.Command switch {
 						"clone" => new CloneCommand(consoleArgs),
 						"pull" => new PullCommand(consoleArgs),

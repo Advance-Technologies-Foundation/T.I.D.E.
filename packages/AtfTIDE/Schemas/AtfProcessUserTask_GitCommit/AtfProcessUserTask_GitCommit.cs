@@ -26,11 +26,15 @@ namespace Terrasoft.Core.Process.Configuration
 		#region Methods: Protected
 
 		protected override bool InternalExecute(ProcessExecutingContext context) {
-			string repositoryName = HelperFunctions.FetchRepositoryName(Repository, UserConnection);
+			
+			
+			var repoInfo = HelperFunctions.GetRepositoryInfo(Repository, UserConnection);
 			ConsoleGitArgs args = new ConsoleGitArgs {
 				Command = AtfTIDE.Commands.Commit,
-				RepoDir = HelperFunctions.GetRepositoryDirectory(repositoryName).ToString(),
-				CommitMessage = CommitMessage
+				RepoDir = HelperFunctions.GetRepositoryDirectory(repoInfo.Name).ToString(),
+				CommitMessage = CommitMessage,
+				CommitAuthorName = UserConnection.CurrentUser.Name,
+				CommitAuthorEmail = repoInfo.UserName
 			};
 			
 			ConsoleGitResult gitCommandResult = ClassFactory

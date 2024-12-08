@@ -12,7 +12,7 @@ public class CommitCommand(CommandLineArgs args) : BaseRepositoryCommand(args) {
 	public override ErrorOr<Success> Execute() =>
 		InitializedRepository
 			//TODO: Investigate how we can sign commits with GPG
-			.Commit("Kirill Krylov", "k.krylov@creatio.com", "Commit through LibGit2Sharp")
+			.Commit(Args.CommitAuthorName, Args.CommitAuthorEmail, Args.CommitMessage)
 			.MatchFirst<ErrorOr<Success>>(
 				_ => Result.Success,
 				failure => failure
