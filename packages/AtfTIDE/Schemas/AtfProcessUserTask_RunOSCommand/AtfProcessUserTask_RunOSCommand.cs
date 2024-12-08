@@ -33,6 +33,14 @@ namespace Terrasoft.Core.Process.Configuration
 			
 			StringBuilder output = new StringBuilder();
 			StringBuilder error = new StringBuilder();
+			
+			if(WorkingDirectory.IsNullOrEmpty()) {
+				
+				IsError = true;
+				ErrorMessage = "Working directory is not set";
+				return true;
+			}
+			
 			try {
 				ProcessStartInfo startInfo = new ProcessStartInfo {
 					FileName = FileName,

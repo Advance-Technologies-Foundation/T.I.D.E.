@@ -38,10 +38,8 @@ public record CommandLineArgs {
 	public string Password { get; init; }
 
 	public string RepoDir { get; init; }
-
 	
 }
-
 
 
 

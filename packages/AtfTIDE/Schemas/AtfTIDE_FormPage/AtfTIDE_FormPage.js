@@ -1,4 +1,4 @@
-define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHEMA_ARGS*/()/**SCHEMA_ARGS*/ {
+define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_DEPS*/, function/**SCHEMA_ARGS*/(sdk)/**SCHEMA_ARGS*/ {
 	return {
 		viewConfigDiff: /**SCHEMA_VIEW_CONFIG_DIFF*/[
 			{
@@ -221,7 +221,7 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHEMA
 					"visible": true,
 					"icon": "import-data-button-icon",
 					"clicked": {
-						"request": "crt.RunBusinessProcessRequest",
+						"request": "atf.CaptureClioArgs",
 						"params": {
 							"processName": "AtfProcess_SaveWorkspaceToGit",
 							"processRunType": "ForTheSelectedPage",
@@ -248,7 +248,7 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHEMA
 					"visible": true,
 					"icon": "export-data-button-icon",
 					"clicked": {
-						"request": "crt.RunBusinessProcessRequest",
+						"request": "atf.CaptureClioArgs",
 						"params": {
 							"processName": "AtfProcess_LoadWorkspaceFromGit",
 							"processRunType": "ForTheSelectedPage",
@@ -894,7 +894,25 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHEMA
 				}
 			}
 		]/**SCHEMA_MODEL_CONFIG_DIFF*/,
-		handlers: /**SCHEMA_HANDLERS*/[]/**SCHEMA_HANDLERS*/,
+		handlers: /**SCHEMA_HANDLERS*/[
+			{
+				request: 'atf.CaptureClioArgs',
+				handler: async (request, next) => {
+					const endpoint = "/rest/Tide/CaptureClioArgs";
+					const httpClientService = new sdk.HttpClientService();
+					await httpClientService.get(endpoint)
+					const handlerChain = sdk.HandlerChainService.instance;
+					await handlerChain.process({
+						type: 'crt.RunBusinessProcessRequest',
+						$context: request.$context,
+						scopes: [...request.scopes],
+						processName: request.processName,
+						processRunType: request.processRunType,
+						recordIdProcessParameterName: request.recordIdProcessParameterName,
+					});
+				}
+			},
+		]/**SCHEMA_HANDLERS*/,
 		converters: /**SCHEMA_CONVERTERS*/{}/**SCHEMA_CONVERTERS*/,
 		validators: /**SCHEMA_VALIDATORS*/{}/**SCHEMA_VALIDATORS*/
 	};

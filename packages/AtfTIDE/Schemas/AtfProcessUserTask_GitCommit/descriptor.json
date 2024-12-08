@@ -1,0 +1,10 @@
+﻿{
+  "Descriptor": {
+    "UId": "68c751e5-bdf8-44ac-9772-df64781ad25d",
+    "Name": "AtfProcessUserTask_GitCommit",
+    "ModifiedOnUtc": "\/Date(1733653133000)\/",
+    "ManagerName": "ProcessUserTaskSchemaManager",
+    "Caption": "Git Commit",
+    "DependsOn": []
+  }
+}

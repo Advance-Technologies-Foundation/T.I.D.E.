@@ -1,0 +1,66 @@
+﻿{
+  "MetaData": {
+    "Schema": {
+      "ManagerName": "ProcessUserTaskSchemaManager",
+      "UId": "c6bd9ac5-8731-44cc-a92b-bfb554fc62ef",
+      "A2": "AtfProcessUserTask_GitAddAll",
+      "A5": "107aae31-0c74-4422-acf4-c8d817b5e08d",
+      "B1": [],
+      "B2": [],
+      "B3": [],
+      "B6": "57902d1e-ea0c-4991-b367-992c12d68fb2",
+      "B8": "8.2.0.4183",
+      "FJ1": [
+        {
+          "BL1": "Terrasoft.Core.Process.ProcessSchemaParameter",
+          "UId": "53ef1ab4-e67b-d095-deb7-b133eb7b7d67",
+          "A2": "ErrorMessage",
+          "A3": "c6bd9ac5-8731-44cc-a92b-bfb554fc62ef",
+          "A4": "c6bd9ac5-8731-44cc-a92b-bfb554fc62ef",
+          "L1": "8b3f29bb-ea14-4ce5-a5c5-293a929b6ba2",
+          "L8": {},
+          "L11": false,
+          "L12": 1
+        },
+        {
+          "BL1": "Terrasoft.Core.Process.ProcessSchemaParameter",
+          "UId": "b255130b-b5de-4a3e-945c-c2aff53f8e82",
+          "A2": "IsError",
+          "A3": "c6bd9ac5-8731-44cc-a92b-bfb554fc62ef",
+          "A4": "c6bd9ac5-8731-44cc-a92b-bfb554fc62ef",
+          "L1": "90b65bf8-0ffc-4141-8779-2420877af907",
+          "L8": {},
+          "L11": false,
+          "L12": 1
+        },
+        {
+          "BL1": "Terrasoft.Core.Process.ProcessSchemaParameter",
+          "UId": "1543e2cb-e5fc-9e3c-26aa-6cacc5162cee",
+          "A2": "Repository",
+          "A3": "c6bd9ac5-8731-44cc-a92b-bfb554fc62ef",
+          "A4": "c6bd9ac5-8731-44cc-a92b-bfb554fc62ef",
+          "L1": "b295071f-7ea9-4e62-8d1a-919bf3732ff2",
+          "L8": {},
+          "L6": true,
+          "L9": "d7d9045c-6aa7-4fce-99af-5f48f26fab3c",
+          "L11": false,
+          "L12": 0
+        },
+        {
+          "BL1": "Terrasoft.Core.Process.ProcessSchemaParameter",
+          "UId": "1dd51741-69ee-42a6-a34e-84f64fe7b73f",
+          "A2": "Output",
+          "A3": "c6bd9ac5-8731-44cc-a92b-bfb554fc62ef",
+          "A4": "c6bd9ac5-8731-44cc-a92b-bfb554fc62ef",
+          "L1": "8b3f29bb-ea14-4ce5-a5c5-293a929b6ba2",
+          "L8": {},
+          "L12": 1
+        }
+      ],
+      "FK4": true,
+      "FK7": true,
+      "FK12": "#839DC3",
+      "FK16": true
+    }
+  }
+}
