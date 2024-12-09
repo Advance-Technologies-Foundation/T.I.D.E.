@@ -4,6 +4,7 @@ using System.ServiceModel;
 using System.ServiceModel.Activation;
 using System.ServiceModel.Web;
 using System.Web.SessionState;
+using Common.Logging;
 using Terrasoft.Web.Common;
 using Terrasoft.Web.Http.Abstractions;
 
@@ -27,14 +28,16 @@ namespace AtfTIDE.WebServices {
 			string systemUrl = WebUtilities.GetBaseApplicationUrl(HttpContextAccessor.GetInstance().Request);
 			if(systemUrl.EndsWith("/0", StringComparison.InvariantCulture)) {
 				sysInfo.Add("IsFramework", "true");
-				sysInfo.Add("SystemUrl", systemUrl.TrimEnd("/0".ToCharArray()));
 			}else {
 				sysInfo.Add("IsFramework", "false");
-				sysInfo.Add("SystemUrl", systemUrl);
 			}
+			sysInfo.Add("SystemUrl", systemUrl);
+			var logger = LogManager.GetLogger("AtfTIDE");
 			foreach (string cookieName in cookies.Keys) {
+				logger.InfoFormat("{0}={1};", cookieName, cookies[cookieName].Value);
 				sysInfo.Add(cookieName, cookies[cookieName].Value);
 			}
+			
 			HelperFunctions.AddClioArgsForUser(UserConnection.CurrentUser.Id, sysInfo);
 			return string.Empty;
 		}

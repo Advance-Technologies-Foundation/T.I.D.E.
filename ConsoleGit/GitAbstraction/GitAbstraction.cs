@@ -93,7 +93,7 @@ namespace GitAbstraction {
 				}else{
 					RepoDirectory.Create();
 				}
-				CloneOptions cloneOptions = new CloneOptions();
+				CloneOptions cloneOptions = new ();
 				if (Credentials == null) {
 					return Repository.Clone(GitUrl.ToString(), RepoDirectory.FullName);
 				}

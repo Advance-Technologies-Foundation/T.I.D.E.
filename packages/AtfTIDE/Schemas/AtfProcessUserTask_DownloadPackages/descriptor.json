@@ -1,0 +1,9 @@
+﻿{
+  "Descriptor": {
+    "UId": "63ee21f5-6fab-4a71-9eb3-c7a5b44a63b8",
+    "Name": "AtfProcessUserTask_DownloadPackages",
+    "ModifiedOnUtc": "\/Date(1733767704000)\/",
+    "ManagerName": "ProcessUserTaskSchemaManager",
+    "Caption": "Download packages"
+  }
+}

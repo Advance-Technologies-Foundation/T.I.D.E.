@@ -280,7 +280,9 @@ namespace AtfTIDE {
 		Clone,
 		AddAll,
 		Push,
-		Commit
-
+		Pull,
+		Commit,
+		DownloadPackages,
+		Checkout
 	}
 }

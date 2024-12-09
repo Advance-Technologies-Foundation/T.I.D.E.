@@ -85,6 +85,15 @@ namespace AtfTIDE {
 		/// </remarks>
 		public string CommitAuthorEmail { get; set; }
 		
+		
+		public Uri CreatioUrl { get; set; }
+		public string BPMLOADER { get; set; }
+		public string ASPXAUTH { get; set; }
+		public string BPMCSRF { get; set; }
+		public string UserType { get; set; }
+		public string BPMSESSIONID { get; set; }
+		
+		
 		#endregion
 
 		#region Methods: Public
@@ -122,7 +131,7 @@ namespace AtfTIDE {
 						stringValue = value.ToString();
 						break;
 				}
-				dict.Add(prop.Name, stringValue);
+				dict.Add($"TIDE_{prop.Name}", stringValue);
 			}
 			return dict;
 		}

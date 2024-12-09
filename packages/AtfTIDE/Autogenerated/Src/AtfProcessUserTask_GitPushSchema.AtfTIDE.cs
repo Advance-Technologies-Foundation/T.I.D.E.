@@ -64,20 +64,14 @@
 				writer.WriteFinishObject();
 				return;
 			}
-			if (UseFlowEngineMode) {
-				if (!HasMapping("Repository")) {
-					writer.WriteValue("Repository", Repository, Guid.Empty);
-				}
+			if (!HasMapping("Repository")) {
+				writer.WriteValue("Repository", Repository, Guid.Empty);
 			}
-			if (UseFlowEngineMode) {
-				if (!HasMapping("IsError")) {
-					writer.WriteValue("IsError", IsError, false);
-				}
+			if (!HasMapping("IsError")) {
+				writer.WriteValue("IsError", IsError, false);
 			}
-			if (UseFlowEngineMode) {
-				if (!HasMapping("ErrorMessage")) {
-					writer.WriteValue("ErrorMessage", ErrorMessage, null);
-				}
+			if (!HasMapping("ErrorMessage")) {
+				writer.WriteValue("ErrorMessage", ErrorMessage, null);
 			}
 			if (!HasMapping("Output")) {
 				writer.WriteValue("Output", Output, null);
@@ -93,21 +87,12 @@
 			base.ApplyPropertiesDataValues(reader);
 			switch (reader.CurrentName) {
 				case "Repository":
-					if (!UseFlowEngineMode) {
-						break;
-					}
 					Repository = reader.GetGuidValue();
 				break;
 				case "IsError":
-					if (!UseFlowEngineMode) {
-						break;
-					}
 					IsError = reader.GetBoolValue();
 				break;
 				case "ErrorMessage":
-					if (!UseFlowEngineMode) {
-						break;
-					}
 					ErrorMessage = reader.GetStringValue();
 				break;
 				case "Output":

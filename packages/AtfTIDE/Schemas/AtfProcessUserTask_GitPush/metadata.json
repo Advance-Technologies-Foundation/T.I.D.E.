@@ -21,7 +21,6 @@
           "L8": {},
           "L6": true,
           "L9": "d7d9045c-6aa7-4fce-99af-5f48f26fab3c",
-          "L11": false,
           "L12": 0
         },
         {
@@ -32,9 +31,8 @@
           "A4": "15d4abc1-7e0d-4aa4-a336-5f16b73b8be1",
           "L1": "90b65bf8-0ffc-4141-8779-2420877af907",
           "L8": {},
-          "L11": false,
-          "L12": 0,
-          "L13": true
+          "L13": true,
+          "L12": 1
         },
         {
           "BL1": "Terrasoft.Core.Process.ProcessSchemaParameter",
@@ -44,8 +42,7 @@
           "A4": "15d4abc1-7e0d-4aa4-a336-5f16b73b8be1",
           "L1": "8b3f29bb-ea14-4ce5-a5c5-293a929b6ba2",
           "L8": {},
-          "L11": false,
-          "L12": 0
+          "L12": 1
         },
         {
           "BL1": "Terrasoft.Core.Process.ProcessSchemaParameter",

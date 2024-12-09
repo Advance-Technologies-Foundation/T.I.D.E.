@@ -2,9 +2,8 @@
   "Descriptor": {
     "UId": "15d4abc1-7e0d-4aa4-a336-5f16b73b8be1",
     "Name": "AtfProcessUserTask_GitPush",
-    "ModifiedOnUtc": "\/Date(1733653158000)\/",
+    "ModifiedOnUtc": "\/Date(1733767697000)\/",
     "ManagerName": "ProcessUserTaskSchemaManager",
-    "Caption": "Git Push",
-    "DependsOn": []
+    "Caption": "Git Push"
   }
 }

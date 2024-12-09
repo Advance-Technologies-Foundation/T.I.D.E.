@@ -1,30 +1,77 @@
-﻿using ConsoleGit;
+﻿using System.Net;using System.Text;
+using ConsoleGit;
 using ConsoleGit.Commands;
+using ConsoleGit.ConfiguredHttpClient;
 using ErrorOr;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
+using Polly;
+using Polly.Extensions.Http;
 
-// args will have the following shape
-// args[0] - command
-// args[1] - gitUrl
-// args[2] - userName
-// args[3] - password
-// args[4] - repoDir
+IHostBuilder builder = Host.CreateDefaultBuilder(args)
+	.ConfigureAppConfiguration(config => {
+		config.AddJsonFile("appsettings.json", optional: true, reloadOnChange: true);
+	})
+	.ConfigureLogging((context, logging) => {
+		logging.ClearProviders();
+		logging.AddConfiguration(context.Configuration.GetSection("Logging"));
+		logging.AddConsole();
+	})
+	.ConfigureServices(services => {
+		services.AddSingleton<CommandLineArgs>();
+		services.AddHttpClient("initializedClient")
+			.ConfigurePrimaryHttpMessageHandler(sp => new HttpClientHandler { 
+				CookieContainer = sp.GetRequiredService<CommandLineArgs>().CreateCookieContainerFromArgs() 
+			})
+			.ConfigureHttpClient((sp, client) => {
+				CommandLineArgs args = sp.GetRequiredService<CommandLineArgs>();
+				client.BaseAddress = args.CreatioUrl;
+				
+#if DEBUG				
+				Console.WriteLine($"Downloading packages from {args.CreatioUrl}");
+#endif
+				CookieContainer cookieContainer = args.CreateCookieContainerFromArgs();
+				const string bpmcsrf = "BPMCSRF";
+				string bpmcsrfValue = cookieContainer.GetCookies(args.CreatioUrl!)
+										.FirstOrDefault(c => c.Name == bpmcsrf)?.Value ?? "";
+				client.DefaultRequestHeaders.Add(bpmcsrf, bpmcsrfValue);
+			})
+#if DEBUG			
+			.AddHttpMessageHandler<MyHandler>()
+#endif
+			.AddPolicyHandler(HttpPolicyExtensions.HandleTransientHttpError()
+								.OrResult(msg => msg.StatusCode == HttpStatusCode.NotFound)
+								.WaitAndRetryAsync(3, retryAttempt => TimeSpan.FromSeconds(Math.Pow(2, retryAttempt)))
+			);
+#if DEBUG
+		services.AddScoped<MyHandler>();
+#endif
+		services.AddScoped<DownloadPackagesCommand>();
+		services.AddScoped<CloneCommand>();
+		services.AddScoped<PullCommand>();
+		services.AddScoped<CheckoutCommand>();
+		services.AddScoped<PushCommand>();
+		services.AddScoped<AddAllCommand>();
+		services.AddScoped<CommitCommand>();
+		services.AddScoped<DownloadPackagesCommand>();
+		// Register other commands
+	});
 
-// ErrorOr<CommandLineArgs> consoleArgsOrError  = CommandLineArgs.Parse(args);
-// if(consoleArgsOrError.IsError){
-// 	await Console.Error.WriteAsync($"{consoleArgsOrError.FirstError.Code} - {consoleArgsOrError.FirstError.Description}");
-// 	return 1;
-// }
-//CommandLineArgs consoleArgs = consoleArgsOrError.Value;
-CommandLineArgs consoleArgs = new CommandLineArgs();
+using IHost host = builder.Build();
+CommandLineArgs consoleArgs = host.Services.GetRequiredService<CommandLineArgs>();
+
 using ICommand command = consoleArgs.Command switch {
-						"clone" => new CloneCommand(consoleArgs),
-						"pull" => new PullCommand(consoleArgs),
-						"checkout" => new CheckoutCommand(consoleArgs),
-						"push" => new PushCommand(consoleArgs),
-						"add" =>new AddCommand(consoleArgs),
-						"commit" =>new CommitCommand(consoleArgs),
-						var _ => new ErrorCommand(consoleArgs)
-					};
+	"Clone" => host.Services.GetRequiredService<CloneCommand>(),
+	"Pull" => host.Services.GetRequiredService<PullCommand>(),
+	"Checkout" => host.Services.GetRequiredService<CheckoutCommand>(),
+	"Push" => host.Services.GetRequiredService<PushCommand>(),
+	"AddAll" =>host.Services.GetRequiredService<AddAllCommand>(),
+	"Commit" =>host.Services.GetRequiredService<CommitCommand>(),
+	"DownloadPackages" =>host.Services.GetRequiredService<DownloadPackagesCommand>(),
+	var _ => new ErrorCommand(consoleArgs)
+};
 
 return await command.Execute().MatchAsync(
 	_ => OnSuccess(consoleArgs.Command),
@@ -40,3 +87,4 @@ async Task<int> OnSuccess(string commandName){
 	await Console.Out.WriteLineAsync($"{commandName} command executed successfully");
 	return 0;
 }
+
