@@ -1,0 +1,51 @@
+### YamlMime:ManagedReference
+items:
+- uid: Terrasoft.Core.Process.Configuration
+  commentId: N:Terrasoft.Core.Process.Configuration
+  id: Terrasoft.Core.Process.Configuration
+  children:
+  - Terrasoft.Core.Process.Configuration.AtfProcessUserTask_CloneRepository
+  - Terrasoft.Core.Process.Configuration.AtfProcessUserTask_DownloadPackages
+  - Terrasoft.Core.Process.Configuration.AtfProcessUserTask_GitAddAll
+  - Terrasoft.Core.Process.Configuration.AtfProcessUserTask_GitCommit
+  - Terrasoft.Core.Process.Configuration.AtfProcessUserTask_GitPush
+  langs:
+  - csharp
+  - vb
+  name: Terrasoft.Core.Process.Configuration
+  nameWithType: Terrasoft.Core.Process.Configuration
+  fullName: Terrasoft.Core.Process.Configuration
+  type: Namespace
+  assemblies:
+  - AtfTIDE
+references:
+- uid: Terrasoft.Core.Process.Configuration.AtfProcessUserTask_CloneRepository
+  commentId: T:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_CloneRepository
+  href: Terrasoft.Core.Process.Configuration.AtfProcessUserTask_CloneRepository.html
+  name: AtfProcessUserTask_CloneRepository
+  nameWithType: AtfProcessUserTask_CloneRepository
+  fullName: Terrasoft.Core.Process.Configuration.AtfProcessUserTask_CloneRepository
+- uid: Terrasoft.Core.Process.Configuration.AtfProcessUserTask_DownloadPackages
+  commentId: T:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_DownloadPackages
+  href: Terrasoft.Core.Process.Configuration.AtfProcessUserTask_DownloadPackages.html
+  name: AtfProcessUserTask_DownloadPackages
+  nameWithType: AtfProcessUserTask_DownloadPackages
+  fullName: Terrasoft.Core.Process.Configuration.AtfProcessUserTask_DownloadPackages
+- uid: Terrasoft.Core.Process.Configuration.AtfProcessUserTask_GitAddAll
+  commentId: T:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_GitAddAll
+  href: Terrasoft.Core.Process.Configuration.AtfProcessUserTask_GitAddAll.html
+  name: AtfProcessUserTask_GitAddAll
+  nameWithType: AtfProcessUserTask_GitAddAll
+  fullName: Terrasoft.Core.Process.Configuration.AtfProcessUserTask_GitAddAll
+- uid: Terrasoft.Core.Process.Configuration.AtfProcessUserTask_GitCommit
+  commentId: T:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_GitCommit
+  href: Terrasoft.Core.Process.Configuration.AtfProcessUserTask_GitCommit.html
+  name: AtfProcessUserTask_GitCommit
+  nameWithType: AtfProcessUserTask_GitCommit
+  fullName: Terrasoft.Core.Process.Configuration.AtfProcessUserTask_GitCommit
+- uid: Terrasoft.Core.Process.Configuration.AtfProcessUserTask_GitPush
+  commentId: T:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_GitPush
+  href: Terrasoft.Core.Process.Configuration.AtfProcessUserTask_GitPush.html
+  name: AtfProcessUserTask_GitPush
+  nameWithType: AtfProcessUserTask_GitPush
+  fullName: Terrasoft.Core.Process.Configuration.AtfProcessUserTask_GitPush

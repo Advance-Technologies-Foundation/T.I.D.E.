@@ -1,0 +1,10 @@
+﻿{
+  "Descriptor": {
+    "UId": "d46086d4-baae-44b8-9dc1-707ff6b89c6c",
+    "Name": "MrktProcessUserTask_ApolloInvokeUiCommand",
+    "ModifiedOnUtc": "\/Date(1724069465000)\/",
+    "ManagerName": "ProcessUserTaskSchemaManager",
+    "Caption": "Invoke Apollo Ui Command",
+    "DependsOn": []
+  }
+}

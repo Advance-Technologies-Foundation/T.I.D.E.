@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: ConsoleGit.ConfiguredHttpClient
+  commentId: N:ConsoleGit.ConfiguredHttpClient
+  id: ConsoleGit.ConfiguredHttpClient
+  children:
+  - ConsoleGit.ConfiguredHttpClient.MyHandler
+  langs:
+  - csharp
+  - vb
+  name: ConsoleGit.ConfiguredHttpClient
+  nameWithType: ConsoleGit.ConfiguredHttpClient
+  fullName: ConsoleGit.ConfiguredHttpClient
+  type: Namespace
+  assemblies:
+  - ConsoleGit
+references:
+- uid: ConsoleGit.ConfiguredHttpClient.MyHandler
+  commentId: T:ConsoleGit.ConfiguredHttpClient.MyHandler
+  href: ConsoleGit.ConfiguredHttpClient.MyHandler.html
+  name: MyHandler
+  nameWithType: MyHandler
+  fullName: ConsoleGit.ConfiguredHttpClient.MyHandler

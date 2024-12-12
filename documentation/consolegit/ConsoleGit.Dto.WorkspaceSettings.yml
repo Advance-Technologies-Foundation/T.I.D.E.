@@ -1,0 +1,535 @@
+### YamlMime:ManagedReference
+items:
+- uid: ConsoleGit.Dto.WorkspaceSettings
+  commentId: T:ConsoleGit.Dto.WorkspaceSettings
+  id: WorkspaceSettings
+  parent: ConsoleGit.Dto
+  children:
+  - ConsoleGit.Dto.WorkspaceSettings.#ctor(System.String[],System.String)
+  - ConsoleGit.Dto.WorkspaceSettings.ApplicationVersion
+  - ConsoleGit.Dto.WorkspaceSettings.Packages
+  langs:
+  - csharp
+  - vb
+  name: WorkspaceSettings
+  nameWithType: WorkspaceSettings
+  fullName: ConsoleGit.Dto.WorkspaceSettings
+  type: Class
+  source:
+    remote:
+      path: ConsoleGit/ConsoleGit/Dto/WorkspaceSettings.cs
+      branch: feature/my-feature
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: WorkspaceSettings
+    path: ../ConsoleGit/ConsoleGit/Dto/WorkspaceSettings.cs
+    startLine: 5
+  assemblies:
+  - ConsoleGit
+  namespace: ConsoleGit.Dto
+  syntax:
+    content: 'public record WorkspaceSettings : IEquatable<WorkspaceSettings>'
+    content.vb: Public Class WorkspaceSettings Implements IEquatable(Of WorkspaceSettings)
+  inheritance:
+  - System.Object
+  implements:
+  - System.IEquatable{ConsoleGit.Dto.WorkspaceSettings}
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: ConsoleGit.Dto.WorkspaceSettings.#ctor(System.String[],System.String)
+  commentId: M:ConsoleGit.Dto.WorkspaceSettings.#ctor(System.String[],System.String)
+  id: '#ctor(System.String[],System.String)'
+  parent: ConsoleGit.Dto.WorkspaceSettings
+  langs:
+  - csharp
+  - vb
+  name: WorkspaceSettings(string[], string)
+  nameWithType: WorkspaceSettings.WorkspaceSettings(string[], string)
+  fullName: ConsoleGit.Dto.WorkspaceSettings.WorkspaceSettings(string[], string)
+  type: Constructor
+  source:
+    remote:
+      path: ConsoleGit/ConsoleGit/Dto/WorkspaceSettings.cs
+      branch: feature/my-feature
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: .ctor
+    path: ../ConsoleGit/ConsoleGit/Dto/WorkspaceSettings.cs
+    startLine: 5
+  assemblies:
+  - ConsoleGit
+  namespace: ConsoleGit.Dto
+  syntax:
+    content: public WorkspaceSettings(string[] Packages, string ApplicationVersion)
+    parameters:
+    - id: Packages
+      type: System.String[]
+    - id: ApplicationVersion
+      type: System.String
+    content.vb: Public Sub New(Packages As String(), ApplicationVersion As String)
+  overload: ConsoleGit.Dto.WorkspaceSettings.#ctor*
+  nameWithType.vb: WorkspaceSettings.New(String(), String)
+  fullName.vb: ConsoleGit.Dto.WorkspaceSettings.New(String(), String)
+  name.vb: New(String(), String)
+- uid: ConsoleGit.Dto.WorkspaceSettings.Packages
+  commentId: P:ConsoleGit.Dto.WorkspaceSettings.Packages
+  id: Packages
+  parent: ConsoleGit.Dto.WorkspaceSettings
+  langs:
+  - csharp
+  - vb
+  name: Packages
+  nameWithType: WorkspaceSettings.Packages
+  fullName: ConsoleGit.Dto.WorkspaceSettings.Packages
+  type: Property
+  source:
+    remote:
+      path: ConsoleGit/ConsoleGit/Dto/WorkspaceSettings.cs
+      branch: feature/my-feature
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: Packages
+    path: ../ConsoleGit/ConsoleGit/Dto/WorkspaceSettings.cs
+    startLine: 6
+  assemblies:
+  - ConsoleGit
+  namespace: ConsoleGit.Dto
+  syntax:
+    content: >-
+      [JsonPropertyName("Packages")]
+
+      public string[] Packages { get; init; }
+    parameters: []
+    return:
+      type: System.String[]
+    content.vb: >-
+      <JsonPropertyName("Packages")>
+
+      Public Property Packages As String()
+  overload: ConsoleGit.Dto.WorkspaceSettings.Packages*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Packages
+- uid: ConsoleGit.Dto.WorkspaceSettings.ApplicationVersion
+  commentId: P:ConsoleGit.Dto.WorkspaceSettings.ApplicationVersion
+  id: ApplicationVersion
+  parent: ConsoleGit.Dto.WorkspaceSettings
+  langs:
+  - csharp
+  - vb
+  name: ApplicationVersion
+  nameWithType: WorkspaceSettings.ApplicationVersion
+  fullName: ConsoleGit.Dto.WorkspaceSettings.ApplicationVersion
+  type: Property
+  source:
+    remote:
+      path: ConsoleGit/ConsoleGit/Dto/WorkspaceSettings.cs
+      branch: feature/my-feature
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: ApplicationVersion
+    path: ../ConsoleGit/ConsoleGit/Dto/WorkspaceSettings.cs
+    startLine: 7
+  assemblies:
+  - ConsoleGit
+  namespace: ConsoleGit.Dto
+  syntax:
+    content: >-
+      [JsonPropertyName("ApplicationVersion")]
+
+      public string ApplicationVersion { get; init; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonPropertyName("ApplicationVersion")>
+
+      Public Property ApplicationVersion As String
+  overload: ConsoleGit.Dto.WorkspaceSettings.ApplicationVersion*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: ApplicationVersion
+references:
+- uid: ConsoleGit.Dto
+  commentId: N:ConsoleGit.Dto
+  href: ConsoleGit.html
+  name: ConsoleGit.Dto
+  nameWithType: ConsoleGit.Dto
+  fullName: ConsoleGit.Dto
+  spec.csharp:
+  - uid: ConsoleGit
+    name: ConsoleGit
+    href: ConsoleGit.html
+  - name: .
+  - uid: ConsoleGit.Dto
+    name: Dto
+    href: ConsoleGit.Dto.html
+  spec.vb:
+  - uid: ConsoleGit
+    name: ConsoleGit
+    href: ConsoleGit.html
+  - name: .
+  - uid: ConsoleGit.Dto
+    name: Dto
+    href: ConsoleGit.Dto.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.IEquatable{ConsoleGit.Dto.WorkspaceSettings}
+  commentId: T:System.IEquatable{ConsoleGit.Dto.WorkspaceSettings}
+  parent: System
+  definition: System.IEquatable`1
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<WorkspaceSettings>
+  nameWithType: IEquatable<WorkspaceSettings>
+  fullName: System.IEquatable<ConsoleGit.Dto.WorkspaceSettings>
+  nameWithType.vb: IEquatable(Of WorkspaceSettings)
+  fullName.vb: System.IEquatable(Of ConsoleGit.Dto.WorkspaceSettings)
+  name.vb: IEquatable(Of WorkspaceSettings)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - uid: ConsoleGit.Dto.WorkspaceSettings
+    name: WorkspaceSettings
+    href: ConsoleGit.Dto.WorkspaceSettings.html
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: ConsoleGit.Dto.WorkspaceSettings
+    name: WorkspaceSettings
+    href: ConsoleGit.Dto.WorkspaceSettings.html
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.IEquatable`1
+  commentId: T:System.IEquatable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<T>
+  nameWithType: IEquatable<T>
+  fullName: System.IEquatable<T>
+  nameWithType.vb: IEquatable(Of T)
+  fullName.vb: System.IEquatable(Of T)
+  name.vb: IEquatable(Of T)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: ConsoleGit.Dto.WorkspaceSettings.#ctor*
+  commentId: Overload:ConsoleGit.Dto.WorkspaceSettings.#ctor
+  href: ConsoleGit.Dto.WorkspaceSettings.html#ConsoleGit_Dto_WorkspaceSettings__ctor_System_String___System_String_
+  name: WorkspaceSettings
+  nameWithType: WorkspaceSettings.WorkspaceSettings
+  fullName: ConsoleGit.Dto.WorkspaceSettings.WorkspaceSettings
+  nameWithType.vb: WorkspaceSettings.New
+  fullName.vb: ConsoleGit.Dto.WorkspaceSettings.New
+  name.vb: New
+- uid: System.String[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string[]
+  nameWithType: string[]
+  fullName: string[]
+  nameWithType.vb: String()
+  fullName.vb: String()
+  name.vb: String()
+  spec.csharp:
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: (
+  - name: )
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: ConsoleGit.Dto.WorkspaceSettings.Packages*
+  commentId: Overload:ConsoleGit.Dto.WorkspaceSettings.Packages
+  href: ConsoleGit.Dto.WorkspaceSettings.html#ConsoleGit_Dto_WorkspaceSettings_Packages
+  name: Packages
+  nameWithType: WorkspaceSettings.Packages
+  fullName: ConsoleGit.Dto.WorkspaceSettings.Packages
+- uid: ConsoleGit.Dto.WorkspaceSettings.ApplicationVersion*
+  commentId: Overload:ConsoleGit.Dto.WorkspaceSettings.ApplicationVersion
+  href: ConsoleGit.Dto.WorkspaceSettings.html#ConsoleGit_Dto_WorkspaceSettings_ApplicationVersion
+  name: ApplicationVersion
+  nameWithType: WorkspaceSettings.ApplicationVersion
+  fullName: ConsoleGit.Dto.WorkspaceSettings.ApplicationVersion

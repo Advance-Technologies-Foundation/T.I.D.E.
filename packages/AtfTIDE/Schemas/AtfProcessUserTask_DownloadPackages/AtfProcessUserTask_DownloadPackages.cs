@@ -17,7 +17,6 @@ namespace Terrasoft.Core.Process.Configuration
 
 	#region Class: AtfProcessUserTask_DownloadPackages
 
-	/// <exclude/>
 	public partial class AtfProcessUserTask_DownloadPackages
 	{
 

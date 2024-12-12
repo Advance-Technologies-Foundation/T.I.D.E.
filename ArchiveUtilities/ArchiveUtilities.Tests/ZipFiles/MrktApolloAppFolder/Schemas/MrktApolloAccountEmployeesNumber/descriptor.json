@@ -1,0 +1,14 @@
+﻿{
+  "Descriptor": {
+    "UId": "1938d25f-c7ec-4c68-9602-3d8747cc982a",
+    "Name": "MrktApolloAccountEmployeesNumber",
+    "ModifiedOnUtc": "\/Date(1724069180000)\/",
+    "Parent": {
+      "UId": "1bab9dcf-17d5-49f8-9536-8e0064f1dce0",
+      "Name": "BaseEntity"
+    },
+    "ManagerName": "EntitySchemaManager",
+    "Caption": "Apollo number of account employees",
+    "DependsOn": []
+  }
+}

@@ -16,6 +16,7 @@
     </PropertyGroup>
     
     <ItemGroup>
+        <ProjectReference Include="..\..\ArchiveUtilities\ArchiveUtilities\ArchiveUtilities.csproj" />
         <ProjectReference Include="..\GitAbstraction\GitAbstraction.csproj"/>
     </ItemGroup>
 

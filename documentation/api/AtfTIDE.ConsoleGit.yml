@@ -1,0 +1,390 @@
+### YamlMime:ManagedReference
+items:
+- uid: AtfTIDE.ConsoleGit
+  commentId: T:AtfTIDE.ConsoleGit
+  id: ConsoleGit
+  parent: AtfTIDE
+  children:
+  - AtfTIDE.ConsoleGit.Execute(AtfTIDE.ConsoleGitArgs)
+  langs:
+  - csharp
+  - vb
+  name: ConsoleGit
+  nameWithType: ConsoleGit
+  fullName: AtfTIDE.ConsoleGit
+  type: Class
+  source:
+    remote:
+      path: packages/AtfTIDE/Files/cs/ConsoleGit.cs
+      branch: feature/my-feature
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: ConsoleGit
+    path: ../packages/AtfTIDE/Files/cs/ConsoleGit.cs
+    startLine: 49
+  assemblies:
+  - AtfTIDE
+  namespace: AtfTIDE
+  syntax:
+    content: >-
+      [DefaultBinding(typeof(IConsoleGit), Name = "AtfTIDE.ConsoleGit")]
+
+      public class ConsoleGit : IConsoleGit
+    content.vb: >-
+      <DefaultBinding(GetType(IConsoleGit), Name:="AtfTIDE.ConsoleGit")>
+
+      Public Class ConsoleGit Implements IConsoleGit
+  inheritance:
+  - System.Object
+  implements:
+  - AtfTIDE.IConsoleGit
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  attributes:
+  - type: Terrasoft.Core.Factories.DefaultBindingAttribute
+    ctor: Terrasoft.Core.Factories.DefaultBindingAttribute.#ctor(System.Type)
+    arguments:
+    - type: System.Type
+      value: AtfTIDE.IConsoleGit
+    namedArguments:
+    - name: Name
+      type: System.String
+      value: AtfTIDE.ConsoleGit
+- uid: AtfTIDE.ConsoleGit.Execute(AtfTIDE.ConsoleGitArgs)
+  commentId: M:AtfTIDE.ConsoleGit.Execute(AtfTIDE.ConsoleGitArgs)
+  id: Execute(AtfTIDE.ConsoleGitArgs)
+  parent: AtfTIDE.ConsoleGit
+  langs:
+  - csharp
+  - vb
+  name: Execute(ConsoleGitArgs)
+  nameWithType: ConsoleGit.Execute(ConsoleGitArgs)
+  fullName: AtfTIDE.ConsoleGit.Execute(AtfTIDE.ConsoleGitArgs)
+  type: Method
+  source:
+    remote:
+      path: packages/AtfTIDE/Files/cs/ConsoleGit.cs
+      branch: feature/my-feature
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: Execute
+    path: ../packages/AtfTIDE/Files/cs/ConsoleGit.cs
+    startLine: 266
+  assemblies:
+  - AtfTIDE
+  namespace: AtfTIDE
+  summary: Executes a git command with the specified arguments
+  example: []
+  syntax:
+    content: public ConsoleGitResult Execute(ConsoleGitArgs args)
+    parameters:
+    - id: args
+      type: AtfTIDE.ConsoleGitArgs
+      description: Git command arguments and configuration
+    return:
+      type: AtfTIDE.ConsoleGitResult
+      description: Result containing exit code and command output or error message
+    content.vb: Public Function Execute(args As ConsoleGitArgs) As ConsoleGitResult
+  overload: AtfTIDE.ConsoleGit.Execute*
+  implements:
+  - AtfTIDE.IConsoleGit.Execute(AtfTIDE.ConsoleGitArgs)
+references:
+- uid: AtfTIDE
+  commentId: N:AtfTIDE
+  href: AtfTIDE.html
+  name: AtfTIDE
+  nameWithType: AtfTIDE
+  fullName: AtfTIDE
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: AtfTIDE.IConsoleGit
+  commentId: T:AtfTIDE.IConsoleGit
+  parent: AtfTIDE
+  href: AtfTIDE.IConsoleGit.html
+  name: IConsoleGit
+  nameWithType: IConsoleGit
+  fullName: AtfTIDE.IConsoleGit
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: AtfTIDE.ConsoleGit.Execute*
+  commentId: Overload:AtfTIDE.ConsoleGit.Execute
+  href: AtfTIDE.ConsoleGit.html#AtfTIDE_ConsoleGit_Execute_AtfTIDE_ConsoleGitArgs_
+  name: Execute
+  nameWithType: ConsoleGit.Execute
+  fullName: AtfTIDE.ConsoleGit.Execute
+- uid: AtfTIDE.IConsoleGit.Execute(AtfTIDE.ConsoleGitArgs)
+  commentId: M:AtfTIDE.IConsoleGit.Execute(AtfTIDE.ConsoleGitArgs)
+  parent: AtfTIDE.IConsoleGit
+  href: AtfTIDE.IConsoleGit.html#AtfTIDE_IConsoleGit_Execute_AtfTIDE_ConsoleGitArgs_
+  name: Execute(ConsoleGitArgs)
+  nameWithType: IConsoleGit.Execute(ConsoleGitArgs)
+  fullName: AtfTIDE.IConsoleGit.Execute(AtfTIDE.ConsoleGitArgs)
+  spec.csharp:
+  - uid: AtfTIDE.IConsoleGit.Execute(AtfTIDE.ConsoleGitArgs)
+    name: Execute
+    href: AtfTIDE.IConsoleGit.html#AtfTIDE_IConsoleGit_Execute_AtfTIDE_ConsoleGitArgs_
+  - name: (
+  - uid: AtfTIDE.ConsoleGitArgs
+    name: ConsoleGitArgs
+    href: AtfTIDE.ConsoleGitArgs.html
+  - name: )
+  spec.vb:
+  - uid: AtfTIDE.IConsoleGit.Execute(AtfTIDE.ConsoleGitArgs)
+    name: Execute
+    href: AtfTIDE.IConsoleGit.html#AtfTIDE_IConsoleGit_Execute_AtfTIDE_ConsoleGitArgs_
+  - name: (
+  - uid: AtfTIDE.ConsoleGitArgs
+    name: ConsoleGitArgs
+    href: AtfTIDE.ConsoleGitArgs.html
+  - name: )
+- uid: AtfTIDE.ConsoleGitArgs
+  commentId: T:AtfTIDE.ConsoleGitArgs
+  parent: AtfTIDE
+  href: AtfTIDE.ConsoleGitArgs.html
+  name: ConsoleGitArgs
+  nameWithType: ConsoleGitArgs
+  fullName: AtfTIDE.ConsoleGitArgs
+- uid: AtfTIDE.ConsoleGitResult
+  commentId: T:AtfTIDE.ConsoleGitResult
+  parent: AtfTIDE
+  href: AtfTIDE.ConsoleGitResult.html
+  name: ConsoleGitResult
+  nameWithType: ConsoleGitResult
+  fullName: AtfTIDE.ConsoleGitResult

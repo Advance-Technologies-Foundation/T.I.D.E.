@@ -1,0 +1,12 @@
+<Project>
+	<ItemGroup Label="Entity Files" Condition="'$(PkgPath)' != ''">
+		<Compile Include="$(PkgPath)/MrktApolloApp/Schemas/MrktApolloAccountEmployeesNumber/MrktApolloAccountEmployeesNumber.cs" Condition="Exists('$(PkgPath)/MrktApolloApp/Schemas/MrktApolloAccountEmployeesNumber/MrktApolloAccountEmployeesNumber.cs')" />
+		<Compile Include="$(PkgPath)/MrktApolloApp/Schemas/MrktApolloDepartment/MrktApolloDepartment.cs" Condition="Exists('$(PkgPath)/MrktApolloApp/Schemas/MrktApolloDepartment/MrktApolloDepartment.cs')" />
+		<Compile Include="$(PkgPath)/MrktApolloApp/Schemas/MrktApolloEmailStatus/MrktApolloEmailStatus.cs" Condition="Exists('$(PkgPath)/MrktApolloApp/Schemas/MrktApolloEmailStatus/MrktApolloEmailStatus.cs')" />
+		<Compile Include="$(PkgPath)/MrktApolloApp/Schemas/MrktApolloIndustry/MrktApolloIndustry.cs" Condition="Exists('$(PkgPath)/MrktApolloApp/Schemas/MrktApolloIndustry/MrktApolloIndustry.cs')" />
+		<Compile Include="$(PkgPath)/MrktApolloApp/Schemas/MrktApolloManagementLevel/MrktApolloManagementLevel.cs" Condition="Exists('$(PkgPath)/MrktApolloApp/Schemas/MrktApolloManagementLevel/MrktApolloManagementLevel.cs')" />
+		<Compile Include="$(PkgPath)/MrktApolloApp/Schemas/MrktApolloMixedCompanySearch/MrktApolloMixedCompanySearch.cs" Condition="Exists('$(PkgPath)/MrktApolloApp/Schemas/MrktApolloMixedCompanySearch/MrktApolloMixedCompanySearch.cs')" />
+		<Compile Include="$(PkgPath)/MrktApolloApp/Schemas/MrktApolloPeopleSearch/MrktApolloPeopleSearch.cs" Condition="Exists('$(PkgPath)/MrktApolloApp/Schemas/MrktApolloPeopleSearch/MrktApolloPeopleSearch.cs')" />
+		<Compile Include="$(PkgPath)/MrktApolloApp/Schemas/MrktApolloSearchRules/MrktApolloSearchRules.cs" Condition="Exists('$(PkgPath)/MrktApolloApp/Schemas/MrktApolloSearchRules/MrktApolloSearchRules.cs')" />
+	</ItemGroup>
+</Project>

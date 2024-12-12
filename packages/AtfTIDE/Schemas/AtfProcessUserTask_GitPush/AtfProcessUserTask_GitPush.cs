@@ -1,6 +1,4 @@
-using System.Linq;
 using AtfTIDE;
-using ErrorOr;
 using Terrasoft.Core.Factories;
 
 namespace Terrasoft.Core.Process.Configuration
@@ -19,17 +17,19 @@ namespace Terrasoft.Core.Process.Configuration
 
 	#region Class: AtfProcessUserTask_GitPush
 
-	/// <exclude/>
 	public partial class AtfProcessUserTask_GitPush
 	{
 
 		#region Methods: Protected
 
 		protected override bool InternalExecute(ProcessExecutingContext context) {
-			string repositoryName = HelperFunctions.FetchRepositoryName(Repository, UserConnection);
+			RepositoryInfo repositoryInfo = HelperFunctions.GetRepositoryInfo(Repository, UserConnection);
 			ConsoleGitArgs args = new ConsoleGitArgs {
 				Command = AtfTIDE.Commands.Push,
-				RepoDir = HelperFunctions.GetRepositoryDirectory(repositoryName).ToString(),
+				GitUrl = repositoryInfo.GitUrl,
+				Password = repositoryInfo.Password,
+				UserName = repositoryInfo.UserName,
+				RepoDir = HelperFunctions.GetRepositoryDirectory(repositoryInfo.Name).ToString(),
 			};
 			
 			ConsoleGitResult gitCommandResult = ClassFactory

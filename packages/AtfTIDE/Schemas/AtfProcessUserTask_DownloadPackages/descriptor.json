@@ -4,6 +4,7 @@
     "Name": "AtfProcessUserTask_DownloadPackages",
     "ModifiedOnUtc": "\/Date(1733767704000)\/",
     "ManagerName": "ProcessUserTaskSchemaManager",
-    "Caption": "Download packages"
+    "Caption": "Download packages",
+    "DependsOn": []
   }
 }

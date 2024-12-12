@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GitAbstraction", "..\Consol
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleGit", "..\ConsoleGit\ConsoleGit\ConsoleGit.csproj", "{E4DF8E7A-3BEC-46EC-90EA-D3D7F5357CFB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArchiveUtilities", "..\ArchiveUtilities\ArchiveUtilities\ArchiveUtilities.csproj", "{14747986-B5B4-437B-A831-6444851C3F12}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArchiveUtilities.Tests", "..\ArchiveUtilities\ArchiveUtilities.Tests\ArchiveUtilities.Tests.csproj", "{350973CF-5980-4EE7-BB76-9459AAE3D79D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -36,5 +40,13 @@ Global
 		{E4DF8E7A-3BEC-46EC-90EA-D3D7F5357CFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E4DF8E7A-3BEC-46EC-90EA-D3D7F5357CFB}.Release|Any CPU.Build.0 = Release|Any CPU
 		{E4DF8E7A-3BEC-46EC-90EA-D3D7F5357CFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14747986-B5B4-437B-A831-6444851C3F12}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14747986-B5B4-437B-A831-6444851C3F12}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14747986-B5B4-437B-A831-6444851C3F12}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14747986-B5B4-437B-A831-6444851C3F12}.Release|Any CPU.Build.0 = Release|Any CPU
+		{350973CF-5980-4EE7-BB76-9459AAE3D79D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{350973CF-5980-4EE7-BB76-9459AAE3D79D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{350973CF-5980-4EE7-BB76-9459AAE3D79D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{350973CF-5980-4EE7-BB76-9459AAE3D79D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

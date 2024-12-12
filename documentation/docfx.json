@@ -1,0 +1,82 @@
+﻿{
+  "$schema": "https://raw.githubusercontent.com/dotnet/docfx/main/schemas/docfx.schema.json",
+  "metadata": [
+    {
+      "src": [
+        {
+          "src": "../packages/AtfTIDE/Files/",
+          "files": ["AtfTIDE.csproj"],
+          "exclude": [
+            "_site/**", "**/obj/**"
+          ]
+        }
+      ],
+      "dest": "api"
+    },
+    {
+      "src": [
+        {
+          "src": "../ConsoleGit/ConsoleGit/",
+          "files": [
+            "**/ConsoleGit.csproj"
+          ],
+          "exclude": [
+            "**/bin/**",
+            "**/obj/**",
+            "_site/**"
+          ]
+        }
+      ],
+      "dest": "consolegit"
+    },
+    {
+      "src": [
+        {
+          "src": "../ConsoleGit/GitAbstraction/",
+          "files": [
+            "**/GitAbstraction.csproj"
+          ],
+          "exclude": [
+            "**/bin/**",
+            "**/obj/**",
+            "_site/**"
+          ]
+        }
+      ],
+      "dest": "gitabstractions"
+    }
+  ],
+  "build": {
+    "content": [
+      {
+        "files": [
+          "**/*.{md,yml}"
+        ],
+        "exclude": [
+          "_site/**"
+        ]
+      }
+    ],
+    "resource": [
+      {
+        "files": [
+          "images/**"
+        ]
+      }
+    ],
+    "output": "_site",
+    "template": [
+      "default",
+      "modern",
+      "templates/atf"
+    ],
+    "globalMetadata": {
+      "_appName": "AtfTide",
+      "_appTitle": "AtfTide",
+      "_enableSearch": true,
+      "_appLogoPath": "/images/tide.svg",
+      "_appFaviconPath": "/images/tide.ico",
+      "pdf": false
+    }
+  }
+}

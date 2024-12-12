@@ -1,0 +1,35 @@
+﻿{
+  "Descriptor": {
+    "UId": "397ee7c7-a412-84a5-771b-2e7e92a4b95b",
+    "Name": "LookupInFolder_Apollo",
+    "ModifiedOnUtc": "\/Date(1704727354000)\/",
+    "InstallType": 0,
+    "Schema": {
+      "UId": "ef4ef612-076e-4770-b0b1-9111e8a33116",
+      "Name": "LookupInFolder"
+    },
+    "Columns": [
+      {
+        "ColumnUId": "9e46bb69-9788-423c-b7cd-4c624081082d",
+        "IsForceUpdate": false,
+        "IsKey": false,
+        "ColumnName": "Folder",
+        "DataTypeValueUId": "b295071f-7ea9-4e62-8d1a-919bf3732ff2"
+      },
+      {
+        "ColumnUId": "34391227-ac90-4b55-9739-6720e97a0594",
+        "IsForceUpdate": false,
+        "IsKey": false,
+        "ColumnName": "Lookup",
+        "DataTypeValueUId": "b295071f-7ea9-4e62-8d1a-919bf3732ff2"
+      },
+      {
+        "ColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+        "IsForceUpdate": false,
+        "IsKey": true,
+        "ColumnName": "Id",
+        "DataTypeValueUId": "23018567-a13c-4320-8687-fd6f9e3699bd"
+      }
+    ]
+  }
+}

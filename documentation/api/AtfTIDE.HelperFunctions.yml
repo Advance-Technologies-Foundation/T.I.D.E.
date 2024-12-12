@@ -1,0 +1,852 @@
+### YamlMime:ManagedReference
+items:
+- uid: AtfTIDE.HelperFunctions
+  commentId: T:AtfTIDE.HelperFunctions
+  id: HelperFunctions
+  parent: AtfTIDE
+  children:
+  - AtfTIDE.HelperFunctions.AddClioArgsForUser(System.Guid,System.Collections.Generic.Dictionary{System.String,System.String})
+  - AtfTIDE.HelperFunctions.ClioArguments
+  - AtfTIDE.HelperFunctions.FetchRepositoryName(System.Guid,Terrasoft.Core.UserConnection)
+  - AtfTIDE.HelperFunctions.GetConsoleGitPath
+  - AtfTIDE.HelperFunctions.GetRepositoryDirectory(System.String)
+  - AtfTIDE.HelperFunctions.GetRepositoryInfo(System.Guid,Terrasoft.Core.UserConnection)
+  langs:
+  - csharp
+  - vb
+  name: HelperFunctions
+  nameWithType: HelperFunctions
+  fullName: AtfTIDE.HelperFunctions
+  type: Class
+  source:
+    remote:
+      path: packages/AtfTIDE/Files/cs/HelperFunctions.cs
+      branch: feature/my-feature
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: HelperFunctions
+    path: ../packages/AtfTIDE/Files/cs/HelperFunctions.cs
+    startLine: 9
+  assemblies:
+  - AtfTIDE
+  namespace: AtfTIDE
+  syntax:
+    content: public static class HelperFunctions
+    content.vb: Public Module HelperFunctions
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+- uid: AtfTIDE.HelperFunctions.GetRepositoryDirectory(System.String)
+  commentId: M:AtfTIDE.HelperFunctions.GetRepositoryDirectory(System.String)
+  id: GetRepositoryDirectory(System.String)
+  parent: AtfTIDE.HelperFunctions
+  langs:
+  - csharp
+  - vb
+  name: GetRepositoryDirectory(string)
+  nameWithType: HelperFunctions.GetRepositoryDirectory(string)
+  fullName: AtfTIDE.HelperFunctions.GetRepositoryDirectory(string)
+  type: Method
+  source:
+    remote:
+      path: packages/AtfTIDE/Files/cs/HelperFunctions.cs
+      branch: feature/my-feature
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: GetRepositoryDirectory
+    path: ../packages/AtfTIDE/Files/cs/HelperFunctions.cs
+    startLine: 11
+  assemblies:
+  - AtfTIDE
+  namespace: AtfTIDE
+  syntax:
+    content: public static DirectoryInfo GetRepositoryDirectory(string repositoryName)
+    parameters:
+    - id: repositoryName
+      type: System.String
+    return:
+      type: System.IO.DirectoryInfo
+    content.vb: Public Shared Function GetRepositoryDirectory(repositoryName As String) As DirectoryInfo
+  overload: AtfTIDE.HelperFunctions.GetRepositoryDirectory*
+  nameWithType.vb: HelperFunctions.GetRepositoryDirectory(String)
+  fullName.vb: AtfTIDE.HelperFunctions.GetRepositoryDirectory(String)
+  name.vb: GetRepositoryDirectory(String)
+- uid: AtfTIDE.HelperFunctions.GetConsoleGitPath
+  commentId: M:AtfTIDE.HelperFunctions.GetConsoleGitPath
+  id: GetConsoleGitPath
+  parent: AtfTIDE.HelperFunctions
+  langs:
+  - csharp
+  - vb
+  name: GetConsoleGitPath()
+  nameWithType: HelperFunctions.GetConsoleGitPath()
+  fullName: AtfTIDE.HelperFunctions.GetConsoleGitPath()
+  type: Method
+  source:
+    remote:
+      path: packages/AtfTIDE/Files/cs/HelperFunctions.cs
+      branch: feature/my-feature
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: GetConsoleGitPath
+    path: ../packages/AtfTIDE/Files/cs/HelperFunctions.cs
+    startLine: 17
+  assemblies:
+  - AtfTIDE
+  namespace: AtfTIDE
+  syntax:
+    content: public static ErrorOr<FileInfo> GetConsoleGitPath()
+    return:
+      type: ErrorOr.ErrorOr{System.IO.FileInfo}
+    content.vb: Public Shared Function GetConsoleGitPath() As ErrorOr(Of FileInfo)
+  overload: AtfTIDE.HelperFunctions.GetConsoleGitPath*
+- uid: AtfTIDE.HelperFunctions.FetchRepositoryName(System.Guid,Terrasoft.Core.UserConnection)
+  commentId: M:AtfTIDE.HelperFunctions.FetchRepositoryName(System.Guid,Terrasoft.Core.UserConnection)
+  id: FetchRepositoryName(System.Guid,Terrasoft.Core.UserConnection)
+  parent: AtfTIDE.HelperFunctions
+  langs:
+  - csharp
+  - vb
+  name: FetchRepositoryName(Guid, UserConnection)
+  nameWithType: HelperFunctions.FetchRepositoryName(Guid, UserConnection)
+  fullName: AtfTIDE.HelperFunctions.FetchRepositoryName(System.Guid, Terrasoft.Core.UserConnection)
+  type: Method
+  source:
+    remote:
+      path: packages/AtfTIDE/Files/cs/HelperFunctions.cs
+      branch: feature/my-feature
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: FetchRepositoryName
+    path: ../packages/AtfTIDE/Files/cs/HelperFunctions.cs
+    startLine: 31
+  assemblies:
+  - AtfTIDE
+  namespace: AtfTIDE
+  syntax:
+    content: public static string FetchRepositoryName(Guid repositoryId, UserConnection userConnection = null)
+    parameters:
+    - id: repositoryId
+      type: System.Guid
+    - id: userConnection
+      type: Terrasoft.Core.UserConnection
+    return:
+      type: System.String
+    content.vb: Public Shared Function FetchRepositoryName(repositoryId As Guid, userConnection As UserConnection = Nothing) As String
+  overload: AtfTIDE.HelperFunctions.FetchRepositoryName*
+- uid: AtfTIDE.HelperFunctions.GetRepositoryInfo(System.Guid,Terrasoft.Core.UserConnection)
+  commentId: M:AtfTIDE.HelperFunctions.GetRepositoryInfo(System.Guid,Terrasoft.Core.UserConnection)
+  id: GetRepositoryInfo(System.Guid,Terrasoft.Core.UserConnection)
+  parent: AtfTIDE.HelperFunctions
+  langs:
+  - csharp
+  - vb
+  name: GetRepositoryInfo(Guid, UserConnection)
+  nameWithType: HelperFunctions.GetRepositoryInfo(Guid, UserConnection)
+  fullName: AtfTIDE.HelperFunctions.GetRepositoryInfo(System.Guid, Terrasoft.Core.UserConnection)
+  type: Method
+  source:
+    remote:
+      path: packages/AtfTIDE/Files/cs/HelperFunctions.cs
+      branch: feature/my-feature
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: GetRepositoryInfo
+    path: ../packages/AtfTIDE/Files/cs/HelperFunctions.cs
+    startLine: 41
+  assemblies:
+  - AtfTIDE
+  namespace: AtfTIDE
+  syntax:
+    content: public static RepositoryInfo GetRepositoryInfo(Guid repositoryId, UserConnection userConnection = null)
+    parameters:
+    - id: repositoryId
+      type: System.Guid
+    - id: userConnection
+      type: Terrasoft.Core.UserConnection
+    return:
+      type: AtfTIDE.RepositoryInfo
+    content.vb: Public Shared Function GetRepositoryInfo(repositoryId As Guid, userConnection As UserConnection = Nothing) As RepositoryInfo
+  overload: AtfTIDE.HelperFunctions.GetRepositoryInfo*
+- uid: AtfTIDE.HelperFunctions.ClioArguments
+  commentId: F:AtfTIDE.HelperFunctions.ClioArguments
+  id: ClioArguments
+  parent: AtfTIDE.HelperFunctions
+  langs:
+  - csharp
+  - vb
+  name: ClioArguments
+  nameWithType: HelperFunctions.ClioArguments
+  fullName: AtfTIDE.HelperFunctions.ClioArguments
+  type: Field
+  source:
+    remote:
+      path: packages/AtfTIDE/Files/cs/HelperFunctions.cs
+      branch: feature/my-feature
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: ClioArguments
+    path: ../packages/AtfTIDE/Files/cs/HelperFunctions.cs
+    startLine: 65
+  assemblies:
+  - AtfTIDE
+  namespace: AtfTIDE
+  syntax:
+    content: public static Dictionary<Guid, Dictionary<string, string>> ClioArguments
+    return:
+      type: System.Collections.Generic.Dictionary{System.Guid,System.Collections.Generic.Dictionary{System.String,System.String}}
+    content.vb: Public Shared ClioArguments As Dictionary(Of Guid, Dictionary(Of String, String))
+- uid: AtfTIDE.HelperFunctions.AddClioArgsForUser(System.Guid,System.Collections.Generic.Dictionary{System.String,System.String})
+  commentId: M:AtfTIDE.HelperFunctions.AddClioArgsForUser(System.Guid,System.Collections.Generic.Dictionary{System.String,System.String})
+  id: AddClioArgsForUser(System.Guid,System.Collections.Generic.Dictionary{System.String,System.String})
+  parent: AtfTIDE.HelperFunctions
+  langs:
+  - csharp
+  - vb
+  name: AddClioArgsForUser(Guid, Dictionary<string, string>)
+  nameWithType: HelperFunctions.AddClioArgsForUser(Guid, Dictionary<string, string>)
+  fullName: AtfTIDE.HelperFunctions.AddClioArgsForUser(System.Guid, System.Collections.Generic.Dictionary<string, string>)
+  type: Method
+  source:
+    remote:
+      path: packages/AtfTIDE/Files/cs/HelperFunctions.cs
+      branch: feature/my-feature
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: AddClioArgsForUser
+    path: ../packages/AtfTIDE/Files/cs/HelperFunctions.cs
+    startLine: 67
+  assemblies:
+  - AtfTIDE
+  namespace: AtfTIDE
+  syntax:
+    content: public static void AddClioArgsForUser(Guid userId, Dictionary<string, string> args)
+    parameters:
+    - id: userId
+      type: System.Guid
+    - id: args
+      type: System.Collections.Generic.Dictionary{System.String,System.String}
+    content.vb: Public Shared Sub AddClioArgsForUser(userId As Guid, args As Dictionary(Of String, String))
+  overload: AtfTIDE.HelperFunctions.AddClioArgsForUser*
+  nameWithType.vb: HelperFunctions.AddClioArgsForUser(Guid, Dictionary(Of String, String))
+  fullName.vb: AtfTIDE.HelperFunctions.AddClioArgsForUser(System.Guid, System.Collections.Generic.Dictionary(Of String, String))
+  name.vb: AddClioArgsForUser(Guid, Dictionary(Of String, String))
+references:
+- uid: AtfTIDE
+  commentId: N:AtfTIDE
+  href: AtfTIDE.html
+  name: AtfTIDE
+  nameWithType: AtfTIDE
+  fullName: AtfTIDE
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: AtfTIDE.HelperFunctions.GetRepositoryDirectory*
+  commentId: Overload:AtfTIDE.HelperFunctions.GetRepositoryDirectory
+  href: AtfTIDE.HelperFunctions.html#AtfTIDE_HelperFunctions_GetRepositoryDirectory_System_String_
+  name: GetRepositoryDirectory
+  nameWithType: HelperFunctions.GetRepositoryDirectory
+  fullName: AtfTIDE.HelperFunctions.GetRepositoryDirectory
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.IO.DirectoryInfo
+  commentId: T:System.IO.DirectoryInfo
+  parent: System.IO
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.io.directoryinfo
+  name: DirectoryInfo
+  nameWithType: DirectoryInfo
+  fullName: System.IO.DirectoryInfo
+- uid: System.IO
+  commentId: N:System.IO
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.IO
+  nameWithType: System.IO
+  fullName: System.IO
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.IO
+    name: IO
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.IO
+    name: IO
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io
+- uid: AtfTIDE.HelperFunctions.GetConsoleGitPath*
+  commentId: Overload:AtfTIDE.HelperFunctions.GetConsoleGitPath
+  href: AtfTIDE.HelperFunctions.html#AtfTIDE_HelperFunctions_GetConsoleGitPath
+  name: GetConsoleGitPath
+  nameWithType: HelperFunctions.GetConsoleGitPath
+  fullName: AtfTIDE.HelperFunctions.GetConsoleGitPath
+- uid: ErrorOr.ErrorOr{System.IO.FileInfo}
+  commentId: T:ErrorOr.ErrorOr{System.IO.FileInfo}
+  parent: ErrorOr
+  definition: ErrorOr.ErrorOr`1
+  href: https://learn.microsoft.com/dotnet/api/system.io.fileinfo
+  name: ErrorOr<FileInfo>
+  nameWithType: ErrorOr<FileInfo>
+  fullName: ErrorOr.ErrorOr<System.IO.FileInfo>
+  nameWithType.vb: ErrorOr(Of FileInfo)
+  fullName.vb: ErrorOr.ErrorOr(Of System.IO.FileInfo)
+  name.vb: ErrorOr(Of FileInfo)
+  spec.csharp:
+  - uid: ErrorOr.ErrorOr`1
+    name: ErrorOr
+    isExternal: true
+  - name: <
+  - uid: System.IO.FileInfo
+    name: FileInfo
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io.fileinfo
+  - name: '>'
+  spec.vb:
+  - uid: ErrorOr.ErrorOr`1
+    name: ErrorOr
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.IO.FileInfo
+    name: FileInfo
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io.fileinfo
+  - name: )
+- uid: ErrorOr.ErrorOr`1
+  commentId: T:ErrorOr.ErrorOr`1
+  isExternal: true
+  name: ErrorOr<TValue>
+  nameWithType: ErrorOr<TValue>
+  fullName: ErrorOr.ErrorOr<TValue>
+  nameWithType.vb: ErrorOr(Of TValue)
+  fullName.vb: ErrorOr.ErrorOr(Of TValue)
+  name.vb: ErrorOr(Of TValue)
+  spec.csharp:
+  - uid: ErrorOr.ErrorOr`1
+    name: ErrorOr
+    isExternal: true
+  - name: <
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: ErrorOr.ErrorOr`1
+    name: ErrorOr
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TValue
+  - name: )
+- uid: ErrorOr
+  commentId: N:ErrorOr
+  isExternal: true
+  name: ErrorOr
+  nameWithType: ErrorOr
+  fullName: ErrorOr
+- uid: AtfTIDE.HelperFunctions.FetchRepositoryName*
+  commentId: Overload:AtfTIDE.HelperFunctions.FetchRepositoryName
+  href: AtfTIDE.HelperFunctions.html#AtfTIDE_HelperFunctions_FetchRepositoryName_System_Guid_Terrasoft_Core_UserConnection_
+  name: FetchRepositoryName
+  nameWithType: HelperFunctions.FetchRepositoryName
+  fullName: AtfTIDE.HelperFunctions.FetchRepositoryName
+- uid: System.Guid
+  commentId: T:System.Guid
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.guid
+  name: Guid
+  nameWithType: Guid
+  fullName: System.Guid
+- uid: Terrasoft.Core.UserConnection
+  commentId: T:Terrasoft.Core.UserConnection
+  parent: Terrasoft.Core
+  isExternal: true
+  name: UserConnection
+  nameWithType: UserConnection
+  fullName: Terrasoft.Core.UserConnection
+- uid: Terrasoft.Core
+  commentId: N:Terrasoft.Core
+  isExternal: true
+  name: Terrasoft.Core
+  nameWithType: Terrasoft.Core
+  fullName: Terrasoft.Core
+  spec.csharp:
+  - uid: Terrasoft
+    name: Terrasoft
+    isExternal: true
+  - name: .
+  - uid: Terrasoft.Core
+    name: Core
+    isExternal: true
+  spec.vb:
+  - uid: Terrasoft
+    name: Terrasoft
+    isExternal: true
+  - name: .
+  - uid: Terrasoft.Core
+    name: Core
+    isExternal: true
+- uid: AtfTIDE.HelperFunctions.GetRepositoryInfo*
+  commentId: Overload:AtfTIDE.HelperFunctions.GetRepositoryInfo
+  href: AtfTIDE.HelperFunctions.html#AtfTIDE_HelperFunctions_GetRepositoryInfo_System_Guid_Terrasoft_Core_UserConnection_
+  name: GetRepositoryInfo
+  nameWithType: HelperFunctions.GetRepositoryInfo
+  fullName: AtfTIDE.HelperFunctions.GetRepositoryInfo
+- uid: AtfTIDE.RepositoryInfo
+  commentId: T:AtfTIDE.RepositoryInfo
+  parent: AtfTIDE
+  href: AtfTIDE.RepositoryInfo.html
+  name: RepositoryInfo
+  nameWithType: RepositoryInfo
+  fullName: AtfTIDE.RepositoryInfo
+- uid: System.Collections.Generic.Dictionary{System.Guid,System.Collections.Generic.Dictionary{System.String,System.String}}
+  commentId: T:System.Collections.Generic.Dictionary{System.Guid,System.Collections.Generic.Dictionary{System.String,System.String}}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Dictionary`2
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<Guid, Dictionary<string, string>>
+  nameWithType: Dictionary<Guid, Dictionary<string, string>>
+  fullName: System.Collections.Generic.Dictionary<System.Guid, System.Collections.Generic.Dictionary<string, string>>
+  nameWithType.vb: Dictionary(Of Guid, Dictionary(Of String, String))
+  fullName.vb: System.Collections.Generic.Dictionary(Of System.Guid, System.Collections.Generic.Dictionary(Of String, String))
+  name.vb: Dictionary(Of Guid, Dictionary(Of String, String))
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - uid: System.Guid
+    name: Guid
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.guid
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Guid
+    name: Guid
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.guid
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  - name: )
+- uid: System.Collections.Generic.Dictionary`2
+  commentId: T:System.Collections.Generic.Dictionary`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<TKey, TValue>
+  nameWithType: Dictionary<TKey, TValue>
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>
+  nameWithType.vb: Dictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.Dictionary(Of TKey, TValue)
+  name.vb: Dictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: AtfTIDE.HelperFunctions.AddClioArgsForUser*
+  commentId: Overload:AtfTIDE.HelperFunctions.AddClioArgsForUser
+  href: AtfTIDE.HelperFunctions.html#AtfTIDE_HelperFunctions_AddClioArgsForUser_System_Guid_System_Collections_Generic_Dictionary_System_String_System_String__
+  name: AddClioArgsForUser
+  nameWithType: HelperFunctions.AddClioArgsForUser
+  fullName: AtfTIDE.HelperFunctions.AddClioArgsForUser
+- uid: System.Collections.Generic.Dictionary{System.String,System.String}
+  commentId: T:System.Collections.Generic.Dictionary{System.String,System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Dictionary`2
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<string, string>
+  nameWithType: Dictionary<string, string>
+  fullName: System.Collections.Generic.Dictionary<string, string>
+  nameWithType.vb: Dictionary(Of String, String)
+  fullName.vb: System.Collections.Generic.Dictionary(Of String, String)
+  name.vb: Dictionary(Of String, String)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )

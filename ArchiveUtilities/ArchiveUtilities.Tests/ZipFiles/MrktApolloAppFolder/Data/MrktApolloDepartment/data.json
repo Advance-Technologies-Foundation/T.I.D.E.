@@ -1,0 +1,298 @@
+﻿{
+  "PackageData": [
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "Value": "0ceabfc8-9711-4687-8c00-ebf00346fc84"
+        },
+        {
+          "SchemaColumnUId": "77fda91c-6e82-4cb6-0b1a-56694134748c",
+          "Value": "Engineering & Techical"
+        },
+        {
+          "SchemaColumnUId": "9bd30b29-3a2d-bd2a-93b1-cdf16f8a0196",
+          "Value": "null",
+          "DisplayValue": ""
+        },
+        {
+          "SchemaColumnUId": "c0f8a4bd-6991-ac27-8646-a59f13636600",
+          "Value": "master_engineering_technical"
+        }
+      ]
+    },
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "Value": "117fa2aa-9a23-46ba-b016-65f321c10186"
+        },
+        {
+          "SchemaColumnUId": "77fda91c-6e82-4cb6-0b1a-56694134748c",
+          "Value": "Design"
+        },
+        {
+          "SchemaColumnUId": "9bd30b29-3a2d-bd2a-93b1-cdf16f8a0196",
+          "Value": "null",
+          "DisplayValue": ""
+        },
+        {
+          "SchemaColumnUId": "c0f8a4bd-6991-ac27-8646-a59f13636600",
+          "Value": "design"
+        }
+      ]
+    },
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "Value": "1638edd8-555b-4c75-9476-0b88f1eaf5af"
+        },
+        {
+          "SchemaColumnUId": "77fda91c-6e82-4cb6-0b1a-56694134748c",
+          "Value": "Human Resources"
+        },
+        {
+          "SchemaColumnUId": "9bd30b29-3a2d-bd2a-93b1-cdf16f8a0196",
+          "Value": "66ffa487-b4da-df11-9b2a-001d60e938c6",
+          "DisplayValue": "Administration"
+        },
+        {
+          "SchemaColumnUId": "c0f8a4bd-6991-ac27-8646-a59f13636600",
+          "Value": "master_human_resources"
+        }
+      ]
+    },
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "Value": "2eedab5e-8463-4e8a-a932-dee55f4fe712"
+        },
+        {
+          "SchemaColumnUId": "77fda91c-6e82-4cb6-0b1a-56694134748c",
+          "Value": "Education"
+        },
+        {
+          "SchemaColumnUId": "9bd30b29-3a2d-bd2a-93b1-cdf16f8a0196",
+          "Value": "null",
+          "DisplayValue": ""
+        },
+        {
+          "SchemaColumnUId": "c0f8a4bd-6991-ac27-8646-a59f13636600",
+          "Value": "education"
+        }
+      ]
+    },
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "Value": "3c14fd6a-15a5-4901-b3e3-818608e32b20"
+        },
+        {
+          "SchemaColumnUId": "77fda91c-6e82-4cb6-0b1a-56694134748c",
+          "Value": "C Suite"
+        },
+        {
+          "SchemaColumnUId": "9bd30b29-3a2d-bd2a-93b1-cdf16f8a0196",
+          "Value": "null",
+          "DisplayValue": ""
+        },
+        {
+          "SchemaColumnUId": "c0f8a4bd-6991-ac27-8646-a59f13636600",
+          "Value": "c_suite"
+        }
+      ]
+    },
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "Value": "62570d3f-b5d6-4bfd-8ff9-6c6391d235c5"
+        },
+        {
+          "SchemaColumnUId": "77fda91c-6e82-4cb6-0b1a-56694134748c",
+          "Value": "Finance"
+        },
+        {
+          "SchemaColumnUId": "9bd30b29-3a2d-bd2a-93b1-cdf16f8a0196",
+          "Value": "66ffa487-b4da-df11-9b2a-001d60e938c6",
+          "DisplayValue": "Administration"
+        },
+        {
+          "SchemaColumnUId": "c0f8a4bd-6991-ac27-8646-a59f13636600",
+          "Value": "master_finance"
+        }
+      ]
+    },
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "Value": "64e3da7e-48b6-4b22-ad54-67273caa4c94"
+        },
+        {
+          "SchemaColumnUId": "77fda91c-6e82-4cb6-0b1a-56694134748c",
+          "Value": "Medical & Health"
+        },
+        {
+          "SchemaColumnUId": "9bd30b29-3a2d-bd2a-93b1-cdf16f8a0196",
+          "Value": "null",
+          "DisplayValue": ""
+        },
+        {
+          "SchemaColumnUId": "c0f8a4bd-6991-ac27-8646-a59f13636600",
+          "Value": "medical_health"
+        }
+      ]
+    },
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "Value": "72ea4785-0f08-4112-9840-22289223bb55"
+        },
+        {
+          "SchemaColumnUId": "77fda91c-6e82-4cb6-0b1a-56694134748c",
+          "Value": "Sales"
+        },
+        {
+          "SchemaColumnUId": "9bd30b29-3a2d-bd2a-93b1-cdf16f8a0196",
+          "Value": "2076c4b6-7fe6-df11-971b-001d60e938c6",
+          "DisplayValue": "Sales"
+        },
+        {
+          "SchemaColumnUId": "c0f8a4bd-6991-ac27-8646-a59f13636600",
+          "Value": "master_sales"
+        }
+      ]
+    },
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "Value": "9987c310-ad9c-4aaa-879c-d6d1c75e3a9d"
+        },
+        {
+          "SchemaColumnUId": "77fda91c-6e82-4cb6-0b1a-56694134748c",
+          "Value": "Products"
+        },
+        {
+          "SchemaColumnUId": "9bd30b29-3a2d-bd2a-93b1-cdf16f8a0196",
+          "Value": "null",
+          "DisplayValue": ""
+        },
+        {
+          "SchemaColumnUId": "c0f8a4bd-6991-ac27-8646-a59f13636600",
+          "Value": "product_management"
+        }
+      ]
+    },
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "Value": "bc9344ba-53d3-4f9b-97c1-dfdb3e14e4c4"
+        },
+        {
+          "SchemaColumnUId": "77fda91c-6e82-4cb6-0b1a-56694134748c",
+          "Value": "Operations"
+        },
+        {
+          "SchemaColumnUId": "9bd30b29-3a2d-bd2a-93b1-cdf16f8a0196",
+          "Value": "null",
+          "DisplayValue": ""
+        },
+        {
+          "SchemaColumnUId": "c0f8a4bd-6991-ac27-8646-a59f13636600",
+          "Value": "master_operations"
+        }
+      ]
+    },
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "Value": "da1e1a8f-b4bc-4ea4-9671-d78e4a2b2e7e"
+        },
+        {
+          "SchemaColumnUId": "77fda91c-6e82-4cb6-0b1a-56694134748c",
+          "Value": "Information Technology"
+        },
+        {
+          "SchemaColumnUId": "9bd30b29-3a2d-bd2a-93b1-cdf16f8a0196",
+          "Value": "null",
+          "DisplayValue": ""
+        },
+        {
+          "SchemaColumnUId": "c0f8a4bd-6991-ac27-8646-a59f13636600",
+          "Value": "master_information_technology"
+        }
+      ]
+    },
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "Value": "e5a70892-e0fe-4f2f-a374-e6864a064af5"
+        },
+        {
+          "SchemaColumnUId": "77fda91c-6e82-4cb6-0b1a-56694134748c",
+          "Value": "Legal"
+        },
+        {
+          "SchemaColumnUId": "9bd30b29-3a2d-bd2a-93b1-cdf16f8a0196",
+          "Value": "66ffa487-b4da-df11-9b2a-001d60e938c6",
+          "DisplayValue": "Administration"
+        },
+        {
+          "SchemaColumnUId": "c0f8a4bd-6991-ac27-8646-a59f13636600",
+          "Value": "master_legal"
+        }
+      ]
+    },
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "Value": "ef04da1c-25b1-40d6-82cf-6eba8fd3f799"
+        },
+        {
+          "SchemaColumnUId": "77fda91c-6e82-4cb6-0b1a-56694134748c",
+          "Value": "Consulting"
+        },
+        {
+          "SchemaColumnUId": "9bd30b29-3a2d-bd2a-93b1-cdf16f8a0196",
+          "Value": "null",
+          "DisplayValue": ""
+        },
+        {
+          "SchemaColumnUId": "c0f8a4bd-6991-ac27-8646-a59f13636600",
+          "Value": "consulting"
+        }
+      ]
+    },
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "Value": "fa59efa3-ca57-4eae-9bd8-af1384ff37f2"
+        },
+        {
+          "SchemaColumnUId": "77fda91c-6e82-4cb6-0b1a-56694134748c",
+          "Value": "Marketing"
+        },
+        {
+          "SchemaColumnUId": "9bd30b29-3a2d-bd2a-93b1-cdf16f8a0196",
+          "Value": "4791a98e-b4da-df11-9b2a-001d60e938c6",
+          "DisplayValue": "Marketing"
+        },
+        {
+          "SchemaColumnUId": "c0f8a4bd-6991-ac27-8646-a59f13636600",
+          "Value": "master_marketing"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+﻿{
+  "Descriptor": {
+    "UId": "32783617-70ae-83c9-6383-5bee51ff4d53",
+    "Name": "MrktAccountEmployeesNumber",
+    "ModifiedOnUtc": "\/Date(1701704111000)\/",
+    "InstallType": 0,
+    "Schema": {
+      "UId": "1938d25f-c7ec-4c68-9602-3d8747cc982a",
+      "Name": "MrktAccountEmployeesNumber"
+    },
+    "Columns": [
+      {
+        "ColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+        "IsForceUpdate": false,
+        "IsKey": true,
+        "ColumnName": "Id",
+        "DataTypeValueUId": "23018567-a13c-4320-8687-fd6f9e3699bd"
+      },
+      {
+        "ColumnUId": "08f61fb5-8e3f-fbad-dd6d-09b682562813",
+        "IsForceUpdate": false,
+        "IsKey": false,
+        "ColumnName": "MrktTo",
+        "DataTypeValueUId": "6b6b74e2-820d-490e-a017-2b73d4ccf2b0"
+      },
+      {
+        "ColumnUId": "3d590dd6-9709-71ac-adc8-1a968b3c678e",
+        "IsForceUpdate": false,
+        "IsKey": false,
+        "ColumnName": "MrktFrom",
+        "DataTypeValueUId": "6b6b74e2-820d-490e-a017-2b73d4ccf2b0"
+      },
+      {
+        "ColumnUId": "3307082b-2e2f-3785-59ed-728a3f8235bb",
+        "IsForceUpdate": false,
+        "IsKey": false,
+        "ColumnName": "MrktCreatioAccountEmployeesNumber",
+        "DataTypeValueUId": "b295071f-7ea9-4e62-8d1a-919bf3732ff2"
+      }
+    ]
+  }
+}

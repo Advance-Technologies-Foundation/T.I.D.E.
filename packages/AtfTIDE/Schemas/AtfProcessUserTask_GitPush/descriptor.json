@@ -4,6 +4,7 @@
     "Name": "AtfProcessUserTask_GitPush",
     "ModifiedOnUtc": "\/Date(1733767697000)\/",
     "ManagerName": "ProcessUserTaskSchemaManager",
-    "Caption": "Git Push"
+    "Caption": "Git Push",
+    "DependsOn": []
   }
 }

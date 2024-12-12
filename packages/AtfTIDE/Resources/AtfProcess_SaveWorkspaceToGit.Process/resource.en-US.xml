@@ -81,6 +81,26 @@
 			<Item Name="BaseElements.UserTask1.Parameters.Repository.Caption" Value="Repository" />
 			<Item Name="BaseElements.UserTask1.Parameters.Repository.DisplayValue" Value="[#Repository#]" />
 			<Item Name="BaseElements.UserTask1.Parameters.RepositoryFolderPath.Caption" Value="Repository Folder Path" />
+			<Item Name="BaseElements.UserTask2.Caption" Value="Git Add All Files" />
+			<Item Name="BaseElements.UserTask2.Parameters.ErrorMessage.Caption" Value="Error Message" />
+			<Item Name="BaseElements.UserTask2.Parameters.IsError.Caption" Value="Is Error" />
+			<Item Name="BaseElements.UserTask2.Parameters.Output.Caption" Value="Output" />
+			<Item Name="BaseElements.UserTask2.Parameters.Repository.Caption" Value="Repository" />
+			<Item Name="BaseElements.UserTask2.Parameters.Repository.DisplayValue" Value="[#Repository#]" />
+			<Item Name="BaseElements.UserTask3.Caption" Value="Git Commit" />
+			<Item Name="BaseElements.UserTask3.Parameters.CommitMessage.Caption" Value="Commit message" />
+			<Item Name="BaseElements.UserTask3.Parameters.CommitMessage.DisplayValue" Value="[#UserMessage.Message#]" />
+			<Item Name="BaseElements.UserTask3.Parameters.ErrorMessage.Caption" Value="Error message" />
+			<Item Name="BaseElements.UserTask3.Parameters.IsError.Caption" Value="Is Error" />
+			<Item Name="BaseElements.UserTask3.Parameters.Output.Caption" Value="Output" />
+			<Item Name="BaseElements.UserTask3.Parameters.Repository.Caption" Value="Repository" />
+			<Item Name="BaseElements.UserTask3.Parameters.Repository.DisplayValue" Value="[#Repository#]" />
+			<Item Name="BaseElements.UserTask4.Caption" Value="Git Push" />
+			<Item Name="BaseElements.UserTask4.Parameters.ErrorMessage.Caption" Value="Error Message" />
+			<Item Name="BaseElements.UserTask4.Parameters.IsError.Caption" Value="Is Error" />
+			<Item Name="BaseElements.UserTask4.Parameters.Output.Caption" Value="Output" />
+			<Item Name="BaseElements.UserTask4.Parameters.Repository.Caption" Value="Repository" />
+			<Item Name="BaseElements.UserTask4.Parameters.Repository.DisplayValue" Value="[#Repository#]" />
 			<Item Name="BaseElements.UserTask6.Caption" Value="Download packages" />
 			<Item Name="BaseElements.UserTask6.Parameters.ErrorMessage.Caption" Value="Error Message" />
 			<Item Name="BaseElements.UserTask6.Parameters.IsError.Caption" Value="Is Error" />

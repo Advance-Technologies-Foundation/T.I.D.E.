@@ -69,9 +69,9 @@
 		<None Remove="$(RelativeCurrentPkgFolderPath)SqlScripts/**" />
 		<None Remove="$(RelativeCurrentPkgFolderPath)Resources/**" />
 		<Compile Remove="..\Schemas\AtfProcessUserTask_CreateNewBranch\**" />
-		<Compile Update="..\Schemas\AtfProcessUserTask_CloneRepository\AtfProcessUserTask_CloneRepository.cs">
-			<Link>AtfProcessUserTask_CloneRepository\AtfProcessUserTask_CloneRepository.cs</Link>
-		</Compile>
+		<!--		<Compile Update="..\Schemas\AtfProcessUserTask_CloneRepository\AtfProcessUserTask_CloneRepository.cs">-->
+		<!--			<Link>AtfProcessUserTask_CloneRepository\AtfProcessUserTask_CloneRepository.cs</Link>-->
+		<!--		</Compile>-->
 	</ItemGroup>
 	<ItemGroup Label="Package Assembly References">
 		<Reference Include="$(RelativeCurrentPkgFolderPath)Assemblies/*/*.dll">
@@ -880,23 +880,43 @@
 			<SpecificVersion>False</SpecificVersion>
 			<Private>False</Private>
 		</Reference>
-		<Reference Include="CrtEngagementInC360">
-			<HintPath>$(RelativePkgFolderPath)/CrtEngagementInC360/$(StandalonePackageAssemblyPath)/CrtEngagementInC360.dll</HintPath>
-			<SpecificVersion>False</SpecificVersion>
-			<Private>False</Private>
-		</Reference>
 		<Reference Include="CrtCasesInC360">
 			<HintPath>$(RelativePkgFolderPath)/CrtCasesInC360/$(StandalonePackageAssemblyPath)/CrtCasesInC360.dll</HintPath>
 			<SpecificVersion>False</SpecificVersion>
 			<Private>False</Private>
 		</Reference>
-		<Reference Include="CrtCaseKnowledgeCopilot">
-			<HintPath>$(RelativePkgFolderPath)/CrtCaseKnowledgeCopilot/$(StandalonePackageAssemblyPath)/CrtCaseKnowledgeCopilot.dll</HintPath>
+		<Reference Include="CrtEngagementInC360">
+			<HintPath>$(RelativePkgFolderPath)/CrtEngagementInC360/$(StandalonePackageAssemblyPath)/CrtEngagementInC360.dll</HintPath>
+			<SpecificVersion>False</SpecificVersion>
+			<Private>False</Private>
+		</Reference>
+		<Reference Include="CrtC360InUiV2">
+			<HintPath>$(RelativePkgFolderPath)/CrtC360InUiV2/$(StandalonePackageAssemblyPath)/CrtC360InUiV2.dll</HintPath>
+			<SpecificVersion>False</SpecificVersion>
+			<Private>False</Private>
+		</Reference>
+		<Reference Include="CrtTouchPointInLead">
+			<HintPath>$(RelativePkgFolderPath)/CrtTouchPointInLead/$(StandalonePackageAssemblyPath)/CrtTouchPointInLead.dll</HintPath>
+			<SpecificVersion>False</SpecificVersion>
+			<Private>False</Private>
+		</Reference>
+		<Reference Include="CrtKnowledgeManagementInCaseManagement">
+			<HintPath>$(RelativePkgFolderPath)/CrtKnowledgeManagementInCaseManagement/$(StandalonePackageAssemblyPath)/CrtKnowledgeManagementInCaseManagement.dll</HintPath>
 			<SpecificVersion>False</SpecificVersion>
 			<Private>False</Private>
 		</Reference>
 		<Reference Include="CrtCampaignInC360">
 			<HintPath>$(RelativePkgFolderPath)/CrtCampaignInC360/$(StandalonePackageAssemblyPath)/CrtCampaignInC360.dll</HintPath>
+			<SpecificVersion>False</SpecificVersion>
+			<Private>False</Private>
+		</Reference>
+		<Reference Include="CrtSLAInC360">
+			<HintPath>$(RelativePkgFolderPath)/CrtSLAInC360/$(StandalonePackageAssemblyPath)/CrtSLAInC360.dll</HintPath>
+			<SpecificVersion>False</SpecificVersion>
+			<Private>False</Private>
+		</Reference>
+		<Reference Include="CrtCaseKnowledgeCopilot">
+			<HintPath>$(RelativePkgFolderPath)/CrtCaseKnowledgeCopilot/$(StandalonePackageAssemblyPath)/CrtCaseKnowledgeCopilot.dll</HintPath>
 			<SpecificVersion>False</SpecificVersion>
 			<Private>False</Private>
 		</Reference>
@@ -922,26 +942,6 @@
 		</Reference>
 		<Reference Include="CrtCustomerInfoInCaseMgmt">
 			<HintPath>$(RelativePkgFolderPath)/CrtCustomerInfoInCaseMgmt/$(StandalonePackageAssemblyPath)/CrtCustomerInfoInCaseMgmt.dll</HintPath>
-			<SpecificVersion>False</SpecificVersion>
-			<Private>False</Private>
-		</Reference>
-		<Reference Include="CrtC360InUiV2">
-			<HintPath>$(RelativePkgFolderPath)/CrtC360InUiV2/$(StandalonePackageAssemblyPath)/CrtC360InUiV2.dll</HintPath>
-			<SpecificVersion>False</SpecificVersion>
-			<Private>False</Private>
-		</Reference>
-		<Reference Include="CrtTouchPointInLead">
-			<HintPath>$(RelativePkgFolderPath)/CrtTouchPointInLead/$(StandalonePackageAssemblyPath)/CrtTouchPointInLead.dll</HintPath>
-			<SpecificVersion>False</SpecificVersion>
-			<Private>False</Private>
-		</Reference>
-		<Reference Include="CrtSLAInC360">
-			<HintPath>$(RelativePkgFolderPath)/CrtSLAInC360/$(StandalonePackageAssemblyPath)/CrtSLAInC360.dll</HintPath>
-			<SpecificVersion>False</SpecificVersion>
-			<Private>False</Private>
-		</Reference>
-		<Reference Include="CrtKnowledgeManagementInCaseManagement">
-			<HintPath>$(RelativePkgFolderPath)/CrtKnowledgeManagementInCaseManagement/$(StandalonePackageAssemblyPath)/CrtKnowledgeManagementInCaseManagement.dll</HintPath>
 			<SpecificVersion>False</SpecificVersion>
 			<Private>False</Private>
 		</Reference>

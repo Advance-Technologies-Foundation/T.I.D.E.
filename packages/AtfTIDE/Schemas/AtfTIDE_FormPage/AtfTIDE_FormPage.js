@@ -383,7 +383,11 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 					"label": "$Resources.Strings.PDS_AtfLogin_g255988",
 					"labelPosition": "auto",
 					"control": "$PDS_AtfLogin_g255988",
-					"multiline": false
+					"multiline": false,
+					"visible": false,
+					"readonly": false,
+					"placeholder": "",
+					"tooltip": ""
 				},
 				"parentName": "GridContainer_lv08x1q",
 				"propertyName": "items",
@@ -403,7 +407,11 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 					"label": "$Resources.Strings.PDS_AtfPassword_rrf2i89",
 					"labelPosition": "auto",
 					"control": "$PDS_AtfPassword_rrf2i89",
-					"multiline": false
+					"multiline": false,
+					"visible": false,
+					"readonly": false,
+					"placeholder": "",
+					"tooltip": ""
 				},
 				"parentName": "GridContainer_lv08x1q",
 				"propertyName": "items",
@@ -422,7 +430,11 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 					"type": "crt.WebInput",
 					"label": "$Resources.Strings.PDS_AtfCreatioUrl_hgv046w",
 					"labelPosition": "auto",
-					"control": "$PDS_AtfCreatioUrl_hgv046w"
+					"control": "$PDS_AtfCreatioUrl_hgv046w",
+					"visible": false,
+					"readonly": false,
+					"placeholder": "",
+					"tooltip": ""
 				},
 				"parentName": "GridContainer_lv08x1q",
 				"propertyName": "items",

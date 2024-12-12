@@ -19,16 +19,13 @@ namespace Terrasoft.Core.Process.Configuration
 
 	#region Class: AtfProcessUserTask_GitCommit
 
-	/// <exclude/>
 	public partial class AtfProcessUserTask_GitCommit
 	{
 
 		#region Methods: Protected
 
 		protected override bool InternalExecute(ProcessExecutingContext context) {
-			
-			
-			var repoInfo = HelperFunctions.GetRepositoryInfo(Repository, UserConnection);
+			RepositoryInfo repoInfo = HelperFunctions.GetRepositoryInfo(Repository, UserConnection);
 			ConsoleGitArgs args = new ConsoleGitArgs {
 				Command = AtfTIDE.Commands.Commit,
 				RepoDir = HelperFunctions.GetRepositoryDirectory(repoInfo.Name).ToString(),
@@ -36,7 +33,6 @@ namespace Terrasoft.Core.Process.Configuration
 				CommitAuthorName = UserConnection.CurrentUser.Name,
 				CommitAuthorEmail = repoInfo.UserName
 			};
-			
 			ConsoleGitResult gitCommandResult = ClassFactory
 				.Get<IConsoleGit>("AtfTIDE.ConsoleGit")
 				.Execute(args);

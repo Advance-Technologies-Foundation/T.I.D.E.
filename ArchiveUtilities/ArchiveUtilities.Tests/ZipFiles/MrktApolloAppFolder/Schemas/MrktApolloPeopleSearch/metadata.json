@@ -1,0 +1,183 @@
+= MetaData.Schema.UId "02631d46-fd96-4d3f-b489-7f535834a8a9"
+= MetaData.Schema.A2 "MrktApolloPeopleSearch"
+= MetaData.Schema.A5 "47210d0f-a9e7-44b9-9da9-98ebe05e5bc9"
+= MetaData.Schema.B6 "d40c3488-7718-4ddc-9173-949868871326"
+= MetaData.Schema.B8 "8.1.0.6827"
+= MetaData.Schema.EG1.UId "ef417a57-e408-46dd-9c3e-ecdbe69d3379"
+= MetaData.Schema.EG1.A2 "MrktEntity_bb9605fEventsProcess"
+= MetaData.Schema.EG1.A5 "47210d0f-a9e7-44b9-9da9-98ebe05e5bc9"
++ MetaData.Schema.EG1.B8 "8.1.0.6827"
+= MetaData.Schema.EG1.BK8 "7bb7d6a5-e7a3-4837-83bc-7f785d688165"
+= MetaData.Schema.EG1.BK37.A3 "bb4d6607-026b-4b27-b640-8f5c77c1e89d"
+= MetaData.Schema.EG1.BK37.A4 "bb4d6607-026b-4b27-b640-8f5c77c1e89d"
+= MetaData.Schema.EG1.BK4.["08594d74-60b0-45ce-bf17-bac1a8b127f7"].CK2.["496d4a3c-b644-4a65-b0ed-2534d9236da5"].BL7 "53818048-7868-48f6-ada0-0ebaa65af628"
+= MetaData.Schema.EG1.BK4.["90027ac8-c9c3-4d21-a4f9-da1cde752cd1"].CK2.["d8b8410f-5c8a-4ddc-8fc2-353483452aed"].BL7 "53818048-7868-48f6-ada0-0ebaa65af628"
+= MetaData.Schema.EG1.BK4.["5f3bfbbe-1820-44ca-92f1-6f993169b2dd"].CK2.["d7c806b7-a29b-4ce5-9167-b3319472e772"].BL7 "53818048-7868-48f6-ada0-0ebaa65af628"
+= MetaData.Schema.EG1.BK4.["dbf48103-dcf6-4f53-a052-d727a95ea0b4"].CK2.["933bf2fc-d052-40c8-a3e0-bf60049da5d8"].BL7 "53818048-7868-48f6-ada0-0ebaa65af628"
+= MetaData.Schema.EG1.BK4.["f0646c74-f291-474f-9a10-143ee868f1c9"].CK2.["b3d5b61f-7afe-48b5-a8cc-40317ea9c428"].BL7 "53818048-7868-48f6-ada0-0ebaa65af628"
+= MetaData.Schema.EG1.BK4.["8140d7e7-fb91-4999-8347-543345440efb"].CK2.["c803a450-c8dc-47a4-b704-7125c23db317"].BL7 "53818048-7868-48f6-ada0-0ebaa65af628"
+= MetaData.Schema.EG1.JC1 []
+= MetaData.Schema.D8 "1bab9dcf-17d5-49f8-9536-8e0064f1dce0"
++ MetaData.Schema.D29 "null"
++ MetaData.Schema.D30 "null"
++ MetaData.Schema.D31 "null"
++ MetaData.Schema.D4 "da277dd3-e594-17f5-be5d-b0ebe14b80d1"
++ MetaData.Schema.D2 {
+  "UId": "c4cc436e-aaef-d1e5-125b-e68cc3f03844",
+  "A2": "MrktLastName",
+  "A3": "02631d46-fd96-4d3f-b489-7f535834a8a9",
+  "A4": "02631d46-fd96-4d3f-b489-7f535834a8a9",
+  "A5": "47210d0f-a9e7-44b9-9da9-98ebe05e5bc9",
+  "S2": "5ca35f10-a101-4c67-a96a-383da6afacfc",
+  "E5": false
+}
++ MetaData.Schema.D2 {
+  "UId": "9be8e926-75cc-e695-d9b6-9944a0088337",
+  "A2": "MrktTitle",
+  "A3": "02631d46-fd96-4d3f-b489-7f535834a8a9",
+  "A4": "02631d46-fd96-4d3f-b489-7f535834a8a9",
+  "A5": "47210d0f-a9e7-44b9-9da9-98ebe05e5bc9",
+  "S2": "5ca35f10-a101-4c67-a96a-383da6afacfc",
+  "E5": false
+}
++ MetaData.Schema.D2 {
+  "UId": "3ff60672-1e33-8333-8aa0-88ffc8913878",
+  "A2": "MrktFirstName",
+  "A3": "02631d46-fd96-4d3f-b489-7f535834a8a9",
+  "A4": "02631d46-fd96-4d3f-b489-7f535834a8a9",
+  "A5": "47210d0f-a9e7-44b9-9da9-98ebe05e5bc9",
+  "S2": "5ca35f10-a101-4c67-a96a-383da6afacfc",
+  "E5": false
+}
++ MetaData.Schema.D2 {
+  "UId": "ae98d544-4f38-af66-cdf1-274b08a8226b",
+  "A2": "MrktOrganizationId",
+  "A3": "02631d46-fd96-4d3f-b489-7f535834a8a9",
+  "A4": "02631d46-fd96-4d3f-b489-7f535834a8a9",
+  "A5": "47210d0f-a9e7-44b9-9da9-98ebe05e5bc9",
+  "S2": "325a73b8-0f47-44a0-8412-7606f78003ac",
+  "E5": false
+}
++ MetaData.Schema.D2 {
+  "UId": "da277dd3-e594-17f5-be5d-b0ebe14b80d1",
+  "A2": "MrktPersonId",
+  "A3": "02631d46-fd96-4d3f-b489-7f535834a8a9",
+  "A4": "02631d46-fd96-4d3f-b489-7f535834a8a9",
+  "A5": "47210d0f-a9e7-44b9-9da9-98ebe05e5bc9",
+  "S2": "325a73b8-0f47-44a0-8412-7606f78003ac",
+  "E5": false
+}
++ MetaData.Schema.D2 {
+  "UId": "79a2ce0a-6dfd-0dcc-984f-16879637f7d0",
+  "A2": "MrktLastEmploymentStartDate",
+  "A3": "02631d46-fd96-4d3f-b489-7f535834a8a9",
+  "A4": "02631d46-fd96-4d3f-b489-7f535834a8a9",
+  "A5": "47210d0f-a9e7-44b9-9da9-98ebe05e5bc9",
+  "S2": "603d4960-a1a2-45e9-b232-206a54421b01",
+  "E5": false
+}
++ MetaData.Schema.D2 {
+  "UId": "7a089b3b-a88d-52af-b10c-e44d0716ff67",
+  "A2": "MrktFacebookUrl",
+  "A3": "02631d46-fd96-4d3f-b489-7f535834a8a9",
+  "A4": "02631d46-fd96-4d3f-b489-7f535834a8a9",
+  "A5": "df98ce1a-cc34-4cc4-a3dc-909f22a0d5ef",
+  "S2": "26cba64c-daf1-4f36-b2ea-73c0d695d90c",
+  "E5": false
+}
++ MetaData.Schema.D2 {
+  "UId": "73c2b83a-a06d-8036-3dac-fabcab9cf3e4",
+  "A2": "MrktLinkedinUrl",
+  "A3": "02631d46-fd96-4d3f-b489-7f535834a8a9",
+  "A4": "02631d46-fd96-4d3f-b489-7f535834a8a9",
+  "A5": "df98ce1a-cc34-4cc4-a3dc-909f22a0d5ef",
+  "S2": "26cba64c-daf1-4f36-b2ea-73c0d695d90c",
+  "E5": false
+}
++ MetaData.Schema.D2 {
+  "UId": "4bc5d977-229e-9bb4-0856-58ebe4318437",
+  "A2": "MrktTwitterUrl",
+  "A3": "02631d46-fd96-4d3f-b489-7f535834a8a9",
+  "A4": "02631d46-fd96-4d3f-b489-7f535834a8a9",
+  "A5": "df98ce1a-cc34-4cc4-a3dc-909f22a0d5ef",
+  "S2": "26cba64c-daf1-4f36-b2ea-73c0d695d90c",
+  "E5": false
+}
++ MetaData.Schema.D2 {
+  "UId": "58ea11a5-0f37-ce05-3538-36b027038a06",
+  "A2": "MrktLastEmploymentTitle",
+  "A3": "02631d46-fd96-4d3f-b489-7f535834a8a9",
+  "A4": "02631d46-fd96-4d3f-b489-7f535834a8a9",
+  "A5": "df98ce1a-cc34-4cc4-a3dc-909f22a0d5ef",
+  "S2": "ddb3a1ee-07e8-4d62-b7a9-d0e618b00fbd",
+  "E5": false
+}
++ MetaData.Schema.D2 {
+  "UId": "74442947-285b-8cc4-fc85-3be932e2e0f4",
+  "A2": "MrktPhone",
+  "A3": "02631d46-fd96-4d3f-b489-7f535834a8a9",
+  "A4": "02631d46-fd96-4d3f-b489-7f535834a8a9",
+  "A5": "df98ce1a-cc34-4cc4-a3dc-909f22a0d5ef",
+  "S2": "26cba63c-daf1-4f36-b2ea-73c0d675d90c",
+  "E5": false
+}
++ MetaData.Schema.D2 {
+  "UId": "54210335-353e-48d7-9242-b60afcecbe8e",
+  "A2": "MrktApolloManagementLevel",
+  "A3": "02631d46-fd96-4d3f-b489-7f535834a8a9",
+  "A4": "02631d46-fd96-4d3f-b489-7f535834a8a9",
+  "A5": "4e256f20-9d4a-47bf-a81b-9723b20f283a",
+  "S2": "b295071f-7ea9-4e62-8d1a-919bf3732ff2",
+  "S4": "438e0242-cdf9-4c8f-a280-208497bc6b81",
+  "E5": false,
+  "E20": true,
+  "E17": "MrktApolloManagementLevelId",
+  "E18": "MrktApolloManagementLevelName"
+}
++ MetaData.Schema.D2 {
+  "UId": "f48082c8-b7f2-8395-4a9b-3e0b19d21ccf",
+  "A2": "MrktEmailStatus",
+  "A3": "02631d46-fd96-4d3f-b489-7f535834a8a9",
+  "A4": "02631d46-fd96-4d3f-b489-7f535834a8a9",
+  "A5": "4e256f20-9d4a-47bf-a81b-9723b20f283a",
+  "S2": "b295071f-7ea9-4e62-8d1a-919bf3732ff2",
+  "S4": "6c420c05-462e-4c63-a19b-8cd6bafd218c",
+  "E5": false,
+  "E20": true,
+  "E17": "MrktEmailStatusId",
+  "E18": "MrktEmailStatusName"
+}
++ MetaData.Schema.D2 {
+  "UId": "ab09bf03-fdc4-75e9-bd19-391c47b7d64c",
+  "A2": "MrktApolloDepartment",
+  "A3": "02631d46-fd96-4d3f-b489-7f535834a8a9",
+  "A4": "02631d46-fd96-4d3f-b489-7f535834a8a9",
+  "A5": "4e256f20-9d4a-47bf-a81b-9723b20f283a",
+  "S2": "b295071f-7ea9-4e62-8d1a-919bf3732ff2",
+  "S4": "a61f2ae0-cd61-49fe-8d32-f4c231d9a6ae",
+  "E20": true,
+  "E17": "MrktApolloDepartmentId",
+  "E18": "MrktApolloDepartmentName"
+}
+~ MetaData.Schema.D2 ["ae0e45ca-c495-4fe7-a39d-3ab7278e1617","e80190a5-03b2-4095-90f7-a193a960adee","ebf6bb93-8aa6-4a01-900d-c6ea67affe21","9928edec-4272-425a-93bb-48743fee4b04","3015559e-cbc6-406a-88af-07f7930be832","3fabd836-6a53-4d8d-9069-6df88d9dae1e","c4cc436e-aaef-d1e5-125b-e68cc3f03844","9be8e926-75cc-e695-d9b6-9944a0088337","3ff60672-1e33-8333-8aa0-88ffc8913878","ae98d544-4f38-af66-cdf1-274b08a8226b","da277dd3-e594-17f5-be5d-b0ebe14b80d1","79a2ce0a-6dfd-0dcc-984f-16879637f7d0","7a089b3b-a88d-52af-b10c-e44d0716ff67","73c2b83a-a06d-8036-3dac-fabcab9cf3e4","4bc5d977-229e-9bb4-0856-58ebe4318437","58ea11a5-0f37-ce05-3538-36b027038a06","74442947-285b-8cc4-fc85-3be932e2e0f4","54210335-353e-48d7-9242-b60afcecbe8e","f48082c8-b7f2-8395-4a9b-3e0b19d21ccf","ab09bf03-fdc4-75e9-bd19-391c47b7d64c"]
+= MetaData.Schema.D20.A2 "MrktApolloPeopleSearchEvents"
+= MetaData.Schema.D36.A3 "02631d46-fd96-4d3f-b489-7f535834a8a9"
+= MetaData.Schema.D36.BS1 false
+- MetaData.Schema.EG1.B6
+- MetaData.Schema.EG1.BK29
+- MetaData.Schema.EG1.BK30
+- MetaData.Schema.D20.A5
+- MetaData.Schema.D20.FA4
+- MetaData.Schema.D20.FA5
+- MetaData.Schema.D20.FA6
+- MetaData.Schema.D20.FA7
+- MetaData.Schema.D20.FA11
+- MetaData.Schema.D20.FA12
+- MetaData.Schema.D20.FA15
++ MetaData.Schema.B7 false
++ MetaData.Schema.D2.["ae0e45ca-c495-4fe7-a39d-3ab7278e1617"].E16 false
++ MetaData.Schema.D2.["e80190a5-03b2-4095-90f7-a193a960adee"].E16 false
++ MetaData.Schema.D2.["ebf6bb93-8aa6-4a01-900d-c6ea67affe21"].E16 false
++ MetaData.Schema.D2.["9928edec-4272-425a-93bb-48743fee4b04"].E16 false
++ MetaData.Schema.D2.["3015559e-cbc6-406a-88af-07f7930be832"].E16 false
++ MetaData.Schema.D2.["3fabd836-6a53-4d8d-9069-6df88d9dae1e"].E16 false

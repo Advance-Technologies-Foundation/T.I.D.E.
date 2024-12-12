@@ -1,0 +1,1075 @@
+### YamlMime:ManagedReference
+items:
+- uid: ConsoleGit.CommandLineArgs
+  commentId: T:ConsoleGit.CommandLineArgs
+  id: CommandLineArgs
+  parent: ConsoleGit
+  children:
+  - ConsoleGit.CommandLineArgs.#ctor
+  - ConsoleGit.CommandLineArgs.ASPXAUTH
+  - ConsoleGit.CommandLineArgs.BPMCSRF
+  - ConsoleGit.CommandLineArgs.BPMLOADER
+  - ConsoleGit.CommandLineArgs.BPMSESSIONID
+  - ConsoleGit.CommandLineArgs.Command
+  - ConsoleGit.CommandLineArgs.CommitAuthorEmail
+  - ConsoleGit.CommandLineArgs.CommitAuthorName
+  - ConsoleGit.CommandLineArgs.CommitMessage
+  - ConsoleGit.CommandLineArgs.CreateCookieContainerFromArgs
+  - ConsoleGit.CommandLineArgs.CreatioUrl
+  - ConsoleGit.CommandLineArgs.GitUrl
+  - ConsoleGit.CommandLineArgs.IsFramework
+  - ConsoleGit.CommandLineArgs.PackageName
+  - ConsoleGit.CommandLineArgs.Password
+  - ConsoleGit.CommandLineArgs.RepoDir
+  - ConsoleGit.CommandLineArgs.UserName
+  - ConsoleGit.CommandLineArgs.UserType
+  langs:
+  - csharp
+  - vb
+  name: CommandLineArgs
+  nameWithType: CommandLineArgs
+  fullName: ConsoleGit.CommandLineArgs
+  type: Class
+  source:
+    remote:
+      path: ConsoleGit/ConsoleGit/ArgParser.cs
+      branch: feature/my-feature
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: CommandLineArgs
+    path: ../ConsoleGit/ConsoleGit/ArgParser.cs
+    startLine: 6
+  assemblies:
+  - ConsoleGit
+  namespace: ConsoleGit
+  syntax:
+    content: 'public record CommandLineArgs : IEquatable<CommandLineArgs>'
+    content.vb: Public Class CommandLineArgs Implements IEquatable(Of CommandLineArgs)
+  inheritance:
+  - System.Object
+  implements:
+  - System.IEquatable{ConsoleGit.CommandLineArgs}
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: ConsoleGit.CommandLineArgs.#ctor
+  commentId: M:ConsoleGit.CommandLineArgs.#ctor
+  id: '#ctor'
+  parent: ConsoleGit.CommandLineArgs
+  langs:
+  - csharp
+  - vb
+  name: CommandLineArgs()
+  nameWithType: CommandLineArgs.CommandLineArgs()
+  fullName: ConsoleGit.CommandLineArgs.CommandLineArgs()
+  type: Constructor
+  source:
+    remote:
+      path: ConsoleGit/ConsoleGit/ArgParser.cs
+      branch: feature/my-feature
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: .ctor
+    path: ../ConsoleGit/ConsoleGit/ArgParser.cs
+    startLine: 8
+  assemblies:
+  - ConsoleGit
+  namespace: ConsoleGit
+  syntax:
+    content: public CommandLineArgs()
+    content.vb: Public Sub New()
+  overload: ConsoleGit.CommandLineArgs.#ctor*
+  nameWithType.vb: CommandLineArgs.New()
+  fullName.vb: ConsoleGit.CommandLineArgs.New()
+  name.vb: New()
+- uid: ConsoleGit.CommandLineArgs.CreateCookieContainerFromArgs
+  commentId: M:ConsoleGit.CommandLineArgs.CreateCookieContainerFromArgs
+  id: CreateCookieContainerFromArgs
+  parent: ConsoleGit.CommandLineArgs
+  langs:
+  - csharp
+  - vb
+  name: CreateCookieContainerFromArgs()
+  nameWithType: CommandLineArgs.CreateCookieContainerFromArgs()
+  fullName: ConsoleGit.CommandLineArgs.CreateCookieContainerFromArgs()
+  type: Method
+  source:
+    remote:
+      path: ConsoleGit/ConsoleGit/ArgParser.cs
+      branch: feature/my-feature
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: CreateCookieContainerFromArgs
+    path: ../ConsoleGit/ConsoleGit/ArgParser.cs
+    startLine: 37
+  assemblies:
+  - ConsoleGit
+  namespace: ConsoleGit
+  summary: Creates cookie container with Creatio authentication cookies.
+  remarks: <p><strong></strong></p><ul><li>BPMLOADER, ASPXAUTH, BPMCSRF - main auth cookies</li><li>UserType, BPMSESSIONID - session cookies</li><li>Special handling for ASPXAUTH domain prefix</li></ul>
+  example: []
+  syntax:
+    content: public CookieContainer CreateCookieContainerFromArgs()
+    return:
+      type: System.Net.CookieContainer
+      description: Configured CookieContainer for Creatio requests
+    content.vb: Public Function CreateCookieContainerFromArgs() As CookieContainer
+  overload: ConsoleGit.CommandLineArgs.CreateCookieContainerFromArgs*
+  exceptions:
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: Invalid Creatio URL or missing required cookies
+- uid: ConsoleGit.CommandLineArgs.Command
+  commentId: P:ConsoleGit.CommandLineArgs.Command
+  id: Command
+  parent: ConsoleGit.CommandLineArgs
+  langs:
+  - csharp
+  - vb
+  name: Command
+  nameWithType: CommandLineArgs.Command
+  fullName: ConsoleGit.CommandLineArgs.Command
+  type: Property
+  source:
+    remote:
+      path: ConsoleGit/ConsoleGit/ArgParser.cs
+      branch: feature/my-feature
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: Command
+    path: ../ConsoleGit/ConsoleGit/ArgParser.cs
+    startLine: 58
+  assemblies:
+  - ConsoleGit
+  namespace: ConsoleGit
+  syntax:
+    content: public string Command { get; init; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Command As String
+  overload: ConsoleGit.CommandLineArgs.Command*
+- uid: ConsoleGit.CommandLineArgs.GitUrl
+  commentId: P:ConsoleGit.CommandLineArgs.GitUrl
+  id: GitUrl
+  parent: ConsoleGit.CommandLineArgs
+  langs:
+  - csharp
+  - vb
+  name: GitUrl
+  nameWithType: CommandLineArgs.GitUrl
+  fullName: ConsoleGit.CommandLineArgs.GitUrl
+  type: Property
+  source:
+    remote:
+      path: ConsoleGit/ConsoleGit/ArgParser.cs
+      branch: feature/my-feature
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: GitUrl
+    path: ../ConsoleGit/ConsoleGit/ArgParser.cs
+    startLine: 59
+  assemblies:
+  - ConsoleGit
+  namespace: ConsoleGit
+  syntax:
+    content: public Uri? GitUrl { get; init; }
+    parameters: []
+    return:
+      type: System.Uri
+    content.vb: Public Property GitUrl As Uri
+  overload: ConsoleGit.CommandLineArgs.GitUrl*
+- uid: ConsoleGit.CommandLineArgs.UserName
+  commentId: P:ConsoleGit.CommandLineArgs.UserName
+  id: UserName
+  parent: ConsoleGit.CommandLineArgs
+  langs:
+  - csharp
+  - vb
+  name: UserName
+  nameWithType: CommandLineArgs.UserName
+  fullName: ConsoleGit.CommandLineArgs.UserName
+  type: Property
+  source:
+    remote:
+      path: ConsoleGit/ConsoleGit/ArgParser.cs
+      branch: feature/my-feature
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: UserName
+    path: ../ConsoleGit/ConsoleGit/ArgParser.cs
+    startLine: 60
+  assemblies:
+  - ConsoleGit
+  namespace: ConsoleGit
+  syntax:
+    content: public string UserName { get; init; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property UserName As String
+  overload: ConsoleGit.CommandLineArgs.UserName*
+- uid: ConsoleGit.CommandLineArgs.Password
+  commentId: P:ConsoleGit.CommandLineArgs.Password
+  id: Password
+  parent: ConsoleGit.CommandLineArgs
+  langs:
+  - csharp
+  - vb
+  name: Password
+  nameWithType: CommandLineArgs.Password
+  fullName: ConsoleGit.CommandLineArgs.Password
+  type: Property
+  source:
+    remote:
+      path: ConsoleGit/ConsoleGit/ArgParser.cs
+      branch: feature/my-feature
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: Password
+    path: ../ConsoleGit/ConsoleGit/ArgParser.cs
+    startLine: 61
+  assemblies:
+  - ConsoleGit
+  namespace: ConsoleGit
+  syntax:
+    content: public string Password { get; init; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Password As String
+  overload: ConsoleGit.CommandLineArgs.Password*
+- uid: ConsoleGit.CommandLineArgs.RepoDir
+  commentId: P:ConsoleGit.CommandLineArgs.RepoDir
+  id: RepoDir
+  parent: ConsoleGit.CommandLineArgs
+  langs:
+  - csharp
+  - vb
+  name: RepoDir
+  nameWithType: CommandLineArgs.RepoDir
+  fullName: ConsoleGit.CommandLineArgs.RepoDir
+  type: Property
+  source:
+    remote:
+      path: ConsoleGit/ConsoleGit/ArgParser.cs
+      branch: feature/my-feature
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: RepoDir
+    path: ../ConsoleGit/ConsoleGit/ArgParser.cs
+    startLine: 62
+  assemblies:
+  - ConsoleGit
+  namespace: ConsoleGit
+  syntax:
+    content: public string RepoDir { get; init; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property RepoDir As String
+  overload: ConsoleGit.CommandLineArgs.RepoDir*
+- uid: ConsoleGit.CommandLineArgs.CommitMessage
+  commentId: P:ConsoleGit.CommandLineArgs.CommitMessage
+  id: CommitMessage
+  parent: ConsoleGit.CommandLineArgs
+  langs:
+  - csharp
+  - vb
+  name: CommitMessage
+  nameWithType: CommandLineArgs.CommitMessage
+  fullName: ConsoleGit.CommandLineArgs.CommitMessage
+  type: Property
+  source:
+    remote:
+      path: ConsoleGit/ConsoleGit/ArgParser.cs
+      branch: feature/my-feature
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: CommitMessage
+    path: ../ConsoleGit/ConsoleGit/ArgParser.cs
+    startLine: 63
+  assemblies:
+  - ConsoleGit
+  namespace: ConsoleGit
+  syntax:
+    content: public string CommitMessage { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property CommitMessage As String
+  overload: ConsoleGit.CommandLineArgs.CommitMessage*
+- uid: ConsoleGit.CommandLineArgs.CommitAuthorName
+  commentId: P:ConsoleGit.CommandLineArgs.CommitAuthorName
+  id: CommitAuthorName
+  parent: ConsoleGit.CommandLineArgs
+  langs:
+  - csharp
+  - vb
+  name: CommitAuthorName
+  nameWithType: CommandLineArgs.CommitAuthorName
+  fullName: ConsoleGit.CommandLineArgs.CommitAuthorName
+  type: Property
+  source:
+    remote:
+      path: ConsoleGit/ConsoleGit/ArgParser.cs
+      branch: feature/my-feature
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: CommitAuthorName
+    path: ../ConsoleGit/ConsoleGit/ArgParser.cs
+    startLine: 64
+  assemblies:
+  - ConsoleGit
+  namespace: ConsoleGit
+  syntax:
+    content: public string CommitAuthorName { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property CommitAuthorName As String
+  overload: ConsoleGit.CommandLineArgs.CommitAuthorName*
+- uid: ConsoleGit.CommandLineArgs.CommitAuthorEmail
+  commentId: P:ConsoleGit.CommandLineArgs.CommitAuthorEmail
+  id: CommitAuthorEmail
+  parent: ConsoleGit.CommandLineArgs
+  langs:
+  - csharp
+  - vb
+  name: CommitAuthorEmail
+  nameWithType: CommandLineArgs.CommitAuthorEmail
+  fullName: ConsoleGit.CommandLineArgs.CommitAuthorEmail
+  type: Property
+  source:
+    remote:
+      path: ConsoleGit/ConsoleGit/ArgParser.cs
+      branch: feature/my-feature
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: CommitAuthorEmail
+    path: ../ConsoleGit/ConsoleGit/ArgParser.cs
+    startLine: 65
+  assemblies:
+  - ConsoleGit
+  namespace: ConsoleGit
+  syntax:
+    content: public string CommitAuthorEmail { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property CommitAuthorEmail As String
+  overload: ConsoleGit.CommandLineArgs.CommitAuthorEmail*
+- uid: ConsoleGit.CommandLineArgs.CreatioUrl
+  commentId: P:ConsoleGit.CommandLineArgs.CreatioUrl
+  id: CreatioUrl
+  parent: ConsoleGit.CommandLineArgs
+  langs:
+  - csharp
+  - vb
+  name: CreatioUrl
+  nameWithType: CommandLineArgs.CreatioUrl
+  fullName: ConsoleGit.CommandLineArgs.CreatioUrl
+  type: Property
+  source:
+    remote:
+      path: ConsoleGit/ConsoleGit/ArgParser.cs
+      branch: feature/my-feature
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: CreatioUrl
+    path: ../ConsoleGit/ConsoleGit/ArgParser.cs
+    startLine: 66
+  assemblies:
+  - ConsoleGit
+  namespace: ConsoleGit
+  syntax:
+    content: public Uri? CreatioUrl { get; init; }
+    parameters: []
+    return:
+      type: System.Uri
+    content.vb: Public Property CreatioUrl As Uri
+  overload: ConsoleGit.CommandLineArgs.CreatioUrl*
+- uid: ConsoleGit.CommandLineArgs.BPMLOADER
+  commentId: P:ConsoleGit.CommandLineArgs.BPMLOADER
+  id: BPMLOADER
+  parent: ConsoleGit.CommandLineArgs
+  langs:
+  - csharp
+  - vb
+  name: BPMLOADER
+  nameWithType: CommandLineArgs.BPMLOADER
+  fullName: ConsoleGit.CommandLineArgs.BPMLOADER
+  type: Property
+  source:
+    remote:
+      path: ConsoleGit/ConsoleGit/ArgParser.cs
+      branch: feature/my-feature
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: BPMLOADER
+    path: ../ConsoleGit/ConsoleGit/ArgParser.cs
+    startLine: 68
+  assemblies:
+  - ConsoleGit
+  namespace: ConsoleGit
+  syntax:
+    content: public string? BPMLOADER { get; init; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property BPMLOADER As String
+  overload: ConsoleGit.CommandLineArgs.BPMLOADER*
+- uid: ConsoleGit.CommandLineArgs.ASPXAUTH
+  commentId: P:ConsoleGit.CommandLineArgs.ASPXAUTH
+  id: ASPXAUTH
+  parent: ConsoleGit.CommandLineArgs
+  langs:
+  - csharp
+  - vb
+  name: ASPXAUTH
+  nameWithType: CommandLineArgs.ASPXAUTH
+  fullName: ConsoleGit.CommandLineArgs.ASPXAUTH
+  type: Property
+  source:
+    remote:
+      path: ConsoleGit/ConsoleGit/ArgParser.cs
+      branch: feature/my-feature
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: ASPXAUTH
+    path: ../ConsoleGit/ConsoleGit/ArgParser.cs
+    startLine: 69
+  assemblies:
+  - ConsoleGit
+  namespace: ConsoleGit
+  syntax:
+    content: public string? ASPXAUTH { get; init; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ASPXAUTH As String
+  overload: ConsoleGit.CommandLineArgs.ASPXAUTH*
+- uid: ConsoleGit.CommandLineArgs.BPMCSRF
+  commentId: P:ConsoleGit.CommandLineArgs.BPMCSRF
+  id: BPMCSRF
+  parent: ConsoleGit.CommandLineArgs
+  langs:
+  - csharp
+  - vb
+  name: BPMCSRF
+  nameWithType: CommandLineArgs.BPMCSRF
+  fullName: ConsoleGit.CommandLineArgs.BPMCSRF
+  type: Property
+  source:
+    remote:
+      path: ConsoleGit/ConsoleGit/ArgParser.cs
+      branch: feature/my-feature
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: BPMCSRF
+    path: ../ConsoleGit/ConsoleGit/ArgParser.cs
+    startLine: 70
+  assemblies:
+  - ConsoleGit
+  namespace: ConsoleGit
+  syntax:
+    content: public string? BPMCSRF { get; init; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property BPMCSRF As String
+  overload: ConsoleGit.CommandLineArgs.BPMCSRF*
+- uid: ConsoleGit.CommandLineArgs.UserType
+  commentId: P:ConsoleGit.CommandLineArgs.UserType
+  id: UserType
+  parent: ConsoleGit.CommandLineArgs
+  langs:
+  - csharp
+  - vb
+  name: UserType
+  nameWithType: CommandLineArgs.UserType
+  fullName: ConsoleGit.CommandLineArgs.UserType
+  type: Property
+  source:
+    remote:
+      path: ConsoleGit/ConsoleGit/ArgParser.cs
+      branch: feature/my-feature
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: UserType
+    path: ../ConsoleGit/ConsoleGit/ArgParser.cs
+    startLine: 71
+  assemblies:
+  - ConsoleGit
+  namespace: ConsoleGit
+  syntax:
+    content: public string? UserType { get; init; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property UserType As String
+  overload: ConsoleGit.CommandLineArgs.UserType*
+- uid: ConsoleGit.CommandLineArgs.BPMSESSIONID
+  commentId: P:ConsoleGit.CommandLineArgs.BPMSESSIONID
+  id: BPMSESSIONID
+  parent: ConsoleGit.CommandLineArgs
+  langs:
+  - csharp
+  - vb
+  name: BPMSESSIONID
+  nameWithType: CommandLineArgs.BPMSESSIONID
+  fullName: ConsoleGit.CommandLineArgs.BPMSESSIONID
+  type: Property
+  source:
+    remote:
+      path: ConsoleGit/ConsoleGit/ArgParser.cs
+      branch: feature/my-feature
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: BPMSESSIONID
+    path: ../ConsoleGit/ConsoleGit/ArgParser.cs
+    startLine: 72
+  assemblies:
+  - ConsoleGit
+  namespace: ConsoleGit
+  syntax:
+    content: public string? BPMSESSIONID { get; init; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property BPMSESSIONID As String
+  overload: ConsoleGit.CommandLineArgs.BPMSESSIONID*
+- uid: ConsoleGit.CommandLineArgs.IsFramework
+  commentId: P:ConsoleGit.CommandLineArgs.IsFramework
+  id: IsFramework
+  parent: ConsoleGit.CommandLineArgs
+  langs:
+  - csharp
+  - vb
+  name: IsFramework
+  nameWithType: CommandLineArgs.IsFramework
+  fullName: ConsoleGit.CommandLineArgs.IsFramework
+  type: Property
+  source:
+    remote:
+      path: ConsoleGit/ConsoleGit/ArgParser.cs
+      branch: feature/my-feature
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: IsFramework
+    path: ../ConsoleGit/ConsoleGit/ArgParser.cs
+    startLine: 73
+  assemblies:
+  - ConsoleGit
+  namespace: ConsoleGit
+  syntax:
+    content: public bool IsFramework { get; init; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property IsFramework As Boolean
+  overload: ConsoleGit.CommandLineArgs.IsFramework*
+- uid: ConsoleGit.CommandLineArgs.PackageName
+  commentId: P:ConsoleGit.CommandLineArgs.PackageName
+  id: PackageName
+  parent: ConsoleGit.CommandLineArgs
+  langs:
+  - csharp
+  - vb
+  name: PackageName
+  nameWithType: CommandLineArgs.PackageName
+  fullName: ConsoleGit.CommandLineArgs.PackageName
+  type: Property
+  source:
+    remote:
+      path: ConsoleGit/ConsoleGit/ArgParser.cs
+      branch: feature/my-feature
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: PackageName
+    path: ../ConsoleGit/ConsoleGit/ArgParser.cs
+    startLine: 74
+  assemblies:
+  - ConsoleGit
+  namespace: ConsoleGit
+  syntax:
+    content: public bool PackageName { get; init; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property PackageName As Boolean
+  overload: ConsoleGit.CommandLineArgs.PackageName*
+references:
+- uid: ConsoleGit
+  commentId: N:ConsoleGit
+  href: ConsoleGit.html
+  name: ConsoleGit
+  nameWithType: ConsoleGit
+  fullName: ConsoleGit
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.IEquatable{ConsoleGit.CommandLineArgs}
+  commentId: T:System.IEquatable{ConsoleGit.CommandLineArgs}
+  parent: System
+  definition: System.IEquatable`1
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<CommandLineArgs>
+  nameWithType: IEquatable<CommandLineArgs>
+  fullName: System.IEquatable<ConsoleGit.CommandLineArgs>
+  nameWithType.vb: IEquatable(Of CommandLineArgs)
+  fullName.vb: System.IEquatable(Of ConsoleGit.CommandLineArgs)
+  name.vb: IEquatable(Of CommandLineArgs)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - uid: ConsoleGit.CommandLineArgs
+    name: CommandLineArgs
+    href: ConsoleGit.CommandLineArgs.html
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: ConsoleGit.CommandLineArgs
+    name: CommandLineArgs
+    href: ConsoleGit.CommandLineArgs.html
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.IEquatable`1
+  commentId: T:System.IEquatable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<T>
+  nameWithType: IEquatable<T>
+  fullName: System.IEquatable<T>
+  nameWithType.vb: IEquatable(Of T)
+  fullName.vb: System.IEquatable(Of T)
+  name.vb: IEquatable(Of T)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: ConsoleGit.CommandLineArgs.#ctor*
+  commentId: Overload:ConsoleGit.CommandLineArgs.#ctor
+  href: ConsoleGit.CommandLineArgs.html#ConsoleGit_CommandLineArgs__ctor
+  name: CommandLineArgs
+  nameWithType: CommandLineArgs.CommandLineArgs
+  fullName: ConsoleGit.CommandLineArgs.CommandLineArgs
+  nameWithType.vb: CommandLineArgs.New
+  fullName.vb: ConsoleGit.CommandLineArgs.New
+  name.vb: New
+- uid: System.ArgumentException
+  commentId: T:System.ArgumentException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.argumentexception
+  name: ArgumentException
+  nameWithType: ArgumentException
+  fullName: System.ArgumentException
+- uid: ConsoleGit.CommandLineArgs.CreateCookieContainerFromArgs*
+  commentId: Overload:ConsoleGit.CommandLineArgs.CreateCookieContainerFromArgs
+  href: ConsoleGit.CommandLineArgs.html#ConsoleGit_CommandLineArgs_CreateCookieContainerFromArgs
+  name: CreateCookieContainerFromArgs
+  nameWithType: CommandLineArgs.CreateCookieContainerFromArgs
+  fullName: ConsoleGit.CommandLineArgs.CreateCookieContainerFromArgs
+- uid: System.Net.CookieContainer
+  commentId: T:System.Net.CookieContainer
+  parent: System.Net
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.net.cookiecontainer
+  name: CookieContainer
+  nameWithType: CookieContainer
+  fullName: System.Net.CookieContainer
+- uid: System.Net
+  commentId: N:System.Net
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Net
+  nameWithType: System.Net
+  fullName: System.Net
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Net
+    name: Net
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.net
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Net
+    name: Net
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.net
+- uid: ConsoleGit.CommandLineArgs.Command*
+  commentId: Overload:ConsoleGit.CommandLineArgs.Command
+  href: ConsoleGit.CommandLineArgs.html#ConsoleGit_CommandLineArgs_Command
+  name: Command
+  nameWithType: CommandLineArgs.Command
+  fullName: ConsoleGit.CommandLineArgs.Command
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: ConsoleGit.CommandLineArgs.GitUrl*
+  commentId: Overload:ConsoleGit.CommandLineArgs.GitUrl
+  href: ConsoleGit.CommandLineArgs.html#ConsoleGit_CommandLineArgs_GitUrl
+  name: GitUrl
+  nameWithType: CommandLineArgs.GitUrl
+  fullName: ConsoleGit.CommandLineArgs.GitUrl
+- uid: System.Uri
+  commentId: T:System.Uri
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uri
+  name: Uri
+  nameWithType: Uri
+  fullName: System.Uri
+- uid: ConsoleGit.CommandLineArgs.UserName*
+  commentId: Overload:ConsoleGit.CommandLineArgs.UserName
+  href: ConsoleGit.CommandLineArgs.html#ConsoleGit_CommandLineArgs_UserName
+  name: UserName
+  nameWithType: CommandLineArgs.UserName
+  fullName: ConsoleGit.CommandLineArgs.UserName
+- uid: ConsoleGit.CommandLineArgs.Password*
+  commentId: Overload:ConsoleGit.CommandLineArgs.Password
+  href: ConsoleGit.CommandLineArgs.html#ConsoleGit_CommandLineArgs_Password
+  name: Password
+  nameWithType: CommandLineArgs.Password
+  fullName: ConsoleGit.CommandLineArgs.Password
+- uid: ConsoleGit.CommandLineArgs.RepoDir*
+  commentId: Overload:ConsoleGit.CommandLineArgs.RepoDir
+  href: ConsoleGit.CommandLineArgs.html#ConsoleGit_CommandLineArgs_RepoDir
+  name: RepoDir
+  nameWithType: CommandLineArgs.RepoDir
+  fullName: ConsoleGit.CommandLineArgs.RepoDir
+- uid: ConsoleGit.CommandLineArgs.CommitMessage*
+  commentId: Overload:ConsoleGit.CommandLineArgs.CommitMessage
+  href: ConsoleGit.CommandLineArgs.html#ConsoleGit_CommandLineArgs_CommitMessage
+  name: CommitMessage
+  nameWithType: CommandLineArgs.CommitMessage
+  fullName: ConsoleGit.CommandLineArgs.CommitMessage
+- uid: ConsoleGit.CommandLineArgs.CommitAuthorName*
+  commentId: Overload:ConsoleGit.CommandLineArgs.CommitAuthorName
+  href: ConsoleGit.CommandLineArgs.html#ConsoleGit_CommandLineArgs_CommitAuthorName
+  name: CommitAuthorName
+  nameWithType: CommandLineArgs.CommitAuthorName
+  fullName: ConsoleGit.CommandLineArgs.CommitAuthorName
+- uid: ConsoleGit.CommandLineArgs.CommitAuthorEmail*
+  commentId: Overload:ConsoleGit.CommandLineArgs.CommitAuthorEmail
+  href: ConsoleGit.CommandLineArgs.html#ConsoleGit_CommandLineArgs_CommitAuthorEmail
+  name: CommitAuthorEmail
+  nameWithType: CommandLineArgs.CommitAuthorEmail
+  fullName: ConsoleGit.CommandLineArgs.CommitAuthorEmail
+- uid: ConsoleGit.CommandLineArgs.CreatioUrl*
+  commentId: Overload:ConsoleGit.CommandLineArgs.CreatioUrl
+  href: ConsoleGit.CommandLineArgs.html#ConsoleGit_CommandLineArgs_CreatioUrl
+  name: CreatioUrl
+  nameWithType: CommandLineArgs.CreatioUrl
+  fullName: ConsoleGit.CommandLineArgs.CreatioUrl
+- uid: ConsoleGit.CommandLineArgs.BPMLOADER*
+  commentId: Overload:ConsoleGit.CommandLineArgs.BPMLOADER
+  href: ConsoleGit.CommandLineArgs.html#ConsoleGit_CommandLineArgs_BPMLOADER
+  name: BPMLOADER
+  nameWithType: CommandLineArgs.BPMLOADER
+  fullName: ConsoleGit.CommandLineArgs.BPMLOADER
+- uid: ConsoleGit.CommandLineArgs.ASPXAUTH*
+  commentId: Overload:ConsoleGit.CommandLineArgs.ASPXAUTH
+  href: ConsoleGit.CommandLineArgs.html#ConsoleGit_CommandLineArgs_ASPXAUTH
+  name: ASPXAUTH
+  nameWithType: CommandLineArgs.ASPXAUTH
+  fullName: ConsoleGit.CommandLineArgs.ASPXAUTH
+- uid: ConsoleGit.CommandLineArgs.BPMCSRF*
+  commentId: Overload:ConsoleGit.CommandLineArgs.BPMCSRF
+  href: ConsoleGit.CommandLineArgs.html#ConsoleGit_CommandLineArgs_BPMCSRF
+  name: BPMCSRF
+  nameWithType: CommandLineArgs.BPMCSRF
+  fullName: ConsoleGit.CommandLineArgs.BPMCSRF
+- uid: ConsoleGit.CommandLineArgs.UserType*
+  commentId: Overload:ConsoleGit.CommandLineArgs.UserType
+  href: ConsoleGit.CommandLineArgs.html#ConsoleGit_CommandLineArgs_UserType
+  name: UserType
+  nameWithType: CommandLineArgs.UserType
+  fullName: ConsoleGit.CommandLineArgs.UserType
+- uid: ConsoleGit.CommandLineArgs.BPMSESSIONID*
+  commentId: Overload:ConsoleGit.CommandLineArgs.BPMSESSIONID
+  href: ConsoleGit.CommandLineArgs.html#ConsoleGit_CommandLineArgs_BPMSESSIONID
+  name: BPMSESSIONID
+  nameWithType: CommandLineArgs.BPMSESSIONID
+  fullName: ConsoleGit.CommandLineArgs.BPMSESSIONID
+- uid: ConsoleGit.CommandLineArgs.IsFramework*
+  commentId: Overload:ConsoleGit.CommandLineArgs.IsFramework
+  href: ConsoleGit.CommandLineArgs.html#ConsoleGit_CommandLineArgs_IsFramework
+  name: IsFramework
+  nameWithType: CommandLineArgs.IsFramework
+  fullName: ConsoleGit.CommandLineArgs.IsFramework
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: ConsoleGit.CommandLineArgs.PackageName*
+  commentId: Overload:ConsoleGit.CommandLineArgs.PackageName
+  href: ConsoleGit.CommandLineArgs.html#ConsoleGit_CommandLineArgs_PackageName
+  name: PackageName
+  nameWithType: CommandLineArgs.PackageName
+  fullName: ConsoleGit.CommandLineArgs.PackageName

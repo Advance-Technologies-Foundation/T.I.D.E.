@@ -47,7 +47,7 @@ public abstract class BaseRepositoryCommand : ICommand {
 
 	#region Methods: Private
 
-	private static void GrantDeleteAccess(DirectoryInfo directoryInfo, string userName){
+	public static void GrantDeleteAccess(DirectoryInfo directoryInfo, string userName){
 		// Get the current directory security settings
 		DirectorySecurity directorySecurity = directoryInfo.GetAccessControl();
 

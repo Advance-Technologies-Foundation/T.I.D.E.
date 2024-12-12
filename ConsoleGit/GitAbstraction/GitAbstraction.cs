@@ -174,11 +174,13 @@ namespace GitAbstraction {
 		/// </returns>
 		/// <seealso href="https://github.com/libgit2/libgit2sharp/wiki/git-push#git-push">libgit2sharp Wiki git-push</seealso>
 		public ErrorOr<Success> Push(Branch branch){
-			PushOptions options = new PushOptions {
+			PushOptions options = new () {
 				CredentialsProvider = CredentialsProvider
 			};
-			Remote remote = InitializedRepository.Network.Remotes["origin"];
-			InitializedRepository.Network.Push(remote, $"refs/heads/{branch.FriendlyName}", options);
+			//Remote remote = InitializedRepository.Network.Remotes["origin"];
+			
+			InitializedRepository.Network.Push(branch, options);
+			//InitializedRepository.Network.Push(remote, $"refs/heads/{branch.FriendlyName}", options);
 			return Result.Success;
 		}
 		

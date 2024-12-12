@@ -1,0 +1,54 @@
+### YamlMime:TableOfContent
+items:
+- uid: AtfTIDE
+  name: AtfTIDE
+  type: Namespace
+  items:
+  - uid: AtfTIDE.Commands
+    name: Commands
+    type: Enum
+  - uid: AtfTIDE.ConsoleGit
+    name: ConsoleGit
+    type: Class
+  - uid: AtfTIDE.ConsoleGitArgs
+    name: ConsoleGitArgs
+    type: Class
+  - uid: AtfTIDE.ConsoleGitResult
+    name: ConsoleGitResult
+    type: Class
+  - uid: AtfTIDE.HelperFunctions
+    name: HelperFunctions
+    type: Class
+  - uid: AtfTIDE.IConsoleGit
+    name: IConsoleGit
+    type: Interface
+  - uid: AtfTIDE.RepositoryInfo
+    name: RepositoryInfo
+    type: Class
+- uid: AtfTIDE.WebServices
+  name: AtfTIDE.WebServices
+  type: Namespace
+  items:
+  - uid: AtfTIDE.WebServices.Tide
+    name: Tide
+    type: Class
+- uid: Terrasoft.Core.Process.Configuration
+  name: Terrasoft.Core.Process.Configuration
+  type: Namespace
+  items:
+  - uid: Terrasoft.Core.Process.Configuration.AtfProcessUserTask_CloneRepository
+    name: AtfProcessUserTask_CloneRepository
+    type: Class
+  - uid: Terrasoft.Core.Process.Configuration.AtfProcessUserTask_DownloadPackages
+    name: AtfProcessUserTask_DownloadPackages
+    type: Class
+  - uid: Terrasoft.Core.Process.Configuration.AtfProcessUserTask_GitAddAll
+    name: AtfProcessUserTask_GitAddAll
+    type: Class
+  - uid: Terrasoft.Core.Process.Configuration.AtfProcessUserTask_GitCommit
+    name: AtfProcessUserTask_GitCommit
+    type: Class
+  - uid: Terrasoft.Core.Process.Configuration.AtfProcessUserTask_GitPush
+    name: AtfProcessUserTask_GitPush
+    type: Class
+memberLayout: SamePage

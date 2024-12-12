@@ -1,0 +1,214 @@
+﻿{
+  "PackageData": [
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "Value": "0439c631-218b-41db-93ad-453b59d9b804"
+        },
+        {
+          "SchemaColumnUId": "08f61fb5-8e3f-fbad-dd6d-09b682562813",
+          "Value": 50
+        },
+        {
+          "SchemaColumnUId": "3307082b-2e2f-3785-59ed-728a3f8235bb",
+          "Value": "ef7f0eb0-f36b-1410-849f-0026185bfcd3",
+          "DisplayValue": "21-50"
+        },
+        {
+          "SchemaColumnUId": "3d590dd6-9709-71ac-adc8-1a968b3c678e",
+          "Value": 21
+        }
+      ]
+    },
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "Value": "195f1c1b-1add-4c0d-9f9c-30a3243c0d91"
+        },
+        {
+          "SchemaColumnUId": "08f61fb5-8e3f-fbad-dd6d-09b682562813",
+          "Value": 20
+        },
+        {
+          "SchemaColumnUId": "3307082b-2e2f-3785-59ed-728a3f8235bb",
+          "Value": "0580de07-55e6-df11-971b-001d60e938c6",
+          "DisplayValue": "11-20"
+        },
+        {
+          "SchemaColumnUId": "3d590dd6-9709-71ac-adc8-1a968b3c678e",
+          "Value": 11
+        }
+      ]
+    },
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "Value": "3de3b41e-8c19-41a1-9049-ef61dd8f1f98"
+        },
+        {
+          "SchemaColumnUId": "08f61fb5-8e3f-fbad-dd6d-09b682562813",
+          "Value": 0
+        },
+        {
+          "SchemaColumnUId": "3307082b-2e2f-3785-59ed-728a3f8235bb",
+          "Value": "fdbf1ede-f36b-1410-849f-0026185bfcd3",
+          "DisplayValue": "More than 1000"
+        },
+        {
+          "SchemaColumnUId": "3d590dd6-9709-71ac-adc8-1a968b3c678e",
+          "Value": 1001
+        }
+      ]
+    },
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "Value": "4ea2f07a-558f-4e96-8637-dac7a92d6b49"
+        },
+        {
+          "SchemaColumnUId": "08f61fb5-8e3f-fbad-dd6d-09b682562813",
+          "Value": 1
+        },
+        {
+          "SchemaColumnUId": "3307082b-2e2f-3785-59ed-728a3f8235bb",
+          "Value": "eebc1ebc-f36b-1410-849f-0026185bfcd3",
+          "DisplayValue": "Private entrepreneur"
+        },
+        {
+          "SchemaColumnUId": "3d590dd6-9709-71ac-adc8-1a968b3c678e",
+          "Value": 0
+        }
+      ]
+    },
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "Value": "974c6c13-ece1-42a4-987b-b4a32a52dcc2"
+        },
+        {
+          "SchemaColumnUId": "08f61fb5-8e3f-fbad-dd6d-09b682562813",
+          "Value": 1000
+        },
+        {
+          "SchemaColumnUId": "3307082b-2e2f-3785-59ed-728a3f8235bb",
+          "Value": "2d344115-55e6-df11-971b-001d60e938c6",
+          "DisplayValue": "501-1000"
+        },
+        {
+          "SchemaColumnUId": "3d590dd6-9709-71ac-adc8-1a968b3c678e",
+          "Value": 501
+        }
+      ]
+    },
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "Value": "b7eaf19f-5f0c-41af-ba20-ccc2b4f79ad0"
+        },
+        {
+          "SchemaColumnUId": "08f61fb5-8e3f-fbad-dd6d-09b682562813",
+          "Value": 10
+        },
+        {
+          "SchemaColumnUId": "3307082b-2e2f-3785-59ed-728a3f8235bb",
+          "Value": "f07c12d8-f36b-1410-849f-0026185bfcd3",
+          "DisplayValue": "5-10"
+        },
+        {
+          "SchemaColumnUId": "3d590dd6-9709-71ac-adc8-1a968b3c678e",
+          "Value": 5
+        }
+      ]
+    },
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "Value": "bb1809ca-ea03-41e7-bcaa-b879e63b4758"
+        },
+        {
+          "SchemaColumnUId": "08f61fb5-8e3f-fbad-dd6d-09b682562813",
+          "Value": 500
+        },
+        {
+          "SchemaColumnUId": "3307082b-2e2f-3785-59ed-728a3f8235bb",
+          "Value": "2c344115-55e6-df11-971b-001d60e938c6",
+          "DisplayValue": "201-500"
+        },
+        {
+          "SchemaColumnUId": "3d590dd6-9709-71ac-adc8-1a968b3c678e",
+          "Value": 201
+        }
+      ]
+    },
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "Value": "c5070d5b-0fc0-43a1-8a70-fad692633948"
+        },
+        {
+          "SchemaColumnUId": "08f61fb5-8e3f-fbad-dd6d-09b682562813",
+          "Value": 200
+        },
+        {
+          "SchemaColumnUId": "3307082b-2e2f-3785-59ed-728a3f8235bb",
+          "Value": "bf7e2290-f36b-1410-849f-0026185bfcd3",
+          "DisplayValue": "101-200"
+        },
+        {
+          "SchemaColumnUId": "3d590dd6-9709-71ac-adc8-1a968b3c678e",
+          "Value": 101
+        }
+      ]
+    },
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "Value": "d3c44c34-2341-4ab0-abf7-71f8b85d7394"
+        },
+        {
+          "SchemaColumnUId": "08f61fb5-8e3f-fbad-dd6d-09b682562813",
+          "Value": 100
+        },
+        {
+          "SchemaColumnUId": "3307082b-2e2f-3785-59ed-728a3f8235bb",
+          "Value": "3a80060f-55e6-df11-971b-001d60e938c6",
+          "DisplayValue": "51-100"
+        },
+        {
+          "SchemaColumnUId": "3d590dd6-9709-71ac-adc8-1a968b3c678e",
+          "Value": 51
+        }
+      ]
+    },
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "Value": "d970e1b1-8867-4403-99e2-a70ca698b74c"
+        },
+        {
+          "SchemaColumnUId": "08f61fb5-8e3f-fbad-dd6d-09b682562813",
+          "Value": 4
+        },
+        {
+          "SchemaColumnUId": "3307082b-2e2f-3785-59ed-728a3f8235bb",
+          "Value": "afbe32d2-f36b-1410-849f-0026185bfcd3",
+          "DisplayValue": "2-4"
+        },
+        {
+          "SchemaColumnUId": "3d590dd6-9709-71ac-adc8-1a968b3c678e",
+          "Value": 2
+        }
+      ]
+    }
+  ]
+}

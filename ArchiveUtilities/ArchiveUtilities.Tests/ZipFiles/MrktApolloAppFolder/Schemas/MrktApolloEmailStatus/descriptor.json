@@ -1,0 +1,14 @@
+﻿{
+  "Descriptor": {
+    "UId": "6c420c05-462e-4c63-a19b-8cd6bafd218c",
+    "Name": "MrktApolloEmailStatus",
+    "ModifiedOnUtc": "\/Date(1704227216000)\/",
+    "Parent": {
+      "UId": "11ab4bcb-9b23-4b6d-9c86-520fae925d75",
+      "Name": "BaseLookup"
+    },
+    "ManagerName": "EntitySchemaManager",
+    "Caption": "Apollo Email Status",
+    "DependsOn": []
+  }
+}

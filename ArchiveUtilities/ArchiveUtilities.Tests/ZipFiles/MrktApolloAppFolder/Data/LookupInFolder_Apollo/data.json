@@ -1,0 +1,40 @@
+﻿{
+  "PackageData": [
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "Value": "51cf9963-2817-43c1-b5c5-3b97278de4d2"
+        },
+        {
+          "SchemaColumnUId": "34391227-ac90-4b55-9739-6720e97a0594",
+          "Value": "71e15e5b-4764-442c-9522-17c44bb4d9a6",
+          "DisplayValue": "Apollo industries"
+        },
+        {
+          "SchemaColumnUId": "9e46bb69-9788-423c-b7cd-4c624081082d",
+          "Value": "2d6152ad-dd47-491a-8d2e-85b4fe5c0a50",
+          "DisplayValue": "Apollo.io"
+        }
+      ]
+    },
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "Value": "93940763-62a9-466a-999a-c6fe670c7193"
+        },
+        {
+          "SchemaColumnUId": "34391227-ac90-4b55-9739-6720e97a0594",
+          "Value": "53364b7b-aa70-45d9-96d1-8bd465513f65",
+          "DisplayValue": "Apollo numbers of account employees"
+        },
+        {
+          "SchemaColumnUId": "9e46bb69-9788-423c-b7cd-4c624081082d",
+          "Value": "2d6152ad-dd47-491a-8d2e-85b4fe5c0a50",
+          "DisplayValue": "Apollo.io"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+### YamlMime:ManagedReference
+items:
+- uid: ConsoleGit.Dto
+  commentId: N:ConsoleGit.Dto
+  id: ConsoleGit.Dto
+  children:
+  - ConsoleGit.Dto.AppJsonSerializerContext
+  - ConsoleGit.Dto.WorkspaceSettings
+  langs:
+  - csharp
+  - vb
+  name: ConsoleGit.Dto
+  nameWithType: ConsoleGit.Dto
+  fullName: ConsoleGit.Dto
+  type: Namespace
+  assemblies:
+  - ConsoleGit
+references:
+- uid: ConsoleGit.Dto.AppJsonSerializerContext
+  commentId: T:ConsoleGit.Dto.AppJsonSerializerContext
+  parent: ConsoleGit.Dto
+  href: ConsoleGit.Dto.AppJsonSerializerContext.html
+  name: AppJsonSerializerContext
+  nameWithType: AppJsonSerializerContext
+  fullName: ConsoleGit.Dto.AppJsonSerializerContext
+- uid: ConsoleGit.Dto.WorkspaceSettings
+  commentId: T:ConsoleGit.Dto.WorkspaceSettings
+  parent: ConsoleGit.Dto
+  href: ConsoleGit.Dto.WorkspaceSettings.html
+  name: WorkspaceSettings
+  nameWithType: WorkspaceSettings
+  fullName: ConsoleGit.Dto.WorkspaceSettings
+- uid: ConsoleGit.Dto
+  commentId: N:ConsoleGit.Dto
+  href: ConsoleGit.html
+  name: ConsoleGit.Dto
+  nameWithType: ConsoleGit.Dto
+  fullName: ConsoleGit.Dto
+  spec.csharp:
+  - uid: ConsoleGit
+    name: ConsoleGit
+    href: ConsoleGit.html
+  - name: .
+  - uid: ConsoleGit.Dto
+    name: Dto
+    href: ConsoleGit.Dto.html
+  spec.vb:
+  - uid: ConsoleGit
+    name: ConsoleGit
+    href: ConsoleGit.html
+  - name: .
+  - uid: ConsoleGit.Dto
+    name: Dto
+    href: ConsoleGit.Dto.html

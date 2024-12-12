@@ -19,7 +19,6 @@ namespace Terrasoft.Core.Process.Configuration
 
 	#region Class: AtfProcessUserTask_GitAddAll
 
-	/// <exclude/>
 	public partial class AtfProcessUserTask_GitAddAll
 	{
 

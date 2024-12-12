@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="en-US">
+	<Group Type="String">
+		<Items>
+			<Item Name="Caption" Value="Apollo number of account employees" />
+			<Item Name="Columns.MrktCreatioAccountEmployeesNumber.Caption" Value="Number of account employees" />
+			<Item Name="Columns.MrktFrom.Caption" Value="From" />
+			<Item Name="Columns.MrktTo.Caption" Value="To" />
+			<Item Name="EventsProcessSchema.LaneSets.LaneSet1253567487.Caption" Value="Pool 14675678567" />
+		</Items>
+	</Group>
+</Resources>

@@ -1,0 +1,1479 @@
+### YamlMime:ManagedReference
+items:
+- uid: GitAbstraction.GitRepository
+  commentId: T:GitAbstraction.GitRepository
+  id: GitRepository
+  parent: GitAbstraction
+  children:
+  - GitAbstraction.GitRepository.AddAll
+  - GitAbstraction.GitRepository.AddFile(System.String)
+  - GitAbstraction.GitRepository.CheckoutBranch(System.String)
+  - GitAbstraction.GitRepository.Clone
+  - GitAbstraction.GitRepository.Commit(System.String,System.String,System.String)
+  - GitAbstraction.GitRepository.CreateBranch(System.String)
+  - GitAbstraction.GitRepository.CreateBranchAndPublish(System.String)
+  - GitAbstraction.GitRepository.DeleteBranch(System.String)
+  - GitAbstraction.GitRepository.Dispose
+  - GitAbstraction.GitRepository.Finalize
+  - GitAbstraction.GitRepository.GetCommits
+  - GitAbstraction.GitRepository.GetInstance(System.String,System.String,System.Uri,System.String)
+  - GitAbstraction.GitRepository.ListLocalBranches
+  - GitAbstraction.GitRepository.PublishBranch(LibGit2Sharp.Branch)
+  - GitAbstraction.GitRepository.Pull
+  - GitAbstraction.GitRepository.Push(LibGit2Sharp.Branch)
+  - GitAbstraction.GitRepository.Push(System.String)
+  - GitAbstraction.GitRepository.RepoDirectory
+  langs:
+  - csharp
+  - vb
+  name: GitRepository
+  nameWithType: GitRepository
+  fullName: GitAbstraction.GitRepository
+  type: Class
+  source:
+    remote:
+      path: ConsoleGit/GitAbstraction/GitAbstraction.cs
+      branch: feature/my-feature
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: GitRepository
+    path: ../ConsoleGit/GitAbstraction/GitAbstraction.cs
+    startLine: 9
+  assemblies:
+  - GitAbstraction
+  namespace: GitAbstraction
+  syntax:
+    content: 'public sealed class GitRepository : IDisposable'
+    content.vb: Public NotInheritable Class GitRepository Implements IDisposable
+  inheritance:
+  - System.Object
+  implements:
+  - System.IDisposable
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: GitAbstraction.GitRepository.RepoDirectory
+  commentId: P:GitAbstraction.GitRepository.RepoDirectory
+  id: RepoDirectory
+  parent: GitAbstraction.GitRepository
+  langs:
+  - csharp
+  - vb
+  name: RepoDirectory
+  nameWithType: GitRepository.RepoDirectory
+  fullName: GitAbstraction.GitRepository.RepoDirectory
+  type: Property
+  source:
+    remote:
+      path: ConsoleGit/GitAbstraction/GitAbstraction.cs
+      branch: feature/my-feature
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: RepoDirectory
+    path: ../ConsoleGit/GitAbstraction/GitAbstraction.cs
+    startLine: 41
+  assemblies:
+  - GitAbstraction
+  namespace: GitAbstraction
+  syntax:
+    content: public IDirectoryInfo RepoDirectory { get; }
+    parameters: []
+    return:
+      type: System.IO.Abstractions.IDirectoryInfo
+    content.vb: Public ReadOnly Property RepoDirectory As IDirectoryInfo
+  overload: GitAbstraction.GitRepository.RepoDirectory*
+- uid: GitAbstraction.GitRepository.GetInstance(System.String,System.String,System.Uri,System.String)
+  commentId: M:GitAbstraction.GitRepository.GetInstance(System.String,System.String,System.Uri,System.String)
+  id: GetInstance(System.String,System.String,System.Uri,System.String)
+  parent: GitAbstraction.GitRepository
+  langs:
+  - csharp
+  - vb
+  name: GetInstance(string, string, Uri, string)
+  nameWithType: GitRepository.GetInstance(string, string, Uri, string)
+  fullName: GitAbstraction.GitRepository.GetInstance(string, string, System.Uri, string)
+  type: Method
+  source:
+    remote:
+      path: ConsoleGit/GitAbstraction/GitAbstraction.cs
+      branch: feature/my-feature
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: GetInstance
+    path: ../ConsoleGit/GitAbstraction/GitAbstraction.cs
+    startLine: 76
+  assemblies:
+  - GitAbstraction
+  namespace: GitAbstraction
+  summary: Gets an instance of the <xref href="GitAbstraction.GitRepository" data-throw-if-not-resolved="false"></xref> class.
+  example: []
+  syntax:
+    content: public static GitRepository GetInstance(string username, string password, Uri gitUrl, string repoDirectory)
+    parameters:
+    - id: username
+      type: System.String
+      description: The username for the repository credentials.
+    - id: password
+      type: System.String
+      description: The password for the repository credentials.
+    - id: gitUrl
+      type: System.Uri
+      description: The URL of the Git repository.
+    - id: repoDirectory
+      type: System.String
+      description: The directory where the repository will be cloned.
+    return:
+      type: GitAbstraction.GitRepository
+      description: A new instance of the <xref href="GitAbstraction.GitRepository" data-throw-if-not-resolved="false"></xref> class.
+    content.vb: Public Shared Function GetInstance(username As String, password As String, gitUrl As Uri, repoDirectory As String) As GitRepository
+  overload: GitAbstraction.GitRepository.GetInstance*
+  nameWithType.vb: GitRepository.GetInstance(String, String, Uri, String)
+  fullName.vb: GitAbstraction.GitRepository.GetInstance(String, String, System.Uri, String)
+  name.vb: GetInstance(String, String, Uri, String)
+- uid: GitAbstraction.GitRepository.Clone
+  commentId: M:GitAbstraction.GitRepository.Clone
+  id: Clone
+  parent: GitAbstraction.GitRepository
+  langs:
+  - csharp
+  - vb
+  name: Clone()
+  nameWithType: GitRepository.Clone()
+  fullName: GitAbstraction.GitRepository.Clone()
+  type: Method
+  source:
+    remote:
+      path: ConsoleGit/GitAbstraction/GitAbstraction.cs
+      branch: feature/my-feature
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: Clone
+    path: ../ConsoleGit/GitAbstraction/GitAbstraction.cs
+    startLine: 88
+  assemblies:
+  - GitAbstraction
+  namespace: GitAbstraction
+  summary: Clones the repository to the specified directory.
+  example: []
+  syntax:
+    content: public ErrorOr<string> Clone()
+    return:
+      type: ErrorOr.ErrorOr{System.String}
+      description: An <xref href="ErrorOr.ErrorOr%601" data-throw-if-not-resolved="false"></xref> containing the path to the cloned repository or an error.
+    content.vb: Public Function Clone() As ErrorOr(Of String)
+  overload: GitAbstraction.GitRepository.Clone*
+  seealso:
+  - linkType: HRef
+    linkId: https://github.com/libgit2/libgit2sharp/wiki/git-clone
+    altText: libgit2sharp Wiki Clone
+- uid: GitAbstraction.GitRepository.Dispose
+  commentId: M:GitAbstraction.GitRepository.Dispose
+  id: Dispose
+  parent: GitAbstraction.GitRepository
+  langs:
+  - csharp
+  - vb
+  name: Dispose()
+  nameWithType: GitRepository.Dispose()
+  fullName: GitAbstraction.GitRepository.Dispose()
+  type: Method
+  source:
+    remote:
+      path: ConsoleGit/GitAbstraction/GitAbstraction.cs
+      branch: feature/my-feature
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: Dispose
+    path: ../ConsoleGit/GitAbstraction/GitAbstraction.cs
+    startLine: 106
+  assemblies:
+  - GitAbstraction
+  namespace: GitAbstraction
+  summary: Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
+  example: []
+  syntax:
+    content: public void Dispose()
+    content.vb: Public Sub Dispose()
+  overload: GitAbstraction.GitRepository.Dispose*
+  implements:
+  - System.IDisposable.Dispose
+- uid: GitAbstraction.GitRepository.ListLocalBranches
+  commentId: M:GitAbstraction.GitRepository.ListLocalBranches
+  id: ListLocalBranches
+  parent: GitAbstraction.GitRepository
+  langs:
+  - csharp
+  - vb
+  name: ListLocalBranches()
+  nameWithType: GitRepository.ListLocalBranches()
+  fullName: GitAbstraction.GitRepository.ListLocalBranches()
+  type: Method
+  source:
+    remote:
+      path: ConsoleGit/GitAbstraction/GitAbstraction.cs
+      branch: feature/my-feature
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: ListLocalBranches
+    path: ../ConsoleGit/GitAbstraction/GitAbstraction.cs
+    startLine: 118
+  assemblies:
+  - GitAbstraction
+  namespace: GitAbstraction
+  summary: Lists all local branches in the repository.
+  example: []
+  syntax:
+    content: public ErrorOr<IEnumerable<Branch>> ListLocalBranches()
+    return:
+      type: ErrorOr.ErrorOr{System.Collections.Generic.IEnumerable{LibGit2Sharp.Branch}}
+    content.vb: Public Function ListLocalBranches() As ErrorOr(Of IEnumerable(Of Branch))
+  overload: GitAbstraction.GitRepository.ListLocalBranches*
+  seealso:
+  - linkType: HRef
+    linkId: https://github.com/libgit2/libgit2sharp/wiki/git-branch#listing-branches
+    altText: >-
+      libgit2sharp Wiki
+           listing-branches
+- uid: GitAbstraction.GitRepository.Pull
+  commentId: M:GitAbstraction.GitRepository.Pull
+  id: Pull
+  parent: GitAbstraction.GitRepository
+  langs:
+  - csharp
+  - vb
+  name: Pull()
+  nameWithType: GitRepository.Pull()
+  fullName: GitAbstraction.GitRepository.Pull()
+  type: Method
+  source:
+    remote:
+      path: ConsoleGit/GitAbstraction/GitAbstraction.cs
+      branch: feature/my-feature
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: Pull
+    path: ../ConsoleGit/GitAbstraction/GitAbstraction.cs
+    startLine: 137
+  assemblies:
+  - GitAbstraction
+  namespace: GitAbstraction
+  summary: Pulls the latest changes from the remote repository and merges them into the local repository.
+  example: []
+  syntax:
+    content: public ErrorOr<MergeResult> Pull()
+    return:
+      type: ErrorOr.ErrorOr{LibGit2Sharp.MergeResult}
+      description: An <xref href="ErrorOr.ErrorOr%601" data-throw-if-not-resolved="false"></xref> containing the result of the merge or an error.
+    content.vb: Public Function Pull() As ErrorOr(Of MergeResult)
+  overload: GitAbstraction.GitRepository.Pull*
+  seealso:
+  - linkType: HRef
+    linkId: https://github.com/libgit2/libgit2sharp/wiki/git-pull
+    altText: libgit2sharp Wiki git-pull
+- uid: GitAbstraction.GitRepository.Push(System.String)
+  commentId: M:GitAbstraction.GitRepository.Push(System.String)
+  id: Push(System.String)
+  parent: GitAbstraction.GitRepository
+  langs:
+  - csharp
+  - vb
+  name: Push(string)
+  nameWithType: GitRepository.Push(string)
+  fullName: GitAbstraction.GitRepository.Push(string)
+  type: Method
+  source:
+    remote:
+      path: ConsoleGit/GitAbstraction/GitAbstraction.cs
+      branch: feature/my-feature
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: Push
+    path: ../ConsoleGit/GitAbstraction/GitAbstraction.cs
+    startLine: 161
+  assemblies:
+  - GitAbstraction
+  namespace: GitAbstraction
+  summary: Pushes the specified branch to the remote repository.
+  example: []
+  syntax:
+    content: public ErrorOr<Success> Push(string branchName)
+    parameters:
+    - id: branchName
+      type: System.String
+      description: The branch to push.
+    return:
+      type: ErrorOr.ErrorOr{ErrorOr.Success}
+      description: An <xref href="ErrorOr.ErrorOr%601" data-throw-if-not-resolved="false"></xref> indicating success or failure.
+    content.vb: Public Function Push(branchName As String) As ErrorOr(Of Success)
+  overload: GitAbstraction.GitRepository.Push*
+  seealso:
+  - linkType: HRef
+    linkId: https://github.com/libgit2/libgit2sharp/wiki/git-push#git-push
+    altText: libgit2sharp Wiki git-push
+  nameWithType.vb: GitRepository.Push(String)
+  fullName.vb: GitAbstraction.GitRepository.Push(String)
+  name.vb: Push(String)
+- uid: GitAbstraction.GitRepository.Push(LibGit2Sharp.Branch)
+  commentId: M:GitAbstraction.GitRepository.Push(LibGit2Sharp.Branch)
+  id: Push(LibGit2Sharp.Branch)
+  parent: GitAbstraction.GitRepository
+  langs:
+  - csharp
+  - vb
+  name: Push(Branch)
+  nameWithType: GitRepository.Push(Branch)
+  fullName: GitAbstraction.GitRepository.Push(LibGit2Sharp.Branch)
+  type: Method
+  source:
+    remote:
+      path: ConsoleGit/GitAbstraction/GitAbstraction.cs
+      branch: feature/my-feature
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: Push
+    path: ../ConsoleGit/GitAbstraction/GitAbstraction.cs
+    startLine: 175
+  assemblies:
+  - GitAbstraction
+  namespace: GitAbstraction
+  summary: Pushes the specified branch to the remote repository.
+  example: []
+  syntax:
+    content: public ErrorOr<Success> Push(Branch branch)
+    parameters:
+    - id: branch
+      type: LibGit2Sharp.Branch
+      description: The branch to push.
+    return:
+      type: ErrorOr.ErrorOr{ErrorOr.Success}
+      description: An <xref href="ErrorOr.ErrorOr%601" data-throw-if-not-resolved="false"></xref> indicating success or failure.
+    content.vb: Public Function Push(branch As Branch) As ErrorOr(Of Success)
+  overload: GitAbstraction.GitRepository.Push*
+  seealso:
+  - linkType: HRef
+    linkId: https://github.com/libgit2/libgit2sharp/wiki/git-push#git-push
+    altText: libgit2sharp Wiki git-push
+- uid: GitAbstraction.GitRepository.CheckoutBranch(System.String)
+  commentId: M:GitAbstraction.GitRepository.CheckoutBranch(System.String)
+  id: CheckoutBranch(System.String)
+  parent: GitAbstraction.GitRepository
+  langs:
+  - csharp
+  - vb
+  name: CheckoutBranch(string)
+  nameWithType: GitRepository.CheckoutBranch(string)
+  fullName: GitAbstraction.GitRepository.CheckoutBranch(string)
+  type: Method
+  source:
+    remote:
+      path: ConsoleGit/GitAbstraction/GitAbstraction.cs
+      branch: feature/my-feature
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: CheckoutBranch
+    path: ../ConsoleGit/GitAbstraction/GitAbstraction.cs
+    startLine: 190
+  assemblies:
+  - GitAbstraction
+  namespace: GitAbstraction
+  summary: Checkout to existing branch by name
+  example: []
+  syntax:
+    content: public ErrorOr<Success> CheckoutBranch(string branchName)
+    parameters:
+    - id: branchName
+      type: System.String
+      description: Branch name to checkout
+    return:
+      type: ErrorOr.ErrorOr{ErrorOr.Success}
+      description: ''
+    content.vb: Public Function CheckoutBranch(branchName As String) As ErrorOr(Of Success)
+  overload: GitAbstraction.GitRepository.CheckoutBranch*
+  seealso:
+  - linkType: HRef
+    linkId: https://github.com/libgit2/libgit2sharp/wiki/git-checkout#checkout-to-existing-branch-by-name
+    altText: libgit2sharp Wiki git checkout <code>branch</code>
+  nameWithType.vb: GitRepository.CheckoutBranch(String)
+  fullName.vb: GitAbstraction.GitRepository.CheckoutBranch(String)
+  name.vb: CheckoutBranch(String)
+- uid: GitAbstraction.GitRepository.AddAll
+  commentId: M:GitAbstraction.GitRepository.AddAll
+  id: AddAll
+  parent: GitAbstraction.GitRepository
+  langs:
+  - csharp
+  - vb
+  name: AddAll()
+  nameWithType: GitRepository.AddAll()
+  fullName: GitAbstraction.GitRepository.AddAll()
+  type: Method
+  source:
+    remote:
+      path: ConsoleGit/GitAbstraction/GitAbstraction.cs
+      branch: feature/my-feature
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: AddAll
+    path: ../ConsoleGit/GitAbstraction/GitAbstraction.cs
+    startLine: 208
+  assemblies:
+  - GitAbstraction
+  namespace: GitAbstraction
+  summary: >-
+    Stage all working directory changes
+
+    Adds all files to the staging area.
+  remarks: git add --all .
+  example: []
+  syntax:
+    content: public ErrorOr<Success> AddAll()
+    return:
+      type: ErrorOr.ErrorOr{ErrorOr.Success}
+    content.vb: Public Function AddAll() As ErrorOr(Of Success)
+  overload: GitAbstraction.GitRepository.AddAll*
+  seealso:
+  - linkType: HRef
+    linkId: https://github.com/libgit2/libgit2sharp/wiki/git-add#stage-all-working-directory-changes
+    altText: libgit2sharp Wiki git add
+- uid: GitAbstraction.GitRepository.AddFile(System.String)
+  commentId: M:GitAbstraction.GitRepository.AddFile(System.String)
+  id: AddFile(System.String)
+  parent: GitAbstraction.GitRepository
+  langs:
+  - csharp
+  - vb
+  name: AddFile(string)
+  nameWithType: GitRepository.AddFile(string)
+  fullName: GitAbstraction.GitRepository.AddFile(string)
+  type: Method
+  source:
+    remote:
+      path: ConsoleGit/GitAbstraction/GitAbstraction.cs
+      branch: feature/my-feature
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: AddFile
+    path: ../ConsoleGit/GitAbstraction/GitAbstraction.cs
+    startLine: 219
+  assemblies:
+  - GitAbstraction
+  namespace: GitAbstraction
+  summary: 'Stage (add) a file in a repository that is checked out to the file system:'
+  example: []
+  syntax:
+    content: public ErrorOr<Success> AddFile(string filePath)
+    parameters:
+    - id: filePath
+      type: System.String
+      description: Filepath to a file with changes, relative to .git directory
+    return:
+      type: ErrorOr.ErrorOr{ErrorOr.Success}
+      description: ''
+    content.vb: Public Function AddFile(filePath As String) As ErrorOr(Of Success)
+  overload: GitAbstraction.GitRepository.AddFile*
+  seealso:
+  - linkType: HRef
+    linkId: https://github.com/libgit2/libgit2sharp/wiki/git-add#add-to-a-non-bare-repository
+    altText: libgit2sharp Wiki git add
+  nameWithType.vb: GitRepository.AddFile(String)
+  fullName.vb: GitAbstraction.GitRepository.AddFile(String)
+  name.vb: AddFile(String)
+- uid: GitAbstraction.GitRepository.Commit(System.String,System.String,System.String)
+  commentId: M:GitAbstraction.GitRepository.Commit(System.String,System.String,System.String)
+  id: Commit(System.String,System.String,System.String)
+  parent: GitAbstraction.GitRepository
+  langs:
+  - csharp
+  - vb
+  name: Commit(string, string, string)
+  nameWithType: GitRepository.Commit(string, string, string)
+  fullName: GitAbstraction.GitRepository.Commit(string, string, string)
+  type: Method
+  source:
+    remote:
+      path: ConsoleGit/GitAbstraction/GitAbstraction.cs
+      branch: feature/my-feature
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: Commit
+    path: ../ConsoleGit/GitAbstraction/GitAbstraction.cs
+    startLine: 233
+  assemblies:
+  - GitAbstraction
+  namespace: GitAbstraction
+  summary: Make a commit to a non-bare repository
+  example: []
+  syntax:
+    content: public ErrorOr<Commit> Commit(string name, string email, string message)
+    parameters:
+    - id: name
+      type: System.String
+      description: Committer name
+    - id: email
+      type: System.String
+      description: Committer email
+    - id: message
+      type: System.String
+      description: Commit message
+    return:
+      type: ErrorOr.ErrorOr{LibGit2Sharp.Commit}
+      description: <xref href="GitAbstraction.GitRepository.Commit(System.String%2cSystem.String%2cSystem.String)" data-throw-if-not-resolved="false"></xref>
+    content.vb: Public Function Commit(name As String, email As String, message As String) As ErrorOr(Of Commit)
+  overload: GitAbstraction.GitRepository.Commit*
+  seealso:
+  - linkType: HRef
+    linkId: https://github.com/libgit2/libgit2sharp/wiki/git-commit#make-a-commit-to-a-non-bare-repository
+    altText: libgit2sharp Wiki git commit
+  nameWithType.vb: GitRepository.Commit(String, String, String)
+  fullName.vb: GitAbstraction.GitRepository.Commit(String, String, String)
+  name.vb: Commit(String, String, String)
+- uid: GitAbstraction.GitRepository.GetCommits
+  commentId: M:GitAbstraction.GitRepository.GetCommits
+  id: GetCommits
+  parent: GitAbstraction.GitRepository
+  langs:
+  - csharp
+  - vb
+  name: GetCommits()
+  nameWithType: GitRepository.GetCommits()
+  fullName: GitAbstraction.GitRepository.GetCommits()
+  type: Method
+  source:
+    remote:
+      path: ConsoleGit/GitAbstraction/GitAbstraction.cs
+      branch: feature/my-feature
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: GetCommits
+    path: ../ConsoleGit/GitAbstraction/GitAbstraction.cs
+    startLine: 244
+  assemblies:
+  - GitAbstraction
+  namespace: GitAbstraction
+  syntax:
+    content: public ErrorOr<IEnumerable<Commit>> GetCommits()
+    return:
+      type: ErrorOr.ErrorOr{System.Collections.Generic.IEnumerable{LibGit2Sharp.Commit}}
+    content.vb: Public Function GetCommits() As ErrorOr(Of IEnumerable(Of Commit))
+  overload: GitAbstraction.GitRepository.GetCommits*
+- uid: GitAbstraction.GitRepository.CreateBranch(System.String)
+  commentId: M:GitAbstraction.GitRepository.CreateBranch(System.String)
+  id: CreateBranch(System.String)
+  parent: GitAbstraction.GitRepository
+  langs:
+  - csharp
+  - vb
+  name: CreateBranch(string)
+  nameWithType: GitRepository.CreateBranch(string)
+  fullName: GitAbstraction.GitRepository.CreateBranch(string)
+  type: Method
+  source:
+    remote:
+      path: ConsoleGit/GitAbstraction/GitAbstraction.cs
+      branch: feature/my-feature
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: CreateBranch
+    path: ../ConsoleGit/GitAbstraction/GitAbstraction.cs
+    startLine: 257
+  assemblies:
+  - GitAbstraction
+  namespace: GitAbstraction
+  summary: Creates a new branch pointing at the current HEAD.
+  example: []
+  syntax:
+    content: public ErrorOr<Branch> CreateBranch(string branchName)
+    parameters:
+    - id: branchName
+      type: System.String
+      description: The name of the new branch.
+    return:
+      type: ErrorOr.ErrorOr{LibGit2Sharp.Branch}
+      description: An <xref href="ErrorOr.ErrorOr%601" data-throw-if-not-resolved="false"></xref> indicating success or failure.
+    content.vb: Public Function CreateBranch(branchName As String) As ErrorOr(Of Branch)
+  overload: GitAbstraction.GitRepository.CreateBranch*
+  seealso:
+  - linkType: HRef
+    linkId: https://github.com/libgit2/libgit2sharp/wiki/git-branch#creating-a-branch-pointing-at-the-current-head
+    altText: libgit2sharp Wiki
+  nameWithType.vb: GitRepository.CreateBranch(String)
+  fullName.vb: GitAbstraction.GitRepository.CreateBranch(String)
+  name.vb: CreateBranch(String)
+- uid: GitAbstraction.GitRepository.PublishBranch(LibGit2Sharp.Branch)
+  commentId: M:GitAbstraction.GitRepository.PublishBranch(LibGit2Sharp.Branch)
+  id: PublishBranch(LibGit2Sharp.Branch)
+  parent: GitAbstraction.GitRepository
+  langs:
+  - csharp
+  - vb
+  name: PublishBranch(Branch)
+  nameWithType: GitRepository.PublishBranch(Branch)
+  fullName: GitAbstraction.GitRepository.PublishBranch(LibGit2Sharp.Branch)
+  type: Method
+  source:
+    remote:
+      path: ConsoleGit/GitAbstraction/GitAbstraction.cs
+      branch: feature/my-feature
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: PublishBranch
+    path: ../ConsoleGit/GitAbstraction/GitAbstraction.cs
+    startLine: 265
+  assemblies:
+  - GitAbstraction
+  namespace: GitAbstraction
+  syntax:
+    content: public ErrorOr<Success> PublishBranch(Branch branch)
+    parameters:
+    - id: branch
+      type: LibGit2Sharp.Branch
+    return:
+      type: ErrorOr.ErrorOr{ErrorOr.Success}
+    content.vb: Public Function PublishBranch(branch As Branch) As ErrorOr(Of Success)
+  overload: GitAbstraction.GitRepository.PublishBranch*
+- uid: GitAbstraction.GitRepository.CreateBranchAndPublish(System.String)
+  commentId: M:GitAbstraction.GitRepository.CreateBranchAndPublish(System.String)
+  id: CreateBranchAndPublish(System.String)
+  parent: GitAbstraction.GitRepository
+  langs:
+  - csharp
+  - vb
+  name: CreateBranchAndPublish(string)
+  nameWithType: GitRepository.CreateBranchAndPublish(string)
+  fullName: GitAbstraction.GitRepository.CreateBranchAndPublish(string)
+  type: Method
+  source:
+    remote:
+      path: ConsoleGit/GitAbstraction/GitAbstraction.cs
+      branch: feature/my-feature
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: CreateBranchAndPublish
+    path: ../ConsoleGit/GitAbstraction/GitAbstraction.cs
+    startLine: 269
+  assemblies:
+  - GitAbstraction
+  namespace: GitAbstraction
+  syntax:
+    content: public ErrorOr<Success> CreateBranchAndPublish(string branchName)
+    parameters:
+    - id: branchName
+      type: System.String
+    return:
+      type: ErrorOr.ErrorOr{ErrorOr.Success}
+    content.vb: Public Function CreateBranchAndPublish(branchName As String) As ErrorOr(Of Success)
+  overload: GitAbstraction.GitRepository.CreateBranchAndPublish*
+  nameWithType.vb: GitRepository.CreateBranchAndPublish(String)
+  fullName.vb: GitAbstraction.GitRepository.CreateBranchAndPublish(String)
+  name.vb: CreateBranchAndPublish(String)
+- uid: GitAbstraction.GitRepository.DeleteBranch(System.String)
+  commentId: M:GitAbstraction.GitRepository.DeleteBranch(System.String)
+  id: DeleteBranch(System.String)
+  parent: GitAbstraction.GitRepository
+  langs:
+  - csharp
+  - vb
+  name: DeleteBranch(string)
+  nameWithType: GitRepository.DeleteBranch(string)
+  fullName: GitAbstraction.GitRepository.DeleteBranch(string)
+  type: Method
+  source:
+    remote:
+      path: ConsoleGit/GitAbstraction/GitAbstraction.cs
+      branch: feature/my-feature
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: DeleteBranch
+    path: ../ConsoleGit/GitAbstraction/GitAbstraction.cs
+    startLine: 279
+  assemblies:
+  - GitAbstraction
+  namespace: GitAbstraction
+  syntax:
+    content: public ErrorOr<Success> DeleteBranch(string branchName)
+    parameters:
+    - id: branchName
+      type: System.String
+    return:
+      type: ErrorOr.ErrorOr{ErrorOr.Success}
+    content.vb: Public Function DeleteBranch(branchName As String) As ErrorOr(Of Success)
+  overload: GitAbstraction.GitRepository.DeleteBranch*
+  nameWithType.vb: GitRepository.DeleteBranch(String)
+  fullName.vb: GitAbstraction.GitRepository.DeleteBranch(String)
+  name.vb: DeleteBranch(String)
+- uid: GitAbstraction.GitRepository.Finalize
+  commentId: M:GitAbstraction.GitRepository.Finalize
+  id: Finalize
+  parent: GitAbstraction.GitRepository
+  langs:
+  - csharp
+  - vb
+  name: ~GitRepository()
+  nameWithType: GitRepository.~GitRepository()
+  fullName: GitAbstraction.GitRepository.~GitRepository()
+  type: Method
+  source:
+    remote:
+      path: ConsoleGit/GitAbstraction/GitAbstraction.cs
+      branch: feature/my-feature
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: Finalize
+    path: ../ConsoleGit/GitAbstraction/GitAbstraction.cs
+    startLine: 291
+  assemblies:
+  - GitAbstraction
+  namespace: GitAbstraction
+  syntax:
+    content: protected ~GitRepository()
+    content.vb: 'Protected '
+  overload: GitAbstraction.GitRepository.Finalize*
+  nameWithType.vb: ''
+  fullName.vb: ''
+  name.vb: ''
+references:
+- uid: GitAbstraction
+  commentId: N:GitAbstraction
+  href: GitAbstraction.html
+  name: GitAbstraction
+  nameWithType: GitAbstraction
+  fullName: GitAbstraction
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: GitAbstraction.GitRepository.RepoDirectory*
+  commentId: Overload:GitAbstraction.GitRepository.RepoDirectory
+  href: GitAbstraction.GitRepository.html#GitAbstraction_GitRepository_RepoDirectory
+  name: RepoDirectory
+  nameWithType: GitRepository.RepoDirectory
+  fullName: GitAbstraction.GitRepository.RepoDirectory
+- uid: System.IO.Abstractions.IDirectoryInfo
+  commentId: T:System.IO.Abstractions.IDirectoryInfo
+  parent: System.IO.Abstractions
+  isExternal: true
+  name: IDirectoryInfo
+  nameWithType: IDirectoryInfo
+  fullName: System.IO.Abstractions.IDirectoryInfo
+- uid: System.IO.Abstractions
+  commentId: N:System.IO.Abstractions
+  isExternal: true
+  name: System.IO.Abstractions
+  nameWithType: System.IO.Abstractions
+  fullName: System.IO.Abstractions
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+  - name: .
+  - uid: System.IO
+    name: IO
+    isExternal: true
+  - name: .
+  - uid: System.IO.Abstractions
+    name: Abstractions
+    isExternal: true
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+  - name: .
+  - uid: System.IO
+    name: IO
+    isExternal: true
+  - name: .
+  - uid: System.IO.Abstractions
+    name: Abstractions
+    isExternal: true
+- uid: GitAbstraction.GitRepository
+  commentId: T:GitAbstraction.GitRepository
+  parent: GitAbstraction
+  href: GitAbstraction.GitRepository.html
+  name: GitRepository
+  nameWithType: GitRepository
+  fullName: GitAbstraction.GitRepository
+- uid: GitAbstraction.GitRepository.GetInstance*
+  commentId: Overload:GitAbstraction.GitRepository.GetInstance
+  href: GitAbstraction.GitRepository.html#GitAbstraction_GitRepository_GetInstance_System_String_System_String_System_Uri_System_String_
+  name: GetInstance
+  nameWithType: GitRepository.GetInstance
+  fullName: GitAbstraction.GitRepository.GetInstance
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Uri
+  commentId: T:System.Uri
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uri
+  name: Uri
+  nameWithType: Uri
+  fullName: System.Uri
+- uid: ErrorOr.ErrorOr`1
+  commentId: T:ErrorOr.ErrorOr`1
+  isExternal: true
+  name: ErrorOr<TValue>
+  nameWithType: ErrorOr<TValue>
+  fullName: ErrorOr.ErrorOr<TValue>
+  nameWithType.vb: ErrorOr(Of TValue)
+  fullName.vb: ErrorOr.ErrorOr(Of TValue)
+  name.vb: ErrorOr(Of TValue)
+  spec.csharp:
+  - uid: ErrorOr.ErrorOr`1
+    name: ErrorOr
+    isExternal: true
+  - name: <
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: ErrorOr.ErrorOr`1
+    name: ErrorOr
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TValue
+  - name: )
+- uid: GitAbstraction.GitRepository.Clone*
+  commentId: Overload:GitAbstraction.GitRepository.Clone
+  href: GitAbstraction.GitRepository.html#GitAbstraction_GitRepository_Clone
+  name: Clone
+  nameWithType: GitRepository.Clone
+  fullName: GitAbstraction.GitRepository.Clone
+- uid: ErrorOr.ErrorOr{System.String}
+  commentId: T:ErrorOr.ErrorOr{System.String}
+  parent: ErrorOr
+  definition: ErrorOr.ErrorOr`1
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: ErrorOr<string>
+  nameWithType: ErrorOr<string>
+  fullName: ErrorOr.ErrorOr<string>
+  nameWithType.vb: ErrorOr(Of String)
+  fullName.vb: ErrorOr.ErrorOr(Of String)
+  name.vb: ErrorOr(Of String)
+  spec.csharp:
+  - uid: ErrorOr.ErrorOr`1
+    name: ErrorOr
+    isExternal: true
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  spec.vb:
+  - uid: ErrorOr.ErrorOr`1
+    name: ErrorOr
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: ErrorOr
+  commentId: N:ErrorOr
+  isExternal: true
+  name: ErrorOr
+  nameWithType: ErrorOr
+  fullName: ErrorOr
+- uid: GitAbstraction.GitRepository.Dispose*
+  commentId: Overload:GitAbstraction.GitRepository.Dispose
+  href: GitAbstraction.GitRepository.html#GitAbstraction_GitRepository_Dispose
+  name: Dispose
+  nameWithType: GitRepository.Dispose
+  fullName: GitAbstraction.GitRepository.Dispose
+- uid: System.IDisposable.Dispose
+  commentId: M:System.IDisposable.Dispose
+  parent: System.IDisposable
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  name: Dispose()
+  nameWithType: IDisposable.Dispose()
+  fullName: System.IDisposable.Dispose()
+  spec.csharp:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )
+- uid: GitAbstraction.GitRepository.ListLocalBranches*
+  commentId: Overload:GitAbstraction.GitRepository.ListLocalBranches
+  href: GitAbstraction.GitRepository.html#GitAbstraction_GitRepository_ListLocalBranches
+  name: ListLocalBranches
+  nameWithType: GitRepository.ListLocalBranches
+  fullName: GitAbstraction.GitRepository.ListLocalBranches
+- uid: ErrorOr.ErrorOr{System.Collections.Generic.IEnumerable{LibGit2Sharp.Branch}}
+  commentId: T:ErrorOr.ErrorOr{System.Collections.Generic.IEnumerable{LibGit2Sharp.Branch}}
+  parent: ErrorOr
+  definition: ErrorOr.ErrorOr`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: ErrorOr<IEnumerable<Branch>>
+  nameWithType: ErrorOr<IEnumerable<Branch>>
+  fullName: ErrorOr.ErrorOr<System.Collections.Generic.IEnumerable<LibGit2Sharp.Branch>>
+  nameWithType.vb: ErrorOr(Of IEnumerable(Of Branch))
+  fullName.vb: ErrorOr.ErrorOr(Of System.Collections.Generic.IEnumerable(Of LibGit2Sharp.Branch))
+  name.vb: ErrorOr(Of IEnumerable(Of Branch))
+  spec.csharp:
+  - uid: ErrorOr.ErrorOr`1
+    name: ErrorOr
+    isExternal: true
+  - name: <
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: LibGit2Sharp.Branch
+    name: Branch
+    isExternal: true
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: ErrorOr.ErrorOr`1
+    name: ErrorOr
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: LibGit2Sharp.Branch
+    name: Branch
+    isExternal: true
+  - name: )
+  - name: )
+- uid: GitAbstraction.GitRepository.Pull*
+  commentId: Overload:GitAbstraction.GitRepository.Pull
+  href: GitAbstraction.GitRepository.html#GitAbstraction_GitRepository_Pull
+  name: Pull
+  nameWithType: GitRepository.Pull
+  fullName: GitAbstraction.GitRepository.Pull
+- uid: ErrorOr.ErrorOr{LibGit2Sharp.MergeResult}
+  commentId: T:ErrorOr.ErrorOr{LibGit2Sharp.MergeResult}
+  parent: ErrorOr
+  definition: ErrorOr.ErrorOr`1
+  name: ErrorOr<MergeResult>
+  nameWithType: ErrorOr<MergeResult>
+  fullName: ErrorOr.ErrorOr<LibGit2Sharp.MergeResult>
+  nameWithType.vb: ErrorOr(Of MergeResult)
+  fullName.vb: ErrorOr.ErrorOr(Of LibGit2Sharp.MergeResult)
+  name.vb: ErrorOr(Of MergeResult)
+  spec.csharp:
+  - uid: ErrorOr.ErrorOr`1
+    name: ErrorOr
+    isExternal: true
+  - name: <
+  - uid: LibGit2Sharp.MergeResult
+    name: MergeResult
+    isExternal: true
+  - name: '>'
+  spec.vb:
+  - uid: ErrorOr.ErrorOr`1
+    name: ErrorOr
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: LibGit2Sharp.MergeResult
+    name: MergeResult
+    isExternal: true
+  - name: )
+- uid: GitAbstraction.GitRepository.Push*
+  commentId: Overload:GitAbstraction.GitRepository.Push
+  href: GitAbstraction.GitRepository.html#GitAbstraction_GitRepository_Push_System_String_
+  name: Push
+  nameWithType: GitRepository.Push
+  fullName: GitAbstraction.GitRepository.Push
+- uid: ErrorOr.ErrorOr{ErrorOr.Success}
+  commentId: T:ErrorOr.ErrorOr{ErrorOr.Success}
+  parent: ErrorOr
+  definition: ErrorOr.ErrorOr`1
+  name: ErrorOr<Success>
+  nameWithType: ErrorOr<Success>
+  fullName: ErrorOr.ErrorOr<ErrorOr.Success>
+  nameWithType.vb: ErrorOr(Of Success)
+  fullName.vb: ErrorOr.ErrorOr(Of ErrorOr.Success)
+  name.vb: ErrorOr(Of Success)
+  spec.csharp:
+  - uid: ErrorOr.ErrorOr`1
+    name: ErrorOr
+    isExternal: true
+  - name: <
+  - uid: ErrorOr.Success
+    name: Success
+    isExternal: true
+  - name: '>'
+  spec.vb:
+  - uid: ErrorOr.ErrorOr`1
+    name: ErrorOr
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: ErrorOr.Success
+    name: Success
+    isExternal: true
+  - name: )
+- uid: LibGit2Sharp.Branch
+  commentId: T:LibGit2Sharp.Branch
+  parent: LibGit2Sharp
+  isExternal: true
+  name: Branch
+  nameWithType: Branch
+  fullName: LibGit2Sharp.Branch
+- uid: LibGit2Sharp
+  commentId: N:LibGit2Sharp
+  isExternal: true
+  name: LibGit2Sharp
+  nameWithType: LibGit2Sharp
+  fullName: LibGit2Sharp
+- uid: GitAbstraction.GitRepository.CheckoutBranch*
+  commentId: Overload:GitAbstraction.GitRepository.CheckoutBranch
+  href: GitAbstraction.GitRepository.html#GitAbstraction_GitRepository_CheckoutBranch_System_String_
+  name: CheckoutBranch
+  nameWithType: GitRepository.CheckoutBranch
+  fullName: GitAbstraction.GitRepository.CheckoutBranch
+- uid: GitAbstraction.GitRepository.AddAll*
+  commentId: Overload:GitAbstraction.GitRepository.AddAll
+  href: GitAbstraction.GitRepository.html#GitAbstraction_GitRepository_AddAll
+  name: AddAll
+  nameWithType: GitRepository.AddAll
+  fullName: GitAbstraction.GitRepository.AddAll
+- uid: GitAbstraction.GitRepository.AddFile*
+  commentId: Overload:GitAbstraction.GitRepository.AddFile
+  href: GitAbstraction.GitRepository.html#GitAbstraction_GitRepository_AddFile_System_String_
+  name: AddFile
+  nameWithType: GitRepository.AddFile
+  fullName: GitAbstraction.GitRepository.AddFile
+- uid: GitAbstraction.GitRepository.Commit(System.String,System.String,System.String)
+  commentId: M:GitAbstraction.GitRepository.Commit(System.String,System.String,System.String)
+  isExternal: true
+  href: GitAbstraction.GitRepository.html#GitAbstraction_GitRepository_Commit_System_String_System_String_System_String_
+  name: Commit(string, string, string)
+  nameWithType: GitRepository.Commit(string, string, string)
+  fullName: GitAbstraction.GitRepository.Commit(string, string, string)
+  nameWithType.vb: GitRepository.Commit(String, String, String)
+  fullName.vb: GitAbstraction.GitRepository.Commit(String, String, String)
+  name.vb: Commit(String, String, String)
+  spec.csharp:
+  - uid: GitAbstraction.GitRepository.Commit(System.String,System.String,System.String)
+    name: Commit
+    href: GitAbstraction.GitRepository.html#GitAbstraction_GitRepository_Commit_System_String_System_String_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: GitAbstraction.GitRepository.Commit(System.String,System.String,System.String)
+    name: Commit
+    href: GitAbstraction.GitRepository.html#GitAbstraction_GitRepository_Commit_System_String_System_String_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: GitAbstraction.GitRepository.Commit*
+  commentId: Overload:GitAbstraction.GitRepository.Commit
+  href: GitAbstraction.GitRepository.html#GitAbstraction_GitRepository_Commit_System_String_System_String_System_String_
+  name: Commit
+  nameWithType: GitRepository.Commit
+  fullName: GitAbstraction.GitRepository.Commit
+- uid: ErrorOr.ErrorOr{LibGit2Sharp.Commit}
+  commentId: T:ErrorOr.ErrorOr{LibGit2Sharp.Commit}
+  parent: ErrorOr
+  definition: ErrorOr.ErrorOr`1
+  name: ErrorOr<Commit>
+  nameWithType: ErrorOr<Commit>
+  fullName: ErrorOr.ErrorOr<LibGit2Sharp.Commit>
+  nameWithType.vb: ErrorOr(Of Commit)
+  fullName.vb: ErrorOr.ErrorOr(Of LibGit2Sharp.Commit)
+  name.vb: ErrorOr(Of Commit)
+  spec.csharp:
+  - uid: ErrorOr.ErrorOr`1
+    name: ErrorOr
+    isExternal: true
+  - name: <
+  - uid: LibGit2Sharp.Commit
+    name: Commit
+    isExternal: true
+  - name: '>'
+  spec.vb:
+  - uid: ErrorOr.ErrorOr`1
+    name: ErrorOr
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: LibGit2Sharp.Commit
+    name: Commit
+    isExternal: true
+  - name: )
+- uid: GitAbstraction.GitRepository.GetCommits*
+  commentId: Overload:GitAbstraction.GitRepository.GetCommits
+  href: GitAbstraction.GitRepository.html#GitAbstraction_GitRepository_GetCommits
+  name: GetCommits
+  nameWithType: GitRepository.GetCommits
+  fullName: GitAbstraction.GitRepository.GetCommits
+- uid: ErrorOr.ErrorOr{System.Collections.Generic.IEnumerable{LibGit2Sharp.Commit}}
+  commentId: T:ErrorOr.ErrorOr{System.Collections.Generic.IEnumerable{LibGit2Sharp.Commit}}
+  parent: ErrorOr
+  definition: ErrorOr.ErrorOr`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: ErrorOr<IEnumerable<Commit>>
+  nameWithType: ErrorOr<IEnumerable<Commit>>
+  fullName: ErrorOr.ErrorOr<System.Collections.Generic.IEnumerable<LibGit2Sharp.Commit>>
+  nameWithType.vb: ErrorOr(Of IEnumerable(Of Commit))
+  fullName.vb: ErrorOr.ErrorOr(Of System.Collections.Generic.IEnumerable(Of LibGit2Sharp.Commit))
+  name.vb: ErrorOr(Of IEnumerable(Of Commit))
+  spec.csharp:
+  - uid: ErrorOr.ErrorOr`1
+    name: ErrorOr
+    isExternal: true
+  - name: <
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: LibGit2Sharp.Commit
+    name: Commit
+    isExternal: true
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: ErrorOr.ErrorOr`1
+    name: ErrorOr
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: LibGit2Sharp.Commit
+    name: Commit
+    isExternal: true
+  - name: )
+  - name: )
+- uid: GitAbstraction.GitRepository.CreateBranch*
+  commentId: Overload:GitAbstraction.GitRepository.CreateBranch
+  href: GitAbstraction.GitRepository.html#GitAbstraction_GitRepository_CreateBranch_System_String_
+  name: CreateBranch
+  nameWithType: GitRepository.CreateBranch
+  fullName: GitAbstraction.GitRepository.CreateBranch
+- uid: ErrorOr.ErrorOr{LibGit2Sharp.Branch}
+  commentId: T:ErrorOr.ErrorOr{LibGit2Sharp.Branch}
+  parent: ErrorOr
+  definition: ErrorOr.ErrorOr`1
+  name: ErrorOr<Branch>
+  nameWithType: ErrorOr<Branch>
+  fullName: ErrorOr.ErrorOr<LibGit2Sharp.Branch>
+  nameWithType.vb: ErrorOr(Of Branch)
+  fullName.vb: ErrorOr.ErrorOr(Of LibGit2Sharp.Branch)
+  name.vb: ErrorOr(Of Branch)
+  spec.csharp:
+  - uid: ErrorOr.ErrorOr`1
+    name: ErrorOr
+    isExternal: true
+  - name: <
+  - uid: LibGit2Sharp.Branch
+    name: Branch
+    isExternal: true
+  - name: '>'
+  spec.vb:
+  - uid: ErrorOr.ErrorOr`1
+    name: ErrorOr
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: LibGit2Sharp.Branch
+    name: Branch
+    isExternal: true
+  - name: )
+- uid: GitAbstraction.GitRepository.PublishBranch*
+  commentId: Overload:GitAbstraction.GitRepository.PublishBranch
+  href: GitAbstraction.GitRepository.html#GitAbstraction_GitRepository_PublishBranch_LibGit2Sharp_Branch_
+  name: PublishBranch
+  nameWithType: GitRepository.PublishBranch
+  fullName: GitAbstraction.GitRepository.PublishBranch
+- uid: GitAbstraction.GitRepository.CreateBranchAndPublish*
+  commentId: Overload:GitAbstraction.GitRepository.CreateBranchAndPublish
+  href: GitAbstraction.GitRepository.html#GitAbstraction_GitRepository_CreateBranchAndPublish_System_String_
+  name: CreateBranchAndPublish
+  nameWithType: GitRepository.CreateBranchAndPublish
+  fullName: GitAbstraction.GitRepository.CreateBranchAndPublish
+- uid: GitAbstraction.GitRepository.DeleteBranch*
+  commentId: Overload:GitAbstraction.GitRepository.DeleteBranch
+  href: GitAbstraction.GitRepository.html#GitAbstraction_GitRepository_DeleteBranch_System_String_
+  name: DeleteBranch
+  nameWithType: GitRepository.DeleteBranch
+  fullName: GitAbstraction.GitRepository.DeleteBranch
+- uid: GitAbstraction.GitRepository.Finalize*
+  commentId: Overload:GitAbstraction.GitRepository.Finalize
+  href: GitAbstraction.GitRepository.html#GitAbstraction_GitRepository_Finalize
+  name: ~GitRepository
+  nameWithType: GitRepository.~GitRepository
+  fullName: GitAbstraction.GitRepository.~GitRepository
+  spec.csharp:
+  - name: "~"
+  - uid: GitAbstraction.GitRepository.Finalize*
+    name: GitRepository
+    href: GitAbstraction.GitRepository.html#GitAbstraction_GitRepository_Finalize

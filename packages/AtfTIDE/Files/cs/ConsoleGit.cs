@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Text;
+using Common.Logging;
 using ErrorOr;
 using Terrasoft.Core.Factories;
 
@@ -160,9 +161,26 @@ namespace AtfTIDE {
 		/// <param name="startInfo">The process start information.</param>
 		/// <param name="envVariable">The environment variables to set.</param>
 		private static void ConfigureEnvironmentVariables(ProcessStartInfo startInfo, IDictionary<string, string> envVariable){
+
+#if DEBUG			
+			var logger = LogManager.GetLogger("TIDE");
+			StringBuilder sb = new StringBuilder();
+#endif
+			
 			foreach (string variable in envVariable.Keys) {
 				startInfo.EnvironmentVariables.Add(variable, envVariable[variable]);
+			
+#if DEBUG
+				sb
+					.Append(variable)
+					.Append("=")
+					.Append(envVariable[variable])
+					.Append(";");
+#endif
 			}
+#if DEBUG			
+			logger.InfoFormat("StartArgs: {0}",sb.ToString());
+#endif
 		}
 
 		/// <summary>
