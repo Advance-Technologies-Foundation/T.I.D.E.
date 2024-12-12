@@ -1,5 +1,6 @@
 ﻿using System.IO.Abstractions;
 using System.IO.Abstractions.TestingHelpers;
+using System.Reflection.PortableExecutable;
 using FluentAssertions;
 
 namespace ArchiveUtilities.Tests;
@@ -126,6 +127,46 @@ public class ArchiveUtilitiesTests {
 			var mockContent = await _fileSystemMock.File.ReadAllBytesAsync(fileInMockFileSystem, cancellationToken: CancellationToken.None);
 			mockContent.Should().BeEquivalentTo(realContent);
 		}
+	}
+	
+	
+	[TestCase("ZipFiles\\MrktApolloAppFolder")]
+	public async Task CompressDirectoryToGzFile(string sourceDirectory){
+		
+		var fullPath = Path.GetFullPath(sourceDirectory);
+		var srcDir = CopyFolderFromRealFsToMockFs(fullPath);
+		
+		_sut = new ArchiveUtilities(_fileSystemMock);
+		string destFile = $"{DriveName}:\\MrktApolloApp.gz";
+		await _sut.CompressDirectoryToGzFile(srcDir, destFile);
+		
+		_fileSystemMock.File.Exists(destFile).Should().BeTrue();
+		var fileContent = await _fileSystemMock.File.ReadAllBytesAsync(destFile);
+		
+		await File.WriteAllBytesAsync("C:\\MrktApolloApp_test.gz", fileContent);
+		
+		
+	}
+	
+	private string CopyFolderFromRealFsToMockFs(string realOsDirectoryPath){
+		string destDirInMockFs = Path.Join($"{DriveName}:", "Source");
+		_fileSystemMock.Directory.CreateDirectory(destDirInMockFs);
+		Directory
+			.GetFiles(realOsDirectoryPath, "*.*", SearchOption.AllDirectories)
+			.ToList()
+			.ForEach(async file => {
+				string relativePath = file.Replace(realOsDirectoryPath, "");
+				string fullPath = Path.Join(destDirInMockFs, relativePath);
+				var dirName = Path.GetDirectoryName(fullPath);
+				if(!_fileSystemMock.Directory.Exists(dirName)){
+					_fileSystemMock.Directory.CreateDirectory(dirName);
+				}
+				byte[] content = await File.ReadAllBytesAsync(file, CancellationToken.None);
+				FileSystemStream fileStream = _fileSystemMock.File.Create(fullPath);
+				await fileStream.WriteAsync(content, 0, content.Length, CancellationToken.None);
+				await fileStream.FlushAsync();
+			});
+		return destDirInMockFs;
 	}
 	
 }

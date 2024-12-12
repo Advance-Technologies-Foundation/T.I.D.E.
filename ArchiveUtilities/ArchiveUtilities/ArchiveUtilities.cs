@@ -28,6 +28,8 @@ public interface IArchiveUtilities {
 	
 	Task UnpackGzFile(string sourceArchiveFileName, string destinationDirectoryName, bool overwrite=true);
 
+	Task CompressDirectoryToGzFile(string sourceDirectory, string destinationFileName, bool overwrite=true);
+	
 	#endregion
 
 }
@@ -145,12 +147,8 @@ public class ArchiveUtilities(IFileSystem fileSystem) : IArchiveUtilities {
 	/// </example>
 	public async Task UnpackZipFileAsync(string sourceArchiveFileName, string destinationDirectoryName, bool overwrite){
 		// Input validation
-		if (string.IsNullOrEmpty(sourceArchiveFileName)) {
-			throw new ArgumentNullException(nameof(sourceArchiveFileName));
-		}
-		if (string.IsNullOrEmpty(destinationDirectoryName)) {
-			throw new ArgumentNullException(nameof(destinationDirectoryName));
-		}
+		ArgumentException.ThrowIfNullOrWhiteSpace(sourceArchiveFileName, nameof(sourceArchiveFileName));
+		ArgumentException.ThrowIfNullOrWhiteSpace(destinationDirectoryName, nameof(destinationDirectoryName));
 
 		// Ensure source file exists
 		if (!fileSystem.File.Exists(sourceArchiveFileName)) {
@@ -217,9 +215,11 @@ public class ArchiveUtilities(IFileSystem fileSystem) : IArchiveUtilities {
 			throw new IOException($"Failed to unpack archive '{sourceArchiveFileName}': {ex.Message}", ex);
 		}
 	}
-
 	
 	public async Task UnpackGzFile(string sourceArchiveFileName, string destinationDirectoryName, bool overwrite=true){
+		// Input validation
+		ArgumentException.ThrowIfNullOrWhiteSpace(sourceArchiveFileName, nameof(sourceArchiveFileName));
+		ArgumentException.ThrowIfNullOrWhiteSpace(destinationDirectoryName, nameof(destinationDirectoryName));
 		
 		if(!fileSystem.Directory.Exists(destinationDirectoryName)){
 			fileSystem.Directory.CreateDirectory(destinationDirectoryName);
@@ -230,7 +230,6 @@ public class ArchiveUtilities(IFileSystem fileSystem) : IArchiveUtilities {
 		MemoryStream newStream = new ();
 		await zipStream.CopyToAsync(newStream); //Unpacking happens here
 		fileStream.Close();
-		
 		newStream.Seek(0, SeekOrigin.Begin);
 		
 		while (newStream.Position != newStream.Length) {
@@ -249,6 +248,32 @@ public class ArchiveUtilities(IFileSystem fileSystem) : IArchiveUtilities {
 			await fs.FlushAsync(CancellationToken.None);
 			fs.Close();
 		}
+	}
+	
+	public async Task CompressDirectoryToGzFile(string sourceDirectory, string destinationFileName, bool overwrite=true){
+		// Input validation
+		ArgumentException.ThrowIfNullOrWhiteSpace(sourceDirectory, nameof(sourceDirectory));
+		ArgumentException.ThrowIfNullOrWhiteSpace(destinationFileName, nameof(destinationFileName));
+		
+		await using FileSystemStream fileStream = fileSystem.File.Create(destinationFileName);
+		await using GZipStream zipStream = new (fileStream, CompressionMode.Compress, false);
+		
+		string[] allFiles = fileSystem.Directory.GetFiles(sourceDirectory, "*.*", SearchOption.AllDirectories);
+		foreach (string file in allFiles) {
+			string relativeFilePath  = Path.GetRelativePath(sourceDirectory, file);
+			int fileNameLength = relativeFilePath.Length;
+			byte[] fileNameLengthInBytes = BitConverter.GetBytes(fileNameLength);
+			byte[] fileNameInBytes = Encoding.Unicode.GetBytes(relativeFilePath); 
+			byte[] content = await fileSystem.File.ReadAllBytesAsync(file, CancellationToken.None);
+			byte[] contentLength = BitConverter.GetBytes(content.Length);
+			var array = fileNameLengthInBytes
+				.Concat(fileNameInBytes)
+				.Concat(contentLength)
+				.Concat(content).ToArray();
+			await zipStream.WriteAsync(array, 0, array.Length);
+		}
+		await zipStream.FlushAsync();
+		zipStream.Close();
 	}
 	
 	private async Task<string> GetFileNameFromStreamAsync(MemoryStream stream){
