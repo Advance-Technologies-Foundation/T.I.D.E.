@@ -2,6 +2,7 @@
 using System.Security.Cryptography;
 using System.Text;
 using System.Text.Json;
+using ConsoleGit.Common;
 using ConsoleGit.Dto;
 using ErrorOr;
 using Microsoft.Extensions.Options;
@@ -111,39 +112,6 @@ public class DownloadPackagesCommand : ICommand {
 			throw;
 		}
 	}
-
-	private static T Retry<T>(Func<T> action, int retryCount){
-		for (int attempt = 0; attempt < retryCount; attempt++) {
-			try {
-				return action();
-			} catch {
-				if (attempt == retryCount - 1) {
-					throw;
-				}
-				Thread.Sleep(1000); // Wait for 1 second before retrying
-			}
-		}
-		throw new InvalidOperationException("Retry count exceeded");
-	}
-
-	private static ErrorOr<Success> Retry(Action action, int retryCount = 3){
-		for (int attempt = 0; attempt < retryCount; attempt++) {
-			try {
-				action();
-				return Result.Success;
-			} 
-			catch {
-				if (attempt == retryCount - 1) {
-					Error.Failure("RETRY_COUNT_EXCEEDED","Retry count exceeded");
-				}
-				Thread.Sleep(1000); // Wait for 1 second before retrying
-			}
-		}
-		return Error.Failure("RETRY_COUNT_EXCEEDED","Retry count exceeded");
-	}
-	
-	
-	
 	
 	/// <summary>
 	///  Extracts package names from workspace settings file.
@@ -186,7 +154,7 @@ public class DownloadPackagesCommand : ICommand {
 				Console.WriteLine($"Deleted {originalPackagePath}");
 #endif
 				BaseRepositoryCommand.GrantDeleteAccess(new DirectoryInfo(downloadedPackage), Environment.UserName);
-				ErrorOr<Success> copyResult =  Retry(() => CopyDirectory(downloadedPackage, originalPackagePath));
+				ErrorOr<Success> copyResult = CommonFunctions.Retry(() => CopyDirectory(downloadedPackage, originalPackagePath));
 				if(copyResult.IsError) {
 					return copyResult;
 				}
