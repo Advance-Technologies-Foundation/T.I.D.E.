@@ -235,11 +235,15 @@ namespace GitAbstraction {
 		/// <seealso href="https://github.com/libgit2/libgit2sharp/wiki/git-commit#make-a-commit-to-a-non-bare-repository">libgit2sharp Wiki git commit</seealso>
 		public ErrorOr<Commit> Commit(string name, string email, string message){
 			// Create the committer's signature and commit
+			
 			Signature author = new (name, email, DateTime.Now);
 
 			// Commit to the repository
 			//INVESTIGATE: We can potentially pass TIDE as committer
-			Commit commit = InitializedRepository.Commit(message, author, author);
+			
+			Commit commit = InitializedRepository.Commit(message, author, author, new CommitOptions {
+				PrettifyMessage = false
+			});
 			return commit;
 		}
 		

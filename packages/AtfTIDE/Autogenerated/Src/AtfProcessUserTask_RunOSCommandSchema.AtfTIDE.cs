@@ -20,6 +20,7 @@
 	[DesignModeProperty(Name = "IsError", Group = "", ValuesProvider = "ProcessSchemaParameterValueProvider", Editor="xtype=processschemaparametervalueedit;dataProvider=processschemaparametervalueprovider", ResourceManager = "ad6a7f037b144d0696c0bf1c01c1d8f8", CaptionResourceItem = "Parameters.IsError.Caption", DescriptionResourceItem = "Parameters.IsError.Caption", UseSolutionStorage = true)]
 	[DesignModeProperty(Name = "ErrorMessage", Group = "", ValuesProvider = "ProcessSchemaParameterValueProvider", Editor="xtype=processschemaparametervalueedit;dataProvider=processschemaparametervalueprovider", ResourceManager = "ad6a7f037b144d0696c0bf1c01c1d8f8", CaptionResourceItem = "Parameters.ErrorMessage.Caption", DescriptionResourceItem = "Parameters.ErrorMessage.Caption", UseSolutionStorage = true)]
 	[DesignModeProperty(Name = "WaitForExit", Group = "", ValuesProvider = "ProcessSchemaParameterValueProvider", Editor="xtype=processschemaparametervalueedit;dataProvider=processschemaparametervalueprovider", ResourceManager = "ad6a7f037b144d0696c0bf1c01c1d8f8", CaptionResourceItem = "Parameters.WaitForExit.Caption", DescriptionResourceItem = "Parameters.WaitForExit.Caption", UseSolutionStorage = true)]
+	[DesignModeProperty(Name = "TransformerName", Group = "", ValuesProvider = "ProcessSchemaParameterValueProvider", Editor="xtype=processschemaparametervalueedit;dataProvider=processschemaparametervalueprovider", ResourceManager = "ad6a7f037b144d0696c0bf1c01c1d8f8", CaptionResourceItem = "Parameters.TransformerName.Caption", DescriptionResourceItem = "Parameters.TransformerName.Caption", UseSolutionStorage = true)]
 	/// <exclude/>
 	public partial class AtfProcessUserTask_RunOSCommand : ProcessUserTask
 	{
@@ -65,6 +66,11 @@
 			set;
 		}
 
+		public virtual string TransformerName {
+			get;
+			set;
+		}
+
 		#endregion
 
 		#region Methods: Public
@@ -104,6 +110,11 @@
 			if (UseFlowEngineMode) {
 				if (!HasMapping("WaitForExit")) {
 					writer.WriteValue("WaitForExit", WaitForExit, false);
+				}
+			}
+			if (UseFlowEngineMode) {
+				if (!HasMapping("TransformerName")) {
+					writer.WriteValue("TransformerName", TransformerName, null);
 				}
 			}
 			writer.WriteFinishObject();
@@ -151,6 +162,12 @@
 						break;
 					}
 					WaitForExit = reader.GetBoolValue();
+				break;
+				case "TransformerName":
+					if (!UseFlowEngineMode) {
+						break;
+					}
+					TransformerName = reader.GetStringValue();
 				break;
 			}
 		}

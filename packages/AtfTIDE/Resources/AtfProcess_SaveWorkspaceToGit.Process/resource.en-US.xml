@@ -73,6 +73,27 @@
 			<Item Name="BaseElements.LinkEntityToProcessUserTask1.Parameters.EntityId.DisplayValue" Value="[#Repository#]" />
 			<Item Name="BaseElements.LinkEntityToProcessUserTask1.Parameters.EntitySchemaId.Caption" Value="Object schema" />
 			<Item Name="BaseElements.LinkEntityToProcessUserTask1.Parameters.EntitySchemaId.DisplayValue" Value="Repository" />
+			<Item Name="BaseElements.ReadDataUserTask1.Caption" Value="Read repository" />
+			<Item Name="BaseElements.ReadDataUserTask1.Parameters.AggregationColumnName.Caption" Value="Name of aggregate function column" />
+			<Item Name="BaseElements.ReadDataUserTask1.Parameters.CanReadUncommitedData.Caption" Value="Read uncommitted data" />
+			<Item Name="BaseElements.ReadDataUserTask1.Parameters.ConsiderTimeInFilter.Caption" Value="Consider time in the filter" />
+			<Item Name="BaseElements.ReadDataUserTask1.Parameters.ConsiderTimeInFilter.DisplayValue" Value="true" />
+			<Item Name="BaseElements.ReadDataUserTask1.Parameters.DataSourceFilters.Caption" Value="Data source of filters" />
+			<Item Name="BaseElements.ReadDataUserTask1.Parameters.EntityColumnMetaPathes.Caption" Value="Columns to read" />
+			<Item Name="BaseElements.ReadDataUserTask1.Parameters.FunctionType.Caption" Value="Aggregate function type" />
+			<Item Name="BaseElements.ReadDataUserTask1.Parameters.IgnoreDisplayValues.Caption" Value="Do not read displayed values of lookup columns" />
+			<Item Name="BaseElements.ReadDataUserTask1.Parameters.NumberOfRecords.Caption" Value="Number of records to read" />
+			<Item Name="BaseElements.ReadDataUserTask1.Parameters.OrderInfo.Caption" Value="Columns order" />
+			<Item Name="BaseElements.ReadDataUserTask1.Parameters.ReadSomeTopRecords.Caption" Value="Read first" />
+			<Item Name="BaseElements.ReadDataUserTask1.Parameters.ResultCompositeObjectList.Caption" Value="Collection of records" />
+			<Item Name="BaseElements.ReadDataUserTask1.Parameters.ResultCount.Caption" Value="Number of records" />
+			<Item Name="BaseElements.ReadDataUserTask1.Parameters.ResultDateTimeFunction.Caption" Value="Function result (Date/Time)" />
+			<Item Name="BaseElements.ReadDataUserTask1.Parameters.ResultEntity.Caption" Value="First item of resulting collection" />
+			<Item Name="BaseElements.ReadDataUserTask1.Parameters.ResultEntityCollection.Caption" Value="Resulting collection" />
+			<Item Name="BaseElements.ReadDataUserTask1.Parameters.ResultFloatFunction.Caption" Value="Function result (Decimal)" />
+			<Item Name="BaseElements.ReadDataUserTask1.Parameters.ResultIntegerFunction.Caption" Value="Function result (Integer)" />
+			<Item Name="BaseElements.ReadDataUserTask1.Parameters.ResultRowsCount.Caption" Value="Number of records read" />
+			<Item Name="BaseElements.ReadDataUserTask1.Parameters.ResultType.Caption" Value="Type of result" />
 			<Item Name="BaseElements.StartEvent1.Caption" Value="Start" />
 			<Item Name="BaseElements.UserTask1.Caption" Value="Clone Repository" />
 			<Item Name="BaseElements.UserTask1.Parameters.ErrorMessage.Caption" Value="Error message" />
@@ -101,12 +122,21 @@
 			<Item Name="BaseElements.UserTask4.Parameters.Output.Caption" Value="Output" />
 			<Item Name="BaseElements.UserTask4.Parameters.Repository.Caption" Value="Repository" />
 			<Item Name="BaseElements.UserTask4.Parameters.Repository.DisplayValue" Value="[#Repository#]" />
-			<Item Name="BaseElements.UserTask6.Caption" Value="Download packages" />
-			<Item Name="BaseElements.UserTask6.Parameters.ErrorMessage.Caption" Value="Error Message" />
-			<Item Name="BaseElements.UserTask6.Parameters.IsError.Caption" Value="Is Error" />
-			<Item Name="BaseElements.UserTask6.Parameters.Output.Caption" Value="Output" />
-			<Item Name="BaseElements.UserTask6.Parameters.Repository.Caption" Value="Repository" />
-			<Item Name="BaseElements.UserTask6.Parameters.Repository.DisplayValue" Value="[#Repository#]" />
+			<Item Name="BaseElements.UserTask5.Caption" Value="Clio restorew" />
+			<Item Name="BaseElements.UserTask5.Parameters.Arguments.Caption" Value="Arguments" />
+			<Item Name="BaseElements.UserTask5.Parameters.Arguments.DisplayValue" Value="&quot;restorew -l &quot;+[#Read repository.First item of resulting collection.Creatio Login#]+&quot; -p &quot;+[#Read repository.First item of resulting collection.Creatio Password#]" />
+			<Item Name="BaseElements.UserTask5.Parameters.ErrorMessage.Caption" Value="Error Message" />
+			<Item Name="BaseElements.UserTask5.Parameters.FileName.Caption" Value="File Name" />
+			<Item Name="BaseElements.UserTask5.Parameters.FileName.DisplayValue" Value="clio" />
+			<Item Name="BaseElements.UserTask5.Parameters.FileName.Value" Value="clio" />
+			<Item Name="BaseElements.UserTask5.Parameters.IsError.Caption" Value="Is Error" />
+			<Item Name="BaseElements.UserTask5.Parameters.TransformerName.Caption" Value="Transformer Name" />
+			<Item Name="BaseElements.UserTask5.Parameters.TransformerName.DisplayValue" Value="UrlAppender" />
+			<Item Name="BaseElements.UserTask5.Parameters.TransformerName.Value" Value="UrlAppender" />
+			<Item Name="BaseElements.UserTask5.Parameters.WaitForExit.Caption" Value="Wait For Exit" />
+			<Item Name="BaseElements.UserTask5.Parameters.WaitForExit.DisplayValue" Value="[#Boolean value.True#]" />
+			<Item Name="BaseElements.UserTask5.Parameters.WorkingDirectory.Caption" Value="WorkingDirectory" />
+			<Item Name="BaseElements.UserTask5.Parameters.WorkingDirectory.DisplayValue" Value="[#Clone Repository.Repository Folder Path#]" />
 			<Item Name="Caption" Value="Save Workspace to Git" />
 			<Item Name="Description" Value="Restores the current Creatio state and commits it back to the repository." />
 			<Item Name="LaneSets.LaneSet1.Caption" Value="LaneSet 1" />

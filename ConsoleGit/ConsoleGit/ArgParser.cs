@@ -17,7 +17,6 @@ public record CommandLineArgs {
 		CommitMessage = Environment.GetEnvironmentVariable($"TIDE_{nameof(CommitMessage)}") ?? "";
 		CommitAuthorName = Environment.GetEnvironmentVariable($"TIDE_{nameof(CommitAuthorName)}") ?? "";
 		CommitAuthorEmail = Environment.GetEnvironmentVariable($"TIDE_{nameof(CommitAuthorEmail)}") ?? "";
-
 		Uri.TryCreate(Environment.GetEnvironmentVariable($"TIDE_{nameof(CreatioUrl)}"), UriKind.Absolute,
 			out Uri? creatioUrl);
 		CreatioUrl = creatioUrl;
@@ -97,7 +96,7 @@ public record CommandLineArgs {
 		Debug.Assert(cookieContainer.Count >=4, "Missing required cookies");
 		return cookieContainer;
 	}
-
+	
 	#endregion
 
 }

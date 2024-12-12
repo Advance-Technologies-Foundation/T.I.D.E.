@@ -384,7 +384,7 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 					"labelPosition": "auto",
 					"control": "$PDS_AtfLogin_g255988",
 					"multiline": false,
-					"visible": false,
+					"visible": true,
 					"readonly": false,
 					"placeholder": "",
 					"tooltip": ""
@@ -408,7 +408,7 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 					"labelPosition": "auto",
 					"control": "$PDS_AtfPassword_rrf2i89",
 					"multiline": false,
-					"visible": false,
+					"visible": true,
 					"readonly": false,
 					"placeholder": "",
 					"tooltip": ""

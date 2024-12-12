@@ -1,7 +1,11 @@
 using System.Diagnostics;
 using System.IO;
+using System.Linq;
+using System.Reflection;
 using System.Text;
+using AtfTIDE;
 using ErrorOr;
+using Terrasoft.Core.Factories;
 
 namespace Terrasoft.Core.Process.Configuration
 {
@@ -35,11 +39,17 @@ namespace Terrasoft.Core.Process.Configuration
 			StringBuilder error = new StringBuilder();
 			
 			if(WorkingDirectory.IsNullOrEmpty()) {
-				
 				IsError = true;
 				ErrorMessage = "Working directory is not set";
 				return true;
 			}
+			
+			//TransformerName = UrlAppender, tag name
+			if(!string.IsNullOrWhiteSpace(TransformerName)) {
+				ITextTransformer transformer = ClassFactory.Get<ITextTransformer>(TransformerName);
+				Arguments = transformer.Transform(Arguments);
+			}
+			
 			
 			try {
 				ProcessStartInfo startInfo = new ProcessStartInfo {

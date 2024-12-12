@@ -77,6 +77,17 @@
           "L8": {},
           "L11": false,
           "L12": 0
+        },
+        {
+          "BL1": "Terrasoft.Core.Process.ProcessSchemaParameter",
+          "UId": "d1b004d6-49c1-be01-f8da-322f11b0f457",
+          "A2": "TransformerName",
+          "A3": "ad6a7f03-7b14-4d06-96c0-bf1c01c1d8f8",
+          "A4": "ad6a7f03-7b14-4d06-96c0-bf1c01c1d8f8",
+          "L1": "8b3f29bb-ea14-4ce5-a5c5-293a929b6ba2",
+          "L8": {},
+          "L11": false,
+          "L12": 0
         }
       ],
       "FK4": true,
