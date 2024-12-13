@@ -14,7 +14,7 @@
         {
           "BL1": "Terrasoft.Core.Process.ProcessSchemaParameter",
           "UId": "80c8f421-2841-45cb-9b1b-d7f347ad2ada",
-          "A2": "ProcessSchemaParameter1",
+          "A2": "Message",
           "A3": "8ba5afd0-7941-416d-807d-91def27b48e0",
           "A4": "8ba5afd0-7941-416d-807d-91def27b48e0",
           "L1": "c0f04627-4620-4bc0-84e5-9419dc8516b1",
@@ -104,7 +104,6 @@
           "GT4": "b5936328-09b2-45fd-b763-48d37c265644",
           "GT1": {
             "GS1": 1,
-            "GS2": "{\"$type\":\"System.Collections.Generic.List`1[[System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[System.Object, mscorlib]], mscorlib]], mscorlib\",\"$values\":[{\"$type\":\"System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[System.Object, mscorlib]], mscorlib\",\"Id\":\"9a2f495b-0083-48bc-8d14-0a2b3d99a5ed\",\"isEnabled\":true,\"performValidation\":true,\"caption\":\"OK\",\"name\":\"Button1\",\"style\":\"default\",\"generateSignal\":\"\"}]}",
             "GS5": "8ba5afd0-7941-416d-807d-91def27b48e0"
           }
         },
@@ -120,7 +119,7 @@
           "GT4": "b5936328-09b2-45fd-b763-48d37c265644",
           "GT1": {
             "GS1": 1,
-            "GS2": "{\"$type\":\"System.Collections.Generic.List`1[[System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[System.Object, mscorlib]], mscorlib]], mscorlib\",\"$values\":[{\"$type\":\"System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[System.Object, mscorlib]], mscorlib\",\"Id\":\"bfaa2954-1e78-4867-8fb9-ff6feaf15b3d\",\"controlEditType\":\"1\",\"caption\":\"Title\",\"name\":\"Tiitle\",\"text\":\"\",\"isMultiline\":true,\"isRequired\":false,\"canBeMinimized\":true,\"minimized\":false,\"dataSource\":null,\"dataFilter\":\"\",\"controlDataValueType\":\"10\",\"dateTimeFormat\":\"7\"},{\"$type\":\"System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[System.Object, mscorlib]], mscorlib\",\"Id\":\"6f108fa6-c324-4d18-b9ff-9efe2282ee1c\",\"controlEditType\":\"1\",\"caption\":\"Message\",\"name\":\"Message\",\"text\":\"\",\"isMultiline\":true,\"isRequired\":false,\"canBeMinimized\":true,\"minimized\":false,\"dataSource\":null,\"dataFilter\":\"\",\"controlDataValueType\":\"10\",\"dateTimeFormat\":\"7\"}]}",
+            "GS2": "{\"$type\":\"System.Collections.Generic.List`1[[System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[System.Object, mscorlib]], mscorlib]], mscorlib\",\"$values\":[{\"$type\":\"System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[System.Object, mscorlib]], mscorlib\",\"Id\":\"6f108fa6-c324-4d18-b9ff-9efe2282ee1c\",\"controlEditType\":\"1\",\"caption\":\"Message\",\"name\":\"Message\",\"text\":\"\",\"isMultiline\":true,\"isRequired\":false,\"canBeMinimized\":true,\"minimized\":false,\"dataSource\":null,\"dataFilter\":\"\",\"controlDataValueType\":\"10\",\"dateTimeFormat\":\"7\"}]}",
             "GS5": "8ba5afd0-7941-416d-807d-91def27b48e0"
           }
         },
@@ -604,6 +603,7 @@
           "A5": "57902d1e-ea0c-4991-b367-992c12d68fb2",
           "BL7": "11a47caf-a0d5-41fa-a274-a0b11f77447a",
           "BL8": "8ba5afd0-7941-416d-807d-91def27b48e0",
+          "BM1": 0,
           "BM4": [
             {
               "BL1": "Terrasoft.Core.Process.ProcessSchemaLane",
@@ -638,7 +638,8 @@
           "BL8": "8ba5afd0-7941-416d-807d-91def27b48e0",
           "BN2": "31;31",
           "BO3": true,
-          "FC1": []
+          "FC1": [],
+          "ED1": false
         },
         {
           "BL1": "Terrasoft.Core.Process.ProcessSchemaTerminateEvent",
@@ -1194,20 +1195,6 @@
               "L8": {
                 "GS1": 3,
                 "GS2": "[#[IsOwnerSchema:false].[IsSchema:false].[Parameter:{80c8f421-2841-45cb-9b1b-d7f347ad2ada}]#]",
-                "GS5": "8ba5afd0-7941-416d-807d-91def27b48e0"
-              }
-            },
-            {
-              "BL1": "Terrasoft.Core.Process.ProcessSchemaParameter",
-              "UId": "08742e06-00c6-4177-bac8-2f652444f2ff",
-              "A2": "Tiitle",
-              "A3": "8ba5afd0-7941-416d-807d-91def27b48e0",
-              "A4": "8ba5afd0-7941-416d-807d-91def27b48e0",
-              "IL2": "72b2caef-655a-43fa-938e-e97930c3f0e6",
-              "L1": "8b3f29bb-ea14-4ce5-a5c5-293a929b6ba2",
-              "L8": {
-                "GS1": 3,
-                "GS2": "[#[IsOwnerSchema:false].[IsSchema:false].[Parameter:{d7320f0a-7545-4926-9be7-6b1039172a5a}]#]",
                 "GS5": "8ba5afd0-7941-416d-807d-91def27b48e0"
               }
             }

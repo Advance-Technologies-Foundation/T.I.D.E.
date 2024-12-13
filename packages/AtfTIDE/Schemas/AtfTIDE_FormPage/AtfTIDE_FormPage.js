@@ -3,6 +3,45 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 		viewConfigDiff: /**SCHEMA_VIEW_CONFIG_DIFF*/[
 			{
 				"operation": "merge",
+				"name": "CardToggleContainer",
+				"values": {
+					"visible": true,
+					"color": "transparent",
+					"borderRadius": "none",
+					"padding": {
+						"top": "none",
+						"right": "none",
+						"bottom": "none",
+						"left": "none"
+					},
+					"alignItems": "stretch",
+					"direction": "row",
+					"gap": "small",
+					"wrap": "nowrap"
+				}
+			},
+			{
+				"operation": "remove",
+				"name": "CardButtonToggleGroup"
+			},
+			{
+				"operation": "merge",
+				"name": "CardContentWrapper",
+				"values": {
+					"padding": {
+						"left": "small",
+						"right": "small",
+						"top": "none",
+						"bottom": "none"
+					},
+					"visible": true,
+					"color": "transparent",
+					"borderRadius": "none",
+					"alignItems": "stretch"
+				}
+			},
+			{
+				"operation": "merge",
 				"name": "SideContainer",
 				"values": {
 					"visible": true,
@@ -49,16 +88,8 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 				}
 			},
 			{
-				"operation": "merge",
-				"name": "CardToggleTabPanel",
-				"values": {
-					"styleType": "default",
-					"bodyBackgroundColor": "primary-contrast-500",
-					"selectedTabTitleColor": "auto",
-					"tabTitleColor": "auto",
-					"underlineSelectedTabColor": "auto",
-					"headerBackgroundColor": "auto"
-				}
+				"operation": "remove",
+				"name": "CardToggleTabPanel"
 			},
 			{
 				"operation": "remove",
@@ -77,19 +108,28 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 				"name": "FeedTabContainerHeaderLabel"
 			},
 			{
-				"operation": "merge",
-				"name": "AttachmentList",
-				"values": {
-					"columns": [
-						{
-							"id": "b57b6295-b3e4-4c6e-8d8b-ae654b95c291",
-							"code": "AttachmentListDS_Name",
-							"caption": "#ResourceString(AttachmentListDS_Name)#",
-							"dataValueType": 28,
-							"width": 200
-						}
-					]
-				}
+				"operation": "remove",
+				"name": "AttachmentsTabContainer"
+			},
+			{
+				"operation": "remove",
+				"name": "AttachmentList"
+			},
+			{
+				"operation": "remove",
+				"name": "AttachmentsTabContainerHeaderContainer"
+			},
+			{
+				"operation": "remove",
+				"name": "AttachmentsTabContainerHeaderLabel"
+			},
+			{
+				"operation": "remove",
+				"name": "AttachmentAddButton"
+			},
+			{
+				"operation": "remove",
+				"name": "AttachmentRefreshButton"
 			},
 			{
 				"operation": "insert",
@@ -126,6 +166,91 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 				"parentName": "MainHeader",
 				"propertyName": "items",
 				"index": 2
+			},
+			{
+				"operation": "insert",
+				"name": "GridContainer_4s9rh1f",
+				"values": {
+					"type": "crt.GridContainer",
+					"columns": [
+						"minmax(32px, 1fr)",
+						"minmax(32px, 1fr)"
+					],
+					"rows": "minmax(max-content, 32px)",
+					"gap": {
+						"columnGap": "large",
+						"rowGap": "none"
+					},
+					"items": [],
+					"fitContent": true,
+					"visible": true,
+					"color": "transparent",
+					"borderRadius": "none",
+					"padding": {
+						"top": "none",
+						"right": "none",
+						"bottom": "none",
+						"left": "none"
+					},
+					"alignItems": "stretch"
+				},
+				"parentName": "MainHeaderBottom",
+				"propertyName": "items",
+				"index": 1
+			},
+			{
+				"operation": "insert",
+				"name": "Button_SaveToGit",
+				"values": {
+					"type": "crt.Button",
+					"caption": "#ResourceString(Button_SaveToGit_caption)#",
+					"color": "accent",
+					"disabled": false,
+					"size": "large",
+					"iconPosition": "left-icon",
+					"visible": true,
+					"icon": "import-data-button-icon",
+					"clicked": {
+						"request": "atf.CaptureClioArgs",
+						"params": {
+							"processName": "AtfProcess_SaveWorkspaceToGit",
+							"processRunType": "ForTheSelectedPage",
+							"showNotification": true,
+							"recordIdProcessParameterName": "Repository"
+						}
+					},
+					"clickMode": "default"
+				},
+				"parentName": "CardToggleContainer",
+				"propertyName": "items",
+				"index": 0
+			},
+			{
+				"operation": "insert",
+				"name": "Button_LOADFROMGIT",
+				"values": {
+					"type": "crt.Button",
+					"caption": "#ResourceString(Button_LOADFROMGIT_caption)#",
+					"color": "primary",
+					"disabled": false,
+					"size": "large",
+					"iconPosition": "left-icon",
+					"visible": true,
+					"icon": "export-data-button-icon",
+					"clicked": {
+						"request": "atf.CaptureClioArgs",
+						"params": {
+							"processName": "AtfProcess_LoadWorkspaceFromGit",
+							"processRunType": "ForTheSelectedPage",
+							"showNotification": true,
+							"recordIdProcessParameterName": "Repository"
+						}
+					},
+					"clickMode": "default"
+				},
+				"parentName": "CardToggleContainer",
+				"propertyName": "items",
+				"index": 1
 			},
 			{
 				"operation": "insert",
@@ -178,97 +303,11 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 			},
 			{
 				"operation": "insert",
-				"name": "FlexContainer_fqhq5qf",
-				"values": {
-					"layoutConfig": {
-						"column": 1,
-						"row": 1,
-						"colSpan": 1,
-						"rowSpan": 1
-					},
-					"type": "crt.FlexContainer",
-					"direction": "column",
-					"items": [],
-					"fitContent": true,
-					"visible": true,
-					"color": "transparent",
-					"borderRadius": "none",
-					"padding": {
-						"top": "none",
-						"right": "none",
-						"bottom": "none",
-						"left": "none"
-					},
-					"alignItems": "stretch",
-					"justifyContent": "center",
-					"gap": "medium",
-					"wrap": "nowrap"
-				},
-				"parentName": "GridContainer_5wijoep",
-				"propertyName": "items",
-				"index": 0
-			},
-			{
-				"operation": "insert",
-				"name": "Button_SaveToGit",
-				"values": {
-					"type": "crt.Button",
-					"caption": "#ResourceString(Button_SaveToGit_caption)#",
-					"color": "accent",
-					"disabled": false,
-					"size": "large",
-					"iconPosition": "left-icon",
-					"visible": true,
-					"icon": "import-data-button-icon",
-					"clicked": {
-						"request": "atf.CaptureClioArgs",
-						"params": {
-							"processName": "AtfProcess_SaveWorkspaceToGit",
-							"processRunType": "ForTheSelectedPage",
-							"showNotification": true,
-							"recordIdProcessParameterName": "Repository"
-						}
-					},
-					"clickMode": "default"
-				},
-				"parentName": "FlexContainer_fqhq5qf",
-				"propertyName": "items",
-				"index": 0
-			},
-			{
-				"operation": "insert",
-				"name": "Button_LOADFROMGIT",
-				"values": {
-					"type": "crt.Button",
-					"caption": "#ResourceString(Button_LOADFROMGIT_caption)#",
-					"color": "primary",
-					"disabled": false,
-					"size": "large",
-					"iconPosition": "left-icon",
-					"visible": true,
-					"icon": "export-data-button-icon",
-					"clicked": {
-						"request": "atf.CaptureClioArgs",
-						"params": {
-							"processName": "AtfProcess_LoadWorkspaceFromGit",
-							"processRunType": "ForTheSelectedPage",
-							"showNotification": true,
-							"recordIdProcessParameterName": "Repository"
-						}
-					},
-					"clickMode": "default"
-				},
-				"parentName": "FlexContainer_fqhq5qf",
-				"propertyName": "items",
-				"index": 1
-			},
-			{
-				"operation": "insert",
 				"name": "ExpansionPanel_w1nj9pl",
 				"values": {
 					"layoutConfig": {
 						"column": 1,
-						"row": 2,
+						"row": 1,
 						"colSpan": 1,
 						"rowSpan": 1
 					},
@@ -292,7 +331,7 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 				},
 				"parentName": "GridContainer_5wijoep",
 				"propertyName": "items",
-				"index": 1
+				"index": 0
 			},
 			{
 				"operation": "insert",
@@ -403,7 +442,7 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 						"colSpan": 2,
 						"rowSpan": 1
 					},
-					"type": "crt.Input",
+					"type": "crt.PasswordInput",
 					"label": "$Resources.Strings.PDS_AtfPassword_rrf2i89",
 					"labelPosition": "auto",
 					"control": "$PDS_AtfPassword_rrf2i89",
@@ -494,7 +533,7 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 						"colSpan": 1,
 						"rowSpan": 1
 					},
-					"type": "crt.Input",
+					"type": "crt.PasswordInput",
 					"label": "$Resources.Strings.PDS_AtfAccessToken_nzu843o",
 					"labelPosition": "above",
 					"control": "$PDS_AtfAccessToken_nzu843o",

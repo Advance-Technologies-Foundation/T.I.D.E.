@@ -8,7 +8,7 @@
 			<Item Name="LocalizableStrings.Button_LOADFROMGIT_caption.Value" Value="LOAD FROM GIT" />
 			<Item Name="LocalizableStrings.Button_nemrkb0_caption.Value" Value="SAVE TO GIT     " />
 			<Item Name="LocalizableStrings.Button_rs966jg_caption.Value" Value="Button" />
-			<Item Name="LocalizableStrings.Button_SaveToGit_caption.Value" Value="SAVE TO GIT     " />
+			<Item Name="LocalizableStrings.Button_SaveToGit_caption.Value" Value="SAVE TO GIT" />
 			<Item Name="LocalizableStrings.ExpansionPanel_srhpdgo_title.Value" Value="Repository Branch" />
 			<Item Name="LocalizableStrings.ExpansionPanel_w1nj9pl_title.Value" Value="Expansion panel" />
 			<Item Name="LocalizableStrings.GridDetailAddBtn_3ky6mp6_caption.Value" Value="New" />
