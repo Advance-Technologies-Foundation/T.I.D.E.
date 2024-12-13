@@ -1,0 +1,10 @@
+.typelist.inheritance{
+    display: none;
+}
+.typelist.implements{
+    display: none;
+}
+
+.typelist.inheritedMembers {
+    display: none;
+}

@@ -1,0 +1,782 @@
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/packages/AtfTIDE/Files/AtfTIDE.csproj","date_time":"2024-12-10T12:28:22.6989513Z"}
+{"severity":"info","message":"Loading assembly C:/Projects/Workspaces/TIDE/packages/AtfTIDE/Files/Bin/AtfTIDE.dll","date_time":"2024-12-10T12:28:25.1389004Z"}
+{"severity":"warning","message":"Unable to resolve assembly reference Terrasoft.Core, Version=8.2.0.4183, Culture=neutral, PublicKeyToken=edaadfbc3b0bb879","date_time":"2024-12-10T12:28:25.1563281Z","code":"InvalidAssemblyReference"}
+{"severity":"warning","message":"Unable to resolve assembly reference Terrasoft.Common, Version=8.2.0.4183, Culture=neutral, PublicKeyToken=edaadfbc3b0bb879","date_time":"2024-12-10T12:28:25.1569835Z","code":"InvalidAssemblyReference"}
+{"severity":"warning","message":"Unable to resolve assembly reference Terrasoft.Web.Common, Version=8.2.0.4183, Culture=neutral, PublicKeyToken=edaadfbc3b0bb879","date_time":"2024-12-10T12:28:25.3160034Z","code":"InvalidAssemblyReference"}
+{"severity":"warning","message":"Unable to resolve assembly reference Terrasoft.Web.Http.Abstractions, Version=8.2.0.4183, Culture=neutral, PublicKeyToken=edaadfbc3b0bb879","date_time":"2024-12-10T12:28:25.3438884Z","code":"InvalidAssemblyReference"}
+{"severity":"info","message":"Loading assembly C:/Projects/Workspaces/TIDE/packages/AtfTIDE/Files/obj/Debug/AtfTIDE.dll","date_time":"2024-12-10T12:28:25.4004499Z"}
+{"severity":"warning","message":"Unable to resolve assembly reference Terrasoft.Core, Version=8.2.0.4183, Culture=neutral, PublicKeyToken=edaadfbc3b0bb879","date_time":"2024-12-10T12:28:25.4017731Z","code":"InvalidAssemblyReference"}
+{"severity":"warning","message":"Unable to resolve assembly reference Terrasoft.Common, Version=8.2.0.4183, Culture=neutral, PublicKeyToken=edaadfbc3b0bb879","date_time":"2024-12-10T12:28:25.4022906Z","code":"InvalidAssemblyReference"}
+{"severity":"warning","message":"Unable to resolve assembly reference ErrorOr, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null","date_time":"2024-12-10T12:28:25.4155799Z","code":"InvalidAssemblyReference"}
+{"severity":"warning","message":"Unable to resolve assembly reference Terrasoft.Web.Common, Version=8.2.0.4183, Culture=neutral, PublicKeyToken=edaadfbc3b0bb879","date_time":"2024-12-10T12:28:25.5272243Z","code":"InvalidAssemblyReference"}
+{"severity":"warning","message":"Unable to resolve assembly reference Terrasoft.Web.Http.Abstractions, Version=8.2.0.4183, Culture=neutral, PublicKeyToken=edaadfbc3b0bb879","date_time":"2024-12-10T12:28:25.5547584Z","code":"InvalidAssemblyReference"}
+{"severity":"info","message":"Loading assembly C:/Projects/Workspaces/TIDE/packages/AtfTIDE/Files/obj/Release/AtfTIDE.dll","date_time":"2024-12-10T12:28:25.6088068Z"}
+{"severity":"warning","message":"Unable to resolve assembly reference Terrasoft.Core, Version=8.2.0.4183, Culture=neutral, PublicKeyToken=edaadfbc3b0bb879","date_time":"2024-12-10T12:28:25.6103728Z","code":"InvalidAssemblyReference"}
+{"severity":"warning","message":"Unable to resolve assembly reference Terrasoft.Common, Version=8.2.0.4183, Culture=neutral, PublicKeyToken=edaadfbc3b0bb879","date_time":"2024-12-10T12:28:25.6109047Z","code":"InvalidAssemblyReference"}
+{"severity":"warning","message":"Unable to resolve assembly reference ErrorOr, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null","date_time":"2024-12-10T12:28:25.6199901Z","code":"InvalidAssemblyReference"}
+{"severity":"warning","message":"Unable to resolve assembly reference Terrasoft.Web.Common, Version=8.2.0.4183, Culture=neutral, PublicKeyToken=edaadfbc3b0bb879","date_time":"2024-12-10T12:28:25.7373453Z","code":"InvalidAssemblyReference"}
+{"severity":"warning","message":"Unable to resolve assembly reference Terrasoft.Web.Http.Abstractions, Version=8.2.0.4183, Culture=neutral, PublicKeyToken=edaadfbc3b0bb879","date_time":"2024-12-10T12:28:25.7690947Z","code":"InvalidAssemblyReference"}
+{"severity":"info","message":"Processing AtfTIDE","date_time":"2024-12-10T12:28:25.8757436Z"}
+{"severity":"info","message":"Processing AtfTIDE","date_time":"2024-12-10T12:28:27.5546366Z"}
+{"severity":"info","message":"Processing AtfTIDE","date_time":"2024-12-10T12:28:27.6400079Z"}
+{"severity":"info","message":"Processing AtfTIDE","date_time":"2024-12-10T12:28:27.7169903Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T12:28:27.7816828Z"}
+{"severity":"warning","message":"Ignore duplicated member Interface:AtfTIDE.IConsoleGit from  as it already exist in ../packages/AtfTIDE/Files/cs/ConsoleGit.cs.","date_time":"2024-12-10T12:28:27.7841677Z"}
+{"severity":"warning","message":"Ignore duplicated member Method:AtfTIDE.ConsoleGit.Execute(AtfTIDE.ConsoleGitArgs) from  as it already exist in ../packages/AtfTIDE/Files/cs/ConsoleGit.cs.","date_time":"2024-12-10T12:28:27.784408Z"}
+{"severity":"warning","message":"Ignore duplicated member Enum:AtfTIDE.Commands from  as it already exist in ../packages/AtfTIDE/Files/cs/ConsoleGit.cs.","date_time":"2024-12-10T12:28:27.7846011Z"}
+{"severity":"warning","message":"Ignore duplicated member Method:AtfTIDE.ConsoleGitArgs.ToDictionary from  as it already exist in ../packages/AtfTIDE/Files/cs/ConsoleGitArgs.cs.","date_time":"2024-12-10T12:28:27.7848353Z"}
+{"severity":"warning","message":"Ignore duplicated member Property:AtfTIDE.ConsoleGitArgs.Command from  as it already exist in ../packages/AtfTIDE/Files/cs/ConsoleGitArgs.cs.","date_time":"2024-12-10T12:28:27.7851846Z"}
+{"severity":"warning","message":"Ignore duplicated member Property:AtfTIDE.ConsoleGitArgs.GitUrl from  as it already exist in ../packages/AtfTIDE/Files/cs/ConsoleGitArgs.cs.","date_time":"2024-12-10T12:28:27.7854355Z"}
+{"severity":"warning","message":"Ignore duplicated member Property:AtfTIDE.ConsoleGitArgs.Password from  as it already exist in ../packages/AtfTIDE/Files/cs/ConsoleGitArgs.cs.","date_time":"2024-12-10T12:28:27.7857416Z"}
+{"severity":"warning","message":"Ignore duplicated member Property:AtfTIDE.ConsoleGitArgs.RepoDir from  as it already exist in ../packages/AtfTIDE/Files/cs/ConsoleGitArgs.cs.","date_time":"2024-12-10T12:28:27.7860388Z"}
+{"severity":"warning","message":"Ignore duplicated member Property:AtfTIDE.ConsoleGitArgs.UserName from  as it already exist in ../packages/AtfTIDE/Files/cs/ConsoleGitArgs.cs.","date_time":"2024-12-10T12:28:27.7862668Z"}
+{"severity":"warning","message":"Ignore duplicated member Property:AtfTIDE.ConsoleGitArgs.CommitMessage from  as it already exist in ../packages/AtfTIDE/Files/cs/ConsoleGitArgs.cs.","date_time":"2024-12-10T12:28:27.7864274Z"}
+{"severity":"warning","message":"Ignore duplicated member Property:AtfTIDE.ConsoleGitArgs.ProcessTimeoutMs from  as it already exist in ../packages/AtfTIDE/Files/cs/ConsoleGitArgs.cs.","date_time":"2024-12-10T12:28:27.7865782Z"}
+{"severity":"warning","message":"Ignore duplicated member Property:AtfTIDE.ConsoleGitArgs.CommitAuthorName from  as it already exist in ../packages/AtfTIDE/Files/cs/ConsoleGitArgs.cs.","date_time":"2024-12-10T12:28:27.7867723Z"}
+{"severity":"warning","message":"Ignore duplicated member Property:AtfTIDE.ConsoleGitArgs.CommitAuthorEmail from  as it already exist in ../packages/AtfTIDE/Files/cs/ConsoleGitArgs.cs.","date_time":"2024-12-10T12:28:27.7869865Z"}
+{"severity":"warning","message":"Ignore duplicated member Property:AtfTIDE.ConsoleGitArgs.CreatioUrl from  as it already exist in ../packages/AtfTIDE/Files/cs/ConsoleGitArgs.cs.","date_time":"2024-12-10T12:28:27.7871709Z"}
+{"severity":"warning","message":"Ignore duplicated member Property:AtfTIDE.ConsoleGitArgs.BPMLOADER from  as it already exist in ../packages/AtfTIDE/Files/cs/ConsoleGitArgs.cs.","date_time":"2024-12-10T12:28:27.7873485Z"}
+{"severity":"warning","message":"Ignore duplicated member Property:AtfTIDE.ConsoleGitArgs.ASPXAUTH from  as it already exist in ../packages/AtfTIDE/Files/cs/ConsoleGitArgs.cs.","date_time":"2024-12-10T12:28:27.787522Z"}
+{"severity":"warning","message":"Ignore duplicated member Property:AtfTIDE.ConsoleGitArgs.BPMCSRF from  as it already exist in ../packages/AtfTIDE/Files/cs/ConsoleGitArgs.cs.","date_time":"2024-12-10T12:28:27.7876745Z"}
+{"severity":"warning","message":"Ignore duplicated member Property:AtfTIDE.ConsoleGitArgs.UserType from  as it already exist in ../packages/AtfTIDE/Files/cs/ConsoleGitArgs.cs.","date_time":"2024-12-10T12:28:27.7878248Z"}
+{"severity":"warning","message":"Ignore duplicated member Property:AtfTIDE.ConsoleGitArgs.BPMSESSIONID from  as it already exist in ../packages/AtfTIDE/Files/cs/ConsoleGitArgs.cs.","date_time":"2024-12-10T12:28:27.7880392Z"}
+{"severity":"warning","message":"Ignore duplicated member Constructor:AtfTIDE.ConsoleGitResult.#ctor(System.Int32,System.String) from  as it already exist in ../packages/AtfTIDE/Files/cs/ConsoleGitResult.cs.","date_time":"2024-12-10T12:28:27.7882658Z"}
+{"severity":"warning","message":"Ignore duplicated member Property:AtfTIDE.ConsoleGitResult.ExitCode from  as it already exist in ../packages/AtfTIDE/Files/cs/ConsoleGitResult.cs.","date_time":"2024-12-10T12:28:27.788479Z"}
+{"severity":"warning","message":"Ignore duplicated member Property:AtfTIDE.ConsoleGitResult.ErrorMessage from  as it already exist in ../packages/AtfTIDE/Files/cs/ConsoleGitResult.cs.","date_time":"2024-12-10T12:28:27.7886752Z"}
+{"severity":"warning","message":"Ignore duplicated member Property:AtfTIDE.ConsoleGitResult.Output from  as it already exist in ../packages/AtfTIDE/Files/cs/ConsoleGitResult.cs.","date_time":"2024-12-10T12:28:27.788954Z"}
+{"severity":"warning","message":"Ignore duplicated member Field:AtfTIDE.HelperFunctions.ClioArguments from  as it already exist in ../packages/AtfTIDE/Files/cs/HelperFunctions.cs.","date_time":"2024-12-10T12:28:27.7891498Z"}
+{"severity":"warning","message":"Ignore duplicated member Method:AtfTIDE.HelperFunctions.GetRepositoryDirectory(System.String) from  as it already exist in ../packages/AtfTIDE/Files/cs/HelperFunctions.cs.","date_time":"2024-12-10T12:28:27.7893354Z"}
+{"severity":"warning","message":"Ignore duplicated member Method:AtfTIDE.HelperFunctions.GetConsoleGitPath from  as it already exist in ../packages/AtfTIDE/Files/cs/HelperFunctions.cs.","date_time":"2024-12-10T12:28:27.78953Z"}
+{"severity":"warning","message":"Ignore duplicated member Method:AtfTIDE.HelperFunctions.FetchRepositoryName(System.Guid,Terrasoft.Core.UserConnection) from  as it already exist in ../packages/AtfTIDE/Files/cs/HelperFunctions.cs.","date_time":"2024-12-10T12:28:27.789734Z"}
+{"severity":"warning","message":"Ignore duplicated member Method:AtfTIDE.HelperFunctions.GetRepositoryInfo(System.Guid,Terrasoft.Core.UserConnection) from  as it already exist in ../packages/AtfTIDE/Files/cs/HelperFunctions.cs.","date_time":"2024-12-10T12:28:27.7899584Z"}
+{"severity":"warning","message":"Ignore duplicated member Method:AtfTIDE.HelperFunctions.AddClioArgsForUser(System.Guid,System.Collections.Generic.Dictionary{System.String,System.String}) from  as it already exist in ../packages/AtfTIDE/Files/cs/HelperFunctions.cs.","date_time":"2024-12-10T12:28:27.7901842Z"}
+{"severity":"warning","message":"Ignore duplicated member Constructor:AtfTIDE.RepositoryInfo.#ctor(System.String,System.String,System.String,System.String) from  as it already exist in ../packages/AtfTIDE/Files/cs/HelperFunctions.cs.","date_time":"2024-12-10T12:28:27.7903759Z"}
+{"severity":"warning","message":"Ignore duplicated member Property:AtfTIDE.RepositoryInfo.GitUrl from  as it already exist in ../packages/AtfTIDE/Files/cs/HelperFunctions.cs.","date_time":"2024-12-10T12:28:27.7905604Z"}
+{"severity":"warning","message":"Ignore duplicated member Property:AtfTIDE.RepositoryInfo.Password from  as it already exist in ../packages/AtfTIDE/Files/cs/HelperFunctions.cs.","date_time":"2024-12-10T12:28:27.7907281Z"}
+{"severity":"warning","message":"Ignore duplicated member Property:AtfTIDE.RepositoryInfo.UserName from  as it already exist in ../packages/AtfTIDE/Files/cs/HelperFunctions.cs.","date_time":"2024-12-10T12:28:27.7909126Z"}
+{"severity":"warning","message":"Ignore duplicated member Property:AtfTIDE.RepositoryInfo.Name from  as it already exist in ../packages/AtfTIDE/Files/cs/HelperFunctions.cs.","date_time":"2024-12-10T12:28:27.7911025Z"}
+{"severity":"warning","message":"Ignore duplicated member Method:AtfTIDE.WebServices.Tide.CaptureClioArgs from  as it already exist in ../packages/AtfTIDE/Files/cs/WebServices/Tide.cs.","date_time":"2024-12-10T12:28:27.7912865Z"}
+{"severity":"warning","message":"Ignore duplicated member Interface:AtfTIDE.IConsoleGit from  as it already exist in ../packages/AtfTIDE/Files/cs/ConsoleGit.cs.","date_time":"2024-12-10T12:28:27.7914962Z"}
+{"severity":"warning","message":"Ignore duplicated member Method:AtfTIDE.ConsoleGit.Execute(AtfTIDE.ConsoleGitArgs) from  as it already exist in ../packages/AtfTIDE/Files/cs/ConsoleGit.cs.","date_time":"2024-12-10T12:28:27.7916659Z"}
+{"severity":"warning","message":"Ignore duplicated member Constructor:AtfTIDE.ConsoleGit.#ctor from  as it already exist in .","date_time":"2024-12-10T12:28:27.7918117Z"}
+{"severity":"warning","message":"Ignore duplicated member Enum:AtfTIDE.Commands from  as it already exist in ../packages/AtfTIDE/Files/cs/ConsoleGit.cs.","date_time":"2024-12-10T12:28:27.791983Z"}
+{"severity":"warning","message":"Ignore duplicated member Method:AtfTIDE.ConsoleGitArgs.ToDictionary from  as it already exist in ../packages/AtfTIDE/Files/cs/ConsoleGitArgs.cs.","date_time":"2024-12-10T12:28:27.7922182Z"}
+{"severity":"warning","message":"Ignore duplicated member Constructor:AtfTIDE.ConsoleGitArgs.#ctor from  as it already exist in .","date_time":"2024-12-10T12:28:27.7923938Z"}
+{"severity":"warning","message":"Ignore duplicated member Property:AtfTIDE.ConsoleGitArgs.Command from  as it already exist in ../packages/AtfTIDE/Files/cs/ConsoleGitArgs.cs.","date_time":"2024-12-10T12:28:27.7925886Z"}
+{"severity":"warning","message":"Ignore duplicated member Property:AtfTIDE.ConsoleGitArgs.GitUrl from  as it already exist in ../packages/AtfTIDE/Files/cs/ConsoleGitArgs.cs.","date_time":"2024-12-10T12:28:27.7928237Z"}
+{"severity":"warning","message":"Ignore duplicated member Property:AtfTIDE.ConsoleGitArgs.Password from  as it already exist in ../packages/AtfTIDE/Files/cs/ConsoleGitArgs.cs.","date_time":"2024-12-10T12:28:27.7930235Z"}
+{"severity":"warning","message":"Ignore duplicated member Property:AtfTIDE.ConsoleGitArgs.RepoDir from  as it already exist in ../packages/AtfTIDE/Files/cs/ConsoleGitArgs.cs.","date_time":"2024-12-10T12:28:27.7932496Z"}
+{"severity":"warning","message":"Ignore duplicated member Property:AtfTIDE.ConsoleGitArgs.UserName from  as it already exist in ../packages/AtfTIDE/Files/cs/ConsoleGitArgs.cs.","date_time":"2024-12-10T12:28:27.7934786Z"}
+{"severity":"warning","message":"Ignore duplicated member Property:AtfTIDE.ConsoleGitArgs.CommitMessage from  as it already exist in ../packages/AtfTIDE/Files/cs/ConsoleGitArgs.cs.","date_time":"2024-12-10T12:28:27.7936816Z"}
+{"severity":"warning","message":"Ignore duplicated member Property:AtfTIDE.ConsoleGitArgs.ProcessTimeoutMs from  as it already exist in ../packages/AtfTIDE/Files/cs/ConsoleGitArgs.cs.","date_time":"2024-12-10T12:28:27.7938668Z"}
+{"severity":"warning","message":"Ignore duplicated member Property:AtfTIDE.ConsoleGitArgs.CommitAuthorName from  as it already exist in ../packages/AtfTIDE/Files/cs/ConsoleGitArgs.cs.","date_time":"2024-12-10T12:28:27.7940248Z"}
+{"severity":"warning","message":"Ignore duplicated member Property:AtfTIDE.ConsoleGitArgs.CommitAuthorEmail from  as it already exist in ../packages/AtfTIDE/Files/cs/ConsoleGitArgs.cs.","date_time":"2024-12-10T12:28:27.7941814Z"}
+{"severity":"warning","message":"Ignore duplicated member Property:AtfTIDE.ConsoleGitArgs.CreatioUrl from  as it already exist in ../packages/AtfTIDE/Files/cs/ConsoleGitArgs.cs.","date_time":"2024-12-10T12:28:27.7943413Z"}
+{"severity":"warning","message":"Ignore duplicated member Property:AtfTIDE.ConsoleGitArgs.BPMLOADER from  as it already exist in ../packages/AtfTIDE/Files/cs/ConsoleGitArgs.cs.","date_time":"2024-12-10T12:28:27.7945203Z"}
+{"severity":"warning","message":"Ignore duplicated member Property:AtfTIDE.ConsoleGitArgs.ASPXAUTH from  as it already exist in ../packages/AtfTIDE/Files/cs/ConsoleGitArgs.cs.","date_time":"2024-12-10T12:28:27.7946985Z"}
+{"severity":"warning","message":"Ignore duplicated member Property:AtfTIDE.ConsoleGitArgs.BPMCSRF from  as it already exist in ../packages/AtfTIDE/Files/cs/ConsoleGitArgs.cs.","date_time":"2024-12-10T12:28:27.7949128Z"}
+{"severity":"warning","message":"Ignore duplicated member Property:AtfTIDE.ConsoleGitArgs.UserType from  as it already exist in ../packages/AtfTIDE/Files/cs/ConsoleGitArgs.cs.","date_time":"2024-12-10T12:28:27.7951304Z"}
+{"severity":"warning","message":"Ignore duplicated member Property:AtfTIDE.ConsoleGitArgs.BPMSESSIONID from  as it already exist in ../packages/AtfTIDE/Files/cs/ConsoleGitArgs.cs.","date_time":"2024-12-10T12:28:27.7953061Z"}
+{"severity":"warning","message":"Ignore duplicated member Constructor:AtfTIDE.ConsoleGitResult.#ctor(System.Int32,System.String) from  as it already exist in ../packages/AtfTIDE/Files/cs/ConsoleGitResult.cs.","date_time":"2024-12-10T12:28:27.7954956Z"}
+{"severity":"warning","message":"Ignore duplicated member Property:AtfTIDE.ConsoleGitResult.ExitCode from  as it already exist in ../packages/AtfTIDE/Files/cs/ConsoleGitResult.cs.","date_time":"2024-12-10T12:28:27.7956695Z"}
+{"severity":"warning","message":"Ignore duplicated member Property:AtfTIDE.ConsoleGitResult.ErrorMessage from  as it already exist in ../packages/AtfTIDE/Files/cs/ConsoleGitResult.cs.","date_time":"2024-12-10T12:28:27.7959078Z"}
+{"severity":"warning","message":"Ignore duplicated member Property:AtfTIDE.ConsoleGitResult.Output from  as it already exist in ../packages/AtfTIDE/Files/cs/ConsoleGitResult.cs.","date_time":"2024-12-10T12:28:27.7961259Z"}
+{"severity":"warning","message":"Ignore duplicated member Field:AtfTIDE.HelperFunctions.ClioArguments from  as it already exist in ../packages/AtfTIDE/Files/cs/HelperFunctions.cs.","date_time":"2024-12-10T12:28:27.7963101Z"}
+{"severity":"warning","message":"Ignore duplicated member Method:AtfTIDE.HelperFunctions.GetRepositoryDirectory(System.String) from  as it already exist in ../packages/AtfTIDE/Files/cs/HelperFunctions.cs.","date_time":"2024-12-10T12:28:27.7965154Z"}
+{"severity":"warning","message":"Ignore duplicated member Method:AtfTIDE.HelperFunctions.GetConsoleGitPath from  as it already exist in ../packages/AtfTIDE/Files/cs/HelperFunctions.cs.","date_time":"2024-12-10T12:28:27.7966984Z"}
+{"severity":"warning","message":"Ignore duplicated member Method:AtfTIDE.HelperFunctions.FetchRepositoryName(System.Guid,Terrasoft.Core.UserConnection) from  as it already exist in ../packages/AtfTIDE/Files/cs/HelperFunctions.cs.","date_time":"2024-12-10T12:28:27.7968942Z"}
+{"severity":"warning","message":"Ignore duplicated member Method:AtfTIDE.HelperFunctions.GetRepositoryInfo(System.Guid,Terrasoft.Core.UserConnection) from  as it already exist in ../packages/AtfTIDE/Files/cs/HelperFunctions.cs.","date_time":"2024-12-10T12:28:27.7970917Z"}
+{"severity":"warning","message":"Ignore duplicated member Method:AtfTIDE.HelperFunctions.AddClioArgsForUser(System.Guid,System.Collections.Generic.Dictionary{System.String,System.String}) from  as it already exist in ../packages/AtfTIDE/Files/cs/HelperFunctions.cs.","date_time":"2024-12-10T12:28:27.797352Z"}
+{"severity":"warning","message":"Ignore duplicated member Constructor:AtfTIDE.RepositoryInfo.#ctor(System.String,System.String,System.String,System.String) from  as it already exist in ../packages/AtfTIDE/Files/cs/HelperFunctions.cs.","date_time":"2024-12-10T12:28:27.7975319Z"}
+{"severity":"warning","message":"Ignore duplicated member Property:AtfTIDE.RepositoryInfo.GitUrl from  as it already exist in ../packages/AtfTIDE/Files/cs/HelperFunctions.cs.","date_time":"2024-12-10T12:28:27.7977008Z"}
+{"severity":"warning","message":"Ignore duplicated member Property:AtfTIDE.RepositoryInfo.Password from  as it already exist in ../packages/AtfTIDE/Files/cs/HelperFunctions.cs.","date_time":"2024-12-10T12:28:27.7978601Z"}
+{"severity":"warning","message":"Ignore duplicated member Property:AtfTIDE.RepositoryInfo.UserName from  as it already exist in ../packages/AtfTIDE/Files/cs/HelperFunctions.cs.","date_time":"2024-12-10T12:28:27.798016Z"}
+{"severity":"warning","message":"Ignore duplicated member Property:AtfTIDE.RepositoryInfo.Name from  as it already exist in ../packages/AtfTIDE/Files/cs/HelperFunctions.cs.","date_time":"2024-12-10T12:28:27.7982187Z"}
+{"severity":"warning","message":"Ignore duplicated member Method:AtfTIDE.WebServices.Tide.CaptureClioArgs from  as it already exist in ../packages/AtfTIDE/Files/cs/WebServices/Tide.cs.","date_time":"2024-12-10T12:28:27.7984405Z"}
+{"severity":"warning","message":"Ignore duplicated member Constructor:AtfTIDE.WebServices.Tide.#ctor from  as it already exist in .","date_time":"2024-12-10T12:28:27.7986385Z"}
+{"severity":"warning","message":"Ignore duplicated member Method:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_CloneRepository.InternalExecute(Terrasoft.Core.Process.ProcessExecutingContext) from  as it already exist in .","date_time":"2024-12-10T12:28:27.7988397Z"}
+{"severity":"warning","message":"Ignore duplicated member Constructor:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_CloneRepository.#ctor(Terrasoft.Core.UserConnection) from  as it already exist in .","date_time":"2024-12-10T12:28:27.7990384Z"}
+{"severity":"warning","message":"Ignore duplicated member Method:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_CloneRepository.WritePropertiesData(Terrasoft.Common.DataWriter) from  as it already exist in .","date_time":"2024-12-10T12:28:27.7993514Z"}
+{"severity":"warning","message":"Ignore duplicated member Method:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_CloneRepository.ApplyPropertiesDataValues(Terrasoft.Common.DataReader) from  as it already exist in .","date_time":"2024-12-10T12:28:27.7995579Z"}
+{"severity":"warning","message":"Ignore duplicated member Property:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_CloneRepository.ErrorMessage from  as it already exist in .","date_time":"2024-12-10T12:28:27.7997377Z"}
+{"severity":"warning","message":"Ignore duplicated member Property:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_CloneRepository.IsError from  as it already exist in .","date_time":"2024-12-10T12:28:27.799947Z"}
+{"severity":"warning","message":"Ignore duplicated member Property:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_CloneRepository.RepositoryFolderPath from  as it already exist in .","date_time":"2024-12-10T12:28:27.8001692Z"}
+{"severity":"warning","message":"Ignore duplicated member Property:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_CloneRepository.Repository from  as it already exist in .","date_time":"2024-12-10T12:28:27.8004152Z"}
+{"severity":"warning","message":"Ignore duplicated member Property:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_CloneRepository.Output from  as it already exist in .","date_time":"2024-12-10T12:28:27.8006173Z"}
+{"severity":"warning","message":"Ignore duplicated member Method:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_DownloadPackages.InternalExecute(Terrasoft.Core.Process.ProcessExecutingContext) from  as it already exist in .","date_time":"2024-12-10T12:28:27.8008327Z"}
+{"severity":"warning","message":"Ignore duplicated member Method:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_DownloadPackages.CompleteExecuting(System.Object[]) from  as it already exist in .","date_time":"2024-12-10T12:28:27.8010489Z"}
+{"severity":"warning","message":"Ignore duplicated member Method:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_DownloadPackages.CancelExecuting(System.Object[]) from  as it already exist in .","date_time":"2024-12-10T12:28:27.8012508Z"}
+{"severity":"warning","message":"Ignore duplicated member Method:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_DownloadPackages.GetExecutionData from  as it already exist in .","date_time":"2024-12-10T12:28:27.8014679Z"}
+{"severity":"warning","message":"Ignore duplicated member Method:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_DownloadPackages.GetNotificationData from  as it already exist in .","date_time":"2024-12-10T12:28:27.801654Z"}
+{"severity":"warning","message":"Ignore duplicated member Constructor:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_DownloadPackages.#ctor(Terrasoft.Core.UserConnection) from  as it already exist in .","date_time":"2024-12-10T12:28:27.8018654Z"}
+{"severity":"warning","message":"Ignore duplicated member Method:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_DownloadPackages.WritePropertiesData(Terrasoft.Common.DataWriter) from  as it already exist in .","date_time":"2024-12-10T12:28:27.8020532Z"}
+{"severity":"warning","message":"Ignore duplicated member Method:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_DownloadPackages.ApplyPropertiesDataValues(Terrasoft.Common.DataReader) from  as it already exist in .","date_time":"2024-12-10T12:28:27.802239Z"}
+{"severity":"warning","message":"Ignore duplicated member Property:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_DownloadPackages.ErrorMessage from  as it already exist in .","date_time":"2024-12-10T12:28:27.80242Z"}
+{"severity":"warning","message":"Ignore duplicated member Property:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_DownloadPackages.IsError from  as it already exist in .","date_time":"2024-12-10T12:28:27.8026871Z"}
+{"severity":"warning","message":"Ignore duplicated member Property:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_DownloadPackages.Output from  as it already exist in .","date_time":"2024-12-10T12:28:27.8028809Z"}
+{"severity":"warning","message":"Ignore duplicated member Property:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_DownloadPackages.Repository from  as it already exist in .","date_time":"2024-12-10T12:28:27.8030799Z"}
+{"severity":"warning","message":"Ignore duplicated member Method:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_GitAddAll.InternalExecute(Terrasoft.Core.Process.ProcessExecutingContext) from  as it already exist in .","date_time":"2024-12-10T12:28:27.803272Z"}
+{"severity":"warning","message":"Ignore duplicated member Method:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_GitAddAll.CompleteExecuting(System.Object[]) from  as it already exist in .","date_time":"2024-12-10T12:28:27.8034879Z"}
+{"severity":"warning","message":"Ignore duplicated member Method:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_GitAddAll.CancelExecuting(System.Object[]) from  as it already exist in .","date_time":"2024-12-10T12:28:27.8036658Z"}
+{"severity":"warning","message":"Ignore duplicated member Method:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_GitAddAll.GetExecutionData from  as it already exist in .","date_time":"2024-12-10T12:28:27.803873Z"}
+{"severity":"warning","message":"Ignore duplicated member Method:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_GitAddAll.GetNotificationData from  as it already exist in .","date_time":"2024-12-10T12:28:27.8040647Z"}
+{"severity":"warning","message":"Ignore duplicated member Constructor:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_GitAddAll.#ctor(Terrasoft.Core.UserConnection) from  as it already exist in .","date_time":"2024-12-10T12:28:27.8042515Z"}
+{"severity":"warning","message":"Ignore duplicated member Method:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_GitAddAll.WritePropertiesData(Terrasoft.Common.DataWriter) from  as it already exist in .","date_time":"2024-12-10T12:28:27.8044486Z"}
+{"severity":"warning","message":"Ignore duplicated member Method:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_GitAddAll.ApplyPropertiesDataValues(Terrasoft.Common.DataReader) from  as it already exist in .","date_time":"2024-12-10T12:28:27.804636Z"}
+{"severity":"warning","message":"Ignore duplicated member Property:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_GitAddAll.ErrorMessage from  as it already exist in .","date_time":"2024-12-10T12:28:27.8048521Z"}
+{"severity":"warning","message":"Ignore duplicated member Property:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_GitAddAll.IsError from  as it already exist in .","date_time":"2024-12-10T12:28:27.8050041Z"}
+{"severity":"warning","message":"Ignore duplicated member Property:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_GitAddAll.Repository from  as it already exist in .","date_time":"2024-12-10T12:28:27.8051584Z"}
+{"severity":"warning","message":"Ignore duplicated member Property:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_GitAddAll.Output from  as it already exist in .","date_time":"2024-12-10T12:28:27.8053119Z"}
+{"severity":"warning","message":"Ignore duplicated member Method:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_GitCommit.InternalExecute(Terrasoft.Core.Process.ProcessExecutingContext) from  as it already exist in .","date_time":"2024-12-10T12:28:27.8054809Z"}
+{"severity":"warning","message":"Ignore duplicated member Method:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_GitCommit.CompleteExecuting(System.Object[]) from  as it already exist in .","date_time":"2024-12-10T12:28:27.8056573Z"}
+{"severity":"warning","message":"Ignore duplicated member Method:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_GitCommit.CancelExecuting(System.Object[]) from  as it already exist in .","date_time":"2024-12-10T12:28:27.8058936Z"}
+{"severity":"warning","message":"Ignore duplicated member Method:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_GitCommit.GetExecutionData from  as it already exist in .","date_time":"2024-12-10T12:28:27.8060787Z"}
+{"severity":"warning","message":"Ignore duplicated member Method:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_GitCommit.GetNotificationData from  as it already exist in .","date_time":"2024-12-10T12:28:27.8062587Z"}
+{"severity":"warning","message":"Ignore duplicated member Constructor:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_GitCommit.#ctor(Terrasoft.Core.UserConnection) from  as it already exist in .","date_time":"2024-12-10T12:28:27.8064614Z"}
+{"severity":"warning","message":"Ignore duplicated member Method:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_GitCommit.WritePropertiesData(Terrasoft.Common.DataWriter) from  as it already exist in .","date_time":"2024-12-10T12:28:27.8066375Z"}
+{"severity":"warning","message":"Ignore duplicated member Method:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_GitCommit.ApplyPropertiesDataValues(Terrasoft.Common.DataReader) from  as it already exist in .","date_time":"2024-12-10T12:28:27.8068528Z"}
+{"severity":"warning","message":"Ignore duplicated member Property:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_GitCommit.Repository from  as it already exist in .","date_time":"2024-12-10T12:28:27.8070178Z"}
+{"severity":"warning","message":"Ignore duplicated member Property:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_GitCommit.ErrorMessage from  as it already exist in .","date_time":"2024-12-10T12:28:27.8072188Z"}
+{"severity":"warning","message":"Ignore duplicated member Property:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_GitCommit.IsError from  as it already exist in .","date_time":"2024-12-10T12:28:27.8074128Z"}
+{"severity":"warning","message":"Ignore duplicated member Property:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_GitCommit.CommitMessage from  as it already exist in .","date_time":"2024-12-10T12:28:27.8075697Z"}
+{"severity":"warning","message":"Ignore duplicated member Property:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_GitCommit.Output from  as it already exist in .","date_time":"2024-12-10T12:28:27.8077758Z"}
+{"severity":"warning","message":"Ignore duplicated member Method:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_GitPush.InternalExecute(Terrasoft.Core.Process.ProcessExecutingContext) from  as it already exist in .","date_time":"2024-12-10T12:28:27.807982Z"}
+{"severity":"warning","message":"Ignore duplicated member Method:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_GitPush.CompleteExecuting(System.Object[]) from  as it already exist in .","date_time":"2024-12-10T12:28:27.8081461Z"}
+{"severity":"warning","message":"Ignore duplicated member Method:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_GitPush.CancelExecuting(System.Object[]) from  as it already exist in .","date_time":"2024-12-10T12:28:27.8083332Z"}
+{"severity":"warning","message":"Ignore duplicated member Method:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_GitPush.GetExecutionData from  as it already exist in .","date_time":"2024-12-10T12:28:27.8085301Z"}
+{"severity":"warning","message":"Ignore duplicated member Method:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_GitPush.GetNotificationData from  as it already exist in .","date_time":"2024-12-10T12:28:27.8087214Z"}
+{"severity":"warning","message":"Ignore duplicated member Constructor:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_GitPush.#ctor(Terrasoft.Core.UserConnection) from  as it already exist in .","date_time":"2024-12-10T12:28:27.8089037Z"}
+{"severity":"warning","message":"Ignore duplicated member Method:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_GitPush.WritePropertiesData(Terrasoft.Common.DataWriter) from  as it already exist in .","date_time":"2024-12-10T12:28:27.8090806Z"}
+{"severity":"warning","message":"Ignore duplicated member Method:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_GitPush.ApplyPropertiesDataValues(Terrasoft.Common.DataReader) from  as it already exist in .","date_time":"2024-12-10T12:28:27.8092961Z"}
+{"severity":"warning","message":"Ignore duplicated member Property:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_GitPush.Repository from  as it already exist in .","date_time":"2024-12-10T12:28:27.8095215Z"}
+{"severity":"warning","message":"Ignore duplicated member Property:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_GitPush.IsError from  as it already exist in .","date_time":"2024-12-10T12:28:27.8097193Z"}
+{"severity":"warning","message":"Ignore duplicated member Property:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_GitPush.ErrorMessage from  as it already exist in .","date_time":"2024-12-10T12:28:27.8099057Z"}
+{"severity":"warning","message":"Ignore duplicated member Property:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_GitPush.Output from  as it already exist in .","date_time":"2024-12-10T12:28:27.8100955Z"}
+{"severity":"warning","message":"Ignore duplicated member Method:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand.InternalExecute(Terrasoft.Core.Process.ProcessExecutingContext) from  as it already exist in .","date_time":"2024-12-10T12:28:27.810283Z"}
+{"severity":"warning","message":"Ignore duplicated member Method:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand.CompleteExecuting(System.Object[]) from  as it already exist in .","date_time":"2024-12-10T12:28:27.8104604Z"}
+{"severity":"warning","message":"Ignore duplicated member Method:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand.CancelExecuting(System.Object[]) from  as it already exist in .","date_time":"2024-12-10T12:28:27.8106368Z"}
+{"severity":"warning","message":"Ignore duplicated member Method:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand.GetExecutionData from  as it already exist in .","date_time":"2024-12-10T12:28:27.8108475Z"}
+{"severity":"warning","message":"Ignore duplicated member Method:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand.GetNotificationData from  as it already exist in .","date_time":"2024-12-10T12:28:27.8110675Z"}
+{"severity":"warning","message":"Ignore duplicated member Constructor:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand.#ctor(Terrasoft.Core.UserConnection) from  as it already exist in .","date_time":"2024-12-10T12:28:27.811289Z"}
+{"severity":"warning","message":"Ignore duplicated member Method:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand.WritePropertiesData(Terrasoft.Common.DataWriter) from  as it already exist in .","date_time":"2024-12-10T12:28:27.8115078Z"}
+{"severity":"warning","message":"Ignore duplicated member Method:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand.ApplyPropertiesDataValues(Terrasoft.Common.DataReader) from  as it already exist in .","date_time":"2024-12-10T12:28:27.8117235Z"}
+{"severity":"warning","message":"Ignore duplicated member Property:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand.FileName from  as it already exist in .","date_time":"2024-12-10T12:28:27.8119015Z"}
+{"severity":"warning","message":"Ignore duplicated member Property:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand.Arguments from  as it already exist in .","date_time":"2024-12-10T12:28:27.8120936Z"}
+{"severity":"warning","message":"Ignore duplicated member Property:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand.WorkingDirectory from  as it already exist in .","date_time":"2024-12-10T12:28:27.8122762Z"}
+{"severity":"warning","message":"Ignore duplicated member Property:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand.IsError from  as it already exist in .","date_time":"2024-12-10T12:28:27.8124477Z"}
+{"severity":"warning","message":"Ignore duplicated member Property:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand.ErrorMessage from  as it already exist in .","date_time":"2024-12-10T12:28:27.8127009Z"}
+{"severity":"warning","message":"Ignore duplicated member Property:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand.WaitForExit from  as it already exist in .","date_time":"2024-12-10T12:28:27.812898Z"}
+{"severity":"warning","message":"Ignore duplicated member Interface:AtfTIDE.IConsoleGit from  as it already exist in ../packages/AtfTIDE/Files/cs/ConsoleGit.cs.","date_time":"2024-12-10T12:28:27.8130963Z"}
+{"severity":"warning","message":"Ignore duplicated member Method:AtfTIDE.ConsoleGit.Execute(AtfTIDE.ConsoleGitArgs) from  as it already exist in ../packages/AtfTIDE/Files/cs/ConsoleGit.cs.","date_time":"2024-12-10T12:28:27.8132771Z"}
+{"severity":"warning","message":"Ignore duplicated member Constructor:AtfTIDE.ConsoleGit.#ctor from  as it already exist in .","date_time":"2024-12-10T12:28:27.8134479Z"}
+{"severity":"warning","message":"Ignore duplicated member Enum:AtfTIDE.Commands from  as it already exist in ../packages/AtfTIDE/Files/cs/ConsoleGit.cs.","date_time":"2024-12-10T12:28:27.8136503Z"}
+{"severity":"warning","message":"Ignore duplicated member Method:AtfTIDE.ConsoleGitArgs.ToDictionary from  as it already exist in ../packages/AtfTIDE/Files/cs/ConsoleGitArgs.cs.","date_time":"2024-12-10T12:28:27.81381Z"}
+{"severity":"warning","message":"Ignore duplicated member Constructor:AtfTIDE.ConsoleGitArgs.#ctor from  as it already exist in .","date_time":"2024-12-10T12:28:27.813989Z"}
+{"severity":"warning","message":"Ignore duplicated member Property:AtfTIDE.ConsoleGitArgs.Command from  as it already exist in ../packages/AtfTIDE/Files/cs/ConsoleGitArgs.cs.","date_time":"2024-12-10T12:28:27.814153Z"}
+{"severity":"warning","message":"Ignore duplicated member Property:AtfTIDE.ConsoleGitArgs.GitUrl from  as it already exist in ../packages/AtfTIDE/Files/cs/ConsoleGitArgs.cs.","date_time":"2024-12-10T12:28:27.8143079Z"}
+{"severity":"warning","message":"Ignore duplicated member Property:AtfTIDE.ConsoleGitArgs.Password from  as it already exist in ../packages/AtfTIDE/Files/cs/ConsoleGitArgs.cs.","date_time":"2024-12-10T12:28:27.8144949Z"}
+{"severity":"warning","message":"Ignore duplicated member Property:AtfTIDE.ConsoleGitArgs.RepoDir from  as it already exist in ../packages/AtfTIDE/Files/cs/ConsoleGitArgs.cs.","date_time":"2024-12-10T12:28:27.8146899Z"}
+{"severity":"warning","message":"Ignore duplicated member Property:AtfTIDE.ConsoleGitArgs.UserName from  as it already exist in ../packages/AtfTIDE/Files/cs/ConsoleGitArgs.cs.","date_time":"2024-12-10T12:28:27.8148903Z"}
+{"severity":"warning","message":"Ignore duplicated member Property:AtfTIDE.ConsoleGitArgs.CommitMessage from  as it already exist in ../packages/AtfTIDE/Files/cs/ConsoleGitArgs.cs.","date_time":"2024-12-10T12:28:27.815081Z"}
+{"severity":"warning","message":"Ignore duplicated member Property:AtfTIDE.ConsoleGitArgs.ProcessTimeoutMs from  as it already exist in ../packages/AtfTIDE/Files/cs/ConsoleGitArgs.cs.","date_time":"2024-12-10T12:28:27.8153075Z"}
+{"severity":"warning","message":"Ignore duplicated member Property:AtfTIDE.ConsoleGitArgs.CommitAuthorName from  as it already exist in ../packages/AtfTIDE/Files/cs/ConsoleGitArgs.cs.","date_time":"2024-12-10T12:28:27.815506Z"}
+{"severity":"warning","message":"Ignore duplicated member Property:AtfTIDE.ConsoleGitArgs.CommitAuthorEmail from  as it already exist in ../packages/AtfTIDE/Files/cs/ConsoleGitArgs.cs.","date_time":"2024-12-10T12:28:27.815671Z"}
+{"severity":"warning","message":"Ignore duplicated member Constructor:AtfTIDE.ConsoleGitResult.#ctor(System.Int32,System.String) from  as it already exist in ../packages/AtfTIDE/Files/cs/ConsoleGitResult.cs.","date_time":"2024-12-10T12:28:27.8158429Z"}
+{"severity":"warning","message":"Ignore duplicated member Property:AtfTIDE.ConsoleGitResult.ExitCode from  as it already exist in ../packages/AtfTIDE/Files/cs/ConsoleGitResult.cs.","date_time":"2024-12-10T12:28:27.8160535Z"}
+{"severity":"warning","message":"Ignore duplicated member Property:AtfTIDE.ConsoleGitResult.ErrorMessage from  as it already exist in ../packages/AtfTIDE/Files/cs/ConsoleGitResult.cs.","date_time":"2024-12-10T12:28:27.8163192Z"}
+{"severity":"warning","message":"Ignore duplicated member Property:AtfTIDE.ConsoleGitResult.Output from  as it already exist in ../packages/AtfTIDE/Files/cs/ConsoleGitResult.cs.","date_time":"2024-12-10T12:28:27.8165247Z"}
+{"severity":"warning","message":"Ignore duplicated member Field:AtfTIDE.HelperFunctions.ClioArguments from  as it already exist in ../packages/AtfTIDE/Files/cs/HelperFunctions.cs.","date_time":"2024-12-10T12:28:27.8167504Z"}
+{"severity":"warning","message":"Ignore duplicated member Method:AtfTIDE.HelperFunctions.GetRepositoryDirectory(System.String) from  as it already exist in ../packages/AtfTIDE/Files/cs/HelperFunctions.cs.","date_time":"2024-12-10T12:28:27.8191565Z"}
+{"severity":"warning","message":"Ignore duplicated member Method:AtfTIDE.HelperFunctions.GetConsoleGitPath from  as it already exist in ../packages/AtfTIDE/Files/cs/HelperFunctions.cs.","date_time":"2024-12-10T12:28:27.8193886Z"}
+{"severity":"warning","message":"Ignore duplicated member Method:AtfTIDE.HelperFunctions.FetchRepositoryName(System.Guid,Terrasoft.Core.UserConnection) from  as it already exist in ../packages/AtfTIDE/Files/cs/HelperFunctions.cs.","date_time":"2024-12-10T12:28:27.8195833Z"}
+{"severity":"warning","message":"Ignore duplicated member Method:AtfTIDE.HelperFunctions.GetRepositoryInfo(System.Guid,Terrasoft.Core.UserConnection) from  as it already exist in ../packages/AtfTIDE/Files/cs/HelperFunctions.cs.","date_time":"2024-12-10T12:28:27.8198024Z"}
+{"severity":"warning","message":"Ignore duplicated member Method:AtfTIDE.HelperFunctions.AddClioArgsForUser(System.Guid,System.Collections.Generic.Dictionary{System.String,System.String}) from  as it already exist in ../packages/AtfTIDE/Files/cs/HelperFunctions.cs.","date_time":"2024-12-10T12:28:27.8200291Z"}
+{"severity":"warning","message":"Ignore duplicated member Constructor:AtfTIDE.RepositoryInfo.#ctor(System.String,System.String,System.String,System.String) from  as it already exist in ../packages/AtfTIDE/Files/cs/HelperFunctions.cs.","date_time":"2024-12-10T12:28:27.8202717Z"}
+{"severity":"warning","message":"Ignore duplicated member Property:AtfTIDE.RepositoryInfo.GitUrl from  as it already exist in ../packages/AtfTIDE/Files/cs/HelperFunctions.cs.","date_time":"2024-12-10T12:28:27.8204626Z"}
+{"severity":"warning","message":"Ignore duplicated member Property:AtfTIDE.RepositoryInfo.Password from  as it already exist in ../packages/AtfTIDE/Files/cs/HelperFunctions.cs.","date_time":"2024-12-10T12:28:27.8206391Z"}
+{"severity":"warning","message":"Ignore duplicated member Property:AtfTIDE.RepositoryInfo.UserName from  as it already exist in ../packages/AtfTIDE/Files/cs/HelperFunctions.cs.","date_time":"2024-12-10T12:28:27.8208504Z"}
+{"severity":"warning","message":"Ignore duplicated member Property:AtfTIDE.RepositoryInfo.Name from  as it already exist in ../packages/AtfTIDE/Files/cs/HelperFunctions.cs.","date_time":"2024-12-10T12:28:27.8210245Z"}
+{"severity":"warning","message":"Ignore duplicated member Method:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_CloneRepository.InternalExecute(Terrasoft.Core.Process.ProcessExecutingContext) from  as it already exist in .","date_time":"2024-12-10T12:28:27.8212142Z"}
+{"severity":"warning","message":"Ignore duplicated member Constructor:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_CloneRepository.#ctor(Terrasoft.Core.UserConnection) from  as it already exist in .","date_time":"2024-12-10T12:28:27.8214205Z"}
+{"severity":"warning","message":"Ignore duplicated member Method:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_CloneRepository.WritePropertiesData(Terrasoft.Common.DataWriter) from  as it already exist in .","date_time":"2024-12-10T12:28:27.8216225Z"}
+{"severity":"warning","message":"Ignore duplicated member Method:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_CloneRepository.ApplyPropertiesDataValues(Terrasoft.Common.DataReader) from  as it already exist in .","date_time":"2024-12-10T12:28:27.8218714Z"}
+{"severity":"warning","message":"Ignore duplicated member Property:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_CloneRepository.ErrorMessage from  as it already exist in .","date_time":"2024-12-10T12:28:27.8220684Z"}
+{"severity":"warning","message":"Ignore duplicated member Property:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_CloneRepository.IsError from  as it already exist in .","date_time":"2024-12-10T12:28:27.8222251Z"}
+{"severity":"warning","message":"Ignore duplicated member Property:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_CloneRepository.RepositoryFolderPath from  as it already exist in .","date_time":"2024-12-10T12:28:27.8223828Z"}
+{"severity":"warning","message":"Ignore duplicated member Property:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_CloneRepository.Repository from  as it already exist in .","date_time":"2024-12-10T12:28:27.8225625Z"}
+{"severity":"warning","message":"Ignore duplicated member Property:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_CloneRepository.Output from  as it already exist in .","date_time":"2024-12-10T12:28:27.8227946Z"}
+{"severity":"warning","message":"Ignore duplicated member Method:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_DownloadPackages.InternalExecute(Terrasoft.Core.Process.ProcessExecutingContext) from  as it already exist in .","date_time":"2024-12-10T12:28:27.8230455Z"}
+{"severity":"warning","message":"Ignore duplicated member Method:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_DownloadPackages.CompleteExecuting(System.Object[]) from  as it already exist in .","date_time":"2024-12-10T12:28:27.8232435Z"}
+{"severity":"warning","message":"Ignore duplicated member Method:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_DownloadPackages.CancelExecuting(System.Object[]) from  as it already exist in .","date_time":"2024-12-10T12:28:27.8234198Z"}
+{"severity":"warning","message":"Ignore duplicated member Method:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_DownloadPackages.GetExecutionData from  as it already exist in .","date_time":"2024-12-10T12:28:27.8236086Z"}
+{"severity":"warning","message":"Ignore duplicated member Method:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_DownloadPackages.GetNotificationData from  as it already exist in .","date_time":"2024-12-10T12:28:27.8237978Z"}
+{"severity":"warning","message":"Ignore duplicated member Constructor:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_DownloadPackages.#ctor(Terrasoft.Core.UserConnection) from  as it already exist in .","date_time":"2024-12-10T12:28:27.8239817Z"}
+{"severity":"warning","message":"Ignore duplicated member Method:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_DownloadPackages.WritePropertiesData(Terrasoft.Common.DataWriter) from  as it already exist in .","date_time":"2024-12-10T12:28:27.8241712Z"}
+{"severity":"warning","message":"Ignore duplicated member Method:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_DownloadPackages.ApplyPropertiesDataValues(Terrasoft.Common.DataReader) from  as it already exist in .","date_time":"2024-12-10T12:28:27.8243871Z"}
+{"severity":"warning","message":"Ignore duplicated member Property:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_DownloadPackages.ErrorMessage from  as it already exist in .","date_time":"2024-12-10T12:28:27.824572Z"}
+{"severity":"warning","message":"Ignore duplicated member Property:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_DownloadPackages.IsError from  as it already exist in .","date_time":"2024-12-10T12:28:27.8247634Z"}
+{"severity":"warning","message":"Ignore duplicated member Property:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_DownloadPackages.Output from  as it already exist in .","date_time":"2024-12-10T12:28:27.8249294Z"}
+{"severity":"warning","message":"Ignore duplicated member Property:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_DownloadPackages.Repository from  as it already exist in .","date_time":"2024-12-10T12:28:27.82513Z"}
+{"severity":"warning","message":"Ignore duplicated member Method:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_GitAddAll.InternalExecute(Terrasoft.Core.Process.ProcessExecutingContext) from  as it already exist in .","date_time":"2024-12-10T12:28:27.8253187Z"}
+{"severity":"warning","message":"Ignore duplicated member Method:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_GitAddAll.CompleteExecuting(System.Object[]) from  as it already exist in .","date_time":"2024-12-10T12:28:27.8254777Z"}
+{"severity":"warning","message":"Ignore duplicated member Method:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_GitAddAll.CancelExecuting(System.Object[]) from  as it already exist in .","date_time":"2024-12-10T12:28:27.8256408Z"}
+{"severity":"warning","message":"Ignore duplicated member Method:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_GitAddAll.GetExecutionData from  as it already exist in .","date_time":"2024-12-10T12:28:27.8258076Z"}
+{"severity":"warning","message":"Ignore duplicated member Method:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_GitAddAll.GetNotificationData from  as it already exist in .","date_time":"2024-12-10T12:28:27.8259934Z"}
+{"severity":"warning","message":"Ignore duplicated member Constructor:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_GitAddAll.#ctor(Terrasoft.Core.UserConnection) from  as it already exist in .","date_time":"2024-12-10T12:28:27.8261634Z"}
+{"severity":"warning","message":"Ignore duplicated member Method:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_GitAddAll.WritePropertiesData(Terrasoft.Common.DataWriter) from  as it already exist in .","date_time":"2024-12-10T12:28:27.8263664Z"}
+{"severity":"warning","message":"Ignore duplicated member Method:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_GitAddAll.ApplyPropertiesDataValues(Terrasoft.Common.DataReader) from  as it already exist in .","date_time":"2024-12-10T12:28:27.8265306Z"}
+{"severity":"warning","message":"Ignore duplicated member Property:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_GitAddAll.ErrorMessage from  as it already exist in .","date_time":"2024-12-10T12:28:27.8267225Z"}
+{"severity":"warning","message":"Ignore duplicated member Property:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_GitAddAll.IsError from  as it already exist in .","date_time":"2024-12-10T12:28:27.8269329Z"}
+{"severity":"warning","message":"Ignore duplicated member Property:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_GitAddAll.Repository from  as it already exist in .","date_time":"2024-12-10T12:28:27.8271396Z"}
+{"severity":"warning","message":"Ignore duplicated member Property:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_GitAddAll.Output from  as it already exist in .","date_time":"2024-12-10T12:28:27.8273526Z"}
+{"severity":"warning","message":"Ignore duplicated member Method:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_GitCommit.InternalExecute(Terrasoft.Core.Process.ProcessExecutingContext) from  as it already exist in .","date_time":"2024-12-10T12:28:27.8275283Z"}
+{"severity":"warning","message":"Ignore duplicated member Method:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_GitCommit.CompleteExecuting(System.Object[]) from  as it already exist in .","date_time":"2024-12-10T12:28:27.827723Z"}
+{"severity":"warning","message":"Ignore duplicated member Method:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_GitCommit.CancelExecuting(System.Object[]) from  as it already exist in .","date_time":"2024-12-10T12:28:27.8279361Z"}
+{"severity":"warning","message":"Ignore duplicated member Method:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_GitCommit.GetExecutionData from  as it already exist in .","date_time":"2024-12-10T12:28:27.8281117Z"}
+{"severity":"warning","message":"Ignore duplicated member Method:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_GitCommit.GetNotificationData from  as it already exist in .","date_time":"2024-12-10T12:28:27.8283011Z"}
+{"severity":"warning","message":"Ignore duplicated member Constructor:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_GitCommit.#ctor(Terrasoft.Core.UserConnection) from  as it already exist in .","date_time":"2024-12-10T12:28:27.828492Z"}
+{"severity":"warning","message":"Ignore duplicated member Method:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_GitCommit.WritePropertiesData(Terrasoft.Common.DataWriter) from  as it already exist in .","date_time":"2024-12-10T12:28:27.8287015Z"}
+{"severity":"warning","message":"Ignore duplicated member Method:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_GitCommit.ApplyPropertiesDataValues(Terrasoft.Common.DataReader) from  as it already exist in .","date_time":"2024-12-10T12:28:27.8289031Z"}
+{"severity":"warning","message":"Ignore duplicated member Property:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_GitCommit.Repository from  as it already exist in .","date_time":"2024-12-10T12:28:27.8291003Z"}
+{"severity":"warning","message":"Ignore duplicated member Property:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_GitCommit.ErrorMessage from  as it already exist in .","date_time":"2024-12-10T12:28:27.8292777Z"}
+{"severity":"warning","message":"Ignore duplicated member Property:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_GitCommit.IsError from  as it already exist in .","date_time":"2024-12-10T12:28:27.829476Z"}
+{"severity":"warning","message":"Ignore duplicated member Property:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_GitCommit.CommitMessage from  as it already exist in .","date_time":"2024-12-10T12:28:27.8297008Z"}
+{"severity":"warning","message":"Ignore duplicated member Property:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_GitCommit.Output from  as it already exist in .","date_time":"2024-12-10T12:28:27.8299126Z"}
+{"severity":"warning","message":"Ignore duplicated member Method:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_GitPush.InternalExecute(Terrasoft.Core.Process.ProcessExecutingContext) from  as it already exist in .","date_time":"2024-12-10T12:28:27.8301222Z"}
+{"severity":"warning","message":"Ignore duplicated member Method:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_GitPush.CompleteExecuting(System.Object[]) from  as it already exist in .","date_time":"2024-12-10T12:28:27.8303237Z"}
+{"severity":"warning","message":"Ignore duplicated member Method:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_GitPush.CancelExecuting(System.Object[]) from  as it already exist in .","date_time":"2024-12-10T12:28:27.830528Z"}
+{"severity":"warning","message":"Ignore duplicated member Method:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_GitPush.GetExecutionData from  as it already exist in .","date_time":"2024-12-10T12:28:27.8307216Z"}
+{"severity":"warning","message":"Ignore duplicated member Method:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_GitPush.GetNotificationData from  as it already exist in .","date_time":"2024-12-10T12:28:27.8309204Z"}
+{"severity":"warning","message":"Ignore duplicated member Constructor:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_GitPush.#ctor(Terrasoft.Core.UserConnection) from  as it already exist in .","date_time":"2024-12-10T12:28:27.8311046Z"}
+{"severity":"warning","message":"Ignore duplicated member Method:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_GitPush.WritePropertiesData(Terrasoft.Common.DataWriter) from  as it already exist in .","date_time":"2024-12-10T12:28:27.8312691Z"}
+{"severity":"warning","message":"Ignore duplicated member Method:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_GitPush.ApplyPropertiesDataValues(Terrasoft.Common.DataReader) from  as it already exist in .","date_time":"2024-12-10T12:28:27.8314563Z"}
+{"severity":"warning","message":"Ignore duplicated member Property:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_GitPush.Repository from  as it already exist in .","date_time":"2024-12-10T12:28:27.8316833Z"}
+{"severity":"warning","message":"Ignore duplicated member Property:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_GitPush.IsError from  as it already exist in .","date_time":"2024-12-10T12:28:27.831868Z"}
+{"severity":"warning","message":"Ignore duplicated member Property:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_GitPush.ErrorMessage from  as it already exist in .","date_time":"2024-12-10T12:28:27.8320563Z"}
+{"severity":"warning","message":"Ignore duplicated member Property:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_GitPush.Output from  as it already exist in .","date_time":"2024-12-10T12:28:27.8322567Z"}
+{"severity":"warning","message":"Ignore duplicated member Method:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand.InternalExecute(Terrasoft.Core.Process.ProcessExecutingContext) from  as it already exist in .","date_time":"2024-12-10T12:28:27.8324265Z"}
+{"severity":"warning","message":"Ignore duplicated member Method:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand.CompleteExecuting(System.Object[]) from  as it already exist in .","date_time":"2024-12-10T12:28:27.8325861Z"}
+{"severity":"warning","message":"Ignore duplicated member Method:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand.CancelExecuting(System.Object[]) from  as it already exist in .","date_time":"2024-12-10T12:28:27.832746Z"}
+{"severity":"warning","message":"Ignore duplicated member Method:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand.GetExecutionData from  as it already exist in .","date_time":"2024-12-10T12:28:27.8329383Z"}
+{"severity":"warning","message":"Ignore duplicated member Method:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand.GetNotificationData from  as it already exist in .","date_time":"2024-12-10T12:28:27.8331038Z"}
+{"severity":"warning","message":"Ignore duplicated member Constructor:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand.#ctor(Terrasoft.Core.UserConnection) from  as it already exist in .","date_time":"2024-12-10T12:28:27.8332684Z"}
+{"severity":"warning","message":"Ignore duplicated member Method:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand.WritePropertiesData(Terrasoft.Common.DataWriter) from  as it already exist in .","date_time":"2024-12-10T12:28:27.8334927Z"}
+{"severity":"warning","message":"Ignore duplicated member Method:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand.ApplyPropertiesDataValues(Terrasoft.Common.DataReader) from  as it already exist in .","date_time":"2024-12-10T12:28:27.8337721Z"}
+{"severity":"warning","message":"Ignore duplicated member Property:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand.FileName from  as it already exist in .","date_time":"2024-12-10T12:28:27.8339881Z"}
+{"severity":"warning","message":"Ignore duplicated member Property:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand.Arguments from  as it already exist in .","date_time":"2024-12-10T12:28:27.8341953Z"}
+{"severity":"warning","message":"Ignore duplicated member Property:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand.WorkingDirectory from  as it already exist in .","date_time":"2024-12-10T12:28:27.8344232Z"}
+{"severity":"warning","message":"Ignore duplicated member Property:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand.IsError from  as it already exist in .","date_time":"2024-12-10T12:28:27.8346094Z"}
+{"severity":"warning","message":"Ignore duplicated member Property:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand.ErrorMessage from  as it already exist in .","date_time":"2024-12-10T12:28:27.8348276Z"}
+{"severity":"warning","message":"Ignore duplicated member Property:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand.WaitForExit from  as it already exist in .","date_time":"2024-12-10T12:28:27.8350231Z"}
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/ConsoleGit/ConsoleGit/ConsoleGit.csproj","date_time":"2024-12-10T12:28:28.0791003Z"}
+{"severity":"info","message":"Processing ConsoleGit","date_time":"2024-12-10T12:28:31.1599605Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T12:28:31.7786812Z"}
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/ConsoleGit/GitAbstraction/GitAbstraction.csproj","date_time":"2024-12-10T12:28:32.0806298Z"}
+{"severity":"info","message":"Processing GitAbstraction","date_time":"2024-12-10T12:28:33.8968444Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T12:28:34.1637839Z"}
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/packages/AtfTIDE/Files/AtfTIDE.csproj","date_time":"2024-12-10T12:32:21.442063Z"}
+{"severity":"info","message":"Processing AtfTIDE","date_time":"2024-12-10T12:32:23.8881524Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T12:32:25.4989759Z"}
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/ConsoleGit/ConsoleGit/ConsoleGit.csproj","date_time":"2024-12-10T12:32:25.6436678Z"}
+{"severity":"info","message":"Processing ConsoleGit","date_time":"2024-12-10T12:32:28.6637003Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T12:32:29.2497209Z"}
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/ConsoleGit/GitAbstraction/GitAbstraction.csproj","date_time":"2024-12-10T12:32:29.4994518Z"}
+{"severity":"info","message":"Processing GitAbstraction","date_time":"2024-12-10T12:32:31.2186303Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T12:32:31.4456639Z"}
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/packages/AtfTIDE/Files/AtfTIDE.csproj","date_time":"2024-12-10T12:37:21.7657164Z"}
+{"severity":"info","message":"Processing AtfTIDE","date_time":"2024-12-10T12:37:24.2537901Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T12:37:25.9327286Z"}
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/ConsoleGit/ConsoleGit/ConsoleGit.csproj","date_time":"2024-12-10T12:37:26.086863Z"}
+{"severity":"info","message":"Processing ConsoleGit","date_time":"2024-12-10T12:37:29.1035085Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T12:37:29.6330297Z"}
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/ConsoleGit/GitAbstraction/GitAbstraction.csproj","date_time":"2024-12-10T12:37:29.8790564Z"}
+{"severity":"info","message":"Processing GitAbstraction","date_time":"2024-12-10T12:37:31.5897705Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T12:37:31.834363Z"}
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/packages/AtfTIDE/Files/AtfTIDE.csproj","date_time":"2024-12-10T12:38:05.7316655Z"}
+{"severity":"info","message":"Processing AtfTIDE","date_time":"2024-12-10T12:38:08.189147Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T12:38:09.8052306Z"}
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/ConsoleGit/ConsoleGit/ConsoleGit.csproj","date_time":"2024-12-10T12:38:09.941459Z"}
+{"severity":"info","message":"Processing ConsoleGit","date_time":"2024-12-10T12:38:12.993272Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T12:38:13.5676554Z"}
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/ConsoleGit/GitAbstraction/GitAbstraction.csproj","date_time":"2024-12-10T12:38:13.8112945Z"}
+{"severity":"info","message":"Processing GitAbstraction","date_time":"2024-12-10T12:38:15.5234651Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T12:38:15.7934668Z"}
+{"severity":"info","message":"No files are found with glob pattern ../packages/AtfTIDE/Files/Bin/AtfTIDE.dll, excluding <none>, under directory \"C:\\Projects\\Workspaces\\TIDE\\documentation\"","date_time":"2024-12-10T12:42:40.6746819Z"}
+{"severity":"warning","message":"NOTE that `../` is currently not supported in glob pattern, please use `../` in `src` option instead.","date_time":"2024-12-10T12:42:40.6835891Z"}
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/packages/AtfTIDE/Files/AtfTIDE.csproj","date_time":"2024-12-10T12:42:40.9603073Z"}
+{"severity":"info","message":"Processing AtfTIDE","date_time":"2024-12-10T12:42:43.4745852Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T12:42:45.1023252Z"}
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/ConsoleGit/ConsoleGit/ConsoleGit.csproj","date_time":"2024-12-10T12:42:45.2435088Z"}
+{"severity":"info","message":"Processing ConsoleGit","date_time":"2024-12-10T12:42:48.3458512Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T12:42:49.0454228Z"}
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/ConsoleGit/GitAbstraction/GitAbstraction.csproj","date_time":"2024-12-10T12:42:49.3649248Z"}
+{"severity":"info","message":"Processing GitAbstraction","date_time":"2024-12-10T12:42:51.1212735Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T12:42:51.4111345Z"}
+{"severity":"info","message":"No files are found with glob pattern Bin/AtfTIDE.dll, excluding <none>, under directory \"C:\\Projects\\Workspaces\\TIDE\\documentation\"","date_time":"2024-12-10T12:43:38.5866507Z"}
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/packages/AtfTIDE/Files/AtfTIDE.csproj","date_time":"2024-12-10T12:43:38.8579933Z"}
+{"severity":"info","message":"Processing AtfTIDE","date_time":"2024-12-10T12:43:41.3736524Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T12:43:43.0354515Z"}
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/ConsoleGit/ConsoleGit/ConsoleGit.csproj","date_time":"2024-12-10T12:43:43.1822548Z"}
+{"severity":"info","message":"Processing ConsoleGit","date_time":"2024-12-10T12:43:46.2362642Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T12:43:46.8134186Z"}
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/ConsoleGit/GitAbstraction/GitAbstraction.csproj","date_time":"2024-12-10T12:43:47.1009858Z"}
+{"severity":"info","message":"Processing GitAbstraction","date_time":"2024-12-10T12:43:48.8009092Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T12:43:49.0527896Z"}
+{"severity":"info","message":"No files are found with glob pattern ErrorOr.dll, excluding <none>, under directory \"C:\\Projects\\Workspaces\\TIDE\\documentation\"","date_time":"2024-12-10T12:49:04.4269205Z"}
+{"severity":"info","message":"Loading assembly C:/Projects/Workspaces/TIDE/packages/AtfTIDE/Files/Bin/AtfTIDE.dll","date_time":"2024-12-10T12:49:04.6891921Z"}
+{"severity":"warning","message":"Unable to resolve assembly reference Terrasoft.Core, Version=8.2.0.4183, Culture=neutral, PublicKeyToken=edaadfbc3b0bb879","date_time":"2024-12-10T12:49:04.7552801Z","code":"InvalidAssemblyReference"}
+{"severity":"warning","message":"Unable to resolve assembly reference Terrasoft.Common, Version=8.2.0.4183, Culture=neutral, PublicKeyToken=edaadfbc3b0bb879","date_time":"2024-12-10T12:49:04.7557979Z","code":"InvalidAssemblyReference"}
+{"severity":"warning","message":"Unable to resolve assembly reference Terrasoft.Web.Common, Version=8.2.0.4183, Culture=neutral, PublicKeyToken=edaadfbc3b0bb879","date_time":"2024-12-10T12:49:04.8993962Z","code":"InvalidAssemblyReference"}
+{"severity":"warning","message":"Unable to resolve assembly reference Terrasoft.Web.Http.Abstractions, Version=8.2.0.4183, Culture=neutral, PublicKeyToken=edaadfbc3b0bb879","date_time":"2024-12-10T12:49:04.9248189Z","code":"InvalidAssemblyReference"}
+{"severity":"info","message":"Processing AtfTIDE","date_time":"2024-12-10T12:49:05.372985Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T12:49:05.6212723Z"}
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/ConsoleGit/ConsoleGit/ConsoleGit.csproj","date_time":"2024-12-10T12:49:05.8395507Z"}
+{"severity":"info","message":"Processing ConsoleGit","date_time":"2024-12-10T12:49:09.2046338Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T12:49:09.8367329Z"}
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/ConsoleGit/GitAbstraction/GitAbstraction.csproj","date_time":"2024-12-10T12:49:10.0790176Z"}
+{"severity":"info","message":"Processing GitAbstraction","date_time":"2024-12-10T12:49:11.8558219Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T12:49:12.2919315Z"}
+{"severity":"info","message":"No files are found with glob pattern ErrorOr.dll, excluding <none>, under directory \"C:\\Projects\\Workspaces\\TIDE\\documentation\"","date_time":"2024-12-10T12:50:21.1082615Z"}
+{"severity":"info","message":"Loading assembly C:/Projects/Workspaces/TIDE/packages/AtfTIDE/Files/Bin/AtfTIDE.dll","date_time":"2024-12-10T12:50:21.3784314Z"}
+{"severity":"warning","message":"Unable to resolve assembly reference Terrasoft.Core, Version=8.2.0.4183, Culture=neutral, PublicKeyToken=edaadfbc3b0bb879","date_time":"2024-12-10T12:50:21.4454984Z","code":"InvalidAssemblyReference"}
+{"severity":"warning","message":"Unable to resolve assembly reference Terrasoft.Common, Version=8.2.0.4183, Culture=neutral, PublicKeyToken=edaadfbc3b0bb879","date_time":"2024-12-10T12:50:21.4460096Z","code":"InvalidAssemblyReference"}
+{"severity":"warning","message":"Unable to resolve assembly reference Terrasoft.Web.Common, Version=8.2.0.4183, Culture=neutral, PublicKeyToken=edaadfbc3b0bb879","date_time":"2024-12-10T12:50:21.588313Z","code":"InvalidAssemblyReference"}
+{"severity":"warning","message":"Unable to resolve assembly reference Terrasoft.Web.Http.Abstractions, Version=8.2.0.4183, Culture=neutral, PublicKeyToken=edaadfbc3b0bb879","date_time":"2024-12-10T12:50:21.6149866Z","code":"InvalidAssemblyReference"}
+{"severity":"info","message":"Processing AtfTIDE","date_time":"2024-12-10T12:50:22.07121Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T12:50:22.3310482Z"}
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/ConsoleGit/ConsoleGit/ConsoleGit.csproj","date_time":"2024-12-10T12:50:22.471461Z"}
+{"severity":"info","message":"Processing ConsoleGit","date_time":"2024-12-10T12:50:26.2811801Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T12:50:26.8819992Z"}
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/ConsoleGit/GitAbstraction/GitAbstraction.csproj","date_time":"2024-12-10T12:50:27.0950513Z"}
+{"severity":"info","message":"Processing GitAbstraction","date_time":"2024-12-10T12:50:28.8883891Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T12:50:29.3394461Z"}
+{"severity":"info","message":"No files are found with glob pattern ErrorOr.dll, excluding <none>, under directory \"C:\\Projects\\Workspaces\\TIDE\\documentation\"","date_time":"2024-12-10T12:52:23.142023Z"}
+{"severity":"info","message":"Loading assembly C:/Projects/Workspaces/TIDE/packages/AtfTIDE/Files/Bin/AtfTIDE.dll","date_time":"2024-12-10T12:52:23.4093342Z"}
+{"severity":"warning","message":"Unable to resolve assembly reference Terrasoft.Core, Version=8.2.0.4183, Culture=neutral, PublicKeyToken=edaadfbc3b0bb879","date_time":"2024-12-10T12:52:23.4765119Z","code":"InvalidAssemblyReference"}
+{"severity":"warning","message":"Unable to resolve assembly reference Terrasoft.Common, Version=8.2.0.4183, Culture=neutral, PublicKeyToken=edaadfbc3b0bb879","date_time":"2024-12-10T12:52:23.477057Z","code":"InvalidAssemblyReference"}
+{"severity":"warning","message":"Unable to resolve assembly reference Terrasoft.Web.Common, Version=8.2.0.4183, Culture=neutral, PublicKeyToken=edaadfbc3b0bb879","date_time":"2024-12-10T12:52:23.6185792Z","code":"InvalidAssemblyReference"}
+{"severity":"warning","message":"Unable to resolve assembly reference Terrasoft.Web.Http.Abstractions, Version=8.2.0.4183, Culture=neutral, PublicKeyToken=edaadfbc3b0bb879","date_time":"2024-12-10T12:52:23.6452281Z","code":"InvalidAssemblyReference"}
+{"severity":"info","message":"Processing AtfTIDE","date_time":"2024-12-10T12:52:24.0941272Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T12:52:24.4013638Z"}
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/ConsoleGit/ConsoleGit/ConsoleGit.csproj","date_time":"2024-12-10T12:52:24.6064325Z"}
+{"severity":"info","message":"Processing ConsoleGit","date_time":"2024-12-10T12:52:28.1832258Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T12:52:28.7992126Z"}
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/ConsoleGit/GitAbstraction/GitAbstraction.csproj","date_time":"2024-12-10T12:52:29.0446149Z"}
+{"severity":"info","message":"Processing GitAbstraction","date_time":"2024-12-10T12:52:30.8039569Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T12:52:31.2918103Z"}
+{"severity":"info","message":"No files are found with glob pattern ErrorOr.dll, excluding <none>, under directory \"C:\\Projects\\Workspaces\\TIDE\\documentation\"","date_time":"2024-12-10T12:55:29.284953Z"}
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/packages/AtfTIDE/Files/AtfTIDE.csproj","date_time":"2024-12-10T12:55:29.5540802Z"}
+{"severity":"info","message":"Processing AtfTIDE","date_time":"2024-12-10T12:55:33.0164199Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T12:55:35.0438522Z"}
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/ConsoleGit/ConsoleGit/ConsoleGit.csproj","date_time":"2024-12-10T12:55:35.5847921Z"}
+{"severity":"info","message":"Processing ConsoleGit","date_time":"2024-12-10T12:55:38.6869656Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T12:55:39.2834604Z"}
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/ConsoleGit/GitAbstraction/GitAbstraction.csproj","date_time":"2024-12-10T12:55:39.5690606Z"}
+{"severity":"info","message":"Processing GitAbstraction","date_time":"2024-12-10T12:55:41.3073161Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T12:55:41.5911066Z"}
+{"severity":"info","message":"No files are found with glob pattern ErrorOr.dll, excluding <none>, under directory \"C:\\Projects\\Workspaces\\TIDE\\documentation\"","date_time":"2024-12-10T12:59:56.7736994Z"}
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/packages/AtfTIDE/Files/AtfTIDE.csproj","date_time":"2024-12-10T12:59:57.0415512Z"}
+{"severity":"info","message":"Processing AtfTIDE","date_time":"2024-12-10T12:59:59.4746548Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T13:00:01.38682Z"}
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/ConsoleGit/ConsoleGit/ConsoleGit.csproj","date_time":"2024-12-10T13:00:01.8606472Z"}
+{"severity":"info","message":"Processing ConsoleGit","date_time":"2024-12-10T13:00:05.027929Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T13:00:05.6273973Z"}
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/ConsoleGit/GitAbstraction/GitAbstraction.csproj","date_time":"2024-12-10T13:00:05.9131109Z"}
+{"severity":"info","message":"Processing GitAbstraction","date_time":"2024-12-10T13:00:07.6103653Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T13:00:07.9117183Z"}
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/packages/AtfTIDE/Files/AtfTIDE.csproj","date_time":"2024-12-10T13:01:33.7088054Z"}
+{"severity":"info","message":"Processing AtfTIDE","date_time":"2024-12-10T13:01:36.1828831Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T13:01:38.1039567Z"}
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/ConsoleGit/ConsoleGit/ConsoleGit.csproj","date_time":"2024-12-10T13:01:38.5739945Z"}
+{"severity":"info","message":"Processing ConsoleGit","date_time":"2024-12-10T13:01:41.6116383Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T13:01:42.1940246Z"}
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/ConsoleGit/GitAbstraction/GitAbstraction.csproj","date_time":"2024-12-10T13:01:42.4707667Z"}
+{"severity":"info","message":"Processing GitAbstraction","date_time":"2024-12-10T13:01:44.1906604Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T13:01:44.4577933Z"}
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/packages/AtfTIDE/Files/AtfTIDE.csproj","date_time":"2024-12-10T13:02:23.1091903Z"}
+{"severity":"info","message":"Processing AtfTIDE","date_time":"2024-12-10T13:02:25.5733934Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T13:02:27.532683Z"}
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/ConsoleGit/ConsoleGit/ConsoleGit.csproj","date_time":"2024-12-10T13:02:28.0832546Z"}
+{"severity":"info","message":"Processing ConsoleGit","date_time":"2024-12-10T13:02:31.0985178Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T13:02:31.7016837Z"}
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/ConsoleGit/GitAbstraction/GitAbstraction.csproj","date_time":"2024-12-10T13:02:31.9803137Z"}
+{"severity":"info","message":"Processing GitAbstraction","date_time":"2024-12-10T13:02:33.6793095Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T13:02:33.8945966Z"}
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/packages/AtfTIDE/Files/AtfTIDE.csproj","date_time":"2024-12-10T13:03:14.9099514Z"}
+{"severity":"info","message":"Processing AtfTIDE","date_time":"2024-12-10T13:03:17.3703792Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T13:03:19.2824908Z"}
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/ConsoleGit/ConsoleGit/ConsoleGit.csproj","date_time":"2024-12-10T13:03:19.7489102Z"}
+{"severity":"info","message":"Processing ConsoleGit","date_time":"2024-12-10T13:03:22.8164098Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T13:03:23.3815295Z"}
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/ConsoleGit/GitAbstraction/GitAbstraction.csproj","date_time":"2024-12-10T13:03:23.6597955Z"}
+{"severity":"info","message":"Processing GitAbstraction","date_time":"2024-12-10T13:03:25.3842364Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T13:03:25.6475625Z"}
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/packages/AtfTIDE/Files/AtfTIDE.csproj","date_time":"2024-12-10T13:03:46.6906402Z"}
+{"severity":"info","message":"Processing AtfTIDE","date_time":"2024-12-10T13:03:49.1636837Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T13:03:51.1132462Z"}
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/ConsoleGit/ConsoleGit/ConsoleGit.csproj","date_time":"2024-12-10T13:03:51.586362Z"}
+{"severity":"info","message":"Processing ConsoleGit","date_time":"2024-12-10T13:03:54.6719822Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T13:03:55.2432425Z"}
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/ConsoleGit/GitAbstraction/GitAbstraction.csproj","date_time":"2024-12-10T13:03:55.5166274Z"}
+{"severity":"info","message":"Processing GitAbstraction","date_time":"2024-12-10T13:03:57.2535819Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T13:03:57.4910107Z"}
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/packages/AtfTIDE/Files/AtfTIDE.csproj","date_time":"2024-12-10T13:04:27.4542055Z"}
+{"severity":"info","message":"Processing AtfTIDE","date_time":"2024-12-10T13:04:30.0039138Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T13:04:32.1277085Z"}
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/ConsoleGit/ConsoleGit/ConsoleGit.csproj","date_time":"2024-12-10T13:04:32.6860006Z"}
+{"severity":"info","message":"Processing ConsoleGit","date_time":"2024-12-10T13:04:35.8814852Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T13:04:36.487162Z"}
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/ConsoleGit/GitAbstraction/GitAbstraction.csproj","date_time":"2024-12-10T13:04:36.8185941Z"}
+{"severity":"info","message":"Processing GitAbstraction","date_time":"2024-12-10T13:04:38.6213844Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T13:04:38.9473547Z"}
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/packages/AtfTIDE/Files/AtfTIDE.csproj","date_time":"2024-12-10T13:09:48.5830492Z"}
+{"severity":"info","message":"Processing AtfTIDE","date_time":"2024-12-10T13:09:51.0560871Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T13:09:52.7199937Z"}
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/ConsoleGit/ConsoleGit/ConsoleGit.csproj","date_time":"2024-12-10T13:09:52.8655199Z"}
+{"severity":"info","message":"Processing ConsoleGit","date_time":"2024-12-10T13:09:55.9271437Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T13:09:56.5061827Z"}
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/ConsoleGit/GitAbstraction/GitAbstraction.csproj","date_time":"2024-12-10T13:09:56.7553413Z"}
+{"severity":"info","message":"Processing GitAbstraction","date_time":"2024-12-10T13:09:58.4782192Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T13:09:58.7570125Z"}
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/packages/AtfTIDE/Files/AtfTIDE.csproj","date_time":"2024-12-10T13:10:32.2080672Z"}
+{"severity":"info","message":"Processing AtfTIDE","date_time":"2024-12-10T13:10:34.67449Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T13:10:36.4297902Z"}
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/ConsoleGit/ConsoleGit/ConsoleGit.csproj","date_time":"2024-12-10T13:10:36.6483458Z"}
+{"severity":"info","message":"Processing ConsoleGit","date_time":"2024-12-10T13:10:39.691084Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T13:10:40.2121138Z"}
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/ConsoleGit/GitAbstraction/GitAbstraction.csproj","date_time":"2024-12-10T13:10:40.4554609Z"}
+{"severity":"info","message":"Processing GitAbstraction","date_time":"2024-12-10T13:10:42.1772464Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T13:10:42.4418622Z"}
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/packages/AtfTIDE/Files/AtfTIDE.csproj","date_time":"2024-12-10T13:17:01.2467781Z"}
+{"severity":"info","message":"Processing AtfTIDE","date_time":"2024-12-10T13:17:03.7200197Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T13:17:05.6868512Z"}
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/ConsoleGit/ConsoleGit/ConsoleGit.csproj","date_time":"2024-12-10T13:17:06.2308006Z"}
+{"severity":"info","message":"Processing ConsoleGit","date_time":"2024-12-10T13:17:09.2940633Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T13:17:09.868724Z"}
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/ConsoleGit/GitAbstraction/GitAbstraction.csproj","date_time":"2024-12-10T13:17:10.1522392Z"}
+{"severity":"info","message":"Processing GitAbstraction","date_time":"2024-12-10T13:17:11.8474867Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T13:17:12.0965542Z"}
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/packages/AtfTIDE/Files/AtfTIDE.csproj","date_time":"2024-12-10T13:24:01.5622147Z"}
+{"severity":"info","message":"Processing AtfTIDE","date_time":"2024-12-10T13:24:04.0453163Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T13:24:05.8078776Z"}
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/ConsoleGit/ConsoleGit/ConsoleGit.csproj","date_time":"2024-12-10T13:24:06.0253345Z"}
+{"severity":"info","message":"Processing ConsoleGit","date_time":"2024-12-10T13:24:09.1134203Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T13:24:09.6834896Z"}
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/ConsoleGit/GitAbstraction/GitAbstraction.csproj","date_time":"2024-12-10T13:24:09.9270437Z"}
+{"severity":"info","message":"Processing GitAbstraction","date_time":"2024-12-10T13:24:11.6350993Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T13:24:11.8898668Z"}
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/packages/AtfTIDE/Files/AtfTIDE.csproj","date_time":"2024-12-10T13:25:41.4553984Z"}
+{"severity":"info","message":"Processing AtfTIDE","date_time":"2024-12-10T13:25:43.9647379Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T13:25:45.7968787Z"}
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/ConsoleGit/ConsoleGit/ConsoleGit.csproj","date_time":"2024-12-10T13:25:46.0140694Z"}
+{"severity":"info","message":"Processing ConsoleGit","date_time":"2024-12-10T13:25:49.1221489Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T13:25:49.6634209Z"}
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/ConsoleGit/GitAbstraction/GitAbstraction.csproj","date_time":"2024-12-10T13:25:49.9075317Z"}
+{"severity":"info","message":"Processing GitAbstraction","date_time":"2024-12-10T13:25:51.6631769Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T13:25:51.927999Z"}
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/packages/AtfTIDE/Files/AtfTIDE.csproj","date_time":"2024-12-10T13:28:09.3396753Z"}
+{"severity":"info","message":"Processing AtfTIDE","date_time":"2024-12-10T13:28:11.8613571Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T13:28:13.8643178Z"}
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/ConsoleGit/ConsoleGit/ConsoleGit.csproj","date_time":"2024-12-10T13:28:14.412057Z"}
+{"severity":"info","message":"Processing ConsoleGit","date_time":"2024-12-10T13:28:17.4471462Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T13:28:18.0289156Z"}
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/ConsoleGit/GitAbstraction/GitAbstraction.csproj","date_time":"2024-12-10T13:28:18.3053142Z"}
+{"severity":"info","message":"Processing GitAbstraction","date_time":"2024-12-10T13:28:20.0387247Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T13:28:20.3035051Z"}
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/packages/AtfTIDE/Files/AtfTIDE.csproj","date_time":"2024-12-10T13:29:23.6330992Z"}
+{"severity":"info","message":"Processing AtfTIDE","date_time":"2024-12-10T13:29:26.0992264Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T13:29:28.0718503Z"}
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/ConsoleGit/ConsoleGit/ConsoleGit.csproj","date_time":"2024-12-10T13:29:28.6057917Z"}
+{"severity":"info","message":"Processing ConsoleGit","date_time":"2024-12-10T13:29:31.6244025Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T13:29:32.150269Z"}
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/ConsoleGit/GitAbstraction/GitAbstraction.csproj","date_time":"2024-12-10T13:29:32.4277523Z"}
+{"severity":"info","message":"Processing GitAbstraction","date_time":"2024-12-10T13:29:34.1549279Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T13:29:34.4204411Z"}
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/packages/AtfTIDE/Files/AtfTIDE.csproj","date_time":"2024-12-10T13:30:32.9643827Z"}
+{"severity":"info","message":"Processing AtfTIDE","date_time":"2024-12-10T13:30:35.4320885Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T13:30:37.4045446Z"}
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/ConsoleGit/ConsoleGit/ConsoleGit.csproj","date_time":"2024-12-10T13:30:37.877351Z"}
+{"severity":"info","message":"Processing ConsoleGit","date_time":"2024-12-10T13:30:40.9643287Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T13:30:41.4907239Z"}
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/ConsoleGit/GitAbstraction/GitAbstraction.csproj","date_time":"2024-12-10T13:30:41.7687291Z"}
+{"severity":"info","message":"Processing GitAbstraction","date_time":"2024-12-10T13:30:43.6106728Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T13:30:43.9219278Z"}
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/packages/AtfTIDE/Files/AtfTIDE.csproj","date_time":"2024-12-10T13:31:09.7520564Z"}
+{"severity":"info","message":"Processing AtfTIDE","date_time":"2024-12-10T13:31:12.262883Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T13:31:14.2240497Z"}
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/ConsoleGit/ConsoleGit/ConsoleGit.csproj","date_time":"2024-12-10T13:31:14.698821Z"}
+{"severity":"info","message":"Processing ConsoleGit","date_time":"2024-12-10T13:31:17.7448963Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T13:31:18.2690755Z"}
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/ConsoleGit/GitAbstraction/GitAbstraction.csproj","date_time":"2024-12-10T13:31:18.5448549Z"}
+{"severity":"info","message":"Processing GitAbstraction","date_time":"2024-12-10T13:31:20.2587965Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T13:31:20.5366964Z"}
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/packages/AtfTIDE/Files/AtfTIDE.csproj","date_time":"2024-12-10T13:32:05.5733114Z"}
+{"severity":"info","message":"Processing AtfTIDE","date_time":"2024-12-10T13:32:08.1497765Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T13:32:10.1573672Z"}
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/ConsoleGit/ConsoleGit/ConsoleGit.csproj","date_time":"2024-12-10T13:32:10.7022102Z"}
+{"severity":"info","message":"Processing ConsoleGit","date_time":"2024-12-10T13:32:13.7742953Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T13:32:14.3050922Z"}
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/ConsoleGit/GitAbstraction/GitAbstraction.csproj","date_time":"2024-12-10T13:32:14.5905918Z"}
+{"severity":"info","message":"Processing GitAbstraction","date_time":"2024-12-10T13:32:16.3255316Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T13:32:16.6030338Z"}
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/packages/AtfTIDE/Files/AtfTIDE.csproj","date_time":"2024-12-10T13:38:12.263628Z"}
+{"severity":"info","message":"Processing AtfTIDE","date_time":"2024-12-10T13:38:14.7247449Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T13:38:16.6693451Z"}
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/ConsoleGit/ConsoleGit/ConsoleGit.csproj","date_time":"2024-12-10T13:38:17.2069384Z"}
+{"severity":"info","message":"Processing ConsoleGit","date_time":"2024-12-10T13:38:20.231648Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T13:38:20.8053578Z"}
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/ConsoleGit/GitAbstraction/GitAbstraction.csproj","date_time":"2024-12-10T13:38:21.0830167Z"}
+{"severity":"info","message":"Processing GitAbstraction","date_time":"2024-12-10T13:38:22.7887444Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T13:38:23.0528145Z"}
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/packages/AtfTIDE/Files/AtfTIDE.csproj","date_time":"2024-12-10T13:39:18.7360559Z"}
+{"severity":"info","message":"Processing AtfTIDE","date_time":"2024-12-10T13:39:21.2373458Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T13:39:23.2427172Z"}
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/ConsoleGit/ConsoleGit/ConsoleGit.csproj","date_time":"2024-12-10T13:39:23.7931969Z"}
+{"severity":"info","message":"Processing ConsoleGit","date_time":"2024-12-10T13:39:26.8336635Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T13:39:27.4175264Z"}
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/ConsoleGit/GitAbstraction/GitAbstraction.csproj","date_time":"2024-12-10T13:39:27.699077Z"}
+{"severity":"info","message":"Processing GitAbstraction","date_time":"2024-12-10T13:39:29.4029526Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T13:39:29.6835044Z"}
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/packages/AtfTIDE/Files/AtfTIDE.csproj","date_time":"2024-12-10T13:39:42.1341463Z"}
+{"severity":"info","message":"Processing AtfTIDE","date_time":"2024-12-10T13:39:44.619835Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T13:39:46.58516Z"}
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/ConsoleGit/ConsoleGit/ConsoleGit.csproj","date_time":"2024-12-10T13:39:47.129069Z"}
+{"severity":"info","message":"Processing ConsoleGit","date_time":"2024-12-10T13:39:50.1740646Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T13:39:50.5418867Z"}
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/ConsoleGit/GitAbstraction/GitAbstraction.csproj","date_time":"2024-12-10T13:39:50.8208282Z"}
+{"severity":"info","message":"Processing GitAbstraction","date_time":"2024-12-10T13:39:52.7009647Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T13:39:52.9581642Z"}
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/packages/AtfTIDE/Files/AtfTIDE.csproj","date_time":"2024-12-10T13:42:14.0821513Z"}
+{"severity":"info","message":"Processing AtfTIDE","date_time":"2024-12-10T13:42:16.5488245Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T13:42:18.4826349Z"}
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/ConsoleGit/ConsoleGit/ConsoleGit.csproj","date_time":"2024-12-10T13:42:19.013362Z"}
+{"severity":"info","message":"Processing ConsoleGit","date_time":"2024-12-10T13:42:22.0617128Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T13:42:22.613792Z"}
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/ConsoleGit/GitAbstraction/GitAbstraction.csproj","date_time":"2024-12-10T13:42:22.8956329Z"}
+{"severity":"info","message":"Processing GitAbstraction","date_time":"2024-12-10T13:42:24.5766331Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T13:42:24.8246901Z"}
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/packages/AtfTIDE/Files/AtfTIDE.csproj","date_time":"2024-12-10T13:44:54.8713462Z"}
+{"severity":"info","message":"Processing AtfTIDE","date_time":"2024-12-10T13:44:57.3555493Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T13:44:59.3771047Z"}
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/ConsoleGit/ConsoleGit/ConsoleGit.csproj","date_time":"2024-12-10T13:44:59.923684Z"}
+{"severity":"info","message":"Processing ConsoleGit","date_time":"2024-12-10T13:45:03.0209549Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T13:45:03.6004357Z"}
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/ConsoleGit/GitAbstraction/GitAbstraction.csproj","date_time":"2024-12-10T13:45:03.890384Z"}
+{"severity":"info","message":"Processing GitAbstraction","date_time":"2024-12-10T13:45:05.5937111Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T13:45:05.8657681Z"}
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/packages/AtfTIDE/Files/AtfTIDE.csproj","date_time":"2024-12-10T13:46:08.2234413Z"}
+{"severity":"info","message":"Processing AtfTIDE","date_time":"2024-12-10T13:46:10.7676837Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T13:46:12.7675844Z"}
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/ConsoleGit/ConsoleGit/ConsoleGit.csproj","date_time":"2024-12-10T13:46:13.3003685Z"}
+{"severity":"info","message":"Processing ConsoleGit","date_time":"2024-12-10T13:46:16.4710181Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T13:46:17.0620919Z"}
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/ConsoleGit/GitAbstraction/GitAbstraction.csproj","date_time":"2024-12-10T13:46:17.3412759Z"}
+{"severity":"info","message":"Processing GitAbstraction","date_time":"2024-12-10T13:46:19.065485Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T13:46:19.3374473Z"}
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/packages/AtfTIDE/Files/AtfTIDE.csproj","date_time":"2024-12-10T13:49:13.81583Z"}
+{"severity":"info","message":"Processing AtfTIDE","date_time":"2024-12-10T13:49:16.293176Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T13:49:18.2481177Z"}
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/ConsoleGit/ConsoleGit/ConsoleGit.csproj","date_time":"2024-12-10T13:49:18.7851263Z"}
+{"severity":"info","message":"Processing ConsoleGit","date_time":"2024-12-10T13:49:21.9147153Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T13:49:22.5033402Z"}
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/ConsoleGit/GitAbstraction/GitAbstraction.csproj","date_time":"2024-12-10T13:49:22.7764508Z"}
+{"severity":"info","message":"Processing GitAbstraction","date_time":"2024-12-10T13:49:24.587971Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T13:49:24.8623362Z"}
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/packages/AtfTIDE/Files/AtfTIDE.csproj","date_time":"2024-12-10T13:53:52.9074433Z"}
+{"severity":"info","message":"Processing AtfTIDE","date_time":"2024-12-10T13:53:55.3668123Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T13:53:57.3223849Z"}
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/ConsoleGit/ConsoleGit/ConsoleGit.csproj","date_time":"2024-12-10T13:53:57.8718292Z"}
+{"severity":"info","message":"Processing ConsoleGit","date_time":"2024-12-10T13:54:00.8881476Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T13:54:01.462946Z"}
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/ConsoleGit/GitAbstraction/GitAbstraction.csproj","date_time":"2024-12-10T13:54:01.7405501Z"}
+{"severity":"info","message":"Processing GitAbstraction","date_time":"2024-12-10T13:54:03.4615249Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T13:54:03.7390167Z"}
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/packages/AtfTIDE/Files/AtfTIDE.csproj","date_time":"2024-12-10T13:58:24.1060574Z"}
+{"severity":"info","message":"Processing AtfTIDE","date_time":"2024-12-10T13:58:26.5823723Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T13:58:28.5524873Z"}
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/ConsoleGit/ConsoleGit/ConsoleGit.csproj","date_time":"2024-12-10T13:58:29.0946909Z"}
+{"severity":"info","message":"Processing ConsoleGit","date_time":"2024-12-10T13:58:32.1323977Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T13:58:32.6544727Z"}
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/ConsoleGit/GitAbstraction/GitAbstraction.csproj","date_time":"2024-12-10T13:58:32.9290568Z"}
+{"severity":"info","message":"Processing GitAbstraction","date_time":"2024-12-10T13:58:34.6459343Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T13:58:34.9163533Z"}
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/packages/AtfTIDE/Files/AtfTIDE.csproj","date_time":"2024-12-10T13:59:31.5076502Z"}
+{"severity":"info","message":"Processing AtfTIDE","date_time":"2024-12-10T13:59:33.9629323Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T13:59:35.9132988Z"}
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/ConsoleGit/ConsoleGit/ConsoleGit.csproj","date_time":"2024-12-10T13:59:36.4394207Z"}
+{"severity":"info","message":"Processing ConsoleGit","date_time":"2024-12-10T13:59:39.4743246Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T13:59:40.0303446Z"}
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/ConsoleGit/GitAbstraction/GitAbstraction.csproj","date_time":"2024-12-10T13:59:40.3082582Z"}
+{"severity":"info","message":"Processing GitAbstraction","date_time":"2024-12-10T13:59:42.0084385Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T13:59:42.2898075Z"}
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/packages/AtfTIDE/Files/AtfTIDE.csproj","date_time":"2024-12-10T14:02:49.8024337Z"}
+{"severity":"info","message":"Processing AtfTIDE","date_time":"2024-12-10T14:02:52.3153412Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T14:02:54.3600025Z"}
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/ConsoleGit/ConsoleGit/ConsoleGit.csproj","date_time":"2024-12-10T14:02:54.9306829Z"}
+{"severity":"info","message":"Processing ConsoleGit","date_time":"2024-12-10T14:02:58.0246521Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T14:02:58.584585Z"}
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/ConsoleGit/GitAbstraction/GitAbstraction.csproj","date_time":"2024-12-10T14:02:58.8656768Z"}
+{"severity":"info","message":"Processing GitAbstraction","date_time":"2024-12-10T14:03:00.5721335Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T14:03:00.856877Z"}
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/packages/AtfTIDE/Files/AtfTIDE.csproj","date_time":"2024-12-10T14:04:00.5445811Z"}
+{"severity":"info","message":"Processing AtfTIDE","date_time":"2024-12-10T14:04:03.0060227Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T14:04:04.9591289Z"}
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/ConsoleGit/ConsoleGit/ConsoleGit.csproj","date_time":"2024-12-10T14:04:05.5002173Z"}
+{"severity":"info","message":"Processing ConsoleGit","date_time":"2024-12-10T14:04:08.5130893Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T14:04:09.0989091Z"}
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/ConsoleGit/GitAbstraction/GitAbstraction.csproj","date_time":"2024-12-10T14:04:09.375443Z"}
+{"severity":"info","message":"Processing GitAbstraction","date_time":"2024-12-10T14:04:11.0680882Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T14:04:11.3489949Z"}
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/packages/AtfTIDE/Files/AtfTIDE.csproj","date_time":"2024-12-10T14:05:10.391927Z"}
+{"severity":"info","message":"Processing AtfTIDE","date_time":"2024-12-10T14:05:12.8628187Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T14:05:14.8527145Z"}
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/ConsoleGit/ConsoleGit/ConsoleGit.csproj","date_time":"2024-12-10T14:05:15.3978615Z"}
+{"severity":"info","message":"Processing ConsoleGit","date_time":"2024-12-10T14:05:18.404465Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T14:05:18.912202Z"}
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/ConsoleGit/GitAbstraction/GitAbstraction.csproj","date_time":"2024-12-10T14:05:19.1893346Z"}
+{"severity":"info","message":"Processing GitAbstraction","date_time":"2024-12-10T14:05:20.9036603Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T14:05:21.1610666Z"}
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/packages/AtfTIDE/Files/AtfTIDE.csproj","date_time":"2024-12-10T14:09:19.3063961Z"}
+{"severity":"info","message":"Processing AtfTIDE","date_time":"2024-12-10T14:09:21.7991066Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T14:09:23.759936Z"}
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/ConsoleGit/ConsoleGit/ConsoleGit.csproj","date_time":"2024-12-10T14:09:24.3050636Z"}
+{"severity":"info","message":"Processing ConsoleGit","date_time":"2024-12-10T14:09:27.3289235Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T14:09:27.9012817Z"}
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/ConsoleGit/GitAbstraction/GitAbstraction.csproj","date_time":"2024-12-10T14:09:28.2124095Z"}
+{"severity":"info","message":"Processing GitAbstraction","date_time":"2024-12-10T14:09:29.8958422Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T14:09:30.172219Z"}
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/packages/AtfTIDE/Files/AtfTIDE.csproj","date_time":"2024-12-10T14:09:52.2532635Z"}
+{"severity":"info","message":"Processing AtfTIDE","date_time":"2024-12-10T14:09:54.6438576Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T14:09:56.5902937Z"}
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/ConsoleGit/ConsoleGit/ConsoleGit.csproj","date_time":"2024-12-10T14:09:57.1219153Z"}
+{"severity":"info","message":"Processing ConsoleGit","date_time":"2024-12-10T14:10:00.0532081Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T14:10:00.6099531Z"}
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/ConsoleGit/GitAbstraction/GitAbstraction.csproj","date_time":"2024-12-10T14:10:00.8806476Z"}
+{"severity":"info","message":"Processing GitAbstraction","date_time":"2024-12-10T14:10:02.5373549Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T14:10:02.8066099Z"}
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/packages/AtfTIDE/Files/AtfTIDE.csproj","date_time":"2024-12-10T14:10:43.1559456Z"}
+{"severity":"info","message":"Processing AtfTIDE","date_time":"2024-12-10T14:10:45.554524Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T14:10:47.5057802Z"}
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/ConsoleGit/ConsoleGit/ConsoleGit.csproj","date_time":"2024-12-10T14:10:48.0392645Z"}
+{"severity":"info","message":"Processing ConsoleGit","date_time":"2024-12-10T14:10:51.0140422Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T14:10:51.5746858Z"}
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/ConsoleGit/GitAbstraction/GitAbstraction.csproj","date_time":"2024-12-10T14:10:51.8462392Z"}
+{"severity":"info","message":"Processing GitAbstraction","date_time":"2024-12-10T14:10:53.5055952Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T14:10:53.7481704Z"}
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/packages/AtfTIDE/Files/AtfTIDE.csproj","date_time":"2024-12-10T14:11:46.118981Z"}
+{"severity":"info","message":"Processing AtfTIDE","date_time":"2024-12-10T14:11:48.5400762Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T14:11:50.5004507Z"}
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/ConsoleGit/ConsoleGit/ConsoleGit.csproj","date_time":"2024-12-10T14:11:51.0332244Z"}
+{"severity":"info","message":"Processing ConsoleGit","date_time":"2024-12-10T14:11:54.0111425Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T14:11:54.5941211Z"}
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/ConsoleGit/GitAbstraction/GitAbstraction.csproj","date_time":"2024-12-10T14:11:54.8705307Z"}
+{"severity":"info","message":"Processing GitAbstraction","date_time":"2024-12-10T14:11:56.5570455Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T14:11:56.8392018Z"}
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/packages/AtfTIDE/Files/AtfTIDE.csproj","date_time":"2024-12-10T14:12:30.4566394Z"}
+{"severity":"info","message":"Processing AtfTIDE","date_time":"2024-12-10T14:12:33.4808249Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T14:12:35.4166078Z"}
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/ConsoleGit/ConsoleGit/ConsoleGit.csproj","date_time":"2024-12-10T14:12:35.9444088Z"}
+{"severity":"info","message":"Processing ConsoleGit","date_time":"2024-12-10T14:12:38.8999553Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T14:12:39.4736004Z"}
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/ConsoleGit/GitAbstraction/GitAbstraction.csproj","date_time":"2024-12-10T14:12:39.7505656Z"}
+{"severity":"info","message":"Processing GitAbstraction","date_time":"2024-12-10T14:12:41.3999565Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T14:12:41.6671925Z"}
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/packages/AtfTIDE/Files/AtfTIDE.csproj","date_time":"2024-12-10T14:15:13.0915087Z"}
+{"severity":"info","message":"Processing AtfTIDE","date_time":"2024-12-10T14:15:16.1902724Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T14:15:18.1191904Z"}
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/ConsoleGit/ConsoleGit/ConsoleGit.csproj","date_time":"2024-12-10T14:15:18.6873055Z"}
+{"severity":"info","message":"Processing ConsoleGit","date_time":"2024-12-10T14:15:21.6800558Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T14:15:22.2599957Z"}
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/ConsoleGit/GitAbstraction/GitAbstraction.csproj","date_time":"2024-12-10T14:15:22.5348843Z"}
+{"severity":"info","message":"Processing GitAbstraction","date_time":"2024-12-10T14:15:24.20115Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T14:15:24.5082482Z"}
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/packages/AtfTIDE/Files/AtfTIDE.csproj","date_time":"2024-12-10T14:16:11.8826639Z"}
+{"severity":"info","message":"Processing AtfTIDE","date_time":"2024-12-10T14:16:15.0833115Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T14:16:17.2382445Z"}
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/ConsoleGit/ConsoleGit/ConsoleGit.csproj","date_time":"2024-12-10T14:16:17.797992Z"}
+{"severity":"info","message":"Processing ConsoleGit","date_time":"2024-12-10T14:16:20.8697183Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T14:16:21.3928606Z"}
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/ConsoleGit/GitAbstraction/GitAbstraction.csproj","date_time":"2024-12-10T14:16:21.6677046Z"}
+{"severity":"info","message":"Processing GitAbstraction","date_time":"2024-12-10T14:16:23.4854875Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T14:16:23.7587432Z"}
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/packages/AtfTIDE/Files/AtfTIDE.csproj","date_time":"2024-12-10T14:16:59.0944868Z"}
+{"severity":"info","message":"Processing AtfTIDE","date_time":"2024-12-10T14:17:02.2157248Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T14:17:04.1632056Z"}
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/ConsoleGit/ConsoleGit/ConsoleGit.csproj","date_time":"2024-12-10T14:17:04.6905311Z"}
+{"severity":"info","message":"Processing ConsoleGit","date_time":"2024-12-10T14:17:07.659841Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T14:17:08.1844488Z"}
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/ConsoleGit/GitAbstraction/GitAbstraction.csproj","date_time":"2024-12-10T14:17:08.4601947Z"}
+{"severity":"info","message":"Processing GitAbstraction","date_time":"2024-12-10T14:17:10.1432216Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T14:17:10.4149645Z"}
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/packages/AtfTIDE/Files/AtfTIDE.csproj","date_time":"2024-12-10T14:20:34.8642717Z"}
+{"severity":"info","message":"Processing AtfTIDE","date_time":"2024-12-10T14:20:38.1200144Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T14:20:40.1374367Z"}
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/ConsoleGit/ConsoleGit/ConsoleGit.csproj","date_time":"2024-12-10T14:20:40.6739156Z"}
+{"severity":"info","message":"Processing ConsoleGit","date_time":"2024-12-10T14:20:43.7308257Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T14:20:44.2860372Z"}
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/ConsoleGit/GitAbstraction/GitAbstraction.csproj","date_time":"2024-12-10T14:20:44.5739911Z"}
+{"severity":"info","message":"Processing GitAbstraction","date_time":"2024-12-10T14:20:46.217507Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T14:20:46.4611572Z"}
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/packages/AtfTIDE/Files/AtfTIDE.csproj","date_time":"2024-12-10T14:50:21.2023123Z"}
+{"severity":"info","message":"Processing AtfTIDE","date_time":"2024-12-10T14:50:24.4646287Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T14:50:26.4395302Z"}
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/ConsoleGit/ConsoleGit/ConsoleGit.csproj","date_time":"2024-12-10T14:50:26.9727972Z"}
+{"severity":"info","message":"Processing ConsoleGit","date_time":"2024-12-10T14:50:30.0656295Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T14:50:30.6835631Z"}
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/ConsoleGit/GitAbstraction/GitAbstraction.csproj","date_time":"2024-12-10T14:50:30.959238Z"}
+{"severity":"info","message":"Processing GitAbstraction","date_time":"2024-12-10T14:50:32.6864811Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T14:50:32.9709058Z"}
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/packages/AtfTIDE/Files/AtfTIDE.csproj","date_time":"2024-12-10T15:00:24.1856602Z"}
+{"severity":"info","message":"Processing AtfTIDE","date_time":"2024-12-10T15:00:26.650961Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T15:00:28.5790407Z"}
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/ConsoleGit/ConsoleGit/ConsoleGit.csproj","date_time":"2024-12-10T15:00:29.1088715Z"}
+{"severity":"info","message":"Processing ConsoleGit","date_time":"2024-12-10T15:00:32.1030884Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T15:00:32.6641666Z"}
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/ConsoleGit/GitAbstraction/GitAbstraction.csproj","date_time":"2024-12-10T15:00:32.9413862Z"}
+{"severity":"info","message":"Processing GitAbstraction","date_time":"2024-12-10T15:00:34.7271356Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T15:00:34.978409Z"}
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/packages/AtfTIDE/Files/AtfTIDE.csproj","date_time":"2024-12-10T15:00:52.6899424Z"}
+{"severity":"info","message":"Processing AtfTIDE","date_time":"2024-12-10T15:00:55.1163944Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T15:00:57.0831571Z"}
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/ConsoleGit/ConsoleGit/ConsoleGit.csproj","date_time":"2024-12-10T15:00:57.6215171Z"}
+{"severity":"info","message":"Processing ConsoleGit","date_time":"2024-12-10T15:01:00.6080113Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T15:01:01.1936419Z"}
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/ConsoleGit/GitAbstraction/GitAbstraction.csproj","date_time":"2024-12-10T15:01:01.4698144Z"}
+{"severity":"info","message":"Processing GitAbstraction","date_time":"2024-12-10T15:01:03.1787695Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T15:01:03.4516523Z"}
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/packages/AtfTIDE/Files/AtfTIDE.csproj","date_time":"2024-12-10T15:03:02.86018Z"}
+{"severity":"info","message":"Processing AtfTIDE","date_time":"2024-12-10T15:03:05.2670889Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T15:03:07.2076636Z"}
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/ConsoleGit/ConsoleGit/ConsoleGit.csproj","date_time":"2024-12-10T15:03:07.7382678Z"}
+{"severity":"info","message":"Processing ConsoleGit","date_time":"2024-12-10T15:03:10.7392595Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T15:03:11.308474Z"}
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/ConsoleGit/GitAbstraction/GitAbstraction.csproj","date_time":"2024-12-10T15:03:11.5822883Z"}
+{"severity":"info","message":"Processing GitAbstraction","date_time":"2024-12-10T15:03:13.2283535Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T15:03:13.4964739Z"}
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/packages/AtfTIDE/Files/AtfTIDE.csproj","date_time":"2024-12-10T15:04:30.7564898Z"}
+{"severity":"info","message":"Processing AtfTIDE","date_time":"2024-12-10T15:04:33.13932Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T15:04:35.0956901Z"}
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/ConsoleGit/ConsoleGit/ConsoleGit.csproj","date_time":"2024-12-10T15:04:35.6270392Z"}
+{"severity":"info","message":"Processing ConsoleGit","date_time":"2024-12-10T15:04:38.5886848Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T15:04:39.1207214Z"}
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/ConsoleGit/GitAbstraction/GitAbstraction.csproj","date_time":"2024-12-10T15:04:39.4046104Z"}
+{"severity":"info","message":"Processing GitAbstraction","date_time":"2024-12-10T15:04:41.0533066Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T15:04:41.3215712Z"}
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/packages/AtfTIDE/Files/AtfTIDE.csproj","date_time":"2024-12-10T15:11:47.9219857Z"}
+{"severity":"info","message":"Processing AtfTIDE","date_time":"2024-12-10T15:11:50.4207353Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T15:11:52.4375063Z"}
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/ConsoleGit/ConsoleGit/ConsoleGit.csproj","date_time":"2024-12-10T15:11:53.0439314Z"}
+{"severity":"info","message":"Processing ConsoleGit","date_time":"2024-12-10T15:11:56.8375989Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T15:11:57.3801486Z"}
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/ConsoleGit/GitAbstraction/GitAbstraction.csproj","date_time":"2024-12-10T15:11:57.6564907Z"}
+{"severity":"info","message":"Processing GitAbstraction","date_time":"2024-12-10T15:11:59.4484268Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-10T15:11:59.7427717Z"}
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/packages/AtfTIDE/Files/AtfTIDE.csproj","date_time":"2024-12-11T18:33:00.2684263Z"}
+{"severity":"info","message":"Processing AtfTIDE","date_time":"2024-12-11T18:33:03.5190554Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-11T18:33:05.5931013Z"}
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/ConsoleGit/ConsoleGit/ConsoleGit.csproj","date_time":"2024-12-11T18:33:06.155687Z"}
+{"severity":"info","message":"Processing ConsoleGit","date_time":"2024-12-11T18:33:10.4183342Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-11T18:33:11.0853861Z"}
+{"severity":"info","message":"Loading project C:/Projects/Workspaces/TIDE/ConsoleGit/GitAbstraction/GitAbstraction.csproj","date_time":"2024-12-11T18:33:11.4626217Z"}
+{"severity":"info","message":"Processing GitAbstraction","date_time":"2024-12-11T18:33:13.4184895Z"}
+{"severity":"info","message":"Creating output...","date_time":"2024-12-11T18:33:13.6601503Z"}

@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: AtfTIDE.WebServices
+  commentId: N:AtfTIDE.WebServices
+  id: AtfTIDE.WebServices
+  children:
+  - AtfTIDE.WebServices.Tide
+  langs:
+  - csharp
+  - vb
+  name: AtfTIDE.WebServices
+  nameWithType: AtfTIDE.WebServices
+  fullName: AtfTIDE.WebServices
+  type: Namespace
+  assemblies:
+  - AtfTIDE
+references:
+- uid: AtfTIDE.WebServices.Tide
+  commentId: T:AtfTIDE.WebServices.Tide
+  href: AtfTIDE.WebServices.Tide.html
+  name: Tide
+  nameWithType: Tide
+  fullName: AtfTIDE.WebServices.Tide

@@ -1,0 +1,14 @@
+﻿{
+  "Descriptor": {
+    "UId": "a61f2ae0-cd61-49fe-8d32-f4c231d9a6ae",
+    "Name": "MrktApolloDepartment",
+    "ModifiedOnUtc": "\/Date(1704271287000)\/",
+    "Parent": {
+      "UId": "1bab9dcf-17d5-49f8-9536-8e0064f1dce0",
+      "Name": "BaseEntity"
+    },
+    "ManagerName": "EntitySchemaManager",
+    "Caption": "Apollo department",
+    "DependsOn": []
+  }
+}

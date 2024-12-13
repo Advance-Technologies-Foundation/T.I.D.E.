@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class GitRepository | AtfTide </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class GitRepository | AtfTide ">
+      
+      
+      <link rel="icon" href="..//images/tide.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/Advance-Technologies-Foundation/T.I.D.E./new/feature/my-feature/apiSpec/new?filename=GitAbstraction_GitRepository.md&amp;value=---%0Auid%3A%20GitAbstraction.GitRepository%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="..//images/tide.svg" alt="AtfTide">
+            AtfTide
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="GitAbstraction.GitRepository">
+
+
+
+  <h1 id="GitAbstraction_GitRepository" data-uid="GitAbstraction.GitRepository" class="text-break">
+Class GitRepository  <a class="header-action link-secondary" title="View source" href="https://github.com/Advance-Technologies-Foundation/T.I.D.E./blob/feature/my-feature/ConsoleGit/GitAbstraction/GitAbstraction.cs/#L10"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="GitAbstraction.html">GitAbstraction</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>GitAbstraction.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"></div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class GitRepository : IDisposable</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">GitRepository</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="GitAbstraction_GitRepository_RepoDirectory_" data-uid="GitAbstraction.GitRepository.RepoDirectory*"></a>
+
+  <h3 id="GitAbstraction_GitRepository_RepoDirectory" data-uid="GitAbstraction.GitRepository.RepoDirectory">
+  RepoDirectory
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Advance-Technologies-Foundation/T.I.D.E./blob/feature/my-feature/ConsoleGit/GitAbstraction/GitAbstraction.cs/#L42"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IDirectoryInfo RepoDirectory { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">IDirectoryInfo</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="GitAbstraction_GitRepository_AddAll_" data-uid="GitAbstraction.GitRepository.AddAll*"></a>
+
+  <h3 id="GitAbstraction_GitRepository_AddAll" data-uid="GitAbstraction.GitRepository.AddAll">
+  AddAll()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Advance-Technologies-Foundation/T.I.D.E./blob/feature/my-feature/ConsoleGit/GitAbstraction/GitAbstraction.cs/#L209"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Stage all working directory changes
+Adds all files to the staging area.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ErrorOr&lt;Success&gt; AddAll()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">ErrorOr</span>&lt;<span class="xref">Success</span>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="GitAbstraction_GitRepository_AddAll_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>git add --all .</p>
+</div>
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><span><a href="https://github.com/libgit2/libgit2sharp/wiki/git-add#stage-all-working-directory-changes">libgit2sharp Wiki git add</a></span></div>
+    </dd>
+  </dl>
+
+
+  <a id="GitAbstraction_GitRepository_AddFile_" data-uid="GitAbstraction.GitRepository.AddFile*"></a>
+
+  <h3 id="GitAbstraction_GitRepository_AddFile_System_String_" data-uid="GitAbstraction.GitRepository.AddFile(System.String)">
+  AddFile(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Advance-Technologies-Foundation/T.I.D.E./blob/feature/my-feature/ConsoleGit/GitAbstraction/GitAbstraction.cs/#L220"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Stage (add) a file in a repository that is checked out to the file system:</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ErrorOr&lt;Success&gt; AddFile(string filePath)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>filePath</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Filepath to a file with changes, relative to .git directory</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">ErrorOr</span>&lt;<span class="xref">Success</span>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><span><a href="https://github.com/libgit2/libgit2sharp/wiki/git-add#add-to-a-non-bare-repository">libgit2sharp Wiki git add</a></span></div>
+    </dd>
+  </dl>
+
+
+  <a id="GitAbstraction_GitRepository_CheckoutBranch_" data-uid="GitAbstraction.GitRepository.CheckoutBranch*"></a>
+
+  <h3 id="GitAbstraction_GitRepository_CheckoutBranch_System_String_" data-uid="GitAbstraction.GitRepository.CheckoutBranch(System.String)">
+  CheckoutBranch(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Advance-Technologies-Foundation/T.I.D.E./blob/feature/my-feature/ConsoleGit/GitAbstraction/GitAbstraction.cs/#L191"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Checkout to existing branch by name</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ErrorOr&lt;Success&gt; CheckoutBranch(string branchName)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>branchName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Branch name to checkout</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">ErrorOr</span>&lt;<span class="xref">Success</span>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><span><a href="https://github.com/libgit2/libgit2sharp/wiki/git-checkout#checkout-to-existing-branch-by-name">libgit2sharp Wiki git checkout &lt;code&gt;branch&lt;/code&gt;</a></span></div>
+    </dd>
+  </dl>
+
+
+  <a id="GitAbstraction_GitRepository_Clone_" data-uid="GitAbstraction.GitRepository.Clone*"></a>
+
+  <h3 id="GitAbstraction_GitRepository_Clone" data-uid="GitAbstraction.GitRepository.Clone">
+  Clone()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Advance-Technologies-Foundation/T.I.D.E./blob/feature/my-feature/ConsoleGit/GitAbstraction/GitAbstraction.cs/#L89"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Clones the repository to the specified directory.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ErrorOr&lt;string&gt; Clone()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">ErrorOr</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd><p>An <span class="xref">ErrorOr.ErrorOr&lt;TValue&gt;</span> containing the path to the cloned repository or an error.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><span><a href="https://github.com/libgit2/libgit2sharp/wiki/git-clone">libgit2sharp Wiki Clone</a></span></div>
+    </dd>
+  </dl>
+
+
+  <a id="GitAbstraction_GitRepository_Commit_" data-uid="GitAbstraction.GitRepository.Commit*"></a>
+
+  <h3 id="GitAbstraction_GitRepository_Commit_System_String_System_String_System_String_" data-uid="GitAbstraction.GitRepository.Commit(System.String,System.String,System.String)">
+  Commit(string, string, string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Advance-Technologies-Foundation/T.I.D.E./blob/feature/my-feature/ConsoleGit/GitAbstraction/GitAbstraction.cs/#L234"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Make a commit to a non-bare repository</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ErrorOr&lt;Commit&gt; Commit(string name, string email, string message)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Committer name</p>
+</dd>
+    <dt><code>email</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Committer email</p>
+</dd>
+    <dt><code>message</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Commit message</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">ErrorOr</span>&lt;<span class="xref">Commit</span>&gt;</dt>
+    <dd><p><a class="xref" href="GitAbstraction.GitRepository.html#GitAbstraction_GitRepository_Commit_System_String_System_String_System_String_">Commit(string, string, string)</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><span><a href="https://github.com/libgit2/libgit2sharp/wiki/git-commit#make-a-commit-to-a-non-bare-repository">libgit2sharp Wiki git commit</a></span></div>
+    </dd>
+  </dl>
+
+
+  <a id="GitAbstraction_GitRepository_CreateBranch_" data-uid="GitAbstraction.GitRepository.CreateBranch*"></a>
+
+  <h3 id="GitAbstraction_GitRepository_CreateBranch_System_String_" data-uid="GitAbstraction.GitRepository.CreateBranch(System.String)">
+  CreateBranch(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Advance-Technologies-Foundation/T.I.D.E./blob/feature/my-feature/ConsoleGit/GitAbstraction/GitAbstraction.cs/#L258"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a new branch pointing at the current HEAD.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ErrorOr&lt;Branch&gt; CreateBranch(string branchName)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>branchName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The name of the new branch.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">ErrorOr</span>&lt;<span class="xref">Branch</span>&gt;</dt>
+    <dd><p>An <span class="xref">ErrorOr.ErrorOr&lt;TValue&gt;</span> indicating success or failure.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><span><a href="https://github.com/libgit2/libgit2sharp/wiki/git-branch#creating-a-branch-pointing-at-the-current-head">libgit2sharp Wiki</a></span></div>
+    </dd>
+  </dl>
+
+
+  <a id="GitAbstraction_GitRepository_CreateBranchAndPublish_" data-uid="GitAbstraction.GitRepository.CreateBranchAndPublish*"></a>
+
+  <h3 id="GitAbstraction_GitRepository_CreateBranchAndPublish_System_String_" data-uid="GitAbstraction.GitRepository.CreateBranchAndPublish(System.String)">
+  CreateBranchAndPublish(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Advance-Technologies-Foundation/T.I.D.E./blob/feature/my-feature/ConsoleGit/GitAbstraction/GitAbstraction.cs/#L270"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ErrorOr&lt;Success&gt; CreateBranchAndPublish(string branchName)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>branchName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">ErrorOr</span>&lt;<span class="xref">Success</span>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="GitAbstraction_GitRepository_DeleteBranch_" data-uid="GitAbstraction.GitRepository.DeleteBranch*"></a>
+
+  <h3 id="GitAbstraction_GitRepository_DeleteBranch_System_String_" data-uid="GitAbstraction.GitRepository.DeleteBranch(System.String)">
+  DeleteBranch(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Advance-Technologies-Foundation/T.I.D.E./blob/feature/my-feature/ConsoleGit/GitAbstraction/GitAbstraction.cs/#L280"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ErrorOr&lt;Success&gt; DeleteBranch(string branchName)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>branchName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">ErrorOr</span>&lt;<span class="xref">Success</span>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="GitAbstraction_GitRepository_Dispose_" data-uid="GitAbstraction.GitRepository.Dispose*"></a>
+
+  <h3 id="GitAbstraction_GitRepository_Dispose" data-uid="GitAbstraction.GitRepository.Dispose">
+  Dispose()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Advance-Technologies-Foundation/T.I.D.E./blob/feature/my-feature/ConsoleGit/GitAbstraction/GitAbstraction.cs/#L107"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="GitAbstraction_GitRepository_Finalize_" data-uid="GitAbstraction.GitRepository.Finalize*"></a>
+
+  <h3 id="GitAbstraction_GitRepository_Finalize" data-uid="GitAbstraction.GitRepository.Finalize">
+  ~GitRepository()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Advance-Technologies-Foundation/T.I.D.E./blob/feature/my-feature/ConsoleGit/GitAbstraction/GitAbstraction.cs/#L292"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected ~GitRepository()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="GitAbstraction_GitRepository_GetCommits_" data-uid="GitAbstraction.GitRepository.GetCommits*"></a>
+
+  <h3 id="GitAbstraction_GitRepository_GetCommits" data-uid="GitAbstraction.GitRepository.GetCommits">
+  GetCommits()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Advance-Technologies-Foundation/T.I.D.E./blob/feature/my-feature/ConsoleGit/GitAbstraction/GitAbstraction.cs/#L245"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ErrorOr&lt;IEnumerable&lt;Commit&gt;&gt; GetCommits()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">ErrorOr</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<span class="xref">Commit</span>&gt;&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="GitAbstraction_GitRepository_GetInstance_" data-uid="GitAbstraction.GitRepository.GetInstance*"></a>
+
+  <h3 id="GitAbstraction_GitRepository_GetInstance_System_String_System_String_System_Uri_System_String_" data-uid="GitAbstraction.GitRepository.GetInstance(System.String,System.String,System.Uri,System.String)">
+  GetInstance(string, string, Uri, string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Advance-Technologies-Foundation/T.I.D.E./blob/feature/my-feature/ConsoleGit/GitAbstraction/GitAbstraction.cs/#L77"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets an instance of the <a class="xref" href="GitAbstraction.GitRepository.html">GitRepository</a> class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static GitRepository GetInstance(string username, string password, Uri gitUrl, string repoDirectory)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>username</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The username for the repository credentials.</p>
+</dd>
+    <dt><code>password</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The password for the repository credentials.</p>
+</dd>
+    <dt><code>gitUrl</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uri">Uri</a></dt>
+    <dd><p>The URL of the Git repository.</p>
+</dd>
+    <dt><code>repoDirectory</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The directory where the repository will be cloned.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="GitAbstraction.GitRepository.html">GitRepository</a></dt>
+    <dd><p>A new instance of the <a class="xref" href="GitAbstraction.GitRepository.html">GitRepository</a> class.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="GitAbstraction_GitRepository_ListLocalBranches_" data-uid="GitAbstraction.GitRepository.ListLocalBranches*"></a>
+
+  <h3 id="GitAbstraction_GitRepository_ListLocalBranches" data-uid="GitAbstraction.GitRepository.ListLocalBranches">
+  ListLocalBranches()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Advance-Technologies-Foundation/T.I.D.E./blob/feature/my-feature/ConsoleGit/GitAbstraction/GitAbstraction.cs/#L119"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Lists all local branches in the repository.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ErrorOr&lt;IEnumerable&lt;Branch&gt;&gt; ListLocalBranches()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">ErrorOr</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<span class="xref">Branch</span>&gt;&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><span><a href="https://github.com/libgit2/libgit2sharp/wiki/git-branch#listing-branches">libgit2sharp Wiki
+     listing-branches</a></span></div>
+    </dd>
+  </dl>
+
+
+  <a id="GitAbstraction_GitRepository_PublishBranch_" data-uid="GitAbstraction.GitRepository.PublishBranch*"></a>
+
+  <h3 id="GitAbstraction_GitRepository_PublishBranch_LibGit2Sharp_Branch_" data-uid="GitAbstraction.GitRepository.PublishBranch(LibGit2Sharp.Branch)">
+  PublishBranch(Branch)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Advance-Technologies-Foundation/T.I.D.E./blob/feature/my-feature/ConsoleGit/GitAbstraction/GitAbstraction.cs/#L266"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ErrorOr&lt;Success&gt; PublishBranch(Branch branch)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>branch</code> <span class="xref">Branch</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">ErrorOr</span>&lt;<span class="xref">Success</span>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="GitAbstraction_GitRepository_Pull_" data-uid="GitAbstraction.GitRepository.Pull*"></a>
+
+  <h3 id="GitAbstraction_GitRepository_Pull" data-uid="GitAbstraction.GitRepository.Pull">
+  Pull()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Advance-Technologies-Foundation/T.I.D.E./blob/feature/my-feature/ConsoleGit/GitAbstraction/GitAbstraction.cs/#L138"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Pulls the latest changes from the remote repository and merges them into the local repository.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ErrorOr&lt;MergeResult&gt; Pull()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">ErrorOr</span>&lt;<span class="xref">MergeResult</span>&gt;</dt>
+    <dd><p>An <span class="xref">ErrorOr.ErrorOr&lt;TValue&gt;</span> containing the result of the merge or an error.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><span><a href="https://github.com/libgit2/libgit2sharp/wiki/git-pull">libgit2sharp Wiki git-pull</a></span></div>
+    </dd>
+  </dl>
+
+
+  <a id="GitAbstraction_GitRepository_Push_" data-uid="GitAbstraction.GitRepository.Push*"></a>
+
+  <h3 id="GitAbstraction_GitRepository_Push_LibGit2Sharp_Branch_" data-uid="GitAbstraction.GitRepository.Push(LibGit2Sharp.Branch)">
+  Push(Branch)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Advance-Technologies-Foundation/T.I.D.E./blob/feature/my-feature/ConsoleGit/GitAbstraction/GitAbstraction.cs/#L176"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Pushes the specified branch to the remote repository.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ErrorOr&lt;Success&gt; Push(Branch branch)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>branch</code> <span class="xref">Branch</span></dt>
+    <dd><p>The branch to push.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">ErrorOr</span>&lt;<span class="xref">Success</span>&gt;</dt>
+    <dd><p>An <span class="xref">ErrorOr.ErrorOr&lt;TValue&gt;</span> indicating success or failure.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><span><a href="https://github.com/libgit2/libgit2sharp/wiki/git-push#git-push">libgit2sharp Wiki git-push</a></span></div>
+    </dd>
+  </dl>
+
+
+  <a id="GitAbstraction_GitRepository_Push_" data-uid="GitAbstraction.GitRepository.Push*"></a>
+
+  <h3 id="GitAbstraction_GitRepository_Push_System_String_" data-uid="GitAbstraction.GitRepository.Push(System.String)">
+  Push(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Advance-Technologies-Foundation/T.I.D.E./blob/feature/my-feature/ConsoleGit/GitAbstraction/GitAbstraction.cs/#L162"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Pushes the specified branch to the remote repository.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ErrorOr&lt;Success&gt; Push(string branchName)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>branchName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The branch to push.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">ErrorOr</span>&lt;<span class="xref">Success</span>&gt;</dt>
+    <dd><p>An <span class="xref">ErrorOr.ErrorOr&lt;TValue&gt;</span> indicating success or failure.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><span><a href="https://github.com/libgit2/libgit2sharp/wiki/git-push#git-push">libgit2sharp Wiki git-push</a></span></div>
+    </dd>
+  </dl>
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/Advance-Technologies-Foundation/T.I.D.E./blob/feature/my-feature/ConsoleGit/GitAbstraction/GitAbstraction.cs/#L10" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

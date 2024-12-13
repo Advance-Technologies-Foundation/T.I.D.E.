@@ -4,11 +4,13 @@ namespace ConsoleGit.Commands;
 
 public class CheckoutCommand(CommandLineArgs args) : BaseRepositoryCommand(args) {
 
-	public override ErrorOr<Success> Execute(){
-		return InitializedRepository.CheckoutBranch("").MatchFirst<ErrorOr<Success>>(
-			success => Result.Success,
+	public override ErrorOr<Success> Execute() =>
+		InitializedRepository
+			//ERROR: Need to pass branch here
+			.CheckoutBranch("") 
+			.MatchFirst<ErrorOr<Success>>(
+			_ => Result.Success,
 			failure => failure
 		);
-	}
 
 }

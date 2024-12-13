@@ -1,0 +1,14 @@
+﻿{
+  "Descriptor": {
+    "UId": "68dddc38-04fb-43e4-8301-3fd6df82945a",
+    "Name": "MrktApolloIndustry",
+    "ModifiedOnUtc": "\/Date(1705587769000)\/",
+    "Parent": {
+      "UId": "11ab4bcb-9b23-4b6d-9c86-520fae925d75",
+      "Name": "BaseLookup"
+    },
+    "ManagerName": "EntitySchemaManager",
+    "Caption": "Apollo industry",
+    "DependsOn": []
+  }
+}

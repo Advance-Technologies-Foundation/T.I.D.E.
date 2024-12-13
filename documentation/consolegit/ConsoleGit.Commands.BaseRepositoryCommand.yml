@@ -1,0 +1,835 @@
+### YamlMime:ManagedReference
+items:
+- uid: ConsoleGit.Commands.BaseRepositoryCommand
+  commentId: T:ConsoleGit.Commands.BaseRepositoryCommand
+  id: BaseRepositoryCommand
+  parent: ConsoleGit.Commands
+  children:
+  - ConsoleGit.Commands.BaseRepositoryCommand.#ctor(ConsoleGit.CommandLineArgs)
+  - ConsoleGit.Commands.BaseRepositoryCommand.Args
+  - ConsoleGit.Commands.BaseRepositoryCommand.CleanRepositoryDirectory
+  - ConsoleGit.Commands.BaseRepositoryCommand.Dispose
+  - ConsoleGit.Commands.BaseRepositoryCommand.Dispose(System.Boolean)
+  - ConsoleGit.Commands.BaseRepositoryCommand.Execute
+  - ConsoleGit.Commands.BaseRepositoryCommand.Finalize
+  - ConsoleGit.Commands.BaseRepositoryCommand.GrantDeleteAccess(System.IO.DirectoryInfo,System.String)
+  - ConsoleGit.Commands.BaseRepositoryCommand.InitializedRepository
+  langs:
+  - csharp
+  - vb
+  name: BaseRepositoryCommand
+  nameWithType: BaseRepositoryCommand
+  fullName: ConsoleGit.Commands.BaseRepositoryCommand
+  type: Class
+  source:
+    remote:
+      path: ConsoleGit/ConsoleGit/Commands/BaseRepositoryCommand.cs
+      branch: feature/my-feature
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: BaseRepositoryCommand
+    path: ../ConsoleGit/ConsoleGit/Commands/BaseRepositoryCommand.cs
+    startLine: 16
+  assemblies:
+  - ConsoleGit
+  namespace: ConsoleGit.Commands
+  syntax:
+    content: 'public abstract class BaseRepositoryCommand : ICommand, IDisposable'
+    content.vb: Public MustInherit Class BaseRepositoryCommand Implements ICommand, IDisposable
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - ConsoleGit.Commands.AddAllCommand
+  - ConsoleGit.Commands.CheckoutCommand
+  - ConsoleGit.Commands.CloneCommand
+  - ConsoleGit.Commands.CommitCommand
+  - ConsoleGit.Commands.PullCommand
+  - ConsoleGit.Commands.PushCommand
+  implements:
+  - ConsoleGit.Commands.ICommand
+  - System.IDisposable
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: ConsoleGit.Commands.BaseRepositoryCommand.Args
+  commentId: F:ConsoleGit.Commands.BaseRepositoryCommand.Args
+  id: Args
+  parent: ConsoleGit.Commands.BaseRepositoryCommand
+  langs:
+  - csharp
+  - vb
+  name: Args
+  nameWithType: BaseRepositoryCommand.Args
+  fullName: ConsoleGit.Commands.BaseRepositoryCommand.Args
+  type: Field
+  source:
+    remote:
+      path: ConsoleGit/ConsoleGit/Commands/BaseRepositoryCommand.cs
+      branch: feature/my-feature
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: Args
+    path: ../ConsoleGit/ConsoleGit/Commands/BaseRepositoryCommand.cs
+    startLine: 27
+  assemblies:
+  - ConsoleGit
+  namespace: ConsoleGit.Commands
+  syntax:
+    content: protected readonly CommandLineArgs Args
+    return:
+      type: ConsoleGit.CommandLineArgs
+    content.vb: Protected ReadOnly Args As CommandLineArgs
+- uid: ConsoleGit.Commands.BaseRepositoryCommand.#ctor(ConsoleGit.CommandLineArgs)
+  commentId: M:ConsoleGit.Commands.BaseRepositoryCommand.#ctor(ConsoleGit.CommandLineArgs)
+  id: '#ctor(ConsoleGit.CommandLineArgs)'
+  parent: ConsoleGit.Commands.BaseRepositoryCommand
+  langs:
+  - csharp
+  - vb
+  name: BaseRepositoryCommand(CommandLineArgs)
+  nameWithType: BaseRepositoryCommand.BaseRepositoryCommand(CommandLineArgs)
+  fullName: ConsoleGit.Commands.BaseRepositoryCommand.BaseRepositoryCommand(ConsoleGit.CommandLineArgs)
+  type: Constructor
+  source:
+    remote:
+      path: ConsoleGit/ConsoleGit/Commands/BaseRepositoryCommand.cs
+      branch: feature/my-feature
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: .ctor
+    path: ../ConsoleGit/ConsoleGit/Commands/BaseRepositoryCommand.cs
+    startLine: 33
+  assemblies:
+  - ConsoleGit
+  namespace: ConsoleGit.Commands
+  syntax:
+    content: protected BaseRepositoryCommand(CommandLineArgs args)
+    parameters:
+    - id: args
+      type: ConsoleGit.CommandLineArgs
+    content.vb: Protected Sub New(args As CommandLineArgs)
+  overload: ConsoleGit.Commands.BaseRepositoryCommand.#ctor*
+  nameWithType.vb: BaseRepositoryCommand.New(CommandLineArgs)
+  fullName.vb: ConsoleGit.Commands.BaseRepositoryCommand.New(ConsoleGit.CommandLineArgs)
+  name.vb: New(CommandLineArgs)
+- uid: ConsoleGit.Commands.BaseRepositoryCommand.InitializedRepository
+  commentId: P:ConsoleGit.Commands.BaseRepositoryCommand.InitializedRepository
+  id: InitializedRepository
+  parent: ConsoleGit.Commands.BaseRepositoryCommand
+  langs:
+  - csharp
+  - vb
+  name: InitializedRepository
+  nameWithType: BaseRepositoryCommand.InitializedRepository
+  fullName: ConsoleGit.Commands.BaseRepositoryCommand.InitializedRepository
+  type: Property
+  source:
+    remote:
+      path: ConsoleGit/ConsoleGit/Commands/BaseRepositoryCommand.cs
+      branch: feature/my-feature
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: InitializedRepository
+    path: ../ConsoleGit/ConsoleGit/Commands/BaseRepositoryCommand.cs
+    startLine: 43
+  assemblies:
+  - ConsoleGit
+  namespace: ConsoleGit.Commands
+  syntax:
+    content: protected GitRepository InitializedRepository { get; }
+    parameters: []
+    return:
+      type: GitAbstraction.GitRepository
+    content.vb: Protected ReadOnly Property InitializedRepository As GitRepository
+  overload: ConsoleGit.Commands.BaseRepositoryCommand.InitializedRepository*
+- uid: ConsoleGit.Commands.BaseRepositoryCommand.GrantDeleteAccess(System.IO.DirectoryInfo,System.String)
+  commentId: M:ConsoleGit.Commands.BaseRepositoryCommand.GrantDeleteAccess(System.IO.DirectoryInfo,System.String)
+  id: GrantDeleteAccess(System.IO.DirectoryInfo,System.String)
+  parent: ConsoleGit.Commands.BaseRepositoryCommand
+  langs:
+  - csharp
+  - vb
+  name: GrantDeleteAccess(DirectoryInfo, string)
+  nameWithType: BaseRepositoryCommand.GrantDeleteAccess(DirectoryInfo, string)
+  fullName: ConsoleGit.Commands.BaseRepositoryCommand.GrantDeleteAccess(System.IO.DirectoryInfo, string)
+  type: Method
+  source:
+    remote:
+      path: ConsoleGit/ConsoleGit/Commands/BaseRepositoryCommand.cs
+      branch: feature/my-feature
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: GrantDeleteAccess
+    path: ../ConsoleGit/ConsoleGit/Commands/BaseRepositoryCommand.cs
+    startLine: 49
+  assemblies:
+  - ConsoleGit
+  namespace: ConsoleGit.Commands
+  syntax:
+    content: public static void GrantDeleteAccess(DirectoryInfo directoryInfo, string userName)
+    parameters:
+    - id: directoryInfo
+      type: System.IO.DirectoryInfo
+    - id: userName
+      type: System.String
+    content.vb: Public Shared Sub GrantDeleteAccess(directoryInfo As DirectoryInfo, userName As String)
+  overload: ConsoleGit.Commands.BaseRepositoryCommand.GrantDeleteAccess*
+  nameWithType.vb: BaseRepositoryCommand.GrantDeleteAccess(DirectoryInfo, String)
+  fullName.vb: ConsoleGit.Commands.BaseRepositoryCommand.GrantDeleteAccess(System.IO.DirectoryInfo, String)
+  name.vb: GrantDeleteAccess(DirectoryInfo, String)
+- uid: ConsoleGit.Commands.BaseRepositoryCommand.CleanRepositoryDirectory
+  commentId: M:ConsoleGit.Commands.BaseRepositoryCommand.CleanRepositoryDirectory
+  id: CleanRepositoryDirectory
+  parent: ConsoleGit.Commands.BaseRepositoryCommand
+  langs:
+  - csharp
+  - vb
+  name: CleanRepositoryDirectory()
+  nameWithType: BaseRepositoryCommand.CleanRepositoryDirectory()
+  fullName: ConsoleGit.Commands.BaseRepositoryCommand.CleanRepositoryDirectory()
+  type: Method
+  source:
+    remote:
+      path: ConsoleGit/ConsoleGit/Commands/BaseRepositoryCommand.cs
+      branch: feature/my-feature
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: CleanRepositoryDirectory
+    path: ../ConsoleGit/ConsoleGit/Commands/BaseRepositoryCommand.cs
+    startLine: 72
+  assemblies:
+  - ConsoleGit
+  namespace: ConsoleGit.Commands
+  syntax:
+    content: protected void CleanRepositoryDirectory()
+    content.vb: Protected Sub CleanRepositoryDirectory()
+  overload: ConsoleGit.Commands.BaseRepositoryCommand.CleanRepositoryDirectory*
+- uid: ConsoleGit.Commands.BaseRepositoryCommand.Dispose(System.Boolean)
+  commentId: M:ConsoleGit.Commands.BaseRepositoryCommand.Dispose(System.Boolean)
+  id: Dispose(System.Boolean)
+  parent: ConsoleGit.Commands.BaseRepositoryCommand
+  langs:
+  - csharp
+  - vb
+  name: Dispose(bool)
+  nameWithType: BaseRepositoryCommand.Dispose(bool)
+  fullName: ConsoleGit.Commands.BaseRepositoryCommand.Dispose(bool)
+  type: Method
+  source:
+    remote:
+      path: ConsoleGit/ConsoleGit/Commands/BaseRepositoryCommand.cs
+      branch: feature/my-feature
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: Dispose
+    path: ../ConsoleGit/ConsoleGit/Commands/BaseRepositoryCommand.cs
+    startLine: 85
+  assemblies:
+  - ConsoleGit
+  namespace: ConsoleGit.Commands
+  syntax:
+    content: protected virtual void Dispose(bool disposing)
+    parameters:
+    - id: disposing
+      type: System.Boolean
+    content.vb: Protected Overridable Sub Dispose(disposing As Boolean)
+  overload: ConsoleGit.Commands.BaseRepositoryCommand.Dispose*
+  nameWithType.vb: BaseRepositoryCommand.Dispose(Boolean)
+  fullName.vb: ConsoleGit.Commands.BaseRepositoryCommand.Dispose(Boolean)
+  name.vb: Dispose(Boolean)
+- uid: ConsoleGit.Commands.BaseRepositoryCommand.Execute
+  commentId: M:ConsoleGit.Commands.BaseRepositoryCommand.Execute
+  id: Execute
+  parent: ConsoleGit.Commands.BaseRepositoryCommand
+  langs:
+  - csharp
+  - vb
+  name: Execute()
+  nameWithType: BaseRepositoryCommand.Execute()
+  fullName: ConsoleGit.Commands.BaseRepositoryCommand.Execute()
+  type: Method
+  source:
+    remote:
+      path: ConsoleGit/ConsoleGit/Commands/BaseRepositoryCommand.cs
+      branch: feature/my-feature
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: Execute
+    path: ../ConsoleGit/ConsoleGit/Commands/BaseRepositoryCommand.cs
+    startLine: 100
+  assemblies:
+  - ConsoleGit
+  namespace: ConsoleGit.Commands
+  example: []
+  syntax:
+    content: public abstract ErrorOr<Success> Execute()
+    return:
+      type: ErrorOr.ErrorOr{ErrorOr.Success}
+    content.vb: Public MustOverride Function Execute() As ErrorOr(Of Success)
+  overload: ConsoleGit.Commands.BaseRepositoryCommand.Execute*
+  implements:
+  - ConsoleGit.Commands.ICommand.Execute
+- uid: ConsoleGit.Commands.BaseRepositoryCommand.Dispose
+  commentId: M:ConsoleGit.Commands.BaseRepositoryCommand.Dispose
+  id: Dispose
+  parent: ConsoleGit.Commands.BaseRepositoryCommand
+  langs:
+  - csharp
+  - vb
+  name: Dispose()
+  nameWithType: BaseRepositoryCommand.Dispose()
+  fullName: ConsoleGit.Commands.BaseRepositoryCommand.Dispose()
+  type: Method
+  source:
+    remote:
+      path: ConsoleGit/ConsoleGit/Commands/BaseRepositoryCommand.cs
+      branch: feature/my-feature
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: Dispose
+    path: ../ConsoleGit/ConsoleGit/Commands/BaseRepositoryCommand.cs
+    startLine: 102
+  assemblies:
+  - ConsoleGit
+  namespace: ConsoleGit.Commands
+  summary: Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
+  example: []
+  syntax:
+    content: public void Dispose()
+    content.vb: Public Sub Dispose()
+  overload: ConsoleGit.Commands.BaseRepositoryCommand.Dispose*
+  implements:
+  - System.IDisposable.Dispose
+- uid: ConsoleGit.Commands.BaseRepositoryCommand.Finalize
+  commentId: M:ConsoleGit.Commands.BaseRepositoryCommand.Finalize
+  id: Finalize
+  parent: ConsoleGit.Commands.BaseRepositoryCommand
+  langs:
+  - csharp
+  - vb
+  name: ~BaseRepositoryCommand()
+  nameWithType: BaseRepositoryCommand.~BaseRepositoryCommand()
+  fullName: ConsoleGit.Commands.BaseRepositoryCommand.~BaseRepositoryCommand()
+  type: Method
+  source:
+    remote:
+      path: ConsoleGit/ConsoleGit/Commands/BaseRepositoryCommand.cs
+      branch: feature/my-feature
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: Finalize
+    path: ../ConsoleGit/ConsoleGit/Commands/BaseRepositoryCommand.cs
+    startLine: 109
+  assemblies:
+  - ConsoleGit
+  namespace: ConsoleGit.Commands
+  syntax:
+    content: protected ~BaseRepositoryCommand()
+    content.vb: 'Protected '
+  overload: ConsoleGit.Commands.BaseRepositoryCommand.Finalize*
+  nameWithType.vb: ''
+  fullName.vb: ''
+  name.vb: ''
+references:
+- uid: ConsoleGit.Commands
+  commentId: N:ConsoleGit.Commands
+  href: ConsoleGit.html
+  name: ConsoleGit.Commands
+  nameWithType: ConsoleGit.Commands
+  fullName: ConsoleGit.Commands
+  spec.csharp:
+  - uid: ConsoleGit
+    name: ConsoleGit
+    href: ConsoleGit.html
+  - name: .
+  - uid: ConsoleGit.Commands
+    name: Commands
+    href: ConsoleGit.Commands.html
+  spec.vb:
+  - uid: ConsoleGit
+    name: ConsoleGit
+    href: ConsoleGit.html
+  - name: .
+  - uid: ConsoleGit.Commands
+    name: Commands
+    href: ConsoleGit.Commands.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: ConsoleGit.Commands.ICommand
+  commentId: T:ConsoleGit.Commands.ICommand
+  parent: ConsoleGit.Commands
+  href: ConsoleGit.Commands.ICommand.html
+  name: ICommand
+  nameWithType: ICommand
+  fullName: ConsoleGit.Commands.ICommand
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: ConsoleGit.CommandLineArgs
+  commentId: T:ConsoleGit.CommandLineArgs
+  parent: ConsoleGit
+  href: ConsoleGit.CommandLineArgs.html
+  name: CommandLineArgs
+  nameWithType: CommandLineArgs
+  fullName: ConsoleGit.CommandLineArgs
+- uid: ConsoleGit
+  commentId: N:ConsoleGit
+  href: ConsoleGit.html
+  name: ConsoleGit
+  nameWithType: ConsoleGit
+  fullName: ConsoleGit
+- uid: ConsoleGit.Commands.BaseRepositoryCommand.#ctor*
+  commentId: Overload:ConsoleGit.Commands.BaseRepositoryCommand.#ctor
+  href: ConsoleGit.Commands.BaseRepositoryCommand.html#ConsoleGit_Commands_BaseRepositoryCommand__ctor_ConsoleGit_CommandLineArgs_
+  name: BaseRepositoryCommand
+  nameWithType: BaseRepositoryCommand.BaseRepositoryCommand
+  fullName: ConsoleGit.Commands.BaseRepositoryCommand.BaseRepositoryCommand
+  nameWithType.vb: BaseRepositoryCommand.New
+  fullName.vb: ConsoleGit.Commands.BaseRepositoryCommand.New
+  name.vb: New
+- uid: ConsoleGit.Commands.BaseRepositoryCommand.InitializedRepository*
+  commentId: Overload:ConsoleGit.Commands.BaseRepositoryCommand.InitializedRepository
+  href: ConsoleGit.Commands.BaseRepositoryCommand.html#ConsoleGit_Commands_BaseRepositoryCommand_InitializedRepository
+  name: InitializedRepository
+  nameWithType: BaseRepositoryCommand.InitializedRepository
+  fullName: ConsoleGit.Commands.BaseRepositoryCommand.InitializedRepository
+- uid: GitAbstraction.GitRepository
+  commentId: T:GitAbstraction.GitRepository
+  parent: GitAbstraction
+  name: GitRepository
+  nameWithType: GitRepository
+  fullName: GitAbstraction.GitRepository
+- uid: GitAbstraction
+  commentId: N:GitAbstraction
+  name: GitAbstraction
+  nameWithType: GitAbstraction
+  fullName: GitAbstraction
+- uid: ConsoleGit.Commands.BaseRepositoryCommand.GrantDeleteAccess*
+  commentId: Overload:ConsoleGit.Commands.BaseRepositoryCommand.GrantDeleteAccess
+  href: ConsoleGit.Commands.BaseRepositoryCommand.html#ConsoleGit_Commands_BaseRepositoryCommand_GrantDeleteAccess_System_IO_DirectoryInfo_System_String_
+  name: GrantDeleteAccess
+  nameWithType: BaseRepositoryCommand.GrantDeleteAccess
+  fullName: ConsoleGit.Commands.BaseRepositoryCommand.GrantDeleteAccess
+- uid: System.IO.DirectoryInfo
+  commentId: T:System.IO.DirectoryInfo
+  parent: System.IO
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.io.directoryinfo
+  name: DirectoryInfo
+  nameWithType: DirectoryInfo
+  fullName: System.IO.DirectoryInfo
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.IO
+  commentId: N:System.IO
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.IO
+  nameWithType: System.IO
+  fullName: System.IO
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.IO
+    name: IO
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.IO
+    name: IO
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io
+- uid: ConsoleGit.Commands.BaseRepositoryCommand.CleanRepositoryDirectory*
+  commentId: Overload:ConsoleGit.Commands.BaseRepositoryCommand.CleanRepositoryDirectory
+  href: ConsoleGit.Commands.BaseRepositoryCommand.html#ConsoleGit_Commands_BaseRepositoryCommand_CleanRepositoryDirectory
+  name: CleanRepositoryDirectory
+  nameWithType: BaseRepositoryCommand.CleanRepositoryDirectory
+  fullName: ConsoleGit.Commands.BaseRepositoryCommand.CleanRepositoryDirectory
+- uid: ConsoleGit.Commands.BaseRepositoryCommand.Dispose*
+  commentId: Overload:ConsoleGit.Commands.BaseRepositoryCommand.Dispose
+  href: ConsoleGit.Commands.BaseRepositoryCommand.html#ConsoleGit_Commands_BaseRepositoryCommand_Dispose_System_Boolean_
+  name: Dispose
+  nameWithType: BaseRepositoryCommand.Dispose
+  fullName: ConsoleGit.Commands.BaseRepositoryCommand.Dispose
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: ConsoleGit.Commands.BaseRepositoryCommand.Execute*
+  commentId: Overload:ConsoleGit.Commands.BaseRepositoryCommand.Execute
+  href: ConsoleGit.Commands.BaseRepositoryCommand.html#ConsoleGit_Commands_BaseRepositoryCommand_Execute
+  name: Execute
+  nameWithType: BaseRepositoryCommand.Execute
+  fullName: ConsoleGit.Commands.BaseRepositoryCommand.Execute
+- uid: ConsoleGit.Commands.ICommand.Execute
+  commentId: M:ConsoleGit.Commands.ICommand.Execute
+  parent: ConsoleGit.Commands.ICommand
+  href: ConsoleGit.Commands.ICommand.html#ConsoleGit_Commands_ICommand_Execute
+  name: Execute()
+  nameWithType: ICommand.Execute()
+  fullName: ConsoleGit.Commands.ICommand.Execute()
+  spec.csharp:
+  - uid: ConsoleGit.Commands.ICommand.Execute
+    name: Execute
+    href: ConsoleGit.Commands.ICommand.html#ConsoleGit_Commands_ICommand_Execute
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: ConsoleGit.Commands.ICommand.Execute
+    name: Execute
+    href: ConsoleGit.Commands.ICommand.html#ConsoleGit_Commands_ICommand_Execute
+  - name: (
+  - name: )
+- uid: ErrorOr.ErrorOr{ErrorOr.Success}
+  commentId: T:ErrorOr.ErrorOr{ErrorOr.Success}
+  parent: ErrorOr
+  definition: ErrorOr.ErrorOr`1
+  name: ErrorOr<Success>
+  nameWithType: ErrorOr<Success>
+  fullName: ErrorOr.ErrorOr<ErrorOr.Success>
+  nameWithType.vb: ErrorOr(Of Success)
+  fullName.vb: ErrorOr.ErrorOr(Of ErrorOr.Success)
+  name.vb: ErrorOr(Of Success)
+  spec.csharp:
+  - uid: ErrorOr.ErrorOr`1
+    name: ErrorOr
+    isExternal: true
+  - name: <
+  - uid: ErrorOr.Success
+    name: Success
+    isExternal: true
+  - name: '>'
+  spec.vb:
+  - uid: ErrorOr.ErrorOr`1
+    name: ErrorOr
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: ErrorOr.Success
+    name: Success
+    isExternal: true
+  - name: )
+- uid: ErrorOr.ErrorOr`1
+  commentId: T:ErrorOr.ErrorOr`1
+  isExternal: true
+  name: ErrorOr<TValue>
+  nameWithType: ErrorOr<TValue>
+  fullName: ErrorOr.ErrorOr<TValue>
+  nameWithType.vb: ErrorOr(Of TValue)
+  fullName.vb: ErrorOr.ErrorOr(Of TValue)
+  name.vb: ErrorOr(Of TValue)
+  spec.csharp:
+  - uid: ErrorOr.ErrorOr`1
+    name: ErrorOr
+    isExternal: true
+  - name: <
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: ErrorOr.ErrorOr`1
+    name: ErrorOr
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TValue
+  - name: )
+- uid: ErrorOr
+  commentId: N:ErrorOr
+  isExternal: true
+  name: ErrorOr
+  nameWithType: ErrorOr
+  fullName: ErrorOr
+- uid: System.IDisposable.Dispose
+  commentId: M:System.IDisposable.Dispose
+  parent: System.IDisposable
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  name: Dispose()
+  nameWithType: IDisposable.Dispose()
+  fullName: System.IDisposable.Dispose()
+  spec.csharp:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )
+- uid: ConsoleGit.Commands.BaseRepositoryCommand.Finalize*
+  commentId: Overload:ConsoleGit.Commands.BaseRepositoryCommand.Finalize
+  href: ConsoleGit.Commands.BaseRepositoryCommand.html#ConsoleGit_Commands_BaseRepositoryCommand_Finalize
+  name: ~BaseRepositoryCommand
+  nameWithType: BaseRepositoryCommand.~BaseRepositoryCommand
+  fullName: ConsoleGit.Commands.BaseRepositoryCommand.~BaseRepositoryCommand
+  spec.csharp:
+  - name: "~"
+  - uid: ConsoleGit.Commands.BaseRepositoryCommand.Finalize*
+    name: BaseRepositoryCommand
+    href: ConsoleGit.Commands.BaseRepositoryCommand.html#ConsoleGit_Commands_BaseRepositoryCommand_Finalize

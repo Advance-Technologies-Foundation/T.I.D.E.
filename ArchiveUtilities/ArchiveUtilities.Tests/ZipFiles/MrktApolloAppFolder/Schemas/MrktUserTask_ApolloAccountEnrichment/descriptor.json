@@ -1,0 +1,9 @@
+﻿{
+  "Descriptor": {
+    "UId": "a86b5ee4-5759-4ab2-aa91-831915384697",
+    "Name": "MrktUserTask_ApolloAccountEnrichment",
+    "ModifiedOnUtc": "\/Date(1704797740000)\/",
+    "ManagerName": "ProcessUserTaskSchemaManager",
+    "Caption": "Apollo account enrichment"
+  }
+}

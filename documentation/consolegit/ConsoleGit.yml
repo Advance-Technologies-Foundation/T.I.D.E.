@@ -1,0 +1,30 @@
+### YamlMime:ManagedReference
+items:
+- uid: ConsoleGit
+  commentId: N:ConsoleGit
+  id: ConsoleGit
+  children:
+  - ConsoleGit.CommandLineArgs
+  langs:
+  - csharp
+  - vb
+  name: ConsoleGit
+  nameWithType: ConsoleGit
+  fullName: ConsoleGit
+  type: Namespace
+  assemblies:
+  - ConsoleGit
+references:
+- uid: ConsoleGit.CommandLineArgs
+  commentId: T:ConsoleGit.CommandLineArgs
+  parent: ConsoleGit
+  href: ConsoleGit.CommandLineArgs.html
+  name: CommandLineArgs
+  nameWithType: CommandLineArgs
+  fullName: ConsoleGit.CommandLineArgs
+- uid: ConsoleGit
+  commentId: N:ConsoleGit
+  href: ConsoleGit.html
+  name: ConsoleGit
+  nameWithType: ConsoleGit
+  fullName: ConsoleGit

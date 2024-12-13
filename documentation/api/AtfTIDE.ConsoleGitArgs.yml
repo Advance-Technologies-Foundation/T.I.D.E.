@@ -1,0 +1,1067 @@
+### YamlMime:ManagedReference
+items:
+- uid: AtfTIDE.ConsoleGitArgs
+  commentId: T:AtfTIDE.ConsoleGitArgs
+  id: ConsoleGitArgs
+  parent: AtfTIDE
+  children:
+  - AtfTIDE.ConsoleGitArgs.ASPXAUTH
+  - AtfTIDE.ConsoleGitArgs.BPMCSRF
+  - AtfTIDE.ConsoleGitArgs.BPMLOADER
+  - AtfTIDE.ConsoleGitArgs.BPMSESSIONID
+  - AtfTIDE.ConsoleGitArgs.Command
+  - AtfTIDE.ConsoleGitArgs.CommitAuthorEmail
+  - AtfTIDE.ConsoleGitArgs.CommitAuthorName
+  - AtfTIDE.ConsoleGitArgs.CommitMessage
+  - AtfTIDE.ConsoleGitArgs.CreatioUrl
+  - AtfTIDE.ConsoleGitArgs.GitUrl
+  - AtfTIDE.ConsoleGitArgs.Password
+  - AtfTIDE.ConsoleGitArgs.ProcessTimeoutMs
+  - AtfTIDE.ConsoleGitArgs.RepoDir
+  - AtfTIDE.ConsoleGitArgs.ToDictionary
+  - AtfTIDE.ConsoleGitArgs.UserName
+  - AtfTIDE.ConsoleGitArgs.UserType
+  langs:
+  - csharp
+  - vb
+  name: ConsoleGitArgs
+  nameWithType: ConsoleGitArgs
+  fullName: AtfTIDE.ConsoleGitArgs
+  type: Class
+  source:
+    remote:
+      path: packages/AtfTIDE/Files/cs/ConsoleGitArgs.cs
+      branch: feature/my-feature
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: ConsoleGitArgs
+    path: ../packages/AtfTIDE/Files/cs/ConsoleGitArgs.cs
+    startLine: 20
+  assemblies:
+  - AtfTIDE
+  namespace: AtfTIDE
+  summary: Represents configuration and arguments for git operations
+  remarks: >-
+    Environment Variables Generated:
+
+    - Command: Git command to execute
+
+    - GitUrl: Repository URL
+
+    - UserName: Git username
+
+    - Password: Git password/token
+
+    - RepoDir: Repository directory
+
+    - CommitMessage: Commit message
+
+    - ProcessTimeoutMs: Process timeout in milliseconds
+  example: []
+  syntax:
+    content: public class ConsoleGitArgs
+    content.vb: Public Class ConsoleGitArgs
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+- uid: AtfTIDE.ConsoleGitArgs.Command
+  commentId: P:AtfTIDE.ConsoleGitArgs.Command
+  id: Command
+  parent: AtfTIDE.ConsoleGitArgs
+  langs:
+  - csharp
+  - vb
+  name: Command
+  nameWithType: ConsoleGitArgs.Command
+  fullName: AtfTIDE.ConsoleGitArgs.Command
+  type: Property
+  source:
+    remote:
+      path: packages/AtfTIDE/Files/cs/ConsoleGitArgs.cs
+      branch: feature/my-feature
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: Command
+    path: ../packages/AtfTIDE/Files/cs/ConsoleGitArgs.cs
+    startLine: 30
+  assemblies:
+  - AtfTIDE
+  namespace: AtfTIDE
+  summary: Git command to execute
+  remarks: Supported commands are defined in the Commands enum
+  example: []
+  syntax:
+    content: public Commands Command { get; set; }
+    parameters: []
+    return:
+      type: AtfTIDE.Commands
+    content.vb: Public Property Command As Commands
+  overload: AtfTIDE.ConsoleGitArgs.Command*
+- uid: AtfTIDE.ConsoleGitArgs.GitUrl
+  commentId: P:AtfTIDE.ConsoleGitArgs.GitUrl
+  id: GitUrl
+  parent: AtfTIDE.ConsoleGitArgs
+  langs:
+  - csharp
+  - vb
+  name: GitUrl
+  nameWithType: ConsoleGitArgs.GitUrl
+  fullName: AtfTIDE.ConsoleGitArgs.GitUrl
+  type: Property
+  source:
+    remote:
+      path: packages/AtfTIDE/Files/cs/ConsoleGitArgs.cs
+      branch: feature/my-feature
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: GitUrl
+    path: ../packages/AtfTIDE/Files/cs/ConsoleGitArgs.cs
+    startLine: 35
+  assemblies:
+  - AtfTIDE
+  namespace: AtfTIDE
+  summary: Repository URL (HTTPS or SSH)
+  example: []
+  syntax:
+    content: public string GitUrl { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property GitUrl As String
+  overload: AtfTIDE.ConsoleGitArgs.GitUrl*
+- uid: AtfTIDE.ConsoleGitArgs.Password
+  commentId: P:AtfTIDE.ConsoleGitArgs.Password
+  id: Password
+  parent: AtfTIDE.ConsoleGitArgs
+  langs:
+  - csharp
+  - vb
+  name: Password
+  nameWithType: ConsoleGitArgs.Password
+  fullName: AtfTIDE.ConsoleGitArgs.Password
+  type: Property
+  source:
+    remote:
+      path: packages/AtfTIDE/Files/cs/ConsoleGitArgs.cs
+      branch: feature/my-feature
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: Password
+    path: ../packages/AtfTIDE/Files/cs/ConsoleGitArgs.cs
+    startLine: 44
+  assemblies:
+  - AtfTIDE
+  namespace: AtfTIDE
+  summary: Repository password or access token
+  remarks: >-
+    For security, prefer using access tokens over passwords
+
+    Token should have minimal required permissions
+  example: []
+  syntax:
+    content: public string Password { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Password As String
+  overload: AtfTIDE.ConsoleGitArgs.Password*
+- uid: AtfTIDE.ConsoleGitArgs.RepoDir
+  commentId: P:AtfTIDE.ConsoleGitArgs.RepoDir
+  id: RepoDir
+  parent: AtfTIDE.ConsoleGitArgs
+  langs:
+  - csharp
+  - vb
+  name: RepoDir
+  nameWithType: ConsoleGitArgs.RepoDir
+  fullName: AtfTIDE.ConsoleGitArgs.RepoDir
+  type: Property
+  source:
+    remote:
+      path: packages/AtfTIDE/Files/cs/ConsoleGitArgs.cs
+      branch: feature/my-feature
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: RepoDir
+    path: ../packages/AtfTIDE/Files/cs/ConsoleGitArgs.cs
+    startLine: 49
+  assemblies:
+  - AtfTIDE
+  namespace: AtfTIDE
+  summary: Repository Folder path
+  example: []
+  syntax:
+    content: public string RepoDir { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property RepoDir As String
+  overload: AtfTIDE.ConsoleGitArgs.RepoDir*
+- uid: AtfTIDE.ConsoleGitArgs.UserName
+  commentId: P:AtfTIDE.ConsoleGitArgs.UserName
+  id: UserName
+  parent: AtfTIDE.ConsoleGitArgs
+  langs:
+  - csharp
+  - vb
+  name: UserName
+  nameWithType: ConsoleGitArgs.UserName
+  fullName: AtfTIDE.ConsoleGitArgs.UserName
+  type: Property
+  source:
+    remote:
+      path: packages/AtfTIDE/Files/cs/ConsoleGitArgs.cs
+      branch: feature/my-feature
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: UserName
+    path: ../packages/AtfTIDE/Files/cs/ConsoleGitArgs.cs
+    startLine: 55
+  assemblies:
+  - AtfTIDE
+  namespace: AtfTIDE
+  summary: Repository User name
+  example: []
+  syntax:
+    content: public string UserName { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property UserName As String
+  overload: AtfTIDE.ConsoleGitArgs.UserName*
+- uid: AtfTIDE.ConsoleGitArgs.CommitMessage
+  commentId: P:AtfTIDE.ConsoleGitArgs.CommitMessage
+  id: CommitMessage
+  parent: AtfTIDE.ConsoleGitArgs
+  langs:
+  - csharp
+  - vb
+  name: CommitMessage
+  nameWithType: ConsoleGitArgs.CommitMessage
+  fullName: AtfTIDE.ConsoleGitArgs.CommitMessage
+  type: Property
+  source:
+    remote:
+      path: packages/AtfTIDE/Files/cs/ConsoleGitArgs.cs
+      branch: feature/my-feature
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: CommitMessage
+    path: ../packages/AtfTIDE/Files/cs/ConsoleGitArgs.cs
+    startLine: 60
+  assemblies:
+  - AtfTIDE
+  namespace: AtfTIDE
+  summary: Git commit message
+  example: []
+  syntax:
+    content: public string CommitMessage { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property CommitMessage As String
+  overload: AtfTIDE.ConsoleGitArgs.CommitMessage*
+- uid: AtfTIDE.ConsoleGitArgs.ProcessTimeoutMs
+  commentId: P:AtfTIDE.ConsoleGitArgs.ProcessTimeoutMs
+  id: ProcessTimeoutMs
+  parent: AtfTIDE.ConsoleGitArgs
+  langs:
+  - csharp
+  - vb
+  name: ProcessTimeoutMs
+  nameWithType: ConsoleGitArgs.ProcessTimeoutMs
+  fullName: AtfTIDE.ConsoleGitArgs.ProcessTimeoutMs
+  type: Property
+  source:
+    remote:
+      path: packages/AtfTIDE/Files/cs/ConsoleGitArgs.cs
+      branch: feature/my-feature
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: ProcessTimeoutMs
+    path: ../packages/AtfTIDE/Files/cs/ConsoleGitArgs.cs
+    startLine: 66
+  assemblies:
+  - AtfTIDE
+  namespace: AtfTIDE
+  summary: Maximum time to wait for the process to complete
+  example: []
+  syntax:
+    content: public int ProcessTimeoutMs { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property ProcessTimeoutMs As Integer
+  overload: AtfTIDE.ConsoleGitArgs.ProcessTimeoutMs*
+- uid: AtfTIDE.ConsoleGitArgs.CommitAuthorName
+  commentId: P:AtfTIDE.ConsoleGitArgs.CommitAuthorName
+  id: CommitAuthorName
+  parent: AtfTIDE.ConsoleGitArgs
+  langs:
+  - csharp
+  - vb
+  name: CommitAuthorName
+  nameWithType: ConsoleGitArgs.CommitAuthorName
+  fullName: AtfTIDE.ConsoleGitArgs.CommitAuthorName
+  type: Property
+  source:
+    remote:
+      path: packages/AtfTIDE/Files/cs/ConsoleGitArgs.cs
+      branch: feature/my-feature
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: CommitAuthorName
+    path: ../packages/AtfTIDE/Files/cs/ConsoleGitArgs.cs
+    startLine: 75
+  assemblies:
+  - AtfTIDE
+  namespace: AtfTIDE
+  summary: Name of the author to be used in the commit
+  remarks: >-
+    Required for Commit operations.
+
+    Should match the git config user.name format
+  example: []
+  syntax:
+    content: public string CommitAuthorName { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property CommitAuthorName As String
+  overload: AtfTIDE.ConsoleGitArgs.CommitAuthorName*
+- uid: AtfTIDE.ConsoleGitArgs.CommitAuthorEmail
+  commentId: P:AtfTIDE.ConsoleGitArgs.CommitAuthorEmail
+  id: CommitAuthorEmail
+  parent: AtfTIDE.ConsoleGitArgs
+  langs:
+  - csharp
+  - vb
+  name: CommitAuthorEmail
+  nameWithType: ConsoleGitArgs.CommitAuthorEmail
+  fullName: AtfTIDE.ConsoleGitArgs.CommitAuthorEmail
+  type: Property
+  source:
+    remote:
+      path: packages/AtfTIDE/Files/cs/ConsoleGitArgs.cs
+      branch: feature/my-feature
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: CommitAuthorEmail
+    path: ../packages/AtfTIDE/Files/cs/ConsoleGitArgs.cs
+    startLine: 85
+  assemblies:
+  - AtfTIDE
+  namespace: AtfTIDE
+  summary: Email of the author to be used in the commit
+  remarks: >-
+    Required for Commit operations.
+
+    Should match the git config user.email format
+
+    Must be a valid email address
+  example: []
+  syntax:
+    content: public string CommitAuthorEmail { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property CommitAuthorEmail As String
+  overload: AtfTIDE.ConsoleGitArgs.CommitAuthorEmail*
+- uid: AtfTIDE.ConsoleGitArgs.CreatioUrl
+  commentId: P:AtfTIDE.ConsoleGitArgs.CreatioUrl
+  id: CreatioUrl
+  parent: AtfTIDE.ConsoleGitArgs
+  langs:
+  - csharp
+  - vb
+  name: CreatioUrl
+  nameWithType: ConsoleGitArgs.CreatioUrl
+  fullName: AtfTIDE.ConsoleGitArgs.CreatioUrl
+  type: Property
+  source:
+    remote:
+      path: packages/AtfTIDE/Files/cs/ConsoleGitArgs.cs
+      branch: feature/my-feature
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: CreatioUrl
+    path: ../packages/AtfTIDE/Files/cs/ConsoleGitArgs.cs
+    startLine: 88
+  assemblies:
+  - AtfTIDE
+  namespace: AtfTIDE
+  syntax:
+    content: public Uri CreatioUrl { get; set; }
+    parameters: []
+    return:
+      type: System.Uri
+    content.vb: Public Property CreatioUrl As Uri
+  overload: AtfTIDE.ConsoleGitArgs.CreatioUrl*
+- uid: AtfTIDE.ConsoleGitArgs.BPMLOADER
+  commentId: P:AtfTIDE.ConsoleGitArgs.BPMLOADER
+  id: BPMLOADER
+  parent: AtfTIDE.ConsoleGitArgs
+  langs:
+  - csharp
+  - vb
+  name: BPMLOADER
+  nameWithType: ConsoleGitArgs.BPMLOADER
+  fullName: AtfTIDE.ConsoleGitArgs.BPMLOADER
+  type: Property
+  source:
+    remote:
+      path: packages/AtfTIDE/Files/cs/ConsoleGitArgs.cs
+      branch: feature/my-feature
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: BPMLOADER
+    path: ../packages/AtfTIDE/Files/cs/ConsoleGitArgs.cs
+    startLine: 89
+  assemblies:
+  - AtfTIDE
+  namespace: AtfTIDE
+  syntax:
+    content: public string BPMLOADER { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property BPMLOADER As String
+  overload: AtfTIDE.ConsoleGitArgs.BPMLOADER*
+- uid: AtfTIDE.ConsoleGitArgs.ASPXAUTH
+  commentId: P:AtfTIDE.ConsoleGitArgs.ASPXAUTH
+  id: ASPXAUTH
+  parent: AtfTIDE.ConsoleGitArgs
+  langs:
+  - csharp
+  - vb
+  name: ASPXAUTH
+  nameWithType: ConsoleGitArgs.ASPXAUTH
+  fullName: AtfTIDE.ConsoleGitArgs.ASPXAUTH
+  type: Property
+  source:
+    remote:
+      path: packages/AtfTIDE/Files/cs/ConsoleGitArgs.cs
+      branch: feature/my-feature
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: ASPXAUTH
+    path: ../packages/AtfTIDE/Files/cs/ConsoleGitArgs.cs
+    startLine: 90
+  assemblies:
+  - AtfTIDE
+  namespace: AtfTIDE
+  syntax:
+    content: public string ASPXAUTH { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ASPXAUTH As String
+  overload: AtfTIDE.ConsoleGitArgs.ASPXAUTH*
+- uid: AtfTIDE.ConsoleGitArgs.BPMCSRF
+  commentId: P:AtfTIDE.ConsoleGitArgs.BPMCSRF
+  id: BPMCSRF
+  parent: AtfTIDE.ConsoleGitArgs
+  langs:
+  - csharp
+  - vb
+  name: BPMCSRF
+  nameWithType: ConsoleGitArgs.BPMCSRF
+  fullName: AtfTIDE.ConsoleGitArgs.BPMCSRF
+  type: Property
+  source:
+    remote:
+      path: packages/AtfTIDE/Files/cs/ConsoleGitArgs.cs
+      branch: feature/my-feature
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: BPMCSRF
+    path: ../packages/AtfTIDE/Files/cs/ConsoleGitArgs.cs
+    startLine: 91
+  assemblies:
+  - AtfTIDE
+  namespace: AtfTIDE
+  syntax:
+    content: public string BPMCSRF { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property BPMCSRF As String
+  overload: AtfTIDE.ConsoleGitArgs.BPMCSRF*
+- uid: AtfTIDE.ConsoleGitArgs.UserType
+  commentId: P:AtfTIDE.ConsoleGitArgs.UserType
+  id: UserType
+  parent: AtfTIDE.ConsoleGitArgs
+  langs:
+  - csharp
+  - vb
+  name: UserType
+  nameWithType: ConsoleGitArgs.UserType
+  fullName: AtfTIDE.ConsoleGitArgs.UserType
+  type: Property
+  source:
+    remote:
+      path: packages/AtfTIDE/Files/cs/ConsoleGitArgs.cs
+      branch: feature/my-feature
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: UserType
+    path: ../packages/AtfTIDE/Files/cs/ConsoleGitArgs.cs
+    startLine: 92
+  assemblies:
+  - AtfTIDE
+  namespace: AtfTIDE
+  syntax:
+    content: public string UserType { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property UserType As String
+  overload: AtfTIDE.ConsoleGitArgs.UserType*
+- uid: AtfTIDE.ConsoleGitArgs.BPMSESSIONID
+  commentId: P:AtfTIDE.ConsoleGitArgs.BPMSESSIONID
+  id: BPMSESSIONID
+  parent: AtfTIDE.ConsoleGitArgs
+  langs:
+  - csharp
+  - vb
+  name: BPMSESSIONID
+  nameWithType: ConsoleGitArgs.BPMSESSIONID
+  fullName: AtfTIDE.ConsoleGitArgs.BPMSESSIONID
+  type: Property
+  source:
+    remote:
+      path: packages/AtfTIDE/Files/cs/ConsoleGitArgs.cs
+      branch: feature/my-feature
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: BPMSESSIONID
+    path: ../packages/AtfTIDE/Files/cs/ConsoleGitArgs.cs
+    startLine: 93
+  assemblies:
+  - AtfTIDE
+  namespace: AtfTIDE
+  syntax:
+    content: public string BPMSESSIONID { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property BPMSESSIONID As String
+  overload: AtfTIDE.ConsoleGitArgs.BPMSESSIONID*
+- uid: AtfTIDE.ConsoleGitArgs.ToDictionary
+  commentId: M:AtfTIDE.ConsoleGitArgs.ToDictionary
+  id: ToDictionary
+  parent: AtfTIDE.ConsoleGitArgs
+  langs:
+  - csharp
+  - vb
+  name: ToDictionary()
+  nameWithType: ConsoleGitArgs.ToDictionary()
+  fullName: AtfTIDE.ConsoleGitArgs.ToDictionary()
+  type: Method
+  source:
+    remote:
+      path: packages/AtfTIDE/Files/cs/ConsoleGitArgs.cs
+      branch: feature/my-feature
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: ToDictionary
+    path: ../packages/AtfTIDE/Files/cs/ConsoleGitArgs.cs
+    startLine: 113
+  assemblies:
+  - AtfTIDE
+  namespace: AtfTIDE
+  summary: Converts all public properties to environment variables dictionary
+  remarks: <p><strong></strong></p><ul><li>Skips null values</li><li>Formats dates as ISO 8601</li><li>Uses invariant culture for formatting numbers</li><li>Empty strings are included (unlike null values)</li></ul>
+  example: []
+  syntax:
+    content: public Dictionary<string, string> ToDictionary()
+    return:
+      type: System.Collections.Generic.Dictionary{System.String,System.String}
+      description: Dictionary of environment variables
+    content.vb: Public Function ToDictionary() As Dictionary(Of String, String)
+  overload: AtfTIDE.ConsoleGitArgs.ToDictionary*
+references:
+- uid: AtfTIDE
+  commentId: N:AtfTIDE
+  href: AtfTIDE.html
+  name: AtfTIDE
+  nameWithType: AtfTIDE
+  fullName: AtfTIDE
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: AtfTIDE.ConsoleGitArgs.Command*
+  commentId: Overload:AtfTIDE.ConsoleGitArgs.Command
+  href: AtfTIDE.ConsoleGitArgs.html#AtfTIDE_ConsoleGitArgs_Command
+  name: Command
+  nameWithType: ConsoleGitArgs.Command
+  fullName: AtfTIDE.ConsoleGitArgs.Command
+- uid: AtfTIDE.Commands
+  commentId: T:AtfTIDE.Commands
+  parent: AtfTIDE
+  href: AtfTIDE.Commands.html
+  name: Commands
+  nameWithType: Commands
+  fullName: AtfTIDE.Commands
+- uid: AtfTIDE.ConsoleGitArgs.GitUrl*
+  commentId: Overload:AtfTIDE.ConsoleGitArgs.GitUrl
+  href: AtfTIDE.ConsoleGitArgs.html#AtfTIDE_ConsoleGitArgs_GitUrl
+  name: GitUrl
+  nameWithType: ConsoleGitArgs.GitUrl
+  fullName: AtfTIDE.ConsoleGitArgs.GitUrl
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: AtfTIDE.ConsoleGitArgs.Password*
+  commentId: Overload:AtfTIDE.ConsoleGitArgs.Password
+  href: AtfTIDE.ConsoleGitArgs.html#AtfTIDE_ConsoleGitArgs_Password
+  name: Password
+  nameWithType: ConsoleGitArgs.Password
+  fullName: AtfTIDE.ConsoleGitArgs.Password
+- uid: AtfTIDE.ConsoleGitArgs.RepoDir*
+  commentId: Overload:AtfTIDE.ConsoleGitArgs.RepoDir
+  href: AtfTIDE.ConsoleGitArgs.html#AtfTIDE_ConsoleGitArgs_RepoDir
+  name: RepoDir
+  nameWithType: ConsoleGitArgs.RepoDir
+  fullName: AtfTIDE.ConsoleGitArgs.RepoDir
+- uid: AtfTIDE.ConsoleGitArgs.UserName*
+  commentId: Overload:AtfTIDE.ConsoleGitArgs.UserName
+  href: AtfTIDE.ConsoleGitArgs.html#AtfTIDE_ConsoleGitArgs_UserName
+  name: UserName
+  nameWithType: ConsoleGitArgs.UserName
+  fullName: AtfTIDE.ConsoleGitArgs.UserName
+- uid: AtfTIDE.ConsoleGitArgs.CommitMessage*
+  commentId: Overload:AtfTIDE.ConsoleGitArgs.CommitMessage
+  href: AtfTIDE.ConsoleGitArgs.html#AtfTIDE_ConsoleGitArgs_CommitMessage
+  name: CommitMessage
+  nameWithType: ConsoleGitArgs.CommitMessage
+  fullName: AtfTIDE.ConsoleGitArgs.CommitMessage
+- uid: AtfTIDE.ConsoleGitArgs.ProcessTimeoutMs*
+  commentId: Overload:AtfTIDE.ConsoleGitArgs.ProcessTimeoutMs
+  href: AtfTIDE.ConsoleGitArgs.html#AtfTIDE_ConsoleGitArgs_ProcessTimeoutMs
+  name: ProcessTimeoutMs
+  nameWithType: ConsoleGitArgs.ProcessTimeoutMs
+  fullName: AtfTIDE.ConsoleGitArgs.ProcessTimeoutMs
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: AtfTIDE.ConsoleGitArgs.CommitAuthorName*
+  commentId: Overload:AtfTIDE.ConsoleGitArgs.CommitAuthorName
+  href: AtfTIDE.ConsoleGitArgs.html#AtfTIDE_ConsoleGitArgs_CommitAuthorName
+  name: CommitAuthorName
+  nameWithType: ConsoleGitArgs.CommitAuthorName
+  fullName: AtfTIDE.ConsoleGitArgs.CommitAuthorName
+- uid: AtfTIDE.ConsoleGitArgs.CommitAuthorEmail*
+  commentId: Overload:AtfTIDE.ConsoleGitArgs.CommitAuthorEmail
+  href: AtfTIDE.ConsoleGitArgs.html#AtfTIDE_ConsoleGitArgs_CommitAuthorEmail
+  name: CommitAuthorEmail
+  nameWithType: ConsoleGitArgs.CommitAuthorEmail
+  fullName: AtfTIDE.ConsoleGitArgs.CommitAuthorEmail
+- uid: AtfTIDE.ConsoleGitArgs.CreatioUrl*
+  commentId: Overload:AtfTIDE.ConsoleGitArgs.CreatioUrl
+  href: AtfTIDE.ConsoleGitArgs.html#AtfTIDE_ConsoleGitArgs_CreatioUrl
+  name: CreatioUrl
+  nameWithType: ConsoleGitArgs.CreatioUrl
+  fullName: AtfTIDE.ConsoleGitArgs.CreatioUrl
+- uid: System.Uri
+  commentId: T:System.Uri
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uri
+  name: Uri
+  nameWithType: Uri
+  fullName: System.Uri
+- uid: AtfTIDE.ConsoleGitArgs.BPMLOADER*
+  commentId: Overload:AtfTIDE.ConsoleGitArgs.BPMLOADER
+  href: AtfTIDE.ConsoleGitArgs.html#AtfTIDE_ConsoleGitArgs_BPMLOADER
+  name: BPMLOADER
+  nameWithType: ConsoleGitArgs.BPMLOADER
+  fullName: AtfTIDE.ConsoleGitArgs.BPMLOADER
+- uid: AtfTIDE.ConsoleGitArgs.ASPXAUTH*
+  commentId: Overload:AtfTIDE.ConsoleGitArgs.ASPXAUTH
+  href: AtfTIDE.ConsoleGitArgs.html#AtfTIDE_ConsoleGitArgs_ASPXAUTH
+  name: ASPXAUTH
+  nameWithType: ConsoleGitArgs.ASPXAUTH
+  fullName: AtfTIDE.ConsoleGitArgs.ASPXAUTH
+- uid: AtfTIDE.ConsoleGitArgs.BPMCSRF*
+  commentId: Overload:AtfTIDE.ConsoleGitArgs.BPMCSRF
+  href: AtfTIDE.ConsoleGitArgs.html#AtfTIDE_ConsoleGitArgs_BPMCSRF
+  name: BPMCSRF
+  nameWithType: ConsoleGitArgs.BPMCSRF
+  fullName: AtfTIDE.ConsoleGitArgs.BPMCSRF
+- uid: AtfTIDE.ConsoleGitArgs.UserType*
+  commentId: Overload:AtfTIDE.ConsoleGitArgs.UserType
+  href: AtfTIDE.ConsoleGitArgs.html#AtfTIDE_ConsoleGitArgs_UserType
+  name: UserType
+  nameWithType: ConsoleGitArgs.UserType
+  fullName: AtfTIDE.ConsoleGitArgs.UserType
+- uid: AtfTIDE.ConsoleGitArgs.BPMSESSIONID*
+  commentId: Overload:AtfTIDE.ConsoleGitArgs.BPMSESSIONID
+  href: AtfTIDE.ConsoleGitArgs.html#AtfTIDE_ConsoleGitArgs_BPMSESSIONID
+  name: BPMSESSIONID
+  nameWithType: ConsoleGitArgs.BPMSESSIONID
+  fullName: AtfTIDE.ConsoleGitArgs.BPMSESSIONID
+- uid: AtfTIDE.ConsoleGitArgs.ToDictionary*
+  commentId: Overload:AtfTIDE.ConsoleGitArgs.ToDictionary
+  href: AtfTIDE.ConsoleGitArgs.html#AtfTIDE_ConsoleGitArgs_ToDictionary
+  name: ToDictionary
+  nameWithType: ConsoleGitArgs.ToDictionary
+  fullName: AtfTIDE.ConsoleGitArgs.ToDictionary
+- uid: System.Collections.Generic.Dictionary{System.String,System.String}
+  commentId: T:System.Collections.Generic.Dictionary{System.String,System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Dictionary`2
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<string, string>
+  nameWithType: Dictionary<string, string>
+  fullName: System.Collections.Generic.Dictionary<string, string>
+  nameWithType.vb: Dictionary(Of String, String)
+  fullName.vb: System.Collections.Generic.Dictionary(Of String, String)
+  name.vb: Dictionary(Of String, String)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Collections.Generic.Dictionary`2
+  commentId: T:System.Collections.Generic.Dictionary`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<TKey, TValue>
+  nameWithType: Dictionary<TKey, TValue>
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>
+  nameWithType.vb: Dictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.Dictionary(Of TKey, TValue)
+  name.vb: Dictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic

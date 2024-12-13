@@ -1,0 +1,14 @@
+﻿{
+  "Descriptor": {
+    "UId": "c61af550-fc40-40f6-a5d2-aa6395223997",
+    "Name": "MrktApolloMixedCompanySearch",
+    "ModifiedOnUtc": "\/Date(1701158412000)\/",
+    "Parent": {
+      "UId": "1bab9dcf-17d5-49f8-9536-8e0064f1dce0",
+      "Name": "BaseEntity"
+    },
+    "ManagerName": "EntitySchemaManager",
+    "Caption": "Apollo mixed company search",
+    "DependsOn": []
+  }
+}

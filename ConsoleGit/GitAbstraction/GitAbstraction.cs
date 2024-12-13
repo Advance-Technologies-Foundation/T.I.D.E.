@@ -93,7 +93,7 @@ namespace GitAbstraction {
 				}else{
 					RepoDirectory.Create();
 				}
-				CloneOptions cloneOptions = new CloneOptions();
+				CloneOptions cloneOptions = new ();
 				if (Credentials == null) {
 					return Repository.Clone(GitUrl.ToString(), RepoDirectory.FullName);
 				}
@@ -159,7 +159,7 @@ namespace GitAbstraction {
 		///  An <see cref="ErrorOr{T}" /> indicating success or failure.
 		/// </returns>
 		/// <seealso href="https://github.com/libgit2/libgit2sharp/wiki/git-push#git-push">libgit2sharp Wiki git-push</seealso>
-		private ErrorOr<Success> Push(string branchName){
+		public ErrorOr<Success> Push(string branchName){
 			Branch branch  = InitializedRepository.Branches[branchName];
 			return branch == null ? Error.Failure("BranchNotFound", $"Branch {branchName} not found") : Push(branch);
 		}
@@ -173,29 +173,81 @@ namespace GitAbstraction {
 		///  An <see cref="ErrorOr{T}" /> indicating success or failure.
 		/// </returns>
 		/// <seealso href="https://github.com/libgit2/libgit2sharp/wiki/git-push#git-push">libgit2sharp Wiki git-push</seealso>
-		private  ErrorOr<Success> Push(Branch branch){
-			PushOptions options = new PushOptions {
+		public ErrorOr<Success> Push(Branch branch){
+			PushOptions options = new () {
 				CredentialsProvider = CredentialsProvider
 			};
-			Remote remote = InitializedRepository.Network.Remotes["origin"];
-			InitializedRepository.Network.Push(remote, $"refs/heads/{branch.FriendlyName}", options);
+			//Remote remote = InitializedRepository.Network.Remotes["origin"];
+			
+			InitializedRepository.Network.Push(branch, options);
+			//InitializedRepository.Network.Push(remote, $"refs/heads/{branch.FriendlyName}", options);
 			return Result.Success;
 		}
-	
-	
+		
+		/// <summary>
+		/// Checkout to existing branch by name
+		/// </summary>
+		/// <param name="branchName">Branch name to checkout</param>
+		/// <returns></returns>
+		/// <seealso href="https://github.com/libgit2/libgit2sharp/wiki/git-checkout#checkout-to-existing-branch-by-name">libgit2sharp Wiki git checkout <c>branch</c></seealso>
 		public ErrorOr<Success> CheckoutBranch(string branchName){
 			Branch branches = InitializedRepository.Branches[branchName];
 			if (branches == null) {
 				return Error.Failure("BranchNotFound", $"Branch {branchName} not found");
 			}
-			var result = Commands.Checkout(InitializedRepository, branchName);
+			Branch result = Commands.Checkout(InitializedRepository, branchName);
 			if (result == null) {
 				return Error.Failure("BranchNotFound", $"Branch {branchName} not found");
 			}
 			return Result.Success;
 		}
-	
-	
+		
+		/// <summary>
+		///  Stage all working directory changes
+		///  Adds all files to the staging area.
+		/// </summary>
+		/// <remarks>git add --all .</remarks>
+		/// <seealso href="https://github.com/libgit2/libgit2sharp/wiki/git-add#stage-all-working-directory-changes">libgit2sharp Wiki git add</seealso>
+		public ErrorOr<Success> AddAll(){
+			Commands.Stage(InitializedRepository, "*");
+			return Result.Success;
+		}
+		
+		/// <summary>
+		/// Stage (add) a file in a repository that is checked out to the file system:
+		/// </summary>
+		/// <param name="filePath">Filepath to a file with changes, relative to .git directory</param>
+		/// <returns></returns>
+		/// <seealso href="https://github.com/libgit2/libgit2sharp/wiki/git-add#add-to-a-non-bare-repository">libgit2sharp Wiki git add</seealso>
+		public ErrorOr<Success> AddFile(string filePath){
+			InitializedRepository.Index.Add(filePath);
+			InitializedRepository.Index.Write();
+			return Result.Success;
+		} 
+		
+		/// <summary>
+		/// Make a commit to a non-bare repository
+		/// </summary>
+		/// <param name="name">Committer name</param>
+		/// <param name="email">Committer email</param>
+		/// <param name="message">Commit message</param>
+		/// <returns><see cref="Commit"/></returns>
+		/// <seealso href="https://github.com/libgit2/libgit2sharp/wiki/git-commit#make-a-commit-to-a-non-bare-repository">libgit2sharp Wiki git commit</seealso>
+		public ErrorOr<Commit> Commit(string name, string email, string message){
+			// Create the committer's signature and commit
+			
+			Signature author = new (name, email, DateTime.Now);
+
+			// Commit to the repository
+			//INVESTIGATE: We can potentially pass TIDE as committer
+			
+			Commit commit = InitializedRepository.Commit(message, author, author, new CommitOptions {
+				PrettifyMessage = false
+			});
+			return commit;
+		}
+		
+		
 		public ErrorOr<IEnumerable<Commit>> GetCommits(){
 		
 			return InitializedRepository.Commits.ToList();
@@ -216,7 +268,11 @@ namespace GitAbstraction {
 				return e.ToError();
 			}
 		}
-	
+		
+		public ErrorOr<Success> PublishBranch(Branch branch){
+			InitializedRepository.Branches.Update(branch);
+			return Push(branch);
+		}
 		public ErrorOr<Success> CreateBranchAndPublish(string branchName){
 			ErrorOr<Branch> branchOrError = CreateBranch(branchName);
 		

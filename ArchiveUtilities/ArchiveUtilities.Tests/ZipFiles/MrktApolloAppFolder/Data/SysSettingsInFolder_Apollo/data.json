@@ -1,0 +1,22 @@
+﻿{
+  "PackageData": [
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "Value": "704e17bf-ec85-49fb-8bae-d2f2379d2b60"
+        },
+        {
+          "SchemaColumnUId": "34982036-bcf9-408a-a293-d6b35c45edd5",
+          "Value": "e268bb57-9219-4264-9897-0a5543eed203",
+          "DisplayValue": "Apollo Api Key"
+        },
+        {
+          "SchemaColumnUId": "9e46bb69-9788-423c-b7cd-4c624081082d",
+          "Value": "43c2e477-1beb-4358-a1c3-28c550fa9c58",
+          "DisplayValue": "Apollo.io"
+        }
+      ]
+    }
+  ]
+}

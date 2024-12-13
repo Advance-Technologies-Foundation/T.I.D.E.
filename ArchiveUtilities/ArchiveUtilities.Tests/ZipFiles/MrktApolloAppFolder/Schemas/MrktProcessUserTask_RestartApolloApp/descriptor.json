@@ -1,0 +1,9 @@
+﻿{
+  "Descriptor": {
+    "UId": "a3157d19-e52d-4893-86c2-42d0beb26f13",
+    "Name": "MrktProcessUserTask_RestartApolloApp",
+    "ModifiedOnUtc": "\/Date(1701724618000)\/",
+    "ManagerName": "ProcessUserTaskSchemaManager",
+    "Caption": "RestartApolloApp"
+  }
+}

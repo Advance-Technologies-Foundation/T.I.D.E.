@@ -1,0 +1,76 @@
+### YamlMime:ManagedReference
+items:
+- uid: AtfTIDE
+  commentId: N:AtfTIDE
+  id: AtfTIDE
+  children:
+  - AtfTIDE.Commands
+  - AtfTIDE.ConsoleGit
+  - AtfTIDE.ConsoleGitArgs
+  - AtfTIDE.ConsoleGitResult
+  - AtfTIDE.HelperFunctions
+  - AtfTIDE.IConsoleGit
+  - AtfTIDE.RepositoryInfo
+  langs:
+  - csharp
+  - vb
+  name: AtfTIDE
+  nameWithType: AtfTIDE
+  fullName: AtfTIDE
+  type: Namespace
+  assemblies:
+  - AtfTIDE
+references:
+- uid: AtfTIDE.IConsoleGit
+  commentId: T:AtfTIDE.IConsoleGit
+  parent: AtfTIDE
+  href: AtfTIDE.IConsoleGit.html
+  name: IConsoleGit
+  nameWithType: IConsoleGit
+  fullName: AtfTIDE.IConsoleGit
+- uid: AtfTIDE.ConsoleGit
+  commentId: T:AtfTIDE.ConsoleGit
+  href: AtfTIDE.ConsoleGit.html
+  name: ConsoleGit
+  nameWithType: ConsoleGit
+  fullName: AtfTIDE.ConsoleGit
+- uid: AtfTIDE.Commands
+  commentId: T:AtfTIDE.Commands
+  parent: AtfTIDE
+  href: AtfTIDE.Commands.html
+  name: Commands
+  nameWithType: Commands
+  fullName: AtfTIDE.Commands
+- uid: AtfTIDE.ConsoleGitArgs
+  commentId: T:AtfTIDE.ConsoleGitArgs
+  parent: AtfTIDE
+  href: AtfTIDE.ConsoleGitArgs.html
+  name: ConsoleGitArgs
+  nameWithType: ConsoleGitArgs
+  fullName: AtfTIDE.ConsoleGitArgs
+- uid: AtfTIDE.ConsoleGitResult
+  commentId: T:AtfTIDE.ConsoleGitResult
+  parent: AtfTIDE
+  href: AtfTIDE.ConsoleGitResult.html
+  name: ConsoleGitResult
+  nameWithType: ConsoleGitResult
+  fullName: AtfTIDE.ConsoleGitResult
+- uid: AtfTIDE.HelperFunctions
+  commentId: T:AtfTIDE.HelperFunctions
+  href: AtfTIDE.HelperFunctions.html
+  name: HelperFunctions
+  nameWithType: HelperFunctions
+  fullName: AtfTIDE.HelperFunctions
+- uid: AtfTIDE.RepositoryInfo
+  commentId: T:AtfTIDE.RepositoryInfo
+  parent: AtfTIDE
+  href: AtfTIDE.RepositoryInfo.html
+  name: RepositoryInfo
+  nameWithType: RepositoryInfo
+  fullName: AtfTIDE.RepositoryInfo
+- uid: AtfTIDE
+  commentId: N:AtfTIDE
+  href: AtfTIDE.html
+  name: AtfTIDE
+  nameWithType: AtfTIDE
+  fullName: AtfTIDE

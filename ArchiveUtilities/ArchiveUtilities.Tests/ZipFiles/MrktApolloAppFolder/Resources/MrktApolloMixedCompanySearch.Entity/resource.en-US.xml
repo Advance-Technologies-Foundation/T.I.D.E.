@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="en-US">
+	<Group Type="String">
+		<Items>
+			<Item Name="Caption" Value="Apollo mixed company search" />
+			<Item Name="Columns.MrktAccount.Caption" Value="Account" />
+			<Item Name="Columns.MrktAngellist.Caption" Value="Angellist" />
+			<Item Name="Columns.MrktAngellist.Description" Value="Company angellist" />
+			<Item Name="Columns.MrktApolloId.Caption" Value="Apollo id" />
+			<Item Name="Columns.MrktApolloId.Description" Value="Unique identifier of an account or organization" />
+			<Item Name="Columns.MrktFacebook.Caption" Value="Facebook" />
+			<Item Name="Columns.MrktFacebook.Description" Value="Company Facebook" />
+			<Item Name="Columns.MrktLinkedIn.Caption" Value="LinkedIn" />
+			<Item Name="Columns.MrktLinkedIn.Description" Value="Company LinkedIn" />
+			<Item Name="Columns.MrktName.Caption" Value="Name" />
+			<Item Name="Columns.MrktName.Description" Value="Company name" />
+			<Item Name="Columns.MrktPhone.Caption" Value="Phone" />
+			<Item Name="Columns.MrktPhone.Description" Value="Company phone" />
+			<Item Name="Columns.MrktPrimaryDomain.Caption" Value="Primary domain" />
+			<Item Name="Columns.MrktPrimaryDomain.Description" Value="Company primary domain" />
+			<Item Name="Columns.MrktTwitter.Caption" Value="Twitter" />
+			<Item Name="Columns.MrktTwitter.Description" Value="Company Twitter" />
+			<Item Name="Columns.MrktWebSite.Caption" Value="Website" />
+			<Item Name="Columns.MrktWebSite.Description" Value="Company website" />
+			<Item Name="Columns.MrktYearEstablished.Caption" Value="Year established" />
+			<Item Name="Columns.MrktYearEstablished.Description" Value="Year in which the company was established" />
+			<Item Name="Columns.Name.Caption" Value="Name" />
+			<Item Name="Description" Value="Virtual entity over Apollo REST API https://apolloio.github.io/apollo-api-docs/?shell#organization-search" />
+		</Items>
+	</Group>
+</Resources>

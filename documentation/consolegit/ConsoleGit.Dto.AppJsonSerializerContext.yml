@@ -1,0 +1,1044 @@
+### YamlMime:ManagedReference
+items:
+- uid: ConsoleGit.Dto.AppJsonSerializerContext
+  commentId: T:ConsoleGit.Dto.AppJsonSerializerContext
+  id: AppJsonSerializerContext
+  parent: ConsoleGit.Dto
+  children:
+  - ConsoleGit.Dto.AppJsonSerializerContext.#ctor
+  - ConsoleGit.Dto.AppJsonSerializerContext.#ctor(System.Text.Json.JsonSerializerOptions)
+  - ConsoleGit.Dto.AppJsonSerializerContext.Default
+  - ConsoleGit.Dto.AppJsonSerializerContext.GeneratedSerializerOptions
+  - ConsoleGit.Dto.AppJsonSerializerContext.GetTypeInfo(System.Type)
+  - ConsoleGit.Dto.AppJsonSerializerContext.JsonElement
+  - ConsoleGit.Dto.AppJsonSerializerContext.String
+  - ConsoleGit.Dto.AppJsonSerializerContext.StringArray
+  - ConsoleGit.Dto.AppJsonSerializerContext.WorkspaceSettings
+  langs:
+  - csharp
+  - vb
+  name: AppJsonSerializerContext
+  nameWithType: AppJsonSerializerContext
+  fullName: ConsoleGit.Dto.AppJsonSerializerContext
+  type: Class
+  source:
+    id: AppJsonSerializerContext
+    path: System.Text.Json.SourceGeneration\System.Text.Json.SourceGeneration.JsonSourceGenerator\AppJsonSerializerContext.g.cs
+    startLine: 10
+  assemblies:
+  - ConsoleGit
+  namespace: ConsoleGit.Dto
+  syntax:
+    content: >-
+      [JsonSerializable(typeof(string[]))]
+
+      [JsonSerializable(typeof(JsonElement))]
+
+      [JsonSerializable(typeof(WorkspaceSettings))]
+
+      public class AppJsonSerializerContext : JsonSerializerContext, IJsonTypeInfoResolver
+    content.vb: >-
+      <JsonSerializable(GetType(String()))>
+
+      <JsonSerializable(GetType(JsonElement))>
+
+      <JsonSerializable(GetType(WorkspaceSettings))>
+
+      Public Class AppJsonSerializerContext Inherits JsonSerializerContext Implements IJsonTypeInfoResolver
+  inheritance:
+  - System.Object
+  - System.Text.Json.Serialization.JsonSerializerContext
+  implements:
+  - System.Text.Json.Serialization.Metadata.IJsonTypeInfoResolver
+  inheritedMembers:
+  - System.Text.Json.Serialization.JsonSerializerContext.Options
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  attributes:
+  - type: System.Text.Json.Serialization.JsonSerializableAttribute
+    ctor: System.Text.Json.Serialization.JsonSerializableAttribute.#ctor(System.Type)
+    arguments:
+    - type: System.Type
+      value: System.String[]
+  - type: System.Text.Json.Serialization.JsonSerializableAttribute
+    ctor: System.Text.Json.Serialization.JsonSerializableAttribute.#ctor(System.Type)
+    arguments:
+    - type: System.Type
+      value: System.Text.Json.JsonElement
+  - type: System.Text.Json.Serialization.JsonSerializableAttribute
+    ctor: System.Text.Json.Serialization.JsonSerializableAttribute.#ctor(System.Type)
+    arguments:
+    - type: System.Type
+      value: ConsoleGit.Dto.WorkspaceSettings
+- uid: ConsoleGit.Dto.AppJsonSerializerContext.StringArray
+  commentId: P:ConsoleGit.Dto.AppJsonSerializerContext.StringArray
+  id: StringArray
+  parent: ConsoleGit.Dto.AppJsonSerializerContext
+  langs:
+  - csharp
+  - vb
+  name: StringArray
+  nameWithType: AppJsonSerializerContext.StringArray
+  fullName: ConsoleGit.Dto.AppJsonSerializerContext.StringArray
+  type: Property
+  source:
+    id: StringArray
+    path: System.Text.Json.SourceGeneration\System.Text.Json.SourceGeneration.JsonSourceGenerator\AppJsonSerializerContext.StringArray.g.cs
+    startLine: 18
+  assemblies:
+  - ConsoleGit
+  namespace: ConsoleGit.Dto
+  summary: Defines the source generated JSON serialization contract metadata for a given type.
+  example: []
+  syntax:
+    content: public JsonTypeInfo<string[]> StringArray { get; }
+    parameters: []
+    return:
+      type: System.Text.Json.Serialization.Metadata.JsonTypeInfo{System.String[]}
+    content.vb: Public ReadOnly Property StringArray As JsonTypeInfo(Of String())
+  overload: ConsoleGit.Dto.AppJsonSerializerContext.StringArray*
+- uid: ConsoleGit.Dto.AppJsonSerializerContext.WorkspaceSettings
+  commentId: P:ConsoleGit.Dto.AppJsonSerializerContext.WorkspaceSettings
+  id: WorkspaceSettings
+  parent: ConsoleGit.Dto.AppJsonSerializerContext
+  langs:
+  - csharp
+  - vb
+  name: WorkspaceSettings
+  nameWithType: AppJsonSerializerContext.WorkspaceSettings
+  fullName: ConsoleGit.Dto.AppJsonSerializerContext.WorkspaceSettings
+  type: Property
+  source:
+    id: WorkspaceSettings
+    path: System.Text.Json.SourceGeneration\System.Text.Json.SourceGeneration.JsonSourceGenerator\AppJsonSerializerContext.WorkspaceSettings.g.cs
+    startLine: 18
+  assemblies:
+  - ConsoleGit
+  namespace: ConsoleGit.Dto
+  summary: Defines the source generated JSON serialization contract metadata for a given type.
+  example: []
+  syntax:
+    content: public JsonTypeInfo<WorkspaceSettings> WorkspaceSettings { get; }
+    parameters: []
+    return:
+      type: System.Text.Json.Serialization.Metadata.JsonTypeInfo{ConsoleGit.Dto.WorkspaceSettings}
+    content.vb: Public ReadOnly Property WorkspaceSettings As JsonTypeInfo(Of WorkspaceSettings)
+  overload: ConsoleGit.Dto.AppJsonSerializerContext.WorkspaceSettings*
+- uid: ConsoleGit.Dto.AppJsonSerializerContext.GetTypeInfo(System.Type)
+  commentId: M:ConsoleGit.Dto.AppJsonSerializerContext.GetTypeInfo(System.Type)
+  id: GetTypeInfo(System.Type)
+  parent: ConsoleGit.Dto.AppJsonSerializerContext
+  langs:
+  - csharp
+  - vb
+  name: GetTypeInfo(Type)
+  nameWithType: AppJsonSerializerContext.GetTypeInfo(Type)
+  fullName: ConsoleGit.Dto.AppJsonSerializerContext.GetTypeInfo(System.Type)
+  type: Method
+  source:
+    id: GetTypeInfo
+    path: System.Text.Json.SourceGeneration\System.Text.Json.SourceGeneration.JsonSourceGenerator\AppJsonSerializerContext.GetJsonTypeInfo.g.cs
+    startLine: 13
+  assemblies:
+  - ConsoleGit
+  namespace: ConsoleGit.Dto
+  summary: Gets metadata for the specified type.
+  example: []
+  syntax:
+    content: public override JsonTypeInfo? GetTypeInfo(Type type)
+    parameters:
+    - id: type
+      type: System.Type
+      description: The type to fetch metadata for.
+    return:
+      type: System.Text.Json.Serialization.Metadata.JsonTypeInfo
+      description: The metadata for the specified type, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> if the context has no metadata for the type.
+    content.vb: Public Overrides Function GetTypeInfo(type As Type) As JsonTypeInfo
+  overridden: System.Text.Json.Serialization.JsonSerializerContext.GetTypeInfo(System.Type)
+  overload: ConsoleGit.Dto.AppJsonSerializerContext.GetTypeInfo*
+- uid: ConsoleGit.Dto.AppJsonSerializerContext.JsonElement
+  commentId: P:ConsoleGit.Dto.AppJsonSerializerContext.JsonElement
+  id: JsonElement
+  parent: ConsoleGit.Dto.AppJsonSerializerContext
+  langs:
+  - csharp
+  - vb
+  name: JsonElement
+  nameWithType: AppJsonSerializerContext.JsonElement
+  fullName: ConsoleGit.Dto.AppJsonSerializerContext.JsonElement
+  type: Property
+  source:
+    id: JsonElement
+    path: System.Text.Json.SourceGeneration\System.Text.Json.SourceGeneration.JsonSourceGenerator\AppJsonSerializerContext.JsonElement.g.cs
+    startLine: 18
+  assemblies:
+  - ConsoleGit
+  namespace: ConsoleGit.Dto
+  summary: Defines the source generated JSON serialization contract metadata for a given type.
+  example: []
+  syntax:
+    content: public JsonTypeInfo<JsonElement> JsonElement { get; }
+    parameters: []
+    return:
+      type: System.Text.Json.Serialization.Metadata.JsonTypeInfo{System.Text.Json.JsonElement}
+    content.vb: Public ReadOnly Property JsonElement As JsonTypeInfo(Of JsonElement)
+  overload: ConsoleGit.Dto.AppJsonSerializerContext.JsonElement*
+- uid: ConsoleGit.Dto.AppJsonSerializerContext.String
+  commentId: P:ConsoleGit.Dto.AppJsonSerializerContext.String
+  id: String
+  parent: ConsoleGit.Dto.AppJsonSerializerContext
+  langs:
+  - csharp
+  - vb
+  name: String
+  nameWithType: AppJsonSerializerContext.String
+  fullName: ConsoleGit.Dto.AppJsonSerializerContext.String
+  type: Property
+  source:
+    id: String
+    path: System.Text.Json.SourceGeneration\System.Text.Json.SourceGeneration.JsonSourceGenerator\AppJsonSerializerContext.String.g.cs
+    startLine: 18
+  assemblies:
+  - ConsoleGit
+  namespace: ConsoleGit.Dto
+  summary: Defines the source generated JSON serialization contract metadata for a given type.
+  example: []
+  syntax:
+    content: public JsonTypeInfo<string> String { get; }
+    parameters: []
+    return:
+      type: System.Text.Json.Serialization.Metadata.JsonTypeInfo{System.String}
+    content.vb: Public ReadOnly Property [String] As JsonTypeInfo(Of String)
+  overload: ConsoleGit.Dto.AppJsonSerializerContext.String*
+- uid: ConsoleGit.Dto.AppJsonSerializerContext.Default
+  commentId: P:ConsoleGit.Dto.AppJsonSerializerContext.Default
+  id: Default
+  parent: ConsoleGit.Dto.AppJsonSerializerContext
+  langs:
+  - csharp
+  - vb
+  name: Default
+  nameWithType: AppJsonSerializerContext.Default
+  fullName: ConsoleGit.Dto.AppJsonSerializerContext.Default
+  type: Property
+  source:
+    id: Default
+    path: System.Text.Json.SourceGeneration\System.Text.Json.SourceGeneration.JsonSourceGenerator\AppJsonSerializerContext.g.cs
+    startLine: 23
+  assemblies:
+  - ConsoleGit
+  namespace: ConsoleGit.Dto
+  summary: The default <xref href="System.Text.Json.Serialization.JsonSerializerContext" data-throw-if-not-resolved="false"></xref> associated with a default <xref href="System.Text.Json.JsonSerializerOptions" data-throw-if-not-resolved="false"></xref> instance.
+  example: []
+  syntax:
+    content: public static AppJsonSerializerContext Default { get; }
+    parameters: []
+    return:
+      type: ConsoleGit.Dto.AppJsonSerializerContext
+    content.vb: Public Shared ReadOnly Property [Default] As AppJsonSerializerContext
+  overload: ConsoleGit.Dto.AppJsonSerializerContext.Default*
+- uid: ConsoleGit.Dto.AppJsonSerializerContext.GeneratedSerializerOptions
+  commentId: P:ConsoleGit.Dto.AppJsonSerializerContext.GeneratedSerializerOptions
+  id: GeneratedSerializerOptions
+  parent: ConsoleGit.Dto.AppJsonSerializerContext
+  langs:
+  - csharp
+  - vb
+  name: GeneratedSerializerOptions
+  nameWithType: AppJsonSerializerContext.GeneratedSerializerOptions
+  fullName: ConsoleGit.Dto.AppJsonSerializerContext.GeneratedSerializerOptions
+  type: Property
+  source:
+    id: GeneratedSerializerOptions
+    path: System.Text.Json.SourceGeneration\System.Text.Json.SourceGeneration.JsonSourceGenerator\AppJsonSerializerContext.g.cs
+    startLine: 28
+  assemblies:
+  - ConsoleGit
+  namespace: ConsoleGit.Dto
+  summary: The source-generated options associated with this context.
+  example: []
+  syntax:
+    content: protected override JsonSerializerOptions? GeneratedSerializerOptions { get; }
+    parameters: []
+    return:
+      type: System.Text.Json.JsonSerializerOptions
+    content.vb: Protected Overrides ReadOnly Property GeneratedSerializerOptions As JsonSerializerOptions
+  overridden: System.Text.Json.Serialization.JsonSerializerContext.GeneratedSerializerOptions
+  overload: ConsoleGit.Dto.AppJsonSerializerContext.GeneratedSerializerOptions*
+- uid: ConsoleGit.Dto.AppJsonSerializerContext.#ctor
+  commentId: M:ConsoleGit.Dto.AppJsonSerializerContext.#ctor
+  id: '#ctor'
+  parent: ConsoleGit.Dto.AppJsonSerializerContext
+  langs:
+  - csharp
+  - vb
+  name: AppJsonSerializerContext()
+  nameWithType: AppJsonSerializerContext.AppJsonSerializerContext()
+  fullName: ConsoleGit.Dto.AppJsonSerializerContext.AppJsonSerializerContext()
+  type: Constructor
+  source:
+    id: .ctor
+    path: System.Text.Json.SourceGeneration\System.Text.Json.SourceGeneration.JsonSourceGenerator\AppJsonSerializerContext.g.cs
+    startLine: 31
+  assemblies:
+  - ConsoleGit
+  namespace: ConsoleGit.Dto
+  example: []
+  syntax:
+    content: public AppJsonSerializerContext()
+    content.vb: Public Sub New()
+  overload: ConsoleGit.Dto.AppJsonSerializerContext.#ctor*
+  nameWithType.vb: AppJsonSerializerContext.New()
+  fullName.vb: ConsoleGit.Dto.AppJsonSerializerContext.New()
+  name.vb: New()
+- uid: ConsoleGit.Dto.AppJsonSerializerContext.#ctor(System.Text.Json.JsonSerializerOptions)
+  commentId: M:ConsoleGit.Dto.AppJsonSerializerContext.#ctor(System.Text.Json.JsonSerializerOptions)
+  id: '#ctor(System.Text.Json.JsonSerializerOptions)'
+  parent: ConsoleGit.Dto.AppJsonSerializerContext
+  langs:
+  - csharp
+  - vb
+  name: AppJsonSerializerContext(JsonSerializerOptions)
+  nameWithType: AppJsonSerializerContext.AppJsonSerializerContext(JsonSerializerOptions)
+  fullName: ConsoleGit.Dto.AppJsonSerializerContext.AppJsonSerializerContext(System.Text.Json.JsonSerializerOptions)
+  type: Constructor
+  source:
+    id: .ctor
+    path: System.Text.Json.SourceGeneration\System.Text.Json.SourceGeneration.JsonSourceGenerator\AppJsonSerializerContext.g.cs
+    startLine: 36
+  assemblies:
+  - ConsoleGit
+  namespace: ConsoleGit.Dto
+  summary: Creates an instance of <xref href="System.Text.Json.Serialization.JsonSerializerContext" data-throw-if-not-resolved="false"></xref> and binds it with the indicated <xref href="System.Text.Json.JsonSerializerOptions" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public AppJsonSerializerContext(JsonSerializerOptions options)
+    parameters:
+    - id: options
+      type: System.Text.Json.JsonSerializerOptions
+      description: The run time provided options for the context instance.
+    content.vb: Public Sub New(options As JsonSerializerOptions)
+  overload: ConsoleGit.Dto.AppJsonSerializerContext.#ctor*
+  nameWithType.vb: AppJsonSerializerContext.New(JsonSerializerOptions)
+  fullName.vb: ConsoleGit.Dto.AppJsonSerializerContext.New(System.Text.Json.JsonSerializerOptions)
+  name.vb: New(JsonSerializerOptions)
+references:
+- uid: ConsoleGit.Dto
+  commentId: N:ConsoleGit.Dto
+  href: ConsoleGit.html
+  name: ConsoleGit.Dto
+  nameWithType: ConsoleGit.Dto
+  fullName: ConsoleGit.Dto
+  spec.csharp:
+  - uid: ConsoleGit
+    name: ConsoleGit
+    href: ConsoleGit.html
+  - name: .
+  - uid: ConsoleGit.Dto
+    name: Dto
+    href: ConsoleGit.Dto.html
+  spec.vb:
+  - uid: ConsoleGit
+    name: ConsoleGit
+    href: ConsoleGit.html
+  - name: .
+  - uid: ConsoleGit.Dto
+    name: Dto
+    href: ConsoleGit.Dto.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Text.Json.Serialization.JsonSerializerContext
+  commentId: T:System.Text.Json.Serialization.JsonSerializerContext
+  parent: System.Text.Json.Serialization
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.text.json.serialization.jsonserializercontext
+  name: JsonSerializerContext
+  nameWithType: JsonSerializerContext
+  fullName: System.Text.Json.Serialization.JsonSerializerContext
+- uid: System.Text.Json.Serialization.Metadata.IJsonTypeInfoResolver
+  commentId: T:System.Text.Json.Serialization.Metadata.IJsonTypeInfoResolver
+  parent: System.Text.Json.Serialization.Metadata
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.text.json.serialization.metadata.ijsontypeinforesolver
+  name: IJsonTypeInfoResolver
+  nameWithType: IJsonTypeInfoResolver
+  fullName: System.Text.Json.Serialization.Metadata.IJsonTypeInfoResolver
+- uid: System.Text.Json.Serialization.JsonSerializerContext.Options
+  commentId: P:System.Text.Json.Serialization.JsonSerializerContext.Options
+  parent: System.Text.Json.Serialization.JsonSerializerContext
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.text.json.serialization.jsonserializercontext.options
+  name: Options
+  nameWithType: JsonSerializerContext.Options
+  fullName: System.Text.Json.Serialization.JsonSerializerContext.Options
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Text.Json.Serialization
+  commentId: N:System.Text.Json.Serialization
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Text.Json.Serialization
+  nameWithType: System.Text.Json.Serialization
+  fullName: System.Text.Json.Serialization
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Text
+    name: Text
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text
+  - name: .
+  - uid: System.Text.Json
+    name: Json
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json
+  - name: .
+  - uid: System.Text.Json.Serialization
+    name: Serialization
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.serialization
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Text
+    name: Text
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text
+  - name: .
+  - uid: System.Text.Json
+    name: Json
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json
+  - name: .
+  - uid: System.Text.Json.Serialization
+    name: Serialization
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.serialization
+- uid: System.Text.Json.Serialization.Metadata
+  commentId: N:System.Text.Json.Serialization.Metadata
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Text.Json.Serialization.Metadata
+  nameWithType: System.Text.Json.Serialization.Metadata
+  fullName: System.Text.Json.Serialization.Metadata
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Text
+    name: Text
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text
+  - name: .
+  - uid: System.Text.Json
+    name: Json
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json
+  - name: .
+  - uid: System.Text.Json.Serialization
+    name: Serialization
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.serialization
+  - name: .
+  - uid: System.Text.Json.Serialization.Metadata
+    name: Metadata
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.serialization.metadata
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Text
+    name: Text
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text
+  - name: .
+  - uid: System.Text.Json
+    name: Json
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json
+  - name: .
+  - uid: System.Text.Json.Serialization
+    name: Serialization
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.serialization
+  - name: .
+  - uid: System.Text.Json.Serialization.Metadata
+    name: Metadata
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.serialization.metadata
+- uid: ConsoleGit.Dto.AppJsonSerializerContext.StringArray*
+  commentId: Overload:ConsoleGit.Dto.AppJsonSerializerContext.StringArray
+  href: ConsoleGit.Dto.AppJsonSerializerContext.html#ConsoleGit_Dto_AppJsonSerializerContext_StringArray
+  name: StringArray
+  nameWithType: AppJsonSerializerContext.StringArray
+  fullName: ConsoleGit.Dto.AppJsonSerializerContext.StringArray
+- uid: System.Text.Json.Serialization.Metadata.JsonTypeInfo{System.String[]}
+  commentId: T:System.Text.Json.Serialization.Metadata.JsonTypeInfo{System.String[]}
+  parent: System.Text.Json.Serialization.Metadata
+  definition: System.Text.Json.Serialization.Metadata.JsonTypeInfo`1
+  href: https://learn.microsoft.com/dotnet/api/system.text.json.serialization.metadata.jsontypeinfo-1
+  name: JsonTypeInfo<string[]>
+  nameWithType: JsonTypeInfo<string[]>
+  fullName: System.Text.Json.Serialization.Metadata.JsonTypeInfo<string[]>
+  nameWithType.vb: JsonTypeInfo(Of String())
+  fullName.vb: System.Text.Json.Serialization.Metadata.JsonTypeInfo(Of String())
+  name.vb: JsonTypeInfo(Of String())
+  spec.csharp:
+  - uid: System.Text.Json.Serialization.Metadata.JsonTypeInfo`1
+    name: JsonTypeInfo
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.serialization.metadata.jsontypeinfo-1
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '['
+  - name: ']'
+  - name: '>'
+  spec.vb:
+  - uid: System.Text.Json.Serialization.Metadata.JsonTypeInfo`1
+    name: JsonTypeInfo
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.serialization.metadata.jsontypeinfo-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: (
+  - name: )
+  - name: )
+- uid: System.Text.Json.Serialization.Metadata.JsonTypeInfo`1
+  commentId: T:System.Text.Json.Serialization.Metadata.JsonTypeInfo`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.text.json.serialization.metadata.jsontypeinfo-1
+  name: JsonTypeInfo<T>
+  nameWithType: JsonTypeInfo<T>
+  fullName: System.Text.Json.Serialization.Metadata.JsonTypeInfo<T>
+  nameWithType.vb: JsonTypeInfo(Of T)
+  fullName.vb: System.Text.Json.Serialization.Metadata.JsonTypeInfo(Of T)
+  name.vb: JsonTypeInfo(Of T)
+  spec.csharp:
+  - uid: System.Text.Json.Serialization.Metadata.JsonTypeInfo`1
+    name: JsonTypeInfo
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.serialization.metadata.jsontypeinfo-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Text.Json.Serialization.Metadata.JsonTypeInfo`1
+    name: JsonTypeInfo
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.serialization.metadata.jsontypeinfo-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: ConsoleGit.Dto.AppJsonSerializerContext.WorkspaceSettings*
+  commentId: Overload:ConsoleGit.Dto.AppJsonSerializerContext.WorkspaceSettings
+  href: ConsoleGit.Dto.AppJsonSerializerContext.html#ConsoleGit_Dto_AppJsonSerializerContext_WorkspaceSettings
+  name: WorkspaceSettings
+  nameWithType: AppJsonSerializerContext.WorkspaceSettings
+  fullName: ConsoleGit.Dto.AppJsonSerializerContext.WorkspaceSettings
+- uid: System.Text.Json.Serialization.Metadata.JsonTypeInfo{ConsoleGit.Dto.WorkspaceSettings}
+  commentId: T:System.Text.Json.Serialization.Metadata.JsonTypeInfo{ConsoleGit.Dto.WorkspaceSettings}
+  parent: System.Text.Json.Serialization.Metadata
+  definition: System.Text.Json.Serialization.Metadata.JsonTypeInfo`1
+  href: https://learn.microsoft.com/dotnet/api/system.text.json.serialization.metadata.jsontypeinfo-1
+  name: JsonTypeInfo<WorkspaceSettings>
+  nameWithType: JsonTypeInfo<WorkspaceSettings>
+  fullName: System.Text.Json.Serialization.Metadata.JsonTypeInfo<ConsoleGit.Dto.WorkspaceSettings>
+  nameWithType.vb: JsonTypeInfo(Of WorkspaceSettings)
+  fullName.vb: System.Text.Json.Serialization.Metadata.JsonTypeInfo(Of ConsoleGit.Dto.WorkspaceSettings)
+  name.vb: JsonTypeInfo(Of WorkspaceSettings)
+  spec.csharp:
+  - uid: System.Text.Json.Serialization.Metadata.JsonTypeInfo`1
+    name: JsonTypeInfo
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.serialization.metadata.jsontypeinfo-1
+  - name: <
+  - uid: ConsoleGit.Dto.WorkspaceSettings
+    name: WorkspaceSettings
+    href: ConsoleGit.Dto.WorkspaceSettings.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Text.Json.Serialization.Metadata.JsonTypeInfo`1
+    name: JsonTypeInfo
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.serialization.metadata.jsontypeinfo-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: ConsoleGit.Dto.WorkspaceSettings
+    name: WorkspaceSettings
+    href: ConsoleGit.Dto.WorkspaceSettings.html
+  - name: )
+- uid: System.Text.Json.Serialization.JsonSerializerContext.GetTypeInfo(System.Type)
+  commentId: M:System.Text.Json.Serialization.JsonSerializerContext.GetTypeInfo(System.Type)
+  parent: System.Text.Json.Serialization.JsonSerializerContext
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.text.json.serialization.jsonserializercontext.gettypeinfo
+  name: GetTypeInfo(Type)
+  nameWithType: JsonSerializerContext.GetTypeInfo(Type)
+  fullName: System.Text.Json.Serialization.JsonSerializerContext.GetTypeInfo(System.Type)
+  spec.csharp:
+  - uid: System.Text.Json.Serialization.JsonSerializerContext.GetTypeInfo(System.Type)
+    name: GetTypeInfo
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.serialization.jsonserializercontext.gettypeinfo
+  - name: (
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: )
+  spec.vb:
+  - uid: System.Text.Json.Serialization.JsonSerializerContext.GetTypeInfo(System.Type)
+    name: GetTypeInfo
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.serialization.jsonserializercontext.gettypeinfo
+  - name: (
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: )
+- uid: ConsoleGit.Dto.AppJsonSerializerContext.GetTypeInfo*
+  commentId: Overload:ConsoleGit.Dto.AppJsonSerializerContext.GetTypeInfo
+  href: ConsoleGit.Dto.AppJsonSerializerContext.html#ConsoleGit_Dto_AppJsonSerializerContext_GetTypeInfo_System_Type_
+  name: GetTypeInfo
+  nameWithType: AppJsonSerializerContext.GetTypeInfo
+  fullName: ConsoleGit.Dto.AppJsonSerializerContext.GetTypeInfo
+- uid: System.Type
+  commentId: T:System.Type
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.type
+  name: Type
+  nameWithType: Type
+  fullName: System.Type
+- uid: System.Text.Json.Serialization.Metadata.JsonTypeInfo
+  commentId: T:System.Text.Json.Serialization.Metadata.JsonTypeInfo
+  parent: System.Text.Json.Serialization.Metadata
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.text.json.serialization.metadata.jsontypeinfo
+  name: JsonTypeInfo
+  nameWithType: JsonTypeInfo
+  fullName: System.Text.Json.Serialization.Metadata.JsonTypeInfo
+- uid: ConsoleGit.Dto.AppJsonSerializerContext.JsonElement*
+  commentId: Overload:ConsoleGit.Dto.AppJsonSerializerContext.JsonElement
+  href: ConsoleGit.Dto.AppJsonSerializerContext.html#ConsoleGit_Dto_AppJsonSerializerContext_JsonElement
+  name: JsonElement
+  nameWithType: AppJsonSerializerContext.JsonElement
+  fullName: ConsoleGit.Dto.AppJsonSerializerContext.JsonElement
+- uid: System.Text.Json.Serialization.Metadata.JsonTypeInfo{System.Text.Json.JsonElement}
+  commentId: T:System.Text.Json.Serialization.Metadata.JsonTypeInfo{System.Text.Json.JsonElement}
+  parent: System.Text.Json.Serialization.Metadata
+  definition: System.Text.Json.Serialization.Metadata.JsonTypeInfo`1
+  href: https://learn.microsoft.com/dotnet/api/system.text.json.serialization.metadata.jsontypeinfo-1
+  name: JsonTypeInfo<JsonElement>
+  nameWithType: JsonTypeInfo<JsonElement>
+  fullName: System.Text.Json.Serialization.Metadata.JsonTypeInfo<System.Text.Json.JsonElement>
+  nameWithType.vb: JsonTypeInfo(Of JsonElement)
+  fullName.vb: System.Text.Json.Serialization.Metadata.JsonTypeInfo(Of System.Text.Json.JsonElement)
+  name.vb: JsonTypeInfo(Of JsonElement)
+  spec.csharp:
+  - uid: System.Text.Json.Serialization.Metadata.JsonTypeInfo`1
+    name: JsonTypeInfo
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.serialization.metadata.jsontypeinfo-1
+  - name: <
+  - uid: System.Text.Json.JsonElement
+    name: JsonElement
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.jsonelement
+  - name: '>'
+  spec.vb:
+  - uid: System.Text.Json.Serialization.Metadata.JsonTypeInfo`1
+    name: JsonTypeInfo
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.serialization.metadata.jsontypeinfo-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Text.Json.JsonElement
+    name: JsonElement
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.jsonelement
+  - name: )
+- uid: ConsoleGit.Dto.AppJsonSerializerContext.String*
+  commentId: Overload:ConsoleGit.Dto.AppJsonSerializerContext.String
+  href: ConsoleGit.Dto.AppJsonSerializerContext.html#ConsoleGit_Dto_AppJsonSerializerContext_String
+  name: String
+  nameWithType: AppJsonSerializerContext.String
+  fullName: ConsoleGit.Dto.AppJsonSerializerContext.String
+- uid: System.Text.Json.Serialization.Metadata.JsonTypeInfo{System.String}
+  commentId: T:System.Text.Json.Serialization.Metadata.JsonTypeInfo{System.String}
+  parent: System.Text.Json.Serialization.Metadata
+  definition: System.Text.Json.Serialization.Metadata.JsonTypeInfo`1
+  href: https://learn.microsoft.com/dotnet/api/system.text.json.serialization.metadata.jsontypeinfo-1
+  name: JsonTypeInfo<string>
+  nameWithType: JsonTypeInfo<string>
+  fullName: System.Text.Json.Serialization.Metadata.JsonTypeInfo<string>
+  nameWithType.vb: JsonTypeInfo(Of String)
+  fullName.vb: System.Text.Json.Serialization.Metadata.JsonTypeInfo(Of String)
+  name.vb: JsonTypeInfo(Of String)
+  spec.csharp:
+  - uid: System.Text.Json.Serialization.Metadata.JsonTypeInfo`1
+    name: JsonTypeInfo
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.serialization.metadata.jsontypeinfo-1
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  spec.vb:
+  - uid: System.Text.Json.Serialization.Metadata.JsonTypeInfo`1
+    name: JsonTypeInfo
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.serialization.metadata.jsontypeinfo-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Text.Json.JsonSerializerOptions
+  commentId: T:System.Text.Json.JsonSerializerOptions
+  parent: System.Text.Json
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.text.json.jsonserializeroptions
+  name: JsonSerializerOptions
+  nameWithType: JsonSerializerOptions
+  fullName: System.Text.Json.JsonSerializerOptions
+- uid: ConsoleGit.Dto.AppJsonSerializerContext.Default*
+  commentId: Overload:ConsoleGit.Dto.AppJsonSerializerContext.Default
+  href: ConsoleGit.Dto.AppJsonSerializerContext.html#ConsoleGit_Dto_AppJsonSerializerContext_Default
+  name: Default
+  nameWithType: AppJsonSerializerContext.Default
+  fullName: ConsoleGit.Dto.AppJsonSerializerContext.Default
+- uid: ConsoleGit.Dto.AppJsonSerializerContext
+  commentId: T:ConsoleGit.Dto.AppJsonSerializerContext
+  parent: ConsoleGit.Dto
+  href: ConsoleGit.Dto.AppJsonSerializerContext.html
+  name: AppJsonSerializerContext
+  nameWithType: AppJsonSerializerContext
+  fullName: ConsoleGit.Dto.AppJsonSerializerContext
+- uid: System.Text.Json
+  commentId: N:System.Text.Json
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Text.Json
+  nameWithType: System.Text.Json
+  fullName: System.Text.Json
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Text
+    name: Text
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text
+  - name: .
+  - uid: System.Text.Json
+    name: Json
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Text
+    name: Text
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text
+  - name: .
+  - uid: System.Text.Json
+    name: Json
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json
+- uid: System.Text.Json.Serialization.JsonSerializerContext.GeneratedSerializerOptions
+  commentId: P:System.Text.Json.Serialization.JsonSerializerContext.GeneratedSerializerOptions
+  parent: System.Text.Json.Serialization.JsonSerializerContext
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.text.json.serialization.jsonserializercontext.generatedserializeroptions
+  name: GeneratedSerializerOptions
+  nameWithType: JsonSerializerContext.GeneratedSerializerOptions
+  fullName: System.Text.Json.Serialization.JsonSerializerContext.GeneratedSerializerOptions
+- uid: ConsoleGit.Dto.AppJsonSerializerContext.GeneratedSerializerOptions*
+  commentId: Overload:ConsoleGit.Dto.AppJsonSerializerContext.GeneratedSerializerOptions
+  href: ConsoleGit.Dto.AppJsonSerializerContext.html#ConsoleGit_Dto_AppJsonSerializerContext_GeneratedSerializerOptions
+  name: GeneratedSerializerOptions
+  nameWithType: AppJsonSerializerContext.GeneratedSerializerOptions
+  fullName: ConsoleGit.Dto.AppJsonSerializerContext.GeneratedSerializerOptions
+- uid: ConsoleGit.Dto.AppJsonSerializerContext.#ctor*
+  commentId: Overload:ConsoleGit.Dto.AppJsonSerializerContext.#ctor
+  href: ConsoleGit.Dto.AppJsonSerializerContext.html#ConsoleGit_Dto_AppJsonSerializerContext__ctor
+  name: AppJsonSerializerContext
+  nameWithType: AppJsonSerializerContext.AppJsonSerializerContext
+  fullName: ConsoleGit.Dto.AppJsonSerializerContext.AppJsonSerializerContext
+  nameWithType.vb: AppJsonSerializerContext.New
+  fullName.vb: ConsoleGit.Dto.AppJsonSerializerContext.New
+  name.vb: New

@@ -1,0 +1,23 @@
+﻿{
+  "MetaData": {
+    "Schema": {
+      "ManagerName": "AddonSchemaManager",
+      "UId": "85ec5864-4b2f-4e41-b23d-da0308bd3c65",
+      "A2": "MrktApolloSearchRulesBusinessRule",
+      "A5": "df98ce1a-cc34-4cc4-a3dc-909f22a0d5ef",
+      "B1": [],
+      "B2": [],
+      "B3": [],
+      "B6": "d40c3488-7718-4ddc-9173-949868871326",
+      "B8": "8.1.1.3492",
+      "AD1": "5b521232-4110-435b-950b-f15f569cf681",
+      "AD2": "EntitySchemaManager",
+      "AD3": "BusinessRule",
+      "AD5": "3a2d6f51-1bfc-4c17-aacb-b53de4866b7c",
+      "AD4": {
+        "JI0": "Terrasoft.Core.BusinessRules.BusinessRules",
+        "BRS1": []
+      }
+    }
+  }
+}

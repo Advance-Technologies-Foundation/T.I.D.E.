@@ -1,0 +1,61 @@
+### YamlMime:TableOfContent
+items:
+- uid: ConsoleGit
+  name: ConsoleGit
+  type: Namespace
+  items:
+  - uid: ConsoleGit.CommandLineArgs
+    name: CommandLineArgs
+    type: Class
+- uid: ConsoleGit.Commands
+  name: ConsoleGit.Commands
+  type: Namespace
+  items:
+  - uid: ConsoleGit.Commands.AddAllCommand
+    name: AddAllCommand
+    type: Class
+  - uid: ConsoleGit.Commands.BaseRepositoryCommand
+    name: BaseRepositoryCommand
+    type: Class
+  - uid: ConsoleGit.Commands.CheckoutCommand
+    name: CheckoutCommand
+    type: Class
+  - uid: ConsoleGit.Commands.CloneCommand
+    name: CloneCommand
+    type: Class
+  - uid: ConsoleGit.Commands.CommitCommand
+    name: CommitCommand
+    type: Class
+  - uid: ConsoleGit.Commands.DownloadPackagesCommand
+    name: DownloadPackagesCommand
+    type: Class
+  - uid: ConsoleGit.Commands.ErrorCommand
+    name: ErrorCommand
+    type: Class
+  - uid: ConsoleGit.Commands.ICommand
+    name: ICommand
+    type: Interface
+  - uid: ConsoleGit.Commands.PullCommand
+    name: PullCommand
+    type: Class
+  - uid: ConsoleGit.Commands.PushCommand
+    name: PushCommand
+    type: Class
+- uid: ConsoleGit.ConfiguredHttpClient
+  name: ConsoleGit.ConfiguredHttpClient
+  type: Namespace
+  items:
+  - uid: ConsoleGit.ConfiguredHttpClient.MyHandler
+    name: MyHandler
+    type: Class
+- uid: ConsoleGit.Dto
+  name: ConsoleGit.Dto
+  type: Namespace
+  items:
+  - uid: ConsoleGit.Dto.AppJsonSerializerContext
+    name: AppJsonSerializerContext
+    type: Class
+  - uid: ConsoleGit.Dto.WorkspaceSettings
+    name: WorkspaceSettings
+    type: Class
+memberLayout: SamePage

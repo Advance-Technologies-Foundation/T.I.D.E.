@@ -2,6 +2,8 @@
 <Resources Culture="en-US">
 	<Group Type="String">
 		<Items>
+			<Item Name="BaseElements.ConditionalSequenceFlow3.Caption" Value="On Clone Error" />
+			<Item Name="BaseElements.ConditionalSequenceFlow4.Caption" Value="On clio pushw Error" />
 			<Item Name="BaseElements.LinkEntityToProcessUserTask1.Caption" Value="Attach to Log" />
 			<Item Name="BaseElements.LinkEntityToProcessUserTask1.Parameters.EntityId.Caption" Value="Object" />
 			<Item Name="BaseElements.LinkEntityToProcessUserTask1.Parameters.EntityId.DisplayValue" Value="[#Repository#]" />
@@ -28,36 +30,31 @@
 			<Item Name="BaseElements.ReadDataUserTask2.Parameters.ResultIntegerFunction.Caption" Value="Function result (Integer)" />
 			<Item Name="BaseElements.ReadDataUserTask2.Parameters.ResultRowsCount.Caption" Value="Number of records read" />
 			<Item Name="BaseElements.ReadDataUserTask2.Parameters.ResultType.Caption" Value="Type of result" />
-			<Item Name="BaseElements.StartEvent1.Caption" Value="On after created" />
-			<Item Name="BaseElements.UserTask1.Caption" Value="Clone Master" />
-			<Item Name="BaseElements.UserTask1.Parameters.AccessToken.Caption" Value="Access token" />
-			<Item Name="BaseElements.UserTask1.Parameters.AccessToken.DisplayValue" Value="[#Read repository.First item of resulting collection.Access Token#]" />
-			<Item Name="BaseElements.UserTask1.Parameters.CreatioLogin.Caption" Value="Creatio Login" />
-			<Item Name="BaseElements.UserTask1.Parameters.CreatioLogin.DisplayValue" Value="[#Read repository.First item of resulting collection.Creatio Login#]" />
-			<Item Name="BaseElements.UserTask1.Parameters.CreatioPassword.Caption" Value="Creatio Password" />
-			<Item Name="BaseElements.UserTask1.Parameters.CreatioPassword.DisplayValue" Value="[#Read repository.First item of resulting collection.Creatio Password#]" />
-			<Item Name="BaseElements.UserTask1.Parameters.CreatioUrl.Caption" Value="Creatio Url" />
-			<Item Name="BaseElements.UserTask1.Parameters.CreatioUrl.DisplayValue" Value="[#Read repository.First item of resulting collection.Creatio Url#]" />
+			<Item Name="BaseElements.StartEvent1.Caption" Value="Start" />
+			<Item Name="BaseElements.UserTask1.Caption" Value="Clone Repository" />
 			<Item Name="BaseElements.UserTask1.Parameters.ErrorMessage.Caption" Value="Error message" />
 			<Item Name="BaseElements.UserTask1.Parameters.IsError.Caption" Value="Is error" />
+			<Item Name="BaseElements.UserTask1.Parameters.Output.Caption" Value="Output" />
+			<Item Name="BaseElements.UserTask1.Parameters.Repository.Caption" Value="Repository" />
+			<Item Name="BaseElements.UserTask1.Parameters.Repository.DisplayValue" Value="[#Repository#]" />
 			<Item Name="BaseElements.UserTask1.Parameters.RepositoryFolderPath.Caption" Value="Repository Folder Path" />
-			<Item Name="BaseElements.UserTask1.Parameters.RepositoryName.Caption" Value="Repository Name" />
-			<Item Name="BaseElements.UserTask1.Parameters.RepositoryName.DisplayValue" Value="[#Read repository.First item of resulting collection.Name#]" />
-			<Item Name="BaseElements.UserTask1.Parameters.RepositoryUrl.Caption" Value="Repository Url" />
-			<Item Name="BaseElements.UserTask1.Parameters.RepositoryUrl.DisplayValue" Value="[#Read repository.First item of resulting collection.Repository Url#]" />
-			<Item Name="BaseElements.UserTask1.Parameters.UserName.Caption" Value="User name" />
-			<Item Name="BaseElements.UserTask1.Parameters.UserName.DisplayValue" Value="[#Read repository.First item of resulting collection.User name#]" />
 			<Item Name="BaseElements.UserTask2.Caption" Value="clio pushw" />
 			<Item Name="BaseElements.UserTask2.Parameters.Arguments.Caption" Value="Arguments" />
-			<Item Name="BaseElements.UserTask2.Parameters.Arguments.DisplayValue" Value="&quot;pushw -c true -u &quot;+[#Read repository.First item of resulting collection.Creatio Url#]+&quot; -l &quot;+[#Read repository.First item of resulting collection.Creatio Login#]+&quot; -p &quot;+[#Read repository.First item of resulting collection.Creatio Password#]" />
+			<Item Name="BaseElements.UserTask2.Parameters.Arguments.DisplayValue" Value="&quot;pushw --unlock --callback-process AtfProcess_ShowMessage -l &quot;+[#Read repository.First item of resulting collection.Creatio Login#]+&quot; -p &quot;+[#Read repository.First item of resulting collection.Creatio Password#]" />
 			<Item Name="BaseElements.UserTask2.Parameters.ErrorMessage.Caption" Value="Error Message" />
 			<Item Name="BaseElements.UserTask2.Parameters.FileName.Caption" Value="File Name" />
 			<Item Name="BaseElements.UserTask2.Parameters.FileName.DisplayValue" Value="clio" />
 			<Item Name="BaseElements.UserTask2.Parameters.FileName.Value" Value="clio" />
 			<Item Name="BaseElements.UserTask2.Parameters.IsError.Caption" Value="Is Error" />
+			<Item Name="BaseElements.UserTask2.Parameters.TransformerName.Caption" Value="Transformer Name" />
+			<Item Name="BaseElements.UserTask2.Parameters.TransformerName.DisplayValue" Value="UrlAppender" />
+			<Item Name="BaseElements.UserTask2.Parameters.TransformerName.Value" Value="UrlAppender" />
+			<Item Name="BaseElements.UserTask2.Parameters.WaitForExit.Caption" Value="Wait For Exit" />
+			<Item Name="BaseElements.UserTask2.Parameters.WaitForExit.DisplayValue" Value="[#Boolean value.False#]" />
 			<Item Name="BaseElements.UserTask2.Parameters.WorkingDirectory.Caption" Value="WorkingDirectory" />
-			<Item Name="BaseElements.UserTask2.Parameters.WorkingDirectory.DisplayValue" Value="[#Clone Master.Repository Folder Path#]" />
+			<Item Name="BaseElements.UserTask2.Parameters.WorkingDirectory.DisplayValue" Value="[#Clone Repository.Repository Folder Path#]" />
 			<Item Name="Caption" Value="Load workspace from Git" />
+			<Item Name="Description" Value="Clones and installs repository." />
 			<Item Name="LaneSets.LaneSet1.Caption" Value="LaneSet 1" />
 			<Item Name="LaneSets.LaneSet1.Lanes.Lane1.Caption" Value="Lane 1" />
 			<Item Name="NotificationCaption.Caption" Value="Process instance caption" />

@@ -1,0 +1,523 @@
+### YamlMime:ManagedReference
+items:
+- uid: ConsoleGit.Commands.ErrorCommand
+  commentId: T:ConsoleGit.Commands.ErrorCommand
+  id: ErrorCommand
+  parent: ConsoleGit.Commands
+  children:
+  - ConsoleGit.Commands.ErrorCommand.#ctor(ConsoleGit.CommandLineArgs)
+  - ConsoleGit.Commands.ErrorCommand.Dispose
+  - ConsoleGit.Commands.ErrorCommand.Execute
+  langs:
+  - csharp
+  - vb
+  name: ErrorCommand
+  nameWithType: ErrorCommand
+  fullName: ConsoleGit.Commands.ErrorCommand
+  type: Class
+  source:
+    remote:
+      path: ConsoleGit/ConsoleGit/Commands/ErrorCommand.cs
+      branch: feature/my-feature
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: ErrorCommand
+    path: ../ConsoleGit/ConsoleGit/Commands/ErrorCommand.cs
+    startLine: 5
+  assemblies:
+  - ConsoleGit
+  namespace: ConsoleGit.Commands
+  syntax:
+    content: 'public sealed class ErrorCommand : ICommand, IDisposable'
+    content.vb: Public NotInheritable Class ErrorCommand Implements ICommand, IDisposable
+  inheritance:
+  - System.Object
+  implements:
+  - ConsoleGit.Commands.ICommand
+  - System.IDisposable
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: ConsoleGit.Commands.ErrorCommand.#ctor(ConsoleGit.CommandLineArgs)
+  commentId: M:ConsoleGit.Commands.ErrorCommand.#ctor(ConsoleGit.CommandLineArgs)
+  id: '#ctor(ConsoleGit.CommandLineArgs)'
+  parent: ConsoleGit.Commands.ErrorCommand
+  langs:
+  - csharp
+  - vb
+  name: ErrorCommand(CommandLineArgs)
+  nameWithType: ErrorCommand.ErrorCommand(CommandLineArgs)
+  fullName: ConsoleGit.Commands.ErrorCommand.ErrorCommand(ConsoleGit.CommandLineArgs)
+  type: Constructor
+  source:
+    remote:
+      path: ConsoleGit/ConsoleGit/Commands/ErrorCommand.cs
+      branch: feature/my-feature
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: .ctor
+    path: ../ConsoleGit/ConsoleGit/Commands/ErrorCommand.cs
+    startLine: 5
+  assemblies:
+  - ConsoleGit
+  namespace: ConsoleGit.Commands
+  syntax:
+    content: public ErrorCommand(CommandLineArgs args)
+    parameters:
+    - id: args
+      type: ConsoleGit.CommandLineArgs
+    content.vb: Public Sub New(args As CommandLineArgs)
+  overload: ConsoleGit.Commands.ErrorCommand.#ctor*
+  nameWithType.vb: ErrorCommand.New(CommandLineArgs)
+  fullName.vb: ConsoleGit.Commands.ErrorCommand.New(ConsoleGit.CommandLineArgs)
+  name.vb: New(CommandLineArgs)
+- uid: ConsoleGit.Commands.ErrorCommand.Execute
+  commentId: M:ConsoleGit.Commands.ErrorCommand.Execute
+  id: Execute
+  parent: ConsoleGit.Commands.ErrorCommand
+  langs:
+  - csharp
+  - vb
+  name: Execute()
+  nameWithType: ErrorCommand.Execute()
+  fullName: ConsoleGit.Commands.ErrorCommand.Execute()
+  type: Method
+  source:
+    remote:
+      path: ConsoleGit/ConsoleGit/Commands/ErrorCommand.cs
+      branch: feature/my-feature
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: Execute
+    path: ../ConsoleGit/ConsoleGit/Commands/ErrorCommand.cs
+    startLine: 9
+  assemblies:
+  - ConsoleGit
+  namespace: ConsoleGit.Commands
+  example: []
+  syntax:
+    content: public ErrorOr<Success> Execute()
+    return:
+      type: ErrorOr.ErrorOr{ErrorOr.Success}
+    content.vb: Public Function Execute() As ErrorOr(Of Success)
+  overload: ConsoleGit.Commands.ErrorCommand.Execute*
+  implements:
+  - ConsoleGit.Commands.ICommand.Execute
+- uid: ConsoleGit.Commands.ErrorCommand.Dispose
+  commentId: M:ConsoleGit.Commands.ErrorCommand.Dispose
+  id: Dispose
+  parent: ConsoleGit.Commands.ErrorCommand
+  langs:
+  - csharp
+  - vb
+  name: Dispose()
+  nameWithType: ErrorCommand.Dispose()
+  fullName: ConsoleGit.Commands.ErrorCommand.Dispose()
+  type: Method
+  source:
+    remote:
+      path: ConsoleGit/ConsoleGit/Commands/ErrorCommand.cs
+      branch: feature/my-feature
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: Dispose
+    path: ../ConsoleGit/ConsoleGit/Commands/ErrorCommand.cs
+    startLine: 12
+  assemblies:
+  - ConsoleGit
+  namespace: ConsoleGit.Commands
+  summary: Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
+  example: []
+  syntax:
+    content: public void Dispose()
+    content.vb: Public Sub Dispose()
+  overload: ConsoleGit.Commands.ErrorCommand.Dispose*
+  implements:
+  - System.IDisposable.Dispose
+references:
+- uid: ConsoleGit.Commands
+  commentId: N:ConsoleGit.Commands
+  href: ConsoleGit.html
+  name: ConsoleGit.Commands
+  nameWithType: ConsoleGit.Commands
+  fullName: ConsoleGit.Commands
+  spec.csharp:
+  - uid: ConsoleGit
+    name: ConsoleGit
+    href: ConsoleGit.html
+  - name: .
+  - uid: ConsoleGit.Commands
+    name: Commands
+    href: ConsoleGit.Commands.html
+  spec.vb:
+  - uid: ConsoleGit
+    name: ConsoleGit
+    href: ConsoleGit.html
+  - name: .
+  - uid: ConsoleGit.Commands
+    name: Commands
+    href: ConsoleGit.Commands.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: ConsoleGit.Commands.ICommand
+  commentId: T:ConsoleGit.Commands.ICommand
+  parent: ConsoleGit.Commands
+  href: ConsoleGit.Commands.ICommand.html
+  name: ICommand
+  nameWithType: ICommand
+  fullName: ConsoleGit.Commands.ICommand
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: ConsoleGit.Commands.ErrorCommand.#ctor*
+  commentId: Overload:ConsoleGit.Commands.ErrorCommand.#ctor
+  href: ConsoleGit.Commands.ErrorCommand.html#ConsoleGit_Commands_ErrorCommand__ctor_ConsoleGit_CommandLineArgs_
+  name: ErrorCommand
+  nameWithType: ErrorCommand.ErrorCommand
+  fullName: ConsoleGit.Commands.ErrorCommand.ErrorCommand
+  nameWithType.vb: ErrorCommand.New
+  fullName.vb: ConsoleGit.Commands.ErrorCommand.New
+  name.vb: New
+- uid: ConsoleGit.CommandLineArgs
+  commentId: T:ConsoleGit.CommandLineArgs
+  parent: ConsoleGit
+  href: ConsoleGit.CommandLineArgs.html
+  name: CommandLineArgs
+  nameWithType: CommandLineArgs
+  fullName: ConsoleGit.CommandLineArgs
+- uid: ConsoleGit
+  commentId: N:ConsoleGit
+  href: ConsoleGit.html
+  name: ConsoleGit
+  nameWithType: ConsoleGit
+  fullName: ConsoleGit
+- uid: ConsoleGit.Commands.ErrorCommand.Execute*
+  commentId: Overload:ConsoleGit.Commands.ErrorCommand.Execute
+  href: ConsoleGit.Commands.ErrorCommand.html#ConsoleGit_Commands_ErrorCommand_Execute
+  name: Execute
+  nameWithType: ErrorCommand.Execute
+  fullName: ConsoleGit.Commands.ErrorCommand.Execute
+- uid: ConsoleGit.Commands.ICommand.Execute
+  commentId: M:ConsoleGit.Commands.ICommand.Execute
+  parent: ConsoleGit.Commands.ICommand
+  href: ConsoleGit.Commands.ICommand.html#ConsoleGit_Commands_ICommand_Execute
+  name: Execute()
+  nameWithType: ICommand.Execute()
+  fullName: ConsoleGit.Commands.ICommand.Execute()
+  spec.csharp:
+  - uid: ConsoleGit.Commands.ICommand.Execute
+    name: Execute
+    href: ConsoleGit.Commands.ICommand.html#ConsoleGit_Commands_ICommand_Execute
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: ConsoleGit.Commands.ICommand.Execute
+    name: Execute
+    href: ConsoleGit.Commands.ICommand.html#ConsoleGit_Commands_ICommand_Execute
+  - name: (
+  - name: )
+- uid: ErrorOr.ErrorOr{ErrorOr.Success}
+  commentId: T:ErrorOr.ErrorOr{ErrorOr.Success}
+  parent: ErrorOr
+  definition: ErrorOr.ErrorOr`1
+  name: ErrorOr<Success>
+  nameWithType: ErrorOr<Success>
+  fullName: ErrorOr.ErrorOr<ErrorOr.Success>
+  nameWithType.vb: ErrorOr(Of Success)
+  fullName.vb: ErrorOr.ErrorOr(Of ErrorOr.Success)
+  name.vb: ErrorOr(Of Success)
+  spec.csharp:
+  - uid: ErrorOr.ErrorOr`1
+    name: ErrorOr
+    isExternal: true
+  - name: <
+  - uid: ErrorOr.Success
+    name: Success
+    isExternal: true
+  - name: '>'
+  spec.vb:
+  - uid: ErrorOr.ErrorOr`1
+    name: ErrorOr
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: ErrorOr.Success
+    name: Success
+    isExternal: true
+  - name: )
+- uid: ErrorOr.ErrorOr`1
+  commentId: T:ErrorOr.ErrorOr`1
+  isExternal: true
+  name: ErrorOr<TValue>
+  nameWithType: ErrorOr<TValue>
+  fullName: ErrorOr.ErrorOr<TValue>
+  nameWithType.vb: ErrorOr(Of TValue)
+  fullName.vb: ErrorOr.ErrorOr(Of TValue)
+  name.vb: ErrorOr(Of TValue)
+  spec.csharp:
+  - uid: ErrorOr.ErrorOr`1
+    name: ErrorOr
+    isExternal: true
+  - name: <
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: ErrorOr.ErrorOr`1
+    name: ErrorOr
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TValue
+  - name: )
+- uid: ErrorOr
+  commentId: N:ErrorOr
+  isExternal: true
+  name: ErrorOr
+  nameWithType: ErrorOr
+  fullName: ErrorOr
+- uid: ConsoleGit.Commands.ErrorCommand.Dispose*
+  commentId: Overload:ConsoleGit.Commands.ErrorCommand.Dispose
+  href: ConsoleGit.Commands.ErrorCommand.html#ConsoleGit_Commands_ErrorCommand_Dispose
+  name: Dispose
+  nameWithType: ErrorCommand.Dispose
+  fullName: ConsoleGit.Commands.ErrorCommand.Dispose
+- uid: System.IDisposable.Dispose
+  commentId: M:System.IDisposable.Dispose
+  parent: System.IDisposable
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  name: Dispose()
+  nameWithType: IDisposable.Dispose()
+  fullName: System.IDisposable.Dispose()
+  spec.csharp:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )

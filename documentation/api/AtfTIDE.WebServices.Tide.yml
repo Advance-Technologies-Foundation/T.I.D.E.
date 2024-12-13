@@ -1,0 +1,556 @@
+### YamlMime:ManagedReference
+items:
+- uid: AtfTIDE.WebServices.Tide
+  commentId: T:AtfTIDE.WebServices.Tide
+  id: Tide
+  parent: AtfTIDE.WebServices
+  children:
+  - AtfTIDE.WebServices.Tide.CaptureClioArgs
+  langs:
+  - csharp
+  - vb
+  name: Tide
+  nameWithType: Tide
+  fullName: AtfTIDE.WebServices.Tide
+  type: Class
+  source:
+    remote:
+      path: packages/AtfTIDE/Files/cs/WebServices/Tide.cs
+      branch: feature/my-feature
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: Tide
+    path: ../packages/AtfTIDE/Files/cs/WebServices/Tide.cs
+    startLine: 23
+  assemblies:
+  - AtfTIDE
+  namespace: AtfTIDE.WebServices
+  summary: >-
+    Provides web service functionality for the AtfTIDE system with <code>ConsoleGit.exe</code> integration capabilities.
+
+    This service operates in read-only mode with respect to session state.
+  remarks: <ul><li>This service class implements WCF service contract</li><li>Requires ASP.NET compatibility mode</li><li>Inherits from BaseService and implements IReadOnlySessionState for secure session handling</li></ul>
+  example: []
+  syntax:
+    content: >-
+      [ServiceContract]
+
+      [AspNetCompatibilityRequirements(RequirementsMode = AspNetCompatibilityRequirementsMode.Required)]
+
+      public class Tide : BaseService, IReadOnlySessionState, IRequiresSessionState
+    content.vb: >-
+      <ServiceContract>
+
+      <AspNetCompatibilityRequirements(RequirementsMode:=AspNetCompatibilityRequirementsMode.Required)>
+
+      Public Class Tide Inherits BaseService Implements IReadOnlySessionState, IRequiresSessionState
+  inheritance:
+  - System.Object
+  - Terrasoft.Web.Common.BaseService
+  implements:
+  - System.Web.SessionState.IReadOnlySessionState
+  - System.Web.SessionState.IRequiresSessionState
+  inheritedMembers:
+  - Terrasoft.Web.Common.BaseService.GetUserConnection
+  - Terrasoft.Web.Common.BaseService.UserIsAuthenticated
+  - Terrasoft.Web.Common.BaseService.AppConnection
+  - Terrasoft.Web.Common.BaseService.UserConnection
+  - Terrasoft.Web.Common.BaseService.Cache
+  - Terrasoft.Web.Common.BaseService.HttpContextAccessor
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  attributes:
+  - type: System.ServiceModel.ServiceContractAttribute
+    ctor: System.ServiceModel.ServiceContractAttribute.#ctor
+    arguments: []
+  - type: System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute
+    ctor: System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: RequirementsMode
+      type: System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode
+      value: 2
+- uid: AtfTIDE.WebServices.Tide.CaptureClioArgs
+  commentId: M:AtfTIDE.WebServices.Tide.CaptureClioArgs
+  id: CaptureClioArgs
+  parent: AtfTIDE.WebServices.Tide
+  langs:
+  - csharp
+  - vb
+  name: CaptureClioArgs()
+  nameWithType: Tide.CaptureClioArgs()
+  fullName: AtfTIDE.WebServices.Tide.CaptureClioArgs()
+  type: Method
+  source:
+    remote:
+      path: packages/AtfTIDE/Files/cs/WebServices/Tide.cs
+      branch: feature/my-feature
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: CaptureClioArgs
+    path: ../packages/AtfTIDE/Files/cs/WebServices/Tide.cs
+    startLine: 66
+  assemblies:
+  - AtfTIDE
+  namespace: AtfTIDE.WebServices
+  summary: Captures and processes arguments required for <code>ConsoleGit.exe</code> functionality.
+  remarks: >-
+    This endpoint is called from <strong><code>AtfTIDE_FormPage</code></strong> before start of any Business Process.
+
+    It captures system and user information to be used in UserTasks of a process.
+
+    This endpoint performs the following operations:
+
+    <table><thead><tr><th class="term">Operation Steps</th><th class="description">Detailed process flow</th></tr></thead><tbody><tr><td class="term">Request Retrieval</td><td class="description">Retrieves the current HTTP request and its cookies</td></tr><tr><td class="term">System Information</td><td class="description">Collects system information including the base application URL</td></tr><tr><td class="term">Framework Detection</td><td class="description">Determines if the system is running in framework mode</td></tr><tr><td class="term">Data Storage</td><td class="description">Stores the collected information for the current user</td></tr></tbody></table>
+  example:
+  - >-
+    This endpoint can be called via a GET request:
+
+    <pre><code class="lang-csharp">GET rest/Tide/CaptureClioArgs HTTP/1.1</code></pre>
+  syntax:
+    content: >-
+      [OperationContract]
+
+      [WebInvoke(Method = "GET", RequestFormat = WebMessageFormat.Json, BodyStyle = WebMessageBodyStyle.Bare, ResponseFormat = WebMessageFormat.Json)]
+
+      public void CaptureClioArgs()
+    content.vb: >-
+      <OperationContract>
+
+      <WebInvoke(Method:="GET", RequestFormat:=WebMessageFormat.Json, BodyStyle:=WebMessageBodyStyle.Bare, ResponseFormat:=WebMessageFormat.Json)>
+
+      Public Sub CaptureClioArgs()
+  overload: AtfTIDE.WebServices.Tide.CaptureClioArgs*
+  attributes:
+  - type: System.ServiceModel.OperationContractAttribute
+    ctor: System.ServiceModel.OperationContractAttribute.#ctor
+    arguments: []
+  - type: System.ServiceModel.Web.WebInvokeAttribute
+    ctor: System.ServiceModel.Web.WebInvokeAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Method
+      type: System.String
+      value: GET
+    - name: RequestFormat
+      type: System.ServiceModel.Web.WebMessageFormat
+      value: 1
+    - name: BodyStyle
+      type: System.ServiceModel.Web.WebMessageBodyStyle
+      value: 0
+    - name: ResponseFormat
+      type: System.ServiceModel.Web.WebMessageFormat
+      value: 1
+references:
+- uid: AtfTIDE.WebServices
+  commentId: N:AtfTIDE.WebServices
+  href: AtfTIDE.html
+  name: AtfTIDE.WebServices
+  nameWithType: AtfTIDE.WebServices
+  fullName: AtfTIDE.WebServices
+  spec.csharp:
+  - uid: AtfTIDE
+    name: AtfTIDE
+    href: AtfTIDE.html
+  - name: .
+  - uid: AtfTIDE.WebServices
+    name: WebServices
+    href: AtfTIDE.WebServices.html
+  spec.vb:
+  - uid: AtfTIDE
+    name: AtfTIDE
+    href: AtfTIDE.html
+  - name: .
+  - uid: AtfTIDE.WebServices
+    name: WebServices
+    href: AtfTIDE.WebServices.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: Terrasoft.Web.Common.BaseService
+  commentId: T:Terrasoft.Web.Common.BaseService
+  parent: Terrasoft.Web.Common
+  isExternal: true
+  name: BaseService
+  nameWithType: BaseService
+  fullName: Terrasoft.Web.Common.BaseService
+- uid: System.Web.SessionState.IReadOnlySessionState
+  commentId: T:System.Web.SessionState.IReadOnlySessionState
+  parent: System.Web.SessionState
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.web.sessionstate.ireadonlysessionstate
+  name: IReadOnlySessionState
+  nameWithType: IReadOnlySessionState
+  fullName: System.Web.SessionState.IReadOnlySessionState
+- uid: System.Web.SessionState.IRequiresSessionState
+  commentId: T:System.Web.SessionState.IRequiresSessionState
+  parent: System.Web.SessionState
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.web.sessionstate.irequiressessionstate
+  name: IRequiresSessionState
+  nameWithType: IRequiresSessionState
+  fullName: System.Web.SessionState.IRequiresSessionState
+- uid: Terrasoft.Web.Common.BaseService.GetUserConnection
+  commentId: M:Terrasoft.Web.Common.BaseService.GetUserConnection
+  parent: Terrasoft.Web.Common.BaseService
+  isExternal: true
+  name: GetUserConnection()
+  nameWithType: BaseService.GetUserConnection()
+  fullName: Terrasoft.Web.Common.BaseService.GetUserConnection()
+  spec.csharp:
+  - uid: Terrasoft.Web.Common.BaseService.GetUserConnection
+    name: GetUserConnection
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Terrasoft.Web.Common.BaseService.GetUserConnection
+    name: GetUserConnection
+    isExternal: true
+  - name: (
+  - name: )
+- uid: Terrasoft.Web.Common.BaseService.UserIsAuthenticated
+  commentId: P:Terrasoft.Web.Common.BaseService.UserIsAuthenticated
+  parent: Terrasoft.Web.Common.BaseService
+  isExternal: true
+  name: UserIsAuthenticated
+  nameWithType: BaseService.UserIsAuthenticated
+  fullName: Terrasoft.Web.Common.BaseService.UserIsAuthenticated
+- uid: Terrasoft.Web.Common.BaseService.AppConnection
+  commentId: P:Terrasoft.Web.Common.BaseService.AppConnection
+  parent: Terrasoft.Web.Common.BaseService
+  isExternal: true
+  name: AppConnection
+  nameWithType: BaseService.AppConnection
+  fullName: Terrasoft.Web.Common.BaseService.AppConnection
+- uid: Terrasoft.Web.Common.BaseService.UserConnection
+  commentId: P:Terrasoft.Web.Common.BaseService.UserConnection
+  parent: Terrasoft.Web.Common.BaseService
+  isExternal: true
+  name: UserConnection
+  nameWithType: BaseService.UserConnection
+  fullName: Terrasoft.Web.Common.BaseService.UserConnection
+- uid: Terrasoft.Web.Common.BaseService.Cache
+  commentId: P:Terrasoft.Web.Common.BaseService.Cache
+  parent: Terrasoft.Web.Common.BaseService
+  isExternal: true
+  name: Cache
+  nameWithType: BaseService.Cache
+  fullName: Terrasoft.Web.Common.BaseService.Cache
+- uid: Terrasoft.Web.Common.BaseService.HttpContextAccessor
+  commentId: P:Terrasoft.Web.Common.BaseService.HttpContextAccessor
+  parent: Terrasoft.Web.Common.BaseService
+  isExternal: true
+  name: HttpContextAccessor
+  nameWithType: BaseService.HttpContextAccessor
+  fullName: Terrasoft.Web.Common.BaseService.HttpContextAccessor
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Terrasoft.Web.Common
+  commentId: N:Terrasoft.Web.Common
+  isExternal: true
+  name: Terrasoft.Web.Common
+  nameWithType: Terrasoft.Web.Common
+  fullName: Terrasoft.Web.Common
+  spec.csharp:
+  - uid: Terrasoft
+    name: Terrasoft
+    isExternal: true
+  - name: .
+  - uid: Terrasoft.Web
+    name: Web
+    isExternal: true
+  - name: .
+  - uid: Terrasoft.Web.Common
+    name: Common
+    isExternal: true
+  spec.vb:
+  - uid: Terrasoft
+    name: Terrasoft
+    isExternal: true
+  - name: .
+  - uid: Terrasoft.Web
+    name: Web
+    isExternal: true
+  - name: .
+  - uid: Terrasoft.Web.Common
+    name: Common
+    isExternal: true
+- uid: System.Web.SessionState
+  commentId: N:System.Web.SessionState
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Web.SessionState
+  nameWithType: System.Web.SessionState
+  fullName: System.Web.SessionState
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Web
+    name: Web
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.web
+  - name: .
+  - uid: System.Web.SessionState
+    name: SessionState
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.web.sessionstate
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Web
+    name: Web
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.web
+  - name: .
+  - uid: System.Web.SessionState
+    name: SessionState
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.web.sessionstate
+- uid: AtfTIDE.WebServices.Tide.CaptureClioArgs*
+  commentId: Overload:AtfTIDE.WebServices.Tide.CaptureClioArgs
+  href: AtfTIDE.WebServices.Tide.html#AtfTIDE_WebServices_Tide_CaptureClioArgs
+  name: CaptureClioArgs
+  nameWithType: Tide.CaptureClioArgs
+  fullName: AtfTIDE.WebServices.Tide.CaptureClioArgs

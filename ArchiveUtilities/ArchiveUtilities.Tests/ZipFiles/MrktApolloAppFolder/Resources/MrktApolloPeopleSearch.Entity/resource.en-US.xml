@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="en-US">
+	<Group Type="String">
+		<Items>
+			<Item Name="Caption" Value="Apollo people search" />
+			<Item Name="Columns.MrktApolloDepartment.Caption" Value="Apollo Department" />
+			<Item Name="Columns.MrktApolloManagementLevel.Caption" Value="Management Level" />
+			<Item Name="Columns.MrktEmailStatus.Caption" Value="Email status" />
+			<Item Name="Columns.MrktFacebookUrl.Caption" Value="Facebook URL" />
+			<Item Name="Columns.MrktFirstName.Caption" Value="First name" />
+			<Item Name="Columns.MrktLastEmploymentStartDate.Caption" Value="Last Employment Start Date" />
+			<Item Name="Columns.MrktLastEmploymentTitle.Caption" Value="Last Employment Title" />
+			<Item Name="Columns.MrktLastName.Caption" Value="Last name" />
+			<Item Name="Columns.MrktLinkedinUrl.Caption" Value="Linkedin Url" />
+			<Item Name="Columns.MrktOrganizationId.Caption" Value="Organization Id" />
+			<Item Name="Columns.MrktPersonId.Caption" Value="Person Id" />
+			<Item Name="Columns.MrktPhone.Caption" Value="Phone" />
+			<Item Name="Columns.MrktTitle.Caption" Value="Title" />
+			<Item Name="Columns.MrktTwitterUrl.Caption" Value="Twitter Url" />
+		</Items>
+	</Group>
+</Resources>

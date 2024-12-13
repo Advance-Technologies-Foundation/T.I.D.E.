@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="en-US">
+	<Group Type="String">
+		<Items>
+			<Item Name="Caption" Value="Apollo Contact Management Level" />
+			<Item Name="Columns.ApolloCode.Caption" Value="ApolloCode" />
+			<Item Name="Columns.Color.Caption" Value="Color" />
+			<Item Name="Description" Value="Management Level of a person or contant" />
+		</Items>
+	</Group>
+</Resources>

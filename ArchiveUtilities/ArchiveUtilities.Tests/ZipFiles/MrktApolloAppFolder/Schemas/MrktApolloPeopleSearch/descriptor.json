@@ -1,0 +1,14 @@
+﻿{
+  "Descriptor": {
+    "UId": "02631d46-fd96-4d3f-b489-7f535834a8a9",
+    "Name": "MrktApolloPeopleSearch",
+    "ModifiedOnUtc": "\/Date(1704461835000)\/",
+    "Parent": {
+      "UId": "1bab9dcf-17d5-49f8-9536-8e0064f1dce0",
+      "Name": "BaseEntity"
+    },
+    "ManagerName": "EntitySchemaManager",
+    "Caption": "Apollo people search",
+    "DependsOn": []
+  }
+}

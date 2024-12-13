@@ -1,0 +1,37 @@
+### YamlMime:ManagedReference
+items:
+- uid: GitAbstraction
+  commentId: N:GitAbstraction
+  id: GitAbstraction
+  children:
+  - GitAbstraction.ExToErrorParser
+  - GitAbstraction.GitRepository
+  langs:
+  - csharp
+  - vb
+  name: GitAbstraction
+  nameWithType: GitAbstraction
+  fullName: GitAbstraction
+  type: Namespace
+  assemblies:
+  - GitAbstraction
+references:
+- uid: GitAbstraction.ExToErrorParser
+  commentId: T:GitAbstraction.ExToErrorParser
+  href: GitAbstraction.ExToErrorParser.html
+  name: ExToErrorParser
+  nameWithType: ExToErrorParser
+  fullName: GitAbstraction.ExToErrorParser
+- uid: GitAbstraction.GitRepository
+  commentId: T:GitAbstraction.GitRepository
+  parent: GitAbstraction
+  href: GitAbstraction.GitRepository.html
+  name: GitRepository
+  nameWithType: GitRepository
+  fullName: GitAbstraction.GitRepository
+- uid: GitAbstraction
+  commentId: N:GitAbstraction
+  href: GitAbstraction.html
+  name: GitAbstraction
+  nameWithType: GitAbstraction
+  fullName: GitAbstraction

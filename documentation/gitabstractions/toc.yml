@@ -1,0 +1,13 @@
+### YamlMime:TableOfContent
+items:
+- uid: GitAbstraction
+  name: GitAbstraction
+  type: Namespace
+  items:
+  - uid: GitAbstraction.ExToErrorParser
+    name: ExToErrorParser
+    type: Class
+  - uid: GitAbstraction.GitRepository
+    name: GitRepository
+    type: Class
+memberLayout: SamePage

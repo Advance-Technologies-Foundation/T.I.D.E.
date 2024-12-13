@@ -1,0 +1,233 @@
+### YamlMime:ManagedReference
+items:
+- uid: AtfTIDE.Commands
+  commentId: T:AtfTIDE.Commands
+  id: Commands
+  parent: AtfTIDE
+  children:
+  - AtfTIDE.Commands.AddAll
+  - AtfTIDE.Commands.Checkout
+  - AtfTIDE.Commands.Clone
+  - AtfTIDE.Commands.Commit
+  - AtfTIDE.Commands.DownloadPackages
+  - AtfTIDE.Commands.Pull
+  - AtfTIDE.Commands.Push
+  langs:
+  - csharp
+  - vb
+  name: Commands
+  nameWithType: Commands
+  fullName: AtfTIDE.Commands
+  type: Enum
+  source:
+    remote:
+      path: packages/AtfTIDE/Files/cs/ConsoleGit.cs
+      branch: feature/my-feature
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: Commands
+    path: ../packages/AtfTIDE/Files/cs/ConsoleGit.cs
+    startLine: 277
+  assemblies:
+  - AtfTIDE
+  namespace: AtfTIDE
+  summary: Defines supported git operations
+  example: []
+  syntax:
+    content: public enum Commands
+    content.vb: Public Enum Commands
+- uid: AtfTIDE.Commands.Clone
+  commentId: F:AtfTIDE.Commands.Clone
+  id: Clone
+  parent: AtfTIDE.Commands
+  langs:
+  - csharp
+  - vb
+  name: Clone
+  nameWithType: Commands.Clone
+  fullName: AtfTIDE.Commands.Clone
+  type: Field
+  source:
+    remote:
+      path: packages/AtfTIDE/Files/cs/ConsoleGit.cs
+      branch: feature/my-feature
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: Clone
+    path: ../packages/AtfTIDE/Files/cs/ConsoleGit.cs
+    startLine: 279
+  assemblies:
+  - AtfTIDE
+  namespace: AtfTIDE
+  syntax:
+    content: Clone = 0
+    return:
+      type: AtfTIDE.Commands
+- uid: AtfTIDE.Commands.AddAll
+  commentId: F:AtfTIDE.Commands.AddAll
+  id: AddAll
+  parent: AtfTIDE.Commands
+  langs:
+  - csharp
+  - vb
+  name: AddAll
+  nameWithType: Commands.AddAll
+  fullName: AtfTIDE.Commands.AddAll
+  type: Field
+  source:
+    remote:
+      path: packages/AtfTIDE/Files/cs/ConsoleGit.cs
+      branch: feature/my-feature
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: AddAll
+    path: ../packages/AtfTIDE/Files/cs/ConsoleGit.cs
+    startLine: 280
+  assemblies:
+  - AtfTIDE
+  namespace: AtfTIDE
+  syntax:
+    content: AddAll = 1
+    return:
+      type: AtfTIDE.Commands
+- uid: AtfTIDE.Commands.Push
+  commentId: F:AtfTIDE.Commands.Push
+  id: Push
+  parent: AtfTIDE.Commands
+  langs:
+  - csharp
+  - vb
+  name: Push
+  nameWithType: Commands.Push
+  fullName: AtfTIDE.Commands.Push
+  type: Field
+  source:
+    remote:
+      path: packages/AtfTIDE/Files/cs/ConsoleGit.cs
+      branch: feature/my-feature
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: Push
+    path: ../packages/AtfTIDE/Files/cs/ConsoleGit.cs
+    startLine: 281
+  assemblies:
+  - AtfTIDE
+  namespace: AtfTIDE
+  syntax:
+    content: Push = 2
+    return:
+      type: AtfTIDE.Commands
+- uid: AtfTIDE.Commands.Pull
+  commentId: F:AtfTIDE.Commands.Pull
+  id: Pull
+  parent: AtfTIDE.Commands
+  langs:
+  - csharp
+  - vb
+  name: Pull
+  nameWithType: Commands.Pull
+  fullName: AtfTIDE.Commands.Pull
+  type: Field
+  source:
+    remote:
+      path: packages/AtfTIDE/Files/cs/ConsoleGit.cs
+      branch: feature/my-feature
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: Pull
+    path: ../packages/AtfTIDE/Files/cs/ConsoleGit.cs
+    startLine: 282
+  assemblies:
+  - AtfTIDE
+  namespace: AtfTIDE
+  syntax:
+    content: Pull = 3
+    return:
+      type: AtfTIDE.Commands
+- uid: AtfTIDE.Commands.Commit
+  commentId: F:AtfTIDE.Commands.Commit
+  id: Commit
+  parent: AtfTIDE.Commands
+  langs:
+  - csharp
+  - vb
+  name: Commit
+  nameWithType: Commands.Commit
+  fullName: AtfTIDE.Commands.Commit
+  type: Field
+  source:
+    remote:
+      path: packages/AtfTIDE/Files/cs/ConsoleGit.cs
+      branch: feature/my-feature
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: Commit
+    path: ../packages/AtfTIDE/Files/cs/ConsoleGit.cs
+    startLine: 283
+  assemblies:
+  - AtfTIDE
+  namespace: AtfTIDE
+  syntax:
+    content: Commit = 4
+    return:
+      type: AtfTIDE.Commands
+- uid: AtfTIDE.Commands.DownloadPackages
+  commentId: F:AtfTIDE.Commands.DownloadPackages
+  id: DownloadPackages
+  parent: AtfTIDE.Commands
+  langs:
+  - csharp
+  - vb
+  name: DownloadPackages
+  nameWithType: Commands.DownloadPackages
+  fullName: AtfTIDE.Commands.DownloadPackages
+  type: Field
+  source:
+    remote:
+      path: packages/AtfTIDE/Files/cs/ConsoleGit.cs
+      branch: feature/my-feature
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: DownloadPackages
+    path: ../packages/AtfTIDE/Files/cs/ConsoleGit.cs
+    startLine: 284
+  assemblies:
+  - AtfTIDE
+  namespace: AtfTIDE
+  syntax:
+    content: DownloadPackages = 5
+    return:
+      type: AtfTIDE.Commands
+- uid: AtfTIDE.Commands.Checkout
+  commentId: F:AtfTIDE.Commands.Checkout
+  id: Checkout
+  parent: AtfTIDE.Commands
+  langs:
+  - csharp
+  - vb
+  name: Checkout
+  nameWithType: Commands.Checkout
+  fullName: AtfTIDE.Commands.Checkout
+  type: Field
+  source:
+    remote:
+      path: packages/AtfTIDE/Files/cs/ConsoleGit.cs
+      branch: feature/my-feature
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: Checkout
+    path: ../packages/AtfTIDE/Files/cs/ConsoleGit.cs
+    startLine: 285
+  assemblies:
+  - AtfTIDE
+  namespace: AtfTIDE
+  syntax:
+    content: Checkout = 6
+    return:
+      type: AtfTIDE.Commands
+references:
+- uid: AtfTIDE
+  commentId: N:AtfTIDE
+  href: AtfTIDE.html
+  name: AtfTIDE
+  nameWithType: AtfTIDE
+  fullName: AtfTIDE
+- uid: AtfTIDE.Commands
+  commentId: T:AtfTIDE.Commands
+  parent: AtfTIDE
+  href: AtfTIDE.Commands.html
+  name: Commands
+  nameWithType: Commands
+  fullName: AtfTIDE.Commands

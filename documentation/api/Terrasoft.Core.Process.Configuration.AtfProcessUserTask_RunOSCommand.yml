@@ -1,0 +1,586 @@
+### YamlMime:ManagedReference
+items:
+- uid: Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand
+  commentId: T:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand
+  id: AtfProcessUserTask_RunOSCommand
+  parent: Terrasoft.Core.Process.Configuration
+  children:
+  - Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand.#ctor(Terrasoft.Core.UserConnection)
+  - Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand.ApplyPropertiesDataValues(Terrasoft.Common.DataReader)
+  - Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand.Arguments
+  - Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand.CancelExecuting(System.Object[])
+  - Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand.CompleteExecuting(System.Object[])
+  - Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand.ErrorMessage
+  - Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand.FileName
+  - Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand.GetExecutionData
+  - Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand.GetNotificationData
+  - Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand.InternalExecute(Terrasoft.Core.Process.ProcessExecutingContext)
+  - Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand.IsError
+  - Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand.WaitForExit
+  - Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand.WorkingDirectory
+  - Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand.WritePropertiesData(Terrasoft.Common.DataWriter)
+  langs:
+  - csharp
+  - vb
+  name: AtfProcessUserTask_RunOSCommand
+  nameWithType: AtfProcessUserTask_RunOSCommand
+  fullName: Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand
+  type: Class
+  assemblies:
+  - AtfTIDE
+  namespace: Terrasoft.Core.Process.Configuration
+  example: []
+  syntax:
+    content: 'public class AtfProcessUserTask_RunOSCommand : ProcessUserTask'
+    content.vb: Public Class AtfProcessUserTask_RunOSCommand Inherits ProcessUserTask
+  inheritance:
+  - System.Object
+- uid: Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand.InternalExecute(Terrasoft.Core.Process.ProcessExecutingContext)
+  commentId: M:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand.InternalExecute(Terrasoft.Core.Process.ProcessExecutingContext)
+  id: InternalExecute(Terrasoft.Core.Process.ProcessExecutingContext)
+  parent: Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand
+  langs:
+  - csharp
+  - vb
+  name: InternalExecute(ProcessExecutingContext)
+  nameWithType: AtfProcessUserTask_RunOSCommand.InternalExecute(ProcessExecutingContext)
+  fullName: Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand.InternalExecute(Terrasoft.Core.Process.ProcessExecutingContext)
+  type: Method
+  assemblies:
+  - AtfTIDE
+  namespace: Terrasoft.Core.Process.Configuration
+  example: []
+  syntax:
+    content: protected override bool InternalExecute(ProcessExecutingContext context)
+    parameters:
+    - id: context
+      type: Terrasoft.Core.Process.ProcessExecutingContext
+    return:
+      type: System.Boolean
+    content.vb: Protected Overrides Function InternalExecute(context As ProcessExecutingContext) As Boolean
+  overload: Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand.InternalExecute*
+- uid: Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand.CompleteExecuting(System.Object[])
+  commentId: M:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand.CompleteExecuting(System.Object[])
+  id: CompleteExecuting(System.Object[])
+  parent: Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand
+  langs:
+  - csharp
+  - vb
+  name: CompleteExecuting(params object[])
+  nameWithType: AtfProcessUserTask_RunOSCommand.CompleteExecuting(params object[])
+  fullName: Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand.CompleteExecuting(params object[])
+  type: Method
+  assemblies:
+  - AtfTIDE
+  namespace: Terrasoft.Core.Process.Configuration
+  example: []
+  syntax:
+    content: public override bool CompleteExecuting(params object[] parameters)
+    parameters:
+    - id: parameters
+      type: System.Object[]
+    return:
+      type: System.Boolean
+    content.vb: Public Overrides Function CompleteExecuting(ParamArray parameters As Object()) As Boolean
+  overload: Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand.CompleteExecuting*
+  nameWithType.vb: AtfProcessUserTask_RunOSCommand.CompleteExecuting(ParamArray Object())
+  fullName.vb: Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand.CompleteExecuting(ParamArray Object())
+  name.vb: CompleteExecuting(ParamArray Object())
+- uid: Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand.CancelExecuting(System.Object[])
+  commentId: M:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand.CancelExecuting(System.Object[])
+  id: CancelExecuting(System.Object[])
+  parent: Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand
+  langs:
+  - csharp
+  - vb
+  name: CancelExecuting(params object[])
+  nameWithType: AtfProcessUserTask_RunOSCommand.CancelExecuting(params object[])
+  fullName: Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand.CancelExecuting(params object[])
+  type: Method
+  assemblies:
+  - AtfTIDE
+  namespace: Terrasoft.Core.Process.Configuration
+  example: []
+  syntax:
+    content: public override void CancelExecuting(params object[] parameters)
+    parameters:
+    - id: parameters
+      type: System.Object[]
+    content.vb: Public Overrides Sub CancelExecuting(ParamArray parameters As Object())
+  overload: Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand.CancelExecuting*
+  nameWithType.vb: AtfProcessUserTask_RunOSCommand.CancelExecuting(ParamArray Object())
+  fullName.vb: Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand.CancelExecuting(ParamArray Object())
+  name.vb: CancelExecuting(ParamArray Object())
+- uid: Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand.GetExecutionData
+  commentId: M:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand.GetExecutionData
+  id: GetExecutionData
+  parent: Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand
+  langs:
+  - csharp
+  - vb
+  name: GetExecutionData()
+  nameWithType: AtfProcessUserTask_RunOSCommand.GetExecutionData()
+  fullName: Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand.GetExecutionData()
+  type: Method
+  assemblies:
+  - AtfTIDE
+  namespace: Terrasoft.Core.Process.Configuration
+  example: []
+  syntax:
+    content: public override string GetExecutionData()
+    return:
+      type: System.String
+    content.vb: Public Overrides Function GetExecutionData() As String
+  overload: Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand.GetExecutionData*
+- uid: Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand.GetNotificationData
+  commentId: M:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand.GetNotificationData
+  id: GetNotificationData
+  parent: Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand
+  langs:
+  - csharp
+  - vb
+  name: GetNotificationData()
+  nameWithType: AtfProcessUserTask_RunOSCommand.GetNotificationData()
+  fullName: Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand.GetNotificationData()
+  type: Method
+  assemblies:
+  - AtfTIDE
+  namespace: Terrasoft.Core.Process.Configuration
+  example: []
+  syntax:
+    content: public override ProcessElementNotification GetNotificationData()
+    return:
+      type: Terrasoft.Core.Process.ProcessElementNotification
+    content.vb: Public Overrides Function GetNotificationData() As ProcessElementNotification
+  overload: Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand.GetNotificationData*
+- uid: Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand.#ctor(Terrasoft.Core.UserConnection)
+  commentId: M:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand.#ctor(Terrasoft.Core.UserConnection)
+  id: '#ctor(Terrasoft.Core.UserConnection)'
+  parent: Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand
+  langs:
+  - csharp
+  - vb
+  name: AtfProcessUserTask_RunOSCommand(UserConnection)
+  nameWithType: AtfProcessUserTask_RunOSCommand.AtfProcessUserTask_RunOSCommand(UserConnection)
+  fullName: Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand.AtfProcessUserTask_RunOSCommand(Terrasoft.Core.UserConnection)
+  type: Constructor
+  assemblies:
+  - AtfTIDE
+  namespace: Terrasoft.Core.Process.Configuration
+  syntax:
+    content: public AtfProcessUserTask_RunOSCommand(UserConnection userConnection)
+    parameters:
+    - id: userConnection
+      type: Terrasoft.Core.UserConnection
+    content.vb: Public Sub New(userConnection As UserConnection)
+  overload: Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand.#ctor*
+  nameWithType.vb: AtfProcessUserTask_RunOSCommand.New(UserConnection)
+  fullName.vb: Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand.New(Terrasoft.Core.UserConnection)
+  name.vb: New(UserConnection)
+- uid: Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand.WritePropertiesData(Terrasoft.Common.DataWriter)
+  commentId: M:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand.WritePropertiesData(Terrasoft.Common.DataWriter)
+  id: WritePropertiesData(Terrasoft.Common.DataWriter)
+  parent: Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand
+  langs:
+  - csharp
+  - vb
+  name: WritePropertiesData(DataWriter)
+  nameWithType: AtfProcessUserTask_RunOSCommand.WritePropertiesData(DataWriter)
+  fullName: Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand.WritePropertiesData(Terrasoft.Common.DataWriter)
+  type: Method
+  assemblies:
+  - AtfTIDE
+  namespace: Terrasoft.Core.Process.Configuration
+  example: []
+  syntax:
+    content: public override void WritePropertiesData(DataWriter writer)
+    parameters:
+    - id: writer
+      type: Terrasoft.Common.DataWriter
+    content.vb: Public Overrides Sub WritePropertiesData(writer As DataWriter)
+  overload: Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand.WritePropertiesData*
+- uid: Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand.ApplyPropertiesDataValues(Terrasoft.Common.DataReader)
+  commentId: M:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand.ApplyPropertiesDataValues(Terrasoft.Common.DataReader)
+  id: ApplyPropertiesDataValues(Terrasoft.Common.DataReader)
+  parent: Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand
+  langs:
+  - csharp
+  - vb
+  name: ApplyPropertiesDataValues(DataReader)
+  nameWithType: AtfProcessUserTask_RunOSCommand.ApplyPropertiesDataValues(DataReader)
+  fullName: Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand.ApplyPropertiesDataValues(Terrasoft.Common.DataReader)
+  type: Method
+  assemblies:
+  - AtfTIDE
+  namespace: Terrasoft.Core.Process.Configuration
+  example: []
+  syntax:
+    content: protected override void ApplyPropertiesDataValues(DataReader reader)
+    parameters:
+    - id: reader
+      type: Terrasoft.Common.DataReader
+    content.vb: Protected Overrides Sub ApplyPropertiesDataValues(reader As DataReader)
+  overload: Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand.ApplyPropertiesDataValues*
+- uid: Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand.FileName
+  commentId: P:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand.FileName
+  id: FileName
+  parent: Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand
+  langs:
+  - csharp
+  - vb
+  name: FileName
+  nameWithType: AtfProcessUserTask_RunOSCommand.FileName
+  fullName: Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand.FileName
+  type: Property
+  assemblies:
+  - AtfTIDE
+  namespace: Terrasoft.Core.Process.Configuration
+  syntax:
+    content: public virtual string FileName { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Overridable Property FileName As String
+  overload: Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand.FileName*
+- uid: Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand.Arguments
+  commentId: P:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand.Arguments
+  id: Arguments
+  parent: Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand
+  langs:
+  - csharp
+  - vb
+  name: Arguments
+  nameWithType: AtfProcessUserTask_RunOSCommand.Arguments
+  fullName: Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand.Arguments
+  type: Property
+  assemblies:
+  - AtfTIDE
+  namespace: Terrasoft.Core.Process.Configuration
+  syntax:
+    content: public virtual string Arguments { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Overridable Property Arguments As String
+  overload: Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand.Arguments*
+- uid: Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand.WorkingDirectory
+  commentId: P:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand.WorkingDirectory
+  id: WorkingDirectory
+  parent: Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand
+  langs:
+  - csharp
+  - vb
+  name: WorkingDirectory
+  nameWithType: AtfProcessUserTask_RunOSCommand.WorkingDirectory
+  fullName: Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand.WorkingDirectory
+  type: Property
+  assemblies:
+  - AtfTIDE
+  namespace: Terrasoft.Core.Process.Configuration
+  syntax:
+    content: public virtual string WorkingDirectory { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Overridable Property WorkingDirectory As String
+  overload: Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand.WorkingDirectory*
+- uid: Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand.IsError
+  commentId: P:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand.IsError
+  id: IsError
+  parent: Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand
+  langs:
+  - csharp
+  - vb
+  name: IsError
+  nameWithType: AtfProcessUserTask_RunOSCommand.IsError
+  fullName: Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand.IsError
+  type: Property
+  assemblies:
+  - AtfTIDE
+  namespace: Terrasoft.Core.Process.Configuration
+  syntax:
+    content: public virtual bool IsError { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Overridable Property IsError As Boolean
+  overload: Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand.IsError*
+- uid: Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand.ErrorMessage
+  commentId: P:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand.ErrorMessage
+  id: ErrorMessage
+  parent: Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand
+  langs:
+  - csharp
+  - vb
+  name: ErrorMessage
+  nameWithType: AtfProcessUserTask_RunOSCommand.ErrorMessage
+  fullName: Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand.ErrorMessage
+  type: Property
+  assemblies:
+  - AtfTIDE
+  namespace: Terrasoft.Core.Process.Configuration
+  syntax:
+    content: public virtual string ErrorMessage { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Overridable Property ErrorMessage As String
+  overload: Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand.ErrorMessage*
+- uid: Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand.WaitForExit
+  commentId: P:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand.WaitForExit
+  id: WaitForExit
+  parent: Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand
+  langs:
+  - csharp
+  - vb
+  name: WaitForExit
+  nameWithType: AtfProcessUserTask_RunOSCommand.WaitForExit
+  fullName: Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand.WaitForExit
+  type: Property
+  assemblies:
+  - AtfTIDE
+  namespace: Terrasoft.Core.Process.Configuration
+  syntax:
+    content: public virtual bool WaitForExit { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Overridable Property WaitForExit As Boolean
+  overload: Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand.WaitForExit*
+references:
+- uid: Terrasoft.Core.Process.Configuration
+  commentId: N:Terrasoft.Core.Process.Configuration
+  isExternal: true
+  href: Terrasoft.html
+  name: Terrasoft.Core.Process.Configuration
+  nameWithType: Terrasoft.Core.Process.Configuration
+  fullName: Terrasoft.Core.Process.Configuration
+  spec.csharp:
+  - uid: Terrasoft
+    name: Terrasoft
+    isExternal: true
+    href: Terrasoft.html
+  - name: .
+  - uid: Terrasoft.Core
+    name: Core
+    isExternal: true
+    href: Terrasoft.Core.html
+  - name: .
+  - uid: Terrasoft.Core.Process
+    name: Process
+    isExternal: true
+    href: Terrasoft.Core.Process.html
+  - name: .
+  - uid: Terrasoft.Core.Process.Configuration
+    name: Configuration
+    isExternal: true
+    href: Terrasoft.Core.Process.Configuration.html
+  spec.vb:
+  - uid: Terrasoft
+    name: Terrasoft
+    isExternal: true
+    href: Terrasoft.html
+  - name: .
+  - uid: Terrasoft.Core
+    name: Core
+    isExternal: true
+    href: Terrasoft.Core.html
+  - name: .
+  - uid: Terrasoft.Core.Process
+    name: Process
+    isExternal: true
+    href: Terrasoft.Core.Process.html
+  - name: .
+  - uid: Terrasoft.Core.Process.Configuration
+    name: Configuration
+    isExternal: true
+    href: Terrasoft.Core.Process.Configuration.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand.InternalExecute*
+  commentId: Overload:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand.InternalExecute
+  isExternal: true
+  href: Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand.html#Terrasoft_Core_Process_Configuration_AtfProcessUserTask_RunOSCommand_InternalExecute_Terrasoft_Core_Process_ProcessExecutingContext_
+  name: InternalExecute
+  nameWithType: AtfProcessUserTask_RunOSCommand.InternalExecute
+  fullName: Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand.InternalExecute
+- uid: Terrasoft.Core.Process.ProcessExecutingContext
+  isExternal: true
+  name: ProcessExecutingContext
+  nameWithType: ProcessExecutingContext
+  fullName: Terrasoft.Core.Process.ProcessExecutingContext
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand.CompleteExecuting*
+  commentId: Overload:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand.CompleteExecuting
+  isExternal: true
+  href: Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand.html#Terrasoft_Core_Process_Configuration_AtfProcessUserTask_RunOSCommand_CompleteExecuting_System_Object___
+  name: CompleteExecuting
+  nameWithType: AtfProcessUserTask_RunOSCommand.CompleteExecuting
+  fullName: Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand.CompleteExecuting
+- uid: System.Object[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object[]
+  nameWithType: object[]
+  fullName: object[]
+  nameWithType.vb: Object()
+  fullName.vb: Object()
+  name.vb: Object()
+  spec.csharp:
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: (
+  - name: )
+- uid: Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand.CancelExecuting*
+  commentId: Overload:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand.CancelExecuting
+  isExternal: true
+  href: Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand.html#Terrasoft_Core_Process_Configuration_AtfProcessUserTask_RunOSCommand_CancelExecuting_System_Object___
+  name: CancelExecuting
+  nameWithType: AtfProcessUserTask_RunOSCommand.CancelExecuting
+  fullName: Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand.CancelExecuting
+- uid: Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand.GetExecutionData*
+  commentId: Overload:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand.GetExecutionData
+  isExternal: true
+  href: Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand.html#Terrasoft_Core_Process_Configuration_AtfProcessUserTask_RunOSCommand_GetExecutionData
+  name: GetExecutionData
+  nameWithType: AtfProcessUserTask_RunOSCommand.GetExecutionData
+  fullName: Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand.GetExecutionData
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand.GetNotificationData*
+  commentId: Overload:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand.GetNotificationData
+  isExternal: true
+  href: Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand.html#Terrasoft_Core_Process_Configuration_AtfProcessUserTask_RunOSCommand_GetNotificationData
+  name: GetNotificationData
+  nameWithType: AtfProcessUserTask_RunOSCommand.GetNotificationData
+  fullName: Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand.GetNotificationData
+- uid: Terrasoft.Core.Process.ProcessElementNotification
+  isExternal: true
+  name: ProcessElementNotification
+  nameWithType: ProcessElementNotification
+  fullName: Terrasoft.Core.Process.ProcessElementNotification
+- uid: Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand.#ctor*
+  commentId: Overload:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand.#ctor
+  isExternal: true
+  href: Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand.html#Terrasoft_Core_Process_Configuration_AtfProcessUserTask_RunOSCommand__ctor_Terrasoft_Core_UserConnection_
+  name: AtfProcessUserTask_RunOSCommand
+  nameWithType: AtfProcessUserTask_RunOSCommand.AtfProcessUserTask_RunOSCommand
+  fullName: Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand.AtfProcessUserTask_RunOSCommand
+  nameWithType.vb: AtfProcessUserTask_RunOSCommand.New
+  fullName.vb: Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand.New
+  name.vb: New
+- uid: Terrasoft.Core.UserConnection
+  isExternal: true
+  name: UserConnection
+  nameWithType: UserConnection
+  fullName: Terrasoft.Core.UserConnection
+- uid: Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand.WritePropertiesData*
+  commentId: Overload:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand.WritePropertiesData
+  isExternal: true
+  href: Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand.html#Terrasoft_Core_Process_Configuration_AtfProcessUserTask_RunOSCommand_WritePropertiesData_Terrasoft_Common_DataWriter_
+  name: WritePropertiesData
+  nameWithType: AtfProcessUserTask_RunOSCommand.WritePropertiesData
+  fullName: Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand.WritePropertiesData
+- uid: Terrasoft.Common.DataWriter
+  isExternal: true
+  name: DataWriter
+  nameWithType: DataWriter
+  fullName: Terrasoft.Common.DataWriter
+- uid: Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand.ApplyPropertiesDataValues*
+  commentId: Overload:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand.ApplyPropertiesDataValues
+  isExternal: true
+  href: Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand.html#Terrasoft_Core_Process_Configuration_AtfProcessUserTask_RunOSCommand_ApplyPropertiesDataValues_Terrasoft_Common_DataReader_
+  name: ApplyPropertiesDataValues
+  nameWithType: AtfProcessUserTask_RunOSCommand.ApplyPropertiesDataValues
+  fullName: Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand.ApplyPropertiesDataValues
+- uid: Terrasoft.Common.DataReader
+  isExternal: true
+  name: DataReader
+  nameWithType: DataReader
+  fullName: Terrasoft.Common.DataReader
+- uid: Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand.FileName*
+  commentId: Overload:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand.FileName
+  isExternal: true
+  href: Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand.html#Terrasoft_Core_Process_Configuration_AtfProcessUserTask_RunOSCommand_FileName
+  name: FileName
+  nameWithType: AtfProcessUserTask_RunOSCommand.FileName
+  fullName: Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand.FileName
+- uid: Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand.Arguments*
+  commentId: Overload:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand.Arguments
+  isExternal: true
+  href: Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand.html#Terrasoft_Core_Process_Configuration_AtfProcessUserTask_RunOSCommand_Arguments
+  name: Arguments
+  nameWithType: AtfProcessUserTask_RunOSCommand.Arguments
+  fullName: Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand.Arguments
+- uid: Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand.WorkingDirectory*
+  commentId: Overload:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand.WorkingDirectory
+  isExternal: true
+  href: Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand.html#Terrasoft_Core_Process_Configuration_AtfProcessUserTask_RunOSCommand_WorkingDirectory
+  name: WorkingDirectory
+  nameWithType: AtfProcessUserTask_RunOSCommand.WorkingDirectory
+  fullName: Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand.WorkingDirectory
+- uid: Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand.IsError*
+  commentId: Overload:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand.IsError
+  isExternal: true
+  href: Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand.html#Terrasoft_Core_Process_Configuration_AtfProcessUserTask_RunOSCommand_IsError
+  name: IsError
+  nameWithType: AtfProcessUserTask_RunOSCommand.IsError
+  fullName: Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand.IsError
+- uid: Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand.ErrorMessage*
+  commentId: Overload:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand.ErrorMessage
+  isExternal: true
+  href: Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand.html#Terrasoft_Core_Process_Configuration_AtfProcessUserTask_RunOSCommand_ErrorMessage
+  name: ErrorMessage
+  nameWithType: AtfProcessUserTask_RunOSCommand.ErrorMessage
+  fullName: Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand.ErrorMessage
+- uid: Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand.WaitForExit*
+  commentId: Overload:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand.WaitForExit
+  isExternal: true
+  href: Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand.html#Terrasoft_Core_Process_Configuration_AtfProcessUserTask_RunOSCommand_WaitForExit
+  name: WaitForExit
+  nameWithType: AtfProcessUserTask_RunOSCommand.WaitForExit
+  fullName: Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand.WaitForExit

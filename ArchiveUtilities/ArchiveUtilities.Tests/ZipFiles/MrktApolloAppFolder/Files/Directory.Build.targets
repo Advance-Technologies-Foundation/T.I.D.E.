@@ -1,0 +1,19 @@
+<Project>
+    <ItemGroup Condition="'$(PkgPath)' != ''">
+        <Compile Remove="$(PkgPath)/MrktApolloApp/Assemblies/**" />
+        <Compile Remove="$(PkgPath)/MrktApolloApp/Data/**" />
+        <Compile Remove="$(PkgPath)/MrktApolloApp/SqlScripts/**" />
+        <Compile Remove="$(PkgPath)/MrktApolloApp/Schemas\**" />
+        <Compile Remove="$(PkgPath)/MrktApolloApp/Resources/**" />
+        <EmbeddedResource Remove="$(PkgPath)/MrktApolloApp/Assemblies/**" />
+        <EmbeddedResource Remove="$(PkgPath)/MrktApolloApp/Data/**" />
+        <EmbeddedResource Remove="$(PkgPath)/MrktApolloApp/SqlScripts/**" />
+        <EmbeddedResource Remove="$(PkgPath)/MrktApolloApp/Schemas/**" />
+        <EmbeddedResource Remove="$(PkgPath)/MrktApolloApp/Resources/**" />
+        <None Remove="$(PkgPath)/MrktApolloApp/Assemblies/**" />
+        <None Remove="$(PkgPath)/MrktApolloApp/Data/**" />
+        <None Remove="$(PkgPath)/MrktApolloApp/SqlScripts/**" />
+        <None Remove="$(PkgPath)/MrktApolloApp/Schemas/**" />
+        <None Remove="$(PkgPath)/MrktApolloApp/Resources/**" />
+    </ItemGroup>
+</Project>

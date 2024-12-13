@@ -1,0 +1,62 @@
+﻿{
+  "MetaData": {
+    "Schema": {
+      "ManagerName": "ProcessUserTaskSchemaManager",
+      "UId": "15d4abc1-7e0d-4aa4-a336-5f16b73b8be1",
+      "A2": "AtfProcessUserTask_GitPush",
+      "A5": "107aae31-0c74-4422-acf4-c8d817b5e08d",
+      "B1": [],
+      "B2": [],
+      "B3": [],
+      "B6": "57902d1e-ea0c-4991-b367-992c12d68fb2",
+      "B8": "8.2.0.4183",
+      "FJ1": [
+        {
+          "BL1": "Terrasoft.Core.Process.ProcessSchemaParameter",
+          "UId": "a7fa52d2-34da-e13b-4c14-6afe4d402d75",
+          "A2": "Repository",
+          "A3": "15d4abc1-7e0d-4aa4-a336-5f16b73b8be1",
+          "A4": "15d4abc1-7e0d-4aa4-a336-5f16b73b8be1",
+          "L1": "b295071f-7ea9-4e62-8d1a-919bf3732ff2",
+          "L8": {},
+          "L6": true,
+          "L9": "d7d9045c-6aa7-4fce-99af-5f48f26fab3c",
+          "L12": 0
+        },
+        {
+          "BL1": "Terrasoft.Core.Process.ProcessSchemaParameter",
+          "UId": "40528499-bf82-0370-3bef-553b5f7b088c",
+          "A2": "IsError",
+          "A3": "15d4abc1-7e0d-4aa4-a336-5f16b73b8be1",
+          "A4": "15d4abc1-7e0d-4aa4-a336-5f16b73b8be1",
+          "L1": "90b65bf8-0ffc-4141-8779-2420877af907",
+          "L8": {},
+          "L13": true,
+          "L12": 1
+        },
+        {
+          "BL1": "Terrasoft.Core.Process.ProcessSchemaParameter",
+          "UId": "2f0f2d6a-b853-4d91-2b78-e8dec5730911",
+          "A2": "ErrorMessage",
+          "A3": "15d4abc1-7e0d-4aa4-a336-5f16b73b8be1",
+          "A4": "15d4abc1-7e0d-4aa4-a336-5f16b73b8be1",
+          "L1": "8b3f29bb-ea14-4ce5-a5c5-293a929b6ba2",
+          "L8": {},
+          "L12": 1
+        },
+        {
+          "BL1": "Terrasoft.Core.Process.ProcessSchemaParameter",
+          "UId": "246957ee-7fd4-beeb-959f-2058ab2c2fe0",
+          "A2": "Output",
+          "A3": "15d4abc1-7e0d-4aa4-a336-5f16b73b8be1",
+          "A4": "15d4abc1-7e0d-4aa4-a336-5f16b73b8be1",
+          "L1": "8b3f29bb-ea14-4ce5-a5c5-293a929b6ba2",
+          "L8": {},
+          "L12": 1
+        }
+      ],
+      "FK12": "#839DC3",
+      "FK16": true
+    }
+  }
+}

@@ -1,0 +1,554 @@
+{
+  "source_base_path": "C:/Projects/Workspaces/TIDE/documentation",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Resource",
+      "output": {
+        "resource": {
+          "relative_path": "index.json"
+        }
+      }
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "BusinessProcess/AtfProcess_LoadWorkspaceFromGit.md",
+      "output": {
+        ".html": {
+          "relative_path": "BusinessProcess/AtfProcess_LoadWorkspaceFromGit.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "UserTask/AtfProcessUserTask_CloneRepository.md",
+      "output": {
+        ".html": {
+          "relative_path": "UserTask/AtfProcessUserTask_CloneRepository.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AtfTIDE.Commands.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AtfTIDE.Commands.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AtfTIDE.ConsoleGit.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AtfTIDE.ConsoleGit.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AtfTIDE.ConsoleGitArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AtfTIDE.ConsoleGitArgs.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AtfTIDE.ConsoleGitResult.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AtfTIDE.ConsoleGitResult.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AtfTIDE.HelperFunctions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AtfTIDE.HelperFunctions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AtfTIDE.IConsoleGit.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AtfTIDE.IConsoleGit.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AtfTIDE.RepositoryInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AtfTIDE.RepositoryInfo.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AtfTIDE.WebServices.Tide.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AtfTIDE.WebServices.Tide.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AtfTIDE.WebServices.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AtfTIDE.WebServices.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AtfTIDE.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AtfTIDE.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Terrasoft.Core.Process.Configuration.AtfProcessUserTask_CloneRepository.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Terrasoft.Core.Process.Configuration.AtfProcessUserTask_CloneRepository.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Terrasoft.Core.Process.Configuration.AtfProcessUserTask_DownloadPackages.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Terrasoft.Core.Process.Configuration.AtfProcessUserTask_DownloadPackages.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Terrasoft.Core.Process.Configuration.AtfProcessUserTask_GitAddAll.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Terrasoft.Core.Process.Configuration.AtfProcessUserTask_GitAddAll.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Terrasoft.Core.Process.Configuration.AtfProcessUserTask_GitCommit.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Terrasoft.Core.Process.Configuration.AtfProcessUserTask_GitCommit.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Terrasoft.Core.Process.Configuration.AtfProcessUserTask_GitPush.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Terrasoft.Core.Process.Configuration.AtfProcessUserTask_GitPush.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Terrasoft.Core.Process.Configuration.AtfProcessUserTask_RunOSCommand.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Terrasoft.Core.Process.Configuration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Terrasoft.Core.Process.Configuration.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html"
+        },
+        ".json": {
+          "relative_path": "api/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "consolegit/ConsoleGit.CommandLineArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "consolegit/ConsoleGit.CommandLineArgs.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "consolegit/ConsoleGit.Commands.AddAllCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "consolegit/ConsoleGit.Commands.AddAllCommand.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "consolegit/ConsoleGit.Commands.BaseRepositoryCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "consolegit/ConsoleGit.Commands.BaseRepositoryCommand.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "consolegit/ConsoleGit.Commands.CheckoutCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "consolegit/ConsoleGit.Commands.CheckoutCommand.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "consolegit/ConsoleGit.Commands.CloneCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "consolegit/ConsoleGit.Commands.CloneCommand.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "consolegit/ConsoleGit.Commands.CommitCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "consolegit/ConsoleGit.Commands.CommitCommand.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "consolegit/ConsoleGit.Commands.DownloadPackagesCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "consolegit/ConsoleGit.Commands.DownloadPackagesCommand.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "consolegit/ConsoleGit.Commands.ErrorCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "consolegit/ConsoleGit.Commands.ErrorCommand.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "consolegit/ConsoleGit.Commands.ICommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "consolegit/ConsoleGit.Commands.ICommand.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "consolegit/ConsoleGit.Commands.PullCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "consolegit/ConsoleGit.Commands.PullCommand.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "consolegit/ConsoleGit.Commands.PushCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "consolegit/ConsoleGit.Commands.PushCommand.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "consolegit/ConsoleGit.Commands.yml",
+      "output": {
+        ".html": {
+          "relative_path": "consolegit/ConsoleGit.Commands.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "consolegit/ConsoleGit.ConfiguredHttpClient.MyHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "consolegit/ConsoleGit.ConfiguredHttpClient.MyHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "consolegit/ConsoleGit.ConfiguredHttpClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "consolegit/ConsoleGit.ConfiguredHttpClient.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "consolegit/ConsoleGit.Dto.AppJsonSerializerContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "consolegit/ConsoleGit.Dto.AppJsonSerializerContext.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "consolegit/ConsoleGit.Dto.WorkspaceSettings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "consolegit/ConsoleGit.Dto.WorkspaceSettings.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "consolegit/ConsoleGit.Dto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "consolegit/ConsoleGit.Dto.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "consolegit/ConsoleGit.yml",
+      "output": {
+        ".html": {
+          "relative_path": "consolegit/ConsoleGit.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "consolegit/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "consolegit/toc.html"
+        },
+        ".json": {
+          "relative_path": "consolegit/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/getting-started.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/getting-started.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/introduction.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/introduction.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "docs/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/toc.html"
+        },
+        ".json": {
+          "relative_path": "docs/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "gitabstractions/GitAbstraction.ExToErrorParser.yml",
+      "output": {
+        ".html": {
+          "relative_path": "gitabstractions/GitAbstraction.ExToErrorParser.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "gitabstractions/GitAbstraction.GitRepository.yml",
+      "output": {
+        ".html": {
+          "relative_path": "gitabstractions/GitAbstraction.GitRepository.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "gitabstractions/GitAbstraction.yml",
+      "output": {
+        ".html": {
+          "relative_path": "gitabstractions/GitAbstraction.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "gitabstractions/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "gitabstractions/toc.html"
+        },
+        ".json": {
+          "relative_path": "gitabstractions/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/BusinessProcess/AtfProcess_LoadWorkspaceFromGit.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/BusinessProcess/AtfProcess_LoadWorkspaceFromGit.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/UserTask/AtfProcessUserTask_CloneRepository.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/UserTask/AtfProcessUserTask_CloneRepository.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tide.ico",
+      "output": {
+        "resource": {
+          "relative_path": "images/tide.ico"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tide.svg",
+      "output": {
+        "resource": {
+          "relative_path": "images/tide.svg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html"
+        },
+        ".json": {
+          "relative_path": "toc.json"
+        }
+      },
+      "version": ""
+    }
+  ],
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}

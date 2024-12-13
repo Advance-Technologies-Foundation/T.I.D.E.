@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="en-US">
+	<Group Type="String">
+		<Items>
+			<Item Name="Caption" Value="Apollo department" />
+			<Item Name="Columns.ApolloCode.Caption" Value="Apollo department code" />
+			<Item Name="Columns.Department.Caption" Value="Creatio Department" />
+			<Item Name="Columns.Name.Caption" Value="Name" />
+		</Items>
+	</Group>
+</Resources>

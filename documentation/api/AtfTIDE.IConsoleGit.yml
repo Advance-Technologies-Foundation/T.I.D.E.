@@ -1,0 +1,99 @@
+### YamlMime:ManagedReference
+items:
+- uid: AtfTIDE.IConsoleGit
+  commentId: T:AtfTIDE.IConsoleGit
+  id: IConsoleGit
+  parent: AtfTIDE
+  children:
+  - AtfTIDE.IConsoleGit.Execute(AtfTIDE.ConsoleGitArgs)
+  langs:
+  - csharp
+  - vb
+  name: IConsoleGit
+  nameWithType: IConsoleGit
+  fullName: AtfTIDE.IConsoleGit
+  type: Interface
+  source:
+    remote:
+      path: packages/AtfTIDE/Files/cs/ConsoleGit.cs
+      branch: feature/my-feature
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: IConsoleGit
+    path: ../packages/AtfTIDE/Files/cs/ConsoleGit.cs
+    startLine: 34
+  assemblies:
+  - AtfTIDE
+  namespace: AtfTIDE
+  summary: Provides git operations through a console application wrapper
+  remarks: >-
+    <p><strong></strong></p><ul><li>Executes git commands through environment variables</li><li>Handles process management and timeouts</li><li>Provides error handling and output capturing</li></ul>
+
+    <p><strong></strong></p><ul><li>Implementations must be thread-safe</li><li>Must handle concurrent git operations</li></ul>
+
+    <p><strong></strong></p><ul><li>Must capture and return git errors</li><li>Must handle process timeouts</li><li>Must clean up resources properly</li></ul>
+  example: []
+  syntax:
+    content: public interface IConsoleGit
+    content.vb: Public Interface IConsoleGit
+- uid: AtfTIDE.IConsoleGit.Execute(AtfTIDE.ConsoleGitArgs)
+  commentId: M:AtfTIDE.IConsoleGit.Execute(AtfTIDE.ConsoleGitArgs)
+  id: Execute(AtfTIDE.ConsoleGitArgs)
+  parent: AtfTIDE.IConsoleGit
+  langs:
+  - csharp
+  - vb
+  name: Execute(ConsoleGitArgs)
+  nameWithType: IConsoleGit.Execute(ConsoleGitArgs)
+  fullName: AtfTIDE.IConsoleGit.Execute(AtfTIDE.ConsoleGitArgs)
+  type: Method
+  source:
+    remote:
+      path: packages/AtfTIDE/Files/cs/ConsoleGit.cs
+      branch: feature/my-feature
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: Execute
+    path: ../packages/AtfTIDE/Files/cs/ConsoleGit.cs
+    startLine: 43
+  assemblies:
+  - AtfTIDE
+  namespace: AtfTIDE
+  summary: Executes a git command with the specified arguments
+  example: []
+  syntax:
+    content: ConsoleGitResult Execute(ConsoleGitArgs args)
+    parameters:
+    - id: args
+      type: AtfTIDE.ConsoleGitArgs
+      description: Git command arguments and configuration
+    return:
+      type: AtfTIDE.ConsoleGitResult
+      description: Result containing exit code and command output or error message
+    content.vb: Function Execute(args As ConsoleGitArgs) As ConsoleGitResult
+  overload: AtfTIDE.IConsoleGit.Execute*
+references:
+- uid: AtfTIDE
+  commentId: N:AtfTIDE
+  href: AtfTIDE.html
+  name: AtfTIDE
+  nameWithType: AtfTIDE
+  fullName: AtfTIDE
+- uid: AtfTIDE.IConsoleGit.Execute*
+  commentId: Overload:AtfTIDE.IConsoleGit.Execute
+  href: AtfTIDE.IConsoleGit.html#AtfTIDE_IConsoleGit_Execute_AtfTIDE_ConsoleGitArgs_
+  name: Execute
+  nameWithType: IConsoleGit.Execute
+  fullName: AtfTIDE.IConsoleGit.Execute
+- uid: AtfTIDE.ConsoleGitArgs
+  commentId: T:AtfTIDE.ConsoleGitArgs
+  parent: AtfTIDE
+  href: AtfTIDE.ConsoleGitArgs.html
+  name: ConsoleGitArgs
+  nameWithType: ConsoleGitArgs
+  fullName: AtfTIDE.ConsoleGitArgs
+- uid: AtfTIDE.ConsoleGitResult
+  commentId: T:AtfTIDE.ConsoleGitResult
+  parent: AtfTIDE
+  href: AtfTIDE.ConsoleGitResult.html
+  name: ConsoleGitResult
+  nameWithType: ConsoleGitResult
+  fullName: AtfTIDE.ConsoleGitResult

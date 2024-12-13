@@ -1,0 +1,110 @@
+### YamlMime:ManagedReference
+items:
+- uid: ConsoleGit.Commands
+  commentId: N:ConsoleGit.Commands
+  id: ConsoleGit.Commands
+  children:
+  - ConsoleGit.Commands.AddAllCommand
+  - ConsoleGit.Commands.BaseRepositoryCommand
+  - ConsoleGit.Commands.CheckoutCommand
+  - ConsoleGit.Commands.CloneCommand
+  - ConsoleGit.Commands.CommitCommand
+  - ConsoleGit.Commands.DownloadPackagesCommand
+  - ConsoleGit.Commands.ErrorCommand
+  - ConsoleGit.Commands.ICommand
+  - ConsoleGit.Commands.PullCommand
+  - ConsoleGit.Commands.PushCommand
+  langs:
+  - csharp
+  - vb
+  name: ConsoleGit.Commands
+  nameWithType: ConsoleGit.Commands
+  fullName: ConsoleGit.Commands
+  type: Namespace
+  assemblies:
+  - ConsoleGit
+references:
+- uid: ConsoleGit.Commands.AddAllCommand
+  commentId: T:ConsoleGit.Commands.AddAllCommand
+  href: ConsoleGit.Commands.AddAllCommand.html
+  name: AddAllCommand
+  nameWithType: AddAllCommand
+  fullName: ConsoleGit.Commands.AddAllCommand
+- uid: ConsoleGit.Commands.ICommand
+  commentId: T:ConsoleGit.Commands.ICommand
+  parent: ConsoleGit.Commands
+  href: ConsoleGit.Commands.ICommand.html
+  name: ICommand
+  nameWithType: ICommand
+  fullName: ConsoleGit.Commands.ICommand
+- uid: ConsoleGit.Commands.BaseRepositoryCommand
+  commentId: T:ConsoleGit.Commands.BaseRepositoryCommand
+  parent: ConsoleGit.Commands
+  href: ConsoleGit.Commands.BaseRepositoryCommand.html
+  name: BaseRepositoryCommand
+  nameWithType: BaseRepositoryCommand
+  fullName: ConsoleGit.Commands.BaseRepositoryCommand
+- uid: ConsoleGit.Commands.CheckoutCommand
+  commentId: T:ConsoleGit.Commands.CheckoutCommand
+  href: ConsoleGit.Commands.CheckoutCommand.html
+  name: CheckoutCommand
+  nameWithType: CheckoutCommand
+  fullName: ConsoleGit.Commands.CheckoutCommand
+- uid: ConsoleGit.Commands.CloneCommand
+  commentId: T:ConsoleGit.Commands.CloneCommand
+  href: ConsoleGit.Commands.CloneCommand.html
+  name: CloneCommand
+  nameWithType: CloneCommand
+  fullName: ConsoleGit.Commands.CloneCommand
+- uid: ConsoleGit.Commands.CommitCommand
+  commentId: T:ConsoleGit.Commands.CommitCommand
+  href: ConsoleGit.Commands.CommitCommand.html
+  name: CommitCommand
+  nameWithType: CommitCommand
+  fullName: ConsoleGit.Commands.CommitCommand
+- uid: ConsoleGit.Commands.DownloadPackagesCommand
+  commentId: T:ConsoleGit.Commands.DownloadPackagesCommand
+  href: ConsoleGit.Commands.DownloadPackagesCommand.html
+  name: DownloadPackagesCommand
+  nameWithType: DownloadPackagesCommand
+  fullName: ConsoleGit.Commands.DownloadPackagesCommand
+- uid: ConsoleGit.Commands.ErrorCommand
+  commentId: T:ConsoleGit.Commands.ErrorCommand
+  href: ConsoleGit.Commands.ErrorCommand.html
+  name: ErrorCommand
+  nameWithType: ErrorCommand
+  fullName: ConsoleGit.Commands.ErrorCommand
+- uid: ConsoleGit.Commands.PullCommand
+  commentId: T:ConsoleGit.Commands.PullCommand
+  href: ConsoleGit.Commands.PullCommand.html
+  name: PullCommand
+  nameWithType: PullCommand
+  fullName: ConsoleGit.Commands.PullCommand
+- uid: ConsoleGit.Commands.PushCommand
+  commentId: T:ConsoleGit.Commands.PushCommand
+  href: ConsoleGit.Commands.PushCommand.html
+  name: PushCommand
+  nameWithType: PushCommand
+  fullName: ConsoleGit.Commands.PushCommand
+- uid: ConsoleGit.Commands
+  commentId: N:ConsoleGit.Commands
+  href: ConsoleGit.html
+  name: ConsoleGit.Commands
+  nameWithType: ConsoleGit.Commands
+  fullName: ConsoleGit.Commands
+  spec.csharp:
+  - uid: ConsoleGit
+    name: ConsoleGit
+    href: ConsoleGit.html
+  - name: .
+  - uid: ConsoleGit.Commands
+    name: Commands
+    href: ConsoleGit.Commands.html
+  spec.vb:
+  - uid: ConsoleGit
+    name: ConsoleGit
+    href: ConsoleGit.html
+  - name: .
+  - uid: ConsoleGit.Commands
+    name: Commands
+    href: ConsoleGit.Commands.html

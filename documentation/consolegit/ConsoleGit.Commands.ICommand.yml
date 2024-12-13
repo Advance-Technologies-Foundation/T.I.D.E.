@@ -1,0 +1,186 @@
+### YamlMime:ManagedReference
+items:
+- uid: ConsoleGit.Commands.ICommand
+  commentId: T:ConsoleGit.Commands.ICommand
+  id: ICommand
+  parent: ConsoleGit.Commands
+  children:
+  - ConsoleGit.Commands.ICommand.Execute
+  langs:
+  - csharp
+  - vb
+  name: ICommand
+  nameWithType: ICommand
+  fullName: ConsoleGit.Commands.ICommand
+  type: Interface
+  source:
+    remote:
+      path: ConsoleGit/ConsoleGit/Commands/BaseRepositoryCommand.cs
+      branch: feature/my-feature
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: ICommand
+    path: ../ConsoleGit/ConsoleGit/Commands/BaseRepositoryCommand.cs
+    startLine: 6
+  assemblies:
+  - ConsoleGit
+  namespace: ConsoleGit.Commands
+  syntax:
+    content: 'public interface ICommand : IDisposable'
+    content.vb: Public Interface ICommand Inherits IDisposable
+  inheritedMembers:
+  - System.IDisposable.Dispose
+- uid: ConsoleGit.Commands.ICommand.Execute
+  commentId: M:ConsoleGit.Commands.ICommand.Execute
+  id: Execute
+  parent: ConsoleGit.Commands.ICommand
+  langs:
+  - csharp
+  - vb
+  name: Execute()
+  nameWithType: ICommand.Execute()
+  fullName: ConsoleGit.Commands.ICommand.Execute()
+  type: Method
+  source:
+    remote:
+      path: ConsoleGit/ConsoleGit/Commands/BaseRepositoryCommand.cs
+      branch: feature/my-feature
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: Execute
+    path: ../ConsoleGit/ConsoleGit/Commands/BaseRepositoryCommand.cs
+    startLine: 10
+  assemblies:
+  - ConsoleGit
+  namespace: ConsoleGit.Commands
+  syntax:
+    content: ErrorOr<Success> Execute()
+    return:
+      type: ErrorOr.ErrorOr{ErrorOr.Success}
+    content.vb: Function Execute() As ErrorOr(Of Success)
+  overload: ConsoleGit.Commands.ICommand.Execute*
+references:
+- uid: ConsoleGit.Commands
+  commentId: N:ConsoleGit.Commands
+  href: ConsoleGit.html
+  name: ConsoleGit.Commands
+  nameWithType: ConsoleGit.Commands
+  fullName: ConsoleGit.Commands
+  spec.csharp:
+  - uid: ConsoleGit
+    name: ConsoleGit
+    href: ConsoleGit.html
+  - name: .
+  - uid: ConsoleGit.Commands
+    name: Commands
+    href: ConsoleGit.Commands.html
+  spec.vb:
+  - uid: ConsoleGit
+    name: ConsoleGit
+    href: ConsoleGit.html
+  - name: .
+  - uid: ConsoleGit.Commands
+    name: Commands
+    href: ConsoleGit.Commands.html
+- uid: System.IDisposable.Dispose
+  commentId: M:System.IDisposable.Dispose
+  parent: System.IDisposable
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  name: Dispose()
+  nameWithType: IDisposable.Dispose()
+  fullName: System.IDisposable.Dispose()
+  spec.csharp:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: ConsoleGit.Commands.ICommand.Execute*
+  commentId: Overload:ConsoleGit.Commands.ICommand.Execute
+  href: ConsoleGit.Commands.ICommand.html#ConsoleGit_Commands_ICommand_Execute
+  name: Execute
+  nameWithType: ICommand.Execute
+  fullName: ConsoleGit.Commands.ICommand.Execute
+- uid: ErrorOr.ErrorOr{ErrorOr.Success}
+  commentId: T:ErrorOr.ErrorOr{ErrorOr.Success}
+  parent: ErrorOr
+  definition: ErrorOr.ErrorOr`1
+  name: ErrorOr<Success>
+  nameWithType: ErrorOr<Success>
+  fullName: ErrorOr.ErrorOr<ErrorOr.Success>
+  nameWithType.vb: ErrorOr(Of Success)
+  fullName.vb: ErrorOr.ErrorOr(Of ErrorOr.Success)
+  name.vb: ErrorOr(Of Success)
+  spec.csharp:
+  - uid: ErrorOr.ErrorOr`1
+    name: ErrorOr
+    isExternal: true
+  - name: <
+  - uid: ErrorOr.Success
+    name: Success
+    isExternal: true
+  - name: '>'
+  spec.vb:
+  - uid: ErrorOr.ErrorOr`1
+    name: ErrorOr
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: ErrorOr.Success
+    name: Success
+    isExternal: true
+  - name: )
+- uid: ErrorOr.ErrorOr`1
+  commentId: T:ErrorOr.ErrorOr`1
+  isExternal: true
+  name: ErrorOr<TValue>
+  nameWithType: ErrorOr<TValue>
+  fullName: ErrorOr.ErrorOr<TValue>
+  nameWithType.vb: ErrorOr(Of TValue)
+  fullName.vb: ErrorOr.ErrorOr(Of TValue)
+  name.vb: ErrorOr(Of TValue)
+  spec.csharp:
+  - uid: ErrorOr.ErrorOr`1
+    name: ErrorOr
+    isExternal: true
+  - name: <
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: ErrorOr.ErrorOr`1
+    name: ErrorOr
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TValue
+  - name: )
+- uid: ErrorOr
+  commentId: N:ErrorOr
+  isExternal: true
+  name: ErrorOr
+  nameWithType: ErrorOr
+  fullName: ErrorOr

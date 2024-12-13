@@ -1,0 +1,19 @@
+﻿{
+  "MetaData": {
+    "Schema": {
+      "ManagerName": "ProcessUserTaskSchemaManager",
+      "UId": "a3157d19-e52d-4893-86c2-42d0beb26f13",
+      "A2": "MrktProcessUserTask_RestartApolloApp",
+      "A5": "df98ce1a-cc34-4cc4-a3dc-909f22a0d5ef",
+      "B1": [],
+      "B2": [],
+      "B3": [],
+      "B6": "d40c3488-7718-4ddc-9173-949868871326",
+      "B8": "8.1.1.3492",
+      "FJ1": [],
+      "FK7": true,
+      "FK12": "#839DC3",
+      "FK16": true
+    }
+  }
+}

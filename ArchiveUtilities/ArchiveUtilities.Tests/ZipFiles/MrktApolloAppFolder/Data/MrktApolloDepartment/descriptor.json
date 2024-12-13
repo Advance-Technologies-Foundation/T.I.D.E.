@@ -1,0 +1,42 @@
+﻿{
+  "Descriptor": {
+    "UId": "45dabf62-911a-b63b-0531-6bab53572efd",
+    "Name": "MrktApolloDepartment",
+    "ModifiedOnUtc": "\/Date(1704270370000)\/",
+    "InstallType": 0,
+    "Schema": {
+      "UId": "a61f2ae0-cd61-49fe-8d32-f4c231d9a6ae",
+      "Name": "MrktApolloDepartment"
+    },
+    "Columns": [
+      {
+        "ColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+        "IsForceUpdate": false,
+        "IsKey": true,
+        "ColumnName": "Id",
+        "DataTypeValueUId": "23018567-a13c-4320-8687-fd6f9e3699bd"
+      },
+      {
+        "ColumnUId": "c0f8a4bd-6991-ac27-8646-a59f13636600",
+        "IsForceUpdate": false,
+        "IsKey": false,
+        "ColumnName": "ApolloCode",
+        "DataTypeValueUId": "ddb3a1ee-07e8-4d62-b7a9-d0e618b00fbd"
+      },
+      {
+        "ColumnUId": "9bd30b29-3a2d-bd2a-93b1-cdf16f8a0196",
+        "IsForceUpdate": false,
+        "IsKey": false,
+        "ColumnName": "Department",
+        "DataTypeValueUId": "b295071f-7ea9-4e62-8d1a-919bf3732ff2"
+      },
+      {
+        "ColumnUId": "77fda91c-6e82-4cb6-0b1a-56694134748c",
+        "IsForceUpdate": false,
+        "IsKey": false,
+        "ColumnName": "Name",
+        "DataTypeValueUId": "ddb3a1ee-07e8-4d62-b7a9-d0e618b00fbd"
+      }
+    ]
+  }
+}
