@@ -301,6 +301,7 @@ namespace AtfTIDE {
 		Pull,
 		Commit,
 		DownloadPackages,
-		Checkout
+		Checkout,
+		GetBranches,
 	}
 }

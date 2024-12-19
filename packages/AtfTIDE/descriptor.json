@@ -7,6 +7,7 @@
     "ModifiedOnUtc": "\/Date(1732847074000)\/",
     "Maintainer": "ATF",
     "ProjectPath": "Files/AtfTIDE.csproj",
+    "Description": "#OriginalMaintainer:ATF",
     "DependsOn": [
       {
         "UId": "012e2e14-082b-ac2b-da5a-2fc87bad41d4",

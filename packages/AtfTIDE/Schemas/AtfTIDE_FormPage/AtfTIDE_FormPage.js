@@ -3,6 +3,14 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 		viewConfigDiff: /**SCHEMA_VIEW_CONFIG_DIFF*/[
 			{
 				"operation": "merge",
+				"name": "SaveButton",
+				"values": {
+					"size": "large",
+					"iconPosition": "only-text"
+				}
+			},
+			{
+				"operation": "merge",
 				"name": "CardToggleContainer",
 				"values": {
 					"visible": true,
@@ -564,7 +572,7 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 						"right": "none"
 					},
 					"fitContent": true,
-					"visible": false,
+					"visible": true,
 					"alignItems": "stretch"
 				},
 				"parentName": "GeneralInfoTab",
@@ -747,6 +755,69 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 				"parentName": "FlexContainer_rlolpw6",
 				"propertyName": "items",
 				"index": 3
+			},
+			{
+				"operation": "insert",
+				"name": "GridContainer_7bizhk0",
+				"values": {
+					"type": "crt.GridContainer",
+					"columns": [
+						"minmax(32px, 1fr)"
+					],
+					"rows": "minmax(max-content, 32px)",
+					"gap": {
+						"columnGap": "large",
+						"rowGap": "none"
+					},
+					"items": [],
+					"fitContent": true,
+					"visible": true,
+					"color": "transparent",
+					"borderRadius": "none",
+					"padding": {
+						"top": "none",
+						"right": "none",
+						"bottom": "none",
+						"left": "medium"
+					},
+					"alignItems": "stretch"
+				},
+				"parentName": "FlexContainer_rlolpw6",
+				"propertyName": "items",
+				"index": 4
+			},
+			{
+				"operation": "insert",
+				"name": "Button_SyncBranchesWithRepo",
+				"values": {
+					"type": "crt.Button",
+					"caption": "#ResourceString(Button_SyncBranchesWithRepo_caption)#",
+					"color": "accent",
+					"disabled": false,
+					"size": "large",
+					"iconPosition": "only-text",
+					"visible": true,
+					"layoutConfig": {
+						"column": 1,
+						"row": 1,
+						"colSpan": 1,
+						"rowSpan": 1
+					},
+					"clicked": {
+						"request": "crt.RunBusinessProcessRequest",
+						"params": {
+							"processName": "ATFSyncronizeBranchesWithRepo",
+							"processRunType": "ForTheSelectedPage",
+							"saveAtProcessStart": true,
+							"showNotification": true,
+							"recordIdProcessParameterName": "RepositoryId"
+						}
+					},
+					"clickMode": "default"
+				},
+				"parentName": "GridContainer_7bizhk0",
+				"propertyName": "items",
+				"index": 0
 			},
 			{
 				"operation": "insert",

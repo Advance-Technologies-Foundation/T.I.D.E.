@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="en-US">
+	<Group Type="String">
+		<Items>
+			<Item Name="BaseElements.ConditionalSequenceFlow2.Caption" Value="On error" />
+			<Item Name="BaseElements.DeleteDataUserTask1.Caption" Value="Delete branches" />
+			<Item Name="BaseElements.DeleteDataUserTask1.Parameters.ConsiderTimeInFilter.Caption" Value="Consider time in the filter" />
+			<Item Name="BaseElements.DeleteDataUserTask1.Parameters.ConsiderTimeInFilter.DisplayValue" Value="true" />
+			<Item Name="BaseElements.DeleteDataUserTask1.Parameters.DataSourceFilters.Caption" Value="Data source filters" />
+			<Item Name="BaseElements.DeleteDataUserTask1.Parameters.EntitySchemaId.Caption" Value="Object" />
+			<Item Name="BaseElements.DeleteDataUserTask1.Parameters.IsMatchConditions.Caption" Value="Object must meet the following conditions" />
+			<Item Name="BaseElements.SubProcess1.Caption" Value="Create branch" />
+			<Item Name="BaseElements.SubProcess1.Parameters.CompletedIterationsCount.Caption" Value="Number of completed instances" />
+			<Item Name="BaseElements.SubProcess1.Parameters.InputRecordCollection.BranchName.Caption" Value="BranchName" />
+			<Item Name="BaseElements.SubProcess1.Parameters.InputRecordCollection.BranchName.DisplayValue" Value="[#Get branches.Branches:Name#]" />
+			<Item Name="BaseElements.SubProcess1.Parameters.InputRecordCollection.Caption" Value="Input record collection" />
+			<Item Name="BaseElements.SubProcess1.Parameters.InputRecordCollection.DisplayValue" Value="[#Get branches.Branches#]" />
+			<Item Name="BaseElements.SubProcess1.Parameters.InputRecordCollection.Repository.Caption" Value="Repository" />
+			<Item Name="BaseElements.SubProcess1.Parameters.InputRecordCollection.Repository.DisplayValue" Value="[#Repository#]" />
+			<Item Name="BaseElements.SubProcess1.Parameters.OutputRecordCollection.Caption" Value="Output record collection" />
+			<Item Name="BaseElements.SubProcess1.Parameters.TerminatedIterationsCount.Caption" Value="Number of terminated instances" />
+			<Item Name="BaseElements.SubProcess1.Parameters.TotalIterationsCount.Caption" Value="Total number of instances" />
+			<Item Name="BaseElements.UserTask1.Caption" Value="Get branches" />
+			<Item Name="BaseElements.UserTask1.Parameters.Branches.Caption" Value="Branches" />
+			<Item Name="BaseElements.UserTask1.Parameters.Branches.Name.Caption" Value="Name" />
+			<Item Name="BaseElements.UserTask1.Parameters.ErrorMessage.Caption" Value="Error message" />
+			<Item Name="BaseElements.UserTask1.Parameters.IsError.Caption" Value="Is error" />
+			<Item Name="BaseElements.UserTask1.Parameters.Repository.Caption" Value="Repository" />
+			<Item Name="BaseElements.UserTask1.Parameters.Repository.DisplayValue" Value="[#Repository#]" />
+			<Item Name="Caption" Value="ATFSyncronizeBranchesWithRepo" />
+			<Item Name="LaneSets.LaneSet1.Caption" Value="LaneSet 1" />
+			<Item Name="LaneSets.LaneSet1.Lanes.Lane1.Caption" Value="Lane 1" />
+			<Item Name="NotificationCaption.Caption" Value="Process instance caption" />
+			<Item Name="NotificationCaption.DisplayValue" Value="[#Process name#]" />
+			<Item Name="Parameters.RepositoryId.Caption" Value="Repository" />
+		</Items>
+	</Group>
+</Resources>

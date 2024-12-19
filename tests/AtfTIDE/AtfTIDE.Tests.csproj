@@ -28,8 +28,8 @@
         <Reference Include="Microsoft.Extensions.Http">
             <HintPath>..\..\.application\net-framework\core-bin\Microsoft.Extensions.Http.dll</HintPath>
         </Reference>
-        <Reference Include="System.ComponentModel.DataAnnotations"/>
-        <Reference Include="System.Web"/>
+        <Reference Include="System.ComponentModel.DataAnnotations" />
+        <Reference Include="System.Web" />
         <Reference Include="Terrasoft.Configuration">
             <HintPath>$(TestCoreLibPath)\..\bin\Terrasoft.Configuration.dll</HintPath>
         </Reference>
@@ -40,32 +40,33 @@
             <PrivateAssets>all</PrivateAssets>
             <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
         </PackageReference>
-        <PackageReference Include="FluentAssertions" Version="6.12.0"/>
+        <PackageReference Include="FluentAssertions" Version="6.12.0" />
         <!--        <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="8.0.0"/>-->
-        <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="8.0.0"/>
+        <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="8.0.0" />
         <PackageReference Include="NSubstitute.Analyzers.CSharp" Version="1.0.17">
             <PrivateAssets>all</PrivateAssets>
             <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
         </PackageReference>
-        <PackageReference Include="NUnit" Version="3.13.3"/>
-        <PackageReference Include="NUnit3TestAdapter" Version="4.6.0"/>
-        <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.11.1"/>
-        <PackageReference Include="Castle.Core" version="5.1.1"/>
-        <PackageReference Include="Ninject" version="3.3.6"/>
-        <PackageReference Include="NSubstitute" version="3.1.0"/>
-        <PackageReference Include="System.Net.Http.Json" Version="8.0.1"/>
-        <PackageReference Include="System.Runtime" version="4.3.1"/>
-        <PackageReference Include="System.Runtime.CompilerServices.Unsafe" Version="6.0.0"/>
-        <PackageReference Include="System.Threading.Tasks.Extensions" version="4.5.4"/>
-        <PackageReference Include="System.Collections.Immutable" version="8.0.0"/>
-        <PackageReference Include="RichardSzalay.MockHttp" Version="7.0.0"/>
+        <PackageReference Include="NUnit" Version="3.13.3" />
+        <PackageReference Include="NUnit3TestAdapter" Version="4.6.0" />
+        <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.11.1" />
+        <PackageReference Include="Castle.Core" version="5.1.1" />
+        <PackageReference Include="Ninject" version="3.3.6" />
+        <PackageReference Include="NSubstitute" version="3.1.0" />
+        <PackageReference Include="System.Net.Http.Json" Version="8.0.1" />
+        <PackageReference Include="System.Runtime" version="4.3.1" />
+        <PackageReference Include="System.Runtime.CompilerServices.Unsafe" Version="6.0.0" />
+        <PackageReference Include="System.Threading.Tasks.Extensions" version="4.5.4" />
+        <PackageReference Include="System.Collections.Immutable" version="8.0.0" />
+        <PackageReference Include="RichardSzalay.MockHttp" Version="7.0.0" />
         <Reference Include="*">
             <HintPath>.\Libs\Terrasoft.TestFramework.dll</HintPath>
         </Reference>
         <Reference Include="*">
             <HintPath>.\Libs\UnitTest.dll</HintPath>
         </Reference>
-        <Reference Include="System.Web"/>
+        <Reference Remove="AtfProcessUserTask_GetBranches.Tests.cs" />
+        <Reference Include="System.Web" />
         <Reference Include="Terrasoft.Configuration">
             <HintPath>$(TestCoreLibPath)\..\bin\Terrasoft.Configuration.dll</HintPath>
         </Reference>
@@ -254,6 +255,6 @@
         </Reference>
     </ItemGroup>
     <ItemGroup>
-        <ProjectReference Include="..\..\packages\AtfTIDE\Files\AtfTIDE.csproj"/>
+        <ProjectReference Include="..\..\packages\AtfTIDE\Files\AtfTIDE.csproj" />
     </ItemGroup>
 </Project>
