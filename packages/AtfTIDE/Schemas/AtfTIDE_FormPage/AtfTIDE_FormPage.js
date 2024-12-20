@@ -613,7 +613,7 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 					"iconPosition": "left-icon",
 					"visible": true,
 					"clicked": {
-						"request": "crt.RunBusinessProcessRequest",
+						"request": "atf.CaptureClioArgs",
 						"params": {
 							"processName": "AtfProcess_SetActiveBranch",
 							"processRunType": "ForTheSelectedRecords",
