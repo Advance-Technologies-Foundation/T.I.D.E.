@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArchiveUtilities", "..\Arch
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArchiveUtilities.Tests", "..\ArchiveUtilities\ArchiveUtilities.Tests\ArchiveUtilities.Tests.csproj", "{350973CF-5980-4EE7-BB76-9459AAE3D79D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleGit.tests", "ConsoleGit.tests\ConsoleGit.tests.csproj", "{AF7797AD-0F27-48DC-A6E1-B94425188A7E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -48,5 +50,9 @@ Global
 		{350973CF-5980-4EE7-BB76-9459AAE3D79D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{350973CF-5980-4EE7-BB76-9459AAE3D79D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{350973CF-5980-4EE7-BB76-9459AAE3D79D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF7797AD-0F27-48DC-A6E1-B94425188A7E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF7797AD-0F27-48DC-A6E1-B94425188A7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF7797AD-0F27-48DC-A6E1-B94425188A7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF7797AD-0F27-48DC-A6E1-B94425188A7E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

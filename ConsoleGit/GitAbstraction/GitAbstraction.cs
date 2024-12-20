@@ -29,6 +29,7 @@ namespace GitAbstraction {
 
 		#region Properties: Private
 
+		public BranchCollection AllBranches => InitializedRepository.Branches;
 		private UsernamePasswordCredentials Credentials { get; }
 
 		private CredentialsHandler CredentialsProvider => (url, user, types) => Credentials;
@@ -104,6 +105,17 @@ namespace GitAbstraction {
 			}
 		}
 
+		public ErrorOr<Success> Fetch(){
+			string logMessage = "";
+			
+			var remote = InitializedRepository.Network.Remotes["origin"];
+			var refSpecs = remote.FetchRefSpecs.Select(x => x.Specification);
+			Commands.Fetch(InitializedRepository, remote.Name, refSpecs, null, logMessage);
+			Console.Out.WriteLine(logMessage);
+			return Result.Success;
+		}
+		
+		
 		public void Dispose(){
 			Dispose(true);
 			GC.SuppressFinalize(this);
@@ -191,11 +203,16 @@ namespace GitAbstraction {
 		/// <returns></returns>
 		/// <seealso href="https://github.com/libgit2/libgit2sharp/wiki/git-checkout#checkout-to-existing-branch-by-name">libgit2sharp Wiki git checkout <c>branch</c></seealso>
 		public ErrorOr<Success> CheckoutBranch(string branchName){
-			Branch branches = InitializedRepository.Branches[branchName];
-			if (branches == null) {
+			Branch firstOrDefaultBranch = InitializedRepository.Branches
+				.Where(b => b.FriendlyName == branchName)
+				.Select(b => b)
+				.FirstOrDefault();
+
+			if (firstOrDefaultBranch == null) {
 				return Error.Failure("BranchNotFound", $"Branch {branchName} not found");
 			}
-			Branch result = Commands.Checkout(InitializedRepository, branchName);
+			
+			Branch result = Commands.Checkout(InitializedRepository, firstOrDefaultBranch);
 			if (result == null) {
 				return Error.Failure("BranchNotFound", $"Branch {branchName} not found");
 			}
@@ -269,6 +286,8 @@ namespace GitAbstraction {
 			}
 		}
 		
+		}
+		
 		public ErrorOr<Success> PublishBranch(Branch branch){
 			InitializedRepository.Branches.Update(branch);
 			return Push(branch);
@@ -284,7 +303,7 @@ namespace GitAbstraction {
 			return Push(branch);
 		}
 		public ErrorOr<Success> DeleteBranch(string branchName){
-			Branch branches = InitializedRepository.Branches[branchName];
+			Branch branches = InitializedRepository.Branches[branchName]; //error
 			if (branches == null) {
 				return Error.Failure("BranchNotFound", $"Branch {branchName} not found");
 			}

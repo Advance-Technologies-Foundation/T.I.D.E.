@@ -1,6 +1,7 @@
 ﻿using System.Security.AccessControl;
 using ErrorOr;
 using GitAbstraction;
+using LibGit2Sharp;
 
 namespace ConsoleGit.Commands;
 
@@ -14,7 +15,8 @@ public interface ICommand : IDisposable {
 
 }
 
-public abstract class BaseRepositoryCommand : ICommand {
+
+public abstract class BaseRepositoryCommand: ICommand {
 
 	#region Fields: Private
 
@@ -42,7 +44,7 @@ public abstract class BaseRepositoryCommand : ICommand {
 	#region Properties: Protected
 
 	protected GitRepository InitializedRepository => _initializedRepository.Value;
-
+	
 	#endregion
 
 	#region Methods: Private

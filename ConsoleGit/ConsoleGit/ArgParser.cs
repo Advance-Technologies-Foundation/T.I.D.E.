@@ -21,11 +21,17 @@ public record CommandLineArgs {
 			out Uri? creatioUrl);
 		CreatioUrl = creatioUrl;
 		IsFramework = CreatioUrl?.LocalPath.StartsWith("/0", StringComparison.InvariantCulture) ?? true;
+		BranchName = Environment.GetEnvironmentVariable($"TIDE_{nameof(BranchName)}") ?? "";
+		
+		bool.TryParse(Environment.GetEnvironmentVariable($"TIDE_{nameof(Silent)}") ?? "", out bool silent);
+		Silent = silent;
 	}
+
 
 	#endregion
 
 	#region Properties: Public
+	public bool Silent { get; init; }
 
 	public string? ASPXAUTH { get; init; }
 
@@ -58,6 +64,8 @@ public record CommandLineArgs {
 	public string UserName { get; init; }
 
 	public string? UserType { get; init; }
+
+	public string BranchName { get; set; }
 
 	#endregion
 

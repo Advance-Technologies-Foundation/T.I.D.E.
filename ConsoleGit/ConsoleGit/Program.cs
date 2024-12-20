@@ -56,6 +56,7 @@ IHostBuilder builder = Host.CreateDefaultBuilder(args)
 		services.AddScoped<AddAllCommand>();
 		services.AddScoped<CommitCommand>();
 		services.AddScoped<DownloadPackagesCommand>();
+		services.AddScoped<GetBranchesCommand>();
 		// Register other commands
 	});
 
@@ -70,11 +71,13 @@ using ICommand command = consoleArgs.Command switch {
 	"AddAll" =>host.Services.GetRequiredService<AddAllCommand>(),
 	"Commit" =>host.Services.GetRequiredService<CommitCommand>(),
 	"DownloadPackages" =>host.Services.GetRequiredService<DownloadPackagesCommand>(),
+	"GetBranches" =>host.Services.GetRequiredService<GetBranchesCommand>(),
 	var _ => new ErrorCommand(consoleArgs)
 };
 
+
 return await command.Execute().MatchAsync(
-	_ => OnSuccess(consoleArgs.Command),
+	_ => consoleArgs.Silent ? OnSuccess(consoleArgs.Command) : Task.FromResult(0),
 	failure => OnFailure(consoleArgs.Command, failure)
 );
 
