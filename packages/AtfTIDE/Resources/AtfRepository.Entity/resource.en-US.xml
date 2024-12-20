@@ -4,6 +4,7 @@
 		<Items>
 			<Item Name="Caption" Value="Repository" />
 			<Item Name="Columns.AtfAccessToken.Caption" Value="Access Token" />
+			<Item Name="Columns.AtfActiveBranch.Caption" Value="Active branch" />
 			<Item Name="Columns.AtfCreatioUrl.Caption" Value="Creatio Url" />
 			<Item Name="Columns.AtfLogin.Caption" Value="Creatio Login" />
 			<Item Name="Columns.AtfName.Caption" Value="Name" />

@@ -19,6 +19,7 @@
 + MetaData.Schema.D29 "null"
 + MetaData.Schema.D30 "null"
 + MetaData.Schema.D31 "null"
++ MetaData.Schema.D38 true
 + MetaData.Schema.D4 "d2502997-9387-441e-8230-2eb00152729b"
 + MetaData.Schema.D2 {
   "UId": "d2502997-9387-441e-8230-2eb00152729b",
@@ -85,7 +86,17 @@
   "S2": "26cba64c-daf1-4f36-b2ea-73c0d695d90c",
   "E25": true
 }
-~ MetaData.Schema.D2 ["ae0e45ca-c495-4fe7-a39d-3ab7278e1617","e80190a5-03b2-4095-90f7-a193a960adee","ebf6bb93-8aa6-4a01-900d-c6ea67affe21","9928edec-4272-425a-93bb-48743fee4b04","3015559e-cbc6-406a-88af-07f7930be832","3fabd836-6a53-4d8d-9069-6df88d9dae1e","d2502997-9387-441e-8230-2eb00152729b","501f4ea6-d4af-2def-4875-a1b828376aea","40d42c16-801b-4a78-22bb-893388f87ffe","29fe4649-96b3-b4db-f580-ff1dc3448bd3","1ec2e4c3-7746-3d66-4e82-1564399aa06a","233b33ac-e288-33e6-fa2f-f6058c3cd6dc","50c8ab0b-f709-0669-75c4-f6f23fa0abb3"]
++ MetaData.Schema.D2 {
+  "UId": "1694f1b7-9a61-6ceb-5991-9f97c80bd356",
+  "A2": "AtfActiveBranch",
+  "A3": "d7d9045c-6aa7-4fce-99af-5f48f26fab3c",
+  "A4": "d7d9045c-6aa7-4fce-99af-5f48f26fab3c",
+  "A5": "107aae31-0c74-4422-acf4-c8d817b5e08d",
+  "S2": "ddb3a1ee-07e8-4d62-b7a9-d0e618b00fbd",
+  "E5": false,
+  "E25": true
+}
+~ MetaData.Schema.D2 ["ae0e45ca-c495-4fe7-a39d-3ab7278e1617","e80190a5-03b2-4095-90f7-a193a960adee","ebf6bb93-8aa6-4a01-900d-c6ea67affe21","9928edec-4272-425a-93bb-48743fee4b04","3015559e-cbc6-406a-88af-07f7930be832","3fabd836-6a53-4d8d-9069-6df88d9dae1e","d2502997-9387-441e-8230-2eb00152729b","501f4ea6-d4af-2def-4875-a1b828376aea","40d42c16-801b-4a78-22bb-893388f87ffe","29fe4649-96b3-b4db-f580-ff1dc3448bd3","1ec2e4c3-7746-3d66-4e82-1564399aa06a","233b33ac-e288-33e6-fa2f-f6058c3cd6dc","50c8ab0b-f709-0669-75c4-f6f23fa0abb3","1694f1b7-9a61-6ceb-5991-9f97c80bd356"]
 = MetaData.Schema.D20.A2 "AtfRepositoryEvents"
 = MetaData.Schema.D36.A3 "d7d9045c-6aa7-4fce-99af-5f48f26fab3c"
 = MetaData.Schema.D36.BS1 false

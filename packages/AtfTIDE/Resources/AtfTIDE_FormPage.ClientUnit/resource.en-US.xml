@@ -4,11 +4,14 @@
 		<Items>
 			<Item Name="Caption" Value="T.I.D.E. form page" />
 			<Item Name="LocalizableStrings.Button_2shb3kw_caption.Value" Value="LOAD FROM GIT" />
+			<Item Name="LocalizableStrings.Button_8c6g2be_caption.Value" Value="Set active branch" />
 			<Item Name="LocalizableStrings.Button_cht5usd_caption.Value" Value="Button" />
 			<Item Name="LocalizableStrings.Button_LOADFROMGIT_caption.Value" Value="LOAD FROM GIT" />
 			<Item Name="LocalizableStrings.Button_nemrkb0_caption.Value" Value="SAVE TO GIT     " />
+			<Item Name="LocalizableStrings.Button_q2spave_caption.Value" Value="Set Active branch" />
 			<Item Name="LocalizableStrings.Button_rs966jg_caption.Value" Value="Button" />
 			<Item Name="LocalizableStrings.Button_SaveToGit_caption.Value" Value="SAVE TO GIT" />
+			<Item Name="LocalizableStrings.Button_SetActiveBranch_caption.Value" Value="Set active branch" />
 			<Item Name="LocalizableStrings.Button_SyncBranchesWithRepo_caption.Value" Value="Syncronize branches with repository" />
 			<Item Name="LocalizableStrings.ExpansionPanel_srhpdgo_title.Value" Value="Repository Branch" />
 			<Item Name="LocalizableStrings.ExpansionPanel_w1nj9pl_title.Value" Value="Expansion panel" />

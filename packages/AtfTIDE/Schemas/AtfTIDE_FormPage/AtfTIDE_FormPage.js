@@ -494,7 +494,7 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 					"layoutConfig": {
 						"column": 1,
 						"row": 1,
-						"colSpan": 2,
+						"colSpan": 1,
 						"rowSpan": 1
 					},
 					"type": "crt.WebInput",
@@ -506,6 +506,30 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 				"parentName": "GeneralInfoTabContainer",
 				"propertyName": "items",
 				"index": 0
+			},
+			{
+				"operation": "insert",
+				"name": "Input_ActiveBranch",
+				"values": {
+					"layoutConfig": {
+						"column": 2,
+						"row": 1,
+						"colSpan": 1,
+						"rowSpan": 1
+					},
+					"type": "crt.Input",
+					"label": "$Resources.Strings.PDS_AtfActiveBranch_zvr5u2c",
+					"labelPosition": "above",
+					"control": "$PDS_AtfActiveBranch_zvr5u2c",
+					"visible": true,
+					"readonly": true,
+					"placeholder": "",
+					"tooltip": "",
+					"multiline": false
+				},
+				"parentName": "GeneralInfoTabContainer",
+				"propertyName": "items",
+				"index": 1
 			},
 			{
 				"operation": "insert",
@@ -529,7 +553,7 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 				},
 				"parentName": "GeneralInfoTabContainer",
 				"propertyName": "items",
-				"index": 1
+				"index": 2
 			},
 			{
 				"operation": "insert",
@@ -549,6 +573,209 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 				},
 				"parentName": "GeneralInfoTabContainer",
 				"propertyName": "items",
+				"index": 3
+			},
+			{
+				"operation": "insert",
+				"name": "FlexContainer_yh1guh4",
+				"values": {
+					"type": "crt.FlexContainer",
+					"direction": "row",
+					"items": [],
+					"fitContent": true,
+					"visible": true,
+					"color": "transparent",
+					"borderRadius": "none",
+					"padding": {
+						"top": "large",
+						"right": "none",
+						"bottom": "large",
+						"left": "none"
+					},
+					"alignItems": "stretch",
+					"justifyContent": "start",
+					"gap": "small",
+					"wrap": "wrap"
+				},
+				"parentName": "GeneralInfoTab",
+				"propertyName": "items",
+				"index": 1
+			},
+			{
+				"operation": "insert",
+				"name": "Button_SetActiveBranch",
+				"values": {
+					"type": "crt.Button",
+					"caption": "#ResourceString(Button_SetActiveBranch_caption)#",
+					"color": "warn",
+					"disabled": false,
+					"size": "large",
+					"iconPosition": "left-icon",
+					"visible": true,
+					"clicked": {
+						"request": "crt.RunBusinessProcessRequest",
+						"params": {
+							"processName": "AtfProcess_SetActiveBranch",
+							"processRunType": "ForTheSelectedRecords",
+							"showNotification": true,
+							"dataSourceName": "GridDetail_t9wy0f2DS",
+							"parameterMappings": {
+								"Branch": "Id"
+							},
+							"filters": "$GridDetail_t9wy0f2 | crt.ToCollectionFilters : 'GridDetail_t9wy0f2' : $GridDetail_t9wy0f2_SelectionState | crt.SkipIfSelectionEmpty : $GridDetail_t9wy0f2_SelectionState",
+							"sorting": "$GridDetail_t9wy0f2Sorting",
+							"selectionStateAttributeName": "GridDetail_t9wy0f2_SelectionState"
+						}
+					},
+					"clickMode": "default",
+					"icon": "checkmark-icon"
+				},
+				"parentName": "FlexContainer_yh1guh4",
+				"propertyName": "items",
+				"index": 0
+			},
+			{
+				"operation": "insert",
+				"name": "Button_SyncBranchesWithRepo",
+				"values": {
+					"type": "crt.Button",
+					"caption": "#ResourceString(Button_SyncBranchesWithRepo_caption)#",
+					"color": "accent",
+					"disabled": false,
+					"size": "large",
+					"iconPosition": "left-icon",
+					"visible": true,
+					"clicked": {
+						"request": "crt.RunBusinessProcessRequest",
+						"params": {
+							"processName": "ATFSyncronizeBranchesWithRepo",
+							"processRunType": "ForTheSelectedPage",
+							"showNotification": true,
+							"recordIdProcessParameterName": "RepositoryId"
+						}
+					},
+					"clickMode": "default",
+					"icon": "reload-icon"
+				},
+				"parentName": "FlexContainer_yh1guh4",
+				"propertyName": "items",
+				"index": 1
+			},
+			{
+				"operation": "insert",
+				"name": "GridDetail_t9wy0f2DS",
+				"values": {
+					"type": "crt.DataGrid",
+					"features": {
+						"rows": {
+							"selection": false,
+							"numeration": false
+						},
+						"editable": {
+							"enable": false,
+							"itemsCreation": false,
+							"floatingEditPanel": false
+						}
+					},
+					"items": "$GridDetail_t9wy0f2",
+					"visible": true,
+					"fitContent": true,
+					"primaryColumnName": "GridDetail_t9wy0f2DS_Id",
+					"columns": [
+						{
+							"id": "73135d14-5d9c-c1b8-26da-c0ea4cdf7454",
+							"code": "GridDetail_t9wy0f2DS_AtfName",
+							"caption": "#ResourceString(GridDetail_t9wy0f2DS_AtfName)#",
+							"dataValueType": 28
+						}
+					],
+					"placeholder": false,
+					"activeRow": "$GridDetail_t9wy0f2_ActiveRow",
+					"selectionState": "$GridDetail_t9wy0f2_SelectionState",
+					"_selectionOptions": {
+						"attribute": "GridDetail_t9wy0f2_SelectionState"
+					},
+					"bulkActions": []
+				},
+				"parentName": "GeneralInfoTab",
+				"propertyName": "items",
+				"index": 2
+			},
+			{
+				"operation": "insert",
+				"name": "GridDetail_t9wy0f2_AddTagsBulkAction",
+				"values": {
+					"type": "crt.MenuItem",
+					"caption": "Add tag",
+					"icon": "tag-icon",
+					"clicked": {
+						"request": "crt.AddTagsInRecordsRequest",
+						"params": {
+							"dataSourceName": "GridDetail_t9wy0f2DS",
+							"filters": "$GridDetail_t9wy0f2 | crt.ToCollectionFilters : 'GridDetail_t9wy0f2' : $GridDetail_t9wy0f2_SelectionState | crt.SkipIfSelectionEmpty : $GridDetail_t9wy0f2_SelectionState"
+						}
+					},
+					"items": []
+				},
+				"parentName": "GridDetail_t9wy0f2DS",
+				"propertyName": "bulkActions",
+				"index": 0
+			},
+			{
+				"operation": "insert",
+				"name": "GridDetail_t9wy0f2_RemoveTagsBulkAction",
+				"values": {
+					"type": "crt.MenuItem",
+					"caption": "Remove tag",
+					"icon": "delete-button-icon",
+					"clicked": {
+						"request": "crt.RemoveTagsInRecordsRequest",
+						"params": {
+							"dataSourceName": "GridDetail_t9wy0f2DS",
+							"filters": "$GridDetail_t9wy0f2 | crt.ToCollectionFilters : 'GridDetail_t9wy0f2' : $GridDetail_t9wy0f2_SelectionState | crt.SkipIfSelectionEmpty : $GridDetail_t9wy0f2_SelectionState"
+						}
+					}
+				},
+				"parentName": "GridDetail_t9wy0f2_AddTagsBulkAction",
+				"propertyName": "items",
+				"index": 0
+			},
+			{
+				"operation": "insert",
+				"name": "GridDetail_t9wy0f2_ExportToExcelBulkAction",
+				"values": {
+					"type": "crt.MenuItem",
+					"caption": "Export to Excel",
+					"icon": "export-button-icon",
+					"clicked": {
+						"request": "crt.ExportDataGridToExcelRequest",
+						"params": {
+							"viewName": "GridDetail_t9wy0f2DS",
+							"filters": "$GridDetail_t9wy0f2 | crt.ToCollectionFilters : 'GridDetail_t9wy0f2' : $GridDetail_t9wy0f2_SelectionState | crt.SkipIfSelectionEmpty : $GridDetail_t9wy0f2_SelectionState"
+						}
+					}
+				},
+				"parentName": "GridDetail_t9wy0f2DS",
+				"propertyName": "bulkActions",
+				"index": 1
+			},
+			{
+				"operation": "insert",
+				"name": "GridDetail_t9wy0f2_DeleteBulkAction",
+				"values": {
+					"type": "crt.MenuItem",
+					"caption": "Delete",
+					"icon": "delete-button-icon",
+					"clicked": {
+						"request": "crt.DeleteRecordsRequest",
+						"params": {
+							"dataSourceName": "GridDetail_t9wy0f2DS",
+							"filters": "$GridDetail_t9wy0f2 | crt.ToCollectionFilters : 'GridDetail_t9wy0f2' : $GridDetail_t9wy0f2_SelectionState | crt.SkipIfSelectionEmpty : $GridDetail_t9wy0f2_SelectionState"
+						}
+					}
+				},
+				"parentName": "GridDetail_t9wy0f2DS",
+				"propertyName": "bulkActions",
 				"index": 2
 			},
 			{
@@ -572,12 +799,12 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 						"right": "none"
 					},
 					"fitContent": true,
-					"visible": true,
+					"visible": false,
 					"alignItems": "stretch"
 				},
 				"parentName": "GeneralInfoTab",
 				"propertyName": "items",
-				"index": 1
+				"index": 3
 			},
 			{
 				"operation": "insert",
@@ -615,7 +842,18 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 						"column": 1,
 						"row": 1,
 						"rowSpan": 1
-					}
+					},
+					"visible": true,
+					"color": "transparent",
+					"borderRadius": "none",
+					"padding": {
+						"top": "none",
+						"right": "none",
+						"bottom": "none",
+						"left": "none"
+					},
+					"justifyContent": "start",
+					"wrap": "wrap"
 				},
 				"parentName": "GridContainer_eta67n6",
 				"propertyName": "items",
@@ -637,7 +875,7 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 							"entityName": "AtfRepositoryBranch"
 						}
 					},
-					"visible": true,
+					"visible": false,
 					"clickMode": "default"
 				},
 				"parentName": "FlexContainer_rlolpw6",
@@ -658,11 +896,14 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 						"request": "crt.LoadDataRequest",
 						"params": {
 							"config": {
-								"loadType": "reload"
+								"loadType": "reload",
+								"useLastLoadParameters": true
 							},
 							"dataSourceName": "GridDetail_t9wy0f2DS"
 						}
-					}
+					},
+					"visible": false,
+					"clickMode": "default"
 				},
 				"parentName": "FlexContainer_rlolpw6",
 				"propertyName": "items",
@@ -679,7 +920,8 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 					"color": "default",
 					"size": "medium",
 					"clickMode": "menu",
-					"menuItems": []
+					"menuItems": [],
+					"visible": false
 				},
 				"parentName": "FlexContainer_rlolpw6",
 				"propertyName": "items",
@@ -697,7 +939,7 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 					"clicked": {
 						"request": "crt.ExportDataGridToExcelRequest",
 						"params": {
-							"viewName": "GridDetail_t9wy0f2"
+							"viewName": "GridDetail_t9wy0f2DS"
 						}
 					}
 				},
@@ -788,39 +1030,6 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 			},
 			{
 				"operation": "insert",
-				"name": "Button_SyncBranchesWithRepo",
-				"values": {
-					"type": "crt.Button",
-					"caption": "#ResourceString(Button_SyncBranchesWithRepo_caption)#",
-					"color": "accent",
-					"disabled": false,
-					"size": "large",
-					"iconPosition": "only-text",
-					"visible": true,
-					"layoutConfig": {
-						"column": 1,
-						"row": 1,
-						"colSpan": 1,
-						"rowSpan": 1
-					},
-					"clicked": {
-						"request": "crt.RunBusinessProcessRequest",
-						"params": {
-							"processName": "ATFSyncronizeBranchesWithRepo",
-							"processRunType": "ForTheSelectedPage",
-							"saveAtProcessStart": true,
-							"showNotification": true,
-							"recordIdProcessParameterName": "RepositoryId"
-						}
-					},
-					"clickMode": "default"
-				},
-				"parentName": "GridContainer_7bizhk0",
-				"propertyName": "items",
-				"index": 0
-			},
-			{
-				"operation": "insert",
 				"name": "GridContainer_oxp83zc",
 				"values": {
 					"type": "crt.GridContainer",
@@ -839,43 +1048,6 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 					"items": []
 				},
 				"parentName": "ExpansionPanel_srhpdgo",
-				"propertyName": "items",
-				"index": 0
-			},
-			{
-				"operation": "insert",
-				"name": "GridDetail_t9wy0f2",
-				"values": {
-					"type": "crt.DataGrid",
-					"layoutConfig": {
-						"colSpan": 2,
-						"column": 1,
-						"row": 1,
-						"rowSpan": 6
-					},
-					"features": {
-						"rows": {
-							"selection": {
-								"enable": true,
-								"multiple": true
-							}
-						}
-					},
-					"items": "$GridDetail_t9wy0f2",
-					"visible": true,
-					"fitContent": true,
-					"primaryColumnName": "GridDetail_t9wy0f2DS_Id",
-					"columns": [
-						{
-							"id": "73135d14-5d9c-c1b8-26da-c0ea4cdf7454",
-							"code": "GridDetail_t9wy0f2DS_AtfName",
-							"caption": "#ResourceString(GridDetail_t9wy0f2DS_AtfName)#",
-							"dataValueType": 28
-						}
-					],
-					"placeholder": false
-				},
-				"parentName": "GridContainer_oxp83zc",
 				"propertyName": "items",
 				"index": 0
 			}
@@ -946,6 +1118,11 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 					"PDS_AtfCreatioUrl_hgv046w": {
 						"modelConfig": {
 							"path": "PDS.AtfCreatioUrl"
+						}
+					},
+					"PDS_AtfActiveBranch_zvr5u2c": {
+						"modelConfig": {
+							"path": "PDS.AtfActiveBranch"
 						}
 					}
 				}

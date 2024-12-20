@@ -1,0 +1,10 @@
+﻿{
+  "Descriptor": {
+    "UId": "8325a237-0900-4469-80c1-3f91002f659a",
+    "Name": "AtfProcessUserTask_CheckoutBranch",
+    "ModifiedOnUtc": "\/Date(1734666555000)\/",
+    "ManagerName": "ProcessUserTaskSchemaManager",
+    "Caption": "Checkout branch",
+    "DependsOn": []
+  }
+}

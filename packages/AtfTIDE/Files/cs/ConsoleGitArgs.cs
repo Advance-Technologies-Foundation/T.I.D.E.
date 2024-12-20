@@ -94,7 +94,9 @@ namespace AtfTIDE {
 		public string BPMSESSIONID { get; set; }
 
 		public bool Silent { get; set; }
-		
+
+		public string BranchName { get; set; }
+
 		#endregion
 
 		#region Methods: Public

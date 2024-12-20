@@ -77,7 +77,7 @@ using ICommand command = consoleArgs.Command switch {
 
 
 return await command.Execute().MatchAsync(
-	_ => consoleArgs.Silent ? OnSuccess(consoleArgs.Command) : Task.FromResult(0),
+	_ => consoleArgs.Silent ? Task.FromResult(0): OnSuccess(consoleArgs.Command),
 	failure => OnFailure(consoleArgs.Command, failure)
 );
 
