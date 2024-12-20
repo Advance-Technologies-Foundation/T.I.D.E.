@@ -20,7 +20,12 @@ public class GetBranchesCommand(CommandLineArgs args) : BaseRepositoryCommand(ar
 			return Error.Failure("COULD_NOT_GET_BRANCHES","Could not get branches from repository");
 		}
 		BranchesCommandResponse model = new() {
-			Branches = branches.Value.Select(b => new MyBranch{Name = b.FriendlyName}).ToList()
+			Branches = branches.Value
+			                   .Select(b => b.FriendlyName.TrimStart("origin/".ToCharArray()))
+			                   .Distinct()
+			                   .Where(v=> !v.StartsWith("HEAD"))
+			                   .Select(v => new MyBranch { Name = v })
+			                   .ToList()
 		};
 
 		string json = JsonSerializer.Serialize(model, AppJsonSerializerContext.Default.BranchesCommandResponse);

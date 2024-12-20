@@ -92,7 +92,8 @@ namespace AtfTIDE {
 		public string BPMCSRF { get; set; }
 		public string UserType { get; set; }
 		public string BPMSESSIONID { get; set; }
-		
+
+		public bool Silent { get; set; }
 		
 		#endregion
 

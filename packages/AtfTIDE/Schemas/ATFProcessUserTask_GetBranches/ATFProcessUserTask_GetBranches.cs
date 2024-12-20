@@ -39,7 +39,8 @@ namespace Terrasoft.Core.Process.Configuration
 			RepositoryInfo repoInfo = HelperFunctions.GetRepositoryInfo(Repository, UserConnection);
 			ConsoleGitArgs args = new ConsoleGitArgs {
 				Command = Commands.GetBranches,
-				RepoDir = HelperFunctions.GetRepositoryDirectory(repoInfo.Name).ToString()
+				RepoDir = HelperFunctions.GetRepositoryDirectory(repoInfo.Name).ToString(),
+				Silent = true
 			};
 			ConsoleGitResult gitCommandResult = ClassFactory
 				.Get<IConsoleGit>("AtfTIDE.ConsoleGit")
