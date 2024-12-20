@@ -613,7 +613,7 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 					"iconPosition": "left-icon",
 					"visible": true,
 					"clicked": {
-						"request": "atf.CaptureClioArgs",
+						"request": "crt.RunBusinessProcessRequest",
 						"params": {
 							"processName": "AtfProcess_SetActiveBranch",
 							"processRunType": "ForTheSelectedRecords",
@@ -1209,6 +1209,15 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 						processRunType: request.processRunType,
 						recordIdProcessParameterName: request.recordIdProcessParameterName,
 					});
+				}
+			},
+			{
+				request: 'crt.HandleViewModelInitRequest',
+				handler: async (request, next) => {
+					const endpoint = "/rest/Tide/CaptureClioArgs";
+					const httpClientService = new sdk.HttpClientService();
+					await httpClientService.get(endpoint)
+					return next?.handle(request);
 				}
 			},
 		]/**SCHEMA_HANDLERS*/,
