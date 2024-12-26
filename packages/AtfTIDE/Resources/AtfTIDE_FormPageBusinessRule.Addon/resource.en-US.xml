@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="en-US">
+	<Group Type="String">
+		<Items>
+			<Item Name="AddonConfig.Rules.15fc4ebf-5b2f-5904-c4c8-1ea519af0d3e.Caption" Value="Show app when seletced" />
+			<Item Name="Caption" Value="T.I.D.E. form page (Business rules)" />
+		</Items>
+	</Group>
+</Resources>

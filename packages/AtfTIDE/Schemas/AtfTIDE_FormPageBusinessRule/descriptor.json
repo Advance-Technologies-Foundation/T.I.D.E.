@@ -1,0 +1,10 @@
+﻿{
+  "Descriptor": {
+    "UId": "cb78ec92-65a7-497a-b362-6e4fa4686ca9",
+    "Name": "AtfTIDE_FormPageBusinessRule",
+    "ModifiedOnUtc": "\/Date(1735251044000)\/",
+    "ManagerName": "AddonSchemaManager",
+    "Caption": "T.I.D.E. form page (Business rules)",
+    "DependsOn": []
+  }
+}

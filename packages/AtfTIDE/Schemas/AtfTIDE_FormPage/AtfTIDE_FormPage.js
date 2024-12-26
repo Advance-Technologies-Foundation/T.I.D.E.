@@ -273,11 +273,74 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 					"type": "crt.Input",
 					"label": "$Resources.Strings.AtfName",
 					"control": "$AtfName",
-					"labelPosition": "auto"
+					"labelPosition": "auto",
+					"visible": true,
+					"readonly": false,
+					"placeholder": "",
+					"tooltip": "#ResourceString(AtfName_tooltip)#"
 				},
 				"parentName": "SideAreaProfileContainer",
 				"propertyName": "items",
 				"index": 0
+			},
+			{
+				"operation": "insert",
+				"name": "ComboBox_Application",
+				"values": {
+					"layoutConfig": {
+						"column": 1,
+						"row": 2,
+						"colSpan": 1,
+						"rowSpan": 1
+					},
+					"type": "crt.ComboBox",
+					"label": "$Resources.Strings.PDS_AtfApplication_8tomm9h",
+					"labelPosition": "auto",
+					"control": "$PDS_AtfApplication_8tomm9h",
+					"listActions": [],
+					"showValueAsLink": true,
+					"controlActions": [],
+					"visible": false,
+					"readonly": true,
+					"placeholder": "",
+					"tooltip": "#ResourceString(ComboBox_Application_tooltip)#",
+					"valueDetails": null
+				},
+				"parentName": "SideAreaProfileContainer",
+				"propertyName": "items",
+				"index": 1
+			},
+			{
+				"operation": "insert",
+				"name": "Button_LinkWithApplication",
+				"values": {
+					"layoutConfig": {
+						"column": 1,
+						"row": 3,
+						"colSpan": 1,
+						"rowSpan": 1
+					},
+					"type": "crt.Button",
+					"caption": "#ResourceString(Button_LinkWithApplication_caption)#",
+					"color": "primary",
+					"disabled": false,
+					"size": "large",
+					"iconPosition": "only-text",
+					"visible": true,
+					"clicked": {
+						"request": "crt.RunBusinessProcessRequest",
+						"params": {
+							"processName": "AtfProcess_LinkAppWithRepository",
+							"processRunType": "ForTheSelectedPage",
+							"showNotification": true,
+							"recordIdProcessParameterName": "Repository"
+						}
+					},
+					"clickMode": "default"
+				},
+				"parentName": "SideAreaProfileContainer",
+				"propertyName": "items",
+				"index": 2
 			},
 			{
 				"operation": "insert",
@@ -1123,6 +1186,16 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 					"PDS_AtfActiveBranch_zvr5u2c": {
 						"modelConfig": {
 							"path": "PDS.AtfActiveBranch"
+						}
+					},
+					"PDS_AtfApplication_8tomm9h": {
+						"modelConfig": {
+							"path": "PDS.AtfApplication"
+						}
+					},
+					"PDS_AtfColumn10_1hbn1hq": {
+						"modelConfig": {
+							"path": "PDS.AtfColumn10"
 						}
 					}
 				}
