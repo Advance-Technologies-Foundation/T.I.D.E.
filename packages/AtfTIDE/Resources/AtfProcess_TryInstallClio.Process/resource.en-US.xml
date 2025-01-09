@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="en-US">
+	<Group Type="String">
+		<Items>
+			<Item Name="BaseElements.UserTask1.Caption" Value="Install Clio" />
+			<Item Name="BaseElements.UserTask1.Parameters.ErrorMessage.Caption" Value="Error Message" />
+			<Item Name="BaseElements.UserTask1.Parameters.IsError.Caption" Value="Is Error" />
+			<Item Name="BaseElements.UserTask1.Parameters.Output.Caption" Value="Output" />
+			<Item Name="Caption" Value="Try install clio" />
+			<Item Name="LaneSets.LaneSet1.Caption" Value="LaneSet 1" />
+			<Item Name="LaneSets.LaneSet1.Lanes.Lane1.Caption" Value="Lane 1" />
+			<Item Name="NotificationCaption.Caption" Value="Process instance caption" />
+			<Item Name="NotificationCaption.DisplayValue" Value="[#Process name#]" />
+		</Items>
+	</Group>
+</Resources>

@@ -162,7 +162,6 @@
           "GT4": "b5936328-09b2-45fd-b763-48d37c265644",
           "GT1": {
             "GS1": 1,
-            "GS2": "{\"$type\":\"System.Collections.Generic.List`1[[System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[System.Object, mscorlib]], mscorlib]], mscorlib\",\"$values\":[{\"$type\":\"System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[System.Object, mscorlib]], mscorlib\",\"Id\":\"9db8a71c-831d-462b-97bb-510142bcdc37\",\"isEnabled\":true,\"performValidation\":true,\"caption\":\"OK\",\"name\":\"Button1\",\"style\":\"default\",\"generateSignal\":\"\"}]}",
             "GS5": "5c93343d-8dc3-41e5-8ad8-76dd7f32b609"
           }
         },
@@ -848,7 +847,9 @@
           "GT5": "f51a5674-58a5-3be3-4c6f-969176e456cb",
           "GT4": "ad6a7f03-7b14-4d06-96c0-bf1c01c1d8f8",
           "GT1": {
-            "GS1": 1
+            "GS1": 3,
+            "GS2": "\"dotnet \"+[#SysSettings.AtfClioFilePath<String>#]",
+            "GS5": "5c93343d-8dc3-41e5-8ad8-76dd7f32b609"
           }
         },
         {
@@ -2313,7 +2314,8 @@
               "IL2": "aad2ee19-97f8-4a96-a1ba-9f06cb2e3eee",
               "L1": "8b3f29bb-ea14-4ce5-a5c5-293a929b6ba2",
               "L8": {
-                "GS1": 1,
+                "GS1": 3,
+                "GS2": "\"dotnet \"+[#SysSettings.AtfClioFilePath<String>#]",
                 "GS5": "5c93343d-8dc3-41e5-8ad8-76dd7f32b609"
               },
               "L6": true,

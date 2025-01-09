@@ -1,0 +1,10 @@
+﻿{
+  "Descriptor": {
+    "UId": "7d9f6eba-07bb-4bf2-863d-196239e88412",
+    "Name": "AtfProcess_TryInstallClio",
+    "ModifiedOnUtc": "\/Date(1735292424000)\/",
+    "ManagerName": "ProcessSchemaManager",
+    "Caption": "Try install clio",
+    "DependsOn": []
+  }
+}

@@ -1,0 +1,1033 @@
+﻿{
+  "@context": {
+    "@vocab": "http://schema.nuget.org/schema#",
+    "@base": "https://api.nuget.org/v3/registration5-semver1/"
+  },
+  "totalHits": 1,
+  "data": [
+    {
+      "@id": "https://api.nuget.org/v3/registration5-semver1/clio/index.json",
+      "@type": "Package",
+      "registration": "https://api.nuget.org/v3/registration5-semver1/clio/index.json",
+      "id": "clio",
+      "version": "8.0.1.12",
+      "description": "CLI interface for Creatio",
+      "summary": "",
+      "title": "clio",
+      "licenseUrl": "https://www.nuget.org/packages/clio/8.0.1.12/license",
+      "projectUrl": "https://github.com/Advance-Technologies-Foundation/clio",
+      "tags": [
+        "cli",
+        "ATF",
+        "clio",
+        "creatio"
+      ],
+      "authors": [
+        "creatio rnd team"
+      ],
+      "owners": [
+        "ATF"
+      ],
+      "totalDownloads": 164083,
+      "verified": false,
+      "packageTypes": [
+        {
+          "name": "DotnetTool"
+        }
+      ],
+      "versions": [
+        {
+          "version": "2.0.0.2",
+          "downloads": 654,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/2.0.0.2.json"
+        },
+        {
+          "version": "2.0.0.3",
+          "downloads": 675,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/2.0.0.3.json"
+        },
+        {
+          "version": "2.0.0.4",
+          "downloads": 649,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/2.0.0.4.json"
+        },
+        {
+          "version": "2.0.0.5",
+          "downloads": 775,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/2.0.0.5.json"
+        },
+        {
+          "version": "2.0.0.6",
+          "downloads": 720,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/2.0.0.6.json"
+        },
+        {
+          "version": "2.0.0.7",
+          "downloads": 663,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/2.0.0.7.json"
+        },
+        {
+          "version": "2.0.0.8",
+          "downloads": 837,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/2.0.0.8.json"
+        },
+        {
+          "version": "2.0.0.9",
+          "downloads": 1176,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/2.0.0.9.json"
+        },
+        {
+          "version": "2.0.0.11",
+          "downloads": 715,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/2.0.0.11.json"
+        },
+        {
+          "version": "2.0.0.12",
+          "downloads": 1542,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/2.0.0.12.json"
+        },
+        {
+          "version": "2.0.0.13",
+          "downloads": 1187,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/2.0.0.13.json"
+        },
+        {
+          "version": "2.0.0.14",
+          "downloads": 2376,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/2.0.0.14.json"
+        },
+        {
+          "version": "2.0.0.15",
+          "downloads": 7237,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/2.0.0.15.json"
+        },
+        {
+          "version": "3.0.1.1",
+          "downloads": 587,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/3.0.1.1.json"
+        },
+        {
+          "version": "3.0.1.2",
+          "downloads": 559,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/3.0.1.2.json"
+        },
+        {
+          "version": "3.0.1.5",
+          "downloads": 648,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/3.0.1.5.json"
+        },
+        {
+          "version": "3.0.1.6",
+          "downloads": 703,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/3.0.1.6.json"
+        },
+        {
+          "version": "3.0.1.7",
+          "downloads": 551,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/3.0.1.7.json"
+        },
+        {
+          "version": "3.0.1.8",
+          "downloads": 657,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/3.0.1.8.json"
+        },
+        {
+          "version": "3.0.1.9",
+          "downloads": 885,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/3.0.1.9.json"
+        },
+        {
+          "version": "3.0.1.10",
+          "downloads": 653,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/3.0.1.10.json"
+        },
+        {
+          "version": "3.0.1.11",
+          "downloads": 646,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/3.0.1.11.json"
+        },
+        {
+          "version": "3.0.1.12",
+          "downloads": 652,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/3.0.1.12.json"
+        },
+        {
+          "version": "3.0.1.13",
+          "downloads": 715,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/3.0.1.13.json"
+        },
+        {
+          "version": "3.0.1.14",
+          "downloads": 726,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/3.0.1.14.json"
+        },
+        {
+          "version": "3.0.1.15",
+          "downloads": 512,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/3.0.1.15.json"
+        },
+        {
+          "version": "3.0.1.16",
+          "downloads": 563,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/3.0.1.16.json"
+        },
+        {
+          "version": "3.0.1.17",
+          "downloads": 672,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/3.0.1.17.json"
+        },
+        {
+          "version": "3.0.1.18",
+          "downloads": 661,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/3.0.1.18.json"
+        },
+        {
+          "version": "3.0.1.19",
+          "downloads": 479,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/3.0.1.19.json"
+        },
+        {
+          "version": "3.0.1.20",
+          "downloads": 510,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/3.0.1.20.json"
+        },
+        {
+          "version": "3.0.1.21",
+          "downloads": 1662,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/3.0.1.21.json"
+        },
+        {
+          "version": "3.0.1.22",
+          "downloads": 508,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/3.0.1.22.json"
+        },
+        {
+          "version": "3.0.1.23",
+          "downloads": 519,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/3.0.1.23.json"
+        },
+        {
+          "version": "3.0.1.24",
+          "downloads": 570,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/3.0.1.24.json"
+        },
+        {
+          "version": "3.0.1.25",
+          "downloads": 486,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/3.0.1.25.json"
+        },
+        {
+          "version": "3.0.1.26",
+          "downloads": 629,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/3.0.1.26.json"
+        },
+        {
+          "version": "3.0.1.27",
+          "downloads": 609,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/3.0.1.27.json"
+        },
+        {
+          "version": "3.0.1.28",
+          "downloads": 552,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/3.0.1.28.json"
+        },
+        {
+          "version": "3.0.1.29",
+          "downloads": 1696,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/3.0.1.29.json"
+        },
+        {
+          "version": "3.0.1.30",
+          "downloads": 552,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/3.0.1.30.json"
+        },
+        {
+          "version": "3.0.1.31",
+          "downloads": 683,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/3.0.1.31.json"
+        },
+        {
+          "version": "3.0.1.32",
+          "downloads": 570,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/3.0.1.32.json"
+        },
+        {
+          "version": "3.0.1.33",
+          "downloads": 609,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/3.0.1.33.json"
+        },
+        {
+          "version": "3.0.1.34",
+          "downloads": 564,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/3.0.1.34.json"
+        },
+        {
+          "version": "3.0.1.35",
+          "downloads": 647,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/3.0.1.35.json"
+        },
+        {
+          "version": "3.0.1.36",
+          "downloads": 804,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/3.0.1.36.json"
+        },
+        {
+          "version": "3.0.1.37",
+          "downloads": 815,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/3.0.1.37.json"
+        },
+        {
+          "version": "3.0.1.38",
+          "downloads": 575,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/3.0.1.38.json"
+        },
+        {
+          "version": "3.0.1.39",
+          "downloads": 459,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/3.0.1.39.json"
+        },
+        {
+          "version": "3.0.1.40",
+          "downloads": 463,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/3.0.1.40.json"
+        },
+        {
+          "version": "3.0.1.41",
+          "downloads": 1684,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/3.0.1.41.json"
+        },
+        {
+          "version": "6.0.1.1",
+          "downloads": 411,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/6.0.1.1.json"
+        },
+        {
+          "version": "6.0.1.2",
+          "downloads": 641,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/6.0.1.2.json"
+        },
+        {
+          "version": "6.0.1.3",
+          "downloads": 754,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/6.0.1.3.json"
+        },
+        {
+          "version": "6.0.1.4",
+          "downloads": 383,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/6.0.1.4.json"
+        },
+        {
+          "version": "6.0.1.5",
+          "downloads": 445,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/6.0.1.5.json"
+        },
+        {
+          "version": "6.0.1.6",
+          "downloads": 428,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/6.0.1.6.json"
+        },
+        {
+          "version": "6.0.1.7",
+          "downloads": 345,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/6.0.1.7.json"
+        },
+        {
+          "version": "6.0.1.8",
+          "downloads": 412,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/6.0.1.8.json"
+        },
+        {
+          "version": "6.0.1.9",
+          "downloads": 524,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/6.0.1.9.json"
+        },
+        {
+          "version": "6.0.1.10",
+          "downloads": 815,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/6.0.1.10.json"
+        },
+        {
+          "version": "6.0.1.11",
+          "downloads": 527,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/6.0.1.11.json"
+        },
+        {
+          "version": "6.0.1.12",
+          "downloads": 802,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/6.0.1.12.json"
+        },
+        {
+          "version": "6.0.1.13",
+          "downloads": 722,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/6.0.1.13.json"
+        },
+        {
+          "version": "6.0.1.14",
+          "downloads": 510,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/6.0.1.14.json"
+        },
+        {
+          "version": "6.0.1.15",
+          "downloads": 772,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/6.0.1.15.json"
+        },
+        {
+          "version": "6.0.1.16",
+          "downloads": 528,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/6.0.1.16.json"
+        },
+        {
+          "version": "6.0.1.17",
+          "downloads": 544,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/6.0.1.17.json"
+        },
+        {
+          "version": "6.0.1.18",
+          "downloads": 549,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/6.0.1.18.json"
+        },
+        {
+          "version": "6.0.1.19",
+          "downloads": 531,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/6.0.1.19.json"
+        },
+        {
+          "version": "6.0.1.20",
+          "downloads": 432,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/6.0.1.20.json"
+        },
+        {
+          "version": "6.0.1.21",
+          "downloads": 559,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/6.0.1.21.json"
+        },
+        {
+          "version": "6.0.1.22",
+          "downloads": 395,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/6.0.1.22.json"
+        },
+        {
+          "version": "6.0.1.23",
+          "downloads": 462,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/6.0.1.23.json"
+        },
+        {
+          "version": "6.0.1.24",
+          "downloads": 548,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/6.0.1.24.json"
+        },
+        {
+          "version": "6.0.1.25",
+          "downloads": 448,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/6.0.1.25.json"
+        },
+        {
+          "version": "6.0.1.26",
+          "downloads": 374,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/6.0.1.26.json"
+        },
+        {
+          "version": "6.0.1.27",
+          "downloads": 483,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/6.0.1.27.json"
+        },
+        {
+          "version": "6.0.1.28",
+          "downloads": 296,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/6.0.1.28.json"
+        },
+        {
+          "version": "6.0.1.29",
+          "downloads": 3883,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/6.0.1.29.json"
+        },
+        {
+          "version": "6.0.1.30",
+          "downloads": 714,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/6.0.1.30.json"
+        },
+        {
+          "version": "6.0.1.31",
+          "downloads": 802,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/6.0.1.31.json"
+        },
+        {
+          "version": "6.0.1.32",
+          "downloads": 739,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/6.0.1.32.json"
+        },
+        {
+          "version": "6.0.1.33",
+          "downloads": 755,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/6.0.1.33.json"
+        },
+        {
+          "version": "6.0.1.34",
+          "downloads": 395,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/6.0.1.34.json"
+        },
+        {
+          "version": "6.0.1.35",
+          "downloads": 777,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/6.0.1.35.json"
+        },
+        {
+          "version": "6.0.1.36",
+          "downloads": 955,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/6.0.1.36.json"
+        },
+        {
+          "version": "6.0.1.37",
+          "downloads": 949,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/6.0.1.37.json"
+        },
+        {
+          "version": "6.0.1.38",
+          "downloads": 311,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/6.0.1.38.json"
+        },
+        {
+          "version": "6.0.1.39",
+          "downloads": 912,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/6.0.1.39.json"
+        },
+        {
+          "version": "6.0.1.40",
+          "downloads": 1428,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/6.0.1.40.json"
+        },
+        {
+          "version": "6.0.1.41",
+          "downloads": 750,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/6.0.1.41.json"
+        },
+        {
+          "version": "6.0.1.42",
+          "downloads": 430,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/6.0.1.42.json"
+        },
+        {
+          "version": "6.0.1.43",
+          "downloads": 764,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/6.0.1.43.json"
+        },
+        {
+          "version": "6.0.1.44",
+          "downloads": 572,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/6.0.1.44.json"
+        },
+        {
+          "version": "6.0.1.45",
+          "downloads": 828,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/6.0.1.45.json"
+        },
+        {
+          "version": "6.0.2.1",
+          "downloads": 808,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/6.0.2.1.json"
+        },
+        {
+          "version": "6.0.2.2",
+          "downloads": 986,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/6.0.2.2.json"
+        },
+        {
+          "version": "6.0.2.3",
+          "downloads": 694,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/6.0.2.3.json"
+        },
+        {
+          "version": "6.0.2.4",
+          "downloads": 1115,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/6.0.2.4.json"
+        },
+        {
+          "version": "6.0.2.5",
+          "downloads": 454,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/6.0.2.5.json"
+        },
+        {
+          "version": "6.0.2.6",
+          "downloads": 367,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/6.0.2.6.json"
+        },
+        {
+          "version": "6.0.2.7",
+          "downloads": 420,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/6.0.2.7.json"
+        },
+        {
+          "version": "6.0.2.8",
+          "downloads": 811,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/6.0.2.8.json"
+        },
+        {
+          "version": "6.0.2.9",
+          "downloads": 527,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/6.0.2.9.json"
+        },
+        {
+          "version": "6.0.2.10",
+          "downloads": 679,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/6.0.2.10.json"
+        },
+        {
+          "version": "6.0.2.11",
+          "downloads": 394,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/6.0.2.11.json"
+        },
+        {
+          "version": "6.0.2.12",
+          "downloads": 420,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/6.0.2.12.json"
+        },
+        {
+          "version": "6.0.2.13",
+          "downloads": 315,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/6.0.2.13.json"
+        },
+        {
+          "version": "6.0.2.14",
+          "downloads": 842,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/6.0.2.14.json"
+        },
+        {
+          "version": "6.0.2.15",
+          "downloads": 382,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/6.0.2.15.json"
+        },
+        {
+          "version": "6.0.2.16",
+          "downloads": 717,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/6.0.2.16.json"
+        },
+        {
+          "version": "6.0.2.17",
+          "downloads": 708,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/6.0.2.17.json"
+        },
+        {
+          "version": "6.0.2.18",
+          "downloads": 351,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/6.0.2.18.json"
+        },
+        {
+          "version": "6.0.2.19",
+          "downloads": 959,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/6.0.2.19.json"
+        },
+        {
+          "version": "6.0.2.20",
+          "downloads": 340,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/6.0.2.20.json"
+        },
+        {
+          "version": "6.0.2.21",
+          "downloads": 348,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/6.0.2.21.json"
+        },
+        {
+          "version": "6.0.2.22",
+          "downloads": 360,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/6.0.2.22.json"
+        },
+        {
+          "version": "6.0.2.23",
+          "downloads": 338,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/6.0.2.23.json"
+        },
+        {
+          "version": "6.0.2.24",
+          "downloads": 375,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/6.0.2.24.json"
+        },
+        {
+          "version": "6.0.2.25",
+          "downloads": 926,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/6.0.2.25.json"
+        },
+        {
+          "version": "6.0.2.26",
+          "downloads": 348,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/6.0.2.26.json"
+        },
+        {
+          "version": "6.0.2.27",
+          "downloads": 560,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/6.0.2.27.json"
+        },
+        {
+          "version": "6.0.2.28",
+          "downloads": 310,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/6.0.2.28.json"
+        },
+        {
+          "version": "6.0.2.29",
+          "downloads": 327,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/6.0.2.29.json"
+        },
+        {
+          "version": "6.0.2.30",
+          "downloads": 386,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/6.0.2.30.json"
+        },
+        {
+          "version": "6.0.2.31",
+          "downloads": 367,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/6.0.2.31.json"
+        },
+        {
+          "version": "6.0.2.32",
+          "downloads": 573,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/6.0.2.32.json"
+        },
+        {
+          "version": "6.0.2.33",
+          "downloads": 499,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/6.0.2.33.json"
+        },
+        {
+          "version": "6.0.2.34",
+          "downloads": 743,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/6.0.2.34.json"
+        },
+        {
+          "version": "6.0.2.35",
+          "downloads": 255,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/6.0.2.35.json"
+        },
+        {
+          "version": "6.0.2.36",
+          "downloads": 500,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/6.0.2.36.json"
+        },
+        {
+          "version": "6.0.2.37",
+          "downloads": 426,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/6.0.2.37.json"
+        },
+        {
+          "version": "6.0.2.38",
+          "downloads": 457,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/6.0.2.38.json"
+        },
+        {
+          "version": "6.0.2.39",
+          "downloads": 610,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/6.0.2.39.json"
+        },
+        {
+          "version": "6.0.2.40",
+          "downloads": 308,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/6.0.2.40.json"
+        },
+        {
+          "version": "6.0.2.41",
+          "downloads": 611,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/6.0.2.41.json"
+        },
+        {
+          "version": "6.0.2.42",
+          "downloads": 340,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/6.0.2.42.json"
+        },
+        {
+          "version": "6.0.2.43",
+          "downloads": 857,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/6.0.2.43.json"
+        },
+        {
+          "version": "6.0.2.44",
+          "downloads": 321,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/6.0.2.44.json"
+        },
+        {
+          "version": "6.0.2.45",
+          "downloads": 827,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/6.0.2.45.json"
+        },
+        {
+          "version": "6.0.2.46",
+          "downloads": 1604,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/6.0.2.46.json"
+        },
+        {
+          "version": "6.0.2.47",
+          "downloads": 1004,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/6.0.2.47.json"
+        },
+        {
+          "version": "6.0.2.48",
+          "downloads": 543,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/6.0.2.48.json"
+        },
+        {
+          "version": "6.0.2.49",
+          "downloads": 1151,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/6.0.2.49.json"
+        },
+        {
+          "version": "6.0.2.50",
+          "downloads": 403,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/6.0.2.50.json"
+        },
+        {
+          "version": "6.0.2.51",
+          "downloads": 1099,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/6.0.2.51.json"
+        },
+        {
+          "version": "6.1.0.1",
+          "downloads": 1306,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/6.1.0.1.json"
+        },
+        {
+          "version": "6.1.0.2",
+          "downloads": 358,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/6.1.0.2.json"
+        },
+        {
+          "version": "6.1.0.3",
+          "downloads": 875,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/6.1.0.3.json"
+        },
+        {
+          "version": "6.1.0.4",
+          "downloads": 952,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/6.1.0.4.json"
+        },
+        {
+          "version": "6.1.0.5",
+          "downloads": 486,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/6.1.0.5.json"
+        },
+        {
+          "version": "6.1.0.6",
+          "downloads": 456,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/6.1.0.6.json"
+        },
+        {
+          "version": "6.1.0.7",
+          "downloads": 457,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/6.1.0.7.json"
+        },
+        {
+          "version": "6.1.0.8",
+          "downloads": 1172,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/6.1.0.8.json"
+        },
+        {
+          "version": "6.1.0.9",
+          "downloads": 294,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/6.1.0.9.json"
+        },
+        {
+          "version": "6.1.0.10",
+          "downloads": 332,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/6.1.0.10.json"
+        },
+        {
+          "version": "6.1.0.11",
+          "downloads": 408,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/6.1.0.11.json"
+        },
+        {
+          "version": "6.1.0.12",
+          "downloads": 941,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/6.1.0.12.json"
+        },
+        {
+          "version": "6.1.0.13",
+          "downloads": 704,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/6.1.0.13.json"
+        },
+        {
+          "version": "6.1.0.14",
+          "downloads": 945,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/6.1.0.14.json"
+        },
+        {
+          "version": "6.1.0.15",
+          "downloads": 677,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/6.1.0.15.json"
+        },
+        {
+          "version": "6.1.0.16",
+          "downloads": 839,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/6.1.0.16.json"
+        },
+        {
+          "version": "6.1.0.18",
+          "downloads": 991,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/6.1.0.18.json"
+        },
+        {
+          "version": "6.1.0.19",
+          "downloads": 918,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/6.1.0.19.json"
+        },
+        {
+          "version": "6.1.0.20",
+          "downloads": 499,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/6.1.0.20.json"
+        },
+        {
+          "version": "6.1.0.21",
+          "downloads": 829,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/6.1.0.21.json"
+        },
+        {
+          "version": "6.1.0.22",
+          "downloads": 787,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/6.1.0.22.json"
+        },
+        {
+          "version": "6.1.0.23",
+          "downloads": 312,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/6.1.0.23.json"
+        },
+        {
+          "version": "6.1.0.24",
+          "downloads": 754,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/6.1.0.24.json"
+        },
+        {
+          "version": "6.1.0.25",
+          "downloads": 1531,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/6.1.0.25.json"
+        },
+        {
+          "version": "6.1.0.26",
+          "downloads": 816,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/6.1.0.26.json"
+        },
+        {
+          "version": "6.1.0.27",
+          "downloads": 1179,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/6.1.0.27.json"
+        },
+        {
+          "version": "6.1.0.28",
+          "downloads": 1393,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/6.1.0.28.json"
+        },
+        {
+          "version": "6.1.0.29",
+          "downloads": 1774,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/6.1.0.29.json"
+        },
+        {
+          "version": "6.1.0.30",
+          "downloads": 1262,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/6.1.0.30.json"
+        },
+        {
+          "version": "6.1.0.31",
+          "downloads": 1736,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/6.1.0.31.json"
+        },
+        {
+          "version": "6.1.0.32",
+          "downloads": 1686,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/6.1.0.32.json"
+        },
+        {
+          "version": "6.1.0.33",
+          "downloads": 1689,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/6.1.0.33.json"
+        },
+        {
+          "version": "6.1.0.34",
+          "downloads": 2290,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/6.1.0.34.json"
+        },
+        {
+          "version": "6.1.0.35",
+          "downloads": 2392,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/6.1.0.35.json"
+        },
+        {
+          "version": "6.1.0.36",
+          "downloads": 1557,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/6.1.0.36.json"
+        },
+        {
+          "version": "6.1.0.37",
+          "downloads": 1071,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/6.1.0.37.json"
+        },
+        {
+          "version": "6.1.0.38",
+          "downloads": 2050,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/6.1.0.38.json"
+        },
+        {
+          "version": "6.1.0.39",
+          "downloads": 5040,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/6.1.0.39.json"
+        },
+        {
+          "version": "8.0.1.1",
+          "downloads": 1456,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/8.0.1.1.json"
+        },
+        {
+          "version": "8.0.1.2",
+          "downloads": 1636,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/8.0.1.2.json"
+        },
+        {
+          "version": "8.0.1.3",
+          "downloads": 1930,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/8.0.1.3.json"
+        },
+        {
+          "version": "8.0.1.4",
+          "downloads": 595,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/8.0.1.4.json"
+        },
+        {
+          "version": "8.0.1.5",
+          "downloads": 1200,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/8.0.1.5.json"
+        },
+        {
+          "version": "8.0.1.6",
+          "downloads": 2230,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/8.0.1.6.json"
+        },
+        {
+          "version": "8.0.1.7",
+          "downloads": 1402,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/8.0.1.7.json"
+        },
+        {
+          "version": "8.0.1.8",
+          "downloads": 170,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/8.0.1.8.json"
+        },
+        {
+          "version": "8.0.1.9",
+          "downloads": 341,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/8.0.1.9.json"
+        },
+        {
+          "version": "8.0.1.10",
+          "downloads": 2102,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/8.0.1.10.json"
+        },
+        {
+          "version": "8.0.1.11",
+          "downloads": 97,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/8.0.1.11.json"
+        },
+        {
+          "version": "8.0.1.12",
+          "downloads": 256,
+          "@id": "https://api.nuget.org/v3/registration5-semver1/clio/8.0.1.12.json"
+        }
+      ],
+      "vulnerabilities": []
+    }
+  ]
+}

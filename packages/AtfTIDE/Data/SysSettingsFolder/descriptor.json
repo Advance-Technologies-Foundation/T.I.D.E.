@@ -1,0 +1,63 @@
+﻿{
+  "Descriptor": {
+    "UId": "b64e2af4-063f-959a-8d8c-7768c3883636",
+    "Name": "SysSettingsFolder",
+    "ModifiedOnUtc": "\/Date(1735293770000)\/",
+    "InstallType": 0,
+    "Schema": {
+      "UId": "81996156-45e6-40de-931e-6ddc6f75cd7e",
+      "Name": "SysSettingsFolder"
+    },
+    "Columns": [
+      {
+        "ColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+        "IsForceUpdate": false,
+        "IsKey": true,
+        "ColumnName": "Id",
+        "DataTypeValueUId": "23018567-a13c-4320-8687-fd6f9e3699bd"
+      },
+      {
+        "ColumnUId": "736c30a7-c0ec-4fa9-b034-2552b319b633",
+        "IsForceUpdate": false,
+        "IsKey": false,
+        "ColumnName": "Name",
+        "DataTypeValueUId": "ddb3a1ee-07e8-4d62-b7a9-d0e618b00fbd"
+      },
+      {
+        "ColumnUId": "9e53fd7c-dde4-4502-a64c-b9e34148108b",
+        "IsForceUpdate": false,
+        "IsKey": false,
+        "ColumnName": "Description",
+        "DataTypeValueUId": "ddb3a1ee-07e8-4d62-b7a9-d0e618b00fbd"
+      },
+      {
+        "ColumnUId": "527b9e4e-7dbf-4721-a112-72b423b3365a",
+        "IsForceUpdate": false,
+        "IsKey": false,
+        "ColumnName": "Parent",
+        "DataTypeValueUId": "b295071f-7ea9-4e62-8d1a-919bf3732ff2"
+      },
+      {
+        "ColumnUId": "e44c8807-bc0e-4415-b41c-2272c8fbdf42",
+        "IsForceUpdate": false,
+        "IsKey": false,
+        "ColumnName": "FolderType",
+        "DataTypeValueUId": "b295071f-7ea9-4e62-8d1a-919bf3732ff2"
+      },
+      {
+        "ColumnUId": "4d5be702-fa8a-4b6b-97d0-f666b99f108e",
+        "IsForceUpdate": false,
+        "IsKey": false,
+        "ColumnName": "SearchData",
+        "DataTypeValueUId": "b7342b7a-5dde-40de-aa7c-24d2a57b3202"
+      },
+      {
+        "ColumnUId": "7194c633-a5a9-48cf-a96c-d8b548878b2f",
+        "IsForceUpdate": false,
+        "IsKey": false,
+        "ColumnName": "OptimizationType",
+        "DataTypeValueUId": "6b6b74e2-820d-490e-a017-2b73d4ccf2b0"
+      }
+    ]
+  }
+}

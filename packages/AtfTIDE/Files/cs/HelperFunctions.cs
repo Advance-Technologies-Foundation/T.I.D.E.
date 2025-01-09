@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
+using System.Text;
 using ErrorOr;
 using Terrasoft.Core;
 using Terrasoft.Core.Entities;
@@ -13,6 +15,16 @@ namespace AtfTIDE {
 			string baseDir = AppDomain.CurrentDomain.BaseDirectory;
 			string repositoryDirectory = Path.Combine(baseDir, "conf","tide", repositoryName);
 			return new DirectoryInfo(repositoryDirectory);
+		}
+		
+		/// <summary>
+		/// Gets the directory information for the Clio installation.
+		/// </summary>
+		/// <returns>A <see cref="DirectoryInfo"/> object representing the Clio directory.</returns>
+		public static DirectoryInfo GetClioDirectory() {
+			string baseDir = AppDomain.CurrentDomain.BaseDirectory;
+			string clioDirectory = Path.Combine(baseDir, "conf","clio");
+			return new DirectoryInfo(clioDirectory);
 		}
 
 		public static ErrorOr<FileInfo> GetConsoleGitPath(){
@@ -73,6 +85,47 @@ namespace AtfTIDE {
 			}
 		}
 		
+		
+		public static OsProcessResult RunOsProcess(ProcessStartInfo startInfo, bool waitForExit = true) {
+			StringBuilder output = new StringBuilder();
+			StringBuilder error = new StringBuilder();
+			try {
+				using (Process process = new Process()) {
+					process.StartInfo = startInfo;
+					if(waitForExit) {
+						process.OutputDataReceived += (sender, e) => {
+							if (!string.IsNullOrEmpty(e.Data)) {
+								output.AppendLine(e.Data);
+							}
+						};
+						process.ErrorDataReceived += (sender, e) => {
+							if (!string.IsNullOrEmpty(e.Data)) {
+								error.AppendLine(e.Data);
+							}
+						};
+						process.Start();
+						process.BeginOutputReadLine();
+						process.BeginErrorReadLine();
+						process.WaitForExit();
+						return new OsProcessResult() {
+							IsError = true,
+							ErrorMessage = error.ToString(),
+							Output = output.ToString()
+						};
+					}
+					process.Start();
+					return new OsProcessResult() {
+						IsError = true,
+					};
+				}
+			} catch (Exception ex) {
+				return new OsProcessResult() {
+					IsError = true,
+					ErrorMessage = ex.Message,
+					Output = output.ToString()
+				}; 
+			}
+		}
 	}
 	
 	
@@ -89,6 +142,14 @@ namespace AtfTIDE {
 		public string Password { get; }
 		public string UserName { get; }
 		public string Name { get; }
+	}
+	
+	public class OsProcessResult {
+
+		public bool IsError { get; set; }
+		public string ErrorMessage { get; set; }
+		public string Output { get; set; }
+
 	}
 	
 }

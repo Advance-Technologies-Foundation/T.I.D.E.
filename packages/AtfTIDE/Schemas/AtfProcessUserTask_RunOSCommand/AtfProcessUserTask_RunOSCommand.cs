@@ -30,27 +30,17 @@ namespace Terrasoft.Core.Process.Configuration
 		#region Methods: Protected
 
 		protected override bool InternalExecute(ProcessExecutingContext context) {
-			// IMPORTANT: When implementing long-running operations, it is crucial to
-			// enable timely and responsive cancellation. To achieve this, ensure that your code is designed to
-			// respond appropriately to cancellation requests using the context.CancellationToken mechanism.
-			// For more detailed information and examples, please, refer to our documentation.
-			
 			StringBuilder output = new StringBuilder();
 			StringBuilder error = new StringBuilder();
-			
 			if(WorkingDirectory.IsNullOrEmpty()) {
 				IsError = true;
 				ErrorMessage = "Working directory is not set";
 				return true;
 			}
-			
-			//TransformerName = UrlAppender, tag name
 			if(!string.IsNullOrWhiteSpace(TransformerName)) {
 				ITextTransformer transformer = ClassFactory.Get<ITextTransformer>(TransformerName);
 				Arguments = transformer.Transform(Arguments);
 			}
-			
-			
 			try {
 				ProcessStartInfo startInfo = new ProcessStartInfo {
 					FileName = FileName,
@@ -71,19 +61,15 @@ namespace Terrasoft.Core.Process.Configuration
 								output.AppendLine(e.Data);
 							}
 						};
-						
 						process.ErrorDataReceived += (sender, e) => {
 							if (!string.IsNullOrEmpty(e.Data)) {
 								error.AppendLine(e.Data);
 							}
 						};
-						
 						process.Start();
 						process.BeginOutputReadLine();
 						process.BeginErrorReadLine();
 						process.WaitForExit();
-						
-						
 						ErrorMessage = error + "\n"+output;
 						
 					}else {

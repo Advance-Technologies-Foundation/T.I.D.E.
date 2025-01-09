@@ -257,4 +257,9 @@
     <ItemGroup>
         <ProjectReference Include="..\..\packages\AtfTIDE\Files\AtfTIDE.csproj" />
     </ItemGroup>
+    <ItemGroup>
+        <None Update="ClioInstaller\ResponseJson\**">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </None>
+    </ItemGroup>
 </Project>

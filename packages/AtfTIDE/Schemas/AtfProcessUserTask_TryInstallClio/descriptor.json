@@ -1,0 +1,10 @@
+﻿{
+  "Descriptor": {
+    "UId": "0fe5cc90-943e-498a-b464-ddaf1279bc81",
+    "Name": "AtfProcessUserTask_TryInstallClio",
+    "ModifiedOnUtc": "\/Date(1735292248000)\/",
+    "ManagerName": "ProcessUserTaskSchemaManager",
+    "Caption": "Install Clio",
+    "DependsOn": []
+  }
+}
