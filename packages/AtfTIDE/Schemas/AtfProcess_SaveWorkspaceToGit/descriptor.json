@@ -2,7 +2,7 @@
   "Descriptor": {
     "UId": "5c93343d-8dc3-41e5-8ad8-76dd7f32b609",
     "Name": "AtfProcess_SaveWorkspaceToGit",
-    "ModifiedOnUtc": "\/Date(1736473382000)\/",
+    "ModifiedOnUtc": "\/Date(1736477538000)\/",
     "ManagerName": "ProcessSchemaManager",
     "Caption": "Save Workspace to Git",
     "DependsOn": []
