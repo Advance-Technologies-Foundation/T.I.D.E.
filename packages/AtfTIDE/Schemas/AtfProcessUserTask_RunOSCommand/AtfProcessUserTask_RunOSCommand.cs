@@ -74,6 +74,7 @@ namespace Terrasoft.Core.Process.Configuration
 						process.ErrorDataReceived += (sender, e) => {
 							if (!string.IsNullOrEmpty(e.Data)) {
 								error.AppendLine(e.Data);
+								IsError = true;
 							}
 						};
 						process.Start();
