@@ -28,7 +28,17 @@ namespace Terrasoft.Core.Process.Configuration
 	{
 
 		#region Methods: Protected
-
+		
+		private static void SetDotnetProcessTempPath(ProcessStartInfo processStartInfo, string tempPath) {
+			processStartInfo.EnvironmentVariables["TMP"] = tempPath;
+			processStartInfo.EnvironmentVariables["TEMP"] = tempPath;
+			string profilePath = Path.Combine(tempPath, "dotnet");
+			processStartInfo.EnvironmentVariables["DOTNET_CLI_HOME"] = profilePath;
+			processStartInfo.EnvironmentVariables["USERPROFILE"] = profilePath;
+			processStartInfo.EnvironmentVariables["APPDATA"] = Path.Combine(profilePath, "AppData", "Roaming");
+			processStartInfo.EnvironmentVariables["LOCALAPPDATA"] = Path.Combine(profilePath, "AppData", "Local");
+		}
+		
 		protected override bool InternalExecute(ProcessExecutingContext context) {
 			StringBuilder output = new StringBuilder();
 			StringBuilder error = new StringBuilder();
@@ -51,9 +61,9 @@ namespace Terrasoft.Core.Process.Configuration
 					RedirectStandardError = true,
 					RedirectStandardOutput = true,
 				};
+				SetDotnetProcessTempPath(startInfo, HelperFunctions.CreateTempDirectory().FullName);
 				using (System.Diagnostics.Process process = new System.Diagnostics.Process()) {
 					process.StartInfo = startInfo;
-					
 					if(WaitForExit) {
 						
 						process.OutputDataReceived += (sender, e) => {

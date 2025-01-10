@@ -126,7 +126,17 @@ namespace AtfTIDE {
 				}; 
 			}
 		}
+		
+		public static DirectoryInfo CreateTempDirectory(){
+			DirectoryInfo tempDir = Directory.CreateDirectory(Path.Combine(GetClioDirectory().FullName, ".dotnet_tmp"));
+			if(!tempDir.Exists) {
+				tempDir.Create();
+			}
+			return tempDir;
+		}
 	}
+	
+	
 	
 	
 	public class RepositoryInfo {
