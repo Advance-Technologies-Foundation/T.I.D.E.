@@ -115,22 +115,16 @@ namespace AtfTIDE.ClioInstaller {
 		public void CopyDirectory(string sourceDir, string destDir)
 		{
 			DirectoryInfo dir = new DirectoryInfo(sourceDir);
-			if (!dir.Exists)
-			{
+			if (!dir.Exists) {
 				throw new DirectoryNotFoundException($"Source directory not found: {sourceDir}");
 			}
-
 			DirectoryInfo[] dirs = dir.GetDirectories();
 			Directory.CreateDirectory(destDir);
-
-			foreach (FileInfo file in dir.GetFiles())
-			{
+			foreach (FileInfo file in dir.GetFiles()) {
 				string targetFilePath = Path.Combine(destDir, file.Name);
 				file.CopyTo(targetFilePath);
 			}
-
-			foreach (DirectoryInfo subDir in dirs)
-			{
+			foreach (DirectoryInfo subDir in dirs) {
 				string newDestinationDir = Path.Combine(destDir, subDir.Name);
 				CopyDirectory(subDir.FullName, newDestinationDir);
 			}
