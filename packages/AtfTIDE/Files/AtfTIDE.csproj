@@ -949,7 +949,6 @@
 			<Private>False</Private>
 		</Reference>
 	</ItemGroup>
-	<ItemGroup Label="Standalone package external assembly references" />
 	<ItemGroup Label="Entity Files">
 		<Compile Remove="$(RelativePkgFolderPath)/AtfTIDE/Schemas/AtfRepository/AtfRepository.cs" Condition="Exists('$(RelativePkgFolderPath)/AtfTIDE/Schemas/AtfRepository/AtfRepository.cs')" />
 		<Compile Remove="$(RelativePkgFolderPath)/AtfTIDE/Schemas/AtfRepositoryBranch/AtfRepositoryBranch.cs" Condition="Exists('$(RelativePkgFolderPath)/AtfTIDE/Schemas/AtfRepositoryBranch/AtfRepositoryBranch.cs')" />
@@ -1011,6 +1010,7 @@
 			<Private>False</Private>
 		</Reference>
 		<PackageReference Include="ErrorOr" Version="2.1.0" />
+		<PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
 		<Reference Include="System.Net.Http" />
 	</ItemGroup>
 	<Target Name="Paths" BeforeTargets="BeforeCompile">
