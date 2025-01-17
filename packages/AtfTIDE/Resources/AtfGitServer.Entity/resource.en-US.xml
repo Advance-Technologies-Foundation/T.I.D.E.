@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="en-US">
+	<Group Type="String">
+		<Items>
+			<Item Name="Caption" Value="AtfGitServer" />
+			<Item Name="Columns.AccessToken.Caption" Value="Access Token" />
+			<Item Name="Columns.Code.Caption" Value="Code" />
+			<Item Name="Columns.Url.Caption" Value="Url" />
+			<Item Name="Columns.UserName.Caption" Value="User Name" />
+			<Item Name="EventsProcessSchema.Caption" Value="Business process" />
+		</Items>
+	</Group>
+</Resources>

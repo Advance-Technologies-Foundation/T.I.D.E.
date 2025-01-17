@@ -3,6 +3,57 @@ define("AtfTIDE_ListPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHEMA
 		viewConfigDiff: /**SCHEMA_VIEW_CONFIG_DIFF*/[
 			{
 				"operation": "merge",
+				"name": "MenuItem_ImportFromExcel",
+				"values": {
+					"clicked": {
+						"request": "crt.ImportDataRequest",
+						"params": {
+							"entitySchemaName": "AtfRepository"
+						}
+					}
+				}
+			},
+			{
+				"operation": "remove",
+				"name": "SearchFilter",
+				"properties": [
+					"targetAttributes"
+				]
+			},
+			{
+				"operation": "merge",
+				"name": "SearchFilter",
+				"values": {
+					"_filterOptions": {
+						"expose": [
+							{
+								"attribute": "SearchFilter_Items",
+								"converters": [
+									{
+										"converter": "crt.SearchFilterAttributeConverter",
+										"args": [
+											"Items"
+										]
+									}
+								]
+							}
+						],
+						"from": [
+							"SearchFilter_SearchValue",
+							"SearchFilter_FilteredColumnsGroups"
+						]
+					}
+				}
+			},
+			{
+				"operation": "merge",
+				"name": "FolderTree",
+				"values": {
+					"rootSchemaName": "AtfRepository"
+				}
+			},
+			{
+				"operation": "merge",
 				"name": "DataTable",
 				"values": {
 					"columns": [
@@ -23,29 +74,32 @@ define("AtfTIDE_ListPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHEMA
 							"code": "PDS_CreatedBy",
 							"caption": "#ResourceString(PDS_CreatedBy)#",
 							"dataValueType": 10
-						},
+						}
 					]
 				}
 			},
 			{
-				"operation": "merge",
-				"name": "MenuItem_ImportFromExcel",
+				"operation": "insert",
+				"name": "Button_ynk6wyx",
 				"values": {
+					"type": "crt.Button",
+					"caption": "#ResourceString(Button_ynk6wyx_caption)#",
+					"color": "default",
+					"disabled": false,
+					"size": "large",
+					"iconPosition": "only-text",
+					"visible": true,
 					"clicked": {
-						"request": "crt.ImportDataRequest",
+						"request": "crt.OpenPageRequest",
 						"params": {
-							"entitySchemaName": "AtfRepository"
+							"schemaName": "AtfGitServerList"
 						}
-					}
-				}
-			},
-			{
-				"operation": "merge",
-				"name": "FolderTree",
-				"values": {
-					"sourceSchemaName": "FolderTree",
-					"rootSchemaName": "AtfRepository"
-				}
+					},
+					"clickMode": "default"
+				},
+				"parentName": "ActionButtonsContainer",
+				"propertyName": "items",
+				"index": 1
 			}
 		]/**SCHEMA_VIEW_CONFIG_DIFF*/,
 		viewModelConfigDiff: /**SCHEMA_VIEW_MODEL_CONFIG_DIFF*/[
@@ -73,6 +127,34 @@ define("AtfTIDE_ListPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHEMA
 							"path": "PDS.CreatedBy"
 						}
 					}
+				}
+			},
+			{
+				"operation": "merge",
+				"path": [
+					"attributes",
+					"Items",
+					"modelConfig"
+				],
+				"values": {
+					"filterAttributes": [
+						{
+							"loadOnChange": true,
+							"name": "FolderTree_active_folder_filter"
+						},
+						{
+							"name": "Items_PredefinedFilter",
+							"loadOnChange": true
+						},
+						{
+							"name": "LookupQuickFilterByTag_Items",
+							"loadOnChange": true
+						},
+						{
+							"name": "SearchFilter_Items",
+							"loadOnChange": true
+						}
+					]
 				}
 			}
 		]/**SCHEMA_VIEW_MODEL_CONFIG_DIFF*/,

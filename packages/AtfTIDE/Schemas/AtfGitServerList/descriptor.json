@@ -1,14 +1,14 @@
 ﻿{
   "Descriptor": {
-    "UId": "2079e94d-751e-46aa-a6ce-40da6753f458",
-    "Name": "AtfTIDE_ListPage",
-    "ModifiedOnUtc": "\/Date(1737074604000)\/",
+    "UId": "480696ec-5ae6-473a-af68-9e1153d473b1",
+    "Name": "AtfGitServerList",
+    "ModifiedOnUtc": "\/Date(1737075460000)\/",
     "Parent": {
       "UId": "3334b6c0-c8ab-4b59-a367-0c9182102552",
       "Name": "ListPageV2Template"
     },
     "ManagerName": "ClientUnitSchemaManager",
-    "Caption": "T.I.D.E. list page",
+    "Caption": "Git Server List",
     "DependsOn": []
   }
 }

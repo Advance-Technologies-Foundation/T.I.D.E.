@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="en-US">
+	<Group Type="String">
+		<Items>
+			<Item Name="Caption" Value="Git Server List" />
+			<Item Name="LocalizableStrings.Button_0r9ijmj_caption.Value" Value="Find apps on selected server" />
+			<Item Name="LocalizableStrings.PageTitle_caption.Value" Value="T.I.D.E. GIT SERVERS" />
+		</Items>
+	</Group>
+</Resources>

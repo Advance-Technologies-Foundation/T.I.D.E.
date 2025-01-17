@@ -8,6 +8,7 @@
       "Name": "PageWithTabsFreedomTemplate"
     },
     "ManagerName": "ClientUnitSchemaManager",
-    "Caption": "T.I.D.E. form page"
+    "Caption": "T.I.D.E. form page",
+    "DependsOn": []
   }
 }
