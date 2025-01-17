@@ -147,7 +147,7 @@ define("AtfGitServerList", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHEMA
 					"clicked": {
 						"request": "crt.RunBusinessProcessRequest",
 						"params": {
-							"processName": "AtfFindAppsOnGitServer",
+							"processName": "AtfFindAppRepositoriesOnServer",
 							"processRunType": "ForTheSelectedPage",
 							"saveAtProcessStart": true,
 							"showNotification": true,

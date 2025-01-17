@@ -7,10 +7,32 @@
       "A5": "bba4c845-42c8-4398-8175-fd460f94b8e8",
       "B1": [],
       "B2": [],
-      "B3": [],
+      "B3": [
+        {
+          "UId": "207577d0-8fd1-461c-ad77-ca390226edb6",
+          "A2": "AtfTIDE.cs.GitBrowser",
+          "A3": "8d6028a1-b4ec-4918-94c1-7de9a056025a",
+          "A4": "8d6028a1-b4ec-4918-94c1-7de9a056025a",
+          "A5": "bba4c845-42c8-4398-8175-fd460f94b8e8",
+          "GF1": "null"
+        }
+      ],
       "B6": "57902d1e-ea0c-4991-b367-992c12d68fb2",
       "B8": "8.2.0.4183",
-      "FJ1": [],
+      "FJ1": [
+        {
+          "BL1": "Terrasoft.Core.Process.ProcessSchemaParameter",
+          "UId": "4f9199c0-e0fc-434a-a6ae-9c2a33ed168e",
+          "A2": "AtfGitServer",
+          "A3": "8d6028a1-b4ec-4918-94c1-7de9a056025a",
+          "A4": "8d6028a1-b4ec-4918-94c1-7de9a056025a",
+          "L1": "b295071f-7ea9-4e62-8d1a-919bf3732ff2",
+          "L8": {
+            "GS5": "8d6028a1-b4ec-4918-94c1-7de9a056025a"
+          },
+          "L9": "05aa9cf3-900f-45a1-b4e5-c3a9a63ee8c2"
+        }
+      ],
       "IJ1": true,
       "BK8": "bb4d6607-026b-4b27-b640-8f5c77c1e89d",
       "IJ10": true,
@@ -107,7 +129,7 @@
           "BO3": true,
           "BP2": [],
           "CL2": "FFFFFFFF",
-          "CH1": "string gitUrl = \"/\";\r\nstring gitlabToken = \"\";\r\nstring userName = \"\";\r\n\r\nvar gitBrowser = new GitLabBrowser(gitUrl);\r\nvar repositories = gitlabBrowser.FindClioRepositoriesOnServer(gitlabToken);\r\nforeach (var repo in repositories) {\r\n\tvar entitySchemaName = \"AtfRepository\";\r\n        var entitySchema = UserConnection.EntitySchemaManager.GetInstanceByName(entitySchemaName);\r\n        var entity = entitySchema.CreateEntity(UserConnection);\r\n        entity.SetDefColumnValues();\r\n        entity.SetColumnValue(\"AtfName\", repo.Name);\r\n\t\tentity.SetColumnValue(\"AtfAccessToken\", gitlabToken);\r\n\t\tentity.SetColumnValue(\"AtfRepositoryUrl\", repo.UrlToClone);\r\n\t\tentity.SetColumnValue(\"AtfUserName\", userName);\r\n\t\t\r\n        if (!entity.Save())\r\n        {\r\n            throw new Exception(\"Не удалось сохранить запись!\");\r\n        }\r\n}\r\nreturn true;",
+          "CH1": "var gitServerEntityName = \"AtfGitServer\";\nvar gitServerEntitySchema = UserConnection.EntitySchemaManager.GetInstanceByName(gitServerEntityName);\nvar gitServerEntity = gitServerEntitySchema.CreateEntity(UserConnection);\nif (gitServerEntity.FetchFromDB(Get<Guid>(\"AtfGitServer\"))) {\n \n    string gitUrl = gitServerEntity.GetTypedColumnValue<string>(\"Url\");\n    string gitlabToken = gitServerEntity.GetTypedColumnValue<string>(\"AccessToken\");;\n    string userName = gitServerEntity.GetTypedColumnValue<string>(\"UserName\");;\n   \n    var gitlabBrowser = new GitLabBrowser(gitUrl);\n    var repositories = gitlabBrowser.FindClioRepositoriesOnServer(gitlabToken);\n    foreach (var repo in repositories) {\n        var entitySchemaName = \"AtfRepository\";\n            var entitySchema = UserConnection.EntitySchemaManager.GetInstanceByName(entitySchemaName);\n            var entity = entitySchema.CreateEntity(UserConnection);\n            entity.SetDefColumnValues();\n            entity.SetColumnValue(\"AtfName\", repo.Name);\n            entity.SetColumnValue(\"AtfAccessToken\", gitlabToken);\n            entity.SetColumnValue(\"AtfRepositoryUrl\", repo.UrlToClone);\n            entity.SetColumnValue(\"AtfUserName\", userName);\n           \n            if (!entity.Save())\n            {\n                throw new Exception(\"Не удалось сохранить запись!\");\n            }\n    }\n   \n}\n \nreturn true;",
           "CH2": true
         },
         {
