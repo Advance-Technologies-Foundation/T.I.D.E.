@@ -2,13 +2,12 @@
   "Descriptor": {
     "UId": "480696ec-5ae6-473a-af68-9e1153d473b1",
     "Name": "AtfGitServerList",
-    "ModifiedOnUtc": "\/Date(1737082122000)\/",
+    "ModifiedOnUtc": "\/Date(1737105661000)\/",
     "Parent": {
       "UId": "3334b6c0-c8ab-4b59-a367-0c9182102552",
       "Name": "ListPageV2Template"
     },
     "ManagerName": "ClientUnitSchemaManager",
-    "Caption": "Git Server List",
-    "DependsOn": []
+    "Caption": "Git Server List"
   }
 }

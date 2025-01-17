@@ -30,13 +30,46 @@
           "L8": {
             "GS5": "8d6028a1-b4ec-4918-94c1-7de9a056025a"
           },
-          "L9": "05aa9cf3-900f-45a1-b4e5-c3a9a63ee8c2"
+          "L9": "05aa9cf3-900f-45a1-b4e5-c3a9a63ee8c2",
+          "L12": 0
         }
       ],
       "IJ1": true,
       "BK8": "bb4d6607-026b-4b27-b640-8f5c77c1e89d",
       "IJ10": true,
-      "BK15": [],
+      "BK15": [
+        {
+          "BL1": "Terrasoft.Core.Process.ProcessSchemaMapping",
+          "UId": "55ad7da2-bc35-4e32-bb4b-19b19d46170e",
+          "A2": "LinkEntityToProcessUserTask1",
+          "A3": "8d6028a1-b4ec-4918-94c1-7de9a056025a",
+          "A4": "8d6028a1-b4ec-4918-94c1-7de9a056025a",
+          "GT2": "[Element:{cae77abe-0959-4f32-8d78-fe6c2a32f923}].[Parameter:{a5514bd6-9082-4f3b-b0ae-42830c86ab1c}]",
+          "GT3": "a5514bd6-9082-4f3b-b0ae-42830c86ab1c",
+          "GT5": "b4e61a1e-7647-4984-a3b0-64a29ed30681",
+          "GT4": "fcace79b-6103-4992-8a1f-8e443114321a",
+          "GT1": {
+            "GS1": 3,
+            "GS2": "[#[IsOwnerSchema:false].[IsSchema:false].[Parameter:{4f9199c0-e0fc-434a-a6ae-9c2a33ed168e}]#]",
+            "GS5": "8d6028a1-b4ec-4918-94c1-7de9a056025a"
+          }
+        },
+        {
+          "BL1": "Terrasoft.Core.Process.ProcessSchemaMapping",
+          "UId": "cd450846-c2c9-46f7-842d-ea8804803d64",
+          "A2": "LinkEntityToProcessUserTask1",
+          "A3": "8d6028a1-b4ec-4918-94c1-7de9a056025a",
+          "A4": "8d6028a1-b4ec-4918-94c1-7de9a056025a",
+          "GT2": "[Element:{cae77abe-0959-4f32-8d78-fe6c2a32f923}].[Parameter:{3e967f9a-6e0a-4e00-8e96-8b3678844322}]",
+          "GT3": "3e967f9a-6e0a-4e00-8e96-8b3678844322",
+          "GT5": "06bcedca-a817-4027-8844-845966e2499b",
+          "GT4": "fcace79b-6103-4992-8a1f-8e443114321a",
+          "GT1": {
+            "GS1": 1,
+            "GS2": "05aa9cf3-900f-45a1-b4e5-c3a9a63ee8c2"
+          }
+        }
+      ],
       "BK37": {
         "BL1": "Terrasoft.Core.Process.ProcessSchemaParameter",
         "UId": "cdd58be7-2dba-4a5e-869b-1ad5d6d7513a",
@@ -91,7 +124,7 @@
           "A4": "8d6028a1-b4ec-4918-94c1-7de9a056025a",
           "A5": "a00051f4-cde3-4f3f-b08e-c5ad1a5c735a",
           "IL2": "f1aa9cea-b9f6-4cc0-a6c5-88e70c5107c3",
-          "BL3": "50;184",
+          "BL3": "130;184",
           "BL7": "53818048-7868-48f6-ada0-0ebaa65af628",
           "BL8": "8d6028a1-b4ec-4918-94c1-7de9a056025a",
           "BN2": "31;31",
@@ -122,7 +155,7 @@
           "A4": "8d6028a1-b4ec-4918-94c1-7de9a056025a",
           "A5": "a00051f4-cde3-4f3f-b08e-c5ad1a5c735a",
           "IL2": "f1aa9cea-b9f6-4cc0-a6c5-88e70c5107c3",
-          "BL3": "250;172",
+          "BL3": "441;172",
           "BL7": "0e490dda-e140-4441-b600-6f5c64d024df",
           "BL8": "8d6028a1-b4ec-4918-94c1-7de9a056025a",
           "BN2": "69;55",
@@ -131,6 +164,56 @@
           "CL2": "FFFFFFFF",
           "CH1": "var gitServerEntityName = \"AtfGitServer\";\nvar gitServerEntitySchema = UserConnection.EntitySchemaManager.GetInstanceByName(gitServerEntityName);\nvar gitServerEntity = gitServerEntitySchema.CreateEntity(UserConnection);\nif (gitServerEntity.FetchFromDB(Get<Guid>(\"AtfGitServer\"))) {\n \n    string gitUrl = gitServerEntity.GetTypedColumnValue<string>(\"Url\");\n    string gitlabToken = gitServerEntity.GetTypedColumnValue<string>(\"AccessToken\");;\n    string userName = gitServerEntity.GetTypedColumnValue<string>(\"UserName\");;\n   \n    var gitlabBrowser = new GitLabBrowser(gitUrl);\n    var repositories = gitlabBrowser.FindClioRepositoriesOnServer(gitlabToken);\n    foreach (var repo in repositories) {\n        var entitySchemaName = \"AtfRepository\";\n            var entitySchema = UserConnection.EntitySchemaManager.GetInstanceByName(entitySchemaName);\n            var entity = entitySchema.CreateEntity(UserConnection);\n            entity.SetDefColumnValues();\n            entity.SetColumnValue(\"AtfName\", repo.Name);\n            entity.SetColumnValue(\"AtfAccessToken\", gitlabToken);\n            entity.SetColumnValue(\"AtfRepositoryUrl\", repo.UrlToClone);\n            entity.SetColumnValue(\"AtfUserName\", userName);\n           \n            if (!entity.Save())\n            {\n                throw new Exception(\"Не удалось сохранить запись!\");\n            }\n    }\n   \n}\n \nreturn true;",
           "CH2": true
+        },
+        {
+          "BL1": "Terrasoft.Core.Process.ProcessSchemaUserTask",
+          "UId": "cae77abe-0959-4f32-8d78-fe6c2a32f923",
+          "A2": "LinkEntityToProcessUserTask1",
+          "A3": "8d6028a1-b4ec-4918-94c1-7de9a056025a",
+          "A4": "8d6028a1-b4ec-4918-94c1-7de9a056025a",
+          "A5": "57902d1e-ea0c-4991-b367-992c12d68fb2",
+          "IL2": "f1aa9cea-b9f6-4cc0-a6c5-88e70c5107c3",
+          "BL3": "253;172",
+          "BL7": "fcace79b-6103-4992-8a1f-8e443114321a",
+          "BL8": "8d6028a1-b4ec-4918-94c1-7de9a056025a",
+          "BN2": "69;55",
+          "BO2": true,
+          "BO3": true,
+          "BP2": [
+            {
+              "BL1": "Terrasoft.Core.Process.ProcessSchemaParameter",
+              "UId": "a5514bd6-9082-4f3b-b0ae-42830c86ab1c",
+              "A2": "EntityId",
+              "A3": "fcace79b-6103-4992-8a1f-8e443114321a",
+              "A4": "fcace79b-6103-4992-8a1f-8e443114321a",
+              "IL2": "cae77abe-0959-4f32-8d78-fe6c2a32f923",
+              "L1": "b295071f-7ea9-4e62-8d1a-919bf3732ff2",
+              "L8": {
+                "GS1": 3,
+                "GS2": "[#[IsOwnerSchema:false].[IsSchema:false].[Parameter:{4f9199c0-e0fc-434a-a6ae-9c2a33ed168e}]#]",
+                "GS5": "8d6028a1-b4ec-4918-94c1-7de9a056025a"
+              },
+              "L9": "05aa9cf3-900f-45a1-b4e5-c3a9a63ee8c2",
+              "L11": false
+            },
+            {
+              "BL1": "Terrasoft.Core.Process.ProcessSchemaParameter",
+              "UId": "3e967f9a-6e0a-4e00-8e96-8b3678844322",
+              "A2": "EntitySchemaId",
+              "A3": "fcace79b-6103-4992-8a1f-8e443114321a",
+              "A4": "fcace79b-6103-4992-8a1f-8e443114321a",
+              "IL2": "cae77abe-0959-4f32-8d78-fe6c2a32f923",
+              "L1": "b295071f-7ea9-4e62-8d1a-919bf3732ff2",
+              "L8": {
+                "GS1": 1,
+                "GS2": "05aa9cf3-900f-45a1-b4e5-c3a9a63ee8c2",
+                "GS5": "8d6028a1-b4ec-4918-94c1-7de9a056025a"
+              },
+              "L11": false
+            }
+          ],
+          "CL2": "FFFFFFFF",
+          "J6": "fcace79b-6103-4992-8a1f-8e443114321a"
         },
         {
           "BL1": "Terrasoft.Core.Process.ProcessSchemaSequenceFlow",
@@ -142,12 +225,12 @@
           "BL7": "0d8351f6-c2f4-4737-bdd9-6fbfe0837fec",
           "BL8": "8d6028a1-b4ec-4918-94c1-7de9a056025a",
           "CI1": "035e5d94-5e1e-417d-816a-e7da2e90222f",
-          "CI2": "23446966-8217-48bc-8235-4232fd71f433",
+          "CI2": "cae77abe-0959-4f32-8d78-fe6c2a32f923",
           "CI3": "null",
           "CI5": "FF939598",
           "CI6": 1,
-          "CI11": "81;200",
-          "CI12": "250;200"
+          "CI11": "161;200",
+          "CI12": "253;200"
         },
         {
           "BL1": "Terrasoft.Core.Process.ProcessSchemaSequenceFlow",
@@ -163,8 +246,25 @@
           "CI3": "null",
           "CI5": "FF939598",
           "CI6": 1,
-          "CI11": "319;200",
+          "CI11": "510;200",
           "CI12": "600;200"
+        },
+        {
+          "BL1": "Terrasoft.Core.Process.ProcessSchemaSequenceFlow",
+          "UId": "3c7cb6c8-2604-46cb-a7e0-63aa74a89b16",
+          "A2": "SequenceFlow3",
+          "A3": "8d6028a1-b4ec-4918-94c1-7de9a056025a",
+          "A4": "8d6028a1-b4ec-4918-94c1-7de9a056025a",
+          "A5": "57902d1e-ea0c-4991-b367-992c12d68fb2",
+          "BL7": "0d8351f6-c2f4-4737-bdd9-6fbfe0837fec",
+          "BL8": "8d6028a1-b4ec-4918-94c1-7de9a056025a",
+          "CI1": "cae77abe-0959-4f32-8d78-fe6c2a32f923",
+          "CI2": "23446966-8217-48bc-8235-4232fd71f433",
+          "CI3": "null",
+          "CI5": "FF939598",
+          "CI6": 1,
+          "CI11": "322;200",
+          "CI12": "441;200"
         }
       ],
       "BK9": [],

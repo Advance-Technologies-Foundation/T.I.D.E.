@@ -130,7 +130,11 @@ define("AtfGitServerList", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHEMA
 					"placeholder": false,
 					"visible": true,
 					"fitContent": true,
-					"referenceSchema": "Entity_18d813a"
+					"referenceSchema": "Entity_18d813a",
+					"selectionState": "$DataTable_SelectionState",
+					"_selectionOptions": {
+						"attribute": "DataTable_SelectionState"
+					}
 				}
 			},
 			{
@@ -148,10 +152,15 @@ define("AtfGitServerList", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHEMA
 						"request": "crt.RunBusinessProcessRequest",
 						"params": {
 							"processName": "AtfFindAppRepositoriesOnServer",
-							"processRunType": "ForTheSelectedPage",
-							"saveAtProcessStart": true,
+							"processRunType": "ForTheSelectedRecords",
 							"showNotification": true,
-							"recordIdProcessParameterName": "AtfGitServer"
+							"dataSourceName": "PDS",
+							"parameterMappings": {
+								"AtfGitServer": "Id"
+							},
+							"filters": "$Items | crt.ToCollectionFilters : 'Items' : $DataTable_SelectionState | crt.SkipIfSelectionEmpty : $DataTable_SelectionState",
+							"sorting": "$ItemsSorting",
+							"selectionStateAttributeName": "DataTable_SelectionState"
 						}
 					},
 					"clickMode": "default"

@@ -2,6 +2,10 @@
 <Resources Culture="en-US">
 	<Group Type="String">
 		<Items>
+			<Item Name="BaseElements.LinkEntityToProcessUserTask1.Parameters.EntityId.Caption" Value="Object" />
+			<Item Name="BaseElements.LinkEntityToProcessUserTask1.Parameters.EntityId.DisplayValue" Value="[#AtfGitServer#]" />
+			<Item Name="BaseElements.LinkEntityToProcessUserTask1.Parameters.EntitySchemaId.Caption" Value="Object schema" />
+			<Item Name="BaseElements.LinkEntityToProcessUserTask1.Parameters.EntitySchemaId.DisplayValue" Value="AtfGitServer" />
 			<Item Name="BaseElements.ScriptTask1.Caption" Value="FindAppRepositoriesOnServer" />
 			<Item Name="Caption" Value="AtfFindAppRepositoriesOnServer" />
 			<Item Name="LaneSets.LaneSet1.Caption" Value="LaneSet 1" />
