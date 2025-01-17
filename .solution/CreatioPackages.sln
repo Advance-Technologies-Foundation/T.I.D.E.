@@ -1,5 +1,5 @@
 ﻿Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{0e47079d-fbed-4724-aee0-1f0a839f67b3}") = "AtfTIDE", "..\packages\AtfTIDE\Files\AtfTIDE.csproj", "{5844dd1e-c7c3-4d52-976d-9f6eeb07eba4}"
+Project("{54f55ac8-8050-4c3c-bd85-da2c43a4ce35}") = "AtfTIDE", "..\packages\AtfTIDE\Files\AtfTIDE.csproj", "{3db20e57-6711-4d84-86c0-89c5f091962b}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -7,9 +7,9 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-			{5844dd1e-c7c3-4d52-976d-9f6eeb07eba4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-			{5844dd1e-c7c3-4d52-976d-9f6eeb07eba4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-			{5844dd1e-c7c3-4d52-976d-9f6eeb07eba4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-			{5844dd1e-c7c3-4d52-976d-9f6eeb07eba4}.Release|Any CPU.Build.0 = Release|Any CPU
+			{3db20e57-6711-4d84-86c0-89c5f091962b}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+			{3db20e57-6711-4d84-86c0-89c5f091962b}.Debug|Any CPU.Build.0 = Debug|Any CPU
+			{3db20e57-6711-4d84-86c0-89c5f091962b}.Release|Any CPU.ActiveCfg = Release|Any CPU
+			{3db20e57-6711-4d84-86c0-89c5f091962b}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
