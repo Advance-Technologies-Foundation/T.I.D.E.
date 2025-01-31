@@ -1,0 +1,12 @@
+﻿{
+  "Descriptor": {
+    "UId": "cbe750cc-1607-49dd-9521-171bd73c6110",
+    "PackageVersion": "0.1.0",
+    "Name": "AtfDiffComponent",
+    "Type": 1,
+    "ProjectPath": "Files/AtfDiffComponent.csproj",
+    "ModifiedOnUtc": "/Date(1738278955000)/",
+    "Maintainer": "ATF",
+    "DependsOn": []
+  }
+}

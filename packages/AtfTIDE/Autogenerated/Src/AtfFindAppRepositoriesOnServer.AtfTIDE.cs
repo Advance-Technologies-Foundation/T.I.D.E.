@@ -51,10 +51,12 @@
 			            entity.SetColumnValue("AtfRepositoryUrl", repo.UrlToClone);
 			            entity.SetColumnValue("AtfUserName", userName);
 			           
-			            if (!entity.Save()) {
-			                throw new Exception("Could not save record!");
+			            if (!entity.Save())
+			            {
+			                throw new Exception("Не удалось сохранить запись!");
 			            }
 			    }
+			   
 			}
 			 
 			return true;
