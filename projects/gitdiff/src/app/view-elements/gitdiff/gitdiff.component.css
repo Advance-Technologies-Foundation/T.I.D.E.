@@ -1,1 +1,5 @@
 @import '~diff2html/bundles/css/diff2html.min.css';
+
+.d2h-file-list-wrapper{
+    display:none
+}

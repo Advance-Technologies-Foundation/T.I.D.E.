@@ -5,6 +5,9 @@ using System.ServiceModel;
 using System.ServiceModel.Activation;
 using System.ServiceModel.Web;
 using System.Web.SessionState;
+using Common.Logging;
+using Terrasoft.Core.Factories;
+using Terrasoft.Core.Process;
 using Terrasoft.Web.Common;
 using Terrasoft.Web.Http.Abstractions;
 
@@ -88,5 +91,24 @@ namespace AtfTIDE.WebServices {
 			
 		}
 
+		
+		[OperationContract]
+		[WebInvoke(Method = "GET", RequestFormat = WebMessageFormat.Json,
+			BodyStyle = WebMessageBodyStyle.Bare, ResponseFormat = WebMessageFormat.Json)]
+		public string GetDiffForRepository(Guid repositoryId){
+			RepositoryInfo repositoryInfo = HelperFunctions.GetRepositoryInfo(repositoryId, UserConnection);
+			ConsoleGitArgs args = new ConsoleGitArgs {
+				Command = AtfTIDE.Commands.GetDiff,
+				GitUrl = repositoryInfo.GitUrl,
+				Password = repositoryInfo.Password,
+				UserName = repositoryInfo.UserName,
+				RepoDir = HelperFunctions.GetRepositoryDirectory(repositoryInfo.Name).ToString(),
+			};
+			
+			ConsoleGitResult gitCommandResult = ClassFactory
+												.Get<IConsoleGit>("AtfTIDE.ConsoleGit")
+												.Execute(args);
+			return gitCommandResult.Output;
+		}
 	}
 }

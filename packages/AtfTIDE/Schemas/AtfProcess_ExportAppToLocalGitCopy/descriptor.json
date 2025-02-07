@@ -1,0 +1,9 @@
+﻿{
+  "Descriptor": {
+    "UId": "705701a0-2ed5-4c5a-b12b-5b816112f076",
+    "Name": "AtfProcess_ExportAppToLocalGitCopy",
+    "ModifiedOnUtc": "\/Date(1738884000000)\/",
+    "ManagerName": "ProcessSchemaManager",
+    "Caption": "Export app to local Git copy"
+  }
+}

@@ -18,7 +18,9 @@ namespace AtfTIDE {
 			Dictionary<string, string> webSettings = HelperFunctions.ClioArguments[userConnection.CurrentUser.Id];
 			string url = webSettings["SystemUrl"]; //http:localhost:8080/0 ??http:localhost:8080 
 			bool isFramework = url.EndsWith("/0");
-			url = url.TrimEnd("/0".ToCharArray());
+			if(isFramework) {
+				url = url.Substring(0,url.Length - 2);
+			}
 			return $"{text} -u {url} --IsNetCore {!isFramework}";
 		}
 	}

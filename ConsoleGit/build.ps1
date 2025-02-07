@@ -1,6 +1,8 @@
-﻿
-dotnet publish .\GitAbstraction\GitAbstraction.csproj -c Release -r win-x64
-dotnet publish .\ConsoleGit\ConsoleGit.csproj -c Release -r win-x64
+﻿dotnet publish .\ConsoleGit\ConsoleGit.csproj -c Release -r win-x64 --self-contained true -p:PublishSingleFile=true
+dotnet publish .\ConsoleGit\ConsoleGit.csproj -c Release
+
+#dotnet publish .\GitAbstraction\GitAbstraction.csproj -c Release -r win-x64
+#dotnet publish .\ConsoleGit\ConsoleGit.csproj -c Release -r win-x64
 
 $destinationPath = '..\packages\AtfTIDE\Files\exec\'
 

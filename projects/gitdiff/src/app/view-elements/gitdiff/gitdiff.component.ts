@@ -1,10 +1,13 @@
 ﻿import {Component, ElementRef, Input, OnInit, ViewChild, ViewEncapsulation} from "@angular/core";
 import * as Diff2Html from 'diff2html';
-import { CrtInterfaceDesignerItem,  CrtViewElement} from "@creatio-devkit/common";
+import {CrtInput, CrtInterfaceDesignerItem, CrtViewElement} from "@creatio-devkit/common";
 
 @CrtViewElement({
   selector: "atf-gitdiff",
   type: "atf.GitDiff",
+  inputs: {
+    diffContent: ""
+  },
 })
 @CrtInterfaceDesignerItem({
   toolbarConfig: {
@@ -22,28 +25,33 @@ import { CrtInterfaceDesignerItem,  CrtViewElement} from "@creatio-devkit/common
 export class GitDiffComponent implements OnInit{
   @ViewChild('diffContainer', { static: true }) diffContainer!: ElementRef;
   constructor() { }
-
-  @Input() content= '';
-
+  public htmlContentInternal= '';
+  private _diffContent : string = '';
+  public get diffContent() : string {
+    return this._diffContent;
+  }
+  @Input()
+  @CrtInput()
+  public set diffContent(v : string) {
+    
+    if(v && v.length > 0 && v !== this._diffContent){
+      this._diffContent = v;
+      this.showDiff();
+    }
+  }
+  
   ngOnInit(): void {   
-    this.showDiff();
+    //this.showDiff();
   }
 
   showDiff(): void {
-    const diffString = `--- a/file1.txt
-+++ b/file2.txt
-@@ -1,3 +1,3 @@
--Hello World
-+Hello AtfTIDE
- This is a diff example. That will show diff in Creatio`;
-
-    const diffHtml = Diff2Html.html(diffString, {
-      drawFileList: true,
-      matching: 'lines',
-      outputFormat: 'side-by-side'
-    });
-
-      this.content = diffHtml;
+    
+    if(this.diffContent && this.diffContent.length > 0){
+      this.htmlContentInternal = Diff2Html.html(this.diffContent, {
+          drawFileList: true,
+          matching: 'lines',
+          outputFormat: 'side-by-side'
+        });
+    }
   }
-
 }

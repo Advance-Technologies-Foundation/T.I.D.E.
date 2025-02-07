@@ -303,5 +303,6 @@ namespace AtfTIDE {
 		DownloadPackages,
 		Checkout,
 		GetBranches,
+		GetDiff
 	}
 }

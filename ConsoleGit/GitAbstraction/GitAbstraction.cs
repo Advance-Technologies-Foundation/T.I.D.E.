@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO.Abstractions;
 using System.Linq;
+using System.Text;
 using ErrorOr;
 using LibGit2Sharp;
 using LibGit2Sharp.Handlers;
@@ -312,7 +313,29 @@ namespace GitAbstraction
 			return Result.Success;
 		}
 
-
+		
+		
+		/// <summary>
+		///  Return changes in index and working directory
+		/// </summary>
+		/// <returns>
+		///  An <see cref="ErrorOr{T}" /> indicating success or failure.
+		/// </returns>
+		/// <seealso a="https://github.com/libgit2/libgit2sharp/wiki/git-diff">libgit2sharp Wiki</seealso>
+		public ErrorOr<string> GetDiff(){
+#if DEBUG			
+			Console.Out.WriteLine("Getting diff L326");
+			Console.WriteLine("Press any key to continue");
+			Console.ReadKey();
+#endif
+			StringBuilder sb  = new();
+			foreach (PatchEntryChanges changes in InitializedRepository.Diff.Compare<Patch>(
+						InitializedRepository.Head.Tip.Tree,
+						DiffTargets.Index | DiffTargets.WorkingDirectory)) {
+				sb.AppendLine(changes.Patch);
+			}
+			return sb.ToString();
+		}
 		#endregion
 
 		~GitRepository() {

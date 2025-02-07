@@ -96,6 +96,13 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 				}
 			},
 			{
+				"operation": "merge",
+				"name": "GeneralInfoTab",
+				"values": {
+					"iconPosition": "only-text"
+				}
+			},
+			{
 				"operation": "remove",
 				"name": "CardToggleTabPanel"
 			},
@@ -172,33 +179,6 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 			},
 			{
 				"operation": "insert",
-				"name": "Button_SaveToGit",
-				"values": {
-					"type": "crt.Button",
-					"caption": "#ResourceString(Button_SaveToGit_caption)#",
-					"color": "accent",
-					"disabled": false,
-					"size": "large",
-					"iconPosition": "left-icon",
-					"visible": true,
-					"icon": "import-data-button-icon",
-					"clicked": {
-						"request": "atf.CaptureClioArgs",
-						"params": {
-							"processName": "AtfProcess_SaveWorkspaceToGit",
-							"processRunType": "ForTheSelectedPage",
-							"showNotification": true,
-							"recordIdProcessParameterName": "Repository"
-						}
-					},
-					"clickMode": "default"
-				},
-				"parentName": "CardToggleContainer",
-				"propertyName": "items",
-				"index": 0
-			},
-			{
-				"operation": "insert",
 				"name": "Button_LOADFROMGIT",
 				"values": {
 					"type": "crt.Button",
@@ -213,6 +193,33 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 						"request": "atf.CaptureClioArgs",
 						"params": {
 							"processName": "AtfProcess_LoadWorkspaceFromGit",
+							"processRunType": "ForTheSelectedPage",
+							"showNotification": true,
+							"recordIdProcessParameterName": "Repository"
+						}
+					},
+					"clickMode": "default"
+				},
+				"parentName": "CardToggleContainer",
+				"propertyName": "items",
+				"index": 0
+			},
+			{
+				"operation": "insert",
+				"name": "Button_SaveToGit_Green",
+				"values": {
+					"type": "crt.Button",
+					"caption": "#ResourceString(Button_SaveToGit_Green_caption)#",
+					"color": "accent",
+					"disabled": false,
+					"size": "large",
+					"iconPosition": "left-icon",
+					"visible": true,
+					"icon": "import-data-button-icon",
+					"clicked": {
+						"request": "atf.CaptureClioArgs",
+						"params": {
+							"processName": "AtfProcess_SaveWorkspaceToGit",
 							"processRunType": "ForTheSelectedPage",
 							"showNotification": true,
 							"recordIdProcessParameterName": "Repository"
@@ -362,7 +369,9 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 						"left": "none",
 						"right": "none"
 					},
-					"fitContent": true
+					"fitContent": true,
+					"visible": true,
+					"alignItems": "stretch"
 				},
 				"parentName": "GridContainer_5wijoep",
 				"propertyName": "items",
@@ -1077,6 +1086,210 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 				"parentName": "ExpansionPanel_srhpdgo",
 				"propertyName": "items",
 				"index": 0
+			},
+			{
+				"operation": "insert",
+				"name": "TabContainer_yfwkpvj",
+				"values": {
+					"type": "crt.TabContainer",
+					"items": [],
+					"caption": "#ResourceString(TabContainer_yfwkpvj_caption)#",
+					"iconPosition": "only-text",
+					"visible": true
+				},
+				"parentName": "Tabs",
+				"propertyName": "items",
+				"index": 1
+			},
+			{
+				"operation": "insert",
+				"name": "GridContainer_fsokns6",
+				"values": {
+					"type": "crt.GridContainer",
+					"items": [],
+					"rows": "minmax(32px, max-content)",
+					"columns": [
+						"minmax(32px, 1fr)",
+						"minmax(32px, 1fr)"
+					],
+					"gap": {
+						"columnGap": "large",
+						"rowGap": "none"
+					},
+					"visible": true,
+					"color": "transparent",
+					"borderRadius": "none",
+					"padding": {
+						"top": "none",
+						"right": "none",
+						"bottom": "none",
+						"left": "none"
+					},
+					"alignItems": "stretch"
+				},
+				"parentName": "TabContainer_yfwkpvj",
+				"propertyName": "items",
+				"index": 0
+			},
+			{
+				"operation": "insert",
+				"name": "GridContainer_aax6po0",
+				"values": {
+					"layoutConfig": {
+						"column": 1,
+						"row": 1,
+						"colSpan": 2,
+						"rowSpan": 1
+					},
+					"type": "crt.GridContainer",
+					"columns": [
+						"minmax(32px, 1fr)"
+					],
+					"rows": "minmax(max-content, 32px)",
+					"gap": {
+						"columnGap": "large",
+						"rowGap": "none"
+					},
+					"items": [],
+					"fitContent": true,
+					"visible": true,
+					"color": "transparent",
+					"borderRadius": "none",
+					"padding": {
+						"top": "none",
+						"right": "none",
+						"bottom": "none",
+						"left": "none"
+					},
+					"alignItems": "stretch"
+				},
+				"parentName": "GridContainer_fsokns6",
+				"propertyName": "items",
+				"index": 0
+			},
+			{
+				"operation": "insert",
+				"name": "FlexContainer_mirw4pt",
+				"values": {
+					"layoutConfig": {
+						"column": 1,
+						"row": 1,
+						"colSpan": 1,
+						"rowSpan": 1
+					},
+					"type": "crt.FlexContainer",
+					"direction": "row",
+					"items": [],
+					"fitContent": true,
+					"visible": true,
+					"color": "transparent",
+					"borderRadius": "none",
+					"padding": {
+						"top": "medium",
+						"right": "none",
+						"bottom": "medium",
+						"left": "none"
+					},
+					"alignItems": "stretch",
+					"justifyContent": "start",
+					"gap": "small",
+					"wrap": "wrap"
+				},
+				"parentName": "GridContainer_aax6po0",
+				"propertyName": "items",
+				"index": 0
+			},
+			{
+				"operation": "insert",
+				"name": "Button_7b805tb",
+				"values": {
+					"type": "crt.Button",
+					"caption": "#ResourceString(Button_7b805tb_caption)#",
+					"color": "primary",
+					"disabled": false,
+					"size": "large",
+					"iconPosition": "only-text",
+					"visible": true,
+					"clicked": {
+						"request": "crt.RunBusinessProcessRequest",
+						"params": {
+							"processName": "AtfProcess_ExportAppToLocalGitCopy",
+							"processRunType": "ForTheSelectedPage",
+							"saveAtProcessStart": true,
+							"showNotification": true,
+							"recordIdProcessParameterName": "Repository"
+						}
+					},
+					"clickMode": "default",
+					"icon": null
+				},
+				"parentName": "FlexContainer_mirw4pt",
+				"propertyName": "items",
+				"index": 0
+			},
+			{
+				"operation": "insert",
+				"name": "Button_GetDiff",
+				"values": {
+					"type": "crt.Button",
+					"caption": "#ResourceString(Button_GetDiff_caption)#",
+					"color": "accent",
+					"disabled": false,
+					"size": "large",
+					"iconPosition": "only-text",
+					"clicked": {
+						"request": "atf.OnGetDiffCLicked"
+					},
+					"visible": true,
+					"icon": null,
+					"clickMode": "default"
+				},
+				"parentName": "FlexContainer_mirw4pt",
+				"propertyName": "items",
+				"index": 1
+			},
+			{
+				"operation": "insert",
+				"name": "Button_saveToGit_Red",
+				"values": {
+					"type": "crt.Button",
+					"caption": "#ResourceString(Button_saveToGit_Red_caption)#",
+					"color": "warn",
+					"disabled": false,
+					"size": "large",
+					"iconPosition": "only-text",
+					"visible": true,
+					"clicked": {
+						"request": "atf.CaptureClioArgs",
+						"params": {
+							"processName": "AtfProcess_SaveWorkspaceToGit",
+							"processRunType": "ForTheSelectedPage",
+							"showNotification": true,
+							"recordIdProcessParameterName": "Repository"
+						}
+					},
+					"clickMode": "default"
+				},
+				"parentName": "FlexContainer_mirw4pt",
+				"propertyName": "items",
+				"index": 2
+			},
+			{
+				"operation": "insert",
+				"name": "GitDiff_5jxv7mx",
+				"values": {
+					"layoutConfig": {
+						"column": 1,
+						"row": 2,
+						"colSpan": 1,
+						"rowSpan": 1
+					},
+					"type": "atf.GitDiff",
+					"diffContent": "$DiffContent"
+				},
+				"parentName": "GridContainer_aax6po0",
+				"propertyName": "items",
+				"index": 1
 			}
 		]/**SCHEMA_VIEW_CONFIG_DIFF*/,
 		viewModelConfigDiff: /**SCHEMA_VIEW_MODEL_CONFIG_DIFF*/[
@@ -1091,6 +1304,7 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 							"path": "PDS.AtfName"
 						}
 					},
+					"DiffContent": {},
 					"PDS_AtfRepositoryUrl_yidr394": {
 						"modelConfig": {
 							"path": "PDS.AtfRepositoryUrl"
@@ -1257,6 +1471,19 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 					return next?.handle(request);
 				}
 			},
+			{
+				request: 'atf.OnGetDiffCLicked',
+				handler: async (request, next) => {
+					
+					const id = await request.$context.Id
+					const endpoint = `/rest/Tide/GetDiffForRepository?repositoryId=${id}`;
+					const httpClientService = new sdk.HttpClientService();
+					const response = await httpClientService.get(endpoint);
+					request.$context.DiffContent = response.body;
+					return next?.handle(request);
+				}
+			},
+
 		]/**SCHEMA_HANDLERS*/,
 		converters: /**SCHEMA_CONVERTERS*/{}/**SCHEMA_CONVERTERS*/,
 		validators: /**SCHEMA_VALIDATORS*/{}/**SCHEMA_VALIDATORS*/

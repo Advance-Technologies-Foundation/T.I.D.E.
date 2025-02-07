@@ -57,6 +57,7 @@ IHostBuilder builder = Host.CreateDefaultBuilder(args)
 		services.AddScoped<CommitCommand>();
 		services.AddScoped<DownloadPackagesCommand>();
 		services.AddScoped<GetBranchesCommand>();
+		services.AddScoped<GetDiffCommand>();
 		// Register other commands
 	});
 
@@ -72,6 +73,7 @@ using ICommand command = consoleArgs.Command switch {
 	"Commit" =>host.Services.GetRequiredService<CommitCommand>(),
 	"DownloadPackages" =>host.Services.GetRequiredService<DownloadPackagesCommand>(),
 	"GetBranches" =>host.Services.GetRequiredService<GetBranchesCommand>(),
+	"GetDiff" =>host.Services.GetRequiredService<GetDiffCommand>(),
 	var _ => new ErrorCommand(consoleArgs)
 };
 
