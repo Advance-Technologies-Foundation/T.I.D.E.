@@ -11,7 +11,7 @@ import {CrtInput, CrtInterfaceDesignerItem, CrtViewElement} from "@creatio-devki
 })
 @CrtInterfaceDesignerItem({
   toolbarConfig: {
-    caption: "Your component",
+    caption: "Git diff",
     name: "atf-gitdiff",
     icon: require("!!raw-loader?{esModule:false}!./gitdiff-icon.svg"),
   },
