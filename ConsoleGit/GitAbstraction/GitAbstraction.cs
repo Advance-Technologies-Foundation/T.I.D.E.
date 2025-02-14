@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.IO.Abstractions;
 using System.Linq;
 using System.Text;
@@ -367,8 +368,47 @@ namespace GitAbstraction
 			Dispose(false);
 		}
 
+		public void DiscardFile(string filePath){
+			
+				string relativePath = filePath.Replace(InitializedRepository.Info.WorkingDirectory, "").TrimStart(Path.DirectorySeparatorChar);
+				FileStatus status = InitializedRepository.RetrieveStatus(relativePath);
+ 
+				switch (status)
+				{
+					case FileStatus.ModifiedInWorkdir:
+					case FileStatus.ModifiedInIndex:
+					
+					case FileStatus.TypeChangeInWorkdir:
+					case FileStatus.TypeChangeInIndex:
+					
+					case FileStatus.DeletedFromWorkdir:
+					case FileStatus.DeletedFromIndex:
+						// Revert changes or restore deleted file
+						InitializedRepository.CheckoutPaths("HEAD", new[] { relativePath }, new CheckoutOptions { CheckoutModifiers = CheckoutModifiers.Force });
+						Console.WriteLine($"File {relativePath} restored.");
+						break;
+ 
+					case FileStatus.NewInWorkdir:
+					case FileStatus.NewInIndex:
+						// Delete the new (untracked) file
+						if (File.Exists(Path.Join(InitializedRepository.Info.WorkingDirectory, filePath)))
+						{
+							File.Delete(Path.Join(InitializedRepository.Info.WorkingDirectory, filePath));
+							Console.WriteLine($"File {relativePath} deleted");
+						}
+						break;
+ 
+					default:
+						Console.WriteLine($"File {relativePath} unchanged.");
+						break;
+			}
+			
+		}
+
 	}
 	public record ChangedFile(
 		[property:JsonPropertyName("Path")]string Path, 
 		[property:JsonPropertyName("Status")]string Status);
 }
+
+

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Net;
 using System.Runtime.Serialization;
 using System.ServiceModel;
@@ -115,7 +116,22 @@ namespace AtfTIDE.WebServices {
 		[OperationContract]
 		[WebInvoke(Method = "POST", RequestFormat = WebMessageFormat.Json,
 			BodyStyle = WebMessageBodyStyle.Bare, ResponseFormat = WebMessageFormat.Json)]
-		public string DiscardFileChanges(DiscardFileChangesDto args){
+		public string DiscardFileChanges(DiscardFileChangesDto dto){
+			
+			RepositoryInfo repositoryInfo = HelperFunctions.GetRepositoryInfo(dto.RepositoryId, UserConnection);
+			ConsoleGitArgs args = new ConsoleGitArgs {
+				Command = AtfTIDE.Commands.DiscardFiles,
+				GitUrl = repositoryInfo.GitUrl,
+				Password = repositoryInfo.Password,
+				UserName = repositoryInfo.UserName,
+				RepoDir = HelperFunctions.GetRepositoryDirectory(repositoryInfo.Name).ToString(),
+				Files = string.Join(",", dto.Files)
+			};
+			
+			
+			ConsoleGitResult gitCommandResult = ClassFactory
+												.Get<IConsoleGit>("AtfTIDE.ConsoleGit")
+												.Execute(args);
 			return "OK";
 		}
 	}

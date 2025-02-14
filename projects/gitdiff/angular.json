@@ -17,7 +17,7 @@
 				"build": {
 					"builder": "ngx-build-plus:browser",
 					"options": {
-						"outputPath": "../../packages/AtfDiffComponent/Files/src/js/gitdiff",
+						"outputPath": "../../packages/AtfTIDE/Files/src/js/gitdiff",
 						"index": "src/index.html",
 						"main": "src/main.ts",
 						"polyfills": [

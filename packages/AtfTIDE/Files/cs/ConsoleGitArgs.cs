@@ -97,6 +97,9 @@ namespace AtfTIDE {
 
 		public string BranchName { get; set; }
 
+		
+		public string Files { get; set; }
+		
 		#endregion
 
 		#region Methods: Public

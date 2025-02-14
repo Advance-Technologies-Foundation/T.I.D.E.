@@ -22,6 +22,7 @@ public record CommandLineArgs {
 		CreatioUrl = creatioUrl;
 		IsFramework = CreatioUrl?.LocalPath.StartsWith("/0", StringComparison.InvariantCulture) ?? true;
 		BranchName = Environment.GetEnvironmentVariable($"TIDE_{nameof(BranchName)}") ?? "";
+		Files = Environment.GetEnvironmentVariable($"TIDE_{nameof(Files)}") ?? "";
 		
 		bool.TryParse(Environment.GetEnvironmentVariable($"TIDE_{nameof(Silent)}") ?? "", out bool silent);
 		Silent = silent;
@@ -66,6 +67,10 @@ public record CommandLineArgs {
 	public string? UserType { get; init; }
 
 	public string BranchName { get; set; }
+	
+	public string Files { get; set; }
+	
+	
 
 	#endregion
 

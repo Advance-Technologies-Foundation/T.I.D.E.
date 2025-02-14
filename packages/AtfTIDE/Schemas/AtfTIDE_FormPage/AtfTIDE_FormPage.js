@@ -1355,7 +1355,7 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 						"row": 1,
 						"rowSpan": 1
 					},
-					"visible": false,
+					"visible": true,
 					"color": "transparent",
 					"borderRadius": "none",
 					"padding": {
@@ -1387,7 +1387,7 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 							"entityName": "Contact"
 						}
 					},
-					"visible": true,
+					"visible": false,
 					"clickMode": "default"
 				},
 				"parentName": "FlexContainer_rfh0f89",
@@ -1408,11 +1408,14 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 						"request": "crt.LoadDataRequest",
 						"params": {
 							"config": {
-								"loadType": "reload"
+								"loadType": "reload",
+								"useLastLoadParameters": true
 							},
 							"dataSourceName": "GridDetail_62r7nr2DS"
 						}
-					}
+					},
+					"visible": true,
+					"clickMode": "default"
 				},
 				"parentName": "FlexContainer_rfh0f89",
 				"propertyName": "items",
@@ -1429,7 +1432,8 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 					"color": "default",
 					"size": "medium",
 					"clickMode": "menu",
-					"menuItems": []
+					"menuItems": [],
+					"visible": false
 				},
 				"parentName": "FlexContainer_rfh0f89",
 				"propertyName": "items",
@@ -1510,27 +1514,22 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 				"operation": "insert",
 				"name": "Button_DiscardChanges",
 				"values": {
-					"layoutConfig": {
-						"column": 1,
-						"row": 2,
-						"colSpan": 1,
-						"rowSpan": 1
-					},
 					"type": "crt.Button",
 					"caption": "#ResourceString(Button_DiscardChanges_caption)#",
-					"color": "warn",
+					"color": "default",
 					"disabled": false,
-					"size": "large",
-					"iconPosition": "only-text",
+					"size": "medium",
+					"iconPosition": "left-icon",
 					"visible": true,
 					"clicked": {
-						"request": "atf.DiscardChanges",
+						"request": "atf.DiscardChanges"
 					},
-					"clickMode": "default"
+					"clickMode": "default",
+					"icon": "delete-button-icon"
 				},
-				"parentName": "GridContainer_yupjka2",
+				"parentName": "FlexContainer_rfh0f89",
 				"propertyName": "items",
-				"index": 1
+				"index": 4
 			},
 			{
 				"operation": "insert",
@@ -1592,17 +1591,19 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 					"primaryColumnName": "GridDetail_62r7nr2DS_Id",
 					"columns": [
 						{
+							"id": "635ea97c-2b28-d0c5-1ea6-939f43aeb706",
+							"code": "GridDetail_62r7nr2DS_AtfFileStatus",
+							"caption": "#ResourceString(GridDetail_62r7nr2DS_AtfFileStatus)#",
+							"dataValueType": 27,
+							"width": 183,
+							"sticky": true
+						},
+						{
 							"id": "6230a5f1-2787-6ef7-1302-15e470828141",
 							"code": "GridDetail_62r7nr2DS_AtfFileName",
 							"caption": "#ResourceString(GridDetail_62r7nr2DS_AtfFileName)#",
 							"dataValueType": 30,
-							"width": 466
-						},
-						{
-							"id": "635ea97c-2b28-d0c5-1ea6-939f43aeb706",
-							"code": "GridDetail_62r7nr2DS_AtfFileStatus",
-							"caption": "#ResourceString(GridDetail_62r7nr2DS_AtfFileStatus)#",
-							"dataValueType": 27
+							"width": 481
 						}
 					],
 					"placeholder": false
@@ -1727,14 +1728,14 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 						},
 						"viewModelConfig": {
 							"attributes": {
-								"GridDetail_62r7nr2DS_AtfFileName": {
-									"modelConfig": {
-										"path": "GridDetail_62r7nr2DS.AtfFileName"
-									}
-								},
 								"GridDetail_62r7nr2DS_AtfFileStatus": {
 									"modelConfig": {
 										"path": "GridDetail_62r7nr2DS.AtfFileStatus"
+									}
+								},
+								"GridDetail_62r7nr2DS_AtfFileName": {
+									"modelConfig": {
+										"path": "GridDetail_62r7nr2DS.AtfFileName"
 									}
 								},
 								"GridDetail_62r7nr2DS_Id": {
@@ -1822,11 +1823,11 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 						"config": {
 							"entitySchemaName": "AtfGitChangedFiles",
 							"attributes": {
-								"AtfFileName": {
-									"path": "AtfFileName"
-								},
 								"AtfFileStatus": {
 									"path": "AtfFileStatus"
+								},
+								"AtfFileName": {
+									"path": "AtfFileName"
 								}
 							}
 						}
@@ -1896,7 +1897,29 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 						repositoryId: await request.$context.Id
 					}
 					
-					await httpClientService.post(endpoint, body);
+					const response = await httpClientService.post(endpoint, body);
+					if(response && response.body==="OK"){
+						const handlerChain = sdk.HandlerChainService.instance;
+						await handlerChain.process({
+							type: 'atf.OnGetDiffCLicked',
+							$context: request.$context,
+							scopes: [...request.scopes],
+						});
+						
+						await handlerChain.process({
+							type: 'crt.LoadDataRequest',
+							$context: request.$context,
+							scopes: request.scopes,
+							dataSourceName: 'GridDetail_62r7nr2DS', config: {
+								loadType: "reload",
+								useLastLoadParameters: true
+							}
+						});
+						
+					}
+					
+					
+					
 					return next?.handle(request);
 				}
 			},

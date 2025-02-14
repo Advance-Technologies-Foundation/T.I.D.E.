@@ -304,6 +304,7 @@ namespace AtfTIDE {
 		Checkout,
 		GetBranches,
 		GetDiff,
-		GetChangedFiles
+		GetChangedFiles,
+		DiscardFiles
 	}
 }
