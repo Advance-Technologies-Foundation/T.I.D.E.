@@ -1276,11 +1276,348 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 			},
 			{
 				"operation": "insert",
-				"name": "GitDiff_5jxv7mx",
+				"name": "ExpansionPanel_rgvl3td",
 				"values": {
 					"layoutConfig": {
 						"column": 1,
 						"row": 2,
+						"colSpan": 1,
+						"rowSpan": 1
+					},
+					"type": "crt.ExpansionPanel",
+					"tools": [],
+					"items": [],
+					"title": "#ResourceString(ExpansionPanel_rgvl3td_title)#",
+					"toggleType": "default",
+					"togglePosition": "before",
+					"expanded": true,
+					"labelColor": "auto",
+					"fullWidthHeader": false,
+					"titleWidth": 20,
+					"padding": {
+						"top": "small",
+						"bottom": "medium",
+						"left": "none",
+						"right": "none"
+					},
+					"fitContent": true,
+					"visible": "$FileChangesVisible",
+					"alignItems": "stretch"
+				},
+				"parentName": "GridContainer_aax6po0",
+				"propertyName": "items",
+				"index": 1
+			},
+			{
+				"operation": "insert",
+				"name": "GridContainer_yupjka2",
+				"values": {
+					"type": "crt.GridContainer",
+					"rows": "minmax(max-content, 24px)",
+					"columns": [
+						"minmax(32px, 1fr)"
+					],
+					"gap": {
+						"columnGap": "large",
+						"rowGap": "none"
+					},
+					"styles": {
+						"overflow-x": "hidden"
+					},
+					"items": [],
+					"visible": true,
+					"color": "transparent",
+					"borderRadius": "none",
+					"padding": {
+						"top": "none",
+						"right": "none",
+						"bottom": "none",
+						"left": "none"
+					},
+					"alignItems": "stretch"
+				},
+				"parentName": "ExpansionPanel_rgvl3td",
+				"propertyName": "tools",
+				"index": 0
+			},
+			{
+				"operation": "insert",
+				"name": "FlexContainer_rfh0f89",
+				"values": {
+					"type": "crt.FlexContainer",
+					"direction": "row",
+					"gap": "none",
+					"alignItems": "center",
+					"items": [],
+					"layoutConfig": {
+						"colSpan": 1,
+						"column": 1,
+						"row": 1,
+						"rowSpan": 1
+					},
+					"visible": false,
+					"color": "transparent",
+					"borderRadius": "none",
+					"padding": {
+						"top": "none",
+						"right": "none",
+						"bottom": "none",
+						"left": "none"
+					},
+					"justifyContent": "start",
+					"wrap": "wrap"
+				},
+				"parentName": "GridContainer_yupjka2",
+				"propertyName": "items",
+				"index": 0
+			},
+			{
+				"operation": "insert",
+				"name": "GridDetailAddBtn_fzbi431",
+				"values": {
+					"type": "crt.Button",
+					"caption": "#ResourceString(GridDetailAddBtn_fzbi431_caption)#",
+					"icon": "add-button-icon",
+					"iconPosition": "only-icon",
+					"color": "default",
+					"size": "medium",
+					"clicked": {
+						"request": "crt.CreateRecordRequest",
+						"params": {
+							"entityName": "Contact"
+						}
+					},
+					"visible": true,
+					"clickMode": "default"
+				},
+				"parentName": "FlexContainer_rfh0f89",
+				"propertyName": "items",
+				"index": 0
+			},
+			{
+				"operation": "insert",
+				"name": "GridDetailRefreshBtn_qhby3xs",
+				"values": {
+					"type": "crt.Button",
+					"caption": "#ResourceString(GridDetailRefreshBtn_qhby3xs_caption)#",
+					"icon": "reload-icon",
+					"iconPosition": "only-icon",
+					"color": "default",
+					"size": "medium",
+					"clicked": {
+						"request": "crt.LoadDataRequest",
+						"params": {
+							"config": {
+								"loadType": "reload"
+							},
+							"dataSourceName": "GridDetail_62r7nr2DS"
+						}
+					}
+				},
+				"parentName": "FlexContainer_rfh0f89",
+				"propertyName": "items",
+				"index": 1
+			},
+			{
+				"operation": "insert",
+				"name": "GridDetailSettingsBtn_5ijlpwq",
+				"values": {
+					"type": "crt.Button",
+					"caption": "#ResourceString(GridDetailSettingsBtn_5ijlpwq_caption)#",
+					"icon": "actions-button-icon",
+					"iconPosition": "only-icon",
+					"color": "default",
+					"size": "medium",
+					"clickMode": "menu",
+					"menuItems": []
+				},
+				"parentName": "FlexContainer_rfh0f89",
+				"propertyName": "items",
+				"index": 2
+			},
+			{
+				"operation": "insert",
+				"name": "GridDetailExportDataBtn_7e2jx3x",
+				"values": {
+					"type": "crt.MenuItem",
+					"caption": "#ResourceString(GridDetailExportDataBtn_7e2jx3x_caption)#",
+					"icon": "export-button-icon",
+					"color": "default",
+					"size": "medium",
+					"clicked": {
+						"request": "crt.ExportDataGridToExcelRequest",
+						"params": {
+							"viewName": "GridDetail_62r7nr2"
+						}
+					}
+				},
+				"parentName": "GridDetailSettingsBtn_5ijlpwq",
+				"propertyName": "menuItems",
+				"index": 0
+			},
+			{
+				"operation": "insert",
+				"name": "GridDetailImportDataBtn_j7mr4n2",
+				"values": {
+					"type": "crt.MenuItem",
+					"caption": "#ResourceString(GridDetailImportDataBtn_j7mr4n2_caption)#",
+					"icon": "import-button-icon",
+					"color": "default",
+					"size": "medium",
+					"clicked": {
+						"request": "crt.ImportDataRequest",
+						"params": {
+							"entitySchemaName": "Contact"
+						}
+					}
+				},
+				"parentName": "GridDetailSettingsBtn_5ijlpwq",
+				"propertyName": "menuItems",
+				"index": 1
+			},
+			{
+				"operation": "insert",
+				"name": "GridDetailSearchFilter_z1pzuec",
+				"values": {
+					"type": "crt.SearchFilter",
+					"placeholder": "#ResourceString(GridDetailSearchFilter_z1pzuec_placeholder)#",
+					"iconOnly": true,
+					"_filterOptions": {
+						"expose": [
+							{
+								"attribute": "GridDetailSearchFilter_z1pzuec_GridDetail_62r7nr2",
+								"converters": [
+									{
+										"converter": "crt.SearchFilterAttributeConverter",
+										"args": [
+											"GridDetail_62r7nr2"
+										]
+									}
+								]
+							}
+						],
+						"from": [
+							"GridDetailSearchFilter_z1pzuec_SearchValue",
+							"GridDetailSearchFilter_z1pzuec_FilteredColumnsGroups"
+						]
+					}
+				},
+				"parentName": "FlexContainer_rfh0f89",
+				"propertyName": "items",
+				"index": 3
+			},
+			{
+				"operation": "insert",
+				"name": "Button_DiscardChanges",
+				"values": {
+					"layoutConfig": {
+						"column": 1,
+						"row": 2,
+						"colSpan": 1,
+						"rowSpan": 1
+					},
+					"type": "crt.Button",
+					"caption": "#ResourceString(Button_DiscardChanges_caption)#",
+					"color": "warn",
+					"disabled": false,
+					"size": "large",
+					"iconPosition": "only-text",
+					"visible": true,
+					"clicked": {
+						"request": "atf.DiscardChanges",
+					},
+					"clickMode": "default"
+				},
+				"parentName": "GridContainer_yupjka2",
+				"propertyName": "items",
+				"index": 1
+			},
+			{
+				"operation": "insert",
+				"name": "GridContainer_1sfenh7",
+				"values": {
+					"type": "crt.GridContainer",
+					"rows": "minmax(max-content, 32px)",
+					"columns": [
+						"minmax(32px, 1fr)",
+						"minmax(32px, 1fr)"
+					],
+					"gap": {
+						"columnGap": "large",
+						"rowGap": 0
+					},
+					"styles": {
+						"overflow-x": "hidden"
+					},
+					"items": []
+				},
+				"parentName": "ExpansionPanel_rgvl3td",
+				"propertyName": "items",
+				"index": 0
+			},
+			{
+				"operation": "insert",
+				"name": "GridDetail_62r7nr2",
+				"values": {
+					"type": "crt.DataGrid",
+					"layoutConfig": {
+						"colSpan": 2,
+						"column": 1,
+						"row": 1,
+						"rowSpan": 8
+					},
+					"features": {
+						"rows": {
+							"toolbar": false,
+							"columns": {
+								"adding": false,
+								"toolbar": false
+							},
+							"selection": {
+								"enable": true,
+								"multiple": true,
+								"toolbar": false
+							},
+							"numeration": true
+						},
+						"editable": {
+							"enable": false,
+							"floatingEditPanel": false,
+							"itemsCreation": false
+						}
+					},
+					"items": "$GridDetail_62r7nr2",
+					"visible": true,
+					"fitContent": true,
+					"primaryColumnName": "GridDetail_62r7nr2DS_Id",
+					"columns": [
+						{
+							"id": "6230a5f1-2787-6ef7-1302-15e470828141",
+							"code": "GridDetail_62r7nr2DS_AtfFileName",
+							"caption": "#ResourceString(GridDetail_62r7nr2DS_AtfFileName)#",
+							"dataValueType": 30,
+							"width": 466
+						},
+						{
+							"id": "635ea97c-2b28-d0c5-1ea6-939f43aeb706",
+							"code": "GridDetail_62r7nr2DS_AtfFileStatus",
+							"caption": "#ResourceString(GridDetail_62r7nr2DS_AtfFileStatus)#",
+							"dataValueType": 27
+						}
+					],
+					"placeholder": false
+				},
+				"parentName": "GridContainer_1sfenh7",
+				"propertyName": "items",
+				"index": 0
+			},
+			{
+				"operation": "insert",
+				"name": "GitDiff_5jxv7mx",
+				"values": {
+					"layoutConfig": {
+						"column": 1,
+						"row": 3,
 						"colSpan": 1,
 						"rowSpan": 1
 					},
@@ -1289,7 +1626,7 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 				},
 				"parentName": "GridContainer_aax6po0",
 				"propertyName": "items",
-				"index": 1
+				"index": 2
 			}
 		]/**SCHEMA_VIEW_CONFIG_DIFF*/,
 		viewModelConfigDiff: /**SCHEMA_VIEW_MODEL_CONFIG_DIFF*/[
@@ -1299,6 +1636,7 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 					"attributes"
 				],
 				"values": {
+					"FileChangesVisible": {},
 					"AtfName": {
 						"modelConfig": {
 							"path": "PDS.AtfName"
@@ -1375,6 +1713,37 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 						"modelConfig": {
 							"path": "PDS.AtfColumn10"
 						}
+					},
+					"GridDetail_62r7nr2": {
+						"isCollection": true,
+						"modelConfig": {
+							"path": "GridDetail_62r7nr2DS",
+							"filterAttributes": [
+								{
+									"name": "GridDetailSearchFilter_z1pzuec_GridDetail_62r7nr2",
+									"loadOnChange": true
+								}
+							]
+						},
+						"viewModelConfig": {
+							"attributes": {
+								"GridDetail_62r7nr2DS_AtfFileName": {
+									"modelConfig": {
+										"path": "GridDetail_62r7nr2DS.AtfFileName"
+									}
+								},
+								"GridDetail_62r7nr2DS_AtfFileStatus": {
+									"modelConfig": {
+										"path": "GridDetail_62r7nr2DS.AtfFileStatus"
+									}
+								},
+								"GridDetail_62r7nr2DS_Id": {
+									"modelConfig": {
+										"path": "GridDetail_62r7nr2DS.Id"
+									}
+								}
+							}
+						}
 					}
 				}
 			},
@@ -1412,6 +1781,12 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 								"attributePath": "AtfRepository",
 								"relationPath": "PDS.Id"
 							}
+						],
+						"GridDetail_62r7nr2DS": [
+							{
+								"attributePath": "Id",
+								"relationPath": "PDS.Id"
+							}
 						]
 					}
 				}
@@ -1440,6 +1815,21 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 								}
 							}
 						}
+					},
+					"GridDetail_62r7nr2DS": {
+						"type": "crt.EntityDataSource",
+						"scope": "viewElement",
+						"config": {
+							"entitySchemaName": "AtfGitChangedFiles",
+							"attributes": {
+								"AtfFileName": {
+									"path": "AtfFileName"
+								},
+								"AtfFileStatus": {
+									"path": "AtfFileStatus"
+								}
+							}
+						}
 					}
 				}
 			}
@@ -1465,6 +1855,8 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 			{
 				request: 'crt.HandleViewModelInitRequest',
 				handler: async (request, next) => {
+					
+					request.$context.FileChangesVisible = false;
 					const endpoint = "/rest/Tide/CaptureClioArgs";
 					const httpClientService = new sdk.HttpClientService();
 					await httpClientService.get(endpoint)
@@ -1474,12 +1866,37 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 			{
 				request: 'atf.OnGetDiffCLicked',
 				handler: async (request, next) => {
-					
+					request.$context.FileChangesVisible = true;
 					const id = await request.$context.Id
 					const endpoint = `/rest/Tide/GetDiffForRepository?repositoryId=${id}`;
 					const httpClientService = new sdk.HttpClientService();
 					const response = await httpClientService.get(endpoint);
 					request.$context.DiffContent = response.body;
+					return next?.handle(request);
+				}
+			},
+			{
+				request: 'atf.DiscardChanges',
+				handler: async (request, next) => {
+					const selectedRows = request.$context.attributes.GridDetail_62r7nr2_SelectedRows;
+					let filesToDiscard = [];
+					for (let i = 0; i < selectedRows.length; i++) {
+						const id = request.$context.attributes.GridDetail_62r7nr2[i].attributes.GridDetail_62r7nr2DS_Id;
+						if(id === selectedRows[i]){
+							const fileName = request.$context.attributes.GridDetail_62r7nr2[i].attributes.GridDetail_62r7nr2DS_AtfFileName;
+							console.log(fileName);
+							filesToDiscard.push(fileName);
+						}
+					}
+					var endpoint = `/rest/Tide/DiscardFileChanges`;
+					const httpClientService = new sdk.HttpClientService();
+					
+					const body = {
+						files: filesToDiscard,
+						repositoryId: await request.$context.Id
+					}
+					
+					await httpClientService.post(endpoint, body);
 					return next?.handle(request);
 				}
 			},

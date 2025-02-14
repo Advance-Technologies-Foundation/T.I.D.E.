@@ -1,0 +1,13 @@
+﻿{
+  "Descriptor": {
+    "UId": "197250f8-1929-4268-a8a1-ecb19db615e0",
+    "Name": "AtfGitChangedFiles",
+    "ModifiedOnUtc": "\/Date(1739489823000)\/",
+    "Parent": {
+      "UId": "1bab9dcf-17d5-49f8-9536-8e0064f1dce0",
+      "Name": "BaseEntity"
+    },
+    "ManagerName": "EntitySchemaManager",
+    "Caption": "Git changed files"
+  }
+}

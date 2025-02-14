@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Net;
+using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.ServiceModel.Activation;
 using System.ServiceModel.Web;
@@ -110,5 +111,23 @@ namespace AtfTIDE.WebServices {
 												.Execute(args);
 			return gitCommandResult.Output;
 		}
+		
+		[OperationContract]
+		[WebInvoke(Method = "POST", RequestFormat = WebMessageFormat.Json,
+			BodyStyle = WebMessageBodyStyle.Bare, ResponseFormat = WebMessageFormat.Json)]
+		public string DiscardFileChanges(DiscardFileChangesDto args){
+			return "OK";
+		}
+	}
+	
+	[DataContract]
+	public class DiscardFileChangesDto {
+
+		[DataMember(Name = "files")]
+		public string[] Files { get; set; }
+		
+		[DataMember(Name = "repositoryId")]
+		public Guid RepositoryId { get; set; }
+
 	}
 }

@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="en-US">
+	<Group Type="String">
+		<Items>
+			<Item Name="Caption" Value="Git changed files" />
+			<Item Name="Columns.AtfFileName.Caption" Value="File name" />
+			<Item Name="Columns.AtfFileStatus.Caption" Value="File status" />
+			<Item Name="Columns.AtfRepository.Caption" Value="Atf Repository" />
+			<Item Name="EventsProcessSchema.LaneSets.LaneSet1253567487.Caption" Value="Pool 14675678567" />
+		</Items>
+	</Group>
+</Resources>

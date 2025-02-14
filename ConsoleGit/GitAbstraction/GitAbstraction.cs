@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO.Abstractions;
 using System.Linq;
 using System.Text;
+using System.Text.Json.Serialization;
 using ErrorOr;
 using LibGit2Sharp;
 using LibGit2Sharp.Handlers;
@@ -336,6 +337,30 @@ namespace GitAbstraction
 			}
 			return sb.ToString();
 		}
+		
+		
+		/// <summary>
+		///  Return changes in working directory
+		/// </summary>
+		/// <returns>
+		///  An <see cref="ErrorOr{T}" /> indicating success or failure.
+		/// </returns>
+		/// <seealso a="https://github.com/libgit2/libgit2sharp/wiki/git-diff">libgit2sharp Wiki</seealso>
+		public ErrorOr<List<ChangedFile>> GetChangedFiles(){
+#if DEBUG			
+			Console.Out.WriteLine("Getting chnaged files L350");
+			Console.WriteLine("Press any key to continue");
+			Console.ReadKey();
+#endif
+			List<ChangedFile> changedFiles = [];
+			foreach (TreeEntryChanges changes in InitializedRepository.Diff.Compare<TreeChanges>(
+						InitializedRepository.Head.Tip.Tree, DiffTargets.Index | DiffTargets.WorkingDirectory)) {
+				changedFiles.Add(new ChangedFile(changes.Path, changes.Status.ToString()));
+				
+			}
+			return changedFiles;
+		}
+		
 		#endregion
 
 		~GitRepository() {
@@ -343,4 +368,7 @@ namespace GitAbstraction
 		}
 
 	}
+	public record ChangedFile(
+		[property:JsonPropertyName("Path")]string Path, 
+		[property:JsonPropertyName("Status")]string Status);
 }

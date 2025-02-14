@@ -989,7 +989,6 @@
 			<Private>False</Private>
 		</Reference>
 	</ItemGroup>
-	<ItemGroup Label="Standalone package external assembly references" />
 	<ItemGroup Label="Entity Files">
 		<Compile Remove="$(RelativePkgFolderPath)/AtfTIDE/Schemas/AtfGitServer/AtfGitServer.cs" Condition="Exists('$(RelativePkgFolderPath)/AtfTIDE/Schemas/AtfGitServer/AtfGitServer.cs')" />
 		<Compile Remove="$(RelativePkgFolderPath)/AtfTIDE/Schemas/AtfRepository/AtfRepository.cs" Condition="Exists('$(RelativePkgFolderPath)/AtfTIDE/Schemas/AtfRepository/AtfRepository.cs')" />

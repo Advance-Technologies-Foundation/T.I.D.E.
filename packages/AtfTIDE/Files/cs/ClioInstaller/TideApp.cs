@@ -1,4 +1,5 @@
 ﻿using System;
+using AtfTIDE.QueryExecutor;
 using Microsoft.Extensions.DependencyInjection;
 using Terrasoft.Core.Factories;
 
@@ -19,6 +20,8 @@ namespace AtfTIDE.ClioInstaller {
 				client.BaseAddress = new Uri(TideConsts.NugetHttpBaseAddress);
 				client.DefaultRequestHeaders.Add("User-Agent", "Creatio");
 			});
+			serviceCollection.AddSingleton<IEsqFilterParser, EsqFilterParser>();
+			serviceCollection.AddSingleton<IEsqColumnParser, EsqColumnParser>();
 			serviceCollection.AddTransient<INugetClient, NugetClient>();
 			_serviceProvider = serviceCollection.BuildServiceProvider();
 		}
@@ -29,6 +32,9 @@ namespace AtfTIDE.ClioInstaller {
 			}
 			return _installer.Value;
 		}
+		
+		public T GetService<T>() => _serviceProvider.GetService<T>();
+		
 		public static TideApp Create() => new TideApp();
 	}
 }
