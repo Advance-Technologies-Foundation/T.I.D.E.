@@ -1276,6 +1276,33 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 			},
 			{
 				"operation": "insert",
+				"name": "Button_InstallLocalCopy",
+				"values": {
+					"type": "crt.Button",
+					"caption": "#ResourceString(Button_InstallLocalCopy_caption)#",
+					"color": "outline",
+					"disabled": false,
+					"size": "large",
+					"iconPosition": "only-text",
+					"visible": true,
+					"clicked": {
+						"request": "atf.LoadWorkspaceFromLocalCopy",
+						"params": {
+							"processName": "AtfProcess_LoadWorkspaceFromLocalCopy",
+							"processRunType": "ForTheSelectedPage",
+							"saveAtProcessStart": true,
+							"showNotification": true,
+							"recordIdProcessParameterName": "Repository"
+						}
+					},
+					"clickMode": "default"
+				},
+				"parentName": "FlexContainer_mirw4pt",
+				"propertyName": "items",
+				"index": 3
+			},
+			{
+				"operation": "insert",
 				"name": "ExpansionPanel_rgvl3td",
 				"values": {
 					"layoutConfig": {
@@ -1836,6 +1863,60 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 			}
 		]/**SCHEMA_MODEL_CONFIG_DIFF*/,
 		handlers: /**SCHEMA_HANDLERS*/[
+			{
+				request: 'atf.LoadWorkspaceFromLocalCopy',
+				handler: async (request, next) => {
+					const handlerChain = sdk.HandlerChainService.instance;
+					const dialogConfig = {
+						titleCaption: "WARNING - IRREVERSABLE ACTION",
+						messageCaption: "You are about to install local copy onto Creatio. This will overwrite all changes made in Creatio. Are you sure you want to proceed?",
+						yesButtonCaption: "Yes",
+						noButtonCaption: "No"
+					};
+					
+					const dialogResult = await handlerChain.process({
+						type: 'crt.ShowDialogRequest',
+						$context: this.$context,
+						dialogConfig: {
+							data: {
+								title: dialogConfig.titleCaption,
+								message: dialogConfig.messageCaption,
+								actions: [
+									{
+										key: 'No',
+										config: {
+											color: 'default',
+											caption: dialogConfig.noButtonCaption
+										}
+									},
+									{
+										key: 'Yes',
+										config: {
+											color: 'primary',
+											caption: dialogConfig.yesButtonCaption
+										}
+									},
+								]
+							}
+						}
+					});
+					
+					if(dialogResult === 'Yes'){
+						await handlerChain.process({
+							type: 'crt.RunBusinessProcessRequest',
+							$context: request.$context,
+							scopes: [...request.scopes],
+							processName: request.processName,
+							processRunType: request.processRunType,
+							saveAtProcessStart: true,
+							showNotification: true,
+							recordIdProcessParameterName: request.recordIdProcessParameterName,
+						});
+					}
+					
+				}
+			},
+			
 			{
 				request: 'atf.CaptureClioArgs',
 				handler: async (request, next) => {

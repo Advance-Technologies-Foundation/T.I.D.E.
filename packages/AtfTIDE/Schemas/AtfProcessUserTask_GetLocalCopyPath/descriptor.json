@@ -1,0 +1,10 @@
+﻿{
+  "Descriptor": {
+    "UId": "2998f9f1-5fc9-4c80-afbf-54830316d390",
+    "Name": "AtfProcessUserTask_GetLocalCopyPath",
+    "ModifiedOnUtc": "\/Date(1740088103000)\/",
+    "ManagerName": "ProcessUserTaskSchemaManager",
+    "Caption": "Get local copy path",
+    "DependsOn": []
+  }
+}

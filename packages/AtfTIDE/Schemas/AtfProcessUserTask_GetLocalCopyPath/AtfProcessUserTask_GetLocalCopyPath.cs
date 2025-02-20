@@ -1,10 +1,4 @@
-using System.Diagnostics;
-using System.IO;
-using System.Linq;
 using AtfTIDE;
-using AtfTIDE.ClioInstaller;
-using ErrorOr;
-using Terrasoft.Core.Factories;
 
 namespace Terrasoft.Core.Process.Configuration
 {
@@ -20,34 +14,21 @@ namespace Terrasoft.Core.Process.Configuration
 	using Terrasoft.Core.Entities;
 	using Terrasoft.Core.Process;
 
-	#region Class: AtfProcessUserTask_TryInstallClio
+	#region Class: AtfProcessUserTask_GetLocalCopyPath
 
 	/// <exclude/>
-	public partial class AtfProcessUserTask_TryInstallClio
+	public partial class AtfProcessUserTask_GetLocalCopyPath
 	{
 
 		#region Methods: Protected
 
 		protected override bool InternalExecute(ProcessExecutingContext context) {
-			DirectoryInfo clioDir = HelperFunctions.GetClioDirectory();
-			
-			if(!clioDir.Exists) {
-				clioDir.Create();
-			}else {
-				
-				//TODO: Ask clio to ckeck latest TIDE Nuget version, install if newer version available
-				clioDir.Delete(true);
-				clioDir.Create();
-			}
-			ErrorOr<Success> result = TideApp.Create().InstallerApp.InstallClio();
-			if(result.IsError) {
-				ErrorMessage = $"{result.Errors.FirstOrDefault().Code} - {result.Errors.FirstOrDefault().Description}";
-				IsError = true;
-				
-			}else {
-				FileInfo[] clioFilePath = clioDir.GetFiles("clio.dll", SearchOption.TopDirectoryOnly);
-				SysSettings.SetValue(UserConnection, "AtfClioFilePath",clioFilePath.First().FullName);
-			}
+			// IMPORTANT: When implementing long-running operations, it is crucial to
+			// enable timely and responsive cancellation. To achieve this, ensure that your code is designed to
+			// respond appropriately to cancellation requests using the context.CancellationToken mechanism.
+			// For more detailed information and examples, please, refer to our documentation.
+			RepositoryInfo repositoryInfo = HelperFunctions.GetRepositoryInfo(Repository, UserConnection);
+			LocalCopyPath= HelperFunctions.GetRepositoryDirectory(repositoryInfo.Name).ToString();
 			return true;
 		}
 

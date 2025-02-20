@@ -1,0 +1,45 @@
+﻿{
+  "MetaData": {
+    "Schema": {
+      "ManagerName": "ProcessUserTaskSchemaManager",
+      "UId": "2998f9f1-5fc9-4c80-afbf-54830316d390",
+      "A2": "AtfProcessUserTask_GetLocalCopyPath",
+      "A5": "bc81c4ce-bc0f-49d6-bbe4-fd8833d62c72",
+      "B1": [],
+      "B2": [],
+      "B3": [],
+      "B6": "57902d1e-ea0c-4991-b367-992c12d68fb2",
+      "B8": "8.2.1.5405",
+      "FJ1": [
+        {
+          "BL1": "Terrasoft.Core.Process.ProcessSchemaParameter",
+          "UId": "19cc1b60-108e-6502-c20e-29a9f3ac50d2",
+          "A2": "Repository",
+          "A3": "2998f9f1-5fc9-4c80-afbf-54830316d390",
+          "A4": "2998f9f1-5fc9-4c80-afbf-54830316d390",
+          "L1": "b295071f-7ea9-4e62-8d1a-919bf3732ff2",
+          "L8": {},
+          "L6": true,
+          "L9": "d7d9045c-6aa7-4fce-99af-5f48f26fab3c",
+          "L11": false,
+          "L12": 0
+        },
+        {
+          "BL1": "Terrasoft.Core.Process.ProcessSchemaParameter",
+          "UId": "4628bdd6-67e5-08e9-05fe-0b515ad5d8fb",
+          "A2": "LocalCopyPath",
+          "A3": "2998f9f1-5fc9-4c80-afbf-54830316d390",
+          "A4": "2998f9f1-5fc9-4c80-afbf-54830316d390",
+          "L1": "8b3f29bb-ea14-4ce5-a5c5-293a929b6ba2",
+          "L8": {},
+          "L11": false,
+          "L12": 1,
+          "L13": true
+        }
+      ],
+      "FK7": true,
+      "FK12": "#839DC3",
+      "FK16": true
+    }
+  }
+}
