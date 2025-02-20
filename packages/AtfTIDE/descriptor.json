@@ -14,12 +14,6 @@
         "PackageVersion": "7.8.0",
         "Name": "CrtCore",
         "Type": 1
-      },
-      {
-        "UId": "cbe750cc-1607-49dd-9521-171bd73c6110",
-        "PackageVersion": "0.1.0",
-        "Name": "AtfDiffComponent",
-        "Type": 1
       }
     ]
   }

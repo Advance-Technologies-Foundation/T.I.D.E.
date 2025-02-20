@@ -1,7 +1,6 @@
 ﻿{
   "Packages": [
-    "AtfTIDE",
-    "AtfDiffComponent"
+    "AtfTIDE"
   ],
   "ApplicationVersion": "8.2.1"
 }
