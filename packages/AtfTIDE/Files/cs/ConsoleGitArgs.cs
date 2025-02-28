@@ -64,7 +64,7 @@ namespace AtfTIDE {
 		/// <summary>
 		/// Maximum time to wait for the process to complete
 		/// </summary>
-		public int ProcessTimeoutMs { get; set; } = 60_000;
+		public int ProcessTimeoutMs { get; set; } = 600_000;
 		
 		/// <summary>
 		/// Name of the author to be used in the commit

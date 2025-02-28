@@ -44,8 +44,8 @@
           "L1": "90b65bf8-0ffc-4141-8779-2420877af907",
           "L8": {},
           "L11": false,
-          "L12": 1,
-          "L13": true
+          "L13": true,
+          "L12": 1
         },
         {
           "BL1": "Terrasoft.Core.Process.ProcessSchemaParameter",
@@ -62,6 +62,8 @@
               "BL1": "Terrasoft.Core.Process.ProcessSchemaParameter",
               "UId": "beed240c-bdce-38d4-f9e1-92372ec8e099",
               "A2": "Name",
+              "A3": "0510a0cf-480a-4e3e-9dbd-0dcff795d52c",
+              "A4": "0510a0cf-480a-4e3e-9dbd-0dcff795d52c",
               "L1": "8b3f29bb-ea14-4ce5-a5c5-293a929b6ba2",
               "L8": {},
               "L11": false
@@ -69,6 +71,7 @@
           ]
         }
       ],
+      "FK4": true,
       "FK7": true,
       "FK12": "#839DC3",
       "FK16": true
