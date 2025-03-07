@@ -21,7 +21,7 @@ namespace AtfTIDE {
 			if(isFramework) {
 				url = url.Substring(0,url.Length - 2);
 			}
-			return $"{text} -u {url} --IsNetCore {!isFramework}";
+			return $"{text} -u {url} --IsNetCore {!isFramework} --log creatio";
 		}
 	}
 }

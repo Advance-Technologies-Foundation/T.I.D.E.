@@ -10,6 +10,7 @@
 			<Item Name="LocalizableStrings.Button_7b805tb_caption.Value" Value="1. Load changes to local copy from Creatio" />
 			<Item Name="LocalizableStrings.Button_8c6g2be_caption.Value" Value="Set active branch" />
 			<Item Name="LocalizableStrings.Button_cht5usd_caption.Value" Value="Button" />
+			<Item Name="LocalizableStrings.Button_ClearLogs_caption.Value" Value="Clear" />
 			<Item Name="LocalizableStrings.Button_DiscardChanges_caption.Value" Value="Discard selected changes" />
 			<Item Name="LocalizableStrings.Button_GetDiff_caption.Value" Value="2. Show Diff between local copy and Git" />
 			<Item Name="LocalizableStrings.Button_InstallLocalCopy_caption.Value" Value="4. Load from local copy to Creatio" />
@@ -40,8 +41,17 @@
 			<Item Name="LocalizableStrings.GridDetailSearchFilter_z1pzuec_placeholder.Value" Value="Search" />
 			<Item Name="LocalizableStrings.GridDetailSettingsBtn_5ijlpwq_caption.Value" Value="Actions" />
 			<Item Name="LocalizableStrings.GridDetailSettingsBtn_n0jlqjb_caption.Value" Value="Actions" />
+			<Item Name="LocalizableStrings.Input_LogMessage_label.Value" Value="Log Messages" />
+			<Item Name="LocalizableStrings.Input_LogMessageTab_label.Value" Value="Log Messages" />
+			<Item Name="LocalizableStrings.Label_86uqz8y_caption.Value" Value="Log messages" />
 			<Item Name="LocalizableStrings.Label_at1vc3c_caption.Value" Value="This version of T.I.D.E. requires installation of clio, git client on Creatio hosting server, and requires access  on behalf of IIS-POOL user." />
+			<Item Name="LocalizableStrings.Label_q8vuphv_caption.Value" Value="Label 1" />
 			<Item Name="LocalizableStrings.Label_s7pm1mk_caption.Value" Value="!!! WARNING !!!" />
+			<Item Name="LocalizableStrings.Label_t6ybcfe_caption.Value" Value="Label 2" />
+			<Item Name="LocalizableStrings.MessagesTabContainer_caption.Value" Value="Messages" />
+			<Item Name="LocalizableStrings.TabContainer_mcnezxd_caption.Value" Value="Tab 2" />
+			<Item Name="LocalizableStrings.TabContainer_Messages_caption.Value" Value="Logs" />
+			<Item Name="LocalizableStrings.TabContainer_p9aexbq_caption.Value" Value="Tab 1" />
 			<Item Name="LocalizableStrings.TabContainer_yfwkpvj_caption.Value" Value="Advanced" />
 			<Item Name="LocalizableStrings.WebInput_RepositoryUrl_tooltip.Value" Value="Repository URL to " />
 		</Items>

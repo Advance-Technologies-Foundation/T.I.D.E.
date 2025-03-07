@@ -4,10 +4,9 @@
     "PackageVersion": "1.2.8",
     "Name": "AtfTIDE",
     "Type": 1,
-    "ModifiedOnUtc": "\/Date(1738341436000)\/",
-    "Maintainer": "ATF",
+    "ModifiedOnUtc": "\/Date(1741300816000)\/",
+    "Maintainer": "AtfTIDE",
     "ProjectPath": "Files/AtfTIDE.csproj",
-    "Description": "#OriginalMaintainer:ATF",
     "DependsOn": [
       {
         "UId": "012e2e14-082b-ac2b-da5a-2fc87bad41d4",

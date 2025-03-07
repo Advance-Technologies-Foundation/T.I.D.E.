@@ -29,10 +29,6 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 				}
 			},
 			{
-				"operation": "remove",
-				"name": "CardButtonToggleGroup"
-			},
-			{
 				"operation": "merge",
 				"name": "CardContentWrapper",
 				"values": {
@@ -103,48 +99,16 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 				}
 			},
 			{
-				"operation": "remove",
-				"name": "CardToggleTabPanel"
-			},
-			{
-				"operation": "remove",
-				"name": "FeedTabContainer"
-			},
-			{
-				"operation": "remove",
-				"name": "Feed"
-			},
-			{
-				"operation": "remove",
-				"name": "FeedTabContainerHeaderContainer"
-			},
-			{
-				"operation": "remove",
-				"name": "FeedTabContainerHeaderLabel"
-			},
-			{
-				"operation": "remove",
-				"name": "AttachmentsTabContainer"
-			},
-			{
-				"operation": "remove",
-				"name": "AttachmentList"
-			},
-			{
-				"operation": "remove",
-				"name": "AttachmentsTabContainerHeaderContainer"
-			},
-			{
-				"operation": "remove",
-				"name": "AttachmentsTabContainerHeaderLabel"
-			},
-			{
-				"operation": "remove",
-				"name": "AttachmentAddButton"
-			},
-			{
-				"operation": "remove",
-				"name": "AttachmentRefreshButton"
+				"operation": "merge",
+				"name": "CardToggleTabPanel",
+				"values": {
+					"styleType": "default",
+					"bodyBackgroundColor": "primary-contrast-500",
+					"selectedTabTitleColor": "auto",
+					"tabTitleColor": "auto",
+					"underlineSelectedTabColor": "auto",
+					"headerBackgroundColor": "auto"
+				}
 			},
 			{
 				"operation": "insert",
@@ -1655,6 +1619,155 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 				"parentName": "GridContainer_aax6po0",
 				"propertyName": "items",
 				"index": 2
+			},
+			{
+				"operation": "insert",
+				"name": "TabContainer_Messages",
+				"values": {
+					"type": "crt.TabContainer",
+					"items": [],
+					"caption": "#ResourceString(TabContainer_Messages_caption)#",
+					"iconPosition": "only-text",
+					"visible": true
+				},
+				"parentName": "Tabs",
+				"propertyName": "items",
+				"index": 2
+			},
+			{
+				"operation": "insert",
+				"name": "GridContainer_3lr88rv",
+				"values": {
+					"type": "crt.GridContainer",
+					"items": [],
+					"rows": "minmax(32px, max-content)",
+					"columns": [
+						"minmax(32px, 1fr)",
+						"minmax(32px, 1fr)"
+					],
+					"gap": {
+						"columnGap": "large",
+						"rowGap": 0
+					}
+				},
+				"parentName": "TabContainer_Messages",
+				"propertyName": "items",
+				"index": 0
+			},
+			{
+				"operation": "insert",
+				"name": "Input_LogMessageTab",
+				"values": {
+					"type": "crt.Input",
+					"label": "#ResourceString(Input_LogMessageTab_label)#",
+					"control": "$AllMessages",
+					"placeholder": "",
+					"tooltip": "",
+					"readonly": true,
+					"multiline": true,
+					"labelPosition": "above",
+					"visible": true
+				},
+				"parentName": "TabContainer_Messages",
+				"propertyName": "items",
+				"index": 1
+			},
+			{
+				"operation": "insert",
+				"name": "MessagesTabContainer",
+				"values": {
+					"type": "crt.TabContainer",
+					"tools": [],
+					"items": [],
+					"caption": "#ResourceString(MessagesTabContainer_caption)#",
+					"iconPosition": "left-icon",
+					"visible": true,
+					"icon": "mail-icon"
+				},
+				"parentName": "CardToggleTabPanel",
+				"propertyName": "items",
+				"index": 2
+			},
+			{
+				"operation": "insert",
+				"name": "FlexContainer_482ntir",
+				"values": {
+					"type": "crt.FlexContainer",
+					"direction": "row",
+					"alignItems": "center",
+					"items": []
+				},
+				"parentName": "MessagesTabContainer",
+				"propertyName": "tools",
+				"index": 0
+			},
+			{
+				"operation": "insert",
+				"name": "Label_86uqz8y",
+				"values": {
+					"type": "crt.Label",
+					"caption": "#MacrosTemplateString(#ResourceString(Label_86uqz8y_caption)#)#",
+					"labelType": "headline-3",
+					"labelThickness": "default",
+					"labelEllipsis": false,
+					"labelColor": "#0D2E4E",
+					"labelBackgroundColor": "transparent",
+					"labelTextAlign": "start",
+					"visible": true
+				},
+				"parentName": "FlexContainer_482ntir",
+				"propertyName": "items",
+				"index": 0
+			},
+			{
+				"operation": "insert",
+				"name": "Button_ClearLogs",
+				"values": {
+					"type": "crt.Button",
+					"caption": "#ResourceString(Button_ClearLogs_caption)#",
+					"color": "default",
+					"disabled": false,
+					"size": "large",
+					"iconPosition": "only-icon",
+					"visible": true,
+					"icon": "delete-button-icon",
+					"clicked": {
+						"request": "atf.ClearLogs",
+					},
+				},
+				"parentName": "FlexContainer_482ntir",
+				"propertyName": "items",
+				"index": 1
+			},
+			{
+				"operation": "insert",
+				"name": "FlexContainer_6jlfs5p",
+				"values": {
+					"type": "crt.FlexContainer",
+					"items": [],
+					"direction": "column"
+				},
+				"parentName": "MessagesTabContainer",
+				"propertyName": "items",
+				"index": 0
+			},
+			{
+				"operation": "insert",
+				"name": "Input_LogMessage",
+				"values": {
+					"type": "crt.Input",
+					"label": "#ResourceString(Input_LogMessage_label)#",
+					"control": "$AllMessages",
+					"placeholder": "",
+					"tooltip": "",
+					"readonly": true,
+					"multiline": true,
+					"labelPosition": "auto",
+					"visible": true
+				},
+				"parentName": "FlexContainer_6jlfs5p",
+				"propertyName": "items",
+				"index": 0
 			}
 		]/**SCHEMA_VIEW_CONFIG_DIFF*/,
 		viewModelConfigDiff: /**SCHEMA_VIEW_MODEL_CONFIG_DIFF*/[
@@ -1664,6 +1777,10 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 					"attributes"
 				],
 				"values": {
+					"SocketMessageReceivedFunc": {},
+					"AllMessages": {
+						"modelConfig": {}
+					},
 					"FileChangesVisible": {},
 					"AtfName": {
 						"modelConfig": {
@@ -1937,7 +2054,17 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 			{
 				request: 'crt.HandleViewModelInitRequest',
 				handler: async (request, next) => {
-					
+					const { $context } = request;
+					$context.SocketMessageReceivedFunc = async function(event, message) {
+						if (message.Header.Sender === "Clio") {
+							const body = JSON.parse(message.Body)
+							if(body.commandName ==='Show logs') {
+								const allMessages = await request.$context.AllMessages ?? "";
+								request.$context.AllMessages = body.message?.trim() + "\r\n" + allMessages;
+							}
+						}
+					}
+					Terrasoft.ServerChannel.on(Terrasoft.EventName.ON_MESSAGE, (await $context.SocketMessageReceivedFunc), $context);
 					request.$context.FileChangesVisible = false;
 					const endpoint = "/rest/Tide/CaptureClioArgs";
 					const httpClientService = new sdk.HttpClientService();
@@ -1998,12 +2125,16 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 						});
 						
 					}
-					
-					
-					
+					return next?.handle(request);
+				},
+			},
+			{
+				request: 'atf.ClearLogs',
+				handler: async (request, next) => {
+					request.$context.AllMessages = "";
 					return next?.handle(request);
 				}
-			},
+			}
 
 		]/**SCHEMA_HANDLERS*/,
 		converters: /**SCHEMA_CONVERTERS*/{}/**SCHEMA_CONVERTERS*/,
