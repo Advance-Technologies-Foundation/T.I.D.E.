@@ -236,7 +236,7 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 					"showValueAsLink": true,
 					"controlActions": [],
 					"visible": false,
-					"readonly": true,
+					"readonly": false,
 					"placeholder": "",
 					"tooltip": "#ResourceString(ComboBox_Application_tooltip)#",
 					"valueDetails": null
@@ -1165,17 +1165,17 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 			},
 			{
 				"operation": "insert",
-				"name": "Button_7b805tb",
+				"name": "Button_LoadChangesToLocalCopy",
 				"values": {
 					"type": "crt.Button",
-					"caption": "#ResourceString(Button_7b805tb_caption)#",
+					"caption": "#ResourceString(Button_LoadChangesToLocalCopy_caption)#",
 					"color": "primary",
 					"disabled": false,
 					"size": "large",
 					"iconPosition": "only-text",
 					"visible": true,
 					"clicked": {
-						"request": "crt.RunBusinessProcessRequest",
+						"request": "atf.OnLoadChangesToLocalCopyClick",
 						"params": {
 							"processName": "AtfProcess_ExportAppToLocalGitCopy",
 							"processRunType": "ForTheSelectedPage",
@@ -1732,8 +1732,8 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 					"visible": true,
 					"icon": "delete-button-icon",
 					"clicked": {
-						"request": "atf.ClearLogs",
-					},
+						"request": "atf.ClearLogs"
+					}
 				},
 				"parentName": "FlexContainer_482ntir",
 				"propertyName": "items",
@@ -2030,7 +2030,28 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 							recordIdProcessParameterName: request.recordIdProcessParameterName,
 						});
 					}
-					
+				}
+			},
+			{
+				request: 'atf.OnLoadChangesToLocalCopyClick',
+				handler: async (request, next) => {
+					const handlerChain = sdk.HandlerChainService.instance;
+					await handlerChain.process({
+						type: 'crt.RunBusinessProcessRequest',
+						$context: request.$context,
+						scopes: [...request.scopes],
+						processName: request.processName,
+						processRunType: request.processRunType,
+						saveAtProcessStart: true,
+						showNotification: true,
+						recordIdProcessParameterName: request.recordIdProcessParameterName,
+					});
+					await handlerChain.process({
+						type: 'atf.OnGetDiffCLicked',
+						$context: request.$context,
+						scopes: [...request.scopes]
+					});
+					return next?.handle(request);
 				}
 			},
 			
@@ -2075,6 +2096,17 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 			{
 				request: 'atf.OnGetDiffCLicked',
 				handler: async (request, next) => {
+					const handlerChain = sdk.HandlerChainService.instance;
+					await handlerChain.process({
+						type: 'crt.LoadDataRequest',
+						$context: request.$context,
+						scopes: request.scopes,
+						dataSourceName: 'GridDetail_62r7nr2DS', config: {
+							loadType: "reload",
+							useLastLoadParameters: true
+						}
+					});
+					
 					request.$context.FileChangesVisible = true;
 					const id = await request.$context.Id
 					const endpoint = `/rest/Tide/GetDiffForRepository?repositoryId=${id}`;

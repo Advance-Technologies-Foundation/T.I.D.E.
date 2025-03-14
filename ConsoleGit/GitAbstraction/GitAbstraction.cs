@@ -331,12 +331,28 @@ namespace GitAbstraction
 			Console.ReadKey();
 #endif
 			StringBuilder sb  = new();
-			foreach (PatchEntryChanges changes in InitializedRepository.Diff.Compare<Patch>(
-						InitializedRepository.Head.Tip.Tree,
-						DiffTargets.Index | DiffTargets.WorkingDirectory)) {
-				sb.AppendLine(changes.Patch);
+			
+			string[] exclusions = [
+				"/Files/Bin/",
+				"/Files/bin/",
+				"/Files/Obj/",
+				"/Files/obj/"
+			];
+			
+			var difference = InitializedRepository.Diff.Compare<Patch>(
+				InitializedRepository.Head.Tip.Tree, DiffTargets.Index | DiffTargets.WorkingDirectory, 
+				["packages"]);
+			
+			foreach (PatchEntryChanges changes in difference) {
+				bool shouldIgnore = exclusions.Any(i=> changes.Path.Contains(i));
+				if(!shouldIgnore) {	
+					sb.AppendLine(changes.Patch);
+				}
 			}
-			return sb.ToString();
+			
+			string text = sb.ToString();
+			
+			return text;
 		}
 		
 		
@@ -356,6 +372,9 @@ namespace GitAbstraction
 			List<ChangedFile> changedFiles = [];
 			foreach (TreeEntryChanges changes in InitializedRepository.Diff.Compare<TreeChanges>(
 						InitializedRepository.Head.Tip.Tree, DiffTargets.Index | DiffTargets.WorkingDirectory)) {
+
+				
+				
 				changedFiles.Add(new ChangedFile(changes.Path, changes.Status.ToString()));
 				
 			}

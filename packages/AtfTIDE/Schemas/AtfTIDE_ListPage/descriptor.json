@@ -2,13 +2,12 @@
   "Descriptor": {
     "UId": "2079e94d-751e-46aa-a6ce-40da6753f458",
     "Name": "AtfTIDE_ListPage",
-    "ModifiedOnUtc": "\/Date(1737074604000)\/",
+    "ModifiedOnUtc": "\/Date(1741907435000)\/",
     "Parent": {
       "UId": "3334b6c0-c8ab-4b59-a367-0c9182102552",
       "Name": "ListPageV2Template"
     },
     "ManagerName": "ClientUnitSchemaManager",
-    "Caption": "T.I.D.E. list page",
-    "DependsOn": []
+    "Caption": "T.I.D.E. list page"
   }
 }

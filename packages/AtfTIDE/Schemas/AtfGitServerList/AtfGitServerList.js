@@ -139,10 +139,33 @@ define("AtfGitServerList", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHEMA
 			},
 			{
 				"operation": "insert",
-				"name": "Button_0r9ijmj",
+				"name": "Button_OpenRepositoryList",
 				"values": {
 					"type": "crt.Button",
-					"caption": "#ResourceString(Button_0r9ijmj_caption)#",
+					"caption": "#ResourceString(Button_OpenRepositoryList_caption)#",
+					"color": "default",
+					"disabled": false,
+					"size": "large",
+					"iconPosition": "only-text",
+					"visible": true,
+					"clicked": {
+						"request": "crt.OpenPageRequest",
+						"params": {
+							"schemaName": "AtfTIDE_ListPage"
+						}
+					},
+					"clickMode": "default"
+				},
+				"parentName": "ActionButtonsContainer",
+				"propertyName": "items",
+				"index": 0
+			},
+			{
+				"operation": "insert",
+				"name": "Button_FindApp",
+				"values": {
+					"type": "crt.Button",
+					"caption": "#ResourceString(Button_FindApp_caption)#",
 					"color": "default",
 					"disabled": false,
 					"size": "large",
@@ -167,7 +190,7 @@ define("AtfGitServerList", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHEMA
 				},
 				"parentName": "ActionButtonsContainer",
 				"propertyName": "items",
-				"index": 0
+				"index": 1
 			}
 		]/**SCHEMA_VIEW_CONFIG_DIFF*/,
 		viewModelConfigDiff: /**SCHEMA_VIEW_MODEL_CONFIG_DIFF*/[
