@@ -1,14 +1,12 @@
-﻿using Terrasoft.Core;
+﻿using System;
 using Terrasoft.Web.Common;
 
-namespace AtfTIDE.ClioInstaller
+namespace AtfTIDE
 {
 	public class AppEventListener : IAppEventListener {
 
 		public void OnAppStart(AppEventContext context) {
-			AppConnection appConnection = context.Application["AppConnection"] as AppConnection;
-			UserConnection userConnection = appConnection?.SystemUserConnection;
-			userConnection.ProcessEngine.ProcessExecutor.Execute("AtfProcess_TryInstallClio");
+			TideApp.Instance.InstallerApp.InstallClio();
 		}
 
 		public void OnAppEnd(AppEventContext context){

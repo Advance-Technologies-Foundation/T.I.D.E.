@@ -65,7 +65,6 @@ namespace AtfTIDE {
 		}
 		
 		private static IEntity FetchRepositoryEntityById(Guid repositoryId, UserConnection userConnection = null){
-			
 			UserConnection uc = userConnection ?? ClassFactory.Get<UserConnection>();
 			const string repositorySchemaName = "AtfRepository";
 			Entity repositoryEntity = uc.EntitySchemaManager
