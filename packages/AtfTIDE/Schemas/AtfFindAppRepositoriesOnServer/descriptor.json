@@ -2,8 +2,9 @@
   "Descriptor": {
     "UId": "8d6028a1-b4ec-4918-94c1-7de9a056025a",
     "Name": "AtfFindAppRepositoriesOnServer",
-    "ModifiedOnUtc": "\/Date(1737105587000)\/",
+    "ModifiedOnUtc": "\/Date(1742514867000)\/",
     "ManagerName": "ProcessSchemaManager",
-    "Caption": "AtfFindAppRepositoriesOnServer"
+    "Caption": "AtfFindAppRepositoriesOnServer",
+    "DependsOn": []
   }
 }

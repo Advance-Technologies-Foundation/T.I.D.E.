@@ -55,6 +55,16 @@ namespace AtfTIDE.ClioInstaller {
 		///  result of the search operation.
 		/// </returns>
 		Task<ErrorOr<SearchResponse>> SearchAsync();
+		
+		/// <summary>
+		///  Retrieves the maximum version of the specified NuGet package asynchronously.
+		/// </summary>
+		/// <param name="packageName">The name of the NuGet package.</param>
+		/// <returns>
+		///  A task that represents the asynchronous operation. The task result contains the maximum version of the
+		///  specified package.
+		/// </returns>
+		Task<ErrorOr<string>> GetMaxVersionAsync(string packageName);
 
 		#endregion
 
@@ -123,15 +133,8 @@ namespace AtfTIDE.ClioInstaller {
 			}
 		}
 
-		/// <summary>
-		///  Retrieves the maximum version of the specified NuGet package asynchronously.
-		/// </summary>
-		/// <param name="packageName">The name of the NuGet package.</param>
-		/// <returns>
-		///  A task that represents the asynchronous operation. The task result contains the maximum version of the
-		///  specified package.
-		/// </returns>
-		private async Task<ErrorOr<string>> GetMaxVersionAsync(string packageName){
+		
+		public async Task<ErrorOr<string>> GetMaxVersionAsync(string packageName){
 			try {
 				string url = $"/v3-flatcontainer/{packageName}/index.json";
 				Uri.TryCreate(url, UriKind.Relative, out Uri routeUrl);

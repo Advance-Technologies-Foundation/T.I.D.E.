@@ -1,0 +1,42 @@
+﻿{
+  "MetaData": {
+    "Schema": {
+      "ManagerName": "ProcessUserTaskSchemaManager",
+      "UId": "13b2eac9-8646-4a14-ac94-976245c3059b",
+      "A2": "AtfProcessUserTask_InstallTide",
+      "A5": "9f62e0c0-2a3a-4ee7-9718-8aa5d915542a",
+      "B1": [],
+      "B2": [],
+      "B3": [],
+      "B6": "57902d1e-ea0c-4991-b367-992c12d68fb2",
+      "B8": "8.2.2.1867",
+      "FJ1": [
+        {
+          "BL1": "Terrasoft.Core.Process.ProcessSchemaParameter",
+          "UId": "c8409387-981a-c5ba-ad10-3445fc39dc27",
+          "A2": "IsError",
+          "A3": "13b2eac9-8646-4a14-ac94-976245c3059b",
+          "A4": "13b2eac9-8646-4a14-ac94-976245c3059b",
+          "L1": "90b65bf8-0ffc-4141-8779-2420877af907",
+          "L8": {},
+          "L12": 1,
+          "L13": true
+        },
+        {
+          "BL1": "Terrasoft.Core.Process.ProcessSchemaParameter",
+          "UId": "2741f272-641a-2d21-1324-88c63af68249",
+          "A2": "ErrorMessage",
+          "A3": "13b2eac9-8646-4a14-ac94-976245c3059b",
+          "A4": "13b2eac9-8646-4a14-ac94-976245c3059b",
+          "L1": "8b3f29bb-ea14-4ce5-a5c5-293a929b6ba2",
+          "L8": {},
+          "L12": 1
+        }
+      ],
+      "FK4": true,
+      "FK7": true,
+      "FK12": "#839DC3",
+      "FK16": true
+    }
+  }
+}

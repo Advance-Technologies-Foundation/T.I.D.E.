@@ -1,0 +1,9 @@
+﻿{
+  "Descriptor": {
+    "UId": "13b2eac9-8646-4a14-ac94-976245c3059b",
+    "Name": "AtfProcessUserTask_InstallTide",
+    "ModifiedOnUtc": "\/Date(1742512160000)\/",
+    "ManagerName": "ProcessUserTaskSchemaManager",
+    "Caption": "Install Tide"
+  }
+}

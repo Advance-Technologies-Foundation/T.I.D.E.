@@ -4,7 +4,9 @@
 		<Items>
 			<Item Name="Caption" Value="T.I.D.E. list page" />
 			<Item Name="LocalizableStrings.AddButton.Value" Value="New" />
+			<Item Name="LocalizableStrings.Button_Question_caption.Value" Value="Would you like to update TIDE" />
 			<Item Name="LocalizableStrings.Button_ynk6wyx_caption.Value" Value="Open Git Servers list" />
+			<Item Name="LocalizableStrings.Label_Question_caption.Value" Value="Tide update available. Would you like to update ?" />
 		</Items>
 	</Group>
 </Resources>

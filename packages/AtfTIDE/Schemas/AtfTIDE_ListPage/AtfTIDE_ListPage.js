@@ -1,6 +1,25 @@
-define("AtfTIDE_ListPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHEMA_ARGS*/()/**SCHEMA_ARGS*/ {
+define("AtfTIDE_ListPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_DEPS*/, function/**SCHEMA_ARGS*/(sdk)/**SCHEMA_ARGS*/ {
 	return {
 		viewConfigDiff: /**SCHEMA_VIEW_CONFIG_DIFF*/[
+			{
+				"operation": "move",
+				"name": "MainHeader",
+				"parentName": "MainContainer",
+				"propertyName": "items",
+				"index": 1
+			},
+			{
+				"operation": "merge",
+				"name": "MainHeader",
+				"values": {
+					"layoutConfig": {
+						"column": 1,
+						"row": 2,
+						"colSpan": 2,
+						"rowSpan": 1
+					}
+				}
+			},
 			{
 				"operation": "merge",
 				"name": "MenuItem_ImportFromExcel",
@@ -148,6 +167,111 @@ define("AtfTIDE_ListPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHEMA
 				"properties": [
 					"layoutConfig"
 				]
+			},
+			{
+				"operation": "insert",
+				"name": "GridContainer_UpdateQuestion",
+				"values": {
+					"type": "crt.GridContainer",
+					"columns": [
+						"minmax(32px, 1fr)",
+						"minmax(32px, 1fr)",
+						"minmax(32px, 1fr)",
+						"minmax(32px, 1fr)"
+					],
+					"rows": "minmax(max-content, 32px)",
+					"gap": {
+						"columnGap": "large",
+						"rowGap": "none"
+					},
+					"items": [],
+					"fitContent": true,
+					"visible": "$IsQuestionContainerVisible",
+					"color": "transparent",
+					"borderRadius": "none",
+					"padding": {
+						"top": "large",
+						"right": "large",
+						"bottom": "large",
+						"left": "large"
+					},
+					"alignItems": "stretch"
+				},
+				"parentName": "MainContainer",
+				"propertyName": "items",
+				"index": 0
+			},
+			{
+				"operation": "insert",
+				"name": "Label_Question",
+				"values": {
+					"layoutConfig": {
+						"column": 1,
+						"row": 1,
+						"colSpan": 3,
+						"rowSpan": 1
+					},
+					"type": "crt.Label",
+					"caption": "#MacrosTemplateString(#ResourceString(Label_Question_caption)#)#",
+					"labelType": "headline-1",
+					"labelThickness": "bold",
+					"labelEllipsis": false,
+					"labelColor": "#AF5E4B",
+					"labelBackgroundColor": "transparent",
+					"labelTextAlign": "start",
+					"visible": true
+				},
+				"parentName": "GridContainer_UpdateQuestion",
+				"propertyName": "items",
+				"index": 0
+			},
+			{
+				"operation": "insert",
+				"name": "FlexContainer_55xskyn",
+				"values": {
+					"layoutConfig": {
+						"column": 4,
+						"row": 1,
+						"colSpan": 1,
+						"rowSpan": 1
+					},
+					"type": "crt.FlexContainer",
+					"direction": "row",
+					"items": [],
+					"fitContent": true,
+					"visible": true,
+					"color": "transparent",
+					"borderRadius": "none",
+					"padding": {
+						"top": "none",
+						"right": "none",
+						"bottom": "none",
+						"left": "none"
+					},
+					"alignItems": "stretch",
+					"justifyContent": "end",
+					"gap": "small",
+					"wrap": "wrap"
+				},
+				"parentName": "GridContainer_UpdateQuestion",
+				"propertyName": "items",
+				"index": 1
+			},
+			{
+				"operation": "insert",
+				"name": "Button_Question",
+				"values": {
+					"type": "crt.Button",
+					"caption": "#ResourceString(Button_Question_caption)#",
+					"color": "accent",
+					"disabled": false,
+					"size": "large",
+					"iconPosition": "only-text",
+					"visible": true
+				},
+				"parentName": "FlexContainer_55xskyn",
+				"propertyName": "items",
+				"index": 0
 			},
 			{
 				"operation": "insert",
@@ -311,6 +435,7 @@ define("AtfTIDE_ListPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHEMA
 					"attributes"
 				],
 				"values": {
+					"IsQuestionContainerVisible": {},
 					"PDS_AtfName": {
 						"modelConfig": {
 							"path": "PDS.AtfName"
@@ -436,7 +561,18 @@ define("AtfTIDE_ListPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHEMA
 				}
 			}
 		]/**SCHEMA_MODEL_CONFIG_DIFF*/,
-		handlers: /**SCHEMA_HANDLERS*/[]/**SCHEMA_HANDLERS*/,
+		handlers: /**SCHEMA_HANDLERS*/[
+			{
+				request: "crt.HandleViewModelInitRequest",
+				handler: async (request, next) => {
+					await next?.handle(request);
+					const sysSettingsService = new sdk.SysSettingsService();
+					const settingValue = await sysSettingsService.getByCode('AtfTideUpdateAvailable');
+					request.$context.IsQuestionContainerVisible = settingValue.value;
+					await next?.handle(request);
+				}
+			}
+		]/**SCHEMA_HANDLERS*/,
 		converters: /**SCHEMA_CONVERTERS*/{}/**SCHEMA_CONVERTERS*/,
 		validators: /**SCHEMA_VALIDATORS*/{}/**SCHEMA_VALIDATORS*/
 	};
