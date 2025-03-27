@@ -40,13 +40,13 @@ namespace Terrasoft.Core.Process.Configuration
 				clioDir.Create();
 			}
 			
-			ErrorOr<Success> result = TideApp.Create().InstallerApp.InstallClio();
+			IErrorOr<Success> result = TideApp.Create().InstallerApp.InstallClio();
 			if(result.IsError) {
 				ErrorMessage = $"{result.Errors.FirstOrDefault().Code} - {result.Errors.FirstOrDefault().Description}";
 				IsError = true;
 				
 			}else {
-				FileInfo[] clioFilePath = clioDir.GetFiles("clio.dll", SearchOption.TopDirectoryOnly);
+				FileInfo[] clioFilePath = clioDir.GetFiles("clio.dll", SearchOption.AllDirectories);
 				SysSettings.SetValue(UserConnection, "AtfClioFilePath",clioFilePath.First().FullName);
 			}
 			return true;

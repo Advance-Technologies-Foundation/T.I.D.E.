@@ -37,7 +37,10 @@ namespace AtfTIDE
 			var collection = esq.GetEntityCollection(userConnection);
 			if(collection.Count == 1) {
 				var version = collection[0].GetTypedColumnValue<string>("Version");
-				bool updateAvailable = !nugetMaxTideVersion.Equals(version);
+				
+				var installedV = Version.Parse(version);
+				var nugetV = Version.Parse(nugetMaxTideVersion);
+				bool updateAvailable = nugetV.CompareTo(installedV) == 1;
 				
 				LogManager.GetLogger("AtfTide")
 						.InfoFormat(CultureInfo.InvariantCulture,  $"Updating SysSetting AtfTideUpdateAvailable to: {updateAvailable}, AtfTideVersion: {version}, NugetMaxTideVersion: {nugetMaxTideVersion}");

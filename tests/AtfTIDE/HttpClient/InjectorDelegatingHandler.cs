@@ -1,6 +1,7 @@
 ﻿using System.IO.Abstractions;
 using System.IO.Abstractions.TestingHelpers;
 using System.Net.Http;
+using AtfTIDE.ClioInstaller;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace AtfTIDE.Tests.HttpClient {
@@ -29,4 +30,31 @@ namespace AtfTIDE.Tests.HttpClient {
 			return services;
 		}
 	}
+	
+	public class InjectorInstaller {
+
+		private readonly IInstaller _installer;
+
+		public InjectorInstaller(IInstaller installer){
+			_installer = installer;
+		}
+		public IServiceCollection AddMockInstaller(IServiceCollection services){
+			services.AddSingleton(_installer);
+			return services;
+		}
+	}
+	
+	public class InjectorNugetClient {
+
+		private readonly INugetClient _nugetClientMock;
+
+		public InjectorNugetClient(INugetClient nugetClientMock){
+			_nugetClientMock = nugetClientMock;
+		}
+		public IServiceCollection AddMockNugetClient(IServiceCollection services){
+			services.AddSingleton(_nugetClientMock);
+			return services;
+		}
+	}
+	
 }
