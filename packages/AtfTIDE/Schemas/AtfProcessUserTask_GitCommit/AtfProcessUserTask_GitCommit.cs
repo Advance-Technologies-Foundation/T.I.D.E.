@@ -30,7 +30,7 @@ namespace Terrasoft.Core.Process.Configuration
 				Command = AtfTIDE.Commands.Commit,
 				RepoDir = HelperFunctions.GetRepositoryDirectory(repoInfo.Name).ToString(),
 				CommitMessage = CommitMessage,
-				CommitAuthorName = UserConnection.CurrentUser.Name,
+				CommitAuthorName = string.IsNullOrWhiteSpace(repoInfo.UserName) ? UserConnection.CurrentUser.Name : repoInfo.UserName,
 				CommitAuthorEmail = repoInfo.UserName
 			};
 			ConsoleGitResult gitCommandResult = ClassFactory
