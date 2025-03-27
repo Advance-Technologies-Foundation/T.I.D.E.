@@ -10,7 +10,7 @@
       "B3": [
         {
           "UId": "207577d0-8fd1-461c-ad77-ca390226edb6",
-          "A2": "AtfTIDE.cs.GitBrowser",
+          "A2": "AtfTIDE.GitBrowser",
           "A3": "8d6028a1-b4ec-4918-94c1-7de9a056025a",
           "A4": "8d6028a1-b4ec-4918-94c1-7de9a056025a",
           "A5": "bba4c845-42c8-4398-8175-fd460f94b8e8",
@@ -209,6 +209,7 @@
                 "GS2": "05aa9cf3-900f-45a1-b4e5-c3a9a63ee8c2",
                 "GS5": "8d6028a1-b4ec-4918-94c1-7de9a056025a"
               },
+              "L9": "2e155463-3ff1-4ccf-8584-4ec8d7233111",
               "L11": false
             }
           ],

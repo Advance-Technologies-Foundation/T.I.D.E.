@@ -1,7 +1,7 @@
 ﻿namespace Terrasoft.Core.Process
 {
 
-	using AtfTIDE.cs.GitBrowser;
+	using AtfTIDE.GitBrowser;
 	using System;
 	using System.Collections.Generic;
 	using System.Collections.ObjectModel;

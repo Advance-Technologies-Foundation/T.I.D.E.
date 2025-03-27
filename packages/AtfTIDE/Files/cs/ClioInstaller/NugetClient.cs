@@ -1,5 +1,8 @@
 ﻿using System;
+using System.Globalization;
 using System.IO;
+using System.IO.Abstractions;
+using System.IO.Compression;
 using System.Linq;
 using System.Net.Http;
 using System.Text.Json;
@@ -7,135 +10,190 @@ using System.Text.Json.Serialization;
 using System.Threading;
 using System.Threading.Tasks;
 using AtfTIDE.ClioInstaller.Dto;
+using Common.Logging;
 using ErrorOr;
-using Terrasoft.Common;
 
 namespace AtfTIDE.ClioInstaller {
-	
 	public interface INugetClient {
-		Task<ErrorOr<SearchResponse>> SearchAsync();
+
+		#region Methods: Public
 
 		/// <summary>
-		/// Downloads the Clio package asynchronously.
+		///  Downloads the latest Clio package asynchronously.
 		/// </summary>
 		/// <param name="clioDirectory">Directory where clio is to be installed</param>
-		/// <param name="version">The version of the Clio package to download. If not specified, the latest version
-		/// will be downloaded.</param>
-		/// <returns>An <see cref="ErrorOr{Success}"/> indicating the result of the download operation.</returns>
+		/// <returns>An <see cref="ErrorOr{Success}" /> indicating the result of the download operation.</returns>
 		/// <remarks>
-		/// This method constructs the request URI based on the specified version or retrieves the latest version if not specified.
-		/// It then sends an HTTP GET request to download the package and saves it to a file.
+		///  This method constructs the request URI based on the specified version or retrieves the latest version if not
+		///  specified.
+		///  It then sends an HTTP GET request to download the package and saves it to a file.
 		/// </remarks>
-		Task<ErrorOr<Success>> DownloadClioAsync(string clioDirectory, string version = "");
+		Task<ErrorOr<Success>> DownloadClioAsync(string clioDirectory);
+
+		/// <summary>
+		///  Downloads the specific version of Clio package asynchronously.
+		/// </summary>
+		/// <param name="clioDirectory">Directory where clio is to be installed</param>
+		/// <param name="version">
+		///  The version of the Clio package to download. If not specified, the latest version
+		///  will be downloaded.
+		/// </param>
+		/// <returns>An <see cref="ErrorOr{Success}" /> indicating the result of the download operation.</returns>
+		/// <remarks>
+		///  This method constructs the request URI based on the specified version or retrieves the latest version if not
+		///  specified.
+		///  It then sends an HTTP GET request to download the package and saves it to a file.
+		/// </remarks>
+		Task<ErrorOr<Success>> DownloadClioAsync(string clioDirectory, string version);
+
+		/// <summary>
+		///  Searches for the Clio package asynchronously.
+		/// </summary>
+		/// <returns>
+		///  A task that represents the asynchronous operation.
+		///  The task result contains an <see cref="ErrorOr{SearchResponse}" /> indicating the
+		///  result of the search operation.
+		/// </returns>
+		Task<ErrorOr<SearchResponse>> SearchAsync();
+		
+		/// <summary>
+		///  Retrieves the maximum version of the specified NuGet package asynchronously.
+		/// </summary>
+		/// <param name="packageName">The name of the NuGet package.</param>
+		/// <returns>
+		///  A task that represents the asynchronous operation. The task result contains the maximum version of the
+		///  specified package.
+		/// </returns>
+		Task<ErrorOr<string>> GetMaxVersionAsync(string packageName);
+
+		#endregion
+
 	}
-	
+
 	public class NugetClient : INugetClient {
 
-		private readonly HttpClient _client;
+		#region Fields: Private
+
 		private static readonly JsonSerializerOptions JsonOptions = new JsonSerializerOptions {
 			PropertyNameCaseInsensitive = true,
 			DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull
 		};
 
-		public NugetClient(IHttpClientFactory clientFactory){
-			_client = clientFactory.CreateClient(TideConsts.NugetHttpClientName);
+		private readonly System.Net.Http.HttpClient _client;
+		private readonly IFileSystem _fileSystem;
+		private readonly ILog _logger;
+
+		#endregion
+
+		#region Constructors: Public
+
+		public NugetClient(System.Net.Http.HttpClient client, IFileSystem fileSystem, ILog logger){
+			_client = client;
+			_fileSystem = fileSystem;
+			_logger = logger;
 		}
 
-		/// <summary>
-		/// Downloads the Clio package asynchronously.
-		/// </summary>
-		/// <param name="clioDirectory">Directory where clio is to be installed</param>
-		/// <param name="version">The version of the Clio package to download. If not specified, the latest version will be downloaded.</param>
-		/// <returns>An <see cref="ErrorOr{Success}"/> indicating the result of the download operation.</returns>
-		public async Task<ErrorOr<Success>> DownloadClioAsync(string clioDirectory, string version = ""){
-			string requestUri = "";
-			if(string.IsNullOrWhiteSpace(version)) {
-				string maxVersion = await GetMaxVersionAsync("clio");
-				requestUri = $"v3-flatcontainer/clio/{maxVersion}/clio.{maxVersion}.nupkg";
-			} 
-			else {
-				requestUri = $"v3-flatcontainer/clio/{version}/clio.{version}.nupkg";
-			}
-			HttpResponseMessage response = await _client.GetAsync(requestUri);
-			DirectoryInfo tempDir = Directory.CreateDirectory(Path.Combine(clioDirectory, ".tmp"));
-			string tempZipPath = Path.Combine(tempDir.FullName, "clio.zip");
-			using(Stream stream = await response.Content.ReadAsStreamAsync()) {
-				File.WriteAllBytes(tempZipPath, stream.GetAllBytes());
-			};
-			UnzipFile(tempZipPath, tempDir.FullName);
-			
-			string contentDir = Path.Combine(tempDir.FullName, "tools","net8.0", "any"); 
-			CopyDirectory(contentDir, clioDirectory);
-			
-			tempDir.Delete(true);
-			return Result.Success;
-		}
+		#endregion
+
+		#region Methods: Private
 		
-		
-		/// <summary>
-		/// Unzips the specified zip file to the given extraction path.
-		/// </summary>
-		/// <param name="zipFilePath">The path to the zip file to be extracted.</param>
-		/// <param name="extractPath">The path where the contents of the zip file will be extracted.</param>
-		/// <returns>An <see cref="ErrorOr{Success}"/> indicating the result of the extraction operation.</returns>
-		private ErrorOr<Success> UnzipFile(string zipFilePath, string extractPath) {
+		private async Task<ErrorOr<Success>> DownloadClioInternalAsync(string clioDirectory, Uri routeUrl){
 			try {
-				System.IO.Compression.ZipFile.ExtractToDirectory(zipFilePath, extractPath);
-				return Result.Success;
-			} catch (Exception ex) {
+				HttpResponseMessage response = await _client.GetAsync(routeUrl);
+				using (Stream httpStream = await response.Content.ReadAsStreamAsync()) {
+					using (ZipArchive arch = new ZipArchive(httpStream, ZipArchiveMode.Read, false)) {
+						foreach (ZipArchiveEntry entry in arch.Entries) {
+							string fullName = entry.FullName;
+							long length = entry.Length;
+							string destFilePath = Path.Combine(clioDirectory, fullName);
+							string dir = Path.GetDirectoryName(destFilePath);
+							if (dir != null && !_fileSystem.Directory.Exists(dir)) {
+								_fileSystem.Directory.CreateDirectory(dir);
+							}
+							if (length > 0) {
+								//otherwise it is an empty file
+								using (Stream stream = entry.Open()) {
+									using (FileSystemStream fileStream = _fileSystem.File.Create(destFilePath)) {
+										await stream.CopyToAsync(fileStream, (int)length);
+										await fileStream.FlushAsync();
+										fileStream.Close();
+									}
+								}
+							}
+						}
+					}
+					_logger.InfoFormat(CultureInfo.InstalledUICulture, "Installed clio to {0}", clioDirectory);
+					return Result.Success;
+				}
+			}
+			catch (Exception ex) {
+				_logger.ErrorFormat(CultureInfo.InstalledUICulture,
+					"En error occured while downloading clio {0}", ex.Message, ex);
 				return Error.Failure(ex.Message);
 			}
 		}
+
 		
-		/// <summary>
-		/// Retrieves the maximum version of the specified NuGet package asynchronously.
-		/// </summary>
-		/// <param name="packageName">The name of the NuGet package.</param>
-		/// <returns>A task that represents the asynchronous operation. The task result contains the maximum version of the specified package.</returns>
-		private async Task<string> GetMaxVersionAsync(string packageName) {
-			string url = $"/v3-flatcontainer/{packageName}/index.json";
-			string json = await _client.GetStringAsync(url);
-			using (JsonDocument document = JsonDocument.Parse(json)) {
-				JsonElement root = document.RootElement;
-				JsonElement versions = root.GetProperty("versions");
-				return versions.EnumerateArray().Last().GetString();
+		public async Task<ErrorOr<string>> GetMaxVersionAsync(string packageName){
+			try {
+				string url = $"/v3-flatcontainer/{packageName}/index.json";
+				Uri.TryCreate(url, UriKind.Relative, out Uri routeUrl);
+				string json = await _client.GetStringAsync(routeUrl);
+				using (JsonDocument document = JsonDocument.Parse(json)) {
+					JsonElement root = document.RootElement;
+					JsonElement versions = root.GetProperty("versions");
+					return versions.EnumerateArray().Last().GetString();
+				}
 			}
+			catch(Exception ex) {
+				_logger.ErrorFormat(CultureInfo.InstalledUICulture,
+					"En error occured while GetMaxVersionAsync clio {0}", ex.Message, ex);
+				return Error.Failure(ex.Message);
+				
+			}
+			
 		}
-		
-		
-		/// <summary>
-		/// Copies all files and subdirectories from the source directory to the destination directory.
-		/// </summary>
-		/// <param name="sourceDir">The path of the source directory.</param>
-		/// <param name="destDir">The path of the destination directory.</param>
-		/// <remarks>
-		/// This method recursively copies all files and subdirectories from the source directory to the destination directory.
-		/// If the destination directory does not exist, it will be created.
-		/// </remarks>
-		public void CopyDirectory(string sourceDir, string destDir)
-		{
-			DirectoryInfo dir = new DirectoryInfo(sourceDir);
-			if (!dir.Exists) {
-				throw new DirectoryNotFoundException($"Source directory not found: {sourceDir}");
+
+		#endregion
+
+		#region Methods: Public
+
+		public async Task<ErrorOr<Success>> DownloadClioAsync(string clioDirectory){
+			ErrorOr<string> isErrOrMaxVersion = await GetMaxVersionAsync("clio");
+			if (isErrOrMaxVersion.IsError) {
+				return isErrOrMaxVersion.FirstError;
 			}
-			DirectoryInfo[] dirs = dir.GetDirectories();
-			Directory.CreateDirectory(destDir);
-			foreach (FileInfo file in dir.GetFiles()) {
-				string targetFilePath = Path.Combine(destDir, file.Name);
-				file.CopyTo(targetFilePath);
-			}
-			foreach (DirectoryInfo subDir in dirs) {
-				string newDestinationDir = Path.Combine(destDir, subDir.Name);
-				CopyDirectory(subDir.FullName, newDestinationDir);
-			}
+			string maxVersion = isErrOrMaxVersion.Value;
+			string requestUri = $"v3-flatcontainer/clio/{maxVersion}/clio.{maxVersion}.nupkg";
+			Uri.TryCreate(requestUri, UriKind.Relative, out Uri routeUrl);
+			return await DownloadClioInternalAsync(clioDirectory, routeUrl);
 		}
-		
+
+		/// <summary>
+		///  Downloads the Clio package asynchronously, and unzips it to clio folder.
+		/// </summary>
+		/// <param name="clioDirectory">Directory where clio is to be installed</param>
+		/// <param name="version">
+		///  The version of the Clio package to download. If not specified, the latest version will be
+		///  downloaded.
+		/// </param>
+		/// <returns>An <see cref="ErrorOr{Success}" /> indicating the result of the download operation.</returns>
+		public async Task<ErrorOr<Success>> DownloadClioAsync(string clioDirectory, string version){
+			string requestUri = $"v3-flatcontainer/clio/{version}/clio.{version}.nupkg";
+			Uri.TryCreate(requestUri, UriKind.Relative, out Uri routeUrl);
+			return await DownloadClioInternalAsync(clioDirectory, routeUrl);
+		}
+
 		public async Task<ErrorOr<SearchResponse>> SearchAsync(){
 			const string url = "/query?q=clio&packageType=DotnetTool";
-			HttpResponseMessage response = await _client.GetAsync(url);
-			using (Stream str = await response.Content.ReadAsStreamAsync()){
+			Uri.TryCreate(url, UriKind.Relative, out Uri routeUrl);
+			HttpResponseMessage response = await _client.GetAsync(routeUrl);
+			using (Stream str = await response.Content.ReadAsStreamAsync()) {
 				return await JsonSerializer.DeserializeAsync<SearchResponse>(str, JsonOptions, CancellationToken.None);
 			}
 		}
+
+		#endregion
+
 	}
 }

@@ -1,0 +1,10 @@
+﻿{
+  "Descriptor": {
+    "UId": "ec7e280d-784a-49b1-a998-24a4ce022a3d",
+    "Name": "AtfProcess_InstallTide",
+    "ModifiedOnUtc": "\/Date(1742513731000)\/",
+    "ManagerName": "ProcessSchemaManager",
+    "Caption": "Install Tide",
+    "DependsOn": []
+  }
+}

@@ -1,9 +1,6 @@
 using System.Diagnostics;
 using System.IO;
-using System.Linq;
 using AtfTIDE;
-using AtfTIDE.ClioInstaller;
-using ErrorOr;
 using Terrasoft.Core.Factories;
 
 namespace Terrasoft.Core.Process.Configuration
@@ -20,35 +17,34 @@ namespace Terrasoft.Core.Process.Configuration
 	using Terrasoft.Core.Entities;
 	using Terrasoft.Core.Process;
 
-	#region Class: AtfProcessUserTask_TryInstallClio
+	#region Class: AtfProcessUserTask_InstallTide
 
 	/// <exclude/>
-	public partial class AtfProcessUserTask_TryInstallClio
+	public partial class AtfProcessUserTask_InstallTide
 	{
 
 		#region Methods: Protected
 
 		protected override bool InternalExecute(ProcessExecutingContext context) {
 			DirectoryInfo clioDir = HelperFunctions.GetClioDirectory();
+			ITextTransformer transformer = ClassFactory.Get<ITextTransformer>("UrlAppender");
+			var clioPath = SysSettings.GetValue(UserConnection,"AtfClioFilePath").ToString();
+			string arguments = $"{clioPath} tide";
+			ProcessStartInfo startInfo = new ProcessStartInfo {
+				FileName = "dotnet",
+				Arguments = transformer.Transform(arguments),
+				UseShellExecute = false,
+				CreateNoWindow = true,
+				WorkingDirectory = clioDir.FullName,
+				RedirectStandardError = true,
+				RedirectStandardOutput = true,
+			};
 			
-			if(!clioDir.Exists) {
-				clioDir.Create();
-			}else {
-				
-				//TODO: Ask clio to ckeck latest TIDE Nuget version, install if newer version available
-				clioDir.Delete(true);
-				clioDir.Create();
+			using (System.Diagnostics.Process process = new System.Diagnostics.Process()) {
+				process.StartInfo = startInfo;
+				process.Start();
 			}
 			
-			IErrorOr<Success> result = TideApp.Create().InstallerApp.InstallClio();
-			if(result.IsError) {
-				ErrorMessage = $"{result.Errors.FirstOrDefault().Code} - {result.Errors.FirstOrDefault().Description}";
-				IsError = true;
-				
-			}else {
-				FileInfo[] clioFilePath = clioDir.GetFiles("clio.dll", SearchOption.AllDirectories);
-				SysSettings.SetValue(UserConnection, "AtfClioFilePath",clioFilePath.First().FullName);
-			}
 			return true;
 		}
 

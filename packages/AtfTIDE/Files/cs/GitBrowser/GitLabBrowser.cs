@@ -1,16 +1,15 @@
-﻿using Newtonsoft.Json.Linq;
-using System;
+﻿using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
+using Newtonsoft.Json.Linq;
 
-namespace AtfTIDE.cs.GitBrowser
+namespace AtfTIDE.GitBrowser
 {
 	public class Repository {
 		public string Name { get; set; }
-
 		public string UrlToClone { get; set; }
 		public string WebUrl { get; set; }
 		public string Id
@@ -22,23 +21,23 @@ namespace AtfTIDE.cs.GitBrowser
 
 	public class GitLabBrowser
 	{
-		private string gitlabUrl;
+		private readonly string _gitlabUrl;
 
 		public int MaxRepositoryCount { get; set; } = int.MaxValue;
 
 		public GitLabBrowser(string gitlabUrl) {
-			this.gitlabUrl = gitlabUrl;
+			_gitlabUrl = gitlabUrl;
 		}
 
 		public async Task<List<Repository>> GetAllRepositoriesAsync(string gitlabToken) {
 			var repositories = new ConcurrentBag<Repository>();
-			using (var client = new HttpClient()) {
+			using (var client = new System.Net.Http.HttpClient()) {
 				client.DefaultRequestHeaders.Add("Private-Token", gitlabToken);
 				int page = 1;
 				bool hasMorePages = true;
 				var tasks = new List<Task>();
 				while (hasMorePages && repositories.Count < MaxRepositoryCount) {
-					var response = await client.GetAsync($"{gitlabUrl}/api/v4/projects?per_page=100&page={page}");
+					var response = await client.GetAsync($"{_gitlabUrl}/api/v4/projects?per_page=100&page={page}");
 					if (response.IsSuccessStatusCode) {
 						var content = await response.Content.ReadAsStringAsync();
 						var json = JArray.Parse(content);
@@ -85,10 +84,10 @@ namespace AtfTIDE.cs.GitBrowser
 		}
 
 		public bool IsClioRepositories(Repository repo, string gitlabToken) {
-			using (var client = new HttpClient()) {
+			using (var client = new System.Net.Http.HttpClient()) {
 				client.DefaultRequestHeaders.Add("Private-Token", gitlabToken);
 				if (string.IsNullOrEmpty(repo.Id)) {
-					var response = client.GetAsync($"{gitlabUrl}/api/v4/projects?search={repo.Name}").Result;
+					var response = client.GetAsync($"{_gitlabUrl}/api/v4/projects?search={repo.Name}").Result;
 					if (response.IsSuccessStatusCode) {
 						var content = response.Content.ReadAsStringAsync().Result;
 						var json = JArray.Parse(content);
@@ -101,7 +100,7 @@ namespace AtfTIDE.cs.GitBrowser
 						return false;
 					}
 				}
-				var repoResponse = client.GetAsync($"{gitlabUrl}/api/v4/projects/{repo.Id}/repository/tree?path=.clio").Result;
+				var repoResponse = client.GetAsync($"{_gitlabUrl}/api/v4/projects/{repo.Id}/repository/tree?path=.clio").Result;
 				if (repoResponse.IsSuccessStatusCode) {
 					var repoContent = repoResponse.Content.ReadAsStringAsync().Result;
 					var repoJson = JArray.Parse(repoContent);
