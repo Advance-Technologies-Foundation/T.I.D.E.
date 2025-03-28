@@ -25,6 +25,15 @@ namespace Terrasoft.Core.Process.Configuration
 
 		#region Methods: Protected
 
+		private static void SetDotnetProcessTempPath(ProcessStartInfo processStartInfo, string tempPath) {
+			processStartInfo.EnvironmentVariables["TMP"] = tempPath;
+			processStartInfo.EnvironmentVariables["TEMP"] = tempPath;
+			string profilePath = Path.Combine(tempPath, "dotnet");
+			processStartInfo.EnvironmentVariables["DOTNET_CLI_HOME"] = profilePath;
+			processStartInfo.EnvironmentVariables["USERPROFILE"] = profilePath;
+			processStartInfo.EnvironmentVariables["APPDATA"] = Path.Combine(profilePath, "AppData", "Roaming");
+			processStartInfo.EnvironmentVariables["LOCALAPPDATA"] = Path.Combine(profilePath, "AppData", "Local");
+		}
 		protected override bool InternalExecute(ProcessExecutingContext context) {
 			DirectoryInfo clioDir = HelperFunctions.GetClioDirectory();
 			ITextTransformer transformer = ClassFactory.Get<ITextTransformer>("UrlAppender");
@@ -34,16 +43,18 @@ namespace Terrasoft.Core.Process.Configuration
 			string password = SysSettings.GetValue(UserConnection,"AtfPasswordForClio", "Supervisor");
 			
 			string arguments = $"{clioPath} tide -l {userName} -p {password}";
+			string transformedArguments = transformer.Transform(arguments);
+			
 			ProcessStartInfo startInfo = new ProcessStartInfo {
 				FileName = "dotnet",
-				Arguments = transformer.Transform(arguments),
+				Arguments = transformedArguments,
 				UseShellExecute = false,
 				CreateNoWindow = true,
+				//UseShellExecute = true,
+				//CreateNoWindow = false,
 				WorkingDirectory = clioDir.FullName,
-				RedirectStandardError = true,
-				RedirectStandardOutput = true,
 			};
-			
+			SetDotnetProcessTempPath(startInfo, HelperFunctions.CreateTempDirectory().FullName);
 			using (System.Diagnostics.Process process = new System.Diagnostics.Process()) {
 				process.StartInfo = startInfo;
 				process.Start();
