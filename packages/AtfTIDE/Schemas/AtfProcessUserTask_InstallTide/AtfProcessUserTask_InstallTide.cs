@@ -29,7 +29,11 @@ namespace Terrasoft.Core.Process.Configuration
 			DirectoryInfo clioDir = HelperFunctions.GetClioDirectory();
 			ITextTransformer transformer = ClassFactory.Get<ITextTransformer>("UrlAppender");
 			var clioPath = SysSettings.GetValue(UserConnection,"AtfClioFilePath").ToString();
-			string arguments = $"{clioPath} tide";
+			
+			string userName = SysSettings.GetValue(UserConnection,"AtfUserNameForClio", "Supervisor");
+			string password = SysSettings.GetValue(UserConnection,"AtfPasswordForClio", "Supervisor");
+			
+			string arguments = $"{clioPath} tide -l {userName} -p {password}";
 			ProcessStartInfo startInfo = new ProcessStartInfo {
 				FileName = "dotnet",
 				Arguments = transformer.Transform(arguments),

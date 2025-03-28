@@ -5,6 +5,25 @@
         {
           "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
           "ColumnName": "Id",
+          "Value": "4b94d721-93d2-463b-9c22-b8e863ee79da"
+        },
+        {
+          "SchemaColumnUId": "736c30a7-c0ec-4fa9-b034-2552b319b633",
+          "ColumnName": "Name",
+          "Value": "AtfPasswordForClio"
+        },
+        {
+          "SchemaColumnUId": "9e53fd7c-dde4-4502-a64c-b9e34148108b",
+          "ColumnName": "Description",
+          "Value": ""
+        }
+      ]
+    },
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "ColumnName": "Id",
           "Value": "7a44ce3e-57d5-474c-9ed1-a7f9c2b12778"
         },
         {
@@ -16,6 +35,25 @@
           "SchemaColumnUId": "9e53fd7c-dde4-4502-a64c-b9e34148108b",
           "ColumnName": "Description",
           "Value": "Value is true when nuget contains a version higher than the current one."
+        }
+      ]
+    },
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "ColumnName": "Id",
+          "Value": "7e53f3e9-1b3e-407d-9418-883502803e07"
+        },
+        {
+          "SchemaColumnUId": "736c30a7-c0ec-4fa9-b034-2552b319b633",
+          "ColumnName": "Name",
+          "Value": "AtfUserNameForClio"
+        },
+        {
+          "SchemaColumnUId": "9e53fd7c-dde4-4502-a64c-b9e34148108b",
+          "ColumnName": "Description",
+          "Value": ""
         }
       ]
     },

@@ -1,0 +1,10 @@
+﻿{
+  "Descriptor": {
+    "UId": "5b30f199-ba64-4288-a56f-617d2fe14406",
+    "Name": "Page_LogTerminalAppearanceSettings",
+    "ModifiedOnUtc": "\/Date(1743121261000)\/",
+    "ManagerName": "AddonSchemaManager",
+    "Caption": "Log Terminal (AppearanceSettings)",
+    "DependsOn": []
+  }
+}

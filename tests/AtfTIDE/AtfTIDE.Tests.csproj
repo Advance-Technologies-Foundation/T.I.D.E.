@@ -63,6 +63,7 @@
         <PackageReference Include="System.Threading.Tasks.Extensions" version="4.5.4" />
         <PackageReference Include="System.Collections.Immutable" version="8.0.0" />
         <PackageReference Include="System.IO.Abstractions.TestingHelpers" Version="22.0.12" />
+<!--        <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />-->
 <!--        <PackageReference Include="RichardSzalay.MockHttp" Version="7.0.0" />-->
         <Reference Include="*">
             <HintPath>.\Libs\Terrasoft.TestFramework.dll</HintPath>

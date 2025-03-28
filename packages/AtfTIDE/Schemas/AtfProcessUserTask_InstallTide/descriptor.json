@@ -4,6 +4,7 @@
     "Name": "AtfProcessUserTask_InstallTide",
     "ModifiedOnUtc": "\/Date(1742512160000)\/",
     "ManagerName": "ProcessUserTaskSchemaManager",
-    "Caption": "Install Tide"
+    "Caption": "Install Tide",
+    "DependsOn": []
   }
 }

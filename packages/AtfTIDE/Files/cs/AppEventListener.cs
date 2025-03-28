@@ -1,7 +1,10 @@
 ﻿using System;
 using System.Globalization;
+using System.IO;
+using System.Linq;
 using AtfTIDE.ClioInstaller;
 using Common.Logging;
+using ErrorOr;
 using Terrasoft.Core;
 using Terrasoft.Core.Configuration;
 using Terrasoft.Core.Entities;
@@ -13,7 +16,18 @@ namespace AtfTIDE
 	public class AppEventListener : IAppEventListener {
 
 		public void OnAppStart(AppEventContext context) {
-			TideApp.Instance.InstallerApp.InstallClio();
+			var userConnection = ClassFactory.Get<UserConnection>(); //Who is this ?
+			
+			IErrorOr<Success> result = TideApp.Instance.InstallerApp.InstallClio();
+			if(result.IsError) {
+				
+				
+			}else {
+				DirectoryInfo clioDir = HelperFunctions.GetClioDirectory();
+				FileInfo[] clioFilePath = clioDir.GetFiles("clio.dll", SearchOption.AllDirectories);
+				SysSettings.SetValue(userConnection, "AtfClioFilePath",clioFilePath.First().FullName);
+			}
+			
 			
 			var maybeMaxTideVersion = TideApp.Instance.GetRequiredService<INugetClient>()
 					.GetMaxVersionAsync("AtfTide")
@@ -25,7 +39,7 @@ namespace AtfTIDE
 			}
 			string nugetMaxTideVersion = maybeMaxTideVersion.Value;
 			
-			var userConnection = ClassFactory.Get<UserConnection>(); //Who is this ?
+			
 			EntitySchemaQuery esq = new EntitySchemaQuery(userConnection.EntitySchemaManager, "SysPackage");
 			esq.AddAllSchemaColumns();
 			

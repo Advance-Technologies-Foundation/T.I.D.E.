@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="en-US">
+	<Group Type="String">
+		<Items>
+			<Item Name="Caption" Value="Log Terminal" />
+			<Item Name="LocalizableStrings.RichTextEditor_LogMessages_caption.Value" Value="Rich text" />
+			<Item Name="LocalizableStrings.RichTextEditor_LogMessages_label.Value" Value="Log messages" />
+		</Items>
+	</Group>
+</Resources>
