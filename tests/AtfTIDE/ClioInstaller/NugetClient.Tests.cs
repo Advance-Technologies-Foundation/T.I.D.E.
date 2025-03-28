@@ -87,7 +87,7 @@ namespace AtfTIDE.Tests.ClioInstaller {
 			string creatioDir = Path.Combine($"{driveName}:\\", "inetpub", "wwwroot", "creatio");
 			mockFileSystem.AddDirectory(creatioDir);
 			_defaultDirectories.Add(nameof(creatioDir), mockFileSystem.DirectoryInfo.New(creatioDir));
-
+			
 			string webappDir = Path.Join(creatioDir, "Terrasoft.WebApp");
 			mockFileSystem.AddDirectory(webappDir);
 			_defaultDirectories.Add(nameof(webappDir), mockFileSystem.DirectoryInfo.New(webappDir));

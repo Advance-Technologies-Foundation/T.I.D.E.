@@ -267,7 +267,11 @@ define("AtfTIDE_ListPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 					"disabled": false,
 					"size": "large",
 					"iconPosition": "only-text",
-					"visible": true
+					"visible": true,
+					"clicked": {
+						"request": "atf.InstallTideClicked",
+					},
+					"clickMode": "default"
 				},
 				"parentName": "FlexContainer_55xskyn",
 				"propertyName": "items",
@@ -569,9 +573,43 @@ define("AtfTIDE_ListPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 					const sysSettingsService = new sdk.SysSettingsService();
 					const settingValue = await sysSettingsService.getByCode('AtfTideUpdateAvailable');
 					request.$context.IsQuestionContainerVisible = settingValue.value;
+					
+					const endpoint = "/rest/Tide/CaptureClioArgs";
+					const httpClientService = new sdk.HttpClientService();
+					await httpClientService.get(endpoint)
+					
+					await next?.handle(request);
+				}
+			},
+			{
+				request: "atf.InstallTideClicked",
+				handler: async (request, next) => {
+					await next?.handle(request);
+					
+					const handlerChain = sdk.HandlerChainService.instance;
+					await handlerChain.process({
+						type: "crt.RunBusinessProcessRequest",
+						$context: request.$context,
+						scopes: [...request.scopes],
+						processName: "AtfProcess_InstallTide",
+						processRunType: "RegardlessOfThePage",
+						saveAtProcessStart: true,
+						showNotification: true
+					});
+					
+					await handlerChain.process({
+						type: 'crt.OpenPageRequest',
+						$context: request.$context,
+						scopes: [...request.scopes],
+						schemaName: "Page_LogTerminal"
+					});
+					
 					await next?.handle(request);
 				}
 			}
+			
+			
+			
 		]/**SCHEMA_HANDLERS*/,
 		converters: /**SCHEMA_CONVERTERS*/{}/**SCHEMA_CONVERTERS*/,
 		validators: /**SCHEMA_VALIDATORS*/{}/**SCHEMA_VALIDATORS*/
