@@ -60,8 +60,7 @@ BenchmarkDotNet.Artifacts/
 # .NET Core
 project.lock.json
 project.fragment.lock.json
-artifacts/
-
+/[A-a]rtifacts
 # ASP.NET Scaffolding
 ScaffoldingReadMe.txt
 
@@ -411,3 +410,4 @@ data.??-??.json
 **/.nuget
 **/.vscode
 .application/*
+/[A-a]rtifact
