@@ -41,7 +41,6 @@ namespace AtfTIDE.Tests {
 			_sut = new AppEventListener();
 		}
 		
-		[Ignore("Not ready yet")]
 		[TestCase("4.0.0")]
 		public void AppEventListener_Should_Find_Version(string mockNugetVersion){ 
 			IInstaller installerMock = Substitute.For<IInstaller>();
@@ -59,12 +58,9 @@ namespace AtfTIDE.Tests {
 			InjectorNugetClient injectorNugetClient = new InjectorNugetClient(nugetClientMock);
 			_injectedServices.Add(injectorNugetClient.AddMockNugetClient);
 			
-			
-			
-			
 			_sut.OnAppStart(null);
 			
-			
+			// Add assertions to verify the expected behavior
 		}
 		
 		
