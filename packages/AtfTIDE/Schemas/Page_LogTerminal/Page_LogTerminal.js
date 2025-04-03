@@ -107,7 +107,8 @@ define("Page_LogTerminal", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 							const body = JSON.parse(message.Body)
 							if(body.commandName ==='Show logs') {
 								const allMessages = await request.$context.AllMessages ?? "";
-								request.$context.AllMessages = body.message?.replace(/\r\n/g, "<br>") + "<br>" + allMessages;
+								const newMessages = body.message?.split('\r\n').reverse().join('<br>');
+								request.$context.AllMessages = newMessages + "<br>" + allMessages;
 							}
 						}
 					}
