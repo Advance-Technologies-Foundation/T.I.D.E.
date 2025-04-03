@@ -798,23 +798,18 @@
 			<SpecificVersion>False</SpecificVersion>
 			<Private>False</Private>
 		</Reference>
-		<Reference Include="CrtMatomoConnector">
-			<HintPath>$(RelativePkgFolderPath)/CrtMatomoConnector/$(StandalonePackageAssemblyPath)/CrtMatomoConnector.dll</HintPath>
-			<SpecificVersion>False</SpecificVersion>
-			<Private>False</Private>
-		</Reference>
 		<Reference Include="CrtContentDesigner">
 			<HintPath>$(RelativePkgFolderPath)/CrtContentDesigner/$(StandalonePackageAssemblyPath)/CrtContentDesigner.dll</HintPath>
 			<SpecificVersion>False</SpecificVersion>
 			<Private>False</Private>
 		</Reference>
-		<Reference Include="CrtPlaybook">
-			<HintPath>$(RelativePkgFolderPath)/CrtPlaybook/$(StandalonePackageAssemblyPath)/CrtPlaybook.dll</HintPath>
+		<Reference Include="CrtMatomoConnector">
+			<HintPath>$(RelativePkgFolderPath)/CrtMatomoConnector/$(StandalonePackageAssemblyPath)/CrtMatomoConnector.dll</HintPath>
 			<SpecificVersion>False</SpecificVersion>
 			<Private>False</Private>
 		</Reference>
-		<Reference Include="CrtGoogleAnalytics">
-			<HintPath>$(RelativePkgFolderPath)/CrtGoogleAnalytics/$(StandalonePackageAssemblyPath)/CrtGoogleAnalytics.dll</HintPath>
+		<Reference Include="CrtPlaybook">
+			<HintPath>$(RelativePkgFolderPath)/CrtPlaybook/$(StandalonePackageAssemblyPath)/CrtPlaybook.dll</HintPath>
 			<SpecificVersion>False</SpecificVersion>
 			<Private>False</Private>
 		</Reference>
@@ -825,6 +820,11 @@
 		</Reference>
 		<Reference Include="CrtOCMInLeadOppMgmt">
 			<HintPath>$(RelativePkgFolderPath)/CrtOCMInLeadOppMgmt/$(StandalonePackageAssemblyPath)/CrtOCMInLeadOppMgmt.dll</HintPath>
+			<SpecificVersion>False</SpecificVersion>
+			<Private>False</Private>
+		</Reference>
+		<Reference Include="CrtGoogleAnalytics">
+			<HintPath>$(RelativePkgFolderPath)/CrtGoogleAnalytics/$(StandalonePackageAssemblyPath)/CrtGoogleAnalytics.dll</HintPath>
 			<SpecificVersion>False</SpecificVersion>
 			<Private>False</Private>
 		</Reference>
@@ -873,6 +873,11 @@
 			<SpecificVersion>False</SpecificVersion>
 			<Private>False</Private>
 		</Reference>
+		<Reference Include="CrtInvoiceInC360">
+			<HintPath>$(RelativePkgFolderPath)/CrtInvoiceInC360/$(StandalonePackageAssemblyPath)/CrtInvoiceInC360.dll</HintPath>
+			<SpecificVersion>False</SpecificVersion>
+			<Private>False</Private>
+		</Reference>
 		<Reference Include="CrtEventMarketingApp">
 			<HintPath>$(RelativePkgFolderPath)/CrtEventMarketingApp/$(StandalonePackageAssemblyPath)/CrtEventMarketingApp.dll</HintPath>
 			<SpecificVersion>False</SpecificVersion>
@@ -898,23 +903,8 @@
 			<SpecificVersion>False</SpecificVersion>
 			<Private>False</Private>
 		</Reference>
-		<Reference Include="CrtInvoiceInC360">
-			<HintPath>$(RelativePkgFolderPath)/CrtInvoiceInC360/$(StandalonePackageAssemblyPath)/CrtInvoiceInC360.dll</HintPath>
-			<SpecificVersion>False</SpecificVersion>
-			<Private>False</Private>
-		</Reference>
 		<Reference Include="CrtEngagementInC360">
 			<HintPath>$(RelativePkgFolderPath)/CrtEngagementInC360/$(StandalonePackageAssemblyPath)/CrtEngagementInC360.dll</HintPath>
-			<SpecificVersion>False</SpecificVersion>
-			<Private>False</Private>
-		</Reference>
-		<Reference Include="CrtLandingPage">
-			<HintPath>$(RelativePkgFolderPath)/CrtLandingPage/$(StandalonePackageAssemblyPath)/CrtLandingPage.dll</HintPath>
-			<SpecificVersion>False</SpecificVersion>
-			<Private>False</Private>
-		</Reference>
-		<Reference Include="CrtEmailDesigner">
-			<HintPath>$(RelativePkgFolderPath)/CrtEmailDesigner/$(StandalonePackageAssemblyPath)/CrtEmailDesigner.dll</HintPath>
 			<SpecificVersion>False</SpecificVersion>
 			<Private>False</Private>
 		</Reference>
@@ -923,13 +913,18 @@
 			<SpecificVersion>False</SpecificVersion>
 			<Private>False</Private>
 		</Reference>
-		<Reference Include="CrtDigitalAdsInLeadGen">
-			<HintPath>$(RelativePkgFolderPath)/CrtDigitalAdsInLeadGen/$(StandalonePackageAssemblyPath)/CrtDigitalAdsInLeadGen.dll</HintPath>
+		<Reference Include="CrtEmailDesigner">
+			<HintPath>$(RelativePkgFolderPath)/CrtEmailDesigner/$(StandalonePackageAssemblyPath)/CrtEmailDesigner.dll</HintPath>
 			<SpecificVersion>False</SpecificVersion>
 			<Private>False</Private>
 		</Reference>
-		<Reference Include="CrtSpaceManagement">
-			<HintPath>$(RelativePkgFolderPath)/CrtSpaceManagement/$(StandalonePackageAssemblyPath)/CrtSpaceManagement.dll</HintPath>
+		<Reference Include="CrtLandingPage">
+			<HintPath>$(RelativePkgFolderPath)/CrtLandingPage/$(StandalonePackageAssemblyPath)/CrtLandingPage.dll</HintPath>
+			<SpecificVersion>False</SpecificVersion>
+			<Private>False</Private>
+		</Reference>
+		<Reference Include="CrtDigitalAdsInLeadGen">
+			<HintPath>$(RelativePkgFolderPath)/CrtDigitalAdsInLeadGen/$(StandalonePackageAssemblyPath)/CrtDigitalAdsInLeadGen.dll</HintPath>
 			<SpecificVersion>False</SpecificVersion>
 			<Private>False</Private>
 		</Reference>
@@ -1010,6 +1005,11 @@
 		</Reference>
 		<Reference Include="CrtCampaignInC360">
 			<HintPath>$(RelativePkgFolderPath)/CrtCampaignInC360/$(StandalonePackageAssemblyPath)/CrtCampaignInC360.dll</HintPath>
+			<SpecificVersion>False</SpecificVersion>
+			<Private>False</Private>
+		</Reference>
+		<Reference Include="CrtSpaceManagement">
+			<HintPath>$(RelativePkgFolderPath)/CrtSpaceManagement/$(StandalonePackageAssemblyPath)/CrtSpaceManagement.dll</HintPath>
 			<SpecificVersion>False</SpecificVersion>
 			<Private>False</Private>
 		</Reference>

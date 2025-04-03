@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Globalization;
 using System.IO;
 using System.Linq;
@@ -65,8 +66,8 @@ namespace AtfTIDE
 			if (!clioDir.Exists) {
 				return false;
 			}
-
-			string clioFilePathSetting = SysSettings.GetValue<string>(userConnection, "AtfClioFilePath");
+			
+			string clioFilePathSetting = SysSettings.GetValue<string>(userConnection, "AtfClioFilePath", string.Empty);
 			FileInfo[] clioFiles = clioDir.GetFiles("clio.dll", SearchOption.AllDirectories);
 			return clioFiles.Any(file => file.FullName.Equals(clioFilePathSetting, StringComparison.OrdinalIgnoreCase));
 		}
@@ -104,31 +105,22 @@ namespace AtfTIDE
 
 		private Version GetLatestClioVersion() {
 			try {
-				using (HttpClient client = new HttpClient()) {
-					client.DefaultRequestHeaders.Add("User-Agent", "TIDE-ClioVersionChecker");
-					string url = $"https://api.nuget.org/v3/registration5-semver1/{ClioNugetPackageName}/index.json";
+				var nugetClient = TideApp.Instance.GetRequiredService<INugetClient>();
+				var maybeMaxClioVersion = nugetClient.GetMaxVersionAsync(ClioNugetPackageName).GetAwaiter().GetResult();
 
-					HttpResponseMessage response = client.GetAsync(url).Result;
-					if (response.IsSuccessStatusCode) {
-						string json = response.Content.ReadAsStringAsync().Result;
-						using (JsonDocument doc = JsonDocument.Parse(json)) {
-							JsonElement root = doc.RootElement;
-							JsonElement items = root.GetProperty("items")[0];
-							JsonElement items2 = items.GetProperty("items");
-
-							JsonElement latestPackage = items2[items2.GetArrayLength() - 1];
-							string versionString = latestPackage.GetProperty("catalogEntry").GetProperty("version").GetString();
-
-							return new Version(versionString);
-						}
-					}
+				if (maybeMaxClioVersion.IsError) {
+					LogManager.GetLogger("AtfTide").ErrorFormat(CultureInfo.InvariantCulture, $"{maybeMaxClioVersion.FirstError.Code} - {maybeMaxClioVersion.FirstError.Description}");
+					return null;
 				}
+
+				string maxClioVersion = maybeMaxClioVersion.Value;
+				return new Version(maxClioVersion);
 			} catch (Exception ex) {
 				// Log error but don't throw - we want the process to continue
 				// Just return null to indicate we couldn't get the version
+				LogManager.GetLogger("AtfTide").ErrorFormat(CultureInfo.InvariantCulture, $"Error fetching Clio version: {ex.Message}");
+				return null;
 			}
-
-			return null;
 		}
 
 		public void OnAppEnd(AppEventContext context){

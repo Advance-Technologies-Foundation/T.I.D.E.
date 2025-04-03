@@ -60,7 +60,8 @@ namespace AtfTIDE.Tests {
 			
 			_sut.OnAppStart(null);
 			
-			// Add assertions to verify the expected behavior
+			// Verify that the installer service is never called when Clio is installed
+			installerMock.DidNotReceive().InstallClio();
 		}
 		
 		
