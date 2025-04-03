@@ -2,6 +2,8 @@
 <Resources Culture="en-US">
 	<Group Type="String">
 		<Items>
+			<Item Name="BaseElements.IntermediateCatchTimer1.Parameters.StartOffset.Caption" Value="Start in (sec.)" />
+			<Item Name="BaseElements.IntermediateCatchTimer1.Parameters.StartOffset.DisplayValue" Value="3" />
 			<Item Name="BaseElements.UserTask1.Caption" Value="Install Clio" />
 			<Item Name="BaseElements.UserTask1.Parameters.ErrorMessage.Caption" Value="Error Message" />
 			<Item Name="BaseElements.UserTask1.Parameters.IsError.Caption" Value="Is Error" />

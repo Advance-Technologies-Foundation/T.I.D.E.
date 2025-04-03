@@ -4,6 +4,7 @@ using System.IO.Abstractions;
 using System.Linq;
 using AtfTIDE.ClioInstaller;
 using AtfTIDE.HttpClient;
+using AtfTIDE.Logging;
 using AtfTIDE.QueryExecutor;
 using Common.Logging;
 using Microsoft.Extensions.DependencyInjection;
@@ -44,8 +45,10 @@ namespace AtfTIDE {
 			serviceCollection.AddSingleton(LogManager.GetLogger("AtfTide"));
 			serviceCollection.AddSingleton<IInstaller, Installer>();
 			serviceCollection.AddSingleton<IFileSystem, FileSystem>();
+			serviceCollection.AddSingleton<ILiveLogger, LiveLogger>();
 			serviceCollection.AddSingleton<IEsqFilterParser, EsqFilterParser>();
 			serviceCollection.AddSingleton<IEsqColumnParser, EsqColumnParser>();
+			serviceCollection.AddSingleton<IWebSocket, WebSocket>();
 			serviceCollection.AddGitlabClient();
 			serviceCollection.AddNugetClient();
 			InjectedServices?.ToList().ForEach(service => {

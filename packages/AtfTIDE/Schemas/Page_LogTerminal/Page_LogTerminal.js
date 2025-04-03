@@ -2,6 +2,21 @@ define("Page_LogTerminal", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 	return {
 		viewConfigDiff: /**SCHEMA_VIEW_CONFIG_DIFF*/[
 			{
+				"operation": "merge",
+				"name": "CancelButton",
+				"values": {
+					"caption": "#ResourceString(CancelButton_caption)#",
+					"color": "default",
+					"size": "large",
+					"iconPosition": "only-text",
+					"clickMode": "default"
+				}
+			},
+			{
+				"operation": "remove",
+				"name": "SaveButton"
+			},
+			{
 				"operation": "insert",
 				"name": "FlexContainer_0boicqp",
 				"values": {
@@ -71,7 +86,7 @@ define("Page_LogTerminal", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 						"modelConfig": {}
 					}
 				}
-			},
+			}
 		]/**SCHEMA_VIEW_MODEL_CONFIG_DIFF*/,
 		modelConfigDiff: /**SCHEMA_MODEL_CONFIG_DIFF*/[
 			{
@@ -97,10 +112,10 @@ define("Page_LogTerminal", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 						}
 					}
 					Terrasoft.ServerChannel.on(Terrasoft.EventName.ON_MESSAGE, (await $context.SocketMessageReceivedFunc), $context);
-					request.$context.FileChangesVisible = false;
-					const endpoint = "/rest/Tide/CaptureClioArgs";
-					const httpClientService = new sdk.HttpClientService();
-					await httpClientService.get(endpoint)
+					// request.$context.FileChangesVisible = false;
+					// const endpoint = "/rest/Tide/CaptureClioArgs";
+					// const httpClientService = new sdk.HttpClientService();
+					// await httpClientService.get(endpoint)
 					return next?.handle(request);
 				}
 			},

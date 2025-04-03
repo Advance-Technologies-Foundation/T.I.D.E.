@@ -2,7 +2,7 @@
   "Descriptor": {
     "UId": "510d0e72-a7c6-4164-95cf-317fc5fbd3f0",
     "Name": "Page_LogTerminal",
-    "ModifiedOnUtc": "\/Date(1743121256000)\/",
+    "ModifiedOnUtc": "\/Date(1743714952000)\/",
     "Parent": {
       "UId": "ecdcc8ff-272c-4957-9381-7d74ce17e140",
       "Name": "BaseMiniPageTemplate"

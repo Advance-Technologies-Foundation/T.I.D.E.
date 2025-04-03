@@ -216,7 +216,7 @@ define("AtfTIDE_ListPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 					"labelType": "headline-1",
 					"labelThickness": "bold",
 					"labelEllipsis": false,
-					"labelColor": "#AF5E4B",
+					"labelColor": "#FF4013",
 					"labelBackgroundColor": "transparent",
 					"labelTextAlign": "start",
 					"visible": true
@@ -259,23 +259,44 @@ define("AtfTIDE_ListPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 			},
 			{
 				"operation": "insert",
-				"name": "Button_Question",
+				"name": "Button_UpdateTide",
 				"values": {
 					"type": "crt.Button",
-					"caption": "#ResourceString(Button_Question_caption)#",
+					"caption": "#ResourceString(Button_UpdateTide_caption)#",
 					"color": "accent",
 					"disabled": false,
 					"size": "large",
 					"iconPosition": "only-text",
-					"visible": true,
+					"visible": "$IsTideUpdateButtonVisibile",
 					"clicked": {
-						"request": "atf.InstallTideClicked",
+						"request": "atf.InstallTideClicked"
 					},
 					"clickMode": "default"
 				},
 				"parentName": "FlexContainer_55xskyn",
 				"propertyName": "items",
 				"index": 0
+			},
+			{
+				"operation": "insert",
+				"name": "Button_UpdateClio",
+				"values": {
+					"type": "crt.Button",
+					"caption": "#ResourceString(Button_UpdateClio_caption)#",
+					"color": "accent",
+					"disabled": false,
+					"size": "large",
+					"iconPosition": "only-text",
+					"visible": "$IsClioUpdateButtonVisibile",
+					"clicked": {
+						"request": "atf.InstallClioClicked"
+					},
+					"clickMode": "default",
+					"icon": null
+				},
+				"parentName": "FlexContainer_55xskyn",
+				"propertyName": "items",
+				"index": 1
 			},
 			{
 				"operation": "insert",
@@ -440,6 +461,8 @@ define("AtfTIDE_ListPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 				],
 				"values": {
 					"IsQuestionContainerVisible": {},
+					"IsTideUpdateButtonVisibile": {},
+					"IsClioUpdateButtonVisibile": {},
 					"PDS_AtfName": {
 						"modelConfig": {
 							"path": "PDS.AtfName"
@@ -571,8 +594,13 @@ define("AtfTIDE_ListPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 				handler: async (request, next) => {
 					await next?.handle(request);
 					const sysSettingsService = new sdk.SysSettingsService();
-					const settingValue = await sysSettingsService.getByCode('AtfTideUpdateAvailable');
-					request.$context.IsQuestionContainerVisible = settingValue.value;
+					const settingTideUpdateValue = await sysSettingsService.getByCode('AtfTideUpdateAvailable');
+					const settingClioUpdateValue = await sysSettingsService.getByCode('AtfClioUpdateAvailable');
+					request.$context.IsQuestionContainerVisible = settingTideUpdateValue.value || settingClioUpdateValue.value;
+					request.$context.IsClioUpdateButtonVisibile = settingClioUpdateValue.value;
+					request.$context.IsTideUpdateButtonVisibile = settingTideUpdateValue.value;
+					
+					
 					
 					const endpoint = "/rest/Tide/CaptureClioArgs";
 					const httpClientService = new sdk.HttpClientService();
@@ -581,6 +609,32 @@ define("AtfTIDE_ListPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 					await next?.handle(request);
 				}
 			},
+			{
+				request: "atf.InstallClioClicked",
+				handler: async (request, next) => {
+					await next?.handle(request);
+					const handlerChain = sdk.HandlerChainService.instance;
+					
+					await handlerChain.process({
+						type: 'crt.OpenPageRequest',
+						$context: request.$context,
+						scopes: [...request.scopes],
+						schemaName: "Page_LogTerminal"
+					});
+					await handlerChain.process({
+						type: "crt.RunBusinessProcessRequest",
+						$context: request.$context,
+						scopes: [...request.scopes],
+						processName: "AtfProcess_TryInstallClio",
+						processRunType: "RegardlessOfThePage",
+						saveAtProcessStart: true,
+						showNotification: true
+					});
+					
+					await next?.handle(request);
+				}
+			},
+			
 			{
 				request: "atf.InstallTideClicked",
 				handler: async (request, next) => {

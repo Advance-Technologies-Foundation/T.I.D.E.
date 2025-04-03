@@ -51,6 +51,7 @@ namespace Terrasoft.Core.Process.Configuration
 			} else {
 				FileInfo[] clioFilePath = clioDir.GetFiles("clio.dll", SearchOption.AllDirectories);
 				SysSettings.SetValue(UserConnection, "AtfClioFilePath", clioFilePath.First().FullName);
+				SysSettings.SetValue(UserConnection, "AtfClioUpdateAvailable", false);
 			}
 			return true;
 		}

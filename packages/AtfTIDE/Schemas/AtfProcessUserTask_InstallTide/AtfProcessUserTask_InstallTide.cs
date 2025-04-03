@@ -1,6 +1,7 @@
 using System.Diagnostics;
 using System.IO;
 using AtfTIDE;
+using AtfTIDE.Logging;
 using Terrasoft.Core.Factories;
 
 namespace Terrasoft.Core.Process.Configuration
@@ -35,6 +36,10 @@ namespace Terrasoft.Core.Process.Configuration
 			processStartInfo.EnvironmentVariables["LOCALAPPDATA"] = Path.Combine(profilePath, "AppData", "Local");
 		}
 		protected override bool InternalExecute(ProcessExecutingContext context) {
+			
+			var logger = TideApp.Instance.GetRequiredService<ILiveLogger>();
+			logger.LogInfo("Starting TIDE installation...");
+			
 			DirectoryInfo clioDir = HelperFunctions.GetClioDirectory();
 			ITextTransformer transformer = ClassFactory.Get<ITextTransformer>("UrlAppender");
 			var clioPath = SysSettings.GetValue(UserConnection,"AtfClioFilePath").ToString();
@@ -45,6 +50,7 @@ namespace Terrasoft.Core.Process.Configuration
 			string arguments = $"{clioPath} tide -l {userName} -p {password}";
 			string transformedArguments = transformer.Transform(arguments);
 			
+			logger.LogInfo($"Starting dotnet {transformedArguments}");
 			ProcessStartInfo startInfo = new ProcessStartInfo {
 				FileName = "dotnet",
 				Arguments = transformedArguments,

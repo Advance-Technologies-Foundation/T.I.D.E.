@@ -10,10 +10,12 @@ using System.Text.Json.Serialization;
 using System.Threading;
 using System.Threading.Tasks;
 using AtfTIDE.ClioInstaller.Dto;
+using AtfTIDE.Logging;
 using Common.Logging;
 using ErrorOr;
 
 namespace AtfTIDE.ClioInstaller {
+
 	public interface INugetClient {
 
 		#region Methods: Public
@@ -82,15 +84,17 @@ namespace AtfTIDE.ClioInstaller {
 		private readonly System.Net.Http.HttpClient _client;
 		private readonly IFileSystem _fileSystem;
 		private readonly ILog _logger;
+		private readonly ILiveLogger _liveLogger;
 
 		#endregion
 
 		#region Constructors: Public
 
-		public NugetClient(System.Net.Http.HttpClient client, IFileSystem fileSystem, ILog logger){
+		public NugetClient(System.Net.Http.HttpClient client, IFileSystem fileSystem, ILog logger, ILiveLogger liveLogger){
 			_client = client;
 			_fileSystem = fileSystem;
 			_logger = logger;
+			_liveLogger = liveLogger;
 		}
 
 		#endregion
@@ -99,6 +103,7 @@ namespace AtfTIDE.ClioInstaller {
 		
 		private async Task<ErrorOr<Success>> DownloadClioInternalAsync(string clioDirectory, Uri routeUrl){
 			try {
+				_liveLogger.LogInfo("Starting download of Clio package");
 				HttpResponseMessage response = await _client.GetAsync(routeUrl);
 				using (Stream httpStream = await response.Content.ReadAsStreamAsync()) {
 					using (ZipArchive arch = new ZipArchive(httpStream, ZipArchiveMode.Read, false)) {
@@ -123,12 +128,14 @@ namespace AtfTIDE.ClioInstaller {
 						}
 					}
 					_logger.InfoFormat(CultureInfo.InstalledUICulture, "Installed clio to {0}", clioDirectory);
+					_liveLogger.LogInfo("Clio package installed successfully");
 					return Result.Success;
 				}
 			}
 			catch (Exception ex) {
 				_logger.ErrorFormat(CultureInfo.InstalledUICulture,
 					"En error occured while downloading clio {0}", ex.Message, ex);
+				_liveLogger.LogError($"Error occurred: {ex.Message}");
 				return Error.Failure(ex.Message);
 			}
 		}
@@ -159,6 +166,8 @@ namespace AtfTIDE.ClioInstaller {
 		#region Methods: Public
 
 		public async Task<ErrorOr<Success>> DownloadClioAsync(string clioDirectory){
+			_liveLogger.LogInfo("Downloading Clio package");
+			
 			ErrorOr<string> isErrOrMaxVersion = await GetMaxVersionAsync("clio");
 			if (isErrOrMaxVersion.IsError) {
 				return isErrOrMaxVersion.FirstError;
@@ -179,8 +188,10 @@ namespace AtfTIDE.ClioInstaller {
 		/// </param>
 		/// <returns>An <see cref="ErrorOr{Success}" /> indicating the result of the download operation.</returns>
 		public async Task<ErrorOr<Success>> DownloadClioAsync(string clioDirectory, string version){
+			_liveLogger.LogInfo($"Downloading Clio package version {version}");
 			string requestUri = $"v3-flatcontainer/clio/{version}/clio.{version}.nupkg";
 			Uri.TryCreate(requestUri, UriKind.Relative, out Uri routeUrl);
+			
 			return await DownloadClioInternalAsync(clioDirectory, routeUrl);
 		}
 
