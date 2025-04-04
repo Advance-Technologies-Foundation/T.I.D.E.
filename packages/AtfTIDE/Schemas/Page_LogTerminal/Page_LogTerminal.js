@@ -3,6 +3,14 @@ define("Page_LogTerminal", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 		viewConfigDiff: /**SCHEMA_VIEW_CONFIG_DIFF*/[
 			{
 				"operation": "merge",
+				"name": "PageTitle",
+				"values": {
+					"caption": "#MacrosTemplateString(#ResourceString(PageTitle_caption)#)#",
+					"visible": true
+				}
+			},
+			{
+				"operation": "merge",
 				"name": "CancelButton",
 				"values": {
 					"caption": "#ResourceString(CancelButton_caption)#",
@@ -102,6 +110,11 @@ define("Page_LogTerminal", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 				request: 'crt.HandleViewModelInitRequest',
 				handler: async (request, next) => {
 					const { $context } = request;
+					
+					request.$context.AllMessages = "Initialize action ...".join('<br>')
+											.join('Setup connection to server ...').join('<br>')
+											.join('Loading ...');
+					
 					$context.SocketMessageReceivedFunc = async function(event, message) {
 						if (message.Header.Sender === "Clio") {
 							const body = JSON.parse(message.Body)
