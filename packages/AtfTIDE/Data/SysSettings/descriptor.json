@@ -2,20 +2,13 @@
   "Descriptor": {
     "UId": "95841de1-0bdd-2a98-a2d7-c7d02c15ab11",
     "Name": "SysSettings",
-    "ModifiedOnUtc": "\/Date(1743718897000)\/",
+    "ModifiedOnUtc": "\/Date(1743725818000)\/",
     "InstallType": 0,
     "Schema": {
       "UId": "27aeadd6-d508-4572-8061-5b55b667c902",
       "Name": "SysSettings"
     },
     "Columns": [
-      {
-        "ColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
-        "IsForceUpdate": false,
-        "IsKey": true,
-        "ColumnName": "Id",
-        "DataTypeValueUId": "23018567-a13c-4320-8687-fd6f9e3699bd"
-      },
       {
         "ColumnUId": "736c30a7-c0ec-4fa9-b034-2552b319b633",
         "IsForceUpdate": false,
@@ -59,10 +52,10 @@
         "DataTypeValueUId": "90b65bf8-0ffc-4141-8779-2420877af907"
       },
       {
-        "ColumnUId": "b2280617-35f9-4006-8634-c557a2e121c2",
+        "ColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
         "IsForceUpdate": false,
-        "IsKey": false,
-        "ColumnName": "ReferenceSchemaUId",
+        "IsKey": true,
+        "ColumnName": "Id",
         "DataTypeValueUId": "23018567-a13c-4320-8687-fd6f9e3699bd"
       },
       {
@@ -71,6 +64,13 @@
         "IsKey": false,
         "ColumnName": "IsSSPAvailable",
         "DataTypeValueUId": "90b65bf8-0ffc-4141-8779-2420877af907"
+      },
+      {
+        "ColumnUId": "b2280617-35f9-4006-8634-c557a2e121c2",
+        "IsForceUpdate": false,
+        "IsKey": false,
+        "ColumnName": "ReferenceSchemaUId",
+        "DataTypeValueUId": "23018567-a13c-4320-8687-fd6f9e3699bd"
       }
     ]
   }
