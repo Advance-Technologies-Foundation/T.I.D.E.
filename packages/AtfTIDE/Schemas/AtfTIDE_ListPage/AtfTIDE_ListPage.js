@@ -371,7 +371,7 @@ define("AtfTIDE_ListPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 						"templateValuesMapping": {
 							"caption": "Gallery_qmmqbs4DS_AtfName",
 							"description": null,
-							"image": null,
+							"image": "`Gallery_qmmqbs4DS_AtfRepoImage`",
 							"id": "Gallery_qmmqbs4DS_Id"
 						},
 						"specificPageRecordId": "Gallery_qmmqbs4DS_Id"
@@ -421,7 +421,12 @@ define("AtfTIDE_ListPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 									"modelConfig": {
 										"path": "Gallery_qmmqbs4DS.AtfName"
 									}
-								}
+								},
+								"Gallery_qmmqbs4DS_AtfRepoImage": {
+									"modelConfig": {
+										"path": "Gallery_qmmqbs4DS.AtfRepoImage"
+									}
+								},
 							}
 						}
 					},
@@ -483,11 +488,7 @@ define("AtfTIDE_ListPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 							"path": "PDS.AtfApplication"
 						}
 					},
-					"PDS_Application_Image": {
-						"modelConfig": {
-							"path": "PDS.AtfApplication.SysAppIcon.Data"
-						}
-					}
+
 				}
 			},
 			{
@@ -554,7 +555,18 @@ define("AtfTIDE_ListPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 						"scope": "viewElement",
 						"config": {
 							"entitySchemaName": "AtfRepository",
-							"attributes": {}
+							"attributes": {
+								"Id": {
+									"path": "Id"
+								},
+								"AtfName": {
+									"path": "AtfName"
+								},
+								"AtfRepoImage": {
+									"path": "AtfApplication.SysAppIcon.Data",
+									"type": "ForwardReference"
+								},
+							}
 						}
 					}
 				}
