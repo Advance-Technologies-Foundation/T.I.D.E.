@@ -26,8 +26,11 @@
 			<Item Name="LocalizableStrings.Button_v3hmd7w_caption.Value" Value="Link with repository" />
 			<Item Name="LocalizableStrings.ComboBox_8yu6sy5_tooltip.Value" Value="Application that is associated with the repository" />
 			<Item Name="LocalizableStrings.ComboBox_Application_tooltip.Value" Value="Application that is associated with the repository" />
+			<Item Name="LocalizableStrings.ExpansionPanel_ApplicationHash_title.Value" Value="Application Hash" />
+			<Item Name="LocalizableStrings.ExpansionPanel_qif7wzo_title.Value" Value="Expansion panel" />
 			<Item Name="LocalizableStrings.ExpansionPanel_rgvl3td_title.Value" Value="Changed files" />
 			<Item Name="LocalizableStrings.ExpansionPanel_srhpdgo_title.Value" Value="Repository Branch" />
+			<Item Name="LocalizableStrings.ExpansionPanel_State_title.Value" Value="State" />
 			<Item Name="LocalizableStrings.ExpansionPanel_w1nj9pl_title.Value" Value="Auth settings" />
 			<Item Name="LocalizableStrings.GridDetailAddBtn_3ky6mp6_caption.Value" Value="New" />
 			<Item Name="LocalizableStrings.GridDetailAddBtn_fzbi431_caption.Value" Value="New" />
@@ -50,10 +53,11 @@
 			<Item Name="LocalizableStrings.Label_s7pm1mk_caption.Value" Value="!!! WARNING !!!" />
 			<Item Name="LocalizableStrings.Label_t6ybcfe_caption.Value" Value="Label 2" />
 			<Item Name="LocalizableStrings.MessagesTabContainer_caption.Value" Value="Messages" />
+			<Item Name="LocalizableStrings.TabContainer_Advanced_caption.Value" Value="Advanced" />
+			<Item Name="LocalizableStrings.TabContainer_Git_caption.Value" Value="GIT" />
 			<Item Name="LocalizableStrings.TabContainer_mcnezxd_caption.Value" Value="Tab 2" />
 			<Item Name="LocalizableStrings.TabContainer_Messages_caption.Value" Value="Logs" />
 			<Item Name="LocalizableStrings.TabContainer_p9aexbq_caption.Value" Value="Tab 1" />
-			<Item Name="LocalizableStrings.TabContainer_yfwkpvj_caption.Value" Value="Advanced" />
 			<Item Name="LocalizableStrings.WebInput_RepositoryUrl_tooltip.Value" Value="Repository URL to " />
 		</Items>
 	</Group>

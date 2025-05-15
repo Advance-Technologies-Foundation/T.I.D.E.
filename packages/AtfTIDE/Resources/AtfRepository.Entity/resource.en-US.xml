@@ -6,11 +6,17 @@
 			<Item Name="Columns.AtfAccessToken.Caption" Value="Access Token" />
 			<Item Name="Columns.AtfActiveBranch.Caption" Value="Active branch" />
 			<Item Name="Columns.AtfApplication.Caption" Value="Application" />
+			<Item Name="Columns.AtfAvailableAppHash.Caption" Value="Available App Hash" />
+			<Item Name="Columns.AtfAvailableAppHash.Description" Value="Hash of application from repository" />
 			<Item Name="Columns.AtfCreatioUrl.Caption" Value="Creatio Url" />
+			<Item Name="Columns.AtfInstalledAppHash.Caption" Value="Installed App Hash" />
+			<Item Name="Columns.AtfInstalledAppHash.Description" Value="Hash of installed application" />
+			<Item Name="Columns.AtfLocked.Caption" Value="Locked" />
 			<Item Name="Columns.AtfLogin.Caption" Value="Creatio Login" />
 			<Item Name="Columns.AtfName.Caption" Value="Name" />
 			<Item Name="Columns.AtfPassword.Caption" Value="Creatio Password" />
 			<Item Name="Columns.AtfRepositoryUrl.Caption" Value="Repository Url" />
+			<Item Name="Columns.AtfUpdateAvailable.Caption" Value="Updated available" />
 			<Item Name="Columns.AtfUserName.Caption" Value="User name" />
 		</Items>
 	</Group>

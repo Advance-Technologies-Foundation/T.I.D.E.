@@ -6,6 +6,7 @@ using System.Linq;
 using System.Net.Http;
 using System.Text.Json;
 using System.Reflection;
+using System.Threading;
 using AtfTIDE.ClioInstaller;
 using Common.Logging;
 using ErrorOr;
@@ -20,14 +21,23 @@ namespace AtfTIDE
 	public class AppEventListener : IAppEventListener {
 
 		private const string ClioNugetPackageName = "clio";
+		private Thread _sysSchemaMonitorThread;
+		
 
 		public void OnAppStart(AppEventContext context) {
 			var userConnection = ClassFactory.Get<UserConnection>();
+			_sysSchemaMonitorThread = new Thread(SysSchemaMonitor.Start);
+			_sysSchemaMonitorThread.Start();
 
 			if (IsClioInstalled(userConnection)) {
 				CheckForClioUpdates(userConnection);
 			} else {
 				LogManager.GetLogger("AtfTide").ErrorFormat(CultureInfo.InvariantCulture, "Clio is not installed or the path does not match.");
+				IErrorOr<Success> result = TideApp.Instance.InstallerApp.InstallClio();
+				if(!result.IsError) {
+					string clioFilePath = HelperFunctions.GetClioFilePath();
+					SysSettings.SetValue(userConnection, TideConsts.SysSettingClioPath, clioFilePath);
+				}
 			}
 
 			var maybeMaxTideVersion = TideApp.Instance.GetRequiredService<INugetClient>()
@@ -67,7 +77,7 @@ namespace AtfTIDE
 				return false;
 			}
 			
-			string clioFilePathSetting = SysSettings.GetValue<string>(userConnection, "AtfClioFilePath", string.Empty);
+			string clioFilePathSetting = SysSettings.GetValue<string>(userConnection, TideConsts.SysSettingClioPath, string.Empty);
 			FileInfo[] clioFiles = clioDir.GetFiles("clio.dll", SearchOption.AllDirectories);
 			return clioFiles.Any(file => file.FullName.Equals(clioFilePathSetting, StringComparison.OrdinalIgnoreCase));
 		}
@@ -124,6 +134,10 @@ namespace AtfTIDE
 		}
 
 		public void OnAppEnd(AppEventContext context){
+			_sysSchemaMonitorThread = new Thread(SysSchemaMonitor.Stop);
+			_sysSchemaMonitorThread.Join();
+			_sysSchemaMonitorThread = null;
+			
 			return;
 		}
 
