@@ -1,0 +1,10 @@
+﻿{
+  "Descriptor": {
+    "UId": "f2af61b0-3612-473d-8768-168f3c2c1c68",
+    "Name": "AtfSetUpdateAvailable",
+    "ModifiedOnUtc": "\/Date(1747352765000)\/",
+    "ManagerName": "ProcessSchemaManager",
+    "Caption": "Set Update Available",
+    "DependsOn": []
+  }
+}

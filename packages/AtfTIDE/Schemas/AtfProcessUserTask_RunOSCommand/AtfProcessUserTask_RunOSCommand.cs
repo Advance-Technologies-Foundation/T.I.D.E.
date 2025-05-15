@@ -65,7 +65,7 @@ namespace Terrasoft.Core.Process.Configuration
 				using (System.Diagnostics.Process process = new System.Diagnostics.Process()) {
 					process.StartInfo = startInfo;
 					if(WaitForExit) {
-						
+						"".TrimStart('\n');
 						process.OutputDataReceived += (sender, e) => {
 							if (!string.IsNullOrEmpty(e.Data)) {
 								output.AppendLine(e.Data);

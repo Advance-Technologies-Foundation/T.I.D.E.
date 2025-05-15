@@ -6,6 +6,7 @@
 			<Item Name="Columns.AtfAccessToken.Caption" Value="Access Token" />
 			<Item Name="Columns.AtfActiveBranch.Caption" Value="Active branch" />
 			<Item Name="Columns.AtfApplication.Caption" Value="Application" />
+			<Item Name="Columns.AtfAutoSync.Caption" Value="Auto Sync" />
 			<Item Name="Columns.AtfAvailableAppHash.Caption" Value="Available App Hash" />
 			<Item Name="Columns.AtfAvailableAppHash.Description" Value="Hash of application from repository" />
 			<Item Name="Columns.AtfCreatioUrl.Caption" Value="Creatio Url" />

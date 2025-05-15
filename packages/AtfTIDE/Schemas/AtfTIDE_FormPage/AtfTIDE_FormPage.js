@@ -418,7 +418,7 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 			},
 			{
 				"operation": "insert",
-				"name": "Checkbox_xt2c54s",
+				"name": "Checkbox_AtfLocked",
 				"values": {
 					"layoutConfig": {
 						"column": 1,
@@ -441,7 +441,7 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 			},
 			{
 				"operation": "insert",
-				"name": "Checkbox_bobjq3a",
+				"name": "Checkbox_AtfUpdateAvailable",
 				"values": {
 					"layoutConfig": {
 						"column": 1,
@@ -461,6 +461,25 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 				"parentName": "GridContainer_hu8i5l3",
 				"propertyName": "items",
 				"index": 1
+			},
+			{
+				"operation": "insert",
+				"name": "Checkbox_AtfAutoSync",
+				"values": {
+					"layoutConfig": {
+						"column": 1,
+						"row": 3,
+						"colSpan": 2,
+						"rowSpan": 1
+					},
+					"type": "crt.Checkbox",
+					"label": "$Resources.Strings.PDS_AtfAutoSync_zrzeu6i",
+					"labelPosition": "right",
+					"control": "$PDS_AtfAutoSync_zrzeu6i"
+				},
+				"parentName": "GridContainer_hu8i5l3",
+				"propertyName": "items",
+				"index": 2
 			},
 			{
 				"operation": "insert",
@@ -2238,11 +2257,6 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 							"path": "PDS.AtfApplication"
 						}
 					},
-					"PDS_AtfColumn10_1hbn1hq": {
-						"modelConfig": {
-							"path": "PDS.AtfColumn10"
-						}
-					},
 					"GridDetail_62r7nr2": {
 						"isCollection": true,
 						"modelConfig": {
@@ -2292,6 +2306,11 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 					"PDS_AtfAvailableAppHash_xu2vola": {
 						"modelConfig": {
 							"path": "PDS.AtfAvailableAppHash"
+						}
+					},
+					"PDS_AtfAutoSync_zrzeu6i": {
+						"modelConfig": {
+							"path": "PDS.AtfAutoSync"
 						}
 					}
 				}
