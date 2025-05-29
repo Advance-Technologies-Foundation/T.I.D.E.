@@ -43,9 +43,10 @@ namespace Terrasoft.Core.Process.Configuration
 			StringBuilder output = new StringBuilder();
 			StringBuilder error = new StringBuilder();
 			if(WorkingDirectory.IsNullOrEmpty()) {
-				IsError = true;
-				ErrorMessage = "Working directory is not set";
-				return true;
+				WorkingDirectory = HelperFunctions.GetClioDirectory().FullName;
+				// IsError = true;
+				// ErrorMessage = "Working directory is not set";
+				// return true;
 			}
 			if(!string.IsNullOrWhiteSpace(TransformerName)) {
 				ITextTransformer transformer = ClassFactory.Get<ITextTransformer>(TransformerName);

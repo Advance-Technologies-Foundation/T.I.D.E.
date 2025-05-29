@@ -22,8 +22,6 @@
 			<Item Name="BaseElements.ChangeDataUserTask2.Parameters.IsMatchConditions.Caption" Value="If object meets the following conditions" />
 			<Item Name="BaseElements.ChangeDataUserTask2.Parameters.IsMatchConditions.DisplayValue" Value="true" />
 			<Item Name="BaseElements.ChangeDataUserTask2.Parameters.RecordColumnValues.Caption" Value="Set column values" />
-			<Item Name="BaseElements.ChangeDataUserTask2.Parameters.RecordColumnValues.Value.115b7936-53e1-4971-8eba-8a96008f65a1.displayValue" Value="[#get-app-hash.Error Message#].TrimStart('\n').TrimEnd('\r', '\n')" />
-			<Item Name="BaseElements.ChangeDataUserTask2.Parameters.RecordColumnValues.Value.115b7936-53e1-4971-8eba-8a96008f65a1.value" Value="[#get-app-hash.Error Message#].TrimStart('\n').TrimEnd('\r', '\n')" />
 			<Item Name="BaseElements.ConditionalSequenceFlow2.Caption" Value="Skip clone" />
 			<Item Name="BaseElements.ConditionalSequenceFlow3.Caption" Value="On Clone Error" />
 			<Item Name="BaseElements.ConditionalSequenceFlow4.Caption" Value="On clio pushw Error" />

@@ -1,0 +1,31 @@
+﻿{
+  "MetaData": {
+    "Schema": {
+      "ManagerName": "ProcessUserTaskSchemaManager",
+      "UId": "b82ef654-7a4f-4f0f-abbb-9627e30587f8",
+      "A2": "AtfProcessUserTask_GetComaSeparatedPathes",
+      "A5": "0e7542e4-b5f1-4419-9607-4e79ce6090b4",
+      "B1": [],
+      "B2": [],
+      "B3": [],
+      "B6": "57902d1e-ea0c-4991-b367-992c12d68fb2",
+      "B8": "8.2.3.1351",
+      "FJ1": [
+        {
+          "BL1": "Terrasoft.Core.Process.ProcessSchemaParameter",
+          "UId": "b94f5271-2847-0e82-ef2e-ab66d8b62775",
+          "A2": "Pathes",
+          "A3": "b82ef654-7a4f-4f0f-abbb-9627e30587f8",
+          "A4": "b82ef654-7a4f-4f0f-abbb-9627e30587f8",
+          "L1": "8b3f29bb-ea14-4ce5-a5c5-293a929b6ba2",
+          "L8": {},
+          "L13": true
+        }
+      ],
+      "FK4": true,
+      "FK7": true,
+      "FK12": "#839DC3",
+      "FK16": true
+    }
+  }
+}

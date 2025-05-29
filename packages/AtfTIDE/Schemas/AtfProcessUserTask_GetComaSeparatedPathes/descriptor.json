@@ -1,0 +1,9 @@
+﻿{
+  "Descriptor": {
+    "UId": "b82ef654-7a4f-4f0f-abbb-9627e30587f8",
+    "Name": "AtfProcessUserTask_GetComaSeparatedPathes",
+    "ModifiedOnUtc": "\/Date(1748553318000)\/",
+    "ManagerName": "ProcessUserTaskSchemaManager",
+    "Caption": "Get Coma Separated Pathes"
+  }
+}

@@ -3,7 +3,7 @@
 	<Group Type="String">
 		<Items>
 			<Item Name="Caption" Value="T.I.D.E. list page" />
-			<Item Name="LocalizableStrings.AddButton.Value" Value="New" />
+			<Item Name="LocalizableStrings.Button_Install_Updates_caption.Value" Value="Install Updates" />
 			<Item Name="LocalizableStrings.Button_UpdateClio_caption.Value" Value="Update Clio" />
 			<Item Name="LocalizableStrings.Button_UpdateTide_caption.Value" Value="Update TIDE" />
 			<Item Name="LocalizableStrings.Button_ynk6wyx_caption.Value" Value="Open Git Servers list" />
