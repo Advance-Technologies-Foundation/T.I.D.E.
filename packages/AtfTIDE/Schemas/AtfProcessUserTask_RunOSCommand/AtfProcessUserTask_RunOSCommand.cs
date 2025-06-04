@@ -45,13 +45,10 @@ namespace Terrasoft.Core.Process.Configuration
 			StringBuilder error = new StringBuilder();
 			if(WorkingDirectory.IsNullOrEmpty()) {
 				WorkingDirectory = HelperFunctions.GetClioDirectory().FullName;
-				// IsError = true;
-				// ErrorMessage = "Working directory is not set";
-				// return true;
 			}
 			if(!string.IsNullOrWhiteSpace(TransformerName)) {
 				ITextTransformer transformer = ClassFactory.Get<ITextTransformer>(TransformerName);
-				Arguments = transformer.Transform(Arguments);
+				Arguments = transformer.TransformWithLP(Arguments);
 			}
 			try {
 				ProcessStartInfo startInfo = new ProcessStartInfo {

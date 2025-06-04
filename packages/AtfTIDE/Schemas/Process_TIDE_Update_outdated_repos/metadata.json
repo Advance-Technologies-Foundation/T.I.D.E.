@@ -26,8 +26,7 @@
           "GT5": "f51a5674-58a5-3be3-4c6f-969176e456cb",
           "GT4": "ad6a7f03-7b14-4d06-96c0-bf1c01c1d8f8",
           "GT1": {
-            "GS1": 1,
-            "GS2": "dotnet"
+            "GS1": 1
           }
         },
         {
@@ -42,7 +41,7 @@
           "GT4": "ad6a7f03-7b14-4d06-96c0-bf1c01c1d8f8",
           "GT1": {
             "GS1": 3,
-            "GS2": "[#SysSettings.AtfClioFilePath<String>#]+\" mergew -l \"+[#SysSettings.AtfUserNameForClio<String>#]+\" -p \"+[#SysSettings.AtfUserNameForClio<String>#]+\" --workspaces \" +[#[IsOwnerSchema:false].[IsSchema:false].[Element:{1375619d-3794-44c2-9a8c-86d1bbbb1e35}].[Parameter:{3765bc1c-4403-4d21-9a63-fbb4c2d4bd78}]#]+\" --install\"",
+            "GS2": "[#SysSettings.AtfClioFilePath<String>#]+\" mergew --workspaces \" +[#[IsOwnerSchema:false].[IsSchema:false].[Element:{1375619d-3794-44c2-9a8c-86d1bbbb1e35}].[Parameter:{3765bc1c-4403-4d21-9a63-fbb4c2d4bd78}]#]+\" --install\"",
             "GS5": "17e9e8c3-90f3-4ee5-9f45-619417e73683"
           }
         },
@@ -110,8 +109,7 @@
           "GT5": "d1b004d6-49c1-be01-f8da-322f11b0f457",
           "GT4": "ad6a7f03-7b14-4d06-96c0-bf1c01c1d8f8",
           "GT1": {
-            "GS1": 1,
-            "GS2": "UrlAppender"
+            "GS1": 1
           }
         },
         {
@@ -217,6 +215,7 @@
           "BL8": "17e9e8c3-90f3-4ee5-9f45-619417e73683",
           "BN2": "69;55",
           "BO2": true,
+          "BO3": true,
           "BP2": [
             {
               "BL1": "Terrasoft.Core.Process.ProcessSchemaParameter",
@@ -244,7 +243,7 @@
               "L1": "8b3f29bb-ea14-4ce5-a5c5-293a929b6ba2",
               "L8": {
                 "GS1": 3,
-                "GS2": "[#SysSettings.AtfClioFilePath<String>#]+\" mergew -l \"+[#SysSettings.AtfUserNameForClio<String>#]+\" -p \"+[#SysSettings.AtfUserNameForClio<String>#]+\" --workspaces \" +[#[IsOwnerSchema:false].[IsSchema:false].[Element:{1375619d-3794-44c2-9a8c-86d1bbbb1e35}].[Parameter:{3765bc1c-4403-4d21-9a63-fbb4c2d4bd78}]#]+\" --install\"",
+                "GS2": "[#SysSettings.AtfClioFilePath<String>#]+\" mergew --workspaces \" +[#[IsOwnerSchema:false].[IsSchema:false].[Element:{1375619d-3794-44c2-9a8c-86d1bbbb1e35}].[Parameter:{3765bc1c-4403-4d21-9a63-fbb4c2d4bd78}]#]+\" --install\"",
                 "GS5": "17e9e8c3-90f3-4ee5-9f45-619417e73683"
               },
               "L11": false,
@@ -337,6 +336,7 @@
           "BL8": "17e9e8c3-90f3-4ee5-9f45-619417e73683",
           "BN2": "69;55",
           "BO2": true,
+          "BO3": true,
           "BP2": [
             {
               "BL1": "Terrasoft.Core.Process.ProcessSchemaParameter",
@@ -418,7 +418,7 @@
           "A3": "17e9e8c3-90f3-4ee5-9f45-619417e73683",
           "A4": "17e9e8c3-90f3-4ee5-9f45-619417e73683",
           "ParentUId": "3a962685-a754-4b5d-8f47-de7c9a983997",
-          "X": -21
+          "X": -16
         }
       ],
       "BK24": []

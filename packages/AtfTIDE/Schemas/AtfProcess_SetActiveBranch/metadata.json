@@ -433,8 +433,9 @@
           "GT5": "1c6de97d-2d01-cbc2-9b46-edb5adc9fa38",
           "GT4": "ad6a7f03-7b14-4d06-96c0-bf1c01c1d8f8",
           "GT1": {
-            "GS1": 3,
-            "GS2": "\"pushw --unlock --callback-process AtfProcess_ShowMessage -l \"+[#[IsOwnerSchema:false].[IsSchema:false].[Element:{370f27a8-a2b1-4a6e-b7ac-6ebca3763e9f}].[Parameter:{e0feede8-1a4a-41e2-b4d5-a9fbbd27dc0d}].[EntityColumn:{233b33ac-e288-33e6-fa2f-f6058c3cd6dc}]#]+\" -p \"+[#[IsOwnerSchema:false].[IsSchema:false].[Element:{370f27a8-a2b1-4a6e-b7ac-6ebca3763e9f}].[Parameter:{e0feede8-1a4a-41e2-b4d5-a9fbbd27dc0d}].[EntityColumn:{1ec2e4c3-7746-3d66-4e82-1564399aa06a}]#]"
+            "GS1": 1,
+            "GS2": "pushw --unlock",
+            "GS5": "3c7865a9-a60b-4c3a-a09e-a43a4cd25ef7"
           }
         },
         {
@@ -830,6 +831,23 @@
           "GT5": "a86d99e4-9666-ee77-1c97-b75c0e6848f9",
           "GT4": "0988a3e0-cf0d-4d9d-9e24-3dcdd5606e3c",
           "GT1": {}
+        },
+        {
+          "BL1": "Terrasoft.Core.Process.ProcessSchemaMapping",
+          "UId": "085dc833-aa51-4c0a-8b60-446c11149929",
+          "A2": "ChangeDataUserTask1",
+          "A3": "3c7865a9-a60b-4c3a-a09e-a43a4cd25ef7",
+          "A4": "3c7865a9-a60b-4c3a-a09e-a43a4cd25ef7",
+          "GT2": "[Element:{b2859f1c-1122-483b-8264-beff2ce05e8d}].[Parameter:{3a79c8ef-1afa-4585-b132-3b34235d0442}]",
+          "GT3": "3a79c8ef-1afa-4585-b132-3b34235d0442",
+          "GT5": "0def8b99-56d1-2d16-0ae9-3625cc87f048",
+          "GT4": "d3021ca7-7450-4678-a117-060171eb2976",
+          "GT1": {
+            "GS1": 3,
+            "GS2": "false",
+            "GS5": "d3021ca7-7450-4678-a117-060171eb2976",
+            "GS8": "true"
+          }
         }
       ],
       "BK37": {
@@ -886,7 +904,7 @@
           "A4": "3c7865a9-a60b-4c3a-a09e-a43a4cd25ef7",
           "A5": "57902d1e-ea0c-4991-b367-992c12d68fb2",
           "IL2": "f9caaf6b-1647-4594-8f85-9babd7f9fe6b",
-          "BL3": "-222;184",
+          "BL3": "-173;184",
           "BL7": "53818048-7868-48f6-ada0-0ebaa65af628",
           "BL8": "3c7865a9-a60b-4c3a-a09e-a43a4cd25ef7",
           "BN2": "31;31",
@@ -1247,6 +1265,21 @@
                 "GS5": "d3021ca7-7450-4678-a117-060171eb2976",
                 "GS8": "false"
               }
+            },
+            {
+              "BL1": "Terrasoft.Core.Process.ProcessSchemaParameter",
+              "UId": "3a79c8ef-1afa-4585-b132-3b34235d0442",
+              "A2": "IgnoreErrors",
+              "A3": "d3021ca7-7450-4678-a117-060171eb2976",
+              "A4": "d3021ca7-7450-4678-a117-060171eb2976",
+              "IL2": "b2859f1c-1122-483b-8264-beff2ce05e8d",
+              "L1": "90b65bf8-0ffc-4141-8779-2420877af907",
+              "L8": {
+                "GS1": 3,
+                "GS2": "true",
+                "GS5": "d3021ca7-7450-4678-a117-060171eb2976",
+                "GS8": "true"
+              }
             }
           ],
           "CL2": "FFFFFFFF",
@@ -1370,8 +1403,7 @@
               "IL2": "650b1610-fb59-4b09-99d1-27cdfab8f634",
               "L1": "8b3f29bb-ea14-4ce5-a5c5-293a929b6ba2",
               "L8": {
-                "GS1": 3,
-                "GS2": "\"pushw --unlock --callback-process AtfProcess_ShowMessage -l \"+[#[IsOwnerSchema:false].[IsSchema:false].[Element:{370f27a8-a2b1-4a6e-b7ac-6ebca3763e9f}].[Parameter:{e0feede8-1a4a-41e2-b4d5-a9fbbd27dc0d}].[EntityColumn:{233b33ac-e288-33e6-fa2f-f6058c3cd6dc}]#]+\" -p \"+[#[IsOwnerSchema:false].[IsSchema:false].[Element:{370f27a8-a2b1-4a6e-b7ac-6ebca3763e9f}].[Parameter:{e0feede8-1a4a-41e2-b4d5-a9fbbd27dc0d}].[EntityColumn:{1ec2e4c3-7746-3d66-4e82-1564399aa06a}]#]",
+                "GS1": 1,
                 "GS5": "3c7865a9-a60b-4c3a-a09e-a43a4cd25ef7"
               },
               "L11": false,
@@ -1819,7 +1851,7 @@
           "CI3": "null",
           "CI5": "FF939598",
           "CI6": 1,
-          "CI11": "-191;200",
+          "CI11": "-142;200",
           "CI12": "-78;200"
         },
         {
@@ -1871,7 +1903,7 @@
           "CI4": 2,
           "CI5": "FF939598",
           "CI6": 1,
-          "GV2": "{\"$type\":\"System.Collections.Generic.Dictionary`2[[System.Guid, mscorlib],[System.Collections.ObjectModel.Collection`1[[System.Guid, mscorlib]], mscorlib]], mscorlib\"}",
+          "GV2": "{}",
           "GV3": []
         },
         {
@@ -1957,7 +1989,7 @@
           "CI4": 2,
           "CI5": "FF939598",
           "CI6": 1,
-          "GV2": "{\"$type\":\"System.Collections.Generic.Dictionary`2[[System.Guid, mscorlib],[System.Collections.ObjectModel.Collection`1[[System.Guid, mscorlib]], mscorlib]], mscorlib\"}",
+          "GV2": "{}",
           "GV3": []
         }
       ],

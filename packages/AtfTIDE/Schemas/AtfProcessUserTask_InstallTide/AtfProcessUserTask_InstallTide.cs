@@ -37,19 +37,14 @@ namespace Terrasoft.Core.Process.Configuration
 			processStartInfo.EnvironmentVariables["LOCALAPPDATA"] = Path.Combine(profilePath, "AppData", "Local");
 		}
 		protected override bool InternalExecute(ProcessExecutingContext context) {
-			
-			var logger = TideApp.Instance.GetRequiredService<ILiveLogger>();
+			ILiveLogger logger = TideApp.Instance.GetRequiredService<ILiveLogger>();
 			logger.LogInfo("Starting TIDE installation...");
 			
 			DirectoryInfo clioDir = HelperFunctions.GetClioDirectory();
 			ITextTransformer transformer = ClassFactory.Get<ITextTransformer>("UrlAppender");
-			var clioPath = SysSettings.GetValue(UserConnection,"AtfClioFilePath").ToString();
-			
-			string userName = SysSettings.GetValue(UserConnection,"AtfUserNameForClio", "Supervisor");
-			string password = SysSettings.GetValue(UserConnection,"AtfPasswordForClio", "Supervisor");
-			
-			string arguments = $"{clioPath} tide -l {userName} -p {password}";
-			string transformedArguments = transformer.Transform(arguments);
+			string clioPath = SysSettings.GetValue(UserConnection,"AtfClioFilePath").ToString();
+			string arguments = $"{clioPath} tide";
+			string transformedArguments = transformer.TransformWithLP(arguments);
 			
 			logger.LogInfo($"Starting dotnet {transformedArguments}");
 			ProcessStartInfo startInfo = new ProcessStartInfo {
@@ -57,8 +52,6 @@ namespace Terrasoft.Core.Process.Configuration
 				Arguments = transformedArguments,
 				UseShellExecute = false,
 				CreateNoWindow = true,
-				//UseShellExecute = true,
-				//CreateNoWindow = false,
 				WorkingDirectory = clioDir.FullName,
 			};
 			LogManager.GetLogger("TIDE").Info($"Executing command: {startInfo.FileName} {startInfo.Arguments}");

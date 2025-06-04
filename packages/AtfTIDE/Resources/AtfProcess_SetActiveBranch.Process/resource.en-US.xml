@@ -7,6 +7,8 @@
 			<Item Name="BaseElements.ChangeDataUserTask1.Parameters.ConsiderTimeInFilter.DisplayValue" Value="true" />
 			<Item Name="BaseElements.ChangeDataUserTask1.Parameters.DataSourceFilters.Caption" Value="Data source filters" />
 			<Item Name="BaseElements.ChangeDataUserTask1.Parameters.EntitySchemaUId.Caption" Value="Object" />
+			<Item Name="BaseElements.ChangeDataUserTask1.Parameters.IgnoreErrors.Caption" Value="Continue execution on errors" />
+			<Item Name="BaseElements.ChangeDataUserTask1.Parameters.IgnoreErrors.DisplayValue" Value="true" />
 			<Item Name="BaseElements.ChangeDataUserTask1.Parameters.IsMatchConditions.Caption" Value="If object meets the following conditions" />
 			<Item Name="BaseElements.ChangeDataUserTask1.Parameters.IsMatchConditions.DisplayValue" Value="true" />
 			<Item Name="BaseElements.ChangeDataUserTask1.Parameters.RecordColumnValues.Caption" Value="Set column values" />
@@ -61,7 +63,8 @@
 			<Item Name="BaseElements.UserTask1.Parameters.RepositoryBranch.DisplayValue" Value="[#Branch#]" />
 			<Item Name="BaseElements.UserTask2.Caption" Value="Clio pushw" />
 			<Item Name="BaseElements.UserTask2.Parameters.Arguments.Caption" Value="Arguments" />
-			<Item Name="BaseElements.UserTask2.Parameters.Arguments.DisplayValue" Value="&quot;pushw --unlock --callback-process AtfProcess_ShowMessage -l &quot;+[#Read repository.First item of resulting collection.Creatio Login#]+&quot; -p &quot;+[#Read repository.First item of resulting collection.Creatio Password#]" />
+			<Item Name="BaseElements.UserTask2.Parameters.Arguments.DisplayValue" Value="pushw --unlock" />
+			<Item Name="BaseElements.UserTask2.Parameters.Arguments.Value" Value="pushw --unlock" />
 			<Item Name="BaseElements.UserTask2.Parameters.ErrorMessage.Caption" Value="Error Message" />
 			<Item Name="BaseElements.UserTask2.Parameters.FileName.Caption" Value="File Name" />
 			<Item Name="BaseElements.UserTask2.Parameters.FileName.DisplayValue" Value="&quot;dotnet &quot;+[#System setting.AtfClioFilePath#]" />

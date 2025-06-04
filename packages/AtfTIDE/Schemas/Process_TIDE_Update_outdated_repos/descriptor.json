@@ -2,8 +2,9 @@
   "Descriptor": {
     "UId": "17e9e8c3-90f3-4ee5-9f45-619417e73683",
     "Name": "Process_TIDE_Update_outdated_repos",
-    "ModifiedOnUtc": "\/Date(1748553294000)\/",
+    "ModifiedOnUtc": "\/Date(1749031146000)\/",
     "ManagerName": "ProcessSchemaManager",
-    "Caption": "TIDE. Update outdated repos"
+    "Caption": "TIDE. Update outdated repos",
+    "DependsOn": []
   }
 }

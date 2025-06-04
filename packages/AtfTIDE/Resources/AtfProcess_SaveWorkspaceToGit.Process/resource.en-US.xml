@@ -144,7 +144,7 @@
 			<Item Name="BaseElements.UserTask4.Parameters.Repository.DisplayValue" Value="[#Repository#]" />
 			<Item Name="BaseElements.UserTask5.Caption" Value="Clio restorew" />
 			<Item Name="BaseElements.UserTask5.Parameters.Arguments.Caption" Value="Arguments" />
-			<Item Name="BaseElements.UserTask5.Parameters.Arguments.DisplayValue" Value="[#System setting.AtfClioFilePath#]+&quot; restorew -l &quot;+[#Read repository.First item of resulting collection.Creatio Login#]+&quot; -p &quot;+[#Read repository.First item of resulting collection.Creatio Password#]+&quot; -a &quot;+[#Read Application.First item of resulting collection.Code#]" />
+			<Item Name="BaseElements.UserTask5.Parameters.Arguments.DisplayValue" Value="[#System setting.AtfClioFilePath#]+&quot; restorew -a &quot;+[#Read Application.First item of resulting collection.Code#]" />
 			<Item Name="BaseElements.UserTask5.Parameters.ErrorMessage.Caption" Value="Error Message" />
 			<Item Name="BaseElements.UserTask5.Parameters.FileName.Caption" Value="File Name" />
 			<Item Name="BaseElements.UserTask5.Parameters.FileName.DisplayValue" Value="dotnet" />

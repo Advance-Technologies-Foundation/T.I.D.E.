@@ -2,7 +2,7 @@
 <Resources Culture="en-US">
 	<Group Type="String">
 		<Items>
-			<Item Name="Caption" Value="Clio Callback" />
+			<Item Name="Caption" Value="Clio Callback - (Deprecated)" />
 			<Item Name="LaneSets.LaneSet1.Caption" Value="LaneSet 1" />
 			<Item Name="LaneSets.LaneSet1.Lanes.Lane1.Caption" Value="Lane 1" />
 			<Item Name="NotificationCaption.Caption" Value="Process instance caption" />

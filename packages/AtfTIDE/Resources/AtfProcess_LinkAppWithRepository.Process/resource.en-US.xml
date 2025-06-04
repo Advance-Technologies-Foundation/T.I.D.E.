@@ -193,7 +193,7 @@
 			<Item Name="BaseElements.UserTask1.Parameters.RepositoryFolderPath.Caption" Value="Repository Folder Path" />
 			<Item Name="BaseElements.UserTask2.Caption" Value="Createw" />
 			<Item Name="BaseElements.UserTask2.Parameters.Arguments.Caption" Value="Arguments" />
-			<Item Name="BaseElements.UserTask2.Parameters.Arguments.DisplayValue" Value="[#System setting.AtfClioFilePath#]+&quot; createw -a &quot;+[#Read selected application.First item of resulting collection.Code#]+&quot; -l &quot;+[#Read repository.First item of resulting collection.Creatio Login#]+&quot; -p &quot;+[#Read repository.First item of resulting collection.Creatio Password#]" />
+			<Item Name="BaseElements.UserTask2.Parameters.Arguments.DisplayValue" Value="[#System setting.AtfClioFilePath#]+&quot; createw -a &quot;+[#Read selected application.First item of resulting collection.Code#]" />
 			<Item Name="BaseElements.UserTask2.Parameters.ErrorMessage.Caption" Value="Error Message" />
 			<Item Name="BaseElements.UserTask2.Parameters.FileName.Caption" Value="File Name" />
 			<Item Name="BaseElements.UserTask2.Parameters.FileName.DisplayValue" Value="dotnet" />

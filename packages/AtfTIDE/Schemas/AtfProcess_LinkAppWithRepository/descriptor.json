@@ -2,8 +2,9 @@
   "Descriptor": {
     "UId": "3d2958e9-b3bd-4a9c-88aa-7bd7324b7fe9",
     "Name": "AtfProcess_LinkAppWithRepository",
-    "ModifiedOnUtc": "\/Date(1741906666000)\/",
+    "ModifiedOnUtc": "\/Date(1749031451000)\/",
     "ManagerName": "ProcessSchemaManager",
-    "Caption": "Link app with repository"
+    "Caption": "Link app with repository",
+    "DependsOn": []
   }
 }

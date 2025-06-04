@@ -2,9 +2,9 @@
 <Resources Culture="en-US">
 	<Group Type="String">
 		<Items>
-			<Item Name="BaseElements.UserTask1.Caption" Value="Run OS Command 1" />
+			<Item Name="BaseElements.UserTask1.Caption" Value="Run OS Command" />
 			<Item Name="BaseElements.UserTask1.Parameters.Arguments.Caption" Value="Arguments" />
-			<Item Name="BaseElements.UserTask1.Parameters.Arguments.DisplayValue" Value="[#System setting.AtfClioFilePath#]+&quot; mergew -l &quot;+[#System setting.AtfUserNameForClio#]+&quot; -p &quot;+[#System setting.AtfUserNameForClio#]+&quot; --workspaces &quot; +[#Ge tComa Separated Pathes 1.Pathes#]+&quot; --install&quot;" />
+			<Item Name="BaseElements.UserTask1.Parameters.Arguments.DisplayValue" Value="[#System setting.AtfClioFilePath#]+&quot; mergew --workspaces &quot; +[#Get Coma Separated Pathes.Pathes#]+&quot; --install&quot;" />
 			<Item Name="BaseElements.UserTask1.Parameters.ErrorMessage.Caption" Value="Error Message" />
 			<Item Name="BaseElements.UserTask1.Parameters.FileName.Caption" Value="File Name" />
 			<Item Name="BaseElements.UserTask1.Parameters.FileName.DisplayValue" Value="dotnet" />

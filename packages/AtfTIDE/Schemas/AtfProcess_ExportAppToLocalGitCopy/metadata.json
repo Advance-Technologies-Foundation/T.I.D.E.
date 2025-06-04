@@ -151,7 +151,7 @@
           "GT4": "ad6a7f03-7b14-4d06-96c0-bf1c01c1d8f8",
           "GT1": {
             "GS1": 3,
-            "GS2": "[#SysSettings.AtfClioFilePath<String>#]+\" restorew -l \"+[#[IsOwnerSchema:false].[IsSchema:false].[Element:{c2111325-4397-4ef3-ac37-64082b4f3f5b}].[Parameter:{f0a1166b-f6a0-427d-a824-d443111db880}].[EntityColumn:{233b33ac-e288-33e6-fa2f-f6058c3cd6dc}]#]+\" -p \"+[#[IsOwnerSchema:false].[IsSchema:false].[Element:{c2111325-4397-4ef3-ac37-64082b4f3f5b}].[Parameter:{f0a1166b-f6a0-427d-a824-d443111db880}].[EntityColumn:{1ec2e4c3-7746-3d66-4e82-1564399aa06a}]#]+\" -a \"+[#[IsOwnerSchema:false].[IsSchema:false].[Element:{30cb9c79-934b-4639-a988-c09aea093dc0}].[Parameter:{72347fb1-83bb-45e1-a013-f5195fea4695}].[EntityColumn:{13aad544-ec30-4e76-a373-f0cff3202e24}]#]",
+            "GS2": "[#SysSettings.AtfClioFilePath<String>#]+\" restorew -a \"+[#[IsOwnerSchema:false].[IsSchema:false].[Element:{30cb9c79-934b-4639-a988-c09aea093dc0}].[Parameter:{72347fb1-83bb-45e1-a013-f5195fea4695}].[EntityColumn:{13aad544-ec30-4e76-a373-f0cff3202e24}]#]",
             "GS5": "705701a0-2ed5-4c5a-b12b-5b816112f076"
           }
         },
@@ -1085,7 +1085,7 @@
               "L1": "8b3f29bb-ea14-4ce5-a5c5-293a929b6ba2",
               "L8": {
                 "GS1": 3,
-                "GS2": "[#SysSettings.AtfClioFilePath<String>#]+\" restorew -l \"+[#[IsOwnerSchema:false].[IsSchema:false].[Element:{c2111325-4397-4ef3-ac37-64082b4f3f5b}].[Parameter:{f0a1166b-f6a0-427d-a824-d443111db880}].[EntityColumn:{233b33ac-e288-33e6-fa2f-f6058c3cd6dc}]#]+\" -p \"+[#[IsOwnerSchema:false].[IsSchema:false].[Element:{c2111325-4397-4ef3-ac37-64082b4f3f5b}].[Parameter:{f0a1166b-f6a0-427d-a824-d443111db880}].[EntityColumn:{1ec2e4c3-7746-3d66-4e82-1564399aa06a}]#]+\" -a \"+[#[IsOwnerSchema:false].[IsSchema:false].[Element:{30cb9c79-934b-4639-a988-c09aea093dc0}].[Parameter:{72347fb1-83bb-45e1-a013-f5195fea4695}].[EntityColumn:{13aad544-ec30-4e76-a373-f0cff3202e24}]#]",
+                "GS2": "[#SysSettings.AtfClioFilePath<String>#]+\" restorew -a \"+[#[IsOwnerSchema:false].[IsSchema:false].[Element:{30cb9c79-934b-4639-a988-c09aea093dc0}].[Parameter:{72347fb1-83bb-45e1-a013-f5195fea4695}].[EntityColumn:{13aad544-ec30-4e76-a373-f0cff3202e24}]#]",
                 "GS5": "705701a0-2ed5-4c5a-b12b-5b816112f076"
               },
               "L11": false,
@@ -1684,6 +1684,7 @@
           "BL8": "705701a0-2ed5-4c5a-b12b-5b816112f076",
           "BN2": "69;55",
           "BO2": true,
+          "BO3": true,
           "BP2": [
             {
               "BL1": "Terrasoft.Core.Process.ProcessSchemaParameter",
@@ -1810,7 +1811,7 @@
           "CI4": 2,
           "CI5": "FF939598",
           "CI6": 1,
-          "GV2": "{\"$type\":\"System.Collections.Generic.Dictionary`2[[System.Guid, mscorlib],[System.Collections.ObjectModel.Collection`1[[System.Guid, mscorlib]], mscorlib]], mscorlib\"}",
+          "GV2": "{}",
           "GV3": []
         },
         {
@@ -1830,7 +1831,7 @@
           "CI6": 1,
           "CI11": "842;172",
           "CI12": "842;95",
-          "GV2": "{\"$type\":\"System.Collections.Generic.Dictionary`2[[System.Guid, mscorlib],[System.Collections.ObjectModel.Collection`1[[System.Guid, mscorlib]], mscorlib]], mscorlib\"}",
+          "GV2": "{}",
           "GV3": []
         },
         {
@@ -1917,7 +1918,7 @@
           "CI4": 2,
           "CI5": "FF939598",
           "CI6": 1,
-          "GV2": "{\"$type\":\"System.Collections.Generic.Dictionary`2[[System.Guid, mscorlib],[System.Collections.ObjectModel.Collection`1[[System.Guid, mscorlib]], mscorlib]], mscorlib\"}",
+          "GV2": "{}",
           "GV3": []
         },
         {
