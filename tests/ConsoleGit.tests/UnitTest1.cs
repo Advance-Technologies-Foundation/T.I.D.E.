@@ -18,7 +18,7 @@ public class Tests {
 		};
 		using StringWriter sw = new ();
 		Console.SetOut(sw);
-		var sut = new GetBranchesCommand(args);
+		var sut = new GetBranchesCommand(args, null);
 		
 		// Act
 		ErrorOr<Success> result = sut.Execute();

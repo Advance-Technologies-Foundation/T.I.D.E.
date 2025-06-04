@@ -31,12 +31,12 @@ namespace Terrasoft.Core.Process.Configuration
 			ConsoleGitArgs args = new ConsoleGitArgs {
 				Command = AtfTIDE.Commands.DownloadPackages,
 				RepoDir = HelperFunctions.GetRepositoryDirectory(repoInfo.Name).ToString(),
-				CreatioUrl = new Uri(webSettings["SystemUrl"]),
-				BPMLOADER = webSettings["BPMLOADER"],
-				BPMCSRF = webSettings["BPMCSRF"],
-				UserType = webSettings["UserType"],
-				BPMSESSIONID = webSettings["BPMSESSIONID"],
-				ASPXAUTH = webSettings[".ASPXAUTH"],
+				// CreatioUrl = new Uri(webSettings["SystemUrl"]),
+				// BPMLOADER = webSettings["BPMLOADER"],
+				// BPMCSRF = webSettings["BPMCSRF"],
+				// UserType = webSettings["UserType"],
+				// BPMSESSIONID = webSettings["BPMSESSIONID"],
+				// ASPXAUTH = webSettings[".ASPXAUTH"],
 			};
 			
 			ConsoleGitResult gitCommandResult = ClassFactory

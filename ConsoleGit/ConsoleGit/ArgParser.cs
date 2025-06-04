@@ -25,6 +25,10 @@ public record CommandLineArgs {
 		Files = Environment.GetEnvironmentVariable($"TIDE_{nameof(Files)}") ?? "";
 		
 		bool.TryParse(Environment.GetEnvironmentVariable($"TIDE_{nameof(Silent)}") ?? "", out bool silent);
+		
+		CreatioPassword = Environment.GetEnvironmentVariable($"TIDE_{nameof(CreatioPassword)}") ?? "";
+		CreatioUserName = Environment.GetEnvironmentVariable($"TIDE_{nameof(CreatioUserName)}") ?? "";
+		
 		Silent = silent;
 	}
 
@@ -33,15 +37,7 @@ public record CommandLineArgs {
 
 	#region Properties: Public
 	public bool Silent { get; init; }
-
-	public string? ASPXAUTH { get; init; }
-
-	public string? BPMCSRF { get; init; }
-
-	public string? BPMLOADER { get; init; }
-
-	public string? BPMSESSIONID { get; init; }
-
+	
 	public string Command { get; init; }
 
 	public string CommitAuthorEmail { get; set; }
@@ -51,6 +47,8 @@ public record CommandLineArgs {
 	public string CommitMessage { get; set; }
 
 	public Uri? CreatioUrl { get; init; }
+	public string CreatioUserName { get; init; }
+	public string CreatioPassword { get; init; }
 
 	public Uri? GitUrl { get; init; }
 

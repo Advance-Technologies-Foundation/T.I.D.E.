@@ -112,12 +112,18 @@ namespace GitAbstraction
 
 		public ErrorOr<Success> Fetch() {
 			string logMessage = "";
-
-			var remote = InitializedRepository.Network.Remotes["origin"];
-			var refSpecs = remote.FetchRefSpecs.Select(x => x.Specification);
-			Commands.Fetch(InitializedRepository, remote.Name, refSpecs, null, logMessage);
-			Console.Out.WriteLine(logMessage);
-			return Result.Success;
+			try {
+				var remote = InitializedRepository.Network.Remotes["origin"];
+				var refSpecs = remote.FetchRefSpecs.Select(x => x.Specification);
+				Commands.Fetch(InitializedRepository, remote.Name, refSpecs, null, logMessage);
+				Console.Out.WriteLine(logMessage);
+				return Result.Success;
+			}
+			catch (Exception e) {
+				Console.Error.WriteLine($"Error fetching from remote repository: {e.Message}");
+				return Error.Failure("FetchError", $"Failed to fetch from remote repository: {logMessage}\r\n {e.Message}");
+			}
+			
 		}
 
 

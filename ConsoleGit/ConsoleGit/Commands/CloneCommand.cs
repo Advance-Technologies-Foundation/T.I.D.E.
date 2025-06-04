@@ -1,8 +1,9 @@
-﻿using ErrorOr;
+﻿using ConsoleGit.Services;
+using ErrorOr;
 
 namespace ConsoleGit.Commands;
 
-public class CloneCommand(CommandLineArgs args) : BaseRepositoryCommand(args) {
+public class CloneCommand(CommandLineArgs args, WebSocketLogger logger) : BaseRepositoryCommand(args, logger) {
 
 	public override ErrorOr<Success> Execute(){
 		CleanRepositoryDirectory();

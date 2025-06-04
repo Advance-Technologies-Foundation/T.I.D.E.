@@ -1,4 +1,5 @@
-﻿using ErrorOr;
+﻿using ConsoleGit.Services;
+using ErrorOr;
 using LibGit2Sharp;
 
 namespace ConsoleGit.Commands;
@@ -8,7 +9,7 @@ namespace ConsoleGit.Commands;
 /// </summary>
 /// <param name="args">Arguments</param>
 /// <seealso href="https://github.com/libgit2/libgit2sharp/wiki/git-branch"/>
-public class PushCommand(CommandLineArgs args) : BaseRepositoryCommand(args) {
+public class PushCommand(CommandLineArgs args, WebSocketLogger logger) : BaseRepositoryCommand(args, logger) {
 
 	public override ErrorOr<Success> Execute(){
 		

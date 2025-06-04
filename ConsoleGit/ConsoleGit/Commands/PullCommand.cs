@@ -1,8 +1,9 @@
-﻿using ErrorOr;
+﻿using ConsoleGit.Services;
+using ErrorOr;
 
 namespace ConsoleGit.Commands;
 
-public class PullCommand(CommandLineArgs args) : BaseRepositoryCommand(args) {
+public class PullCommand(CommandLineArgs args, WebSocketLogger logger) : BaseRepositoryCommand(args, logger) {
 
 	public override ErrorOr<Success> Execute() =>
 		InitializedRepository.Pull().MatchFirst<ErrorOr<Success>>(

@@ -2,6 +2,7 @@
 using ConsoleGit;
 using ConsoleGit.Commands;
 using ConsoleGit.ConfiguredHttpClient;
+using ConsoleGit.Services;
 using ErrorOr;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -23,21 +24,14 @@ IHostBuilder builder = Host.CreateDefaultBuilder(args)
 		services.AddSingleton<CommandLineArgs>();
 		services.AddHttpClient("initializedClient")
 			.ConfigurePrimaryHttpMessageHandler(sp => new HttpClientHandler { 
-				CookieContainer = sp.GetRequiredService<CommandLineArgs>().CreateCookieContainerFromArgs() 
+				CookieContainer = sp.GetRequiredService<CookieContainer>() 
 			})
 			.ConfigureHttpClient((sp, client) => {
 				CommandLineArgs args = sp.GetRequiredService<CommandLineArgs>();
 				client.BaseAddress = args.CreatioUrl;
 				
-#if DEBUG				
-				Console.WriteLine($"Downloading packages from {args.CreatioUrl}");
-#endif
-				CookieContainer cookieContainer = args.CreateCookieContainerFromArgs();
-				const string bpmcsrf = "BPMCSRF";
-				string bpmcsrfValue = cookieContainer.GetCookies(args.CreatioUrl!)
-										.FirstOrDefault(c => c.Name == bpmcsrf)?.Value ?? "";
-				client.DefaultRequestHeaders.Add(bpmcsrf, bpmcsrfValue);
 			})
+			.AddHttpMessageHandler<LoginHandler>()
 #if DEBUG			
 			.AddHttpMessageHandler<MyHandler>()
 #endif
@@ -48,6 +42,8 @@ IHostBuilder builder = Host.CreateDefaultBuilder(args)
 #if DEBUG
 		services.AddScoped<MyHandler>();
 #endif
+		services.AddScoped<LoginHandler>();
+		services.AddSingleton<CookieContainer>();
 		services.AddScoped<DownloadPackagesCommand>();
 		services.AddScoped<CloneCommand>();
 		services.AddScoped<PullCommand>();
@@ -60,6 +56,7 @@ IHostBuilder builder = Host.CreateDefaultBuilder(args)
 		services.AddScoped<GetDiffCommand>();
 		services.AddScoped<GetChangedFilesCommand>();
 		services.AddScoped<DiscardFilesCommand>();
+		services.AddTransient<WebSocketLogger>();
 		// Register other commands
 	});
 
@@ -81,19 +78,24 @@ using ICommand command = consoleArgs.Command switch {
 	var _ => new ErrorCommand(consoleArgs)
 };
 
-
+await host.Services.GetRequiredService<WebSocketLogger>().LogAsync(MessageType.INF, $"Started command: {consoleArgs.Command}");
 return await command.Execute().MatchAsync(
 	_ => consoleArgs.Silent ? Task.FromResult(0): OnSuccess(consoleArgs.Command),
 	failure => OnFailure(consoleArgs.Command, failure)
 );
 
 async Task<int> OnFailure(string commandName, List<Error> errors){
-	await Console.Error.WriteAsync($"{commandName} command failed with error: {errors.FirstOrDefault().Code} - {errors.FirstOrDefault().Description}");
+	
+	await host.Services.GetRequiredService<WebSocketLogger>()
+			.LogAsync(MessageType.ERR, $"{commandName} command failed with error: {errors.FirstOrDefault().Code} - {errors.FirstOrDefault().Description}");
+	// await Console.Error.WriteAsync($"{commandName} command failed with error: {errors.FirstOrDefault().Code} - {errors.FirstOrDefault().Description}");
 	return 1;
 }
 
 async Task<int> OnSuccess(string commandName){
-	await Console.Out.WriteLineAsync($"{commandName} command executed successfully");
+	await host.Services.GetRequiredService<WebSocketLogger>()
+			.LogAsync(MessageType.INF, $"{commandName} command executed successfully");
+	// await Console.Out.WriteLineAsync($"{commandName} command executed successfully");
 	return 0;
 }
 

@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using System.Reflection;
+using Terrasoft.Core;
+using Terrasoft.Core.Configuration;
+using Terrasoft.Core.Factories;
 
 namespace AtfTIDE {
 	/// <summary>
@@ -84,21 +87,21 @@ namespace AtfTIDE {
 		/// Must be a valid email address
 		/// </remarks>
 		public string CommitAuthorEmail { get; set; }
-		
-		
-		public Uri CreatioUrl { get; set; }
-		public string BPMLOADER { get; set; }
-		public string ASPXAUTH { get; set; }
-		public string BPMCSRF { get; set; }
-		public string UserType { get; set; }
-		public string BPMSESSIONID { get; set; }
+		public Uri CreatioUrl => GetCreatioUrl();
+		// public string BPMLOADER { get; set; }
+		// public string ASPXAUTH { get; set; }
+		// public string BPMCSRF { get; set; }
+		// public string UserType { get; set; }
+		// public string BPMSESSIONID { get; set; }
 
 		public bool Silent { get; set; }
 
 		public string BranchName { get; set; }
 
-		
 		public string Files { get; set; }
+		
+		public string CreatioUserName => GetCreatioUserName();
+		public string CreatioPassword => GetCreatioPassword();
 		
 		#endregion
 
@@ -144,5 +147,32 @@ namespace AtfTIDE {
 		
 		#endregion
 
+		
+		private static Uri GetCreatioUrl() {
+			
+			UserConnection userConnection = ClassFactory.Get<UserConnection>();
+			Dictionary<string, string> webSettings = HelperFunctions.ClioArguments[userConnection.CurrentUser.Id];
+			string url = webSettings["SystemUrl"]; //http:localhost:8080/0 ??http:localhost:8080 
+			bool isFramework = url.EndsWith("/0");
+			if(isFramework) {
+				url = url.Substring(0,url.Length - 2);
+			}
+			return new Uri(url);
+		}
+		
+		private static string GetCreatioUserName() {
+			UserConnection userConnection = ClassFactory.Get<UserConnection>();
+			string userName = SysSettings
+				.GetValue(userConnection, "AtfUserNameForClio", "Supervisor");
+			return userName;
+			
+		}
+		
+		private static string GetCreatioPassword() {
+			UserConnection userConnection = ClassFactory.Get<UserConnection>();
+			string userName = SysSettings
+				.GetValue(userConnection, "AtfPasswordForClio", "Supervisor");
+			return userName;
+		}
 	}
 }

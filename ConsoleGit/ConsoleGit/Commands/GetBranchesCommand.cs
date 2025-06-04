@@ -1,6 +1,7 @@
 ﻿using System.Text.Json;
 using System.Text.Json.Serialization;
 using ConsoleGit.Dto;
+using ConsoleGit.Services;
 using ErrorOr;
 using LibGit2Sharp;
 
@@ -11,7 +12,7 @@ namespace ConsoleGit.Commands;
 /// </summary>
 /// <param name="args">Arguments</param>
 /// <seealso href="https://github.com/libgit2/libgit2sharp/wiki/git-branch"/>
-public class GetBranchesCommand(CommandLineArgs args) : BaseRepositoryCommand(args) {
+public class GetBranchesCommand(CommandLineArgs args, WebSocketLogger logger) : BaseRepositoryCommand(args, logger) {
 	public override ErrorOr<Success> Execute(){
 		
 		ErrorOr<IEnumerable<Branch>> branches = InitializedRepository.ListLocalBranches();

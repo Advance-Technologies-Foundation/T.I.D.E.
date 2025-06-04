@@ -1,4 +1,5 @@
 ﻿using System.Security.AccessControl;
+using ConsoleGit.Services;
 using ErrorOr;
 using GitAbstraction;
 using LibGit2Sharp;
@@ -28,12 +29,14 @@ public abstract class BaseRepositoryCommand: ICommand {
 	#region Fields: Protected
 
 	protected readonly CommandLineArgs Args;
+	protected readonly WebSocketLogger Logger;
 
 	#endregion
 
 	#region Constructors: Protected
 
-	protected BaseRepositoryCommand(CommandLineArgs args){
+	protected BaseRepositoryCommand(CommandLineArgs args, WebSocketLogger logger) {
+		Logger = logger ?? throw new ArgumentNullException(nameof(logger));
 		Args = args;
 		_initializedRepository = new Lazy<GitRepository>(() =>
 			GitRepository.GetInstance(args.UserName, args.Password, args.GitUrl, args.RepoDir));
