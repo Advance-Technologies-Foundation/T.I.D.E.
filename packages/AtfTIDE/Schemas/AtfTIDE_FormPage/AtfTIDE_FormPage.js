@@ -1923,7 +1923,8 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 				"operation": "insert",
 				"name": "Input_LogMessageTab",
 				"values": {
-					"type": "crt.Input",
+					"type": "crt.RichTextEditor",
+					//"type": "crt.Input",
 					"label": "#ResourceString(Input_LogMessageTab_label)#",
 					"control": "$AllMessages",
 					"placeholder": "",
@@ -2158,7 +2159,7 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 				"operation": "insert",
 				"name": "Input_LogMessage",
 				"values": {
-					"type": "crt.Input",
+					 "type": "crt.Input",
 					"label": "#ResourceString(Input_LogMessage_label)#",
 					"control": "$AllMessages",
 					"placeholder": "",

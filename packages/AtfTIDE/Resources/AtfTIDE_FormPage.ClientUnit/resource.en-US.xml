@@ -53,6 +53,8 @@
 			<Item Name="LocalizableStrings.Label_s7pm1mk_caption.Value" Value="!!! WARNING !!!" />
 			<Item Name="LocalizableStrings.Label_t6ybcfe_caption.Value" Value="Label 2" />
 			<Item Name="LocalizableStrings.MessagesTabContainer_caption.Value" Value="Messages" />
+			<Item Name="LocalizableStrings.RichTextEditor_zxkz64z_caption.Value" Value="Rich text" />
+			<Item Name="LocalizableStrings.RichTextEditor_zxkz64z_label.Value" Value="Rich text" />
 			<Item Name="LocalizableStrings.TabContainer_Advanced_caption.Value" Value="Advanced" />
 			<Item Name="LocalizableStrings.TabContainer_Git_caption.Value" Value="GIT" />
 			<Item Name="LocalizableStrings.TabContainer_mcnezxd_caption.Value" Value="Tab 2" />
