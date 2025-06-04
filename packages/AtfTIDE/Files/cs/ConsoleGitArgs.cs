@@ -102,6 +102,7 @@ namespace AtfTIDE {
 		
 		public string CreatioUserName => GetCreatioUserName();
 		public string CreatioPassword => GetCreatioPassword();
+		public bool IsFramework => IsNetFramework();
 		
 		#endregion
 
@@ -174,5 +175,13 @@ namespace AtfTIDE {
 				.GetValue(userConnection, "AtfPasswordForClio", "Supervisor");
 			return userName;
 		}
+		
+		private static bool IsNetFramework() {
+			UserConnection userConnection = ClassFactory.Get<UserConnection>();
+			Dictionary<string, string> webSettings = HelperFunctions.ClioArguments[userConnection.CurrentUser.Id];
+			string url = webSettings["SystemUrl"]; //http:localhost:8080/0 ??http:localhost:8080 
+			return url.EndsWith("/0");
+		}
+		
 	}
 }
