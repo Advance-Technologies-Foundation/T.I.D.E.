@@ -2,6 +2,7 @@ using System.Diagnostics;
 using System.IO;
 using AtfTIDE;
 using AtfTIDE.Logging;
+using Common.Logging;
 using Terrasoft.Core.Factories;
 
 namespace Terrasoft.Core.Process.Configuration
@@ -60,6 +61,7 @@ namespace Terrasoft.Core.Process.Configuration
 				//CreateNoWindow = false,
 				WorkingDirectory = clioDir.FullName,
 			};
+			LogManager.GetLogger("TIDE").Info($"Executing command: {startInfo.FileName} {startInfo.Arguments}");
 			SetDotnetProcessTempPath(startInfo, HelperFunctions.CreateTempDirectory().FullName);
 			using (System.Diagnostics.Process process = new System.Diagnostics.Process()) {
 				process.StartInfo = startInfo;

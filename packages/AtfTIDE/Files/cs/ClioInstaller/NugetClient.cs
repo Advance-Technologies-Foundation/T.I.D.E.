@@ -143,7 +143,8 @@ namespace AtfTIDE.ClioInstaller {
 		
 		public async Task<ErrorOr<string>> GetMaxVersionAsync(string packageName){
 			try {
-				string url = $"/v3-flatcontainer/{packageName}/index.json";
+				//"https://api.nuget.org/v3-flatcontainer/clio/index.json"
+				string url = $"/v3-flatcontainer/{packageName.ToLowerInvariant()}/index.json";
 				Uri.TryCreate(url, UriKind.Relative, out Uri routeUrl);
 				string json = await _client.GetStringAsync(routeUrl);
 				using (JsonDocument document = JsonDocument.Parse(json)) {

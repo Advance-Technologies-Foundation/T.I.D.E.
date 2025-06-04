@@ -31,6 +31,14 @@
 			<Item Name="BaseElements.ReadDataUserTask2.Parameters.ResultRowsCount.Caption" Value="Number of records read" />
 			<Item Name="BaseElements.ReadDataUserTask2.Parameters.ResultType.Caption" Value="Type of result" />
 			<Item Name="BaseElements.StartEvent1.Caption" Value="Start" />
+			<Item Name="BaseElements.SubProcess2.Caption" Value="Sync AppHash FromGit" />
+			<Item Name="BaseElements.SubProcess2.Parameters.AtfSetAvailableHash.Caption" Value="Set Available Hash" />
+			<Item Name="BaseElements.SubProcess2.Parameters.AtfSetAvailableHash.DisplayValue" Value="[#Boolean value.False#]" />
+			<Item Name="BaseElements.SubProcess2.Parameters.ProcessSchemaParameter1.Caption" Value="Skip clone" />
+			<Item Name="BaseElements.SubProcess2.Parameters.ProcessSchemaParameter1.DisplayValue" Value="[#Boolean value.True#]" />
+			<Item Name="BaseElements.SubProcess2.Parameters.Repository.Caption" Value="Repository" />
+			<Item Name="BaseElements.SubProcess2.Parameters.Repository.DisplayValue" Value="[#Repository#]" />
+			<Item Name="BaseElements.SubProcess2.Parameters.Repository.Sys_Description" Value="Repository" />
 			<Item Name="BaseElements.UserTask1.Caption" Value="Clone Repository" />
 			<Item Name="BaseElements.UserTask1.Parameters.ErrorMessage.Caption" Value="Error message" />
 			<Item Name="BaseElements.UserTask1.Parameters.IsError.Caption" Value="Is error" />

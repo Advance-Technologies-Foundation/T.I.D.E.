@@ -22,6 +22,13 @@ define("AtfTIDE_ListPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 			},
 			{
 				"operation": "merge",
+				"name": "AddButton",
+				"values": {
+					"size": "large"
+				}
+			},
+			{
+				"operation": "merge",
 				"name": "MenuItem_ImportFromExcel",
 				"values": {
 					"clicked": {
@@ -75,38 +82,6 @@ define("AtfTIDE_ListPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 						"entitySchemaName": "Tag_Virtual_Schema",
 						"defaultValue": null,
 						"recordsFilter": null
-					}
-				}
-			},
-			{
-				"operation": "remove",
-				"name": "SearchFilter",
-				"properties": [
-					"targetAttributes"
-				]
-			},
-			{
-				"operation": "merge",
-				"name": "SearchFilter",
-				"values": {
-					"_filterOptions": {
-						"expose": [
-							{
-								"attribute": "SearchFilter_Items",
-								"converters": [
-									{
-										"converter": "crt.SearchFilterAttributeConverter",
-										"args": [
-											"Items"
-										]
-									}
-								]
-							}
-						],
-						"from": [
-							"SearchFilter_SearchValue",
-							"SearchFilter_FilteredColumnsGroups"
-						]
 					}
 				}
 			},
@@ -300,6 +275,32 @@ define("AtfTIDE_ListPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 			},
 			{
 				"operation": "insert",
+				"name": "Button_Install_Updates",
+				"values": {
+					"type": "crt.Button",
+					"caption": "#ResourceString(Button_Install_Updates_caption)#",
+					"color": "warn",
+					"disabled": false,
+					"size": "large",
+					"iconPosition": "only-text",
+					"visible": true,
+					"clicked": {
+						"request": "crt.RunBusinessProcessRequest",
+						"params": {
+							"processName": "Process_TIDE_Update_outdated_repos",
+							"processRunType": "RegardlessOfThePage",
+							"saveAtProcessStart": true,
+							"showNotification": true
+						}
+					},
+					"clickMode": "default"
+				},
+				"parentName": "ActionButtonsContainer",
+				"propertyName": "items",
+				"index": 0
+			},
+			{
+				"operation": "insert",
 				"name": "Button_ynk6wyx",
 				"values": {
 					"type": "crt.Button",
@@ -319,7 +320,7 @@ define("AtfTIDE_ListPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 				},
 				"parentName": "ActionButtonsContainer",
 				"propertyName": "items",
-				"index": 1
+				"index": 2
 			},
 			{
 				"operation": "insert",

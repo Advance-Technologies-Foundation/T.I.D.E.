@@ -4,6 +4,7 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using AtfTIDE;
+using Common.Logging;
 using ErrorOr;
 using Terrasoft.Core.Factories;
 
@@ -43,9 +44,10 @@ namespace Terrasoft.Core.Process.Configuration
 			StringBuilder output = new StringBuilder();
 			StringBuilder error = new StringBuilder();
 			if(WorkingDirectory.IsNullOrEmpty()) {
-				IsError = true;
-				ErrorMessage = "Working directory is not set";
-				return true;
+				WorkingDirectory = HelperFunctions.GetClioDirectory().FullName;
+				// IsError = true;
+				// ErrorMessage = "Working directory is not set";
+				// return true;
 			}
 			if(!string.IsNullOrWhiteSpace(TransformerName)) {
 				ITextTransformer transformer = ClassFactory.Get<ITextTransformer>(TransformerName);
@@ -61,6 +63,7 @@ namespace Terrasoft.Core.Process.Configuration
 					RedirectStandardError = true,
 					RedirectStandardOutput = true,
 				};
+				LogManager.GetLogger("TIDE").Info($"Executing command: {startInfo.FileName} {startInfo.Arguments}");
 				SetDotnetProcessTempPath(startInfo, HelperFunctions.CreateTempDirectory().FullName);
 				using (System.Diagnostics.Process process = new System.Diagnostics.Process()) {
 					process.StartInfo = startInfo;

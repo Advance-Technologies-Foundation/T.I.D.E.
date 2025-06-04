@@ -108,7 +108,49 @@
   "E17": "AtfApplicationId",
   "E18": "AtfApplicationName"
 }
-~ MetaData.Schema.D2 ["ae0e45ca-c495-4fe7-a39d-3ab7278e1617","e80190a5-03b2-4095-90f7-a193a960adee","ebf6bb93-8aa6-4a01-900d-c6ea67affe21","9928edec-4272-425a-93bb-48743fee4b04","3015559e-cbc6-406a-88af-07f7930be832","3fabd836-6a53-4d8d-9069-6df88d9dae1e","d2502997-9387-441e-8230-2eb00152729b","501f4ea6-d4af-2def-4875-a1b828376aea","40d42c16-801b-4a78-22bb-893388f87ffe","29fe4649-96b3-b4db-f580-ff1dc3448bd3","1ec2e4c3-7746-3d66-4e82-1564399aa06a","233b33ac-e288-33e6-fa2f-f6058c3cd6dc","50c8ab0b-f709-0669-75c4-f6f23fa0abb3","1694f1b7-9a61-6ceb-5991-9f97c80bd356","3083d4aa-c522-c1e2-4119-5db9baea4161"]
++ MetaData.Schema.D2 {
+  "UId": "4a35b993-8390-6a51-bb27-28ed7a0afe62",
+  "A2": "AtfLocked",
+  "A3": "d7d9045c-6aa7-4fce-99af-5f48f26fab3c",
+  "A4": "d7d9045c-6aa7-4fce-99af-5f48f26fab3c",
+  "A5": "0e7542e4-b5f1-4419-9607-4e79ce6090b4",
+  "S2": "90b65bf8-0ffc-4141-8779-2420877af907"
+}
++ MetaData.Schema.D2 {
+  "UId": "3c6434a6-a946-0981-e6a9-b1882bdc49b4",
+  "A2": "AtfAvailableAppHash",
+  "A3": "d7d9045c-6aa7-4fce-99af-5f48f26fab3c",
+  "A4": "d7d9045c-6aa7-4fce-99af-5f48f26fab3c",
+  "A5": "0e7542e4-b5f1-4419-9607-4e79ce6090b4",
+  "S2": "5ca35f10-a101-4c67-a96a-383da6afacfc",
+  "E25": true
+}
++ MetaData.Schema.D2 {
+  "UId": "2f0220e6-8ccb-17b7-a965-7edec58711a5",
+  "A2": "AtfInstalledAppHash",
+  "A3": "d7d9045c-6aa7-4fce-99af-5f48f26fab3c",
+  "A4": "d7d9045c-6aa7-4fce-99af-5f48f26fab3c",
+  "A5": "0e7542e4-b5f1-4419-9607-4e79ce6090b4",
+  "S2": "5ca35f10-a101-4c67-a96a-383da6afacfc",
+  "E25": true
+}
++ MetaData.Schema.D2 {
+  "UId": "9d20dcba-41df-12c0-de61-a1fc62ed6a8d",
+  "A2": "AtfUpdateAvailable",
+  "A3": "d7d9045c-6aa7-4fce-99af-5f48f26fab3c",
+  "A4": "d7d9045c-6aa7-4fce-99af-5f48f26fab3c",
+  "A5": "0e7542e4-b5f1-4419-9607-4e79ce6090b4",
+  "S2": "90b65bf8-0ffc-4141-8779-2420877af907"
+}
++ MetaData.Schema.D2 {
+  "UId": "111f89f4-a05a-ab16-1586-4d94797f7d15",
+  "A2": "AtfAutoSync",
+  "A3": "d7d9045c-6aa7-4fce-99af-5f48f26fab3c",
+  "A4": "d7d9045c-6aa7-4fce-99af-5f48f26fab3c",
+  "A5": "0e7542e4-b5f1-4419-9607-4e79ce6090b4",
+  "S2": "90b65bf8-0ffc-4141-8779-2420877af907"
+}
+~ MetaData.Schema.D2 ["ae0e45ca-c495-4fe7-a39d-3ab7278e1617","e80190a5-03b2-4095-90f7-a193a960adee","ebf6bb93-8aa6-4a01-900d-c6ea67affe21","9928edec-4272-425a-93bb-48743fee4b04","3015559e-cbc6-406a-88af-07f7930be832","3fabd836-6a53-4d8d-9069-6df88d9dae1e","d2502997-9387-441e-8230-2eb00152729b","501f4ea6-d4af-2def-4875-a1b828376aea","40d42c16-801b-4a78-22bb-893388f87ffe","29fe4649-96b3-b4db-f580-ff1dc3448bd3","1ec2e4c3-7746-3d66-4e82-1564399aa06a","233b33ac-e288-33e6-fa2f-f6058c3cd6dc","50c8ab0b-f709-0669-75c4-f6f23fa0abb3","1694f1b7-9a61-6ceb-5991-9f97c80bd356","3083d4aa-c522-c1e2-4119-5db9baea4161","4a35b993-8390-6a51-bb27-28ed7a0afe62","3c6434a6-a946-0981-e6a9-b1882bdc49b4","2f0220e6-8ccb-17b7-a965-7edec58711a5","9d20dcba-41df-12c0-de61-a1fc62ed6a8d","111f89f4-a05a-ab16-1586-4d94797f7d15"]
 = MetaData.Schema.D20.A2 "AtfRepositoryEvents"
 = MetaData.Schema.D36.A3 "d7d9045c-6aa7-4fce-99af-5f48f26fab3c"
 = MetaData.Schema.D36.BS1 false

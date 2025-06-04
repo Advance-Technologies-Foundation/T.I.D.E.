@@ -2,6 +2,7 @@
   "Properties": {
     "CreatedInVersion": "8.0.10.2667",
     "Group": "Page",
+    "OptionalProperties": "{}",
     "SchemaType": "AngularSchema"
   }
 }

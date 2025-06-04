@@ -7,7 +7,8 @@
 			<Item Name="Columns.Code.Caption" Value="Code" />
 			<Item Name="Columns.Url.Caption" Value="Url" />
 			<Item Name="Columns.UserName.Caption" Value="User Name" />
-			<Item Name="EventsProcessSchema.Caption" Value="Business process" />
+			<Item Name="Description" Value="Server list to look for repositories in" />
+			<Item Name="EventsProcessSchema.LaneSets.LaneSet1253567487.Caption" Value="Pool 14675678567" />
 		</Items>
 	</Group>
 </Resources>

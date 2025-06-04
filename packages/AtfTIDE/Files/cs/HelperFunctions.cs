@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
+using System.Linq;
 using System.Text;
 using ErrorOr;
 using Terrasoft.Core;
@@ -25,6 +26,11 @@ namespace AtfTIDE {
 			string baseDir = AppDomain.CurrentDomain.BaseDirectory;
 			string clioDirectory = Path.Combine(baseDir, "conf","clio");
 			return new DirectoryInfo(clioDirectory);
+		}
+		
+		public static string GetClioFilePath() {
+			DirectoryInfo cliodir = GetClioDirectory();
+			return cliodir.GetFiles("clio.dll", SearchOption.AllDirectories).FirstOrDefault()?.FullName ?? string.Empty;
 		}
 
 		public static ErrorOr<FileInfo> GetConsoleGitPath(){
