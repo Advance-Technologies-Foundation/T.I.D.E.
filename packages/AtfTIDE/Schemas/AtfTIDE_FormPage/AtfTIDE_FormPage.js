@@ -497,7 +497,7 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 					"title": "#ResourceString(ExpansionPanel_w1nj9pl_title)#",
 					"toggleType": "default",
 					"togglePosition": "before",
-					"expanded": true,
+					"expanded": false,
 					"labelColor": "auto",
 					"fullWidthHeader": false,
 					"titleWidth": 20,
@@ -508,7 +508,7 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 						"right": "none"
 					},
 					"fitContent": true,
-					"visible": true,
+					"visible": false,
 					"alignItems": "stretch"
 				},
 				"parentName": "GridContainer_5wijoep",
@@ -526,12 +526,22 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 					],
 					"gap": {
 						"columnGap": "large",
-						"rowGap": 0
+						"rowGap": "none"
 					},
 					"styles": {
 						"overflow-x": "hidden"
 					},
-					"items": []
+					"items": [],
+					"visible": true,
+					"color": "transparent",
+					"borderRadius": "none",
+					"padding": {
+						"top": "none",
+						"right": "none",
+						"bottom": "none",
+						"left": "none"
+					},
+					"alignItems": "stretch"
 				},
 				"parentName": "ExpansionPanel_w1nj9pl",
 				"propertyName": "tools",
@@ -605,7 +615,7 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 					"labelPosition": "auto",
 					"control": "$PDS_AtfLogin_g255988",
 					"multiline": false,
-					"visible": true,
+					"visible": false,
 					"readonly": false,
 					"placeholder": "",
 					"tooltip": ""
@@ -629,7 +639,7 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 					"labelPosition": "auto",
 					"control": "$PDS_AtfPassword_rrf2i89",
 					"multiline": false,
-					"visible": true,
+					"visible": false,
 					"readonly": false,
 					"placeholder": "",
 					"tooltip": ""
@@ -1924,7 +1934,6 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 				"name": "Input_LogMessageTab",
 				"values": {
 					"type": "crt.RichTextEditor",
-					//"type": "crt.Input",
 					"label": "#ResourceString(Input_LogMessageTab_label)#",
 					"control": "$AllMessages",
 					"placeholder": "",
@@ -2159,7 +2168,7 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 				"operation": "insert",
 				"name": "Input_LogMessage",
 				"values": {
-					 "type": "crt.Input",
+					"type": "crt.Input",
 					"label": "#ResourceString(Input_LogMessage_label)#",
 					"control": "$AllMessages",
 					"placeholder": "",
