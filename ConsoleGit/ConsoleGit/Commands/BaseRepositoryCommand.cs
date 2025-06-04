@@ -1,4 +1,5 @@
 ﻿using System.Security.AccessControl;
+using System.Text;
 using ConsoleGit.Services;
 using ErrorOr;
 using GitAbstraction;
@@ -76,6 +77,10 @@ public abstract class BaseRepositoryCommand: ICommand {
 	#region Methods: Protected
 
 	protected void CleanRepositoryDirectory(){
+		
+		Logger.LogAsync(MessageType.INF, $"Cleaning repository directory: {Args.RepoDir}")
+			.ConfigureAwait(false).GetAwaiter().GetResult();
+		
 		if (Directory.Exists(Args.RepoDir)) {
 			DirectoryInfo directoryInfo = new(Args.RepoDir);
 			GrantDeleteAccess(directoryInfo, Environment.UserName);
@@ -88,6 +93,28 @@ public abstract class BaseRepositoryCommand: ICommand {
 		}
 	}
 
+	
+	protected string GetAccessPermissionsForFolder(string repoDir) {
+		
+		DirectoryInfo directoryInfo = new (repoDir);
+		if(directoryInfo.Exists) {
+			if(Environment.OSVersion.Platform == PlatformID.Win32NT) {
+				// On Windows, we can get the access control list
+				DirectorySecurity accessControl = directoryInfo.GetAccessControl();
+				AuthorizationRuleCollection rules = accessControl.GetAccessRules(true, true, typeof(System.Security.Principal.NTAccount));
+				StringBuilder sb = new StringBuilder();
+				foreach (FileSystemAccessRule rule in rules) {
+					sb.AppendLine($"{rule.IdentityReference.Value}: {rule.FileSystemRights} ({rule.AccessControlType})");
+				}
+				return sb.ToString();
+			} else {
+				// On Unix-like systems, we can use the standard ls -l command
+				return "Obtaining permissions on Unix-like systems is not supported in this implementation. Please check the directory permissions manually.";
+			}
+		}
+		return $"{directoryInfo.FullName} does not exist.";
+	}
+	
 	protected virtual void Dispose(bool disposing){
 		if (!_disposed) {
 			if (disposing) {

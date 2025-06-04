@@ -18,7 +18,7 @@ public class GetBranchesCommand(CommandLineArgs args, WebSocketLogger logger) : 
 		ErrorOr<IEnumerable<Branch>> branches = InitializedRepository.ListLocalBranches();
 		
 		if(branches.IsError){
-			return Error.Failure("COULD_NOT_GET_BRANCHES","Could not get branches from repository");
+			return branches.Errors;
 		}
 		BranchesCommandResponse model = new() {
 			Branches = branches.Value

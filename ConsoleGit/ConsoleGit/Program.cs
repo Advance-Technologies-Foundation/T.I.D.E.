@@ -1,4 +1,6 @@
-﻿using System.Net;using System.Text;
+﻿using System.Net;
+using System.Security.AccessControl;
+using System.Text;
 using ConsoleGit;
 using ConsoleGit.Commands;
 using ConsoleGit.ConfiguredHttpClient;
@@ -78,7 +80,9 @@ using ICommand command = consoleArgs.Command switch {
 	var _ => new ErrorCommand(consoleArgs)
 };
 
-await host.Services.GetRequiredService<WebSocketLogger>().LogAsync(MessageType.INF, $"Started command: {consoleArgs.Command}");
+
+WebSocketLogger ws =  host.Services.GetRequiredService<WebSocketLogger>();
+await ws.LogAsync(MessageType.INF, $"Started command: {consoleArgs.Command} on behalf of {Environment.UserName}");
 return await command.Execute().MatchAsync(
 	_ => consoleArgs.Silent ? Task.FromResult(0): OnSuccess(consoleArgs.Command),
 	failure => OnFailure(consoleArgs.Command, failure)

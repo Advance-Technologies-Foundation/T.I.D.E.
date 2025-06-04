@@ -93,23 +93,61 @@ namespace GitAbstraction
 		/// </returns>
 		/// <seealso href="https://github.com/libgit2/libgit2sharp/wiki/git-clone">libgit2sharp Wiki Clone</seealso>
 		public ErrorOr<string> Clone() {
-			try {
 				if (RepoDirectory.Exists) {
 					RepoDirectory.Delete(true);
 				} else {
 					RepoDirectory.Create();
 				}
-				CloneOptions cloneOptions = new();
+				
+				ApplyPermissionsOnRepoFolder(RepoDirectory.FullName);
+				CloneOptions cloneOptions = new() {
+					Checkout = true,
+					RecurseSubmodules = true,
+					FetchOptions = {
+						Depth = 1, // Shallow clone
+					}
+				};
 				if (Credentials == null) {
 					return Repository.Clone(GitUrl.ToString(), RepoDirectory.FullName);
 				}
 				cloneOptions.FetchOptions.CredentialsProvider = CredentialsProvider;
 				return Repository.Clone(GitUrl.ToString(), RepoDirectory.FullName, cloneOptions);
-			} catch (Exception e) {
-				return e.ToError();
-			}
+			// try {
+			// } catch (Exception e) {
+			// 	return e.ToError();
+			// }
 		}
 
+		public static void ApplyPermissionsOnRepoFolder(string dirName) {
+			if(Environment.OSVersion.Platform == PlatformID.Win32NT || 
+				Environment.OSVersion.Platform == PlatformID.Win32S ||
+			   Environment.OSVersion.Platform == PlatformID.Win32Windows) {
+				// On Windows, we can set the access control list
+				SetAccessControlForWindows(dirName);
+			} else {
+				// On Unix-like systems, we can set the permissions using chmod
+				// This is a placeholder for Unix-like systems, as setting permissions is different.
+				Console.WriteLine("Setting permissions on Unix-like systems is not implemented in this example.");
+			}
+			
+			
+		}
+
+		private static void SetAccessControlForWindows(string dirName) {
+			var directoryInfo = new DirectoryInfo(dirName);
+			var directorySecurity = directoryInfo.GetAccessControl();
+			var currentUser = System.Security.Principal.WindowsIdentity.GetCurrent().User;
+			directorySecurity.AddAccessRule(
+				new System.Security.AccessControl.FileSystemAccessRule(
+					currentUser,
+					System.Security.AccessControl.FileSystemRights.FullControl,
+					System.Security.AccessControl.InheritanceFlags.ContainerInherit | System.Security.AccessControl.InheritanceFlags.ObjectInherit,
+					System.Security.AccessControl.PropagationFlags.None,
+					System.Security.AccessControl.AccessControlType.Allow
+				)
+			);
+			directoryInfo.SetAccessControl(directorySecurity);
+		}
 		public ErrorOr<Success> Fetch() {
 			string logMessage = "";
 			try {

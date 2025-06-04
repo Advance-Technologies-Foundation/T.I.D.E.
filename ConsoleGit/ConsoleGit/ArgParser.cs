@@ -24,12 +24,16 @@ public record CommandLineArgs {
 		BranchName = Environment.GetEnvironmentVariable($"TIDE_{nameof(BranchName)}") ?? "";
 		Files = Environment.GetEnvironmentVariable($"TIDE_{nameof(Files)}") ?? "";
 		
+		
+		bool.TryParse(Environment.GetEnvironmentVariable($"TIDE_{nameof(IsFramework)}") ?? "", out bool isFramework);
+		IsFramework = isFramework;
+		
 		bool.TryParse(Environment.GetEnvironmentVariable($"TIDE_{nameof(Silent)}") ?? "", out bool silent);
+		Silent = silent;
 		
 		CreatioPassword = Environment.GetEnvironmentVariable($"TIDE_{nameof(CreatioPassword)}") ?? "";
 		CreatioUserName = Environment.GetEnvironmentVariable($"TIDE_{nameof(CreatioUserName)}") ?? "";
 		
-		Silent = silent;
 	}
 
 

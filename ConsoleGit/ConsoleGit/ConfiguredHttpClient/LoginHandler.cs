@@ -40,9 +40,7 @@ public class LoginHandler :DelegatingHandler
 	}
 	
 	private async Task LoginAsync() {
-		HttpRequestMessage requestMessage = _args.Value.IsFramework 
-			? new HttpRequestMessage(HttpMethod.Post, _args.Value.CreatioUrl + "/0" + LoginRoute)
-			: new HttpRequestMessage(HttpMethod.Post, _args.Value.CreatioUrl  +LoginRoute);
+		HttpRequestMessage requestMessage = new (HttpMethod.Post, _args.Value.CreatioUrl  +LoginRoute); 
 		requestMessage.Method = HttpMethod.Post;
 		LoginRequest lr = new (_args.Value.CreatioUserName, _args.Value.CreatioPassword);
 		requestMessage.Content = new StringContent(JsonSerializer.Serialize(lr), new System.Text.UTF8Encoding(), "application/json");
