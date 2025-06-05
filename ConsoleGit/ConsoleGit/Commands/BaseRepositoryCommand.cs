@@ -95,14 +95,13 @@ public abstract class BaseRepositoryCommand: ICommand {
 
 	
 	protected string GetAccessPermissionsForFolder(string repoDir) {
-		
 		DirectoryInfo directoryInfo = new (repoDir);
 		if(directoryInfo.Exists) {
 			if(Environment.OSVersion.Platform == PlatformID.Win32NT) {
 				// On Windows, we can get the access control list
 				DirectorySecurity accessControl = directoryInfo.GetAccessControl();
 				AuthorizationRuleCollection rules = accessControl.GetAccessRules(true, true, typeof(System.Security.Principal.NTAccount));
-				StringBuilder sb = new StringBuilder();
+				StringBuilder sb = new ();
 				foreach (FileSystemAccessRule rule in rules) {
 					sb.AppendLine($"{rule.IdentityReference.Value}: {rule.FileSystemRights} ({rule.AccessControlType})");
 				}

@@ -288,8 +288,9 @@ public class ArchiveUtilities(IFileSystem fileSystem) : IArchiveUtilities {
 		
 		StringBuilder sb = new();
 		for(int i = 0; i < fileNameLength; i++){
-			ReadOnlySpan<byte> span = new(fileNameBuffer, i*2, sizeof(char));
-			char character = BitConverter.ToChar(span);
+			// ReadOnlySpan<byte> span = new(fileNameBuffer, i*2, sizeof(char));
+			// char character = BitConverter.ToChar(span);
+			char character = BitConverter.ToChar(fileNameBuffer, i * 2);
 			sb.Append(character);
 		}
 		ArrayPool<byte>.Shared.Return(fileNameBuffer, true);

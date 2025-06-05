@@ -70,7 +70,8 @@ namespace AtfTIDE {
 		/// </remarks>
 		private static ProcessStartInfo CreateProcessStartInfo(FileInfo exePath, ConsoleGitArgs args){
 			ProcessStartInfo startInfo = new ProcessStartInfo {
-				FileName = exePath.FullName,
+				FileName = "dotnet",
+				Arguments = exePath.FullName,
 				UseShellExecute = false,
 				RedirectStandardOutput = true,
 				RedirectStandardError = true,
@@ -80,6 +81,8 @@ namespace AtfTIDE {
 			return startInfo;
 		}
 
+		
+		
 		/// <summary>
 		/// Executes the git process and captures its output
 		/// </summary>
@@ -113,6 +116,7 @@ namespace AtfTIDE {
 				process.ErrorDataReceived += errorHandler;
 				process.OutputDataReceived += outputHandler;
 
+				//SetDotnetProcessTempPath(process.StartInfo, HelperFunctions.CreateTempDirectory().FullName);
 				process.Start();
 				process.BeginOutputReadLine();
 				process.BeginErrorReadLine();

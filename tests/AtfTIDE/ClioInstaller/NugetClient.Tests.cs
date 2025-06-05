@@ -88,11 +88,11 @@ namespace AtfTIDE.Tests.ClioInstaller {
 			mockFileSystem.AddDirectory(creatioDir);
 			_defaultDirectories.Add(nameof(creatioDir), mockFileSystem.DirectoryInfo.New(creatioDir));
 			
-			string webappDir = Path.Join(creatioDir, "Terrasoft.WebApp");
+			string webappDir = Path.Combine(creatioDir, "Terrasoft.WebApp");
 			mockFileSystem.AddDirectory(webappDir);
 			_defaultDirectories.Add(nameof(webappDir), mockFileSystem.DirectoryInfo.New(webappDir));
 
-			string confDir = Path.Join(webappDir, "conf");
+			string confDir = Path.Combine(webappDir, "conf");
 			mockFileSystem.AddDirectory(confDir);
 			_defaultDirectories.Add(nameof(confDir), mockFileSystem.DirectoryInfo.New(confDir));
 
@@ -109,7 +109,7 @@ namespace AtfTIDE.Tests.ClioInstaller {
 			const string requestPartialUrl = "/v3-flatcontainer/clio/index.json";
 			Uri requestUri = new Uri(_baseAddress, requestPartialUrl);
 			HttpRequestMessage searchRequest = new HttpRequestMessage(HttpMethod.Get, requestUri);
-			string content = await File.ReadAllTextAsync("ClioInstaller/ResponseJson/clioVersions.json");
+			string content = File.ReadAllText("ClioInstaller/ResponseJson/clioVersions.json");
 			HttpResponseMessage searchResponse = new HttpResponseMessage(HttpStatusCode.OK) {
 				Content = new StringContent(content)
 			};
@@ -118,7 +118,7 @@ namespace AtfTIDE.Tests.ClioInstaller {
 			Uri downloadRequestUri = new Uri(_baseAddress, downloadRequestUrl);
 			HttpRequestMessage downloadRequest = new HttpRequestMessage(HttpMethod.Get, downloadRequestUri);
 
-			byte[] bytes = await File.ReadAllBytesAsync("ClioInstaller/ResponseJson/clio.8.0.1.23.nupkg");
+			byte[] bytes = File.ReadAllBytes("ClioInstaller/ResponseJson/clio.8.0.1.23.nupkg");
 			HttpResponseMessage downloadResponse = new HttpResponseMessage(HttpStatusCode.OK) {
 				Content = new ByteArrayContent(bytes)
 			};
@@ -144,7 +144,7 @@ namespace AtfTIDE.Tests.ClioInstaller {
 			const string requestPartialUrl = "/v3-flatcontainer/clio/index.json";
 			Uri requestUri = new Uri(_baseAddress, requestPartialUrl);
 			HttpRequestMessage searchRequest = new HttpRequestMessage(HttpMethod.Get, requestUri);
-			string content = await File.ReadAllTextAsync("ClioInstaller/ResponseJson/clioVersions.json");
+			string content = File.ReadAllText("ClioInstaller/ResponseJson/clioVersions.json");
 			HttpResponseMessage searchResponse = new HttpResponseMessage(HttpStatusCode.OK) {
 				Content = new StringContent(content)
 			};
@@ -153,7 +153,7 @@ namespace AtfTIDE.Tests.ClioInstaller {
 			Uri downloadRequestUri = new Uri(_baseAddress, downloadRequestUrl);
 			HttpRequestMessage downloadRequest = new HttpRequestMessage(HttpMethod.Get, downloadRequestUri);
 
-			byte[] bytes = await File.ReadAllBytesAsync("ClioInstaller/ResponseJson/clio.8.0.1.23.nupkg");
+			byte[] bytes = File.ReadAllBytes("ClioInstaller/ResponseJson/clio.8.0.1.23.nupkg");
 			HttpResponseMessage downloadResponse = new HttpResponseMessage(HttpStatusCode.OK) {
 				Content = new ByteArrayContent(bytes)
 			};
@@ -178,7 +178,7 @@ namespace AtfTIDE.Tests.ClioInstaller {
 			const string requestPartialUrl = "/query?q=clio&packageType=DotnetTool";
 			Uri requestUri = new Uri(_baseAddress, requestPartialUrl);
 			HttpRequestMessage request = new HttpRequestMessage(HttpMethod.Get, requestUri);
-			string content = await File.ReadAllTextAsync("ClioInstaller/ResponseJson/SearchResponse.json");
+			string content = File.ReadAllText("ClioInstaller/ResponseJson/SearchResponse.json");
 			HttpResponseMessage response = new HttpResponseMessage(HttpStatusCode.OK) {
 				Content = new StringContent(content)
 			};

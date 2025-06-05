@@ -30,6 +30,10 @@ namespace Terrasoft.Core.Process.Configuration
 
 		#region Methods: Protected
 		
+		
+		
+		
+		
 		private static void SetDotnetProcessTempPath(ProcessStartInfo processStartInfo, string tempPath) {
 			processStartInfo.EnvironmentVariables["TMP"] = tempPath;
 			processStartInfo.EnvironmentVariables["TEMP"] = tempPath;

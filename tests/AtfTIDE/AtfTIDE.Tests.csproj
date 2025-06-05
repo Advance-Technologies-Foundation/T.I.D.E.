@@ -29,6 +29,9 @@
         <Reference Include="Microsoft.Extensions.Http">
             <HintPath>..\..\.application\net-framework\core-bin\Microsoft.Extensions.Http.dll</HintPath>
         </Reference>
+        <Reference Include="Newtonsoft.Json">
+          <HintPath>..\..\.application\net-framework\core-bin\Newtonsoft.Json.dll</HintPath>
+        </Reference>
         <Reference Include="System.ComponentModel.DataAnnotations" />
         <Reference Include="System.Web" />
         <Reference Include="Terrasoft.Configuration">

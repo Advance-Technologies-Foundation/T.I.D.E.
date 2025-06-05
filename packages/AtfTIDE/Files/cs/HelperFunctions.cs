@@ -1,10 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Globalization;
 using System.IO;
 using System.Linq;
+using System.Security.Principal;
 using System.Text;
 using ErrorOr;
+using Terrasoft.Common;
 using Terrasoft.Core;
 using Terrasoft.Core.Entities;
 using Terrasoft.Core.Factories;
@@ -12,9 +15,63 @@ using Terrasoft.Core.Factories;
 namespace AtfTIDE {
 	public static class HelperFunctions {
 
+		
+		public static string GetTempPath() {
+			
+			var userConnection = ClassFactory.Get<UserConnection>();
+			var connectionStringSettings = userConnection.AppConnection
+														.AppSettings
+														.RootConfiguration
+														.ConnectionStrings
+														.ConnectionStrings["tempDirectoryPath"];
+			
+			if (connectionStringSettings == null) {
+				return string.Empty;
+			}
+			string tempPath =  PrepareWorkspacePath(connectionStringSettings.ConnectionString, userConnection.AppConnection.Workspace.Name);
+			return tempPath;
+		}
+		private static string PrepareWorkspacePath(string workspacePath, string workspaceName) {
+#if NETFRAMEWORK // TODO #CRM-47405
+			WindowsIdentity windowsIdentity = WindowsIdentity.GetCurrent();
+			string identityName = windowsIdentity.Name;
+#else
+			string identityName = Environment.UserName;
+#endif
+			return PrepareWorkspacePath(workspacePath, identityName, workspaceName);
+		}
+		
+		private static string PrepareWorkspacePath(string workspacePath, string userName, string workspaceName) {
+			const StringComparison comparisonIgnoreCase = StringComparison.InvariantCultureIgnoreCase;
+			string correctWorkspaceName = workspaceName.Replace(Path.GetInvalidPathChars(), '_');
+			string correctUserName = userName.Replace(Path.GetInvalidFileNameChars(), '_');
+			workspacePath = Environment.ExpandEnvironmentVariables(workspacePath);
+			workspacePath = workspacePath.Replace("%APPLICATION%", GetApplicationId(), comparisonIgnoreCase);
+			workspacePath = workspacePath.Replace("%APPPOOLIDENTITY%", correctUserName, comparisonIgnoreCase);
+			workspacePath = workspacePath.Replace("%USER%", correctUserName, comparisonIgnoreCase);
+			workspacePath = workspacePath.Replace("%WORKSPACE%", correctWorkspaceName, comparisonIgnoreCase);
+			if (Environment.OSVersion.Platform == PlatformID.Unix) {
+				workspacePath = workspacePath.Replace("%TEMP%", Path.GetTempPath(), comparisonIgnoreCase);
+			}
+			return workspacePath;
+		}
+		
+		private static string GetApplicationId() {
+#if NETSTANDARD
+			return Path.GetFileName(Environment.CurrentDirectory).Replace(Path.GetInvalidPathChars(), '_');
+#else
+			var info = new AspNetAppDomainInfo(AppDomain.CurrentDomain.FriendlyName);
+			return info.SiteId.ToString(CultureInfo.InvariantCulture);
+#endif
+		}
+
 		public static DirectoryInfo GetRepositoryDirectory(string repositoryName) {
-			string baseDir = AppDomain.CurrentDomain.BaseDirectory;
-			string repositoryDirectory = Path.Combine(baseDir, "conf","tide", repositoryName);
+			// string baseDir = AppDomain.CurrentDomain.BaseDirectory;
+			// string repositoryDirectory = Path.Combine(baseDir, "conf","tide", repositoryName);
+			// string repositoryDirectory = Path.Combine(baseDir, "Terrasoft.Configuration","Pkg", repositoryName);
+			// string repositoryDirectory = Path.Combine("C:\\", "Windows","Temp","60","MS_iis-267b870a97d8435d","Default", repositoryName);
+			string repositoryDirectory = Path.Combine(GetTempPath(), repositoryName);
+			Directory.CreateDirectory(repositoryDirectory);
 			return new DirectoryInfo(repositoryDirectory);
 		}
 		
@@ -35,8 +92,9 @@ namespace AtfTIDE {
 
 		public static ErrorOr<FileInfo> GetConsoleGitPath(){
 			string baseDir = AppDomain.CurrentDomain.BaseDirectory;
-			string execFilePath = Path.Combine(baseDir, "Terrasoft.Configuration", "Pkg", "AtfTIDE", "Files",
-												"exec", "ConsoleGit.exe");
+			// string execFilePath = Path.Combine(baseDir, "Terrasoft.Configuration", "Pkg", "AtfTIDE", "Files",
+			// 									"exec", "ConsoleGit.exe");
+			string execFilePath = Path.Combine(baseDir, "conf","consolegit", "ConsoleGit.dll");
 			
 			// Validate executable path exists
 			if (!File.Exists(execFilePath)) {

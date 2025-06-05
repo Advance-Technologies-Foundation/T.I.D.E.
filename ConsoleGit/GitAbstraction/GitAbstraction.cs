@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.IO;
 using System.IO.Abstractions;
 using System.Linq;
+using System.Security.AccessControl;
+using System.Security.Principal;
 using System.Text;
 using System.Text.Json.Serialization;
 using ErrorOr;
@@ -11,8 +13,7 @@ using LibGit2Sharp.Handlers;
 
 namespace GitAbstraction
 {
-	public sealed class GitRepository : IDisposable
-	{
+	public sealed class GitRepository : IDisposable {
 
 		#region Fields: Private
 
@@ -81,10 +82,32 @@ namespace GitAbstraction
 		/// <param name="repoDirectory">The directory where the repository will be cloned.</param>
 		/// <returns>A new instance of the <see cref="GitRepository"/> class.</returns>
 		public static GitRepository GetInstance(string username, string password, Uri gitUrl, string repoDirectory) {
-			UsernamePasswordCredentials usernamePasswordCredentials = new() { Username = username, Password = password };
+			UsernamePasswordCredentials usernamePasswordCredentials = new UsernamePasswordCredentials() { Username = username, Password = password };
 			return new GitRepository(usernamePasswordCredentials, gitUrl, repoDirectory);
 		}
+		
+		
+		private static void DeleteDirectoryRecursively(IDirectoryInfo directory) {
+			if (!directory.Exists)
+				return;
 
+			// Delete all files
+			foreach (IFileInfo file in directory.GetFiles()) {
+				file.Attributes = System.IO.FileAttributes.Normal;
+				file.Delete();
+			}
+
+			// Recursively delete all subdirectories
+			foreach (var subDirectory in directory.GetDirectories()) {
+				DeleteDirectoryRecursively(subDirectory);
+			}
+
+			// Delete the empty directory
+			directory.Delete(false);
+		}
+		
+		
+		
 		/// <summary>
 		///  Clones the repository to the specified directory.
 		/// </summary>
@@ -93,67 +116,75 @@ namespace GitAbstraction
 		/// </returns>
 		/// <seealso href="https://github.com/libgit2/libgit2sharp/wiki/git-clone">libgit2sharp Wiki Clone</seealso>
 		public ErrorOr<string> Clone() {
-				if (RepoDirectory.Exists) {
-					RepoDirectory.Delete(true);
-				} else {
-					RepoDirectory.Create();
+			if (RepoDirectory.Exists) {
+				DeleteDirectoryRecursively(RepoDirectory);
+				//RepoDirectory.Delete(true);
+			} else {
+				RepoDirectory.Create();
+			}
+			
+			CloneOptions cloneOptions = new CloneOptions() {
+				Checkout = true,
+				RecurseSubmodules = true,
+				FetchOptions = {
+					CredentialsProvider = CredentialsProvider,
+					Depth = 1, // Shallow clone
+					Prune = true,
 				}
-				
-				ApplyPermissionsOnRepoFolder(RepoDirectory.FullName);
-				CloneOptions cloneOptions = new() {
-					Checkout = true,
-					RecurseSubmodules = true,
-					FetchOptions = {
-						Depth = 1, // Shallow clone
-					}
-				};
+			};
+			try {
 				if (Credentials == null) {
 					return Repository.Clone(GitUrl.ToString(), RepoDirectory.FullName);
 				}
 				cloneOptions.FetchOptions.CredentialsProvider = CredentialsProvider;
-				return Repository.Clone(GitUrl.ToString(), RepoDirectory.FullName, cloneOptions);
-			// try {
-			// } catch (Exception e) {
-			// 	return e.ToError();
-			// }
-		}
-
-		public static void ApplyPermissionsOnRepoFolder(string dirName) {
-			if(Environment.OSVersion.Platform == PlatformID.Win32NT || 
-				Environment.OSVersion.Platform == PlatformID.Win32S ||
-			   Environment.OSVersion.Platform == PlatformID.Win32Windows) {
-				// On Windows, we can set the access control list
-				SetAccessControlForWindows(dirName);
-			} else {
-				// On Unix-like systems, we can set the permissions using chmod
-				// This is a placeholder for Unix-like systems, as setting permissions is different.
-				Console.WriteLine("Setting permissions on Unix-like systems is not implemented in this example.");
+				string result = Repository.Clone(GitUrl.ToString(), RepoDirectory.FullName, cloneOptions);
+				return result;
 			}
-			
-			
+			catch (Exception e) {
+				string errorMessage = $"""
+									Failed to clone repository to: {RepoDirectory.FullName}
+									Permissions: {GetAccessPermissionsForFolder(RepoDirectory.FullName)}
+									Exception Message: {e.Message}
+									Stack Trace: {e.StackTrace}
+									""";
+				return Error.Failure("CloneError", errorMessage);
+			}
 		}
 
-		private static void SetAccessControlForWindows(string dirName) {
-			var directoryInfo = new DirectoryInfo(dirName);
-			var directorySecurity = directoryInfo.GetAccessControl();
-			var currentUser = System.Security.Principal.WindowsIdentity.GetCurrent().User;
-			directorySecurity.AddAccessRule(
-				new System.Security.AccessControl.FileSystemAccessRule(
-					currentUser,
-					System.Security.AccessControl.FileSystemRights.FullControl,
-					System.Security.AccessControl.InheritanceFlags.ContainerInherit | System.Security.AccessControl.InheritanceFlags.ObjectInherit,
-					System.Security.AccessControl.PropagationFlags.None,
-					System.Security.AccessControl.AccessControlType.Allow
-				)
-			);
-			directoryInfo.SetAccessControl(directorySecurity);
+		
+		
+		private static  string GetAccessPermissionsForFolder(string repoDir) {
+			DirectoryInfo directoryInfo = new DirectoryInfo(repoDir);
+			if(directoryInfo.Exists) {
+				if(Environment.OSVersion.Platform == PlatformID.Win32NT) {
+					// On Windows, we can get the access control list
+					DirectorySecurity accessControl = directoryInfo.GetAccessControl();
+					AuthorizationRuleCollection rules = accessControl.GetAccessRules(true, true, typeof(NTAccount));
+					StringBuilder sb = new StringBuilder();
+					foreach (FileSystemAccessRule rule in rules) {
+						sb.AppendLine($"{rule.IdentityReference.Value}: {rule.FileSystemRights} ({rule.AccessControlType})");
+					}
+					return sb.ToString();
+				} else {
+					// On Unix-like systems, we can use the standard ls -l command
+					return "Obtaining permissions on Unix-like systems is not supported in this implementation. Please check the directory permissions manually.";
+				}
+			}
+			return $"{directoryInfo.FullName} does not exist.";
 		}
+		
 		public ErrorOr<Success> Fetch() {
 			string logMessage = "";
 			try {
-				var remote = InitializedRepository.Network.Remotes["origin"];
-				var refSpecs = remote.FetchRefSpecs.Select(x => x.Specification);
-				Commands.Fetch(InitializedRepository, remote.Name, refSpecs, null, logMessage);
+				Remote remote = InitializedRepository.Network.Remotes["origin"];
+				IEnumerable<string> refSpecs = remote.FetchRefSpecs.Select(x => x.Specification);
+				FetchOptions fetchOptions = new () {
+					CredentialsProvider = CredentialsProvider,
+					Prune = true,	// Automatically prune deleted branches
+					Depth = 1		// Shallow fetch
+				};
+				
+				Commands.Fetch(InitializedRepository, remote.Name, refSpecs, fetchOptions, logMessage);
 				Console.Out.WriteLine(logMessage);
 				return Result.Success;
 			}
@@ -161,7 +192,6 @@ namespace GitAbstraction
 				Console.Error.WriteLine($"Error fetching from remote repository: {e.Message}");
 				return Error.Failure("FetchError", $"Failed to fetch from remote repository: {logMessage}\r\n {e.Message}");
 			}
-			
 		}
 
 
@@ -235,7 +265,7 @@ namespace GitAbstraction
 		/// </returns>
 		/// <seealso href="https://github.com/libgit2/libgit2sharp/wiki/git-push#git-push">libgit2sharp Wiki git-push</seealso>
 		public ErrorOr<Success> Push(Branch branch) {
-			PushOptions options = new() {
+			PushOptions options = new PushOptions() {
 				CredentialsProvider = CredentialsProvider
 			};
 			//Remote remote = InitializedRepository.Network.Remotes["origin"];
@@ -302,7 +332,7 @@ namespace GitAbstraction
 		public ErrorOr<Commit> Commit(string name, string email, string message) {
 			// Create the committer's signature and commit
 
-			Signature author = new(name, email, DateTime.Now);
+			Signature author = new Signature(name, email, DateTime.Now);
 
 			// Commit to the repository
 			//INVESTIGATE: We can potentially pass TIDE as committer
@@ -374,18 +404,18 @@ namespace GitAbstraction
 			Console.WriteLine("Press any key to continue");
 			Console.ReadKey();
 #endif
-			StringBuilder sb  = new();
+			StringBuilder sb  = new StringBuilder();
 			
-			string[] exclusions = [
+			string[] exclusions = {
 				"/Files/Bin/",
 				"/Files/bin/",
 				"/Files/Obj/",
 				"/Files/obj/"
-			];
+			};
 			
 			var difference = InitializedRepository.Diff.Compare<Patch>(
 				InitializedRepository.Head.Tip.Tree, DiffTargets.Index | DiffTargets.WorkingDirectory, 
-				["packages"]);
+				new []{"packages"});
 			
 			foreach (PatchEntryChanges changes in difference) {
 				bool shouldIgnore = exclusions.Any(i=> changes.Path.Contains(i));
@@ -413,7 +443,7 @@ namespace GitAbstraction
 			Console.WriteLine("Press any key to continue");
 			Console.ReadKey();
 #endif
-			List<ChangedFile> changedFiles = [];
+			List<ChangedFile> changedFiles = new List<ChangedFile>();
 			foreach (TreeEntryChanges changes in InitializedRepository.Diff.Compare<TreeChanges>(
 						InitializedRepository.Head.Tip.Tree, DiffTargets.Index | DiffTargets.WorkingDirectory)) {
 
@@ -454,9 +484,9 @@ namespace GitAbstraction
 					case FileStatus.NewInWorkdir:
 					case FileStatus.NewInIndex:
 						// Delete the new (untracked) file
-						if (File.Exists(Path.Join(InitializedRepository.Info.WorkingDirectory, filePath)))
+						if (File.Exists(Path.Combine(InitializedRepository.Info.WorkingDirectory, filePath)))
 						{
-							File.Delete(Path.Join(InitializedRepository.Info.WorkingDirectory, filePath));
+							File.Delete(Path.Combine(InitializedRepository.Info.WorkingDirectory, filePath));
 							Console.WriteLine($"File {relativePath} deleted");
 						}
 						break;
@@ -469,9 +499,18 @@ namespace GitAbstraction
 		}
 
 	}
-	public record ChangedFile(
-		[property:JsonPropertyName("Path")]string Path, 
-		[property:JsonPropertyName("Status")]string Status);
+	public class ChangedFile {
+
+		public ChangedFile(string path, string status) {
+			Path = path;
+			Status = status;
+		}
+
+		[JsonPropertyName("Path")]
+		public string Path { get; set; }
+		
+		[JsonPropertyName("Status")]
+		public string Status { get; set; }
+
+	}
 }
-
-

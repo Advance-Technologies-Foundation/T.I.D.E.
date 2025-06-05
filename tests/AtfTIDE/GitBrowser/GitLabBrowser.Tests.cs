@@ -1,11 +1,12 @@
 ﻿using FluentAssertions;
-using Newtonsoft.Json;
+// using Newtonsoft.Json;
 using NUnit.Framework;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
 using AtfTIDE.GitBrowser;
+using Newtonsoft.Json;
 
 namespace AtfTIDE.Tests.GitBrowser
 {

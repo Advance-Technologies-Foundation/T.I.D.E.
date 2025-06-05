@@ -1,13 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
+using System.Globalization;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Runtime.Serialization;
+using System.Security.Principal;
 using System.ServiceModel;
 using System.ServiceModel.Activation;
 using System.ServiceModel.Web;
 using System.Web.SessionState;
 using Common.Logging;
+using Terrasoft.Common;
+using Terrasoft.Core.Compilation;
 using Terrasoft.Core.Factories;
 using Terrasoft.Core.Process;
 using Terrasoft.Web.Common;
@@ -110,8 +116,67 @@ namespace AtfTIDE.WebServices {
 			ConsoleGitResult gitCommandResult = ClassFactory
 												.Get<IConsoleGit>("AtfTIDE.ConsoleGit")
 												.Execute(args);
+			
 			return gitCommandResult.Output;
 		}
+		
+		//https://108252-studio.creatio.com/0/rest/Tide/GetTempPath?repositoryId=D7EF5CE8-A51A-4FAC-8E7C-EDF40280E567
+		// 0/rest/Tide/GetTempPath?repositoryId=D7EF5CE8-A51A-4FAC-8E7C-EDF40280E567
+		[OperationContract]
+		[WebInvoke(Method = "GET", RequestFormat = WebMessageFormat.Json,
+			BodyStyle = WebMessageBodyStyle.Bare, ResponseFormat = WebMessageFormat.Json)]
+		public string GetTempPath() {
+			
+			var connectionStringSettings = UserConnection.AppConnection
+														.AppSettings
+														.RootConfiguration
+														.ConnectionStrings
+														.ConnectionStrings["tempDirectoryPath"];
+			
+			if (connectionStringSettings == null) {
+				return string.Empty;
+			}
+			string tempPath =  PrepareWorkspacePath(connectionStringSettings.ConnectionString, AppConnection.Workspace.Name);
+			return tempPath;
+		}
+		
+		
+		
+		
+		internal static string PrepareWorkspacePath(string workspacePath, string workspaceName) {
+#if NETFRAMEWORK // TODO #CRM-47405
+			WindowsIdentity windowsIdentity = WindowsIdentity.GetCurrent();
+			string identityName = windowsIdentity.Name;
+#else
+			string identityName = Environment.UserName;
+#endif
+			return PrepareWorkspacePath(workspacePath, identityName, workspaceName);
+		}
+		internal static string PrepareWorkspacePath(string workspacePath, string userName, string workspaceName) {
+			const StringComparison comparisonIgnoreCase = StringComparison.InvariantCultureIgnoreCase;
+			string correctWorkspaceName = workspaceName.Replace(Path.GetInvalidPathChars(), '_');
+			string correctUserName = userName.Replace(Path.GetInvalidFileNameChars(), '_');
+			workspacePath = Environment.ExpandEnvironmentVariables(workspacePath);
+			workspacePath = workspacePath.Replace("%APPLICATION%", GetApplicationId(), comparisonIgnoreCase);
+			workspacePath = workspacePath.Replace("%APPPOOLIDENTITY%", correctUserName, comparisonIgnoreCase);
+			workspacePath = workspacePath.Replace("%USER%", correctUserName, comparisonIgnoreCase);
+			workspacePath = workspacePath.Replace("%WORKSPACE%", correctWorkspaceName, comparisonIgnoreCase);
+			if (Environment.OSVersion.Platform == PlatformID.Unix) {
+				workspacePath = workspacePath.Replace("%TEMP%", Path.GetTempPath(), comparisonIgnoreCase);
+			}
+			return workspacePath;
+		}
+		
+		private static string GetApplicationId() {
+#if NETSTANDARD
+			return Path.GetFileName(Environment.CurrentDirectory).Replace(Path.GetInvalidPathChars(), '_');
+#else
+				var info = new AspNetAppDomainInfo(AppDomain.CurrentDomain.FriendlyName);
+				return info.SiteId.ToString(CultureInfo.InvariantCulture);
+#endif
+		}
+		
+		
 		
 		[OperationContract]
 		[WebInvoke(Method = "POST", RequestFormat = WebMessageFormat.Json,
