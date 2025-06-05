@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Configuration;
 using System.Globalization;
 using System.IO;
+using System.IO.Abstractions;
+using System.IO.Compression;
 using System.Linq;
 using System.Net;
 using System.Runtime.Serialization;
@@ -120,63 +122,79 @@ namespace AtfTIDE.WebServices {
 			return gitCommandResult.Output;
 		}
 		
-		//https://108252-studio.creatio.com/0/rest/Tide/GetTempPath?repositoryId=D7EF5CE8-A51A-4FAC-8E7C-EDF40280E567
-		// 0/rest/Tide/GetTempPath?repositoryId=D7EF5CE8-A51A-4FAC-8E7C-EDF40280E567
+		// 0/rest/Tide/InstallConsoleGit
 		[OperationContract]
 		[WebInvoke(Method = "GET", RequestFormat = WebMessageFormat.Json,
 			BodyStyle = WebMessageBodyStyle.Bare, ResponseFormat = WebMessageFormat.Json)]
-		public string GetTempPath() {
+		public string InstallConsoleGit() {
+			var logger = LogManager.GetLogger("TIDE");
 			
-			var connectionStringSettings = UserConnection.AppConnection
-														.AppSettings
-														.RootConfiguration
-														.ConnectionStrings
-														.ConnectionStrings["tempDirectoryPath"];
+			var archiveZipPath = HelperFunctions.GetArchivePath();
+			var destFolder = HelperFunctions.GetGitConsoleFolderPath();
+			logger.Info($"Unzipping archive from {archiveZipPath} to {destFolder}");
 			
-			if (connectionStringSettings == null) {
-				return string.Empty;
+			DeleteDirectoryRecursively(new DirectoryInfo(destFolder));
+			if(!Directory.Exists(destFolder)) {
+				Directory.CreateDirectory(destFolder);
 			}
-			string tempPath =  PrepareWorkspacePath(connectionStringSettings.ConnectionString, AppConnection.Workspace.Name);
-			return tempPath;
+			
+			logger.Info($"Deleted existing directory: {destFolder}");
+			
+			string destArchivePath = Path.Combine(destFolder, "archive.zip");
+			System.IO.File.Copy(archiveZipPath, destArchivePath, true);
+			UnzipArchive(destArchivePath, destFolder);
+			logger.Info($"Unzipped archive to {destFolder}");
+			System.IO.File.Delete(destArchivePath);
+			logger.Info($"Deleted temporary archive file: {destArchivePath}");
+			return destFolder;
 		}
 		
-		
-		
-		
-		internal static string PrepareWorkspacePath(string workspacePath, string workspaceName) {
-#if NETFRAMEWORK // TODO #CRM-47405
-			WindowsIdentity windowsIdentity = WindowsIdentity.GetCurrent();
-			string identityName = windowsIdentity.Name;
-#else
-			string identityName = Environment.UserName;
-#endif
-			return PrepareWorkspacePath(workspacePath, identityName, workspaceName);
-		}
-		internal static string PrepareWorkspacePath(string workspacePath, string userName, string workspaceName) {
-			const StringComparison comparisonIgnoreCase = StringComparison.InvariantCultureIgnoreCase;
-			string correctWorkspaceName = workspaceName.Replace(Path.GetInvalidPathChars(), '_');
-			string correctUserName = userName.Replace(Path.GetInvalidFileNameChars(), '_');
-			workspacePath = Environment.ExpandEnvironmentVariables(workspacePath);
-			workspacePath = workspacePath.Replace("%APPLICATION%", GetApplicationId(), comparisonIgnoreCase);
-			workspacePath = workspacePath.Replace("%APPPOOLIDENTITY%", correctUserName, comparisonIgnoreCase);
-			workspacePath = workspacePath.Replace("%USER%", correctUserName, comparisonIgnoreCase);
-			workspacePath = workspacePath.Replace("%WORKSPACE%", correctWorkspaceName, comparisonIgnoreCase);
-			if (Environment.OSVersion.Platform == PlatformID.Unix) {
-				workspacePath = workspacePath.Replace("%TEMP%", Path.GetTempPath(), comparisonIgnoreCase);
+		private static void DeleteDirectoryRecursively(DirectoryInfo directory) {
+			if (!directory.Exists)
+				return;
+
+			// Delete all files
+			foreach (FileInfo file in directory.GetFiles()) {
+				file.Attributes = System.IO.FileAttributes.Normal;
+				file.Delete();
 			}
-			return workspacePath;
+
+			// Recursively delete all subdirectories
+			foreach (var subDirectory in directory.GetDirectories()) {
+				DeleteDirectoryRecursively(subDirectory);
+			}
+
+			// Delete the empty directory
+			directory.Delete(false);
 		}
 		
-		private static string GetApplicationId() {
-#if NETSTANDARD
-			return Path.GetFileName(Environment.CurrentDirectory).Replace(Path.GetInvalidPathChars(), '_');
-#else
-				var info = new AspNetAppDomainInfo(AppDomain.CurrentDomain.FriendlyName);
-				return info.SiteId.ToString(CultureInfo.InvariantCulture);
-#endif
+		
+		private static void UnzipArchive(string archivePath, string destinationPath) {
+			using (Stream archiveStream = new FileStream(archivePath, FileMode.Open)) {
+				using (ZipArchive arch = new ZipArchive(archiveStream, ZipArchiveMode.Read, false)) {
+					foreach (ZipArchiveEntry entry in arch.Entries) {
+						string fullName = entry.FullName;
+						long length = entry.Length;
+						string destFilePath = Path.Combine(destinationPath, fullName);
+						string dir = Path.GetDirectoryName(destFilePath);
+						if (dir != null && !Directory.Exists(dir)) {
+							Directory.CreateDirectory(dir);
+						}
+						if (length > 0) {
+							//otherwise it is an empty file
+							using (Stream stream = entry.Open()) {
+								FileSystem fs = new FileSystem();
+								using (FileSystemStream fileStream = fs.File.Create(destFilePath)) {
+									stream.CopyTo(fileStream, (int)length);
+									fileStream.Flush();
+									fileStream.Close();
+								}
+							}
+						}
+					}
+				}
+			}
 		}
-		
-		
 		
 		[OperationContract]
 		[WebInvoke(Method = "POST", RequestFormat = WebMessageFormat.Json,

@@ -90,11 +90,20 @@ namespace AtfTIDE {
 			return cliodir.GetFiles("clio.dll", SearchOption.AllDirectories).FirstOrDefault()?.FullName ?? string.Empty;
 		}
 
-		public static ErrorOr<FileInfo> GetConsoleGitPath(){
+		public static string GetArchivePath() {
 			string baseDir = AppDomain.CurrentDomain.BaseDirectory;
-			// string execFilePath = Path.Combine(baseDir, "Terrasoft.Configuration", "Pkg", "AtfTIDE", "Files",
-			// 									"exec", "ConsoleGit.exe");
-			string execFilePath = Path.Combine(baseDir, "conf","consolegit", "ConsoleGit.dll");
+			string execFilePath = Path.Combine(baseDir, "Terrasoft.Configuration","Pkg","AtfTIDE","Files","exec","archive.zip");
+			return execFilePath;
+		}
+		
+		public static string GetGitConsoleFolderPath() {
+			string baseDir = AppDomain.CurrentDomain.BaseDirectory;
+			string execFolderPath = Path.Combine(baseDir, "conf","consolegit");
+			return execFolderPath;
+		}
+		
+		public static ErrorOr<FileInfo> GetConsoleGitPath(){
+			string execFilePath = Path.Combine(GetGitConsoleFolderPath(), "ConsoleGit.dll");
 			
 			// Validate executable path exists
 			if (!File.Exists(execFilePath)) {
