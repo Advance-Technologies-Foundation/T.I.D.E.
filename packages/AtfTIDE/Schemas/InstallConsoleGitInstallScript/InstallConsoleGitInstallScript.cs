@@ -21,6 +21,10 @@ namespace Terrasoft.Configuration
 			DeleteDirectoryRecursively(new DirectoryInfo(destFolder));
 			logger.Info($"Deleted existing directory: {destFolder}");
 			
+			if(!Directory.Exists(destFolder)) {
+				Directory.CreateDirectory(destFolder);
+			}
+			
 			string destArchivePath = Path.Combine(destFolder, "archive.zip");
 			System.IO.File.Copy(archiveZipPath, destArchivePath, true);
 			UnzipArchive(destArchivePath, destFolder);
