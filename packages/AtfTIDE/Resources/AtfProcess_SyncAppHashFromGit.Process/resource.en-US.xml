@@ -27,6 +27,7 @@
 			<Item Name="BaseElements.ConditionalSequenceFlow4.Caption" Value="On clio pushw Error" />
 			<Item Name="BaseElements.ConditionalSequenceFlow5.Caption" Value="Update Avaulable" />
 			<Item Name="BaseElements.DefaultSequenceFlow4.Caption" Value="Update Installed" />
+			<Item Name="BaseElements.FormulaTask1.Caption" Value="Set repoDir" />
 			<Item Name="BaseElements.LinkEntityToProcessUserTask1.Caption" Value="Attach to Log" />
 			<Item Name="BaseElements.LinkEntityToProcessUserTask1.Parameters.EntityId.Caption" Value="Object" />
 			<Item Name="BaseElements.LinkEntityToProcessUserTask1.Parameters.EntityId.DisplayValue" Value="[#Repository#]" />
@@ -42,7 +43,7 @@
 			<Item Name="BaseElements.UserTask1.Parameters.RepositoryFolderPath.Caption" Value="Repository Folder Path" />
 			<Item Name="BaseElements.UserTask2.Caption" Value="get-app-hash" />
 			<Item Name="BaseElements.UserTask2.Parameters.Arguments.Caption" Value="Arguments" />
-			<Item Name="BaseElements.UserTask2.Parameters.Arguments.DisplayValue" Value="[#System setting.AtfClioFilePath#] +&quot; get-app-hash&quot;" />
+			<Item Name="BaseElements.UserTask2.Parameters.Arguments.DisplayValue" Value="[#System setting.AtfClioFilePath#] +&quot; get-app-hash &quot;+[#repoDir#]+&quot;/packages&quot;" />
 			<Item Name="BaseElements.UserTask2.Parameters.ErrorMessage.Caption" Value="Error Message" />
 			<Item Name="BaseElements.UserTask2.Parameters.FileName.Caption" Value="File Name" />
 			<Item Name="BaseElements.UserTask2.Parameters.FileName.DisplayValue" Value="dotnet" />
@@ -63,6 +64,7 @@
 			<Item Name="Parameters.AtfSetAvailableHash.DisplayValue" Value="[#Boolean value.True#]" />
 			<Item Name="Parameters.ProcessSchemaParameter1.Caption" Value="Skip clone" />
 			<Item Name="Parameters.ProcessSchemaParameter1.DisplayValue" Value="[#Boolean value.False#]" />
+			<Item Name="Parameters.ProcessSchemaParameter2.Caption" Value="repoDir" />
 			<Item Name="Parameters.Repository.Caption" Value="Repository" />
 			<Item Name="Parameters.Repository.Sys_Description" Value="Repository" />
 		</Items>

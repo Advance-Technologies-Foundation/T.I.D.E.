@@ -358,13 +358,13 @@
 			<SpecificVersion>False</SpecificVersion>
 			<Private>False</Private>
 		</Reference>
-		<Reference Include="CrtUIPlatform7x">
-			<HintPath>$(RelativePkgFolderPath)/CrtUIPlatform7x/$(StandalonePackageAssemblyPath)/CrtUIPlatform7x.dll</HintPath>
+		<Reference Include="CrtUIPlatform">
+			<HintPath>$(RelativePkgFolderPath)/CrtUIPlatform/$(StandalonePackageAssemblyPath)/CrtUIPlatform.dll</HintPath>
 			<SpecificVersion>False</SpecificVersion>
 			<Private>False</Private>
 		</Reference>
-		<Reference Include="CrtUIPlatform">
-			<HintPath>$(RelativePkgFolderPath)/CrtUIPlatform/$(StandalonePackageAssemblyPath)/CrtUIPlatform.dll</HintPath>
+		<Reference Include="CrtUIPlatform7x">
+			<HintPath>$(RelativePkgFolderPath)/CrtUIPlatform7x/$(StandalonePackageAssemblyPath)/CrtUIPlatform7x.dll</HintPath>
 			<SpecificVersion>False</SpecificVersion>
 			<Private>False</Private>
 		</Reference>
@@ -388,13 +388,13 @@
 			<SpecificVersion>False</SpecificVersion>
 			<Private>False</Private>
 		</Reference>
-		<Reference Include="CrtEmailTemplate">
-			<HintPath>$(RelativePkgFolderPath)/CrtEmailTemplate/$(StandalonePackageAssemblyPath)/CrtEmailTemplate.dll</HintPath>
+		<Reference Include="CalendarBase">
+			<HintPath>$(RelativePkgFolderPath)/CalendarBase/$(StandalonePackageAssemblyPath)/CalendarBase.dll</HintPath>
 			<SpecificVersion>False</SpecificVersion>
 			<Private>False</Private>
 		</Reference>
-		<Reference Include="CalendarBase">
-			<HintPath>$(RelativePkgFolderPath)/CalendarBase/$(StandalonePackageAssemblyPath)/CalendarBase.dll</HintPath>
+		<Reference Include="CrtEmailTemplate">
+			<HintPath>$(RelativePkgFolderPath)/CrtEmailTemplate/$(StandalonePackageAssemblyPath)/CrtEmailTemplate.dll</HintPath>
 			<SpecificVersion>False</SpecificVersion>
 			<Private>False</Private>
 		</Reference>
@@ -413,13 +413,13 @@
 			<SpecificVersion>False</SpecificVersion>
 			<Private>False</Private>
 		</Reference>
-		<Reference Include="CSP">
-			<HintPath>$(RelativePkgFolderPath)/CSP/$(StandalonePackageAssemblyPath)/CSP.dll</HintPath>
+		<Reference Include="CrtSmsIntegration">
+			<HintPath>$(RelativePkgFolderPath)/CrtSmsIntegration/$(StandalonePackageAssemblyPath)/CrtSmsIntegration.dll</HintPath>
 			<SpecificVersion>False</SpecificVersion>
 			<Private>False</Private>
 		</Reference>
-		<Reference Include="CrtSmsIntegration">
-			<HintPath>$(RelativePkgFolderPath)/CrtSmsIntegration/$(StandalonePackageAssemblyPath)/CrtSmsIntegration.dll</HintPath>
+		<Reference Include="CSP">
+			<HintPath>$(RelativePkgFolderPath)/CSP/$(StandalonePackageAssemblyPath)/CSP.dll</HintPath>
 			<SpecificVersion>False</SpecificVersion>
 			<Private>False</Private>
 		</Reference>
@@ -435,26 +435,6 @@
 		</Reference>
 		<Reference Include="OpenIdAuth">
 			<HintPath>$(RelativePkgFolderPath)/OpenIdAuth/$(StandalonePackageAssemblyPath)/OpenIdAuth.dll</HintPath>
-			<SpecificVersion>False</SpecificVersion>
-			<Private>False</Private>
-		</Reference>
-		<Reference Include="CrtNextStep">
-			<HintPath>$(RelativePkgFolderPath)/CrtNextStep/$(StandalonePackageAssemblyPath)/CrtNextStep.dll</HintPath>
-			<SpecificVersion>False</SpecificVersion>
-			<Private>False</Private>
-		</Reference>
-		<Reference Include="SsoSettings">
-			<HintPath>$(RelativePkgFolderPath)/SsoSettings/$(StandalonePackageAssemblyPath)/SsoSettings.dll</HintPath>
-			<SpecificVersion>False</SpecificVersion>
-			<Private>False</Private>
-		</Reference>
-		<Reference Include="CrtOmnichannelApp">
-			<HintPath>$(RelativePkgFolderPath)/CrtOmnichannelApp/$(StandalonePackageAssemblyPath)/CrtOmnichannelApp.dll</HintPath>
-			<SpecificVersion>False</SpecificVersion>
-			<Private>False</Private>
-		</Reference>
-		<Reference Include="CrtUISwitcher">
-			<HintPath>$(RelativePkgFolderPath)/CrtUISwitcher/$(StandalonePackageAssemblyPath)/CrtUISwitcher.dll</HintPath>
 			<SpecificVersion>False</SpecificVersion>
 			<Private>False</Private>
 		</Reference>
@@ -483,6 +463,26 @@
 			<SpecificVersion>False</SpecificVersion>
 			<Private>False</Private>
 		</Reference>
+		<Reference Include="SsoSettings">
+			<HintPath>$(RelativePkgFolderPath)/SsoSettings/$(StandalonePackageAssemblyPath)/SsoSettings.dll</HintPath>
+			<SpecificVersion>False</SpecificVersion>
+			<Private>False</Private>
+		</Reference>
+		<Reference Include="CrtOmnichannelApp">
+			<HintPath>$(RelativePkgFolderPath)/CrtOmnichannelApp/$(StandalonePackageAssemblyPath)/CrtOmnichannelApp.dll</HintPath>
+			<SpecificVersion>False</SpecificVersion>
+			<Private>False</Private>
+		</Reference>
+		<Reference Include="CrtUISwitcher">
+			<HintPath>$(RelativePkgFolderPath)/CrtUISwitcher/$(StandalonePackageAssemblyPath)/CrtUISwitcher.dll</HintPath>
+			<SpecificVersion>False</SpecificVersion>
+			<Private>False</Private>
+		</Reference>
+		<Reference Include="CrtNextStep">
+			<HintPath>$(RelativePkgFolderPath)/CrtNextStep/$(StandalonePackageAssemblyPath)/CrtNextStep.dll</HintPath>
+			<SpecificVersion>False</SpecificVersion>
+			<Private>False</Private>
+		</Reference>
 		<Reference Include="CrtProductivityMobile">
 			<HintPath>$(RelativePkgFolderPath)/CrtProductivityMobile/$(StandalonePackageAssemblyPath)/CrtProductivityMobile.dll</HintPath>
 			<SpecificVersion>False</SpecificVersion>
@@ -498,23 +498,8 @@
 			<SpecificVersion>False</SpecificVersion>
 			<Private>False</Private>
 		</Reference>
-		<Reference Include="CrtUserLevelSchema">
-			<HintPath>$(RelativePkgFolderPath)/CrtUserLevelSchema/$(StandalonePackageAssemblyPath)/CrtUserLevelSchema.dll</HintPath>
-			<SpecificVersion>False</SpecificVersion>
-			<Private>False</Private>
-		</Reference>
-		<Reference Include="CrtCall">
-			<HintPath>$(RelativePkgFolderPath)/CrtCall/$(StandalonePackageAssemblyPath)/CrtCall.dll</HintPath>
-			<SpecificVersion>False</SpecificVersion>
-			<Private>False</Private>
-		</Reference>
 		<Reference Include="CrtWebFarm">
 			<HintPath>$(RelativePkgFolderPath)/CrtWebFarm/$(StandalonePackageAssemblyPath)/CrtWebFarm.dll</HintPath>
-			<SpecificVersion>False</SpecificVersion>
-			<Private>False</Private>
-		</Reference>
-		<Reference Include="CrtSecurity7x">
-			<HintPath>$(RelativePkgFolderPath)/CrtSecurity7x/$(StandalonePackageAssemblyPath)/CrtSecurity7x.dll</HintPath>
 			<SpecificVersion>False</SpecificVersion>
 			<Private>False</Private>
 		</Reference>
@@ -523,8 +508,8 @@
 			<SpecificVersion>False</SpecificVersion>
 			<Private>False</Private>
 		</Reference>
-		<Reference Include="CrtTechnicalUsers">
-			<HintPath>$(RelativePkgFolderPath)/CrtTechnicalUsers/$(StandalonePackageAssemblyPath)/CrtTechnicalUsers.dll</HintPath>
+		<Reference Include="CrtSecurity7x">
+			<HintPath>$(RelativePkgFolderPath)/CrtSecurity7x/$(StandalonePackageAssemblyPath)/CrtSecurity7x.dll</HintPath>
 			<SpecificVersion>False</SpecificVersion>
 			<Private>False</Private>
 		</Reference>
@@ -533,13 +518,28 @@
 			<SpecificVersion>False</SpecificVersion>
 			<Private>False</Private>
 		</Reference>
-		<Reference Include="CrtSpecification">
-			<HintPath>$(RelativePkgFolderPath)/CrtSpecification/$(StandalonePackageAssemblyPath)/CrtSpecification.dll</HintPath>
+		<Reference Include="CrtCall">
+			<HintPath>$(RelativePkgFolderPath)/CrtCall/$(StandalonePackageAssemblyPath)/CrtCall.dll</HintPath>
+			<SpecificVersion>False</SpecificVersion>
+			<Private>False</Private>
+		</Reference>
+		<Reference Include="CrtUserLevelSchema">
+			<HintPath>$(RelativePkgFolderPath)/CrtUserLevelSchema/$(StandalonePackageAssemblyPath)/CrtUserLevelSchema.dll</HintPath>
+			<SpecificVersion>False</SpecificVersion>
+			<Private>False</Private>
+		</Reference>
+		<Reference Include="CrtTechnicalUsers">
+			<HintPath>$(RelativePkgFolderPath)/CrtTechnicalUsers/$(StandalonePackageAssemblyPath)/CrtTechnicalUsers.dll</HintPath>
 			<SpecificVersion>False</SpecificVersion>
 			<Private>False</Private>
 		</Reference>
 		<Reference Include="CrtCopilotIntentsStudio">
 			<HintPath>$(RelativePkgFolderPath)/CrtCopilotIntentsStudio/$(StandalonePackageAssemblyPath)/CrtCopilotIntentsStudio.dll</HintPath>
+			<SpecificVersion>False</SpecificVersion>
+			<Private>False</Private>
+		</Reference>
+		<Reference Include="CrtSpecification">
+			<HintPath>$(RelativePkgFolderPath)/CrtSpecification/$(StandalonePackageAssemblyPath)/CrtSpecification.dll</HintPath>
 			<SpecificVersion>False</SpecificVersion>
 			<Private>False</Private>
 		</Reference>

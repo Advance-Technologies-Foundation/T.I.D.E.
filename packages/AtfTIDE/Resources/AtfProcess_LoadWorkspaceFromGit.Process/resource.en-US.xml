@@ -36,6 +36,8 @@
 			<Item Name="BaseElements.SubProcess2.Parameters.AtfSetAvailableHash.DisplayValue" Value="[#Boolean value.False#]" />
 			<Item Name="BaseElements.SubProcess2.Parameters.ProcessSchemaParameter1.Caption" Value="Skip clone" />
 			<Item Name="BaseElements.SubProcess2.Parameters.ProcessSchemaParameter1.DisplayValue" Value="[#Boolean value.True#]" />
+			<Item Name="BaseElements.SubProcess2.Parameters.ProcessSchemaParameter2.Caption" Value="repoDir" />
+			<Item Name="BaseElements.SubProcess2.Parameters.ProcessSchemaParameter2.DisplayValue" Value="[#Clone Repository.Repository Folder Path#]" />
 			<Item Name="BaseElements.SubProcess2.Parameters.Repository.Caption" Value="Repository" />
 			<Item Name="BaseElements.SubProcess2.Parameters.Repository.DisplayValue" Value="[#Repository#]" />
 			<Item Name="BaseElements.SubProcess2.Parameters.Repository.Sys_Description" Value="Repository" />

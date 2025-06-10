@@ -2,8 +2,9 @@
   "Descriptor": {
     "UId": "69282d5a-b25b-4730-8001-c39307b78fa5",
     "Name": "AtfProcess_SyncAppHashFromGit",
-    "ModifiedOnUtc": "\/Date(1748555134000)\/",
+    "ModifiedOnUtc": "\/Date(1749562801000)\/",
     "ManagerName": "ProcessSchemaManager",
-    "Caption": "Sync App Hash"
+    "Caption": "Sync App Hash",
+    "DependsOn": []
   }
 }
