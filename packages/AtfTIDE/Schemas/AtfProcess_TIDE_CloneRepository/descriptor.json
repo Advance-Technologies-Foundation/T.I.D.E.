@@ -1,0 +1,10 @@
+﻿{
+  "Descriptor": {
+    "UId": "caede142-2eb5-4ced-851d-ae6cc5ceefad",
+    "Name": "AtfProcess_TIDE_CloneRepository",
+    "ModifiedOnUtc": "\/Date(1749664486000)\/",
+    "ManagerName": "ProcessSchemaManager",
+    "Caption": "TIDE. Clone repository",
+    "DependsOn": []
+  }
+}
