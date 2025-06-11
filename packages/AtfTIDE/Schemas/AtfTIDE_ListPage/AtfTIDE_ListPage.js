@@ -287,7 +287,7 @@ define("AtfTIDE_ListPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 					"clicked": {
 						"request": "crt.RunBusinessProcessRequest",
 						"params": {
-							"processName": "Process_TIDE_Update_outdated_repos",
+							"processName": "AtfProcess_ForceUpdateAutoSyncRepos",
 							"processRunType": "RegardlessOfThePage",
 							"saveAtProcessStart": true,
 							"showNotification": true
