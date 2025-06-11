@@ -2,9 +2,8 @@
   "Descriptor": {
     "UId": "4e64b358-781b-42d7-80a3-b9eb5ba87a55",
     "Name": "AtfProcess_ForceUpdateAutoSyncRepos",
-    "ModifiedOnUtc": "\/Date(1749643200000)\/",
+    "ModifiedOnUtc": "\/Date(1749668485000)\/",
     "ManagerName": "ProcessSchemaManager",
-    "Caption": "TIDE. Force Update  AutoSync repos",
-    "DependsOn": []
+    "Caption": "TIDE. Force Update  AutoSync repos"
   }
 }

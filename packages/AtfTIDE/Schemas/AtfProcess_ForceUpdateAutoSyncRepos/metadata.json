@@ -165,6 +165,7 @@
           "A4": "4e64b358-781b-42d7-80a3-b9eb5ba87a55",
           "A5": "57902d1e-ea0c-4991-b367-992c12d68fb2",
           "IL2": "43f51ed8-48fd-406c-a449-adde821bad6a",
+          "IL3": true,
           "BL3": "50;184",
           "BL7": "53818048-7868-48f6-ada0-0ebaa65af628",
           "BL8": "4e64b358-781b-42d7-80a3-b9eb5ba87a55",
@@ -305,6 +306,7 @@
           "A4": "4e64b358-781b-42d7-80a3-b9eb5ba87a55",
           "A5": "57902d1e-ea0c-4991-b367-992c12d68fb2",
           "IL2": "43f51ed8-48fd-406c-a449-adde821bad6a",
+          "IL3": true,
           "BL3": "289;172",
           "BL7": "49eafdbb-a89e-4bdf-a29d-7f17b1670a45",
           "BL8": "4e64b358-781b-42d7-80a3-b9eb5ba87a55",
@@ -373,7 +375,17 @@
       "BK29": true,
       "BK30": true,
       "BK34": "null",
-      "Labels": [],
+      "Labels": [
+        {
+          "BL1": "Terrasoft.Core.Process.ProcessSchemaLabel",
+          "UId": "e57502da-70e2-4926-85e4-62c9eaade5ac",
+          "A2": "SubProcess1_label1",
+          "A3": "4e64b358-781b-42d7-80a3-b9eb5ba87a55",
+          "A4": "4e64b358-781b-42d7-80a3-b9eb5ba87a55",
+          "ParentUId": "e9498831-9cc0-408d-b583-306ab3d113db",
+          "X": -29
+        }
+      ],
       "BK24": []
     }
   }

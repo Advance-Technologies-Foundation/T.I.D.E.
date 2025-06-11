@@ -12,7 +12,7 @@
 			<Item Name="BaseElements.ChangeDataUserTask1.Parameters.IsMatchConditions.Caption" Value="If object meets the following conditions" />
 			<Item Name="BaseElements.ChangeDataUserTask1.Parameters.IsMatchConditions.DisplayValue" Value="true" />
 			<Item Name="BaseElements.ChangeDataUserTask1.Parameters.RecordColumnValues.Caption" Value="Set column values" />
-			<Item Name="BaseElements.SubProcess1.Caption" Value="TIDE. Update outdated repos 1" />
+			<Item Name="BaseElements.SubProcess1.Caption" Value="TIDE. Update outdated repos" />
 			<Item Name="Caption" Value="TIDE. Force Update  AutoSync repos" />
 			<Item Name="LaneSets.LaneSet1.Caption" Value="LaneSet 1" />
 			<Item Name="LaneSets.LaneSet1.Lanes.Lane1.Caption" Value="Lane 1" />
