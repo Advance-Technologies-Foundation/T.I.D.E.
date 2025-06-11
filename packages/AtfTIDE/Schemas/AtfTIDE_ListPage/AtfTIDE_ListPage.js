@@ -285,13 +285,7 @@ define("AtfTIDE_ListPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 					"iconPosition": "only-text",
 					"visible": true,
 					"clicked": {
-						"request": "crt.RunBusinessProcessRequest",
-						"params": {
-							"processName": "AtfProcess_ForceUpdateAutoSyncRepos",
-							"processRunType": "RegardlessOfThePage",
-							"saveAtProcessStart": true,
-							"showNotification": true
-						}
+						"request": "atf.InstallAllAppsClicked",
 					},
 					"clickMode": "default"
 				},
@@ -659,6 +653,32 @@ define("AtfTIDE_ListPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 						schemaName: "Page_LogTerminal"
 					});
 					
+					await next?.handle(request);
+				}
+			},
+			{
+				request: "atf.InstallAllAppsClicked",
+				handler: async (request, next) => {
+					await next?.handle(request);
+					
+					const handlerChain = sdk.HandlerChainService.instance;
+					
+					await handlerChain.process({
+						type: 'crt.OpenPageRequest',
+						$context: request.$context,
+						scopes: [...request.scopes],
+						schemaName: "Page_LogTerminal"
+					});
+					
+					await handlerChain.process({
+						type: "crt.RunBusinessProcessRequest",
+						$context: request.$context,
+						scopes: [...request.scopes],
+						processName: "AtfProcess_ForceUpdateAutoSyncRepos",
+						processRunType: "RegardlessOfThePage",
+						saveAtProcessStart: true,
+						showNotification: true
+					});
 					await next?.handle(request);
 				}
 			}
