@@ -13,6 +13,8 @@ using System.ServiceModel;
 using System.ServiceModel.Activation;
 using System.ServiceModel.Web;
 using System.Web.SessionState;
+using AtfTIDE.HttpClient;
+using AtfTIDE.HttpClient.GithubDto;
 using Common.Logging;
 using Terrasoft.Common;
 using Terrasoft.Core.Compilation;
@@ -217,6 +219,22 @@ namespace AtfTIDE.WebServices {
 												.Execute(args);
 			return "OK";
 		}
+		
+		
+		// https://k_krylov_nb.tscrm.com:40031/rest/Tide/GetRepos?orgName=Creatio-COB
+		[OperationContract]
+		[WebInvoke(Method = "GET", RequestFormat = WebMessageFormat.Json,
+			BodyStyle = WebMessageBodyStyle.Bare, ResponseFormat = WebMessageFormat.Json)]
+		public List<Repository> GetRepos(string orgName) {
+			IGitHubClient gh = TideApp.Instance.GetRequiredService<IGitHubClient>();
+			//List<Repository> repos = gh.ListOrganizationRepositories(orgName).GetAwaiter().GetResult();
+			Repository repo = gh.CreateOrganizationRepository("Creatio-COB","K-NEW-REPO").GetAwaiter().GetResult();
+			List<Repository> repos = new List<Repository>() {
+				repo
+			};
+			return repos;
+		}
+		
 	}
 	
 	[DataContract]

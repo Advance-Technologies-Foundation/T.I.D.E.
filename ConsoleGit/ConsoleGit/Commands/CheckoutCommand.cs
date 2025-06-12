@@ -1,6 +1,5 @@
 ﻿using ConsoleGit.Services;
 using ErrorOr;
-using LibGit2Sharp;
 
 namespace ConsoleGit.Commands;
 

@@ -51,6 +51,7 @@ namespace AtfTIDE {
 			serviceCollection.AddSingleton<IWebSocket, WebSocket>();
 			serviceCollection.AddGitlabClient();
 			serviceCollection.AddNugetClient();
+			serviceCollection.AddGithubClient();
 			InjectedServices?.ToList().ForEach(service => {
 				service(serviceCollection);
 			});
