@@ -1,11 +1,11 @@
 {
   "Descriptor": {
     "UId": "57902d1e-ea0c-4991-b367-992c12d68fb2",
-    "PackageVersion": "1.4.11",
+    "PackageVersion": "1.4.12",
     "Name": "AtfTIDE",
     "Type": 1,
     "ProjectPath": "Files/AtfTIDE.csproj",
-    "ModifiedOnUtc": "/Date(1749672159000)/",
+    "ModifiedOnUtc": "/Date(1749770677000)/",
     "Maintainer": "ATF",
     "DependsOn": [
       {
