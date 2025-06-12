@@ -72,6 +72,10 @@ public static class Program
 		using IHost host = builder.Build();
 		CommandLineArgs consoleArgs = host.Services.GetRequiredService<CommandLineArgs>();
 
+		
+		IWebSocketLogger logger = host.Services.GetRequiredService<IWebSocketLogger>();
+		await logger.LogAsync(MessageType.INF, $"ConsoleGit started with command: {consoleArgs.Command}");
+		
 		using ICommand command = consoleArgs.Command switch {
 									"Clone" => host.Services.GetRequiredService<CloneCommand>(),
 									"Pull" => host.Services.GetRequiredService<PullCommand>(),
@@ -87,19 +91,21 @@ public static class Program
 									var _ => new ErrorCommand(consoleArgs)
 								};
 		
+		
+		
 		return await command.Execute().MatchAsync(
 			_ => consoleArgs.Silent ? Task.FromResult(0): OnSuccess(consoleArgs.Command),
 			failure => OnFailure(consoleArgs.Command, failure)
 		);
 		
 		async Task<int> OnFailure(string commandName, List<Error> errors){
-			await host.Services.GetRequiredService<WebSocketLogger>()
+			await host.Services.GetRequiredService<IWebSocketLogger>()
 					.LogAsync(MessageType.ERR, $"{commandName} command failed with error: {errors.FirstOrDefault().Code} - {errors.FirstOrDefault().Description}");
 			return 1;
 		}
 		
 		async Task<int> OnSuccess(string commandName){
-			await host.Services.GetRequiredService<WebSocketLogger>()
+			await host.Services.GetRequiredService<IWebSocketLogger>()
 					.LogAsync(MessageType.INF, $"{commandName} command executed successfully");
 			return 0;
 		}

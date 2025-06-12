@@ -6,7 +6,7 @@ define("AtfTIDE_ListPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 				"name": "MainHeader",
 				"parentName": "MainContainer",
 				"propertyName": "items",
-				"index": 1
+				"index": 0
 			},
 			{
 				"operation": "merge",
@@ -110,26 +110,43 @@ define("AtfTIDE_ListPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 							"id": "f252f581-0ccf-44ac-b7c9-c00df2ad9919",
 							"code": "PDS_AtfName",
 							"caption": "#ResourceString(PDS_AtfName)#",
-							"dataValueType": 1
+							"dataValueType": 1,
+							"width": 169
+						},
+						{
+							"id": "69eff662-f9fe-3cda-187d-e00abf947474",
+							"code": "PDS_AtfApplication",
+							"caption": "#ResourceString(PDS_AtfApplication)#",
+							"dataValueType": 10,
+							"width": 155
+						},
+						{
+							"id": "df2022d2-6ccc-fb59-0730-a434a04b3e56",
+							"code": "PDS_AtfAccessToken",
+							"caption": "#ResourceString(PDS_AtfAccessToken)#",
+							"dataValueType": 28,
+							"width": 244
+						},
+						{
+							"id": "a534afb6-c37c-9c55-6510-14f5db3235f3",
+							"code": "PDS_AtfUserName",
+							"caption": "#ResourceString(PDS_AtfUserName)#",
+							"dataValueType": 28,
+							"width": 203
+						},
+						{
+							"id": "7cf7b26f-3e55-6834-8d19-d29dcdb0fc18",
+							"code": "PDS_AtfAutoSync",
+							"caption": "#ResourceString(PDS_AtfAutoSync)#",
+							"dataValueType": 12,
+							"width": 122
 						},
 						{
 							"id": "b3e9456a-3654-a0bf-4385-d6411875a17c",
 							"code": "PDS_AtfRepositoryUrl",
 							"caption": "#ResourceString(PDS_AtfRepositoryUrl)#",
 							"dataValueType": 44,
-							"width": 744.0000152587891
-						},
-						{
-							"id": "b5fd329d-c5ed-e9c9-090d-e20bde397cc8",
-							"code": "PDS_AtfActiveBranch",
-							"caption": "#ResourceString(PDS_AtfActiveBranch)#",
-							"dataValueType": 28
-						},
-						{
-							"id": "69eff662-f9fe-3cda-187d-e00abf947474",
-							"code": "PDS_AtfApplication",
-							"caption": "#ResourceString(PDS_AtfApplication)#",
-							"dataValueType": 10
+							"width": 575
 						}
 					],
 					"visible": true,
@@ -145,136 +162,6 @@ define("AtfTIDE_ListPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 			},
 			{
 				"operation": "insert",
-				"name": "GridContainer_UpdateQuestion",
-				"values": {
-					"type": "crt.GridContainer",
-					"columns": [
-						"minmax(32px, 1fr)",
-						"minmax(32px, 1fr)",
-						"minmax(32px, 1fr)",
-						"minmax(32px, 1fr)"
-					],
-					"rows": "minmax(max-content, 32px)",
-					"gap": {
-						"columnGap": "large",
-						"rowGap": "none"
-					},
-					"items": [],
-					"fitContent": true,
-					"visible": "$IsQuestionContainerVisible",
-					"color": "transparent",
-					"borderRadius": "none",
-					"padding": {
-						"top": "large",
-						"right": "large",
-						"bottom": "large",
-						"left": "large"
-					},
-					"alignItems": "stretch"
-				},
-				"parentName": "MainContainer",
-				"propertyName": "items",
-				"index": 0
-			},
-			{
-				"operation": "insert",
-				"name": "Label_Question",
-				"values": {
-					"layoutConfig": {
-						"column": 1,
-						"row": 1,
-						"colSpan": 3,
-						"rowSpan": 1
-					},
-					"type": "crt.Label",
-					"caption": "#MacrosTemplateString(#ResourceString(Label_Question_caption)#)#",
-					"labelType": "headline-1",
-					"labelThickness": "bold",
-					"labelEllipsis": false,
-					"labelColor": "#FF4013",
-					"labelBackgroundColor": "transparent",
-					"labelTextAlign": "start",
-					"visible": true
-				},
-				"parentName": "GridContainer_UpdateQuestion",
-				"propertyName": "items",
-				"index": 0
-			},
-			{
-				"operation": "insert",
-				"name": "FlexContainer_55xskyn",
-				"values": {
-					"layoutConfig": {
-						"column": 4,
-						"row": 1,
-						"colSpan": 1,
-						"rowSpan": 1
-					},
-					"type": "crt.FlexContainer",
-					"direction": "row",
-					"items": [],
-					"fitContent": true,
-					"visible": true,
-					"color": "transparent",
-					"borderRadius": "none",
-					"padding": {
-						"top": "none",
-						"right": "none",
-						"bottom": "none",
-						"left": "none"
-					},
-					"alignItems": "stretch",
-					"justifyContent": "end",
-					"gap": "small",
-					"wrap": "wrap"
-				},
-				"parentName": "GridContainer_UpdateQuestion",
-				"propertyName": "items",
-				"index": 1
-			},
-			{
-				"operation": "insert",
-				"name": "Button_UpdateTide",
-				"values": {
-					"type": "crt.Button",
-					"caption": "#ResourceString(Button_UpdateTide_caption)#",
-					"color": "accent",
-					"disabled": false,
-					"size": "large",
-					"iconPosition": "only-text",
-					"visible": "$IsTideUpdateButtonVisibile",
-					"clicked": {
-						"request": "atf.InstallTideClicked"
-					},
-					"clickMode": "default"
-				},
-				"parentName": "FlexContainer_55xskyn",
-				"propertyName": "items",
-				"index": 0
-			},
-			{
-				"operation": "insert",
-				"name": "Button_UpdateClio",
-				"values": {
-					"type": "crt.Button",
-					"caption": "#ResourceString(Button_UpdateClio_caption)#",
-					"color": "accent",
-					"disabled": false,
-					"size": "large",
-					"iconPosition": "only-text",
-					"visible": "$IsClioUpdateButtonVisibile",
-					"clicked": {
-						"request": "atf.InstallClioClicked"
-					},
-					"clickMode": "default",
-					"icon": null
-				},
-				"parentName": "FlexContainer_55xskyn",
-				"propertyName": "items",
-				"index": 1
-			},
-			{
-				"operation": "insert",
 				"name": "Button_Install_Updates",
 				"values": {
 					"type": "crt.Button",
@@ -285,7 +172,7 @@ define("AtfTIDE_ListPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 					"iconPosition": "only-text",
 					"visible": true,
 					"clicked": {
-						"request": "atf.InstallAllAppsClicked",
+						"request": "atf.InstallAllAppsClicked"
 					},
 					"clickMode": "default"
 				},
@@ -303,7 +190,7 @@ define("AtfTIDE_ListPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 					"disabled": false,
 					"size": "large",
 					"iconPosition": "only-text",
-					"visible": true,
+					"visible": false,
 					"clicked": {
 						"request": "crt.OpenPageRequest",
 						"params": {
@@ -315,6 +202,60 @@ define("AtfTIDE_ListPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 				"parentName": "ActionButtonsContainer",
 				"propertyName": "items",
 				"index": 2
+			},
+			{
+				"operation": "insert",
+				"name": "MenuItem_UpdateTide",
+				"values": {
+					"type": "crt.MenuItem",
+					"caption": "#ResourceString(MenuItem_UpdateTide_caption)#",
+					"visible": true,
+					"clicked": {
+						"request": "atf.InstallTideClicked"
+					},
+					"icon": "reload-icon"
+				},
+				"parentName": "ActionButton",
+				"propertyName": "menuItems",
+				"index": 1
+			},
+			{
+				"operation": "insert",
+				"name": "MenuItem_UpdateClio",
+				"values": {
+					"type": "crt.MenuItem",
+					"caption": "#ResourceString(MenuItem_UpdateClio_caption)#",
+					"visible": true,
+					"clicked": {
+						"request": "crt.RunBusinessProcessRequest",
+						"params": {
+							"processName": "AtfProcess_TryInstallClio",
+							"processRunType": "RegardlessOfThePage",
+							"saveAtProcessStart": true,
+							"showNotification": true
+						}
+					},
+					"icon": "checkmark-icon"
+				},
+				"parentName": "ActionButton",
+				"propertyName": "menuItems",
+				"index": 2
+			},
+			{
+				"operation": "insert",
+				"name": "MenuItem_InstallConsoleGit",
+				"values": {
+					"type": "crt.MenuItem",
+					"caption": "#ResourceString(MenuItem_InstallConsoleGit_caption)#",
+					"visible": true,
+					"clicked": {
+						"request": "atf.InstallConsoleGit"
+					},
+					"icon": "warning-filled-icon"
+				},
+				"parentName": "ActionButton",
+				"propertyName": "menuItems",
+				"index": 3
 			},
 			{
 				"operation": "insert",
@@ -455,22 +396,9 @@ define("AtfTIDE_ListPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 					"attributes"
 				],
 				"values": {
-					"IsQuestionContainerVisible": {},
-					"IsTideUpdateButtonVisibile": {},
-					"IsClioUpdateButtonVisibile": {},
 					"PDS_AtfName": {
 						"modelConfig": {
 							"path": "PDS.AtfName"
-						}
-					},
-					"PDS_AtfRepositoryUrl": {
-						"modelConfig": {
-							"path": "PDS.AtfRepositoryUrl"
-						}
-					},
-					"PDS_AtfActiveBranch": {
-						"modelConfig": {
-							"path": "PDS.AtfActiveBranch"
 						}
 					},
 					"PDS_AtfApplication": {
@@ -478,9 +406,24 @@ define("AtfTIDE_ListPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 							"path": "PDS.AtfApplication"
 						}
 					},
-					"PDS_Application_Image": {
+					"PDS_AtfAccessToken": {
 						"modelConfig": {
-							"path": "PDS.AtfApplication.SysAppIcon.Data"
+							"path": "PDS.AtfAccessToken"
+						}
+					},
+					"PDS_AtfUserName": {
+						"modelConfig": {
+							"path": "PDS.AtfUserName"
+						}
+					},
+					"PDS_AtfAutoSync": {
+						"modelConfig": {
+							"path": "PDS.AtfAutoSync"
+						}
+					},
+					"PDS_AtfRepositoryUrl": {
+						"modelConfig": {
+							"path": "PDS.AtfRepositoryUrl"
 						}
 					}
 				}
@@ -520,7 +463,7 @@ define("AtfTIDE_ListPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 				"values": {
 					"default": [
 						{
-							"direction": "asc",
+							"direction": "desc",
 							"columnName": "AtfRepositoryUrl"
 						}
 					]
@@ -564,20 +507,23 @@ define("AtfTIDE_ListPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 				"values": {
 					"entitySchemaName": "AtfRepository",
 					"attributes": {
-						"Id": {
-							"path": "Id"
-						},
 						"AtfName": {
 							"path": "AtfName"
 						},
-						"AtfRepositoryUrl": {
-							"path": "AtfRepositoryUrl"
-						},
-						"AtfActiveBranch": {
-							"path": "AtfActiveBranch"
-						},
 						"AtfApplication": {
 							"path": "AtfApplication"
+						},
+						"AtfAccessToken": {
+							"path": "AtfAccessToken"
+						},
+						"AtfUserName": {
+							"path": "AtfUserName"
+						},
+						"AtfAutoSync": {
+							"path": "AtfAutoSync"
+						},
+						"AtfRepositoryUrl": {
+							"path": "AtfRepositoryUrl"
 						}
 					}
 				}
@@ -680,6 +626,15 @@ define("AtfTIDE_ListPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 						showNotification: true
 					});
 					await next?.handle(request);
+				}
+			},
+			
+			{
+				request: "atf.InstallConsoleGit",
+				handler: async (request, next) => {
+					const endpoint = "rest/Tide/InstallConsoleGit";
+					const httpClientService = new sdk.HttpClientService();
+					const response = await httpClientService.get(endpoint);
 				}
 			}
 			

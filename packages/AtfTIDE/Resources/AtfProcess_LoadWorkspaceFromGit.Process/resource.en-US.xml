@@ -63,7 +63,7 @@
 			<Item Name="BaseElements.UserTask2.Parameters.WaitForExit.DisplayValue" Value="[#Boolean value.False#]" />
 			<Item Name="BaseElements.UserTask2.Parameters.WorkingDirectory.Caption" Value="WorkingDirectory" />
 			<Item Name="BaseElements.UserTask2.Parameters.WorkingDirectory.DisplayValue" Value="[#Clone Repository.Repository Folder Path#]" />
-			<Item Name="Caption" Value="Load workspace from Git" />
+			<Item Name="Caption" Value="TIDE. Load workspace from Git" />
 			<Item Name="Description" Value="Clones and installs repository." />
 			<Item Name="LaneSets.LaneSet1.Caption" Value="LaneSet 1" />
 			<Item Name="LaneSets.LaneSet1.Lanes.Lane1.Caption" Value="Lane 1" />

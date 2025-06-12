@@ -1,0 +1,9 @@
+﻿{
+  "Descriptor": {
+    "UId": "78c3f389-7973-44a4-a463-4577a39712d0",
+    "Name": "Page_CommitAppearanceSettings",
+    "ModifiedOnUtc": "\/Date(1749767654000)\/",
+    "ManagerName": "AddonSchemaManager",
+    "Caption": "Commit to git (AppearanceSettings)"
+  }
+}

@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="en-US">
+	<Group Type="String">
+		<Items>
+			<Item Name="Caption" Value="Commit to git" />
+			<Item Name="LocalizableStrings.Input_CommitMessage_label.Value" Value="Commit message" />
+			<Item Name="LocalizableStrings.Input_CommitMessage_tooltip.Value" Value="Descriptive commit message" />
+			<Item Name="LocalizableStrings.SaveButton_caption.Value" Value="Commit" />
+			<Item Name="Parameters.b642de38-d739-ea35-9b15-8191060cb9c8.Caption" Value="RepositoryId" />
+		</Items>
+	</Group>
+</Resources>

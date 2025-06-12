@@ -58,7 +58,6 @@
 			<Item Name="LocalizableStrings.TabContainer_Advanced_caption.Value" Value="Advanced" />
 			<Item Name="LocalizableStrings.TabContainer_Git_caption.Value" Value="GIT" />
 			<Item Name="LocalizableStrings.TabContainer_mcnezxd_caption.Value" Value="Tab 2" />
-			<Item Name="LocalizableStrings.TabContainer_Messages_caption.Value" Value="Logs" />
 			<Item Name="LocalizableStrings.TabContainer_p9aexbq_caption.Value" Value="Tab 1" />
 			<Item Name="LocalizableStrings.WebInput_RepositoryUrl_tooltip.Value" Value="Repository URL to " />
 		</Items>

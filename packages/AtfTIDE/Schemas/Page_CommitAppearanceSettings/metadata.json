@@ -1,0 +1,24 @@
+﻿{
+  "MetaData": {
+    "Schema": {
+      "ManagerName": "AddonSchemaManager",
+      "UId": "78c3f389-7973-44a4-a463-4577a39712d0",
+      "A2": "Page_CommitAppearanceSettings",
+      "A5": "2a01b7c9-305b-49c3-8cb9-6420254af905",
+      "B1": [],
+      "B2": [],
+      "B3": [],
+      "B6": "57902d1e-ea0c-4991-b367-992c12d68fb2",
+      "B8": "8.2.3.1351",
+      "AD1": "deb37724-c90e-49e6-a6fb-fbcff8eceab2",
+      "AD2": "ClientUnitSchemaManager",
+      "AD3": "AppearanceSettings",
+      "AD5": "3a2d6f51-1bfc-4c17-aacb-b53de4866b7c",
+      "AD4": {
+  "modalSettings": {
+    "size": 2
+  }
+}
+    }
+  }
+}

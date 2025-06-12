@@ -8,10 +8,7 @@
         <SelfContained>false</SelfContained>
         <PublishSingleFile>false</PublishSingleFile>
         <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
-        <NoWarn>
-            CA1416 <!-- This warning is about platform compatibility, which we are intentionally ignoring for this project -->
-            ,CS8618 <!-- This wwarning about use of Non-nullable property -->
-        </NoWarn>
+        <NoWarn>CA1416,CS8618</NoWarn>
     </PropertyGroup>
 
     <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
