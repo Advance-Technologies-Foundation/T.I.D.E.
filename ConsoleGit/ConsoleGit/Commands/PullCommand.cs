@@ -3,7 +3,7 @@ using ErrorOr;
 
 namespace ConsoleGit.Commands;
 
-public class PullCommand(CommandLineArgs args, WebSocketLogger logger) : BaseRepositoryCommand(args, logger) {
+public class PullCommand(CommandLineArgs args, IWebSocketLogger logger) : BaseRepositoryCommand(args, logger) {
 
 	public override ErrorOr<Success> Execute() =>
 		InitializedRepository.Pull().MatchFirst<ErrorOr<Success>>(

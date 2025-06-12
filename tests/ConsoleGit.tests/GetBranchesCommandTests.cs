@@ -1,7 +1,9 @@
 ﻿using System.Text.Json;
 using ConsoleGit.Commands;
+using ConsoleGit.Services;
 using ErrorOr;
 using FluentAssertions;
+using NSubstitute;
 
 namespace ConsoleGit.tests;
 
@@ -18,11 +20,11 @@ public class Tests {
 		};
 		using StringWriter sw = new ();
 		Console.SetOut(sw);
-		var sut = new GetBranchesCommand(args, null);
+		var logger = Substitute.For<IWebSocketLogger>();
+		var sut = new GetBranchesCommand(args, logger);
 		
 		// Act
 		ErrorOr<Success> result = sut.Execute();
-		
 		
 		//Assert
 		result.IsError.Should().BeFalse();

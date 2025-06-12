@@ -3,7 +3,7 @@ using ErrorOr;
 
 namespace ConsoleGit.Commands;
 
-public class CloneCommand(CommandLineArgs args, WebSocketLogger logger) : BaseRepositoryCommand(args, logger) {
+public class CloneCommand(CommandLineArgs args, IWebSocketLogger logger) : BaseRepositoryCommand(args, logger) {
 
 	public override ErrorOr<Success> Execute(){
 		try {

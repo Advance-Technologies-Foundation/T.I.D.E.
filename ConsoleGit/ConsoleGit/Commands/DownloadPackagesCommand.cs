@@ -1,5 +1,4 @@
 ﻿using System.Collections.Concurrent;
-using System.Security.Cryptography;
 using System.Text;
 using System.Text.Json;
 using ConsoleGit.Common;
@@ -77,13 +76,6 @@ public class DownloadPackagesCommand : ICommand {
 
 	#region Methods: Private
 
-	private static async Task<string> ComputeFileHash(string fileName){
-		using SHA256 sha256 = SHA256.Create();
-		await using FileStream fileStream = File.OpenRead(fileName);
-		byte[] hashBytes = await sha256.ComputeHashAsync(fileStream);
-		return BitConverter.ToString(hashBytes).Replace("-", "").ToLowerInvariant();
-	}
-
 	private static void CopyDirectory(string sourceDir, string destinationDir){
 
 		try {
@@ -159,7 +151,7 @@ public class DownloadPackagesCommand : ICommand {
 					return copyResult;
 				}
 			}
-			var dr =  DeleteWithRetry(OutputPath, 3);
+			ErrorOr<Success> dr =  DeleteWithRetry(OutputPath, 3);
 			return dr;
 			
 		} catch (Exception e) {
@@ -183,7 +175,6 @@ public class DownloadPackagesCommand : ICommand {
 			if (!deleted) {
 				return Error.Failure("COULD NOT DELETE",$"Failed to delete directory {originalPackagePath} after multiple attempts.");
 			}
-			return Result.Success;
 		}
 		return Result.Success;
 	}
@@ -240,15 +231,16 @@ public class DownloadPackagesCommand : ICommand {
 		ParallelOptions options = new() {MaxDegreeOfParallelism = Environment.ProcessorCount};
 		await Parallel.ForEachAsync(packages, options, async (package, ct) => {
 			try {
-				await DownloadPackage(package, ct);
-			} 
+				ErrorOr<Success> localError = await DownloadPackage(package, ct);
+				if(localError.IsError) {
+					results.TryAdd($"Error DownloadPackage {package}", localError);
+					//Should we throw here ?
+				}
+			}
 			catch (Exception ex) {
 				results.TryAdd(package, Error.Failure($"Failed to download {package}", ex.Message));
 			}
 		});
-		var errors = new List<Error>() {
-			Error.Failure("","")
-		};
 		return results.IsEmpty
 			? Result.Success
 			: new List<Error>(results.Values.SelectMany(r => r.Errors));
@@ -303,7 +295,7 @@ public class DownloadPackagesCommand : ICommand {
 		if (!File.Exists(workspaceSettingsFilePath)) {
 			return Error.Failure("Workspace settings file not found", "Workspace settings file not found");
 		}
-		ErrorOr<Success> result;
+		ErrorOr<Success> result = Error.Failure("Default Error", "Initialization failed");
 		Task.Run(async () => {
 			string[] packages = await GetPackagesFromSettings(workspaceSettingsFilePath);
 			result = await DownloadPackagesAsync(packages);
@@ -311,8 +303,7 @@ public class DownloadPackagesCommand : ICommand {
 				return;
 			} 
 			result = await UnpackAsync();
-		}).Wait();
-
+		}).ConfigureAwait(false).GetAwaiter().GetResult();
 		
 		if(result.IsError) {
 			return result;

@@ -30,13 +30,13 @@ public abstract class BaseRepositoryCommand: ICommand {
 	#region Fields: Protected
 
 	protected readonly CommandLineArgs Args;
-	protected readonly WebSocketLogger Logger;
+	protected readonly IWebSocketLogger Logger;
 
 	#endregion
 
 	#region Constructors: Protected
 
-	protected BaseRepositoryCommand(CommandLineArgs args, WebSocketLogger logger) {
+	protected BaseRepositoryCommand(CommandLineArgs args, IWebSocketLogger logger) {
 		Logger = logger ?? throw new ArgumentNullException(nameof(logger));
 		Args = args;
 		_initializedRepository = new Lazy<GitRepository>(() =>

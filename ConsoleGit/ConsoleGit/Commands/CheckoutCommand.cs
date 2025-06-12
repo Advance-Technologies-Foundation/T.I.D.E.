@@ -4,7 +4,7 @@ using LibGit2Sharp;
 
 namespace ConsoleGit.Commands;
 
-public class CheckoutCommand(CommandLineArgs args, WebSocketLogger logger) : BaseRepositoryCommand(args, logger) {
+public class CheckoutCommand(CommandLineArgs args, IWebSocketLogger logger) : BaseRepositoryCommand(args, logger) {
 
 	public override ErrorOr<Success> Execute(){
 		

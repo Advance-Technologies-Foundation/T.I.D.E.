@@ -8,7 +8,7 @@ namespace ConsoleGit.Commands;
 /// </summary>
 /// <param name="args">Arguments</param>
 /// <seealso href="https://github.com/libgit2/libgit2sharp/wiki/git-commit#make-a-commit-to-a-non-bare-repository"/>
-public class CommitCommand(CommandLineArgs args, WebSocketLogger logger) : BaseRepositoryCommand(args, logger) {
+public class CommitCommand(CommandLineArgs args, IWebSocketLogger logger) : BaseRepositoryCommand(args, logger) {
 
 	public override ErrorOr<Success> Execute() =>
 		InitializedRepository

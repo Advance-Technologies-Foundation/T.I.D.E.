@@ -4,7 +4,13 @@ using Microsoft.Extensions.Options;
 
 namespace ConsoleGit.Services;
 
-public class WebSocketLogger {
+public interface IWebSocketLogger {
+
+	Task LogAsync(MessageType messageType, string message);
+
+}
+
+public class WebSocketLogger : IWebSocketLogger {
 
 	private readonly IOptions<CommandLineArgs> _args;
 	private readonly HttpClient _client;
