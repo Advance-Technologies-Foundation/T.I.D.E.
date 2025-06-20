@@ -13,6 +13,9 @@ define("Page_LogTerminal", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 				"operation": "merge",
 				"name": "CancelButton",
 				"values": {
+					"clicked": {
+						"request": "crt.ClosePageRequest"
+					},
 					"caption": "#ResourceString(CancelButton_caption)#",
 					"color": "default",
 					"size": "large",
@@ -66,11 +69,6 @@ define("Page_LogTerminal", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 					"placeholder": "",
 					"tooltip": "",
 					"needHandleSave": true,
-					"filesStorage": {
-						"masterRecordColumnValue": "$Id",
-						"entitySchemaName": "SysFile",
-						"recordColumnName": "RecordId"
-					},
 					"control": "$AllMessages",
 					"caption": "#ResourceString(RichTextEditor_LogMessages_caption)#",
 					"visible": true,
@@ -107,6 +105,16 @@ define("Page_LogTerminal", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 		]/**SCHEMA_MODEL_CONFIG_DIFF*/,
 		handlers: /**SCHEMA_HANDLERS*/[
 			{
+				request: 'atf.HandleViewModelInitRequest',
+				handler: async (request, next) => {
+					const handlerChain = sdk.HandlerChainService.instance;
+					return await handlerChain.process({
+						type: 'crt.ClosePageRequest',
+						$context: request.$context,
+					});
+				}
+			},
+			{
 				request: 'crt.HandleViewModelInitRequest',
 				handler: async (request, next) => {
 					const { $context } = request;
@@ -126,13 +134,10 @@ define("Page_LogTerminal", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 						}
 					}
 					Terrasoft.ServerChannel.on(Terrasoft.EventName.ON_MESSAGE, (await $context.SocketMessageReceivedFunc), $context);
-					// request.$context.FileChangesVisible = false;
-					// const endpoint = "/rest/Tide/CaptureClioArgs";
-					// const httpClientService = new sdk.HttpClientService();
-					// await httpClientService.get(endpoint)
 					return next?.handle(request);
 				}
 			},
+
 		]/**SCHEMA_HANDLERS*/,
 		converters: /**SCHEMA_CONVERTERS*/{}/**SCHEMA_CONVERTERS*/,
 		validators: /**SCHEMA_VALIDATORS*/{}/**SCHEMA_VALIDATORS*/

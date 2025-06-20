@@ -44,13 +44,13 @@
 			<Item Name="BaseElements.ReadDataUserTask1.Parameters.ResultRowsCount.Caption" Value="Number of records read" />
 			<Item Name="BaseElements.ReadDataUserTask1.Parameters.ResultType.Caption" Value="Type of result" />
 			<Item Name="BaseElements.StartEvent2.Caption" Value="Manual Start" />
-			<Item Name="BaseElements.StartTimerEvent1.Caption" Value="Every 5 minutes" />
 			<Item Name="BaseElements.SubProcess1.Caption" Value="Sync AppHash FromGit" />
 			<Item Name="BaseElements.SubProcess1.Parameters.CompletedIterationsCount.Caption" Value="Number of completed instances" />
 			<Item Name="BaseElements.SubProcess1.Parameters.InputRecordCollection.AtfSetAvailableHash.Caption" Value="Set Available Hash" />
 			<Item Name="BaseElements.SubProcess1.Parameters.InputRecordCollection.Caption" Value="Input record collection" />
 			<Item Name="BaseElements.SubProcess1.Parameters.InputRecordCollection.DisplayValue" Value="[#Read Repositories.Collection of records#]" />
 			<Item Name="BaseElements.SubProcess1.Parameters.InputRecordCollection.ProcessSchemaParameter1.Caption" Value="Skip clone" />
+			<Item Name="BaseElements.SubProcess1.Parameters.InputRecordCollection.ProcessSchemaParameter2.Caption" Value="repoDir" />
 			<Item Name="BaseElements.SubProcess1.Parameters.InputRecordCollection.Repository.Caption" Value="Repository" />
 			<Item Name="BaseElements.SubProcess1.Parameters.InputRecordCollection.Repository.DisplayValue" Value="[#Read Repositories.Collection of records:Id#]" />
 			<Item Name="BaseElements.SubProcess1.Parameters.InputRecordCollection.Repository.Sys_Description" Value="Repository" />

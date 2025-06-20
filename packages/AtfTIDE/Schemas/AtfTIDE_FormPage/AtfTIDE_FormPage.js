@@ -181,19 +181,33 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 					"visible": true,
 					"icon": "import-data-button-icon",
 					"clicked": {
-						"request": "atf.CaptureClioArgs",
-						"params": {
-							"processName": "AtfProcess_SaveWorkspaceToGit",
-							"processRunType": "ForTheSelectedPage",
-							"showNotification": true,
-							"recordIdProcessParameterName": "Repository"
-						}
+						"request": "atf.SaveToGitButtonClick"
 					},
 					"clickMode": "default"
 				},
 				"parentName": "CardToggleContainer",
 				"propertyName": "items",
 				"index": 1
+			},
+			{
+				"operation": "insert",
+				"name": "Button_OpenModalWindow",
+				"values": {
+					"type": "crt.Button",
+					"caption": "#ResourceString(Button_OpenModalWindow_caption)#",
+					"color": "outline",
+					"disabled": false,
+					"size": "medium",
+					"iconPosition": "left-icon",
+					"visible": true,
+					"icon": "codeblock-icon",
+					clicked: {
+						request: "atf.Button_OpenModalWindowClicked"
+					}
+				},
+				"parentName": "CardToggleContainer",
+				"propertyName": "items",
+				"index": 2
 			},
 			{
 				"operation": "insert",
@@ -838,12 +852,13 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 					"readonly": true,
 					"multiline": true,
 					"labelPosition": "above",
-					"visible": true,
+					"visible": false,
 					"filesStorage": {
 						"masterRecordColumnValue": "$Id",
 						"entitySchemaName": "SysFile",
 						"recordColumnName": "RecordId"
-					}
+					},
+					"toolbarDisplayMode": null
 				},
 				"parentName": "GeneralInfoTab",
 				"propertyName": "items",
@@ -2049,103 +2064,6 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 				"parentName": "ExpansionPanel_srhpdgo",
 				"propertyName": "items",
 				"index": 0
-			},
-			{
-				"operation": "insert",
-				"name": "MessagesTabContainer",
-				"values": {
-					"type": "crt.TabContainer",
-					"tools": [],
-					"items": [],
-					"caption": "#ResourceString(MessagesTabContainer_caption)#",
-					"iconPosition": "left-icon",
-					"visible": true,
-					"icon": "mail-icon"
-				},
-				"parentName": "CardToggleTabPanel",
-				"propertyName": "items",
-				"index": 2
-			},
-			{
-				"operation": "insert",
-				"name": "FlexContainer_482ntir",
-				"values": {
-					"type": "crt.FlexContainer",
-					"direction": "row",
-					"alignItems": "center",
-					"items": []
-				},
-				"parentName": "MessagesTabContainer",
-				"propertyName": "tools",
-				"index": 0
-			},
-			{
-				"operation": "insert",
-				"name": "Label_86uqz8y",
-				"values": {
-					"type": "crt.Label",
-					"caption": "#MacrosTemplateString(#ResourceString(Label_86uqz8y_caption)#)#",
-					"labelType": "headline-3",
-					"labelThickness": "default",
-					"labelEllipsis": false,
-					"labelColor": "#0D2E4E",
-					"labelBackgroundColor": "transparent",
-					"labelTextAlign": "start",
-					"visible": true
-				},
-				"parentName": "FlexContainer_482ntir",
-				"propertyName": "items",
-				"index": 0
-			},
-			{
-				"operation": "insert",
-				"name": "Button_ClearLogs",
-				"values": {
-					"type": "crt.Button",
-					"caption": "#ResourceString(Button_ClearLogs_caption)#",
-					"color": "default",
-					"disabled": false,
-					"size": "large",
-					"iconPosition": "only-icon",
-					"visible": true,
-					"icon": "delete-button-icon",
-					"clicked": {
-						"request": "atf.ClearLogs"
-					}
-				},
-				"parentName": "FlexContainer_482ntir",
-				"propertyName": "items",
-				"index": 1
-			},
-			{
-				"operation": "insert",
-				"name": "FlexContainer_6jlfs5p",
-				"values": {
-					"type": "crt.FlexContainer",
-					"items": [],
-					"direction": "column"
-				},
-				"parentName": "MessagesTabContainer",
-				"propertyName": "items",
-				"index": 0
-			},
-			{
-				"operation": "insert",
-				"name": "Input_LogMessage",
-				"values": {
-					"type": "crt.Input",
-					"label": "#ResourceString(Input_LogMessage_label)#",
-					"control": "$AllMessages",
-					"placeholder": "",
-					"tooltip": "",
-					"readonly": true,
-					"multiline": true,
-					"labelPosition": "auto",
-					"visible": true
-				},
-				"parentName": "FlexContainer_6jlfs5p",
-				"propertyName": "items",
-				"index": 0
 			}
 		]/**SCHEMA_VIEW_CONFIG_DIFF*/,
 		viewModelConfigDiff: /**SCHEMA_VIEW_MODEL_CONFIG_DIFF*/[
@@ -2431,6 +2349,22 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 				}
 			},
 			{
+				request: 'atf.SaveToGitButtonClick',
+				handler: async (request, next) =>{
+					const handlerChain = sdk.HandlerChainService.instance;
+					const id = await request.$context.Id;
+					return await handlerChain.process({
+						type: 'crt.OpenPageRequest',
+						$context: request.$context,
+						scopes: [...request.scopes],
+						schemaName: "Page_Commit",
+						parameters: {
+							RepositoryId: id
+						}
+					});
+				}
+			},
+			{
 				request: 'atf.OnLoadChangesToLocalCopyClick',
 				handler: async (request, next) => {
 					const handlerChain = sdk.HandlerChainService.instance;
@@ -2470,17 +2404,45 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 					});
 				}
 			},
+			
+			//Button_OpenModalWindow
+			{
+				request: 'atf.Button_OpenModalWindowClicked',
+				handler: async (request, next) => {
+					const handlerChain = sdk.HandlerChainService.instance;
+					await handlerChain.process({
+						type: 'crt.OpenPageRequest',
+						$context: request.$context,
+						scopes: [...request.scopes],
+						schemaName: "Page_LogTerminal"
+					});
+				}
+			},
+			
 			{
 				request: 'crt.HandleViewModelInitRequest',
 				handler: async (request, next) => {
 					const { $context } = request;
 					$context.SocketMessageReceivedFunc = async function(event, message) {
-						if (message.Header.Sender === "Clio") {
+						// if (message.Header.Sender === "Clio") {
+						// 	const body = JSON.parse(message.Body)
+						// 	if(body.commandName ==='Show logs') {
+						// 		const allMessages = await request.$context.AllMessages ?? "";
+						// 		// request.$context.AllMessages = body.message?.trim() +  "\r\n" + allMessages;
+						// 		request.$context.AllMessages = body.message?.trim() + "<br/>" + "\r\n" + allMessages;
+						// 	}
+						// }
+						
+						if (message.Header.Sender === "ATFProcessUserTask_ShowTerminal") {
 							const body = JSON.parse(message.Body)
-							if(body.commandName ==='Show logs') {
-								const allMessages = await request.$context.AllMessages ?? "";
-								// request.$context.AllMessages = body.message?.trim() +  "\r\n" + allMessages;
-								request.$context.AllMessages = body.message?.trim() + "<br/>" + "\r\n" + allMessages;
+							if(body.commandName && body.commandName === "ShowLogTerminal"){
+								const handlerChain = sdk.HandlerChainService.instance;
+								await handlerChain.process({
+									type: 'crt.OpenPageRequest',
+									$context: request.$context,
+									scopes: [...request.scopes],
+									schemaName: "Page_LogTerminal"
+								});
 							}
 						}
 					}

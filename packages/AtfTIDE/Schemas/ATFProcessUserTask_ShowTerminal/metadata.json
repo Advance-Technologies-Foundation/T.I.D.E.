@@ -1,0 +1,18 @@
+﻿{
+  "MetaData": {
+    "Schema": {
+      "ManagerName": "ProcessUserTaskSchemaManager",
+      "UId": "6fe450a0-55e1-43ac-a657-cb52987c233d",
+      "A2": "ATFProcessUserTask_ShowTerminal",
+      "A5": "2a01b7c9-305b-49c3-8cb9-6420254af905",
+      "B1": [],
+      "B2": [],
+      "B3": [],
+      "B6": "57902d1e-ea0c-4991-b367-992c12d68fb2",
+      "B8": "8.2.3.1351",
+      "FJ1": [],
+      "FK12": "#839DC3",
+      "FK16": true
+    }
+  }
+}
