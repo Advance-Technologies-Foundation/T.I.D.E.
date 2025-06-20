@@ -1,6 +1,22 @@
-define("Page_Commit", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHEMA_ARGS*/()/**SCHEMA_ARGS*/ {
+define("Page_Commit", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_DEPS*/, function/**SCHEMA_ARGS*/(sdk)/**SCHEMA_ARGS*/ {
 	return {
 		viewConfigDiff: /**SCHEMA_VIEW_CONFIG_DIFF*/[
+			{
+				"operation": "merge",
+				"name": "PageTitle",
+				"values": {
+					"caption": "#MacrosTemplateString(#ResourceString(PageTitle_caption)#)#",
+					"visible": true,
+					"headingLevel": "label"
+				}
+			},
+			{
+				"operation": "merge",
+				"name": "MainContainer",
+				"values": {
+					"alignItems": "stretch"
+				}
+			},
 			{
 				"operation": "merge",
 				"name": "CancelButton",
@@ -11,36 +27,28 @@ define("Page_Commit", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHEMA_ARGS
 				}
 			},
 			{
-				"operation": "merge",
-				"name": "SaveButton",
-				"values": {
-					"clicked": {
-						"request": "crt.RunBusinessProcessRequest",
-						"params": {
-							"processName": "AtfProcess_SaveWorkspaceToGit",
-							"processRunType": "RegardlessOfThePage",
-							"saveAtProcessStart": true,
-							"showNotification": true
-						}
-					},
-					"caption": "#ResourceString(SaveButton_caption)#"
-				}
+				"operation": "remove",
+				"name": "SaveButton"
 			},
 			{
 				"operation": "insert",
-				"name": "Input_d70ebn1",
+				"name": "Input_lw2u8hn",
 				"values": {
 					"layoutConfig": {
 						"column": 1,
 						"row": 1,
 						"colSpan": 1,
-						"rowSpan": 1
+						"rowSpan": 2
 					},
 					"type": "crt.Input",
-					"label": "$Resources.Strings.PageParameters_TextParameter1_rnto2n4",
+					"label": "$Resources.Strings.PageParameters_TextParameter1_pka9oej",
 					"labelPosition": "above",
-					"control": "$PageParameters_TextParameter1_rnto2n4",
-					"multiline": false
+					"control": "$PageParameters_TextParameter1_pka9oej",
+					"multiline": true,
+					"visible": true,
+					"readonly": false,
+					"placeholder": "#ResourceString(Input_lw2u8hn_placeholder)#",
+					"tooltip": ""
 				},
 				"parentName": "MainContainer",
 				"propertyName": "items",
@@ -48,25 +56,21 @@ define("Page_Commit", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHEMA_ARGS
 			},
 			{
 				"operation": "insert",
-				"name": "Input_CommitMessage",
+				"name": "Button_DO",
 				"values": {
-					"layoutConfig": {
-						"column": 1,
-						"row": 2,
-						"colSpan": 1,
-						"rowSpan": 3
+					"type": "crt.Button",
+					"caption": "#ResourceString(Button_DO_caption)#",
+					"color": "primary",
+					"disabled": false,
+					"size": "large",
+					"iconPosition": "only-text",
+					"visible": true,
+					"clicked": {
+						"request": "atf.ButtonDoClicked"
 					},
-					"type": "crt.Input",
-					"label": "#ResourceString(Input_CommitMessage_label)#",
-					"control": "",
-					"placeholder": "",
-					"tooltip": "#ResourceString(Input_CommitMessage_tooltip)#",
-					"readonly": false,
-					"multiline": true,
-					"labelPosition": "above",
-					"visible": true
+					"clickMode": "default"
 				},
-				"parentName": "MainContainer",
+				"parentName": "FooterContainer",
 				"propertyName": "items",
 				"index": 1
 			}
@@ -78,7 +82,10 @@ define("Page_Commit", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHEMA_ARGS
 					"attributes"
 				],
 				"values": {
-					"PageParameters_TextParameter1_rnto2n4": {
+					"PageParameters_TextParameter1_pka9oej": {
+						"modelConfig": {}
+					},
+					"PageParameters_RepositoryId": {
 						"modelConfig": {
 							"path": "PageParameters.RepositoryId"
 						}
@@ -97,34 +104,34 @@ define("Page_Commit", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHEMA_ARGS
 		]/**SCHEMA_MODEL_CONFIG_DIFF*/,
 		handlers: /**SCHEMA_HANDLERS*/[
 			{
-				request: "atf.InstallAllAppsClicked",
+				request: "atf.ButtonDoClicked",
 				handler: async (request, next) => {
-					await next?.handle(request);
-					
 					const handlerChain = sdk.HandlerChainService.instance;
+					const repositoryId = await request.$context.PageParameters_RepositoryId;
+										
+					// await handlerChain.process({
+					// 	type: 'crt.CancelRecordChangesRequest',
+					// 	$context: request.$context,
+					// });
 					
-					await handlerChain.process({
-						type: 'crt.OpenPageRequest',
-						$context: request.$context,
-						scopes: [...request.scopes],
-						schemaName: "Page_LogTerminal"
-					});
-					
+					const commitMessage = await request.$context.PageParameters_TextParameter1_pka9oej;
 					await handlerChain.process({
 						type: "crt.RunBusinessProcessRequest",
 						$context: request.$context,
 						scopes: [...request.scopes],
-						processName: "AtfProcess_ForceUpdateAutoSyncRepos",
-						processRunType: "RegardlessOfThePage",
-						saveAtProcessStart: true,
-						showNotification: true
+						processName: "AtfProcess_SaveWorkspaceToGit",
+						"showNotification": true,
+						processParameters:{
+							"Repository": repositoryId,
+							"CommitMessage": commitMessage
+						}
 					});
-					await next?.handle(request);
+					return await handlerChain.process({
+						type: 'crt.ClosePageRequest',
+						$context: request.$context,
+					});
 				}
-			},
-			
-			
-			
+			}, 
 		]/**SCHEMA_HANDLERS*/,
 		converters: /**SCHEMA_CONVERTERS*/{}/**SCHEMA_CONVERTERS*/,
 		validators: /**SCHEMA_VALIDATORS*/{}/**SCHEMA_VALIDATORS*/

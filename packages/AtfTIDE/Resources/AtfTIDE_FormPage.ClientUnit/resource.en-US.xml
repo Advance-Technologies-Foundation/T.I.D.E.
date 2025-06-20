@@ -9,7 +9,6 @@
 			<Item Name="LocalizableStrings.Button_2shb3kw_caption.Value" Value="LOAD FROM GIT" />
 			<Item Name="LocalizableStrings.Button_8c6g2be_caption.Value" Value="Set active branch" />
 			<Item Name="LocalizableStrings.Button_cht5usd_caption.Value" Value="Button" />
-			<Item Name="LocalizableStrings.Button_ClearLogs_caption.Value" Value="Clear" />
 			<Item Name="LocalizableStrings.Button_DiscardChanges_caption.Value" Value="Discard selected changes" />
 			<Item Name="LocalizableStrings.Button_GetDiff_caption.Value" Value="2. Show Diff between local copy and Git" />
 			<Item Name="LocalizableStrings.Button_InstallLocalCopy_caption.Value" Value="4. Load from local copy to Creatio" />
@@ -17,6 +16,7 @@
 			<Item Name="LocalizableStrings.Button_LoadChangesToLocalCopy_caption.Value" Value="1. Load changes to local copy from Creatio" />
 			<Item Name="LocalizableStrings.Button_LOADFROMGIT_caption.Value" Value="LOAD FROM GIT" />
 			<Item Name="LocalizableStrings.Button_nemrkb0_caption.Value" Value="SAVE TO GIT     " />
+			<Item Name="LocalizableStrings.Button_OpenModalWindow_caption.Value" Value="Messages" />
 			<Item Name="LocalizableStrings.Button_q2spave_caption.Value" Value="Set Active branch" />
 			<Item Name="LocalizableStrings.Button_rs966jg_caption.Value" Value="Button" />
 			<Item Name="LocalizableStrings.Button_SaveToGit_Green_caption.Value" Value="SAVE TO GIT" />
@@ -45,14 +45,11 @@
 			<Item Name="LocalizableStrings.GridDetailSettingsBtn_5ijlpwq_caption.Value" Value="Actions" />
 			<Item Name="LocalizableStrings.GridDetailSettingsBtn_n0jlqjb_caption.Value" Value="Actions" />
 			<Item Name="LocalizableStrings.ImageInput_s8olsyd_label.Value" Value="Image to upload" />
-			<Item Name="LocalizableStrings.Input_LogMessage_label.Value" Value="Log Messages" />
 			<Item Name="LocalizableStrings.Input_LogMessageTab_label.Value" Value="Log Messages" />
-			<Item Name="LocalizableStrings.Label_86uqz8y_caption.Value" Value="Log messages" />
 			<Item Name="LocalizableStrings.Label_at1vc3c_caption.Value" Value="This version of T.I.D.E. requires installation of clio, git client on Creatio hosting server, and requires access  on behalf of IIS-POOL user." />
 			<Item Name="LocalizableStrings.Label_q8vuphv_caption.Value" Value="Label 1" />
 			<Item Name="LocalizableStrings.Label_s7pm1mk_caption.Value" Value="!!! WARNING !!!" />
 			<Item Name="LocalizableStrings.Label_t6ybcfe_caption.Value" Value="Label 2" />
-			<Item Name="LocalizableStrings.MessagesTabContainer_caption.Value" Value="Messages" />
 			<Item Name="LocalizableStrings.RichTextEditor_zxkz64z_caption.Value" Value="Rich text" />
 			<Item Name="LocalizableStrings.RichTextEditor_zxkz64z_label.Value" Value="Rich text" />
 			<Item Name="LocalizableStrings.TabContainer_Advanced_caption.Value" Value="Advanced" />

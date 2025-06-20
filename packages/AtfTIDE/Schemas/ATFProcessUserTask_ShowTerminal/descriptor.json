@@ -1,0 +1,10 @@
+﻿{
+  "Descriptor": {
+    "UId": "6fe450a0-55e1-43ac-a657-cb52987c233d",
+    "Name": "ATFProcessUserTask_ShowTerminal",
+    "ModifiedOnUtc": "\/Date(1750363731000)\/",
+    "ManagerName": "ProcessUserTaskSchemaManager",
+    "Caption": "TIDE. Show Terminal",
+    "DependsOn": []
+  }
+}

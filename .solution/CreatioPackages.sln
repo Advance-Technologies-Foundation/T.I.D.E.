@@ -1,7 +1,5 @@
 ﻿Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{c5e3dd8b-4758-4a5c-9e3d-267d7737013c}") = "AtfDiffComponent", "..\packages\AtfDiffComponent\Files\AtfDiffComponent.csproj", "{9370d73a-e8f1-4455-bd60-577e43e6aae1}"
-EndProject
-Project("{47d094f5-825f-4c44-b04c-cdaa349856d8}") = "AtfTIDE", "..\packages\AtfTIDE\Files\AtfTIDE.csproj", "{812ac9ce-7b88-4bc7-854b-a72d03dc0a69}"
+Project("{47D094F5-825F-4C44-B04C-CDAA349856D8}") = "AtfTIDE", "..\packages\AtfTIDE\Files\AtfTIDE.csproj", "{812AC9CE-7B88-4BC7-854B-A72D03DC0A69}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,10 +7,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-			{9370d73a-e8f1-4455-bd60-577e43e6aae1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-			{9370d73a-e8f1-4455-bd60-577e43e6aae1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-			{9370d73a-e8f1-4455-bd60-577e43e6aae1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-			{9370d73a-e8f1-4455-bd60-577e43e6aae1}.Release|Any CPU.Build.0 = Release|Any CPU
 			{812ac9ce-7b88-4bc7-854b-a72d03dc0a69}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 			{812ac9ce-7b88-4bc7-854b-a72d03dc0a69}.Debug|Any CPU.Build.0 = Debug|Any CPU
 			{812ac9ce-7b88-4bc7-854b-a72d03dc0a69}.Release|Any CPU.ActiveCfg = Release|Any CPU
