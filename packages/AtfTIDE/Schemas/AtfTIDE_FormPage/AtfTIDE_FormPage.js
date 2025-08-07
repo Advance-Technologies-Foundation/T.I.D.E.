@@ -872,7 +872,7 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 					"items": [],
 					"caption": "#ResourceString(TabContainer_Git_caption)#",
 					"iconPosition": "only-text",
-					"visible": false
+					"visible": true
 				},
 				"parentName": "Tabs",
 				"propertyName": "items",
@@ -1441,7 +1441,7 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 					"items": [],
 					"caption": "#ResourceString(TabContainer_Advanced_caption)#",
 					"iconPosition": "only-text",
-					"visible": false
+					"visible": true
 				},
 				"parentName": "Tabs",
 				"propertyName": "items",
