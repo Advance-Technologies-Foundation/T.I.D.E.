@@ -41,16 +41,6 @@
 
 		#endregion
 
-		#region Methods: Protected
-
-		protected override void ApplyPropertiesDataValues(DataReader reader) {
-			base.ApplyPropertiesDataValues(reader);
-			switch (reader.CurrentName) {
-			}
-		}
-
-		#endregion
-
 	}
 
 	#endregion

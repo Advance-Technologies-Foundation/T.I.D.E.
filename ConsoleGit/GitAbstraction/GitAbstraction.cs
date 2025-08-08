@@ -128,7 +128,7 @@ namespace GitAbstraction
 				RecurseSubmodules = true,
 				FetchOptions = {
 					CredentialsProvider = CredentialsProvider,
-					Depth = 1, // Shallow clone
+					Depth = 5, // Shallow clone
 					Prune = true,
 				}
 			};

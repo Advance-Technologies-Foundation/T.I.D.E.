@@ -872,7 +872,7 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 					"items": [],
 					"caption": "#ResourceString(TabContainer_Git_caption)#",
 					"iconPosition": "only-text",
-					"visible": true
+					"visible": "$IsGitTabVisible"
 				},
 				"parentName": "Tabs",
 				"propertyName": "items",
@@ -1441,7 +1441,7 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 					"items": [],
 					"caption": "#ResourceString(TabContainer_Advanced_caption)#",
 					"iconPosition": "only-text",
-					"visible": true
+					"visible": "$IsAdvancedTabVisible"
 				},
 				"parentName": "Tabs",
 				"propertyName": "items",
@@ -2074,6 +2074,12 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 				],
 				"values": {
 					"SocketMessageReceivedFunc": {},
+					IsGitTabVisible:{
+						value: false
+					},
+					IsAdvancedTabVisible:{
+						value: false
+					},
 					"AllMessages": {
 						"modelConfig": {}
 					},
@@ -2423,6 +2429,16 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 				request: 'crt.HandleViewModelInitRequest',
 				handler: async (request, next) => {
 					const { $context } = request;
+
+					const sysSettingsService = new sdk.SysSettingsService();
+					
+					const showGitTab = await sysSettingsService.getByCode('AtfShowGitTab');
+					request.$context.IsGitTabVisible = showGitTab.value;
+					
+					const showAdvancedTab = await sysSettingsService.getByCode('AtfShowAdvancedTab');
+					request.$context.IsAdvancedTabVisible = showAdvancedTab.value;
+
+
 					$context.SocketMessageReceivedFunc = async function(event, message) {
 						// if (message.Header.Sender === "Clio") {
 						// 	const body = JSON.parse(message.Body)

@@ -5,7 +5,6 @@
     "Name": "AtfTIDE",
     "Type": 1,
     "ModifiedOnUtc": "\/Date(1749672159000)\/",
-    "ProjectPath": "Files/AtfTIDE.csproj",
     "Maintainer": "ATF",
     "ProjectPath": "Files/AtfTIDE.csproj",
     "DependsOn": [
