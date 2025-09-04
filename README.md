@@ -70,7 +70,7 @@ TIDE allows you to work with multiple Git repositories. You do all source contro
 2. Now you can start making changes using Creatio no-code tools.
 
 # Synchronizing Changes
-1. Press Save to Git to commit changes to Git
+1. Press *Save to Git* to commit changes to Git
 2. Enter commit message
 
 # Branching
