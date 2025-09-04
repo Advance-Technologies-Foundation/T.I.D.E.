@@ -73,8 +73,6 @@ TIDE allows you to work with multiple Git repositories. You do all source contro
 1. Press *Save to Git* to commit changes to Git
 2. Enter commit message
 
-# Branching
-1. Go to Advanced tab
 
 # Troubleshooting
 Open Process log, see what business processes from package *AtfTIDE* were executed. Select a process -> Execution diagram to see its execution details.
