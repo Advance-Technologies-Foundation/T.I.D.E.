@@ -54,7 +54,7 @@ TIDE provides you a user interface for synchronizing changes to Git repositories
 
 To start working, log in to Creatio, go to *All apps -> TIDE*. Press [...] (Actions) -> *Install console git*. Wait about 30 sec for the operation to complete.
 
-To authenticate Git operations on your behalf, you'd need to generate a personal access token for your repository. See [creating access token](/access-tokens.md). 
+To authenticate Git operations on your behalf, you'll need to generate a personal access token for your repository. See [creating access token](/access-tokens.md). 
 
 TIDE allows you to work with multiple Git repositories. You do all source control operations within a context of a repository.
 
