@@ -1,7 +1,7 @@
 ﻿settings:
   Maintainer: ATF
   SchemaNamePrefix: Atf
-  
+
 steps:
   - action: set-syssetting
     description: Update sys-setting Maintainer
