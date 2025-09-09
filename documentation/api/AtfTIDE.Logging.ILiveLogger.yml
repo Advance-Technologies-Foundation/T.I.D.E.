@@ -1,0 +1,225 @@
+﻿### YamlMime:ManagedReference
+items:
+- uid: AtfTIDE.Logging.ILiveLogger
+  commentId: T:AtfTIDE.Logging.ILiveLogger
+  id: ILiveLogger
+  parent: AtfTIDE.Logging
+  children:
+  - AtfTIDE.Logging.ILiveLogger.Log(System.String)
+  - AtfTIDE.Logging.ILiveLogger.LogError(System.String)
+  - AtfTIDE.Logging.ILiveLogger.LogInfo(System.String)
+  - AtfTIDE.Logging.ILiveLogger.LogWarn(System.String)
+  langs:
+  - csharp
+  - vb
+  name: ILiveLogger
+  nameWithType: ILiveLogger
+  fullName: AtfTIDE.Logging.ILiveLogger
+  type: Interface
+  source:
+    remote:
+      path: packages/AtfTIDE/Files/cs/Logging/LiveLogger.cs
+      branch: main
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: ILiveLogger
+    path: ../packages/AtfTIDE/Files/cs/Logging/LiveLogger.cs
+    startLine: 8
+  assemblies:
+  - AtfTIDE
+  namespace: AtfTIDE.Logging
+  syntax:
+    content: public interface ILiveLogger
+    content.vb: Public Interface ILiveLogger
+- uid: AtfTIDE.Logging.ILiveLogger.Log(System.String)
+  commentId: M:AtfTIDE.Logging.ILiveLogger.Log(System.String)
+  id: Log(System.String)
+  parent: AtfTIDE.Logging.ILiveLogger
+  langs:
+  - csharp
+  - vb
+  name: Log(string)
+  nameWithType: ILiveLogger.Log(string)
+  fullName: AtfTIDE.Logging.ILiveLogger.Log(string)
+  type: Method
+  source:
+    remote:
+      path: packages/AtfTIDE/Files/cs/Logging/LiveLogger.cs
+      branch: main
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: Log
+    path: ../packages/AtfTIDE/Files/cs/Logging/LiveLogger.cs
+    startLine: 9
+  assemblies:
+  - AtfTIDE
+  namespace: AtfTIDE.Logging
+  syntax:
+    content: void Log(string message)
+    parameters:
+    - id: message
+      type: System.String
+    content.vb: Sub Log(message As String)
+  overload: AtfTIDE.Logging.ILiveLogger.Log*
+  nameWithType.vb: ILiveLogger.Log(String)
+  fullName.vb: AtfTIDE.Logging.ILiveLogger.Log(String)
+  name.vb: Log(String)
+- uid: AtfTIDE.Logging.ILiveLogger.LogInfo(System.String)
+  commentId: M:AtfTIDE.Logging.ILiveLogger.LogInfo(System.String)
+  id: LogInfo(System.String)
+  parent: AtfTIDE.Logging.ILiveLogger
+  langs:
+  - csharp
+  - vb
+  name: LogInfo(string)
+  nameWithType: ILiveLogger.LogInfo(string)
+  fullName: AtfTIDE.Logging.ILiveLogger.LogInfo(string)
+  type: Method
+  source:
+    remote:
+      path: packages/AtfTIDE/Files/cs/Logging/LiveLogger.cs
+      branch: main
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: LogInfo
+    path: ../packages/AtfTIDE/Files/cs/Logging/LiveLogger.cs
+    startLine: 10
+  assemblies:
+  - AtfTIDE
+  namespace: AtfTIDE.Logging
+  syntax:
+    content: void LogInfo(string message)
+    parameters:
+    - id: message
+      type: System.String
+    content.vb: Sub LogInfo(message As String)
+  overload: AtfTIDE.Logging.ILiveLogger.LogInfo*
+  nameWithType.vb: ILiveLogger.LogInfo(String)
+  fullName.vb: AtfTIDE.Logging.ILiveLogger.LogInfo(String)
+  name.vb: LogInfo(String)
+- uid: AtfTIDE.Logging.ILiveLogger.LogError(System.String)
+  commentId: M:AtfTIDE.Logging.ILiveLogger.LogError(System.String)
+  id: LogError(System.String)
+  parent: AtfTIDE.Logging.ILiveLogger
+  langs:
+  - csharp
+  - vb
+  name: LogError(string)
+  nameWithType: ILiveLogger.LogError(string)
+  fullName: AtfTIDE.Logging.ILiveLogger.LogError(string)
+  type: Method
+  source:
+    remote:
+      path: packages/AtfTIDE/Files/cs/Logging/LiveLogger.cs
+      branch: main
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: LogError
+    path: ../packages/AtfTIDE/Files/cs/Logging/LiveLogger.cs
+    startLine: 11
+  assemblies:
+  - AtfTIDE
+  namespace: AtfTIDE.Logging
+  syntax:
+    content: void LogError(string message)
+    parameters:
+    - id: message
+      type: System.String
+    content.vb: Sub LogError(message As String)
+  overload: AtfTIDE.Logging.ILiveLogger.LogError*
+  nameWithType.vb: ILiveLogger.LogError(String)
+  fullName.vb: AtfTIDE.Logging.ILiveLogger.LogError(String)
+  name.vb: LogError(String)
+- uid: AtfTIDE.Logging.ILiveLogger.LogWarn(System.String)
+  commentId: M:AtfTIDE.Logging.ILiveLogger.LogWarn(System.String)
+  id: LogWarn(System.String)
+  parent: AtfTIDE.Logging.ILiveLogger
+  langs:
+  - csharp
+  - vb
+  name: LogWarn(string)
+  nameWithType: ILiveLogger.LogWarn(string)
+  fullName: AtfTIDE.Logging.ILiveLogger.LogWarn(string)
+  type: Method
+  source:
+    remote:
+      path: packages/AtfTIDE/Files/cs/Logging/LiveLogger.cs
+      branch: main
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: LogWarn
+    path: ../packages/AtfTIDE/Files/cs/Logging/LiveLogger.cs
+    startLine: 12
+  assemblies:
+  - AtfTIDE
+  namespace: AtfTIDE.Logging
+  syntax:
+    content: void LogWarn(string message)
+    parameters:
+    - id: message
+      type: System.String
+    content.vb: Sub LogWarn(message As String)
+  overload: AtfTIDE.Logging.ILiveLogger.LogWarn*
+  nameWithType.vb: ILiveLogger.LogWarn(String)
+  fullName.vb: AtfTIDE.Logging.ILiveLogger.LogWarn(String)
+  name.vb: LogWarn(String)
+references:
+- uid: AtfTIDE.Logging
+  commentId: N:AtfTIDE.Logging
+  href: AtfTIDE.html
+  name: AtfTIDE.Logging
+  nameWithType: AtfTIDE.Logging
+  fullName: AtfTIDE.Logging
+  spec.csharp:
+  - uid: AtfTIDE
+    name: AtfTIDE
+    href: AtfTIDE.html
+  - name: .
+  - uid: AtfTIDE.Logging
+    name: Logging
+    href: AtfTIDE.Logging.html
+  spec.vb:
+  - uid: AtfTIDE
+    name: AtfTIDE
+    href: AtfTIDE.html
+  - name: .
+  - uid: AtfTIDE.Logging
+    name: Logging
+    href: AtfTIDE.Logging.html
+- uid: AtfTIDE.Logging.ILiveLogger.Log*
+  commentId: Overload:AtfTIDE.Logging.ILiveLogger.Log
+  href: AtfTIDE.Logging.ILiveLogger.html#AtfTIDE_Logging_ILiveLogger_Log_System_String_
+  name: Log
+  nameWithType: ILiveLogger.Log
+  fullName: AtfTIDE.Logging.ILiveLogger.Log
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: AtfTIDE.Logging.ILiveLogger.LogInfo*
+  commentId: Overload:AtfTIDE.Logging.ILiveLogger.LogInfo
+  href: AtfTIDE.Logging.ILiveLogger.html#AtfTIDE_Logging_ILiveLogger_LogInfo_System_String_
+  name: LogInfo
+  nameWithType: ILiveLogger.LogInfo
+  fullName: AtfTIDE.Logging.ILiveLogger.LogInfo
+- uid: AtfTIDE.Logging.ILiveLogger.LogError*
+  commentId: Overload:AtfTIDE.Logging.ILiveLogger.LogError
+  href: AtfTIDE.Logging.ILiveLogger.html#AtfTIDE_Logging_ILiveLogger_LogError_System_String_
+  name: LogError
+  nameWithType: ILiveLogger.LogError
+  fullName: AtfTIDE.Logging.ILiveLogger.LogError
+- uid: AtfTIDE.Logging.ILiveLogger.LogWarn*
+  commentId: Overload:AtfTIDE.Logging.ILiveLogger.LogWarn
+  href: AtfTIDE.Logging.ILiveLogger.html#AtfTIDE_Logging_ILiveLogger_LogWarn_System_String_
+  name: LogWarn
+  nameWithType: ILiveLogger.LogWarn
+  fullName: AtfTIDE.Logging.ILiveLogger.LogWarn

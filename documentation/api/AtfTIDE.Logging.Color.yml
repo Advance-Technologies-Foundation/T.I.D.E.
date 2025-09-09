@@ -1,0 +1,139 @@
+﻿### YamlMime:ManagedReference
+items:
+- uid: AtfTIDE.Logging.Color
+  commentId: T:AtfTIDE.Logging.Color
+  id: Color
+  parent: AtfTIDE.Logging
+  children:
+  - AtfTIDE.Logging.Color.Green
+  - AtfTIDE.Logging.Color.Red
+  - AtfTIDE.Logging.Color.Yellow
+  langs:
+  - csharp
+  - vb
+  name: Color
+  nameWithType: Color
+  fullName: AtfTIDE.Logging.Color
+  type: Enum
+  source:
+    remote:
+      path: packages/AtfTIDE/Files/cs/Logging/LiveLogger.cs
+      branch: main
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: Color
+    path: ../packages/AtfTIDE/Files/cs/Logging/LiveLogger.cs
+    startLine: 2
+  assemblies:
+  - AtfTIDE
+  namespace: AtfTIDE.Logging
+  syntax:
+    content: public enum Color
+    content.vb: Public Enum Color
+- uid: AtfTIDE.Logging.Color.Green
+  commentId: F:AtfTIDE.Logging.Color.Green
+  id: Green
+  parent: AtfTIDE.Logging.Color
+  langs:
+  - csharp
+  - vb
+  name: Green
+  nameWithType: Color.Green
+  fullName: AtfTIDE.Logging.Color.Green
+  type: Field
+  source:
+    remote:
+      path: packages/AtfTIDE/Files/cs/Logging/LiveLogger.cs
+      branch: main
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: Green
+    path: ../packages/AtfTIDE/Files/cs/Logging/LiveLogger.cs
+    startLine: 3
+  assemblies:
+  - AtfTIDE
+  namespace: AtfTIDE.Logging
+  syntax:
+    content: Green = 0
+    return:
+      type: AtfTIDE.Logging.Color
+- uid: AtfTIDE.Logging.Color.Red
+  commentId: F:AtfTIDE.Logging.Color.Red
+  id: Red
+  parent: AtfTIDE.Logging.Color
+  langs:
+  - csharp
+  - vb
+  name: Red
+  nameWithType: Color.Red
+  fullName: AtfTIDE.Logging.Color.Red
+  type: Field
+  source:
+    remote:
+      path: packages/AtfTIDE/Files/cs/Logging/LiveLogger.cs
+      branch: main
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: Red
+    path: ../packages/AtfTIDE/Files/cs/Logging/LiveLogger.cs
+    startLine: 4
+  assemblies:
+  - AtfTIDE
+  namespace: AtfTIDE.Logging
+  syntax:
+    content: Red = 1
+    return:
+      type: AtfTIDE.Logging.Color
+- uid: AtfTIDE.Logging.Color.Yellow
+  commentId: F:AtfTIDE.Logging.Color.Yellow
+  id: Yellow
+  parent: AtfTIDE.Logging.Color
+  langs:
+  - csharp
+  - vb
+  name: Yellow
+  nameWithType: Color.Yellow
+  fullName: AtfTIDE.Logging.Color.Yellow
+  type: Field
+  source:
+    remote:
+      path: packages/AtfTIDE/Files/cs/Logging/LiveLogger.cs
+      branch: main
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: Yellow
+    path: ../packages/AtfTIDE/Files/cs/Logging/LiveLogger.cs
+    startLine: 5
+  assemblies:
+  - AtfTIDE
+  namespace: AtfTIDE.Logging
+  syntax:
+    content: Yellow = 2
+    return:
+      type: AtfTIDE.Logging.Color
+references:
+- uid: AtfTIDE.Logging
+  commentId: N:AtfTIDE.Logging
+  href: AtfTIDE.html
+  name: AtfTIDE.Logging
+  nameWithType: AtfTIDE.Logging
+  fullName: AtfTIDE.Logging
+  spec.csharp:
+  - uid: AtfTIDE
+    name: AtfTIDE
+    href: AtfTIDE.html
+  - name: .
+  - uid: AtfTIDE.Logging
+    name: Logging
+    href: AtfTIDE.Logging.html
+  spec.vb:
+  - uid: AtfTIDE
+    name: AtfTIDE
+    href: AtfTIDE.html
+  - name: .
+  - uid: AtfTIDE.Logging
+    name: Logging
+    href: AtfTIDE.Logging.html
+- uid: AtfTIDE.Logging.Color
+  commentId: T:AtfTIDE.Logging.Color
+  parent: AtfTIDE.Logging
+  href: AtfTIDE.Logging.Color.html
+  name: Color
+  nameWithType: Color
+  fullName: AtfTIDE.Logging.Color

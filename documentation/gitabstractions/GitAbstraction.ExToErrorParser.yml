@@ -16,7 +16,7 @@ items:
   source:
     remote:
       path: ConsoleGit/GitAbstraction/ExToErrorParser.cs
-      branch: feature/my-feature
+      branch: main
       repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
     id: ExToErrorParser
     path: ../ConsoleGit/GitAbstraction/ExToErrorParser.cs
@@ -52,7 +52,7 @@ items:
   source:
     remote:
       path: ConsoleGit/GitAbstraction/ExToErrorParser.cs
-      branch: feature/my-feature
+      branch: main
       repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
     id: ToError
     path: ../ConsoleGit/GitAbstraction/ExToErrorParser.cs

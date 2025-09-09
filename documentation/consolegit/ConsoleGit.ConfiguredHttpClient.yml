@@ -4,6 +4,8 @@ items:
   commentId: N:ConsoleGit.ConfiguredHttpClient
   id: ConsoleGit.ConfiguredHttpClient
   children:
+  - ConsoleGit.ConfiguredHttpClient.LoginHandler
+  - ConsoleGit.ConfiguredHttpClient.LoginRequest
   - ConsoleGit.ConfiguredHttpClient.MyHandler
   langs:
   - csharp
@@ -15,6 +17,18 @@ items:
   assemblies:
   - ConsoleGit
 references:
+- uid: ConsoleGit.ConfiguredHttpClient.LoginHandler
+  commentId: T:ConsoleGit.ConfiguredHttpClient.LoginHandler
+  href: ConsoleGit.ConfiguredHttpClient.LoginHandler.html
+  name: LoginHandler
+  nameWithType: LoginHandler
+  fullName: ConsoleGit.ConfiguredHttpClient.LoginHandler
+- uid: ConsoleGit.ConfiguredHttpClient.LoginRequest
+  commentId: T:ConsoleGit.ConfiguredHttpClient.LoginRequest
+  href: ConsoleGit.ConfiguredHttpClient.LoginRequest.html
+  name: LoginRequest
+  nameWithType: LoginRequest
+  fullName: ConsoleGit.ConfiguredHttpClient.LoginRequest
 - uid: ConsoleGit.ConfiguredHttpClient.MyHandler
   commentId: T:ConsoleGit.ConfiguredHttpClient.MyHandler
   href: ConsoleGit.ConfiguredHttpClient.MyHandler.html

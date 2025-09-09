@@ -56,5 +56,18 @@ namespace AtfTIDE.Tests.HttpClient {
 			return services;
 		}
 	}
+
+
+	public class InjectorWebSocket{
+		private readonly IWebSocket _webSocketMock;
+		public InjectorWebSocket(IWebSocket webSocketMock){
+			_webSocketMock = webSocketMock;
+		}
+		public IServiceCollection AddMockWebSocket(IServiceCollection services){
+			services.AddSingleton(_webSocketMock);
+			return services;
+		}
+	}
+	
 	
 }

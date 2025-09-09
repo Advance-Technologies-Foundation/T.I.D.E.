@@ -9,7 +9,11 @@ items:
   - AtfTIDE.Commands.Checkout
   - AtfTIDE.Commands.Clone
   - AtfTIDE.Commands.Commit
+  - AtfTIDE.Commands.DiscardFiles
   - AtfTIDE.Commands.DownloadPackages
+  - AtfTIDE.Commands.GetBranches
+  - AtfTIDE.Commands.GetChangedFiles
+  - AtfTIDE.Commands.GetDiff
   - AtfTIDE.Commands.Pull
   - AtfTIDE.Commands.Push
   langs:
@@ -22,11 +26,11 @@ items:
   source:
     remote:
       path: packages/AtfTIDE/Files/cs/ConsoleGit.cs
-      branch: feature/my-feature
+      branch: main
       repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
     id: Commands
     path: ../packages/AtfTIDE/Files/cs/ConsoleGit.cs
-    startLine: 277
+    startLine: 299
   assemblies:
   - AtfTIDE
   namespace: AtfTIDE
@@ -49,11 +53,11 @@ items:
   source:
     remote:
       path: packages/AtfTIDE/Files/cs/ConsoleGit.cs
-      branch: feature/my-feature
+      branch: main
       repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
     id: Clone
     path: ../packages/AtfTIDE/Files/cs/ConsoleGit.cs
-    startLine: 279
+    startLine: 301
   assemblies:
   - AtfTIDE
   namespace: AtfTIDE
@@ -75,11 +79,11 @@ items:
   source:
     remote:
       path: packages/AtfTIDE/Files/cs/ConsoleGit.cs
-      branch: feature/my-feature
+      branch: main
       repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
     id: AddAll
     path: ../packages/AtfTIDE/Files/cs/ConsoleGit.cs
-    startLine: 280
+    startLine: 302
   assemblies:
   - AtfTIDE
   namespace: AtfTIDE
@@ -101,11 +105,11 @@ items:
   source:
     remote:
       path: packages/AtfTIDE/Files/cs/ConsoleGit.cs
-      branch: feature/my-feature
+      branch: main
       repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
     id: Push
     path: ../packages/AtfTIDE/Files/cs/ConsoleGit.cs
-    startLine: 281
+    startLine: 303
   assemblies:
   - AtfTIDE
   namespace: AtfTIDE
@@ -127,11 +131,11 @@ items:
   source:
     remote:
       path: packages/AtfTIDE/Files/cs/ConsoleGit.cs
-      branch: feature/my-feature
+      branch: main
       repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
     id: Pull
     path: ../packages/AtfTIDE/Files/cs/ConsoleGit.cs
-    startLine: 282
+    startLine: 304
   assemblies:
   - AtfTIDE
   namespace: AtfTIDE
@@ -153,11 +157,11 @@ items:
   source:
     remote:
       path: packages/AtfTIDE/Files/cs/ConsoleGit.cs
-      branch: feature/my-feature
+      branch: main
       repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
     id: Commit
     path: ../packages/AtfTIDE/Files/cs/ConsoleGit.cs
-    startLine: 283
+    startLine: 305
   assemblies:
   - AtfTIDE
   namespace: AtfTIDE
@@ -179,11 +183,11 @@ items:
   source:
     remote:
       path: packages/AtfTIDE/Files/cs/ConsoleGit.cs
-      branch: feature/my-feature
+      branch: main
       repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
     id: DownloadPackages
     path: ../packages/AtfTIDE/Files/cs/ConsoleGit.cs
-    startLine: 284
+    startLine: 306
   assemblies:
   - AtfTIDE
   namespace: AtfTIDE
@@ -205,16 +209,120 @@ items:
   source:
     remote:
       path: packages/AtfTIDE/Files/cs/ConsoleGit.cs
-      branch: feature/my-feature
+      branch: main
       repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
     id: Checkout
     path: ../packages/AtfTIDE/Files/cs/ConsoleGit.cs
-    startLine: 285
+    startLine: 307
   assemblies:
   - AtfTIDE
   namespace: AtfTIDE
   syntax:
     content: Checkout = 6
+    return:
+      type: AtfTIDE.Commands
+- uid: AtfTIDE.Commands.GetBranches
+  commentId: F:AtfTIDE.Commands.GetBranches
+  id: GetBranches
+  parent: AtfTIDE.Commands
+  langs:
+  - csharp
+  - vb
+  name: GetBranches
+  nameWithType: Commands.GetBranches
+  fullName: AtfTIDE.Commands.GetBranches
+  type: Field
+  source:
+    remote:
+      path: packages/AtfTIDE/Files/cs/ConsoleGit.cs
+      branch: main
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: GetBranches
+    path: ../packages/AtfTIDE/Files/cs/ConsoleGit.cs
+    startLine: 308
+  assemblies:
+  - AtfTIDE
+  namespace: AtfTIDE
+  syntax:
+    content: GetBranches = 7
+    return:
+      type: AtfTIDE.Commands
+- uid: AtfTIDE.Commands.GetDiff
+  commentId: F:AtfTIDE.Commands.GetDiff
+  id: GetDiff
+  parent: AtfTIDE.Commands
+  langs:
+  - csharp
+  - vb
+  name: GetDiff
+  nameWithType: Commands.GetDiff
+  fullName: AtfTIDE.Commands.GetDiff
+  type: Field
+  source:
+    remote:
+      path: packages/AtfTIDE/Files/cs/ConsoleGit.cs
+      branch: main
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: GetDiff
+    path: ../packages/AtfTIDE/Files/cs/ConsoleGit.cs
+    startLine: 309
+  assemblies:
+  - AtfTIDE
+  namespace: AtfTIDE
+  syntax:
+    content: GetDiff = 8
+    return:
+      type: AtfTIDE.Commands
+- uid: AtfTIDE.Commands.GetChangedFiles
+  commentId: F:AtfTIDE.Commands.GetChangedFiles
+  id: GetChangedFiles
+  parent: AtfTIDE.Commands
+  langs:
+  - csharp
+  - vb
+  name: GetChangedFiles
+  nameWithType: Commands.GetChangedFiles
+  fullName: AtfTIDE.Commands.GetChangedFiles
+  type: Field
+  source:
+    remote:
+      path: packages/AtfTIDE/Files/cs/ConsoleGit.cs
+      branch: main
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: GetChangedFiles
+    path: ../packages/AtfTIDE/Files/cs/ConsoleGit.cs
+    startLine: 310
+  assemblies:
+  - AtfTIDE
+  namespace: AtfTIDE
+  syntax:
+    content: GetChangedFiles = 9
+    return:
+      type: AtfTIDE.Commands
+- uid: AtfTIDE.Commands.DiscardFiles
+  commentId: F:AtfTIDE.Commands.DiscardFiles
+  id: DiscardFiles
+  parent: AtfTIDE.Commands
+  langs:
+  - csharp
+  - vb
+  name: DiscardFiles
+  nameWithType: Commands.DiscardFiles
+  fullName: AtfTIDE.Commands.DiscardFiles
+  type: Field
+  source:
+    remote:
+      path: packages/AtfTIDE/Files/cs/ConsoleGit.cs
+      branch: main
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: DiscardFiles
+    path: ../packages/AtfTIDE/Files/cs/ConsoleGit.cs
+    startLine: 311
+  assemblies:
+  - AtfTIDE
+  namespace: AtfTIDE
+  syntax:
+    content: DiscardFiles = 10
     return:
       type: AtfTIDE.Commands
 references:

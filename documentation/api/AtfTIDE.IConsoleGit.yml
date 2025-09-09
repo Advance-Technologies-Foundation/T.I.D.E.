@@ -16,11 +16,11 @@ items:
   source:
     remote:
       path: packages/AtfTIDE/Files/cs/ConsoleGit.cs
-      branch: feature/my-feature
+      branch: main
       repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
     id: IConsoleGit
     path: ../packages/AtfTIDE/Files/cs/ConsoleGit.cs
-    startLine: 34
+    startLine: 35
   assemblies:
   - AtfTIDE
   namespace: AtfTIDE
@@ -28,7 +28,9 @@ items:
   remarks: >-
     <p><strong></strong></p><ul><li>Executes git commands through environment variables</li><li>Handles process management and timeouts</li><li>Provides error handling and output capturing</li></ul>
 
+
     <p><strong></strong></p><ul><li>Implementations must be thread-safe</li><li>Must handle concurrent git operations</li></ul>
+
 
     <p><strong></strong></p><ul><li>Must capture and return git errors</li><li>Must handle process timeouts</li><li>Must clean up resources properly</li></ul>
   example: []
@@ -49,11 +51,11 @@ items:
   source:
     remote:
       path: packages/AtfTIDE/Files/cs/ConsoleGit.cs
-      branch: feature/my-feature
+      branch: main
       repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
     id: Execute
     path: ../packages/AtfTIDE/Files/cs/ConsoleGit.cs
-    startLine: 43
+    startLine: 44
   assemblies:
   - AtfTIDE
   namespace: AtfTIDE

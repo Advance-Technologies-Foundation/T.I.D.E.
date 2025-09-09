@@ -16,11 +16,11 @@ items:
   source:
     remote:
       path: ConsoleGit/ConsoleGit/ConfiguredHttpClient/MyHandler.cs
-      branch: feature/my-feature
+      branch: main
       repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
     id: MyHandler
     path: ../ConsoleGit/ConsoleGit/ConfiguredHttpClient/MyHandler.cs
-    startLine: 2
+    startLine: 4
   assemblies:
   - ConsoleGit
   namespace: ConsoleGit.ConfiguredHttpClient
@@ -59,11 +59,11 @@ items:
   source:
     remote:
       path: ConsoleGit/ConsoleGit/ConfiguredHttpClient/MyHandler.cs
-      branch: feature/my-feature
+      branch: main
       repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
     id: SendAsync
     path: ../ConsoleGit/ConsoleGit/ConfiguredHttpClient/MyHandler.cs
-    startLine: 4
+    startLine: 6
   assemblies:
   - ConsoleGit
   namespace: ConsoleGit.ConfiguredHttpClient
@@ -88,9 +88,6 @@ items:
   - type: System.ArgumentNullException
     commentId: T:System.ArgumentNullException
     description: The <code class="paramref">request</code> was <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.
-  - type: System.OperationCanceledException
-    commentId: T:System.OperationCanceledException
-    description: The cancellation token was canceled. This exception is stored into the returned task.
 references:
 - uid: ConsoleGit.ConfiguredHttpClient
   commentId: N:ConsoleGit.ConfiguredHttpClient
@@ -524,13 +521,6 @@ references:
   name: ArgumentNullException
   nameWithType: ArgumentNullException
   fullName: System.ArgumentNullException
-- uid: System.OperationCanceledException
-  commentId: T:System.OperationCanceledException
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.operationcanceledexception
-  name: OperationCanceledException
-  nameWithType: OperationCanceledException
-  fullName: System.OperationCanceledException
 - uid: System.Net.Http.DelegatingHandler.SendAsync(System.Net.Http.HttpRequestMessage,System.Threading.CancellationToken)
   commentId: M:System.Net.Http.DelegatingHandler.SendAsync(System.Net.Http.HttpRequestMessage,System.Threading.CancellationToken)
   parent: System.Net.Http.DelegatingHandler

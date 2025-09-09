@@ -1,0 +1,924 @@
+﻿### YamlMime:ManagedReference
+items:
+- uid: AtfTIDE.HttpClient.GitHubClient
+  commentId: T:AtfTIDE.HttpClient.GitHubClient
+  id: GitHubClient
+  parent: AtfTIDE.HttpClient
+  children:
+  - AtfTIDE.HttpClient.GitHubClient.#ctor(System.Net.Http.HttpClient)
+  - AtfTIDE.HttpClient.GitHubClient.CreateOrganizationRepository(System.String,System.String)
+  - AtfTIDE.HttpClient.GitHubClient.CreateUserRepository(System.String)
+  - AtfTIDE.HttpClient.GitHubClient.ListOrganizationRepositories(System.String)
+  - AtfTIDE.HttpClient.GitHubClient.ListUserRepositories
+  langs:
+  - csharp
+  - vb
+  name: GitHubClient
+  nameWithType: GitHubClient
+  fullName: AtfTIDE.HttpClient.GitHubClient
+  type: Class
+  source:
+    remote:
+      path: packages/AtfTIDE/Files/cs/HttpClient/GitHubClient.cs
+      branch: main
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: GitHubClient
+    path: ../packages/AtfTIDE/Files/cs/HttpClient/GitHubClient.cs
+    startLine: 62
+  assemblies:
+  - AtfTIDE
+  namespace: AtfTIDE.HttpClient
+  syntax:
+    content: 'public class GitHubClient : IGitHubClient'
+    content.vb: Public Class GitHubClient Implements IGitHubClient
+  inheritance:
+  - System.Object
+  implements:
+  - AtfTIDE.HttpClient.IGitHubClient
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: AtfTIDE.HttpClient.GitHubClient.#ctor(System.Net.Http.HttpClient)
+  commentId: M:AtfTIDE.HttpClient.GitHubClient.#ctor(System.Net.Http.HttpClient)
+  id: '#ctor(System.Net.Http.HttpClient)'
+  parent: AtfTIDE.HttpClient.GitHubClient
+  langs:
+  - csharp
+  - vb
+  name: GitHubClient(HttpClient)
+  nameWithType: GitHubClient.GitHubClient(HttpClient)
+  fullName: AtfTIDE.HttpClient.GitHubClient.GitHubClient(System.Net.Http.HttpClient)
+  type: Constructor
+  source:
+    remote:
+      path: packages/AtfTIDE/Files/cs/HttpClient/GitHubClient.cs
+      branch: main
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: .ctor
+    path: ../packages/AtfTIDE/Files/cs/HttpClient/GitHubClient.cs
+    startLine: 64
+  assemblies:
+  - AtfTIDE
+  namespace: AtfTIDE.HttpClient
+  syntax:
+    content: public GitHubClient(HttpClient httpclient)
+    parameters:
+    - id: httpclient
+      type: System.Net.Http.HttpClient
+    content.vb: Public Sub New(httpclient As HttpClient)
+  overload: AtfTIDE.HttpClient.GitHubClient.#ctor*
+  nameWithType.vb: GitHubClient.New(HttpClient)
+  fullName.vb: AtfTIDE.HttpClient.GitHubClient.New(System.Net.Http.HttpClient)
+  name.vb: New(HttpClient)
+- uid: AtfTIDE.HttpClient.GitHubClient.ListOrganizationRepositories(System.String)
+  commentId: M:AtfTIDE.HttpClient.GitHubClient.ListOrganizationRepositories(System.String)
+  id: ListOrganizationRepositories(System.String)
+  parent: AtfTIDE.HttpClient.GitHubClient
+  langs:
+  - csharp
+  - vb
+  name: ListOrganizationRepositories(string)
+  nameWithType: GitHubClient.ListOrganizationRepositories(string)
+  fullName: AtfTIDE.HttpClient.GitHubClient.ListOrganizationRepositories(string)
+  type: Method
+  source:
+    remote:
+      path: packages/AtfTIDE/Files/cs/HttpClient/GitHubClient.cs
+      branch: main
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: ListOrganizationRepositories
+    path: ../packages/AtfTIDE/Files/cs/HttpClient/GitHubClient.cs
+    startLine: 67
+  assemblies:
+  - AtfTIDE
+  namespace: AtfTIDE.HttpClient
+  summary: Lists repositories for the specified organization.
+  remarks: <a href="https://docs.github.com/en/rest/repos/repos#list-organization-repositories">See Github Docs</a>
+  example: []
+  syntax:
+    content: public Task<List<Repository>> ListOrganizationRepositories(string organizationName)
+    parameters:
+    - id: organizationName
+      type: System.String
+      description: The name of the organization.
+    return:
+      type: System.Threading.Tasks.Task{System.Collections.Generic.List{AtfTIDE.HttpClient.GithubDto.Repository}}
+      description: ''
+    content.vb: Public Function ListOrganizationRepositories(organizationName As String) As Task(Of List(Of Repository))
+  overload: AtfTIDE.HttpClient.GitHubClient.ListOrganizationRepositories*
+  implements:
+  - AtfTIDE.HttpClient.IGitHubClient.ListOrganizationRepositories(System.String)
+  nameWithType.vb: GitHubClient.ListOrganizationRepositories(String)
+  fullName.vb: AtfTIDE.HttpClient.GitHubClient.ListOrganizationRepositories(String)
+  name.vb: ListOrganizationRepositories(String)
+- uid: AtfTIDE.HttpClient.GitHubClient.CreateOrganizationRepository(System.String,System.String)
+  commentId: M:AtfTIDE.HttpClient.GitHubClient.CreateOrganizationRepository(System.String,System.String)
+  id: CreateOrganizationRepository(System.String,System.String)
+  parent: AtfTIDE.HttpClient.GitHubClient
+  langs:
+  - csharp
+  - vb
+  name: CreateOrganizationRepository(string, string)
+  nameWithType: GitHubClient.CreateOrganizationRepository(string, string)
+  fullName: AtfTIDE.HttpClient.GitHubClient.CreateOrganizationRepository(string, string)
+  type: Method
+  source:
+    remote:
+      path: packages/AtfTIDE/Files/cs/HttpClient/GitHubClient.cs
+      branch: main
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: CreateOrganizationRepository
+    path: ../packages/AtfTIDE/Files/cs/HttpClient/GitHubClient.cs
+    startLine: 89
+  assemblies:
+  - AtfTIDE
+  namespace: AtfTIDE.HttpClient
+  summary: Creates a new repository in the specified organization.
+  remarks: >-
+    <p>This method creates a public repository with a default description "this is a repository created by AtfTIDE".</p>
+
+    <p>The repository is created with the following default settings:</p>
+
+    <ul><li>Public visibility (private = false)</li><li>Default description provided by AtfTIDE</li></ul>
+
+    <p><a href="https://docs.github.com/en/rest/repos/repos?apiVersion=2022-11-28#create-an-organization-repository">See GitHub API Documentation</a></p>
+  example: []
+  syntax:
+    content: public Task<Repository> CreateOrganizationRepository(string organizationName, string repositoryName)
+    parameters:
+    - id: organizationName
+      type: System.String
+      description: The name of the organization where the repository will be created.
+    - id: repositoryName
+      type: System.String
+      description: The name of the new repository to create.
+    return:
+      type: System.Threading.Tasks.Task{AtfTIDE.HttpClient.GithubDto.Repository}
+      description: A <xref href="System.Threading.Tasks.Task%601" data-throw-if-not-resolved="false"></xref> representing the asynchronous operation that returns the created repository.
+    content.vb: Public Function CreateOrganizationRepository(organizationName As String, repositoryName As String) As Task(Of Repository)
+  overload: AtfTIDE.HttpClient.GitHubClient.CreateOrganizationRepository*
+  exceptions:
+  - type: System.Net.Http.HttpRequestException
+    commentId: T:System.Net.Http.HttpRequestException
+    description: Thrown when the HTTP request fails.
+  - type: System.Text.Json.JsonException
+    commentId: T:System.Text.Json.JsonException
+    description: Thrown when JSON serialization/deserialization fails.
+  implements:
+  - AtfTIDE.HttpClient.IGitHubClient.CreateOrganizationRepository(System.String,System.String)
+  nameWithType.vb: GitHubClient.CreateOrganizationRepository(String, String)
+  fullName.vb: AtfTIDE.HttpClient.GitHubClient.CreateOrganizationRepository(String, String)
+  name.vb: CreateOrganizationRepository(String, String)
+- uid: AtfTIDE.HttpClient.GitHubClient.ListUserRepositories
+  commentId: M:AtfTIDE.HttpClient.GitHubClient.ListUserRepositories
+  id: ListUserRepositories
+  parent: AtfTIDE.HttpClient.GitHubClient
+  langs:
+  - csharp
+  - vb
+  name: ListUserRepositories()
+  nameWithType: GitHubClient.ListUserRepositories()
+  fullName: AtfTIDE.HttpClient.GitHubClient.ListUserRepositories()
+  type: Method
+  source:
+    remote:
+      path: packages/AtfTIDE/Files/cs/HttpClient/GitHubClient.cs
+      branch: main
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: ListUserRepositories
+    path: ../packages/AtfTIDE/Files/cs/HttpClient/GitHubClient.cs
+    startLine: 110
+  assemblies:
+  - AtfTIDE
+  namespace: AtfTIDE.HttpClient
+  summary: Lists repositories for the authenticated user.
+  remarks: <a href="https://docs.github.com/en/rest/repos/repos?apiVersion=2022-11-28#list-repositories-for-the-authenticated-user">See Github Docs</a>
+  example: []
+  syntax:
+    content: public Task<object> ListUserRepositories()
+    return:
+      type: System.Threading.Tasks.Task{System.Object}
+    content.vb: Public Function ListUserRepositories() As Task(Of Object)
+  overload: AtfTIDE.HttpClient.GitHubClient.ListUserRepositories*
+  implements:
+  - AtfTIDE.HttpClient.IGitHubClient.ListUserRepositories
+- uid: AtfTIDE.HttpClient.GitHubClient.CreateUserRepository(System.String)
+  commentId: M:AtfTIDE.HttpClient.GitHubClient.CreateUserRepository(System.String)
+  id: CreateUserRepository(System.String)
+  parent: AtfTIDE.HttpClient.GitHubClient
+  langs:
+  - csharp
+  - vb
+  name: CreateUserRepository(string)
+  nameWithType: GitHubClient.CreateUserRepository(string)
+  fullName: AtfTIDE.HttpClient.GitHubClient.CreateUserRepository(string)
+  type: Method
+  source:
+    remote:
+      path: packages/AtfTIDE/Files/cs/HttpClient/GitHubClient.cs
+      branch: main
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: CreateUserRepository
+    path: ../packages/AtfTIDE/Files/cs/HttpClient/GitHubClient.cs
+    startLine: 115
+  assemblies:
+  - AtfTIDE
+  namespace: AtfTIDE.HttpClient
+  summary: Creates a new repository for the authenticated user.
+  remarks: <a href="https://docs.github.com/en/rest/repos/repos?apiVersion=2022-11-28#create-a-repository-for-the-authenticated-user">See Github Docs</a>
+  example: []
+  syntax:
+    content: public Task<object> CreateUserRepository(string repositoryName)
+    parameters:
+    - id: repositoryName
+      type: System.String
+      description: ''
+    return:
+      type: System.Threading.Tasks.Task{System.Object}
+      description: ''
+    content.vb: Public Function CreateUserRepository(repositoryName As String) As Task(Of Object)
+  overload: AtfTIDE.HttpClient.GitHubClient.CreateUserRepository*
+  implements:
+  - AtfTIDE.HttpClient.IGitHubClient.CreateUserRepository(System.String)
+  nameWithType.vb: GitHubClient.CreateUserRepository(String)
+  fullName.vb: AtfTIDE.HttpClient.GitHubClient.CreateUserRepository(String)
+  name.vb: CreateUserRepository(String)
+references:
+- uid: AtfTIDE.HttpClient
+  commentId: N:AtfTIDE.HttpClient
+  href: AtfTIDE.html
+  name: AtfTIDE.HttpClient
+  nameWithType: AtfTIDE.HttpClient
+  fullName: AtfTIDE.HttpClient
+  spec.csharp:
+  - uid: AtfTIDE
+    name: AtfTIDE
+    href: AtfTIDE.html
+  - name: .
+  - uid: AtfTIDE.HttpClient
+    name: HttpClient
+    href: AtfTIDE.HttpClient.html
+  spec.vb:
+  - uid: AtfTIDE
+    name: AtfTIDE
+    href: AtfTIDE.html
+  - name: .
+  - uid: AtfTIDE.HttpClient
+    name: HttpClient
+    href: AtfTIDE.HttpClient.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: AtfTIDE.HttpClient.IGitHubClient
+  commentId: T:AtfTIDE.HttpClient.IGitHubClient
+  parent: AtfTIDE.HttpClient
+  href: AtfTIDE.HttpClient.IGitHubClient.html
+  name: IGitHubClient
+  nameWithType: IGitHubClient
+  fullName: AtfTIDE.HttpClient.IGitHubClient
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: AtfTIDE.HttpClient.GitHubClient.#ctor*
+  commentId: Overload:AtfTIDE.HttpClient.GitHubClient.#ctor
+  href: AtfTIDE.HttpClient.GitHubClient.html#AtfTIDE_HttpClient_GitHubClient__ctor_System_Net_Http_HttpClient_
+  name: GitHubClient
+  nameWithType: GitHubClient.GitHubClient
+  fullName: AtfTIDE.HttpClient.GitHubClient.GitHubClient
+  nameWithType.vb: GitHubClient.New
+  fullName.vb: AtfTIDE.HttpClient.GitHubClient.New
+  name.vb: New
+- uid: System.Net.Http.HttpClient
+  commentId: T:System.Net.Http.HttpClient
+  parent: System.Net.Http
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.net.http.httpclient
+  name: HttpClient
+  nameWithType: HttpClient
+  fullName: System.Net.Http.HttpClient
+- uid: System.Net.Http
+  commentId: N:System.Net.Http
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Net.Http
+  nameWithType: System.Net.Http
+  fullName: System.Net.Http
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Net
+    name: Net
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.net
+  - name: .
+  - uid: System.Net.Http
+    name: Http
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.net.http
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Net
+    name: Net
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.net
+  - name: .
+  - uid: System.Net.Http
+    name: Http
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.net.http
+- uid: AtfTIDE.HttpClient.GitHubClient.ListOrganizationRepositories*
+  commentId: Overload:AtfTIDE.HttpClient.GitHubClient.ListOrganizationRepositories
+  href: AtfTIDE.HttpClient.GitHubClient.html#AtfTIDE_HttpClient_GitHubClient_ListOrganizationRepositories_System_String_
+  name: ListOrganizationRepositories
+  nameWithType: GitHubClient.ListOrganizationRepositories
+  fullName: AtfTIDE.HttpClient.GitHubClient.ListOrganizationRepositories
+- uid: AtfTIDE.HttpClient.IGitHubClient.ListOrganizationRepositories(System.String)
+  commentId: M:AtfTIDE.HttpClient.IGitHubClient.ListOrganizationRepositories(System.String)
+  parent: AtfTIDE.HttpClient.IGitHubClient
+  isExternal: true
+  href: AtfTIDE.HttpClient.IGitHubClient.html#AtfTIDE_HttpClient_IGitHubClient_ListOrganizationRepositories_System_String_
+  name: ListOrganizationRepositories(string)
+  nameWithType: IGitHubClient.ListOrganizationRepositories(string)
+  fullName: AtfTIDE.HttpClient.IGitHubClient.ListOrganizationRepositories(string)
+  nameWithType.vb: IGitHubClient.ListOrganizationRepositories(String)
+  fullName.vb: AtfTIDE.HttpClient.IGitHubClient.ListOrganizationRepositories(String)
+  name.vb: ListOrganizationRepositories(String)
+  spec.csharp:
+  - uid: AtfTIDE.HttpClient.IGitHubClient.ListOrganizationRepositories(System.String)
+    name: ListOrganizationRepositories
+    href: AtfTIDE.HttpClient.IGitHubClient.html#AtfTIDE_HttpClient_IGitHubClient_ListOrganizationRepositories_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: AtfTIDE.HttpClient.IGitHubClient.ListOrganizationRepositories(System.String)
+    name: ListOrganizationRepositories
+    href: AtfTIDE.HttpClient.IGitHubClient.html#AtfTIDE_HttpClient_IGitHubClient_ListOrganizationRepositories_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Threading.Tasks.Task{System.Collections.Generic.List{AtfTIDE.HttpClient.GithubDto.Repository}}
+  commentId: T:System.Threading.Tasks.Task{System.Collections.Generic.List{AtfTIDE.HttpClient.GithubDto.Repository}}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<List<Repository>>
+  nameWithType: Task<List<Repository>>
+  fullName: System.Threading.Tasks.Task<System.Collections.Generic.List<AtfTIDE.HttpClient.GithubDto.Repository>>
+  nameWithType.vb: Task(Of List(Of Repository))
+  fullName.vb: System.Threading.Tasks.Task(Of System.Collections.Generic.List(Of AtfTIDE.HttpClient.GithubDto.Repository))
+  name.vb: Task(Of List(Of Repository))
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: AtfTIDE.HttpClient.GithubDto.Repository
+    name: Repository
+    href: AtfTIDE.HttpClient.GithubDto.Repository.html
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: AtfTIDE.HttpClient.GithubDto.Repository
+    name: Repository
+    href: AtfTIDE.HttpClient.GithubDto.Repository.html
+  - name: )
+  - name: )
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: System.Net.Http.HttpRequestException
+  commentId: T:System.Net.Http.HttpRequestException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.net.http.httprequestexception
+  name: HttpRequestException
+  nameWithType: HttpRequestException
+  fullName: System.Net.Http.HttpRequestException
+- uid: System.Text.Json.JsonException
+  commentId: T:System.Text.Json.JsonException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.text.json.jsonexception
+  name: JsonException
+  nameWithType: JsonException
+  fullName: System.Text.Json.JsonException
+- uid: AtfTIDE.HttpClient.GitHubClient.CreateOrganizationRepository*
+  commentId: Overload:AtfTIDE.HttpClient.GitHubClient.CreateOrganizationRepository
+  href: AtfTIDE.HttpClient.GitHubClient.html#AtfTIDE_HttpClient_GitHubClient_CreateOrganizationRepository_System_String_System_String_
+  name: CreateOrganizationRepository
+  nameWithType: GitHubClient.CreateOrganizationRepository
+  fullName: AtfTIDE.HttpClient.GitHubClient.CreateOrganizationRepository
+- uid: AtfTIDE.HttpClient.IGitHubClient.CreateOrganizationRepository(System.String,System.String)
+  commentId: M:AtfTIDE.HttpClient.IGitHubClient.CreateOrganizationRepository(System.String,System.String)
+  parent: AtfTIDE.HttpClient.IGitHubClient
+  isExternal: true
+  href: AtfTIDE.HttpClient.IGitHubClient.html#AtfTIDE_HttpClient_IGitHubClient_CreateOrganizationRepository_System_String_System_String_
+  name: CreateOrganizationRepository(string, string)
+  nameWithType: IGitHubClient.CreateOrganizationRepository(string, string)
+  fullName: AtfTIDE.HttpClient.IGitHubClient.CreateOrganizationRepository(string, string)
+  nameWithType.vb: IGitHubClient.CreateOrganizationRepository(String, String)
+  fullName.vb: AtfTIDE.HttpClient.IGitHubClient.CreateOrganizationRepository(String, String)
+  name.vb: CreateOrganizationRepository(String, String)
+  spec.csharp:
+  - uid: AtfTIDE.HttpClient.IGitHubClient.CreateOrganizationRepository(System.String,System.String)
+    name: CreateOrganizationRepository
+    href: AtfTIDE.HttpClient.IGitHubClient.html#AtfTIDE_HttpClient_IGitHubClient_CreateOrganizationRepository_System_String_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: AtfTIDE.HttpClient.IGitHubClient.CreateOrganizationRepository(System.String,System.String)
+    name: CreateOrganizationRepository
+    href: AtfTIDE.HttpClient.IGitHubClient.html#AtfTIDE_HttpClient_IGitHubClient_CreateOrganizationRepository_System_String_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Threading.Tasks.Task{AtfTIDE.HttpClient.GithubDto.Repository}
+  commentId: T:System.Threading.Tasks.Task{AtfTIDE.HttpClient.GithubDto.Repository}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<Repository>
+  nameWithType: Task<Repository>
+  fullName: System.Threading.Tasks.Task<AtfTIDE.HttpClient.GithubDto.Repository>
+  nameWithType.vb: Task(Of Repository)
+  fullName.vb: System.Threading.Tasks.Task(Of AtfTIDE.HttpClient.GithubDto.Repository)
+  name.vb: Task(Of Repository)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: AtfTIDE.HttpClient.GithubDto.Repository
+    name: Repository
+    href: AtfTIDE.HttpClient.GithubDto.Repository.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: AtfTIDE.HttpClient.GithubDto.Repository
+    name: Repository
+    href: AtfTIDE.HttpClient.GithubDto.Repository.html
+  - name: )
+- uid: AtfTIDE.HttpClient.GitHubClient.ListUserRepositories*
+  commentId: Overload:AtfTIDE.HttpClient.GitHubClient.ListUserRepositories
+  href: AtfTIDE.HttpClient.GitHubClient.html#AtfTIDE_HttpClient_GitHubClient_ListUserRepositories
+  name: ListUserRepositories
+  nameWithType: GitHubClient.ListUserRepositories
+  fullName: AtfTIDE.HttpClient.GitHubClient.ListUserRepositories
+- uid: AtfTIDE.HttpClient.IGitHubClient.ListUserRepositories
+  commentId: M:AtfTIDE.HttpClient.IGitHubClient.ListUserRepositories
+  parent: AtfTIDE.HttpClient.IGitHubClient
+  href: AtfTIDE.HttpClient.IGitHubClient.html#AtfTIDE_HttpClient_IGitHubClient_ListUserRepositories
+  name: ListUserRepositories()
+  nameWithType: IGitHubClient.ListUserRepositories()
+  fullName: AtfTIDE.HttpClient.IGitHubClient.ListUserRepositories()
+  spec.csharp:
+  - uid: AtfTIDE.HttpClient.IGitHubClient.ListUserRepositories
+    name: ListUserRepositories
+    href: AtfTIDE.HttpClient.IGitHubClient.html#AtfTIDE_HttpClient_IGitHubClient_ListUserRepositories
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: AtfTIDE.HttpClient.IGitHubClient.ListUserRepositories
+    name: ListUserRepositories
+    href: AtfTIDE.HttpClient.IGitHubClient.html#AtfTIDE_HttpClient_IGitHubClient_ListUserRepositories
+  - name: (
+  - name: )
+- uid: System.Threading.Tasks.Task{System.Object}
+  commentId: T:System.Threading.Tasks.Task{System.Object}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<object>
+  nameWithType: Task<object>
+  fullName: System.Threading.Tasks.Task<object>
+  nameWithType.vb: Task(Of Object)
+  fullName.vb: System.Threading.Tasks.Task(Of Object)
+  name.vb: Task(Of Object)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: AtfTIDE.HttpClient.GitHubClient.CreateUserRepository*
+  commentId: Overload:AtfTIDE.HttpClient.GitHubClient.CreateUserRepository
+  href: AtfTIDE.HttpClient.GitHubClient.html#AtfTIDE_HttpClient_GitHubClient_CreateUserRepository_System_String_
+  name: CreateUserRepository
+  nameWithType: GitHubClient.CreateUserRepository
+  fullName: AtfTIDE.HttpClient.GitHubClient.CreateUserRepository
+- uid: AtfTIDE.HttpClient.IGitHubClient.CreateUserRepository(System.String)
+  commentId: M:AtfTIDE.HttpClient.IGitHubClient.CreateUserRepository(System.String)
+  parent: AtfTIDE.HttpClient.IGitHubClient
+  isExternal: true
+  href: AtfTIDE.HttpClient.IGitHubClient.html#AtfTIDE_HttpClient_IGitHubClient_CreateUserRepository_System_String_
+  name: CreateUserRepository(string)
+  nameWithType: IGitHubClient.CreateUserRepository(string)
+  fullName: AtfTIDE.HttpClient.IGitHubClient.CreateUserRepository(string)
+  nameWithType.vb: IGitHubClient.CreateUserRepository(String)
+  fullName.vb: AtfTIDE.HttpClient.IGitHubClient.CreateUserRepository(String)
+  name.vb: CreateUserRepository(String)
+  spec.csharp:
+  - uid: AtfTIDE.HttpClient.IGitHubClient.CreateUserRepository(System.String)
+    name: CreateUserRepository
+    href: AtfTIDE.HttpClient.IGitHubClient.html#AtfTIDE_HttpClient_IGitHubClient_CreateUserRepository_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: AtfTIDE.HttpClient.IGitHubClient.CreateUserRepository(System.String)
+    name: CreateUserRepository
+    href: AtfTIDE.HttpClient.IGitHubClient.html#AtfTIDE_HttpClient_IGitHubClient_CreateUserRepository_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )

@@ -1,0 +1,140 @@
+﻿### YamlMime:ManagedReference
+items:
+- uid: AtfTIDE.ITextTransformer
+  commentId: T:AtfTIDE.ITextTransformer
+  id: ITextTransformer
+  parent: AtfTIDE
+  children:
+  - AtfTIDE.ITextTransformer.Transform(System.String)
+  - AtfTIDE.ITextTransformer.TransformWithLP(System.String)
+  langs:
+  - csharp
+  - vb
+  name: ITextTransformer
+  nameWithType: ITextTransformer
+  fullName: AtfTIDE.ITextTransformer
+  type: Interface
+  source:
+    remote:
+      path: packages/AtfTIDE/Files/cs/UrlAppender.cs
+      branch: main
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: ITextTransformer
+    path: ../packages/AtfTIDE/Files/cs/UrlAppender.cs
+    startLine: 7
+  assemblies:
+  - AtfTIDE
+  namespace: AtfTIDE
+  syntax:
+    content: public interface ITextTransformer
+    content.vb: Public Interface ITextTransformer
+- uid: AtfTIDE.ITextTransformer.Transform(System.String)
+  commentId: M:AtfTIDE.ITextTransformer.Transform(System.String)
+  id: Transform(System.String)
+  parent: AtfTIDE.ITextTransformer
+  langs:
+  - csharp
+  - vb
+  name: Transform(string)
+  nameWithType: ITextTransformer.Transform(string)
+  fullName: AtfTIDE.ITextTransformer.Transform(string)
+  type: Method
+  source:
+    remote:
+      path: packages/AtfTIDE/Files/cs/UrlAppender.cs
+      branch: main
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: Transform
+    path: ../packages/AtfTIDE/Files/cs/UrlAppender.cs
+    startLine: 9
+  assemblies:
+  - AtfTIDE
+  namespace: AtfTIDE
+  syntax:
+    content: string Transform(string text)
+    parameters:
+    - id: text
+      type: System.String
+    return:
+      type: System.String
+    content.vb: Function Transform(text As String) As String
+  overload: AtfTIDE.ITextTransformer.Transform*
+  nameWithType.vb: ITextTransformer.Transform(String)
+  fullName.vb: AtfTIDE.ITextTransformer.Transform(String)
+  name.vb: Transform(String)
+- uid: AtfTIDE.ITextTransformer.TransformWithLP(System.String)
+  commentId: M:AtfTIDE.ITextTransformer.TransformWithLP(System.String)
+  id: TransformWithLP(System.String)
+  parent: AtfTIDE.ITextTransformer
+  langs:
+  - csharp
+  - vb
+  name: TransformWithLP(string)
+  nameWithType: ITextTransformer.TransformWithLP(string)
+  fullName: AtfTIDE.ITextTransformer.TransformWithLP(string)
+  type: Method
+  source:
+    remote:
+      path: packages/AtfTIDE/Files/cs/UrlAppender.cs
+      branch: main
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: TransformWithLP
+    path: ../packages/AtfTIDE/Files/cs/UrlAppender.cs
+    startLine: 22
+  assemblies:
+  - AtfTIDE
+  namespace: AtfTIDE
+  summary: Appends UserName and Password from SysSettings
+  remarks: <ul><li>Uses value from <code>AtfUserNameForClio</code> sysSetting or <b><code>Supervisor</code></b></li><li>Uses value from <code>AtfPasswordForClio</code> sysSetting or <b><code>Supervisor</code></b></li></ul>
+  example: []
+  syntax:
+    content: string TransformWithLP(string text)
+    parameters:
+    - id: text
+      type: System.String
+      description: ''
+    return:
+      type: System.String
+      description: ''
+    content.vb: Function TransformWithLP(text As String) As String
+  overload: AtfTIDE.ITextTransformer.TransformWithLP*
+  nameWithType.vb: ITextTransformer.TransformWithLP(String)
+  fullName.vb: AtfTIDE.ITextTransformer.TransformWithLP(String)
+  name.vb: TransformWithLP(String)
+references:
+- uid: AtfTIDE
+  commentId: N:AtfTIDE
+  href: AtfTIDE.html
+  name: AtfTIDE
+  nameWithType: AtfTIDE
+  fullName: AtfTIDE
+- uid: AtfTIDE.ITextTransformer.Transform*
+  commentId: Overload:AtfTIDE.ITextTransformer.Transform
+  href: AtfTIDE.ITextTransformer.html#AtfTIDE_ITextTransformer_Transform_System_String_
+  name: Transform
+  nameWithType: ITextTransformer.Transform
+  fullName: AtfTIDE.ITextTransformer.Transform
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: AtfTIDE.ITextTransformer.TransformWithLP*
+  commentId: Overload:AtfTIDE.ITextTransformer.TransformWithLP
+  href: AtfTIDE.ITextTransformer.html#AtfTIDE_ITextTransformer_TransformWithLP_System_String_
+  name: TransformWithLP
+  nameWithType: ITextTransformer.TransformWithLP
+  fullName: AtfTIDE.ITextTransformer.TransformWithLP

@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/Advance-Technologies-Foundation/T.I.D.E./blob/feature/my-feature/documentation/docs/introduction.md/#L1">
+      <meta name="docfx:docurl" content="https://github.com/Advance-Technologies-Foundation/T.I.D.E./blob/main/documentation/docs/introduction.md/#L1">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -87,11 +87,33 @@
         <article data-uid="">
 <h1 id="introduction">Introduction</h1>
 
+<h2 id="tech-stack">Tech Stack</h2>
+<p>Tide is a Creatio Application wrapped in a clio workspace. The main artifact is AtfTIDE package.</p>
+<p>Tide enables execution of git commands from Creatio Interface.
+Solution consists of:</p>
+<ul>
+<li>Creatio Application</li>
+<li>Console Git</li>
+</ul>
+<p>AtfTIDE package contains <code>AtfTIDE/Files/exec/archive.zip</code> file, which is an archive of <code>Console Git</code> release build.</p>
+<p>When AtfTIDE is installed:</p>
+<ul>
+<li>[ ] Archived is unzipped and copied to <code>/conf/consolegit</code> folder of Creatio (see: <a href="../api/AtfTIDE.WebServices.Tide.html#AtfTIDE_WebServices_Tide_InstallConsoleGit"><code>/WebServices/Tide/InstallConsoleGit</code></a>)</li>
+<li>[x] Clio installed from Nuget on first webapp restart (see <a href="../api/AtfTIDE.AppEventListener.html#AtfTIDE_AppEventListener_OnAppStart_Terrasoft_Web_Common_AppEventContext_"><code>AppEventListener</code></a>)</li>
+</ul>
+<p><a href="../api/AtfTIDE.WebServices.Tide.html#AtfTIDE_WebServices_Tide_InstallConsoleGit">InstallConsoleGit</a></p>
+<h2 id="creatio-application">Creatio Application</h2>
+<h2 id="console-git">Console Git</h2>
+<p>ConsoleGit is a .NET8 (self-contained) console application that acts as a bridge between the Creatio interface and the underlying Git functionality.
+It receives commands from Creatio, executes corresponding Git operations using the <a href="https://github.com/libgit2/libgit2sharp">LibGit2Sharp</a> library,
+and returns results in a structured format.
+The project handles various Git actions such as cloning, committing, pushing, pulling, and status checks,
+enabling seamless integration of Git workflows within the Creatio environment.</p>
 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/Advance-Technologies-Foundation/T.I.D.E./blob/feature/my-feature/documentation/docs/introduction.md/#L1" class="edit-link">Edit this page</a>
+          <a href="https://github.com/Advance-Technologies-Foundation/T.I.D.E./blob/main/documentation/docs/introduction.md/#L1" class="edit-link">Edit this page</a>
         </div>
 
         <div class="next-article d-print-none border-top" id="nextArticle"></div>

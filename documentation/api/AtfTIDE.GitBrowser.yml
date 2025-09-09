@@ -1,0 +1,53 @@
+﻿### YamlMime:ManagedReference
+items:
+- uid: AtfTIDE.GitBrowser
+  commentId: N:AtfTIDE.GitBrowser
+  id: AtfTIDE.GitBrowser
+  children:
+  - AtfTIDE.GitBrowser.GitLabBrowser
+  - AtfTIDE.GitBrowser.Repository
+  langs:
+  - csharp
+  - vb
+  name: AtfTIDE.GitBrowser
+  nameWithType: AtfTIDE.GitBrowser
+  fullName: AtfTIDE.GitBrowser
+  type: Namespace
+  assemblies:
+  - AtfTIDE
+references:
+- uid: AtfTIDE.GitBrowser.Repository
+  commentId: T:AtfTIDE.GitBrowser.Repository
+  parent: AtfTIDE.GitBrowser
+  href: AtfTIDE.GitBrowser.Repository.html
+  name: Repository
+  nameWithType: Repository
+  fullName: AtfTIDE.GitBrowser.Repository
+- uid: AtfTIDE.GitBrowser.GitLabBrowser
+  commentId: T:AtfTIDE.GitBrowser.GitLabBrowser
+  href: AtfTIDE.GitBrowser.GitLabBrowser.html
+  name: GitLabBrowser
+  nameWithType: GitLabBrowser
+  fullName: AtfTIDE.GitBrowser.GitLabBrowser
+- uid: AtfTIDE.GitBrowser
+  commentId: N:AtfTIDE.GitBrowser
+  href: AtfTIDE.html
+  name: AtfTIDE.GitBrowser
+  nameWithType: AtfTIDE.GitBrowser
+  fullName: AtfTIDE.GitBrowser
+  spec.csharp:
+  - uid: AtfTIDE
+    name: AtfTIDE
+    href: AtfTIDE.html
+  - name: .
+  - uid: AtfTIDE.GitBrowser
+    name: GitBrowser
+    href: AtfTIDE.GitBrowser.html
+  spec.vb:
+  - uid: AtfTIDE
+    name: AtfTIDE
+    href: AtfTIDE.html
+  - name: .
+  - uid: AtfTIDE.GitBrowser
+    name: GitBrowser
+    href: AtfTIDE.GitBrowser.html

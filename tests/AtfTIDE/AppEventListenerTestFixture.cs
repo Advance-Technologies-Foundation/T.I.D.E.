@@ -9,6 +9,7 @@ using NSubstitute;
 using NUnit.Framework;
 using Terrasoft.Configuration.Tests;
 using Terrasoft.Core;
+using Terrasoft.Core.Configuration;
 using Terrasoft.Core.Factories;
 
 namespace AtfTIDE.Tests {
@@ -21,6 +22,12 @@ namespace AtfTIDE.Tests {
 			new List<Func<IServiceCollection,IServiceCollection>>();
 		private AppEventListener _sut;
 		
+		private Action InjectWebSocket => () => {
+			IWebSocket ws = Substitute.For<IWebSocket>();
+			InjectorWebSocket injectorWebSocket = new InjectorWebSocket(ws);
+			_injectedServices.Add(injectorWebSocket.AddMockWebSocket);
+			
+		};
 		protected override void SetUp(){
 			base.SetUp();
 			TideApp.Reset();
@@ -36,15 +43,17 @@ namespace AtfTIDE.Tests {
 				{"Version", "5.0.0"}
 			});
 			ClassFactory.RebindWithFactoryMethod(()=> (UserConnection)UserConnection);
-			
+			InjectWebSocket();
 			
 			_sut = new AppEventListener();
 		}
 		
 		[TestCase("4.0.0")]
-		public void AppEventListener_Should_Find_Version(string mockNugetVersion){ 
+		public void AppEventListener_Should_Find_Version(string mockNugetVersion){
+
+			// Arrange
 			IInstaller installerMock = Substitute.For<IInstaller>();
-			var success = Substitute.For<IErrorOr<Success>>();
+			IErrorOr<Success> success = Substitute.For<IErrorOr<Success>>();
 			installerMock.InstallClio().Returns(success);
 			
 			InjectorInstaller injectorInstaller = new InjectorInstaller(installerMock);
@@ -57,9 +66,22 @@ namespace AtfTIDE.Tests {
 			
 			InjectorNugetClient injectorNugetClient = new InjectorNugetClient(nugetClientMock);
 			_injectedServices.Add(injectorNugetClient.AddMockNugetClient);
-			
+
+			MockEntitySchemaWithColumns(nameof(SysSchema), new Dictionary<string, DataValueType>() {
+				{"CreatedOn",DataValueType.Guid},
+				{"ModifiedOn",DataValueType.Guid},
+				{"Name",DataValueType.Guid},
+				{"Caption",DataValueType.Guid},
+				{"ManagerName",DataValueType.Guid},
+				{"Descriptor",DataValueType.Guid},
+				{"MetaData",DataValueType.Guid},
+			});
+
+			// Act
 			_sut.OnAppStart(null);
-			
+
+
+			// Assert
 			// Verify that the installer service is never called when Clio is installed
 			installerMock.DidNotReceive().InstallClio();
 		}

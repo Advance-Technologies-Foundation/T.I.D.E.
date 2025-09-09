@@ -1,0 +1,186 @@
+﻿### YamlMime:ManagedReference
+items:
+- uid: AtfTIDE.HttpClient.IGitLabHttpClient
+  commentId: T:AtfTIDE.HttpClient.IGitLabHttpClient
+  id: IGitLabHttpClient
+  parent: AtfTIDE.HttpClient
+  children:
+  - AtfTIDE.HttpClient.IGitLabHttpClient.GetGoogle
+  langs:
+  - csharp
+  - vb
+  name: IGitLabHttpClient
+  nameWithType: IGitLabHttpClient
+  fullName: AtfTIDE.HttpClient.IGitLabHttpClient
+  type: Interface
+  source:
+    remote:
+      path: packages/AtfTIDE/Files/cs/HttpClient/GitLabClient.cs
+      branch: main
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: IGitLabHttpClient
+    path: ../packages/AtfTIDE/Files/cs/HttpClient/GitLabClient.cs
+    startLine: 4
+  assemblies:
+  - AtfTIDE
+  namespace: AtfTIDE.HttpClient
+  syntax:
+    content: public interface IGitLabHttpClient
+    content.vb: Public Interface IGitLabHttpClient
+- uid: AtfTIDE.HttpClient.IGitLabHttpClient.GetGoogle
+  commentId: M:AtfTIDE.HttpClient.IGitLabHttpClient.GetGoogle
+  id: GetGoogle
+  parent: AtfTIDE.HttpClient.IGitLabHttpClient
+  langs:
+  - csharp
+  - vb
+  name: GetGoogle()
+  nameWithType: IGitLabHttpClient.GetGoogle()
+  fullName: AtfTIDE.HttpClient.IGitLabHttpClient.GetGoogle()
+  type: Method
+  source:
+    remote:
+      path: packages/AtfTIDE/Files/cs/HttpClient/GitLabClient.cs
+      branch: main
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: GetGoogle
+    path: ../packages/AtfTIDE/Files/cs/HttpClient/GitLabClient.cs
+    startLine: 6
+  assemblies:
+  - AtfTIDE
+  namespace: AtfTIDE.HttpClient
+  syntax:
+    content: Task<string> GetGoogle()
+    return:
+      type: System.Threading.Tasks.Task{System.String}
+    content.vb: Function GetGoogle() As Task(Of String)
+  overload: AtfTIDE.HttpClient.IGitLabHttpClient.GetGoogle*
+references:
+- uid: AtfTIDE.HttpClient
+  commentId: N:AtfTIDE.HttpClient
+  href: AtfTIDE.html
+  name: AtfTIDE.HttpClient
+  nameWithType: AtfTIDE.HttpClient
+  fullName: AtfTIDE.HttpClient
+  spec.csharp:
+  - uid: AtfTIDE
+    name: AtfTIDE
+    href: AtfTIDE.html
+  - name: .
+  - uid: AtfTIDE.HttpClient
+    name: HttpClient
+    href: AtfTIDE.HttpClient.html
+  spec.vb:
+  - uid: AtfTIDE
+    name: AtfTIDE
+    href: AtfTIDE.html
+  - name: .
+  - uid: AtfTIDE.HttpClient
+    name: HttpClient
+    href: AtfTIDE.HttpClient.html
+- uid: AtfTIDE.HttpClient.IGitLabHttpClient.GetGoogle*
+  commentId: Overload:AtfTIDE.HttpClient.IGitLabHttpClient.GetGoogle
+  href: AtfTIDE.HttpClient.IGitLabHttpClient.html#AtfTIDE_HttpClient_IGitLabHttpClient_GetGoogle
+  name: GetGoogle
+  nameWithType: IGitLabHttpClient.GetGoogle
+  fullName: AtfTIDE.HttpClient.IGitLabHttpClient.GetGoogle
+- uid: System.Threading.Tasks.Task{System.String}
+  commentId: T:System.Threading.Tasks.Task{System.String}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<string>
+  nameWithType: Task<string>
+  fullName: System.Threading.Tasks.Task<string>
+  nameWithType.vb: Task(Of String)
+  fullName.vb: System.Threading.Tasks.Task(Of String)
+  name.vb: Task(Of String)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks

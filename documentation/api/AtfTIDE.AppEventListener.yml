@@ -1,0 +1,593 @@
+﻿### YamlMime:ManagedReference
+items:
+- uid: AtfTIDE.AppEventListener
+  commentId: T:AtfTIDE.AppEventListener
+  id: AppEventListener
+  parent: AtfTIDE
+  children:
+  - AtfTIDE.AppEventListener.OnAppEnd(Terrasoft.Web.Common.AppEventContext)
+  - AtfTIDE.AppEventListener.OnAppStart(Terrasoft.Web.Common.AppEventContext)
+  - AtfTIDE.AppEventListener.OnSessionEnd(Terrasoft.Web.Common.AppEventContext)
+  - AtfTIDE.AppEventListener.OnSessionStart(Terrasoft.Web.Common.AppEventContext)
+  langs:
+  - csharp
+  - vb
+  name: AppEventListener
+  nameWithType: AppEventListener
+  fullName: AtfTIDE.AppEventListener
+  type: Class
+  source:
+    remote:
+      path: packages/AtfTIDE/Files/cs/AppEventListener.cs
+      branch: main
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: AppEventListener
+    path: ../packages/AtfTIDE/Files/cs/AppEventListener.cs
+    startLine: 17
+  assemblies:
+  - AtfTIDE
+  namespace: AtfTIDE
+  syntax:
+    content: 'public class AppEventListener : IAppEventListener'
+    content.vb: Public Class AppEventListener Implements IAppEventListener
+  inheritance:
+  - System.Object
+  implements:
+  - Terrasoft.Web.Common.IAppEventListener
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: AtfTIDE.AppEventListener.OnAppStart(Terrasoft.Web.Common.AppEventContext)
+  commentId: M:AtfTIDE.AppEventListener.OnAppStart(Terrasoft.Web.Common.AppEventContext)
+  id: OnAppStart(Terrasoft.Web.Common.AppEventContext)
+  parent: AtfTIDE.AppEventListener
+  langs:
+  - csharp
+  - vb
+  name: OnAppStart(AppEventContext)
+  nameWithType: AppEventListener.OnAppStart(AppEventContext)
+  fullName: AtfTIDE.AppEventListener.OnAppStart(Terrasoft.Web.Common.AppEventContext)
+  type: Method
+  source:
+    remote:
+      path: packages/AtfTIDE/Files/cs/AppEventListener.cs
+      branch: main
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: OnAppStart
+    path: ../packages/AtfTIDE/Files/cs/AppEventListener.cs
+    startLine: 34
+  assemblies:
+  - AtfTIDE
+  namespace: AtfTIDE
+  summary: >-
+    Handles application startup: starts schema monitor, ensures Clio is installed,
+
+    checks for Clio and AtfTide updates, and updates related system settings.
+  remarks: >-
+    Updates system settings:
+
+    <ul><li><code>TideConsts.SysSettingClioPath</code> - absolute path to installed <code>clio.dll</code>.</li><li><code>AtfTideUpdateAvailable</code> - whether a newer NuGet version of AtfTide exists.</li><li><code>AtfClioUpdateAvailable</code> - whether a newer NuGet version of Clio exists.</li></ul>
+  example: []
+  syntax:
+    content: public void OnAppStart(AppEventContext context)
+    parameters:
+    - id: context
+      type: Terrasoft.Web.Common.AppEventContext
+    content.vb: Public Sub OnAppStart(context As AppEventContext)
+  overload: AtfTIDE.AppEventListener.OnAppStart*
+  implements:
+  - Terrasoft.Web.Common.IAppEventListener.OnAppStart(Terrasoft.Web.Common.AppEventContext)
+- uid: AtfTIDE.AppEventListener.OnAppEnd(Terrasoft.Web.Common.AppEventContext)
+  commentId: M:AtfTIDE.AppEventListener.OnAppEnd(Terrasoft.Web.Common.AppEventContext)
+  id: OnAppEnd(Terrasoft.Web.Common.AppEventContext)
+  parent: AtfTIDE.AppEventListener
+  langs:
+  - csharp
+  - vb
+  name: OnAppEnd(AppEventContext)
+  nameWithType: AppEventListener.OnAppEnd(AppEventContext)
+  fullName: AtfTIDE.AppEventListener.OnAppEnd(Terrasoft.Web.Common.AppEventContext)
+  type: Method
+  source:
+    remote:
+      path: packages/AtfTIDE/Files/cs/AppEventListener.cs
+      branch: main
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: OnAppEnd
+    path: ../packages/AtfTIDE/Files/cs/AppEventListener.cs
+    startLine: 180
+  assemblies:
+  - AtfTIDE
+  namespace: AtfTIDE
+  summary: 'Handles application end: stops the schema monitor thread safely.'
+  example: []
+  syntax:
+    content: public void OnAppEnd(AppEventContext context)
+    parameters:
+    - id: context
+      type: Terrasoft.Web.Common.AppEventContext
+    content.vb: Public Sub OnAppEnd(context As AppEventContext)
+  overload: AtfTIDE.AppEventListener.OnAppEnd*
+  implements:
+  - Terrasoft.Web.Common.IAppEventListener.OnAppEnd(Terrasoft.Web.Common.AppEventContext)
+- uid: AtfTIDE.AppEventListener.OnSessionStart(Terrasoft.Web.Common.AppEventContext)
+  commentId: M:AtfTIDE.AppEventListener.OnSessionStart(Terrasoft.Web.Common.AppEventContext)
+  id: OnSessionStart(Terrasoft.Web.Common.AppEventContext)
+  parent: AtfTIDE.AppEventListener
+  langs:
+  - csharp
+  - vb
+  name: OnSessionStart(AppEventContext)
+  nameWithType: AppEventListener.OnSessionStart(AppEventContext)
+  fullName: AtfTIDE.AppEventListener.OnSessionStart(Terrasoft.Web.Common.AppEventContext)
+  type: Method
+  source:
+    remote:
+      path: packages/AtfTIDE/Files/cs/AppEventListener.cs
+      branch: main
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: OnSessionStart
+    path: ../packages/AtfTIDE/Files/cs/AppEventListener.cs
+    startLine: 188
+  assemblies:
+  - AtfTIDE
+  namespace: AtfTIDE
+  example: []
+  syntax:
+    content: public void OnSessionStart(AppEventContext context)
+    parameters:
+    - id: context
+      type: Terrasoft.Web.Common.AppEventContext
+    content.vb: Public Sub OnSessionStart(context As AppEventContext)
+  overload: AtfTIDE.AppEventListener.OnSessionStart*
+  implements:
+  - Terrasoft.Web.Common.IAppEventListener.OnSessionStart(Terrasoft.Web.Common.AppEventContext)
+- uid: AtfTIDE.AppEventListener.OnSessionEnd(Terrasoft.Web.Common.AppEventContext)
+  commentId: M:AtfTIDE.AppEventListener.OnSessionEnd(Terrasoft.Web.Common.AppEventContext)
+  id: OnSessionEnd(Terrasoft.Web.Common.AppEventContext)
+  parent: AtfTIDE.AppEventListener
+  langs:
+  - csharp
+  - vb
+  name: OnSessionEnd(AppEventContext)
+  nameWithType: AppEventListener.OnSessionEnd(AppEventContext)
+  fullName: AtfTIDE.AppEventListener.OnSessionEnd(Terrasoft.Web.Common.AppEventContext)
+  type: Method
+  source:
+    remote:
+      path: packages/AtfTIDE/Files/cs/AppEventListener.cs
+      branch: main
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: OnSessionEnd
+    path: ../packages/AtfTIDE/Files/cs/AppEventListener.cs
+    startLine: 192
+  assemblies:
+  - AtfTIDE
+  namespace: AtfTIDE
+  example: []
+  syntax:
+    content: public void OnSessionEnd(AppEventContext context)
+    parameters:
+    - id: context
+      type: Terrasoft.Web.Common.AppEventContext
+    content.vb: Public Sub OnSessionEnd(context As AppEventContext)
+  overload: AtfTIDE.AppEventListener.OnSessionEnd*
+  implements:
+  - Terrasoft.Web.Common.IAppEventListener.OnSessionEnd(Terrasoft.Web.Common.AppEventContext)
+references:
+- uid: AtfTIDE
+  commentId: N:AtfTIDE
+  href: AtfTIDE.html
+  name: AtfTIDE
+  nameWithType: AtfTIDE
+  fullName: AtfTIDE
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: Terrasoft.Web.Common.IAppEventListener
+  commentId: T:Terrasoft.Web.Common.IAppEventListener
+  parent: Terrasoft.Web.Common
+  isExternal: true
+  name: IAppEventListener
+  nameWithType: IAppEventListener
+  fullName: Terrasoft.Web.Common.IAppEventListener
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Terrasoft.Web.Common
+  commentId: N:Terrasoft.Web.Common
+  isExternal: true
+  name: Terrasoft.Web.Common
+  nameWithType: Terrasoft.Web.Common
+  fullName: Terrasoft.Web.Common
+  spec.csharp:
+  - uid: Terrasoft
+    name: Terrasoft
+    isExternal: true
+  - name: .
+  - uid: Terrasoft.Web
+    name: Web
+    isExternal: true
+  - name: .
+  - uid: Terrasoft.Web.Common
+    name: Common
+    isExternal: true
+  spec.vb:
+  - uid: Terrasoft
+    name: Terrasoft
+    isExternal: true
+  - name: .
+  - uid: Terrasoft.Web
+    name: Web
+    isExternal: true
+  - name: .
+  - uid: Terrasoft.Web.Common
+    name: Common
+    isExternal: true
+- uid: AtfTIDE.AppEventListener.OnAppStart*
+  commentId: Overload:AtfTIDE.AppEventListener.OnAppStart
+  href: AtfTIDE.AppEventListener.html#AtfTIDE_AppEventListener_OnAppStart_Terrasoft_Web_Common_AppEventContext_
+  name: OnAppStart
+  nameWithType: AppEventListener.OnAppStart
+  fullName: AtfTIDE.AppEventListener.OnAppStart
+- uid: Terrasoft.Web.Common.IAppEventListener.OnAppStart(Terrasoft.Web.Common.AppEventContext)
+  commentId: M:Terrasoft.Web.Common.IAppEventListener.OnAppStart(Terrasoft.Web.Common.AppEventContext)
+  parent: Terrasoft.Web.Common.IAppEventListener
+  isExternal: true
+  name: OnAppStart(AppEventContext)
+  nameWithType: IAppEventListener.OnAppStart(AppEventContext)
+  fullName: Terrasoft.Web.Common.IAppEventListener.OnAppStart(Terrasoft.Web.Common.AppEventContext)
+  spec.csharp:
+  - uid: Terrasoft.Web.Common.IAppEventListener.OnAppStart(Terrasoft.Web.Common.AppEventContext)
+    name: OnAppStart
+    isExternal: true
+  - name: (
+  - uid: Terrasoft.Web.Common.AppEventContext
+    name: AppEventContext
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Terrasoft.Web.Common.IAppEventListener.OnAppStart(Terrasoft.Web.Common.AppEventContext)
+    name: OnAppStart
+    isExternal: true
+  - name: (
+  - uid: Terrasoft.Web.Common.AppEventContext
+    name: AppEventContext
+    isExternal: true
+  - name: )
+- uid: Terrasoft.Web.Common.AppEventContext
+  commentId: T:Terrasoft.Web.Common.AppEventContext
+  parent: Terrasoft.Web.Common
+  isExternal: true
+  name: AppEventContext
+  nameWithType: AppEventContext
+  fullName: Terrasoft.Web.Common.AppEventContext
+- uid: AtfTIDE.AppEventListener.OnAppEnd*
+  commentId: Overload:AtfTIDE.AppEventListener.OnAppEnd
+  href: AtfTIDE.AppEventListener.html#AtfTIDE_AppEventListener_OnAppEnd_Terrasoft_Web_Common_AppEventContext_
+  name: OnAppEnd
+  nameWithType: AppEventListener.OnAppEnd
+  fullName: AtfTIDE.AppEventListener.OnAppEnd
+- uid: Terrasoft.Web.Common.IAppEventListener.OnAppEnd(Terrasoft.Web.Common.AppEventContext)
+  commentId: M:Terrasoft.Web.Common.IAppEventListener.OnAppEnd(Terrasoft.Web.Common.AppEventContext)
+  parent: Terrasoft.Web.Common.IAppEventListener
+  isExternal: true
+  name: OnAppEnd(AppEventContext)
+  nameWithType: IAppEventListener.OnAppEnd(AppEventContext)
+  fullName: Terrasoft.Web.Common.IAppEventListener.OnAppEnd(Terrasoft.Web.Common.AppEventContext)
+  spec.csharp:
+  - uid: Terrasoft.Web.Common.IAppEventListener.OnAppEnd(Terrasoft.Web.Common.AppEventContext)
+    name: OnAppEnd
+    isExternal: true
+  - name: (
+  - uid: Terrasoft.Web.Common.AppEventContext
+    name: AppEventContext
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Terrasoft.Web.Common.IAppEventListener.OnAppEnd(Terrasoft.Web.Common.AppEventContext)
+    name: OnAppEnd
+    isExternal: true
+  - name: (
+  - uid: Terrasoft.Web.Common.AppEventContext
+    name: AppEventContext
+    isExternal: true
+  - name: )
+- uid: AtfTIDE.AppEventListener.OnSessionStart*
+  commentId: Overload:AtfTIDE.AppEventListener.OnSessionStart
+  href: AtfTIDE.AppEventListener.html#AtfTIDE_AppEventListener_OnSessionStart_Terrasoft_Web_Common_AppEventContext_
+  name: OnSessionStart
+  nameWithType: AppEventListener.OnSessionStart
+  fullName: AtfTIDE.AppEventListener.OnSessionStart
+- uid: Terrasoft.Web.Common.IAppEventListener.OnSessionStart(Terrasoft.Web.Common.AppEventContext)
+  commentId: M:Terrasoft.Web.Common.IAppEventListener.OnSessionStart(Terrasoft.Web.Common.AppEventContext)
+  parent: Terrasoft.Web.Common.IAppEventListener
+  isExternal: true
+  name: OnSessionStart(AppEventContext)
+  nameWithType: IAppEventListener.OnSessionStart(AppEventContext)
+  fullName: Terrasoft.Web.Common.IAppEventListener.OnSessionStart(Terrasoft.Web.Common.AppEventContext)
+  spec.csharp:
+  - uid: Terrasoft.Web.Common.IAppEventListener.OnSessionStart(Terrasoft.Web.Common.AppEventContext)
+    name: OnSessionStart
+    isExternal: true
+  - name: (
+  - uid: Terrasoft.Web.Common.AppEventContext
+    name: AppEventContext
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Terrasoft.Web.Common.IAppEventListener.OnSessionStart(Terrasoft.Web.Common.AppEventContext)
+    name: OnSessionStart
+    isExternal: true
+  - name: (
+  - uid: Terrasoft.Web.Common.AppEventContext
+    name: AppEventContext
+    isExternal: true
+  - name: )
+- uid: AtfTIDE.AppEventListener.OnSessionEnd*
+  commentId: Overload:AtfTIDE.AppEventListener.OnSessionEnd
+  href: AtfTIDE.AppEventListener.html#AtfTIDE_AppEventListener_OnSessionEnd_Terrasoft_Web_Common_AppEventContext_
+  name: OnSessionEnd
+  nameWithType: AppEventListener.OnSessionEnd
+  fullName: AtfTIDE.AppEventListener.OnSessionEnd
+- uid: Terrasoft.Web.Common.IAppEventListener.OnSessionEnd(Terrasoft.Web.Common.AppEventContext)
+  commentId: M:Terrasoft.Web.Common.IAppEventListener.OnSessionEnd(Terrasoft.Web.Common.AppEventContext)
+  parent: Terrasoft.Web.Common.IAppEventListener
+  isExternal: true
+  name: OnSessionEnd(AppEventContext)
+  nameWithType: IAppEventListener.OnSessionEnd(AppEventContext)
+  fullName: Terrasoft.Web.Common.IAppEventListener.OnSessionEnd(Terrasoft.Web.Common.AppEventContext)
+  spec.csharp:
+  - uid: Terrasoft.Web.Common.IAppEventListener.OnSessionEnd(Terrasoft.Web.Common.AppEventContext)
+    name: OnSessionEnd
+    isExternal: true
+  - name: (
+  - uid: Terrasoft.Web.Common.AppEventContext
+    name: AppEventContext
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Terrasoft.Web.Common.IAppEventListener.OnSessionEnd(Terrasoft.Web.Common.AppEventContext)
+    name: OnSessionEnd
+    isExternal: true
+  - name: (
+  - uid: Terrasoft.Web.Common.AppEventContext
+    name: AppEventContext
+    isExternal: true
+  - name: )

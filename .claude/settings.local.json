@@ -1,0 +1,18 @@
+﻿{
+  "permissions": {
+    "allow": [
+      "Bash(dotnet test:*)",
+      "Bash(del:*)",
+      "Bash(rm:*)",
+      "Bash(dotnet build:*)",
+      "Bash(dotnet new:*)",
+      "Bash(dotnet sln:*)"
+    ],
+    "deny": []
+  },
+  "enableAllProjectMcpServers": true,
+  "enabledMcpjsonServers": [
+    "mcp-atlassian",
+    "context7"
+  ]
+}

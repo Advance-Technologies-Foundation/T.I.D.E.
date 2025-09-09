@@ -31,11 +31,11 @@ namespace AtfTIDE.GitBrowser
 
 		public async Task<List<Repository>> GetAllRepositoriesAsync(string gitlabToken) {
 			var repositories = new ConcurrentBag<Repository>();
-			using (var client = new System.Net.Http.HttpClient()) {
+			using (System.Net.Http.HttpClient client = new System.Net.Http.HttpClient()) {
 				client.DefaultRequestHeaders.Add("Private-Token", gitlabToken);
 				int page = 1;
 				bool hasMorePages = true;
-				var tasks = new List<Task>();
+				List<Task> tasks = new List<Task>();
 				while (hasMorePages && repositories.Count < MaxRepositoryCount) {
 					var response = await client.GetAsync($"{_gitlabUrl}/api/v4/projects?per_page=100&page={page}");
 					if (response.IsSuccessStatusCode) {

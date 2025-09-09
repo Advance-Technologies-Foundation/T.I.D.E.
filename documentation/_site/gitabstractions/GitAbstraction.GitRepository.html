@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/Advance-Technologies-Foundation/T.I.D.E./new/feature/my-feature/apiSpec/new?filename=GitAbstraction_GitRepository.md&amp;value=---%0Auid%3A%20GitAbstraction.GitRepository%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="docfx:docurl" content="https://github.com/Advance-Technologies-Foundation/T.I.D.E./new/main/apiSpec/new?filename=GitAbstraction_GitRepository.md&amp;value=---%0Auid%3A%20GitAbstraction.GitRepository%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -89,7 +89,7 @@
 
 
   <h1 id="GitAbstraction_GitRepository" data-uid="GitAbstraction.GitRepository" class="text-break">
-Class GitRepository  <a class="header-action link-secondary" title="View source" href="https://github.com/Advance-Technologies-Foundation/T.I.D.E./blob/feature/my-feature/ConsoleGit/GitAbstraction/GitAbstraction.cs/#L10"><i class="bi bi-code-slash"></i></a>
+Class GitRepository  <a class="header-action link-secondary" title="View source" href="https://github.com/Advance-Technologies-Foundation/T.I.D.E./blob/main/ConsoleGit/GitAbstraction/GitAbstraction.cs/#L16"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -155,11 +155,42 @@ Class GitRepository  <a class="header-action link-secondary" title="View source"
 </h2>
 
 
+  <a id="GitAbstraction_GitRepository_AllBranches_" data-uid="GitAbstraction.GitRepository.AllBranches*"></a>
+
+  <h3 id="GitAbstraction_GitRepository_AllBranches" data-uid="GitAbstraction.GitRepository.AllBranches">
+  AllBranches
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Advance-Technologies-Foundation/T.I.D.E./blob/main/ConsoleGit/GitAbstraction/GitAbstraction.cs/#L38"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public BranchCollection AllBranches { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">BranchCollection</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="GitAbstraction_GitRepository_RepoDirectory_" data-uid="GitAbstraction.GitRepository.RepoDirectory*"></a>
 
   <h3 id="GitAbstraction_GitRepository_RepoDirectory" data-uid="GitAbstraction.GitRepository.RepoDirectory">
   RepoDirectory
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Advance-Technologies-Foundation/T.I.D.E./blob/feature/my-feature/ConsoleGit/GitAbstraction/GitAbstraction.cs/#L42"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Advance-Technologies-Foundation/T.I.D.E./blob/main/ConsoleGit/GitAbstraction/GitAbstraction.cs/#L49"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -194,7 +225,7 @@ Class GitRepository  <a class="header-action link-secondary" title="View source"
 
   <h3 id="GitAbstraction_GitRepository_AddAll" data-uid="GitAbstraction.GitRepository.AddAll">
   AddAll()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Advance-Technologies-Foundation/T.I.D.E./blob/feature/my-feature/ConsoleGit/GitAbstraction/GitAbstraction.cs/#L209"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Advance-Technologies-Foundation/T.I.D.E./blob/main/ConsoleGit/GitAbstraction/GitAbstraction.cs/#L307"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Stage all working directory changes
@@ -236,7 +267,7 @@ Adds all files to the staging area.</p>
 
   <h3 id="GitAbstraction_GitRepository_AddFile_System_String_" data-uid="GitAbstraction.GitRepository.AddFile(System.String)">
   AddFile(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Advance-Technologies-Foundation/T.I.D.E./blob/feature/my-feature/ConsoleGit/GitAbstraction/GitAbstraction.cs/#L220"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Advance-Technologies-Foundation/T.I.D.E./blob/main/ConsoleGit/GitAbstraction/GitAbstraction.cs/#L318"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Stage (add) a file in a repository that is checked out to the file system:</p>
@@ -280,7 +311,7 @@ Adds all files to the staging area.</p>
 
   <h3 id="GitAbstraction_GitRepository_CheckoutBranch_System_String_" data-uid="GitAbstraction.GitRepository.CheckoutBranch(System.String)">
   CheckoutBranch(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Advance-Technologies-Foundation/T.I.D.E./blob/feature/my-feature/ConsoleGit/GitAbstraction/GitAbstraction.cs/#L191"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Advance-Technologies-Foundation/T.I.D.E./blob/main/ConsoleGit/GitAbstraction/GitAbstraction.cs/#L284"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Checkout to existing branch by name</p>
@@ -324,7 +355,7 @@ Adds all files to the staging area.</p>
 
   <h3 id="GitAbstraction_GitRepository_Clone" data-uid="GitAbstraction.GitRepository.Clone">
   Clone()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Advance-Technologies-Foundation/T.I.D.E./blob/feature/my-feature/ConsoleGit/GitAbstraction/GitAbstraction.cs/#L89"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Advance-Technologies-Foundation/T.I.D.E./blob/main/ConsoleGit/GitAbstraction/GitAbstraction.cs/#L118"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Clones the repository to the specified directory.</p>
@@ -363,7 +394,7 @@ Adds all files to the staging area.</p>
 
   <h3 id="GitAbstraction_GitRepository_Commit_System_String_System_String_System_String_" data-uid="GitAbstraction.GitRepository.Commit(System.String,System.String,System.String)">
   Commit(string, string, string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Advance-Technologies-Foundation/T.I.D.E./blob/feature/my-feature/ConsoleGit/GitAbstraction/GitAbstraction.cs/#L234"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Advance-Technologies-Foundation/T.I.D.E./blob/main/ConsoleGit/GitAbstraction/GitAbstraction.cs/#L332"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Make a commit to a non-bare repository</p>
@@ -412,9 +443,9 @@ Adds all files to the staging area.</p>
 
   <a id="GitAbstraction_GitRepository_CreateBranch_" data-uid="GitAbstraction.GitRepository.CreateBranch*"></a>
 
-  <h3 id="GitAbstraction_GitRepository_CreateBranch_System_String_" data-uid="GitAbstraction.GitRepository.CreateBranch(System.String)">
-  CreateBranch(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Advance-Technologies-Foundation/T.I.D.E./blob/feature/my-feature/ConsoleGit/GitAbstraction/GitAbstraction.cs/#L258"><i class="bi bi-code-slash"></i></a>
+  <h3 id="GitAbstraction_GitRepository_CreateBranch_System_String_LibGit2Sharp_Commit_" data-uid="GitAbstraction.GitRepository.CreateBranch(System.String,LibGit2Sharp.Commit)">
+  CreateBranch(string, Commit)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Advance-Technologies-Foundation/T.I.D.E./blob/main/ConsoleGit/GitAbstraction/GitAbstraction.cs/#L360"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Creates a new branch pointing at the current HEAD.</p>
@@ -422,7 +453,7 @@ Adds all files to the staging area.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ErrorOr&lt;Branch&gt; CreateBranch(string branchName)</code></pre>
+    <pre><code class="lang-csharp hljs">public ErrorOr&lt;Branch&gt; CreateBranch(string branchName, Commit tip = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -430,6 +461,8 @@ Adds all files to the staging area.</p>
     <dt><code>branchName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd><p>The name of the new branch.</p>
 </dd>
+    <dt><code>tip</code> <span class="xref">Commit</span></dt>
+    <dd></dd>
   </dl>
 
   <h4 class="section">Returns</h4>
@@ -459,7 +492,7 @@ Adds all files to the staging area.</p>
 
   <h3 id="GitAbstraction_GitRepository_CreateBranchAndPublish_System_String_" data-uid="GitAbstraction.GitRepository.CreateBranchAndPublish(System.String)">
   CreateBranchAndPublish(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Advance-Technologies-Foundation/T.I.D.E./blob/feature/my-feature/ConsoleGit/GitAbstraction/GitAbstraction.cs/#L270"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Advance-Technologies-Foundation/T.I.D.E./blob/main/ConsoleGit/GitAbstraction/GitAbstraction.cs/#L373"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -495,7 +528,7 @@ Adds all files to the staging area.</p>
 
   <h3 id="GitAbstraction_GitRepository_DeleteBranch_System_String_" data-uid="GitAbstraction.GitRepository.DeleteBranch(System.String)">
   DeleteBranch(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Advance-Technologies-Foundation/T.I.D.E./blob/feature/my-feature/ConsoleGit/GitAbstraction/GitAbstraction.cs/#L280"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Advance-Technologies-Foundation/T.I.D.E./blob/main/ConsoleGit/GitAbstraction/GitAbstraction.cs/#L383"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -527,11 +560,42 @@ Adds all files to the staging area.</p>
 
 
 
+  <a id="GitAbstraction_GitRepository_DiscardFile_" data-uid="GitAbstraction.GitRepository.DiscardFile*"></a>
+
+  <h3 id="GitAbstraction_GitRepository_DiscardFile_System_String_" data-uid="GitAbstraction.GitRepository.DiscardFile(System.String)">
+  DiscardFile(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Advance-Technologies-Foundation/T.I.D.E./blob/main/ConsoleGit/GitAbstraction/GitAbstraction.cs/#L464"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void DiscardFile(string filePath)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>filePath</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
   <a id="GitAbstraction_GitRepository_Dispose_" data-uid="GitAbstraction.GitRepository.Dispose*"></a>
 
   <h3 id="GitAbstraction_GitRepository_Dispose" data-uid="GitAbstraction.GitRepository.Dispose">
   Dispose()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Advance-Technologies-Foundation/T.I.D.E./blob/feature/my-feature/ConsoleGit/GitAbstraction/GitAbstraction.cs/#L107"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Advance-Technologies-Foundation/T.I.D.E./blob/main/ConsoleGit/GitAbstraction/GitAbstraction.cs/#L198"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.</p>
@@ -554,11 +618,42 @@ Adds all files to the staging area.</p>
 
 
 
+  <a id="GitAbstraction_GitRepository_Fetch_" data-uid="GitAbstraction.GitRepository.Fetch*"></a>
+
+  <h3 id="GitAbstraction_GitRepository_Fetch" data-uid="GitAbstraction.GitRepository.Fetch">
+  Fetch()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Advance-Technologies-Foundation/T.I.D.E./blob/main/ConsoleGit/GitAbstraction/GitAbstraction.cs/#L176"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ErrorOr&lt;Success&gt; Fetch()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">ErrorOr</span>&lt;<span class="xref">Success</span>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="GitAbstraction_GitRepository_Finalize_" data-uid="GitAbstraction.GitRepository.Finalize*"></a>
 
   <h3 id="GitAbstraction_GitRepository_Finalize" data-uid="GitAbstraction.GitRepository.Finalize">
   ~GitRepository()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Advance-Technologies-Foundation/T.I.D.E./blob/feature/my-feature/ConsoleGit/GitAbstraction/GitAbstraction.cs/#L292"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Advance-Technologies-Foundation/T.I.D.E./blob/main/ConsoleGit/GitAbstraction/GitAbstraction.cs/#L460"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -580,11 +675,44 @@ Adds all files to the staging area.</p>
 
 
 
+  <a id="GitAbstraction_GitRepository_GetChangedFiles_" data-uid="GitAbstraction.GitRepository.GetChangedFiles*"></a>
+
+  <h3 id="GitAbstraction_GitRepository_GetChangedFiles" data-uid="GitAbstraction.GitRepository.GetChangedFiles">
+  GetChangedFiles()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Advance-Technologies-Foundation/T.I.D.E./blob/main/ConsoleGit/GitAbstraction/GitAbstraction.cs/#L440"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Return changes in working directory</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ErrorOr&lt;List&lt;ChangedFile&gt;&gt; GetChangedFiles()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">ErrorOr</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="GitAbstraction.ChangedFile.html">ChangedFile</a>&gt;&gt;</dt>
+    <dd><p>An <span class="xref">ErrorOr.ErrorOr&lt;TValue&gt;</span> indicating success or failure.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="GitAbstraction_GitRepository_GetCommits_" data-uid="GitAbstraction.GitRepository.GetCommits*"></a>
 
   <h3 id="GitAbstraction_GitRepository_GetCommits" data-uid="GitAbstraction.GitRepository.GetCommits">
   GetCommits()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Advance-Technologies-Foundation/T.I.D.E./blob/feature/my-feature/ConsoleGit/GitAbstraction/GitAbstraction.cs/#L245"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Advance-Technologies-Foundation/T.I.D.E./blob/main/ConsoleGit/GitAbstraction/GitAbstraction.cs/#L347"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -611,11 +739,44 @@ Adds all files to the staging area.</p>
 
 
 
+  <a id="GitAbstraction_GitRepository_GetDiff_" data-uid="GitAbstraction.GitRepository.GetDiff*"></a>
+
+  <h3 id="GitAbstraction_GitRepository_GetDiff" data-uid="GitAbstraction.GitRepository.GetDiff">
+  GetDiff()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Advance-Technologies-Foundation/T.I.D.E./blob/main/ConsoleGit/GitAbstraction/GitAbstraction.cs/#L401"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Return changes in index and working directory</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ErrorOr&lt;string&gt; GetDiff()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">ErrorOr</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd><p>An <span class="xref">ErrorOr.ErrorOr&lt;TValue&gt;</span> indicating success or failure.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="GitAbstraction_GitRepository_GetInstance_" data-uid="GitAbstraction.GitRepository.GetInstance*"></a>
 
   <h3 id="GitAbstraction_GitRepository_GetInstance_System_String_System_String_System_Uri_System_String_" data-uid="GitAbstraction.GitRepository.GetInstance(System.String,System.String,System.Uri,System.String)">
   GetInstance(string, string, Uri, string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Advance-Technologies-Foundation/T.I.D.E./blob/feature/my-feature/ConsoleGit/GitAbstraction/GitAbstraction.cs/#L77"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Advance-Technologies-Foundation/T.I.D.E./blob/main/ConsoleGit/GitAbstraction/GitAbstraction.cs/#L84"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets an instance of the <a class="xref" href="GitAbstraction.GitRepository.html">GitRepository</a> class.</p>
@@ -663,7 +824,7 @@ Adds all files to the staging area.</p>
 
   <h3 id="GitAbstraction_GitRepository_ListLocalBranches" data-uid="GitAbstraction.GitRepository.ListLocalBranches">
   ListLocalBranches()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Advance-Technologies-Foundation/T.I.D.E./blob/feature/my-feature/ConsoleGit/GitAbstraction/GitAbstraction.cs/#L119"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Advance-Technologies-Foundation/T.I.D.E./blob/main/ConsoleGit/GitAbstraction/GitAbstraction.cs/#L210"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Lists all local branches in the repository.</p>
@@ -702,7 +863,7 @@ Adds all files to the staging area.</p>
 
   <h3 id="GitAbstraction_GitRepository_PublishBranch_LibGit2Sharp_Branch_" data-uid="GitAbstraction.GitRepository.PublishBranch(LibGit2Sharp.Branch)">
   PublishBranch(Branch)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Advance-Technologies-Foundation/T.I.D.E./blob/feature/my-feature/ConsoleGit/GitAbstraction/GitAbstraction.cs/#L266"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Advance-Technologies-Foundation/T.I.D.E./blob/main/ConsoleGit/GitAbstraction/GitAbstraction.cs/#L369"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -738,7 +899,7 @@ Adds all files to the staging area.</p>
 
   <h3 id="GitAbstraction_GitRepository_Pull" data-uid="GitAbstraction.GitRepository.Pull">
   Pull()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Advance-Technologies-Foundation/T.I.D.E./blob/feature/my-feature/ConsoleGit/GitAbstraction/GitAbstraction.cs/#L138"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Advance-Technologies-Foundation/T.I.D.E./blob/main/ConsoleGit/GitAbstraction/GitAbstraction.cs/#L229"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Pulls the latest changes from the remote repository and merges them into the local repository.</p>
@@ -777,7 +938,7 @@ Adds all files to the staging area.</p>
 
   <h3 id="GitAbstraction_GitRepository_Push_LibGit2Sharp_Branch_" data-uid="GitAbstraction.GitRepository.Push(LibGit2Sharp.Branch)">
   Push(Branch)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Advance-Technologies-Foundation/T.I.D.E./blob/feature/my-feature/ConsoleGit/GitAbstraction/GitAbstraction.cs/#L176"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Advance-Technologies-Foundation/T.I.D.E./blob/main/ConsoleGit/GitAbstraction/GitAbstraction.cs/#L267"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Pushes the specified branch to the remote repository.</p>
@@ -822,7 +983,7 @@ Adds all files to the staging area.</p>
 
   <h3 id="GitAbstraction_GitRepository_Push_System_String_" data-uid="GitAbstraction.GitRepository.Push(System.String)">
   Push(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Advance-Technologies-Foundation/T.I.D.E./blob/feature/my-feature/ConsoleGit/GitAbstraction/GitAbstraction.cs/#L162"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Advance-Technologies-Foundation/T.I.D.E./blob/main/ConsoleGit/GitAbstraction/GitAbstraction.cs/#L253"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Pushes the specified branch to the remote repository.</p>
@@ -867,7 +1028,7 @@ Adds all files to the staging area.</p>
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/Advance-Technologies-Foundation/T.I.D.E./blob/feature/my-feature/ConsoleGit/GitAbstraction/GitAbstraction.cs/#L10" class="edit-link">Edit this page</a>
+          <a href="https://github.com/Advance-Technologies-Foundation/T.I.D.E./blob/main/ConsoleGit/GitAbstraction/GitAbstraction.cs/#L16" class="edit-link">Edit this page</a>
         </div>
 
 

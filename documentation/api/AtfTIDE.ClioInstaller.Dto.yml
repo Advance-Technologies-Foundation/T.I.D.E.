@@ -1,0 +1,82 @@
+﻿### YamlMime:ManagedReference
+items:
+- uid: AtfTIDE.ClioInstaller.Dto
+  commentId: N:AtfTIDE.ClioInstaller.Dto
+  id: AtfTIDE.ClioInstaller.Dto
+  children:
+  - AtfTIDE.ClioInstaller.Dto.Context
+  - AtfTIDE.ClioInstaller.Dto.Data
+  - AtfTIDE.ClioInstaller.Dto.PackageType
+  - AtfTIDE.ClioInstaller.Dto.SearchResponse
+  - AtfTIDE.ClioInstaller.Dto.Version
+  langs:
+  - csharp
+  - vb
+  name: AtfTIDE.ClioInstaller.Dto
+  nameWithType: AtfTIDE.ClioInstaller.Dto
+  fullName: AtfTIDE.ClioInstaller.Dto
+  type: Namespace
+  assemblies:
+  - AtfTIDE
+references:
+- uid: AtfTIDE.ClioInstaller.Dto.SearchResponse
+  commentId: T:AtfTIDE.ClioInstaller.Dto.SearchResponse
+  href: AtfTIDE.ClioInstaller.Dto.SearchResponse.html
+  name: SearchResponse
+  nameWithType: SearchResponse
+  fullName: AtfTIDE.ClioInstaller.Dto.SearchResponse
+- uid: AtfTIDE.ClioInstaller.Dto.Context
+  commentId: T:AtfTIDE.ClioInstaller.Dto.Context
+  parent: AtfTIDE.ClioInstaller.Dto
+  href: AtfTIDE.ClioInstaller.Dto.Context.html
+  name: Context
+  nameWithType: Context
+  fullName: AtfTIDE.ClioInstaller.Dto.Context
+- uid: AtfTIDE.ClioInstaller.Dto.Data
+  commentId: T:AtfTIDE.ClioInstaller.Dto.Data
+  href: AtfTIDE.ClioInstaller.Dto.Data.html
+  name: Data
+  nameWithType: Data
+  fullName: AtfTIDE.ClioInstaller.Dto.Data
+- uid: AtfTIDE.ClioInstaller.Dto.PackageType
+  commentId: T:AtfTIDE.ClioInstaller.Dto.PackageType
+  href: AtfTIDE.ClioInstaller.Dto.PackageType.html
+  name: PackageType
+  nameWithType: PackageType
+  fullName: AtfTIDE.ClioInstaller.Dto.PackageType
+- uid: AtfTIDE.ClioInstaller.Dto.Version
+  commentId: T:AtfTIDE.ClioInstaller.Dto.Version
+  href: AtfTIDE.ClioInstaller.Dto.Version.html
+  name: Version
+  nameWithType: Version
+  fullName: AtfTIDE.ClioInstaller.Dto.Version
+- uid: AtfTIDE.ClioInstaller.Dto
+  commentId: N:AtfTIDE.ClioInstaller.Dto
+  href: AtfTIDE.html
+  name: AtfTIDE.ClioInstaller.Dto
+  nameWithType: AtfTIDE.ClioInstaller.Dto
+  fullName: AtfTIDE.ClioInstaller.Dto
+  spec.csharp:
+  - uid: AtfTIDE
+    name: AtfTIDE
+    href: AtfTIDE.html
+  - name: .
+  - uid: AtfTIDE.ClioInstaller
+    name: ClioInstaller
+    href: AtfTIDE.ClioInstaller.html
+  - name: .
+  - uid: AtfTIDE.ClioInstaller.Dto
+    name: Dto
+    href: AtfTIDE.ClioInstaller.Dto.html
+  spec.vb:
+  - uid: AtfTIDE
+    name: AtfTIDE
+    href: AtfTIDE.html
+  - name: .
+  - uid: AtfTIDE.ClioInstaller
+    name: ClioInstaller
+    href: AtfTIDE.ClioInstaller.html
+  - name: .
+  - uid: AtfTIDE.ClioInstaller.Dto
+    name: Dto
+    href: AtfTIDE.ClioInstaller.Dto.html

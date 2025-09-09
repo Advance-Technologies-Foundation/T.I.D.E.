@@ -1,0 +1,10 @@
+﻿{
+  "Descriptor": {
+    "UId": "17e9e8c3-90f3-4ee5-9f45-619417e73683",
+    "Name": "AtfProcess_TIDE_Update_outdated_repos",
+    "ModifiedOnUtc": "\/Date(1757422341000)\/",
+    "ManagerName": "ProcessSchemaManager",
+    "Caption": "TIDE. Update outdated repos",
+    "DependsOn": []
+  }
+}

@@ -6,6 +6,10 @@ items:
   parent: AtfTIDE.WebServices
   children:
   - AtfTIDE.WebServices.Tide.CaptureClioArgs
+  - AtfTIDE.WebServices.Tide.DiscardFileChanges(AtfTIDE.WebServices.DiscardFileChangesDto)
+  - AtfTIDE.WebServices.Tide.GetDiffForRepository(System.Guid)
+  - AtfTIDE.WebServices.Tide.GetRepos(System.String)
+  - AtfTIDE.WebServices.Tide.InstallConsoleGit
   langs:
   - csharp
   - vb
@@ -16,11 +20,11 @@ items:
   source:
     remote:
       path: packages/AtfTIDE/Files/cs/WebServices/Tide.cs
-      branch: feature/my-feature
+      branch: main
       repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
     id: Tide
     path: ../packages/AtfTIDE/Files/cs/WebServices/Tide.cs
-    startLine: 23
+    startLine: 32
   assemblies:
   - AtfTIDE
   namespace: AtfTIDE.WebServices
@@ -36,19 +40,18 @@ items:
 
       [AspNetCompatibilityRequirements(RequirementsMode = AspNetCompatibilityRequirementsMode.Required)]
 
-      public class Tide : BaseService, IReadOnlySessionState, IRequiresSessionState
+      public class Tide : BaseService, IReadOnlySessionState
     content.vb: >-
       <ServiceContract>
 
       <AspNetCompatibilityRequirements(RequirementsMode:=AspNetCompatibilityRequirementsMode.Required)>
 
-      Public Class Tide Inherits BaseService Implements IReadOnlySessionState, IRequiresSessionState
+      Public Class Tide Inherits BaseService Implements IReadOnlySessionState
   inheritance:
   - System.Object
   - Terrasoft.Web.Common.BaseService
   implements:
   - System.Web.SessionState.IReadOnlySessionState
-  - System.Web.SessionState.IRequiresSessionState
   inheritedMembers:
   - Terrasoft.Web.Common.BaseService.GetUserConnection
   - Terrasoft.Web.Common.BaseService.UserIsAuthenticated
@@ -56,13 +59,13 @@ items:
   - Terrasoft.Web.Common.BaseService.UserConnection
   - Terrasoft.Web.Common.BaseService.Cache
   - Terrasoft.Web.Common.BaseService.HttpContextAccessor
-  - System.Object.ToString
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
-  - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.GetHashCode
   - System.Object.GetType
   - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
   attributes:
   - type: System.ServiceModel.ServiceContractAttribute
     ctor: System.ServiceModel.ServiceContractAttribute.#ctor
@@ -88,17 +91,23 @@ items:
   source:
     remote:
       path: packages/AtfTIDE/Files/cs/WebServices/Tide.cs
-      branch: feature/my-feature
+      branch: main
       repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
     id: CaptureClioArgs
     path: ../packages/AtfTIDE/Files/cs/WebServices/Tide.cs
-    startLine: 66
+    startLine: 150
   assemblies:
   - AtfTIDE
   namespace: AtfTIDE.WebServices
   summary: Captures and processes arguments required for <code>ConsoleGit.exe</code> functionality.
   remarks: >-
-    This endpoint is called from <strong><code>AtfTIDE_FormPage</code></strong> before start of any Business Process.
+    This endpoint is called from
+
+    <strong>
+        <code>AtfTIDE_FormPage</code>
+    </strong>
+
+    before start of any Business Process.
 
     It captures system and user information to be used in UserTasks of a process.
 
@@ -124,6 +133,292 @@ items:
 
       Public Sub CaptureClioArgs()
   overload: AtfTIDE.WebServices.Tide.CaptureClioArgs*
+  attributes:
+  - type: System.ServiceModel.OperationContractAttribute
+    ctor: System.ServiceModel.OperationContractAttribute.#ctor
+    arguments: []
+  - type: System.ServiceModel.Web.WebInvokeAttribute
+    ctor: System.ServiceModel.Web.WebInvokeAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Method
+      type: System.String
+      value: GET
+    - name: RequestFormat
+      type: System.ServiceModel.Web.WebMessageFormat
+      value: 1
+    - name: BodyStyle
+      type: System.ServiceModel.Web.WebMessageBodyStyle
+      value: 0
+    - name: ResponseFormat
+      type: System.ServiceModel.Web.WebMessageFormat
+      value: 1
+- uid: AtfTIDE.WebServices.Tide.DiscardFileChanges(AtfTIDE.WebServices.DiscardFileChangesDto)
+  commentId: M:AtfTIDE.WebServices.Tide.DiscardFileChanges(AtfTIDE.WebServices.DiscardFileChangesDto)
+  id: DiscardFileChanges(AtfTIDE.WebServices.DiscardFileChangesDto)
+  parent: AtfTIDE.WebServices.Tide
+  langs:
+  - csharp
+  - vb
+  name: DiscardFileChanges(DiscardFileChangesDto)
+  nameWithType: Tide.DiscardFileChanges(DiscardFileChangesDto)
+  fullName: AtfTIDE.WebServices.Tide.DiscardFileChanges(AtfTIDE.WebServices.DiscardFileChangesDto)
+  type: Method
+  source:
+    remote:
+      path: packages/AtfTIDE/Files/cs/WebServices/Tide.cs
+      branch: main
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: DiscardFileChanges
+    path: ../packages/AtfTIDE/Files/cs/WebServices/Tide.cs
+    startLine: 187
+  assemblies:
+  - AtfTIDE
+  namespace: AtfTIDE.WebServices
+  summary: Discards local (uncommitted) changes for the specified files in a repository using ConsoleGit.
+  remarks: >-
+    Accepts a JSON payload mapped to <xref href="AtfTIDE.WebServices.DiscardFileChangesDto" data-throw-if-not-resolved="false"></xref> with the target repository ID and an array of
+
+    file paths.
+
+    Forwards a discard command to the underlying git wrapper and returns a simple success marker.
+  example:
+  - >-
+    POST rest/Tide/DiscardFileChanges
+
+    {
+
+    "repositoryId": "11111111-1111-1111-1111-111111111111",
+
+    "files": ["Schemas/Account/Account.cs", "Schemas/Contact/Contact.cs"]
+
+    }
+  syntax:
+    content: >-
+      [OperationContract]
+
+      [WebInvoke(Method = "POST", RequestFormat = WebMessageFormat.Json, BodyStyle = WebMessageBodyStyle.Bare, ResponseFormat = WebMessageFormat.Json)]
+
+      public string DiscardFileChanges(DiscardFileChangesDto dto)
+    parameters:
+    - id: dto
+      type: AtfTIDE.WebServices.DiscardFileChangesDto
+    return:
+      type: System.String
+      description: "\"OK\" when the discard command is executed."
+    content.vb: >-
+      <OperationContract>
+
+      <WebInvoke(Method:="POST", RequestFormat:=WebMessageFormat.Json, BodyStyle:=WebMessageBodyStyle.Bare, ResponseFormat:=WebMessageFormat.Json)>
+
+      Public Function DiscardFileChanges(dto As DiscardFileChangesDto) As String
+  overload: AtfTIDE.WebServices.Tide.DiscardFileChanges*
+  attributes:
+  - type: System.ServiceModel.OperationContractAttribute
+    ctor: System.ServiceModel.OperationContractAttribute.#ctor
+    arguments: []
+  - type: System.ServiceModel.Web.WebInvokeAttribute
+    ctor: System.ServiceModel.Web.WebInvokeAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Method
+      type: System.String
+      value: POST
+    - name: RequestFormat
+      type: System.ServiceModel.Web.WebMessageFormat
+      value: 1
+    - name: BodyStyle
+      type: System.ServiceModel.Web.WebMessageBodyStyle
+      value: 0
+    - name: ResponseFormat
+      type: System.ServiceModel.Web.WebMessageFormat
+      value: 1
+- uid: AtfTIDE.WebServices.Tide.GetDiffForRepository(System.Guid)
+  commentId: M:AtfTIDE.WebServices.Tide.GetDiffForRepository(System.Guid)
+  id: GetDiffForRepository(System.Guid)
+  parent: AtfTIDE.WebServices.Tide
+  langs:
+  - csharp
+  - vb
+  name: GetDiffForRepository(Guid)
+  nameWithType: Tide.GetDiffForRepository(Guid)
+  fullName: AtfTIDE.WebServices.Tide.GetDiffForRepository(System.Guid)
+  type: Method
+  source:
+    remote:
+      path: packages/AtfTIDE/Files/cs/WebServices/Tide.cs
+      branch: main
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: GetDiffForRepository
+    path: ../packages/AtfTIDE/Files/cs/WebServices/Tide.cs
+    startLine: 214
+  assemblies:
+  - AtfTIDE
+  namespace: AtfTIDE.WebServices
+  summary: Returns a Git diff for the repository identified by <code class="paramref">repositoryId</code>.
+  remarks: Wraps the ConsoleGit GetDiff command. The result is the plain textual diff (unified format).
+  example: []
+  syntax:
+    content: >-
+      [OperationContract]
+
+      [WebInvoke(Method = "GET", RequestFormat = WebMessageFormat.Json, BodyStyle = WebMessageBodyStyle.Bare, ResponseFormat = WebMessageFormat.Json)]
+
+      public string GetDiffForRepository(Guid repositoryId)
+    parameters:
+    - id: repositoryId
+      type: System.Guid
+      description: Repository identifier whose working directory changes should be diffed.
+    return:
+      type: System.String
+      description: Raw diff text produced by the underlying ConsoleGit execution.
+    content.vb: >-
+      <OperationContract>
+
+      <WebInvoke(Method:="GET", RequestFormat:=WebMessageFormat.Json, BodyStyle:=WebMessageBodyStyle.Bare, ResponseFormat:=WebMessageFormat.Json)>
+
+      Public Function GetDiffForRepository(repositoryId As Guid) As String
+  overload: AtfTIDE.WebServices.Tide.GetDiffForRepository*
+  attributes:
+  - type: System.ServiceModel.OperationContractAttribute
+    ctor: System.ServiceModel.OperationContractAttribute.#ctor
+    arguments: []
+  - type: System.ServiceModel.Web.WebInvokeAttribute
+    ctor: System.ServiceModel.Web.WebInvokeAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Method
+      type: System.String
+      value: GET
+    - name: RequestFormat
+      type: System.ServiceModel.Web.WebMessageFormat
+      value: 1
+    - name: BodyStyle
+      type: System.ServiceModel.Web.WebMessageBodyStyle
+      value: 0
+    - name: ResponseFormat
+      type: System.ServiceModel.Web.WebMessageFormat
+      value: 1
+- uid: AtfTIDE.WebServices.Tide.GetRepos(System.String)
+  commentId: M:AtfTIDE.WebServices.Tide.GetRepos(System.String)
+  id: GetRepos(System.String)
+  parent: AtfTIDE.WebServices.Tide
+  langs:
+  - csharp
+  - vb
+  name: GetRepos(string)
+  nameWithType: Tide.GetRepos(string)
+  fullName: AtfTIDE.WebServices.Tide.GetRepos(string)
+  type: Method
+  source:
+    remote:
+      path: packages/AtfTIDE/Files/cs/WebServices/Tide.cs
+      branch: main
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: GetRepos
+    path: ../packages/AtfTIDE/Files/cs/WebServices/Tide.cs
+    startLine: 241
+  assemblies:
+  - AtfTIDE
+  namespace: AtfTIDE.WebServices
+  summary: Retrieves GitHub repositories for the specified organization (currently creates a test repository and returns it).
+  example:
+  - GET <code>rest/Tide/GetRepos?orgName=Creatio-COB</code> HTTP/1.1
+  syntax:
+    content: >-
+      [OperationContract]
+
+      [WebInvoke(Method = "GET", RequestFormat = WebMessageFormat.Json, BodyStyle = WebMessageBodyStyle.Bare, ResponseFormat = WebMessageFormat.Json)]
+
+      public List<Repository> GetRepos(string orgName)
+    parameters:
+    - id: orgName
+      type: System.String
+      description: GitHub organization name whose repositories should be listed.
+    return:
+      type: System.Collections.Generic.List{AtfTIDE.HttpClient.GithubDto.Repository}
+      description: List of repositories for the provided organization.
+    content.vb: >-
+      <OperationContract>
+
+      <WebInvoke(Method:="GET", RequestFormat:=WebMessageFormat.Json, BodyStyle:=WebMessageBodyStyle.Bare, ResponseFormat:=WebMessageFormat.Json)>
+
+      Public Function GetRepos(orgName As String) As List(Of Repository)
+  overload: AtfTIDE.WebServices.Tide.GetRepos*
+  attributes:
+  - type: System.ServiceModel.OperationContractAttribute
+    ctor: System.ServiceModel.OperationContractAttribute.#ctor
+    arguments: []
+  - type: System.ServiceModel.Web.WebInvokeAttribute
+    ctor: System.ServiceModel.Web.WebInvokeAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Method
+      type: System.String
+      value: GET
+    - name: RequestFormat
+      type: System.ServiceModel.Web.WebMessageFormat
+      value: 1
+    - name: BodyStyle
+      type: System.ServiceModel.Web.WebMessageBodyStyle
+      value: 0
+    - name: ResponseFormat
+      type: System.ServiceModel.Web.WebMessageFormat
+      value: 1
+  nameWithType.vb: Tide.GetRepos(String)
+  fullName.vb: AtfTIDE.WebServices.Tide.GetRepos(String)
+  name.vb: GetRepos(String)
+- uid: AtfTIDE.WebServices.Tide.InstallConsoleGit
+  commentId: M:AtfTIDE.WebServices.Tide.InstallConsoleGit
+  id: InstallConsoleGit
+  parent: AtfTIDE.WebServices.Tide
+  langs:
+  - csharp
+  - vb
+  name: InstallConsoleGit()
+  nameWithType: Tide.InstallConsoleGit()
+  fullName: AtfTIDE.WebServices.Tide.InstallConsoleGit()
+  type: Method
+  source:
+    remote:
+      path: packages/AtfTIDE/Files/cs/WebServices/Tide.cs
+      branch: main
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: InstallConsoleGit
+    path: ../packages/AtfTIDE/Files/cs/WebServices/Tide.cs
+    startLine: 268
+  assemblies:
+  - AtfTIDE
+  namespace: AtfTIDE.WebServices
+  summary: Installs the ConsoleGit tool by extracting it from an embedded archive.
+  remarks: >-
+    This endpoint extracts the ConsoleGit executable and its dependencies from an embedded archive
+
+    to a designated directory <code>conf/consolegit</code>. It performs cleanup by removing any existing installation before
+
+    extracting the new files.
+  example:
+  - >-
+    This endpoint can be called via a GET request:
+
+    GET <code>rest/Tide/InstallConsoleGit</code> HTTP/1.1
+  syntax:
+    content: >-
+      [OperationContract]
+
+      [WebInvoke(Method = "GET", RequestFormat = WebMessageFormat.Json, BodyStyle = WebMessageBodyStyle.Bare, ResponseFormat = WebMessageFormat.Json)]
+
+      public string InstallConsoleGit()
+    return:
+      type: System.String
+      description: Returns the path to the directory where ConsoleGit was installed.
+    content.vb: >-
+      <OperationContract>
+
+      <WebInvoke(Method:="GET", RequestFormat:=WebMessageFormat.Json, BodyStyle:=WebMessageBodyStyle.Bare, ResponseFormat:=WebMessageFormat.Json)>
+
+      Public Function InstallConsoleGit() As String
+  overload: AtfTIDE.WebServices.Tide.InstallConsoleGit*
   attributes:
   - type: System.ServiceModel.OperationContractAttribute
     ctor: System.ServiceModel.OperationContractAttribute.#ctor
@@ -189,18 +484,9 @@ references:
   commentId: T:System.Web.SessionState.IReadOnlySessionState
   parent: System.Web.SessionState
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.web.sessionstate.ireadonlysessionstate
   name: IReadOnlySessionState
   nameWithType: IReadOnlySessionState
   fullName: System.Web.SessionState.IReadOnlySessionState
-- uid: System.Web.SessionState.IRequiresSessionState
-  commentId: T:System.Web.SessionState.IRequiresSessionState
-  parent: System.Web.SessionState
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.web.sessionstate.irequiressessionstate
-  name: IRequiresSessionState
-  nameWithType: IRequiresSessionState
-  fullName: System.Web.SessionState.IRequiresSessionState
 - uid: Terrasoft.Web.Common.BaseService.GetUserConnection
   commentId: M:Terrasoft.Web.Common.BaseService.GetUserConnection
   parent: Terrasoft.Web.Common.BaseService
@@ -255,30 +541,6 @@ references:
   name: HttpContextAccessor
   nameWithType: BaseService.HttpContextAccessor
   fullName: Terrasoft.Web.Common.BaseService.HttpContextAccessor
-- uid: System.Object.ToString
-  commentId: M:System.Object.ToString
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
-  name: ToString()
-  nameWithType: object.ToString()
-  fullName: object.ToString()
-  nameWithType.vb: Object.ToString()
-  fullName.vb: Object.ToString()
-  spec.csharp:
-  - uid: System.Object.ToString
-    name: ToString
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: System.Object.ToString
-    name: ToString
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
-  - name: (
-  - name: )
 - uid: System.Object.Equals(System.Object)
   commentId: M:System.Object.Equals(System.Object)
   parent: System.Object
@@ -345,51 +607,6 @@ references:
     name: Equals
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
-  - name: (
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-- uid: System.Object.ReferenceEquals(System.Object,System.Object)
-  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
-  name: ReferenceEquals(object, object)
-  nameWithType: object.ReferenceEquals(object, object)
-  fullName: object.ReferenceEquals(object, object)
-  nameWithType.vb: Object.ReferenceEquals(Object, Object)
-  fullName.vb: Object.ReferenceEquals(Object, Object)
-  name.vb: ReferenceEquals(Object, Object)
-  spec.csharp:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
-  - name: (
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-  spec.vb:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
   - name: (
   - uid: System.Object
     name: Object
@@ -474,6 +691,75 @@ references:
     href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
   - name: (
   - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
 - uid: System
   commentId: N:System
   isExternal: true
@@ -514,7 +800,6 @@ references:
 - uid: System.Web.SessionState
   commentId: N:System.Web.SessionState
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system
   name: System.Web.SessionState
   nameWithType: System.Web.SessionState
   fullName: System.Web.SessionState
@@ -522,35 +807,177 @@ references:
   - uid: System
     name: System
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system
   - name: .
   - uid: System.Web
     name: Web
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.web
   - name: .
   - uid: System.Web.SessionState
     name: SessionState
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.web.sessionstate
   spec.vb:
   - uid: System
     name: System
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system
   - name: .
   - uid: System.Web
     name: Web
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.web
   - name: .
   - uid: System.Web.SessionState
     name: SessionState
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.web.sessionstate
 - uid: AtfTIDE.WebServices.Tide.CaptureClioArgs*
   commentId: Overload:AtfTIDE.WebServices.Tide.CaptureClioArgs
   href: AtfTIDE.WebServices.Tide.html#AtfTIDE_WebServices_Tide_CaptureClioArgs
   name: CaptureClioArgs
   nameWithType: Tide.CaptureClioArgs
   fullName: AtfTIDE.WebServices.Tide.CaptureClioArgs
+- uid: AtfTIDE.WebServices.DiscardFileChangesDto
+  commentId: T:AtfTIDE.WebServices.DiscardFileChangesDto
+  parent: AtfTIDE.WebServices
+  href: AtfTIDE.WebServices.DiscardFileChangesDto.html
+  name: DiscardFileChangesDto
+  nameWithType: DiscardFileChangesDto
+  fullName: AtfTIDE.WebServices.DiscardFileChangesDto
+- uid: AtfTIDE.WebServices.Tide.DiscardFileChanges*
+  commentId: Overload:AtfTIDE.WebServices.Tide.DiscardFileChanges
+  href: AtfTIDE.WebServices.Tide.html#AtfTIDE_WebServices_Tide_DiscardFileChanges_AtfTIDE_WebServices_DiscardFileChangesDto_
+  name: DiscardFileChanges
+  nameWithType: Tide.DiscardFileChanges
+  fullName: AtfTIDE.WebServices.Tide.DiscardFileChanges
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: AtfTIDE.WebServices.Tide.GetDiffForRepository*
+  commentId: Overload:AtfTIDE.WebServices.Tide.GetDiffForRepository
+  href: AtfTIDE.WebServices.Tide.html#AtfTIDE_WebServices_Tide_GetDiffForRepository_System_Guid_
+  name: GetDiffForRepository
+  nameWithType: Tide.GetDiffForRepository
+  fullName: AtfTIDE.WebServices.Tide.GetDiffForRepository
+- uid: System.Guid
+  commentId: T:System.Guid
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.guid
+  name: Guid
+  nameWithType: Guid
+  fullName: System.Guid
+- uid: AtfTIDE.WebServices.Tide.GetRepos*
+  commentId: Overload:AtfTIDE.WebServices.Tide.GetRepos
+  href: AtfTIDE.WebServices.Tide.html#AtfTIDE_WebServices_Tide_GetRepos_System_String_
+  name: GetRepos
+  nameWithType: Tide.GetRepos
+  fullName: AtfTIDE.WebServices.Tide.GetRepos
+- uid: System.Collections.Generic.List{AtfTIDE.HttpClient.GithubDto.Repository}
+  commentId: T:System.Collections.Generic.List{AtfTIDE.HttpClient.GithubDto.Repository}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<Repository>
+  nameWithType: List<Repository>
+  fullName: System.Collections.Generic.List<AtfTIDE.HttpClient.GithubDto.Repository>
+  nameWithType.vb: List(Of Repository)
+  fullName.vb: System.Collections.Generic.List(Of AtfTIDE.HttpClient.GithubDto.Repository)
+  name.vb: List(Of Repository)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: AtfTIDE.HttpClient.GithubDto.Repository
+    name: Repository
+    href: AtfTIDE.HttpClient.GithubDto.Repository.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: AtfTIDE.HttpClient.GithubDto.Repository
+    name: Repository
+    href: AtfTIDE.HttpClient.GithubDto.Repository.html
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: AtfTIDE.WebServices.Tide.InstallConsoleGit*
+  commentId: Overload:AtfTIDE.WebServices.Tide.InstallConsoleGit
+  href: AtfTIDE.WebServices.Tide.html#AtfTIDE_WebServices_Tide_InstallConsoleGit
+  name: InstallConsoleGit
+  nameWithType: Tide.InstallConsoleGit
+  fullName: AtfTIDE.WebServices.Tide.InstallConsoleGit

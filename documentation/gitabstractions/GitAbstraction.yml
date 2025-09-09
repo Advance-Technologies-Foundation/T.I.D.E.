@@ -4,6 +4,7 @@ items:
   commentId: N:GitAbstraction
   id: GitAbstraction
   children:
+  - GitAbstraction.ChangedFile
   - GitAbstraction.ExToErrorParser
   - GitAbstraction.GitRepository
   langs:
@@ -29,6 +30,12 @@ references:
   name: GitRepository
   nameWithType: GitRepository
   fullName: GitAbstraction.GitRepository
+- uid: GitAbstraction.ChangedFile
+  commentId: T:GitAbstraction.ChangedFile
+  href: GitAbstraction.ChangedFile.html
+  name: ChangedFile
+  nameWithType: ChangedFile
+  fullName: GitAbstraction.ChangedFile
 - uid: GitAbstraction
   commentId: N:GitAbstraction
   href: GitAbstraction.html

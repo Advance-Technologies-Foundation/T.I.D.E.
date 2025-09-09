@@ -1,0 +1,1423 @@
+﻿### YamlMime:ManagedReference
+items:
+- uid: AtfTIDE.ClioInstaller.Dto.Data
+  commentId: T:AtfTIDE.ClioInstaller.Dto.Data
+  id: Data
+  parent: AtfTIDE.ClioInstaller.Dto
+  children:
+  - AtfTIDE.ClioInstaller.Dto.Data.Id
+  - AtfTIDE.ClioInstaller.Dto.Data.LicenseUrl
+  - AtfTIDE.ClioInstaller.Dto.Data.Owners
+  - AtfTIDE.ClioInstaller.Dto.Data.PackageIdId
+  - AtfTIDE.ClioInstaller.Dto.Data.PackageTypes
+  - AtfTIDE.ClioInstaller.Dto.Data.ProjectUrl
+  - AtfTIDE.ClioInstaller.Dto.Data.Registration
+  - AtfTIDE.ClioInstaller.Dto.Data.Summary
+  - AtfTIDE.ClioInstaller.Dto.Data.Tags
+  - AtfTIDE.ClioInstaller.Dto.Data.Title
+  - AtfTIDE.ClioInstaller.Dto.Data.TotalDownloads
+  - AtfTIDE.ClioInstaller.Dto.Data.Type
+  - AtfTIDE.ClioInstaller.Dto.Data.Verified
+  - AtfTIDE.ClioInstaller.Dto.Data.Version
+  - AtfTIDE.ClioInstaller.Dto.Data.Versions
+  - AtfTIDE.ClioInstaller.Dto.Data.Vulnerabilities
+  - AtfTIDE.ClioInstaller.Dto.Data.authors
+  - AtfTIDE.ClioInstaller.Dto.Data.description
+  langs:
+  - csharp
+  - vb
+  name: Data
+  nameWithType: Data
+  fullName: AtfTIDE.ClioInstaller.Dto.Data
+  type: Class
+  source:
+    remote:
+      path: packages/AtfTIDE/Files/cs/ClioInstaller/Dto/SearchResponse.cs
+      branch: main
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: Data
+    path: ../packages/AtfTIDE/Files/cs/ClioInstaller/Dto/SearchResponse.cs
+    startLine: 37
+  assemblies:
+  - AtfTIDE
+  namespace: AtfTIDE.ClioInstaller.Dto
+  syntax:
+    content: public class Data
+    content.vb: Public Class Data
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: AtfTIDE.ClioInstaller.Dto.Data.Id
+  commentId: P:AtfTIDE.ClioInstaller.Dto.Data.Id
+  id: Id
+  parent: AtfTIDE.ClioInstaller.Dto.Data
+  langs:
+  - csharp
+  - vb
+  name: Id
+  nameWithType: Data.Id
+  fullName: AtfTIDE.ClioInstaller.Dto.Data.Id
+  type: Property
+  source:
+    remote:
+      path: packages/AtfTIDE/Files/cs/ClioInstaller/Dto/SearchResponse.cs
+      branch: main
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: Id
+    path: ../packages/AtfTIDE/Files/cs/ClioInstaller/Dto/SearchResponse.cs
+    startLine: 41
+  assemblies:
+  - AtfTIDE
+  namespace: AtfTIDE.ClioInstaller.Dto
+  syntax:
+    content: >-
+      [JsonPropertyName("@id")]
+
+      public string Id { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonPropertyName("@id")>
+
+      Public Property Id As String
+  overload: AtfTIDE.ClioInstaller.Dto.Data.Id*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: '@id'
+- uid: AtfTIDE.ClioInstaller.Dto.Data.Type
+  commentId: P:AtfTIDE.ClioInstaller.Dto.Data.Type
+  id: Type
+  parent: AtfTIDE.ClioInstaller.Dto.Data
+  langs:
+  - csharp
+  - vb
+  name: Type
+  nameWithType: Data.Type
+  fullName: AtfTIDE.ClioInstaller.Dto.Data.Type
+  type: Property
+  source:
+    remote:
+      path: packages/AtfTIDE/Files/cs/ClioInstaller/Dto/SearchResponse.cs
+      branch: main
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: Type
+    path: ../packages/AtfTIDE/Files/cs/ClioInstaller/Dto/SearchResponse.cs
+    startLine: 44
+  assemblies:
+  - AtfTIDE
+  namespace: AtfTIDE.ClioInstaller.Dto
+  syntax:
+    content: >-
+      [JsonPropertyName("@type")]
+
+      public string Type { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonPropertyName("@type")>
+
+      Public Property Type As String
+  overload: AtfTIDE.ClioInstaller.Dto.Data.Type*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: '@type'
+- uid: AtfTIDE.ClioInstaller.Dto.Data.authors
+  commentId: P:AtfTIDE.ClioInstaller.Dto.Data.authors
+  id: authors
+  parent: AtfTIDE.ClioInstaller.Dto.Data
+  langs:
+  - csharp
+  - vb
+  name: authors
+  nameWithType: Data.authors
+  fullName: AtfTIDE.ClioInstaller.Dto.Data.authors
+  type: Property
+  source:
+    remote:
+      path: packages/AtfTIDE/Files/cs/ClioInstaller/Dto/SearchResponse.cs
+      branch: main
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: authors
+    path: ../packages/AtfTIDE/Files/cs/ClioInstaller/Dto/SearchResponse.cs
+    startLine: 47
+  assemblies:
+  - AtfTIDE
+  namespace: AtfTIDE.ClioInstaller.Dto
+  syntax:
+    content: >-
+      [JsonPropertyName("authors")]
+
+      public string[] authors { get; set; }
+    parameters: []
+    return:
+      type: System.String[]
+    content.vb: >-
+      <JsonPropertyName("authors")>
+
+      Public Property authors As String()
+  overload: AtfTIDE.ClioInstaller.Dto.Data.authors*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: authors
+- uid: AtfTIDE.ClioInstaller.Dto.Data.description
+  commentId: P:AtfTIDE.ClioInstaller.Dto.Data.description
+  id: description
+  parent: AtfTIDE.ClioInstaller.Dto.Data
+  langs:
+  - csharp
+  - vb
+  name: description
+  nameWithType: Data.description
+  fullName: AtfTIDE.ClioInstaller.Dto.Data.description
+  type: Property
+  source:
+    remote:
+      path: packages/AtfTIDE/Files/cs/ClioInstaller/Dto/SearchResponse.cs
+      branch: main
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: description
+    path: ../packages/AtfTIDE/Files/cs/ClioInstaller/Dto/SearchResponse.cs
+    startLine: 50
+  assemblies:
+  - AtfTIDE
+  namespace: AtfTIDE.ClioInstaller.Dto
+  syntax:
+    content: >-
+      [JsonPropertyName("description")]
+
+      public string description { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonPropertyName("description")>
+
+      Public Property description As String
+  overload: AtfTIDE.ClioInstaller.Dto.Data.description*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: description
+- uid: AtfTIDE.ClioInstaller.Dto.Data.PackageIdId
+  commentId: P:AtfTIDE.ClioInstaller.Dto.Data.PackageIdId
+  id: PackageIdId
+  parent: AtfTIDE.ClioInstaller.Dto.Data
+  langs:
+  - csharp
+  - vb
+  name: PackageIdId
+  nameWithType: Data.PackageIdId
+  fullName: AtfTIDE.ClioInstaller.Dto.Data.PackageIdId
+  type: Property
+  source:
+    remote:
+      path: packages/AtfTIDE/Files/cs/ClioInstaller/Dto/SearchResponse.cs
+      branch: main
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: PackageIdId
+    path: ../packages/AtfTIDE/Files/cs/ClioInstaller/Dto/SearchResponse.cs
+    startLine: 53
+  assemblies:
+  - AtfTIDE
+  namespace: AtfTIDE.ClioInstaller.Dto
+  syntax:
+    content: >-
+      [JsonPropertyName("id")]
+
+      public string PackageIdId { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonPropertyName("id")>
+
+      Public Property PackageIdId As String
+  overload: AtfTIDE.ClioInstaller.Dto.Data.PackageIdId*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: id
+- uid: AtfTIDE.ClioInstaller.Dto.Data.LicenseUrl
+  commentId: P:AtfTIDE.ClioInstaller.Dto.Data.LicenseUrl
+  id: LicenseUrl
+  parent: AtfTIDE.ClioInstaller.Dto.Data
+  langs:
+  - csharp
+  - vb
+  name: LicenseUrl
+  nameWithType: Data.LicenseUrl
+  fullName: AtfTIDE.ClioInstaller.Dto.Data.LicenseUrl
+  type: Property
+  source:
+    remote:
+      path: packages/AtfTIDE/Files/cs/ClioInstaller/Dto/SearchResponse.cs
+      branch: main
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: LicenseUrl
+    path: ../packages/AtfTIDE/Files/cs/ClioInstaller/Dto/SearchResponse.cs
+    startLine: 56
+  assemblies:
+  - AtfTIDE
+  namespace: AtfTIDE.ClioInstaller.Dto
+  syntax:
+    content: >-
+      [JsonPropertyName("licenseUrl")]
+
+      public string LicenseUrl { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonPropertyName("licenseUrl")>
+
+      Public Property LicenseUrl As String
+  overload: AtfTIDE.ClioInstaller.Dto.Data.LicenseUrl*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: licenseUrl
+- uid: AtfTIDE.ClioInstaller.Dto.Data.Owners
+  commentId: P:AtfTIDE.ClioInstaller.Dto.Data.Owners
+  id: Owners
+  parent: AtfTIDE.ClioInstaller.Dto.Data
+  langs:
+  - csharp
+  - vb
+  name: Owners
+  nameWithType: Data.Owners
+  fullName: AtfTIDE.ClioInstaller.Dto.Data.Owners
+  type: Property
+  source:
+    remote:
+      path: packages/AtfTIDE/Files/cs/ClioInstaller/Dto/SearchResponse.cs
+      branch: main
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: Owners
+    path: ../packages/AtfTIDE/Files/cs/ClioInstaller/Dto/SearchResponse.cs
+    startLine: 59
+  assemblies:
+  - AtfTIDE
+  namespace: AtfTIDE.ClioInstaller.Dto
+  syntax:
+    content: >-
+      [JsonPropertyName("owners")]
+
+      public IEnumerable<string> Owners { get; set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IEnumerable{System.String}
+    content.vb: >-
+      <JsonPropertyName("owners")>
+
+      Public Property Owners As IEnumerable(Of String)
+  overload: AtfTIDE.ClioInstaller.Dto.Data.Owners*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: owners
+- uid: AtfTIDE.ClioInstaller.Dto.Data.PackageTypes
+  commentId: P:AtfTIDE.ClioInstaller.Dto.Data.PackageTypes
+  id: PackageTypes
+  parent: AtfTIDE.ClioInstaller.Dto.Data
+  langs:
+  - csharp
+  - vb
+  name: PackageTypes
+  nameWithType: Data.PackageTypes
+  fullName: AtfTIDE.ClioInstaller.Dto.Data.PackageTypes
+  type: Property
+  source:
+    remote:
+      path: packages/AtfTIDE/Files/cs/ClioInstaller/Dto/SearchResponse.cs
+      branch: main
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: PackageTypes
+    path: ../packages/AtfTIDE/Files/cs/ClioInstaller/Dto/SearchResponse.cs
+    startLine: 62
+  assemblies:
+  - AtfTIDE
+  namespace: AtfTIDE.ClioInstaller.Dto
+  syntax:
+    content: >-
+      [JsonPropertyName("packageTypes")]
+
+      public IEnumerable<PackageType> PackageTypes { get; set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IEnumerable{AtfTIDE.ClioInstaller.Dto.PackageType}
+    content.vb: >-
+      <JsonPropertyName("packageTypes")>
+
+      Public Property PackageTypes As IEnumerable(Of PackageType)
+  overload: AtfTIDE.ClioInstaller.Dto.Data.PackageTypes*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: packageTypes
+- uid: AtfTIDE.ClioInstaller.Dto.Data.ProjectUrl
+  commentId: P:AtfTIDE.ClioInstaller.Dto.Data.ProjectUrl
+  id: ProjectUrl
+  parent: AtfTIDE.ClioInstaller.Dto.Data
+  langs:
+  - csharp
+  - vb
+  name: ProjectUrl
+  nameWithType: Data.ProjectUrl
+  fullName: AtfTIDE.ClioInstaller.Dto.Data.ProjectUrl
+  type: Property
+  source:
+    remote:
+      path: packages/AtfTIDE/Files/cs/ClioInstaller/Dto/SearchResponse.cs
+      branch: main
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: ProjectUrl
+    path: ../packages/AtfTIDE/Files/cs/ClioInstaller/Dto/SearchResponse.cs
+    startLine: 65
+  assemblies:
+  - AtfTIDE
+  namespace: AtfTIDE.ClioInstaller.Dto
+  syntax:
+    content: >-
+      [JsonPropertyName("projectUrl")]
+
+      public Uri ProjectUrl { get; set; }
+    parameters: []
+    return:
+      type: System.Uri
+    content.vb: >-
+      <JsonPropertyName("projectUrl")>
+
+      Public Property ProjectUrl As Uri
+  overload: AtfTIDE.ClioInstaller.Dto.Data.ProjectUrl*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: projectUrl
+- uid: AtfTIDE.ClioInstaller.Dto.Data.Registration
+  commentId: P:AtfTIDE.ClioInstaller.Dto.Data.Registration
+  id: Registration
+  parent: AtfTIDE.ClioInstaller.Dto.Data
+  langs:
+  - csharp
+  - vb
+  name: Registration
+  nameWithType: Data.Registration
+  fullName: AtfTIDE.ClioInstaller.Dto.Data.Registration
+  type: Property
+  source:
+    remote:
+      path: packages/AtfTIDE/Files/cs/ClioInstaller/Dto/SearchResponse.cs
+      branch: main
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: Registration
+    path: ../packages/AtfTIDE/Files/cs/ClioInstaller/Dto/SearchResponse.cs
+    startLine: 68
+  assemblies:
+  - AtfTIDE
+  namespace: AtfTIDE.ClioInstaller.Dto
+  syntax:
+    content: >-
+      [JsonPropertyName("registration")]
+
+      public Uri Registration { get; set; }
+    parameters: []
+    return:
+      type: System.Uri
+    content.vb: >-
+      <JsonPropertyName("registration")>
+
+      Public Property Registration As Uri
+  overload: AtfTIDE.ClioInstaller.Dto.Data.Registration*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: registration
+- uid: AtfTIDE.ClioInstaller.Dto.Data.Summary
+  commentId: P:AtfTIDE.ClioInstaller.Dto.Data.Summary
+  id: Summary
+  parent: AtfTIDE.ClioInstaller.Dto.Data
+  langs:
+  - csharp
+  - vb
+  name: Summary
+  nameWithType: Data.Summary
+  fullName: AtfTIDE.ClioInstaller.Dto.Data.Summary
+  type: Property
+  source:
+    remote:
+      path: packages/AtfTIDE/Files/cs/ClioInstaller/Dto/SearchResponse.cs
+      branch: main
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: Summary
+    path: ../packages/AtfTIDE/Files/cs/ClioInstaller/Dto/SearchResponse.cs
+    startLine: 71
+  assemblies:
+  - AtfTIDE
+  namespace: AtfTIDE.ClioInstaller.Dto
+  syntax:
+    content: >-
+      [JsonPropertyName("summary")]
+
+      public string Summary { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonPropertyName("summary")>
+
+      Public Property Summary As String
+  overload: AtfTIDE.ClioInstaller.Dto.Data.Summary*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: summary
+- uid: AtfTIDE.ClioInstaller.Dto.Data.Tags
+  commentId: P:AtfTIDE.ClioInstaller.Dto.Data.Tags
+  id: Tags
+  parent: AtfTIDE.ClioInstaller.Dto.Data
+  langs:
+  - csharp
+  - vb
+  name: Tags
+  nameWithType: Data.Tags
+  fullName: AtfTIDE.ClioInstaller.Dto.Data.Tags
+  type: Property
+  source:
+    remote:
+      path: packages/AtfTIDE/Files/cs/ClioInstaller/Dto/SearchResponse.cs
+      branch: main
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: Tags
+    path: ../packages/AtfTIDE/Files/cs/ClioInstaller/Dto/SearchResponse.cs
+    startLine: 74
+  assemblies:
+  - AtfTIDE
+  namespace: AtfTIDE.ClioInstaller.Dto
+  syntax:
+    content: >-
+      [JsonPropertyName("tags")]
+
+      public IEnumerable<string> Tags { get; set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IEnumerable{System.String}
+    content.vb: >-
+      <JsonPropertyName("tags")>
+
+      Public Property Tags As IEnumerable(Of String)
+  overload: AtfTIDE.ClioInstaller.Dto.Data.Tags*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: tags
+- uid: AtfTIDE.ClioInstaller.Dto.Data.Title
+  commentId: P:AtfTIDE.ClioInstaller.Dto.Data.Title
+  id: Title
+  parent: AtfTIDE.ClioInstaller.Dto.Data
+  langs:
+  - csharp
+  - vb
+  name: Title
+  nameWithType: Data.Title
+  fullName: AtfTIDE.ClioInstaller.Dto.Data.Title
+  type: Property
+  source:
+    remote:
+      path: packages/AtfTIDE/Files/cs/ClioInstaller/Dto/SearchResponse.cs
+      branch: main
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: Title
+    path: ../packages/AtfTIDE/Files/cs/ClioInstaller/Dto/SearchResponse.cs
+    startLine: 77
+  assemblies:
+  - AtfTIDE
+  namespace: AtfTIDE.ClioInstaller.Dto
+  syntax:
+    content: >-
+      [JsonPropertyName("title")]
+
+      public string Title { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonPropertyName("title")>
+
+      Public Property Title As String
+  overload: AtfTIDE.ClioInstaller.Dto.Data.Title*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: title
+- uid: AtfTIDE.ClioInstaller.Dto.Data.TotalDownloads
+  commentId: P:AtfTIDE.ClioInstaller.Dto.Data.TotalDownloads
+  id: TotalDownloads
+  parent: AtfTIDE.ClioInstaller.Dto.Data
+  langs:
+  - csharp
+  - vb
+  name: TotalDownloads
+  nameWithType: Data.TotalDownloads
+  fullName: AtfTIDE.ClioInstaller.Dto.Data.TotalDownloads
+  type: Property
+  source:
+    remote:
+      path: packages/AtfTIDE/Files/cs/ClioInstaller/Dto/SearchResponse.cs
+      branch: main
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: TotalDownloads
+    path: ../packages/AtfTIDE/Files/cs/ClioInstaller/Dto/SearchResponse.cs
+    startLine: 80
+  assemblies:
+  - AtfTIDE
+  namespace: AtfTIDE.ClioInstaller.Dto
+  syntax:
+    content: >-
+      [JsonPropertyName("totalDownloads")]
+
+      public int TotalDownloads { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: >-
+      <JsonPropertyName("totalDownloads")>
+
+      Public Property TotalDownloads As Integer
+  overload: AtfTIDE.ClioInstaller.Dto.Data.TotalDownloads*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: totalDownloads
+- uid: AtfTIDE.ClioInstaller.Dto.Data.Verified
+  commentId: P:AtfTIDE.ClioInstaller.Dto.Data.Verified
+  id: Verified
+  parent: AtfTIDE.ClioInstaller.Dto.Data
+  langs:
+  - csharp
+  - vb
+  name: Verified
+  nameWithType: Data.Verified
+  fullName: AtfTIDE.ClioInstaller.Dto.Data.Verified
+  type: Property
+  source:
+    remote:
+      path: packages/AtfTIDE/Files/cs/ClioInstaller/Dto/SearchResponse.cs
+      branch: main
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: Verified
+    path: ../packages/AtfTIDE/Files/cs/ClioInstaller/Dto/SearchResponse.cs
+    startLine: 83
+  assemblies:
+  - AtfTIDE
+  namespace: AtfTIDE.ClioInstaller.Dto
+  syntax:
+    content: >-
+      [JsonPropertyName("verified")]
+
+      public bool Verified { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: >-
+      <JsonPropertyName("verified")>
+
+      Public Property Verified As Boolean
+  overload: AtfTIDE.ClioInstaller.Dto.Data.Verified*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: verified
+- uid: AtfTIDE.ClioInstaller.Dto.Data.Version
+  commentId: P:AtfTIDE.ClioInstaller.Dto.Data.Version
+  id: Version
+  parent: AtfTIDE.ClioInstaller.Dto.Data
+  langs:
+  - csharp
+  - vb
+  name: Version
+  nameWithType: Data.Version
+  fullName: AtfTIDE.ClioInstaller.Dto.Data.Version
+  type: Property
+  source:
+    remote:
+      path: packages/AtfTIDE/Files/cs/ClioInstaller/Dto/SearchResponse.cs
+      branch: main
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: Version
+    path: ../packages/AtfTIDE/Files/cs/ClioInstaller/Dto/SearchResponse.cs
+    startLine: 86
+  assemblies:
+  - AtfTIDE
+  namespace: AtfTIDE.ClioInstaller.Dto
+  syntax:
+    content: >-
+      [JsonPropertyName("version")]
+
+      public string Version { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonPropertyName("version")>
+
+      Public Property Version As String
+  overload: AtfTIDE.ClioInstaller.Dto.Data.Version*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: version
+- uid: AtfTIDE.ClioInstaller.Dto.Data.Versions
+  commentId: P:AtfTIDE.ClioInstaller.Dto.Data.Versions
+  id: Versions
+  parent: AtfTIDE.ClioInstaller.Dto.Data
+  langs:
+  - csharp
+  - vb
+  name: Versions
+  nameWithType: Data.Versions
+  fullName: AtfTIDE.ClioInstaller.Dto.Data.Versions
+  type: Property
+  source:
+    remote:
+      path: packages/AtfTIDE/Files/cs/ClioInstaller/Dto/SearchResponse.cs
+      branch: main
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: Versions
+    path: ../packages/AtfTIDE/Files/cs/ClioInstaller/Dto/SearchResponse.cs
+    startLine: 89
+  assemblies:
+  - AtfTIDE
+  namespace: AtfTIDE.ClioInstaller.Dto
+  syntax:
+    content: >-
+      [JsonPropertyName("versions")]
+
+      public IEnumerable<Version> Versions { get; set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IEnumerable{AtfTIDE.ClioInstaller.Dto.Version}
+    content.vb: >-
+      <JsonPropertyName("versions")>
+
+      Public Property Versions As IEnumerable(Of Version)
+  overload: AtfTIDE.ClioInstaller.Dto.Data.Versions*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: versions
+- uid: AtfTIDE.ClioInstaller.Dto.Data.Vulnerabilities
+  commentId: P:AtfTIDE.ClioInstaller.Dto.Data.Vulnerabilities
+  id: Vulnerabilities
+  parent: AtfTIDE.ClioInstaller.Dto.Data
+  langs:
+  - csharp
+  - vb
+  name: Vulnerabilities
+  nameWithType: Data.Vulnerabilities
+  fullName: AtfTIDE.ClioInstaller.Dto.Data.Vulnerabilities
+  type: Property
+  source:
+    remote:
+      path: packages/AtfTIDE/Files/cs/ClioInstaller/Dto/SearchResponse.cs
+      branch: main
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: Vulnerabilities
+    path: ../packages/AtfTIDE/Files/cs/ClioInstaller/Dto/SearchResponse.cs
+    startLine: 92
+  assemblies:
+  - AtfTIDE
+  namespace: AtfTIDE.ClioInstaller.Dto
+  syntax:
+    content: >-
+      [JsonPropertyName("vulnerabilities")]
+
+      public object[] Vulnerabilities { get; set; }
+    parameters: []
+    return:
+      type: System.Object[]
+    content.vb: >-
+      <JsonPropertyName("vulnerabilities")>
+
+      Public Property Vulnerabilities As Object()
+  overload: AtfTIDE.ClioInstaller.Dto.Data.Vulnerabilities*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: vulnerabilities
+references:
+- uid: AtfTIDE.ClioInstaller.Dto
+  commentId: N:AtfTIDE.ClioInstaller.Dto
+  href: AtfTIDE.html
+  name: AtfTIDE.ClioInstaller.Dto
+  nameWithType: AtfTIDE.ClioInstaller.Dto
+  fullName: AtfTIDE.ClioInstaller.Dto
+  spec.csharp:
+  - uid: AtfTIDE
+    name: AtfTIDE
+    href: AtfTIDE.html
+  - name: .
+  - uid: AtfTIDE.ClioInstaller
+    name: ClioInstaller
+    href: AtfTIDE.ClioInstaller.html
+  - name: .
+  - uid: AtfTIDE.ClioInstaller.Dto
+    name: Dto
+    href: AtfTIDE.ClioInstaller.Dto.html
+  spec.vb:
+  - uid: AtfTIDE
+    name: AtfTIDE
+    href: AtfTIDE.html
+  - name: .
+  - uid: AtfTIDE.ClioInstaller
+    name: ClioInstaller
+    href: AtfTIDE.ClioInstaller.html
+  - name: .
+  - uid: AtfTIDE.ClioInstaller.Dto
+    name: Dto
+    href: AtfTIDE.ClioInstaller.Dto.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: AtfTIDE.ClioInstaller.Dto.Data.Id*
+  commentId: Overload:AtfTIDE.ClioInstaller.Dto.Data.Id
+  href: AtfTIDE.ClioInstaller.Dto.Data.html#AtfTIDE_ClioInstaller_Dto_Data_Id
+  name: Id
+  nameWithType: Data.Id
+  fullName: AtfTIDE.ClioInstaller.Dto.Data.Id
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: AtfTIDE.ClioInstaller.Dto.Data.Type*
+  commentId: Overload:AtfTIDE.ClioInstaller.Dto.Data.Type
+  href: AtfTIDE.ClioInstaller.Dto.Data.html#AtfTIDE_ClioInstaller_Dto_Data_Type
+  name: Type
+  nameWithType: Data.Type
+  fullName: AtfTIDE.ClioInstaller.Dto.Data.Type
+- uid: AtfTIDE.ClioInstaller.Dto.Data.authors*
+  commentId: Overload:AtfTIDE.ClioInstaller.Dto.Data.authors
+  href: AtfTIDE.ClioInstaller.Dto.Data.html#AtfTIDE_ClioInstaller_Dto_Data_authors
+  name: authors
+  nameWithType: Data.authors
+  fullName: AtfTIDE.ClioInstaller.Dto.Data.authors
+- uid: System.String[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string[]
+  nameWithType: string[]
+  fullName: string[]
+  nameWithType.vb: String()
+  fullName.vb: String()
+  name.vb: String()
+  spec.csharp:
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: (
+  - name: )
+- uid: AtfTIDE.ClioInstaller.Dto.Data.description*
+  commentId: Overload:AtfTIDE.ClioInstaller.Dto.Data.description
+  href: AtfTIDE.ClioInstaller.Dto.Data.html#AtfTIDE_ClioInstaller_Dto_Data_description
+  name: description
+  nameWithType: Data.description
+  fullName: AtfTIDE.ClioInstaller.Dto.Data.description
+- uid: AtfTIDE.ClioInstaller.Dto.Data.PackageIdId*
+  commentId: Overload:AtfTIDE.ClioInstaller.Dto.Data.PackageIdId
+  href: AtfTIDE.ClioInstaller.Dto.Data.html#AtfTIDE_ClioInstaller_Dto_Data_PackageIdId
+  name: PackageIdId
+  nameWithType: Data.PackageIdId
+  fullName: AtfTIDE.ClioInstaller.Dto.Data.PackageIdId
+- uid: AtfTIDE.ClioInstaller.Dto.Data.LicenseUrl*
+  commentId: Overload:AtfTIDE.ClioInstaller.Dto.Data.LicenseUrl
+  href: AtfTIDE.ClioInstaller.Dto.Data.html#AtfTIDE_ClioInstaller_Dto_Data_LicenseUrl
+  name: LicenseUrl
+  nameWithType: Data.LicenseUrl
+  fullName: AtfTIDE.ClioInstaller.Dto.Data.LicenseUrl
+- uid: AtfTIDE.ClioInstaller.Dto.Data.Owners*
+  commentId: Overload:AtfTIDE.ClioInstaller.Dto.Data.Owners
+  href: AtfTIDE.ClioInstaller.Dto.Data.html#AtfTIDE_ClioInstaller_Dto_Data_Owners
+  name: Owners
+  nameWithType: Data.Owners
+  fullName: AtfTIDE.ClioInstaller.Dto.Data.Owners
+- uid: System.Collections.Generic.IEnumerable{System.String}
+  commentId: T:System.Collections.Generic.IEnumerable{System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<string>
+  nameWithType: IEnumerable<string>
+  fullName: System.Collections.Generic.IEnumerable<string>
+  nameWithType.vb: IEnumerable(Of String)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of String)
+  name.vb: IEnumerable(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: AtfTIDE.ClioInstaller.Dto.Data.PackageTypes*
+  commentId: Overload:AtfTIDE.ClioInstaller.Dto.Data.PackageTypes
+  href: AtfTIDE.ClioInstaller.Dto.Data.html#AtfTIDE_ClioInstaller_Dto_Data_PackageTypes
+  name: PackageTypes
+  nameWithType: Data.PackageTypes
+  fullName: AtfTIDE.ClioInstaller.Dto.Data.PackageTypes
+- uid: System.Collections.Generic.IEnumerable{AtfTIDE.ClioInstaller.Dto.PackageType}
+  commentId: T:System.Collections.Generic.IEnumerable{AtfTIDE.ClioInstaller.Dto.PackageType}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<PackageType>
+  nameWithType: IEnumerable<PackageType>
+  fullName: System.Collections.Generic.IEnumerable<AtfTIDE.ClioInstaller.Dto.PackageType>
+  nameWithType.vb: IEnumerable(Of PackageType)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of AtfTIDE.ClioInstaller.Dto.PackageType)
+  name.vb: IEnumerable(Of PackageType)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: AtfTIDE.ClioInstaller.Dto.PackageType
+    name: PackageType
+    href: AtfTIDE.ClioInstaller.Dto.PackageType.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: AtfTIDE.ClioInstaller.Dto.PackageType
+    name: PackageType
+    href: AtfTIDE.ClioInstaller.Dto.PackageType.html
+  - name: )
+- uid: AtfTIDE.ClioInstaller.Dto.Data.ProjectUrl*
+  commentId: Overload:AtfTIDE.ClioInstaller.Dto.Data.ProjectUrl
+  href: AtfTIDE.ClioInstaller.Dto.Data.html#AtfTIDE_ClioInstaller_Dto_Data_ProjectUrl
+  name: ProjectUrl
+  nameWithType: Data.ProjectUrl
+  fullName: AtfTIDE.ClioInstaller.Dto.Data.ProjectUrl
+- uid: System.Uri
+  commentId: T:System.Uri
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uri
+  name: Uri
+  nameWithType: Uri
+  fullName: System.Uri
+- uid: AtfTIDE.ClioInstaller.Dto.Data.Registration*
+  commentId: Overload:AtfTIDE.ClioInstaller.Dto.Data.Registration
+  href: AtfTIDE.ClioInstaller.Dto.Data.html#AtfTIDE_ClioInstaller_Dto_Data_Registration
+  name: Registration
+  nameWithType: Data.Registration
+  fullName: AtfTIDE.ClioInstaller.Dto.Data.Registration
+- uid: AtfTIDE.ClioInstaller.Dto.Data.Summary*
+  commentId: Overload:AtfTIDE.ClioInstaller.Dto.Data.Summary
+  href: AtfTIDE.ClioInstaller.Dto.Data.html#AtfTIDE_ClioInstaller_Dto_Data_Summary
+  name: Summary
+  nameWithType: Data.Summary
+  fullName: AtfTIDE.ClioInstaller.Dto.Data.Summary
+- uid: AtfTIDE.ClioInstaller.Dto.Data.Tags*
+  commentId: Overload:AtfTIDE.ClioInstaller.Dto.Data.Tags
+  href: AtfTIDE.ClioInstaller.Dto.Data.html#AtfTIDE_ClioInstaller_Dto_Data_Tags
+  name: Tags
+  nameWithType: Data.Tags
+  fullName: AtfTIDE.ClioInstaller.Dto.Data.Tags
+- uid: AtfTIDE.ClioInstaller.Dto.Data.Title*
+  commentId: Overload:AtfTIDE.ClioInstaller.Dto.Data.Title
+  href: AtfTIDE.ClioInstaller.Dto.Data.html#AtfTIDE_ClioInstaller_Dto_Data_Title
+  name: Title
+  nameWithType: Data.Title
+  fullName: AtfTIDE.ClioInstaller.Dto.Data.Title
+- uid: AtfTIDE.ClioInstaller.Dto.Data.TotalDownloads*
+  commentId: Overload:AtfTIDE.ClioInstaller.Dto.Data.TotalDownloads
+  href: AtfTIDE.ClioInstaller.Dto.Data.html#AtfTIDE_ClioInstaller_Dto_Data_TotalDownloads
+  name: TotalDownloads
+  nameWithType: Data.TotalDownloads
+  fullName: AtfTIDE.ClioInstaller.Dto.Data.TotalDownloads
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: AtfTIDE.ClioInstaller.Dto.Data.Verified*
+  commentId: Overload:AtfTIDE.ClioInstaller.Dto.Data.Verified
+  href: AtfTIDE.ClioInstaller.Dto.Data.html#AtfTIDE_ClioInstaller_Dto_Data_Verified
+  name: Verified
+  nameWithType: Data.Verified
+  fullName: AtfTIDE.ClioInstaller.Dto.Data.Verified
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: AtfTIDE.ClioInstaller.Dto.Data.Version*
+  commentId: Overload:AtfTIDE.ClioInstaller.Dto.Data.Version
+  href: AtfTIDE.ClioInstaller.Dto.Data.html#AtfTIDE_ClioInstaller_Dto_Data_Version
+  name: Version
+  nameWithType: Data.Version
+  fullName: AtfTIDE.ClioInstaller.Dto.Data.Version
+- uid: AtfTIDE.ClioInstaller.Dto.Data.Versions*
+  commentId: Overload:AtfTIDE.ClioInstaller.Dto.Data.Versions
+  href: AtfTIDE.ClioInstaller.Dto.Data.html#AtfTIDE_ClioInstaller_Dto_Data_Versions
+  name: Versions
+  nameWithType: Data.Versions
+  fullName: AtfTIDE.ClioInstaller.Dto.Data.Versions
+- uid: System.Collections.Generic.IEnumerable{AtfTIDE.ClioInstaller.Dto.Version}
+  commentId: T:System.Collections.Generic.IEnumerable{AtfTIDE.ClioInstaller.Dto.Version}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<Version>
+  nameWithType: IEnumerable<Version>
+  fullName: System.Collections.Generic.IEnumerable<AtfTIDE.ClioInstaller.Dto.Version>
+  nameWithType.vb: IEnumerable(Of Version)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of AtfTIDE.ClioInstaller.Dto.Version)
+  name.vb: IEnumerable(Of Version)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: AtfTIDE.ClioInstaller.Dto.Version
+    name: Version
+    href: AtfTIDE.ClioInstaller.Dto.Version.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: AtfTIDE.ClioInstaller.Dto.Version
+    name: Version
+    href: AtfTIDE.ClioInstaller.Dto.Version.html
+  - name: )
+- uid: AtfTIDE.ClioInstaller.Dto.Data.Vulnerabilities*
+  commentId: Overload:AtfTIDE.ClioInstaller.Dto.Data.Vulnerabilities
+  href: AtfTIDE.ClioInstaller.Dto.Data.html#AtfTIDE_ClioInstaller_Dto_Data_Vulnerabilities
+  name: Vulnerabilities
+  nameWithType: Data.Vulnerabilities
+  fullName: AtfTIDE.ClioInstaller.Dto.Data.Vulnerabilities
+- uid: System.Object[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object[]
+  nameWithType: object[]
+  fullName: object[]
+  nameWithType.vb: Object()
+  fullName.vb: Object()
+  name.vb: Object()
+  spec.csharp:
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: (
+  - name: )

@@ -1,0 +1,207 @@
+﻿### YamlMime:ManagedReference
+items:
+- uid: AtfTIDE.IWebSocket
+  commentId: T:AtfTIDE.IWebSocket
+  id: IWebSocket
+  parent: AtfTIDE
+  children:
+  - AtfTIDE.IWebSocket.PostMessage(System.String,System.String,System.String)
+  - AtfTIDE.IWebSocket.PostMessage(System.String,System.String,System.String,Terrasoft.Core.UserConnection)
+  - AtfTIDE.IWebSocket.PostMessageToAll(System.String,System.String,System.String)
+  langs:
+  - csharp
+  - vb
+  name: IWebSocket
+  nameWithType: IWebSocket
+  fullName: AtfTIDE.IWebSocket
+  type: Interface
+  source:
+    remote:
+      path: packages/AtfTIDE/Files/cs/WebSocket.cs
+      branch: main
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: IWebSocket
+    path: ../packages/AtfTIDE/Files/cs/WebSocket.cs
+    startLine: 7
+  assemblies:
+  - AtfTIDE
+  namespace: AtfTIDE
+  syntax:
+    content: public interface IWebSocket
+    content.vb: Public Interface IWebSocket
+- uid: AtfTIDE.IWebSocket.PostMessage(System.String,System.String,System.String,Terrasoft.Core.UserConnection)
+  commentId: M:AtfTIDE.IWebSocket.PostMessage(System.String,System.String,System.String,Terrasoft.Core.UserConnection)
+  id: PostMessage(System.String,System.String,System.String,Terrasoft.Core.UserConnection)
+  parent: AtfTIDE.IWebSocket
+  langs:
+  - csharp
+  - vb
+  name: PostMessage(string, string, string, UserConnection)
+  nameWithType: IWebSocket.PostMessage(string, string, string, UserConnection)
+  fullName: AtfTIDE.IWebSocket.PostMessage(string, string, string, Terrasoft.Core.UserConnection)
+  type: Method
+  source:
+    remote:
+      path: packages/AtfTIDE/Files/cs/WebSocket.cs
+      branch: main
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: PostMessage
+    path: ../packages/AtfTIDE/Files/cs/WebSocket.cs
+    startLine: 12
+  assemblies:
+  - AtfTIDE
+  namespace: AtfTIDE
+  syntax:
+    content: void PostMessage(string senderName, string commandName, string message, UserConnection userConnection)
+    parameters:
+    - id: senderName
+      type: System.String
+    - id: commandName
+      type: System.String
+    - id: message
+      type: System.String
+    - id: userConnection
+      type: Terrasoft.Core.UserConnection
+    content.vb: Sub PostMessage(senderName As String, commandName As String, message As String, userConnection As UserConnection)
+  overload: AtfTIDE.IWebSocket.PostMessage*
+  nameWithType.vb: IWebSocket.PostMessage(String, String, String, UserConnection)
+  fullName.vb: AtfTIDE.IWebSocket.PostMessage(String, String, String, Terrasoft.Core.UserConnection)
+  name.vb: PostMessage(String, String, String, UserConnection)
+- uid: AtfTIDE.IWebSocket.PostMessage(System.String,System.String,System.String)
+  commentId: M:AtfTIDE.IWebSocket.PostMessage(System.String,System.String,System.String)
+  id: PostMessage(System.String,System.String,System.String)
+  parent: AtfTIDE.IWebSocket
+  langs:
+  - csharp
+  - vb
+  name: PostMessage(string, string, string)
+  nameWithType: IWebSocket.PostMessage(string, string, string)
+  fullName: AtfTIDE.IWebSocket.PostMessage(string, string, string)
+  type: Method
+  source:
+    remote:
+      path: packages/AtfTIDE/Files/cs/WebSocket.cs
+      branch: main
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: PostMessage
+    path: ../packages/AtfTIDE/Files/cs/WebSocket.cs
+    startLine: 15
+  assemblies:
+  - AtfTIDE
+  namespace: AtfTIDE
+  syntax:
+    content: void PostMessage(string senderName, string commandName, string message)
+    parameters:
+    - id: senderName
+      type: System.String
+    - id: commandName
+      type: System.String
+    - id: message
+      type: System.String
+    content.vb: Sub PostMessage(senderName As String, commandName As String, message As String)
+  overload: AtfTIDE.IWebSocket.PostMessage*
+  nameWithType.vb: IWebSocket.PostMessage(String, String, String)
+  fullName.vb: AtfTIDE.IWebSocket.PostMessage(String, String, String)
+  name.vb: PostMessage(String, String, String)
+- uid: AtfTIDE.IWebSocket.PostMessageToAll(System.String,System.String,System.String)
+  commentId: M:AtfTIDE.IWebSocket.PostMessageToAll(System.String,System.String,System.String)
+  id: PostMessageToAll(System.String,System.String,System.String)
+  parent: AtfTIDE.IWebSocket
+  langs:
+  - csharp
+  - vb
+  name: PostMessageToAll(string, string, string)
+  nameWithType: IWebSocket.PostMessageToAll(string, string, string)
+  fullName: AtfTIDE.IWebSocket.PostMessageToAll(string, string, string)
+  type: Method
+  source:
+    remote:
+      path: packages/AtfTIDE/Files/cs/WebSocket.cs
+      branch: main
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: PostMessageToAll
+    path: ../packages/AtfTIDE/Files/cs/WebSocket.cs
+    startLine: 17
+  assemblies:
+  - AtfTIDE
+  namespace: AtfTIDE
+  syntax:
+    content: void PostMessageToAll(string senderName, string commandName, string message)
+    parameters:
+    - id: senderName
+      type: System.String
+    - id: commandName
+      type: System.String
+    - id: message
+      type: System.String
+    content.vb: Sub PostMessageToAll(senderName As String, commandName As String, message As String)
+  overload: AtfTIDE.IWebSocket.PostMessageToAll*
+  nameWithType.vb: IWebSocket.PostMessageToAll(String, String, String)
+  fullName.vb: AtfTIDE.IWebSocket.PostMessageToAll(String, String, String)
+  name.vb: PostMessageToAll(String, String, String)
+references:
+- uid: AtfTIDE
+  commentId: N:AtfTIDE
+  href: AtfTIDE.html
+  name: AtfTIDE
+  nameWithType: AtfTIDE
+  fullName: AtfTIDE
+- uid: AtfTIDE.IWebSocket.PostMessage*
+  commentId: Overload:AtfTIDE.IWebSocket.PostMessage
+  href: AtfTIDE.IWebSocket.html#AtfTIDE_IWebSocket_PostMessage_System_String_System_String_System_String_Terrasoft_Core_UserConnection_
+  name: PostMessage
+  nameWithType: IWebSocket.PostMessage
+  fullName: AtfTIDE.IWebSocket.PostMessage
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Terrasoft.Core.UserConnection
+  commentId: T:Terrasoft.Core.UserConnection
+  parent: Terrasoft.Core
+  isExternal: true
+  name: UserConnection
+  nameWithType: UserConnection
+  fullName: Terrasoft.Core.UserConnection
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Terrasoft.Core
+  commentId: N:Terrasoft.Core
+  isExternal: true
+  name: Terrasoft.Core
+  nameWithType: Terrasoft.Core
+  fullName: Terrasoft.Core
+  spec.csharp:
+  - uid: Terrasoft
+    name: Terrasoft
+    isExternal: true
+  - name: .
+  - uid: Terrasoft.Core
+    name: Core
+    isExternal: true
+  spec.vb:
+  - uid: Terrasoft
+    name: Terrasoft
+    isExternal: true
+  - name: .
+  - uid: Terrasoft.Core
+    name: Core
+    isExternal: true
+- uid: AtfTIDE.IWebSocket.PostMessageToAll*
+  commentId: Overload:AtfTIDE.IWebSocket.PostMessageToAll
+  href: AtfTIDE.IWebSocket.html#AtfTIDE_IWebSocket_PostMessageToAll_System_String_System_String_System_String_
+  name: PostMessageToAll
+  nameWithType: IWebSocket.PostMessageToAll
+  fullName: AtfTIDE.IWebSocket.PostMessageToAll

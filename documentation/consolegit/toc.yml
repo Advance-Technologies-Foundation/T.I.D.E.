@@ -7,6 +7,9 @@ items:
   - uid: ConsoleGit.CommandLineArgs
     name: CommandLineArgs
     type: Class
+  - uid: ConsoleGit.Program
+    name: Program
+    type: Class
 - uid: ConsoleGit.Commands
   name: ConsoleGit.Commands
   type: Namespace
@@ -17,6 +20,9 @@ items:
   - uid: ConsoleGit.Commands.BaseRepositoryCommand
     name: BaseRepositoryCommand
     type: Class
+  - uid: ConsoleGit.Commands.BranchesCommandResponse
+    name: BranchesCommandResponse
+    type: Class
   - uid: ConsoleGit.Commands.CheckoutCommand
     name: CheckoutCommand
     type: Class
@@ -26,25 +32,53 @@ items:
   - uid: ConsoleGit.Commands.CommitCommand
     name: CommitCommand
     type: Class
+  - uid: ConsoleGit.Commands.DiscardFilesCommand
+    name: DiscardFilesCommand
+    type: Class
   - uid: ConsoleGit.Commands.DownloadPackagesCommand
     name: DownloadPackagesCommand
     type: Class
   - uid: ConsoleGit.Commands.ErrorCommand
     name: ErrorCommand
     type: Class
+  - uid: ConsoleGit.Commands.GetBranchesCommand
+    name: GetBranchesCommand
+    type: Class
+  - uid: ConsoleGit.Commands.GetChangedFilesCommand
+    name: GetChangedFilesCommand
+    type: Class
+  - uid: ConsoleGit.Commands.GetDiffCommand
+    name: GetDiffCommand
+    type: Class
   - uid: ConsoleGit.Commands.ICommand
     name: ICommand
     type: Interface
+  - uid: ConsoleGit.Commands.MyBranch
+    name: MyBranch
+    type: Class
   - uid: ConsoleGit.Commands.PullCommand
     name: PullCommand
     type: Class
   - uid: ConsoleGit.Commands.PushCommand
     name: PushCommand
     type: Class
+- uid: ConsoleGit.Common
+  name: ConsoleGit.Common
+  type: Namespace
+  items:
+  - uid: ConsoleGit.Common.CommonFunctions
+    name: CommonFunctions
+    type: Class
 - uid: ConsoleGit.ConfiguredHttpClient
   name: ConsoleGit.ConfiguredHttpClient
   type: Namespace
   items:
+  - uid: ConsoleGit.ConfiguredHttpClient.LoginHandler
+    name: LoginHandler
+    type: Class
+  - uid: ConsoleGit.ConfiguredHttpClient.LoginRequest
+    name: LoginRequest
+    type: Class
   - uid: ConsoleGit.ConfiguredHttpClient.MyHandler
     name: MyHandler
     type: Class
@@ -57,5 +91,21 @@ items:
     type: Class
   - uid: ConsoleGit.Dto.WorkspaceSettings
     name: WorkspaceSettings
+    type: Class
+- uid: ConsoleGit.Services
+  name: ConsoleGit.Services
+  type: Namespace
+  items:
+  - uid: ConsoleGit.Services.EventModel
+    name: EventModel
+    type: Class
+  - uid: ConsoleGit.Services.IWebSocketLogger
+    name: IWebSocketLogger
+    type: Interface
+  - uid: ConsoleGit.Services.MessageType
+    name: MessageType
+    type: Enum
+  - uid: ConsoleGit.Services.WebSocketLogger
+    name: WebSocketLogger
     type: Class
 memberLayout: SamePage

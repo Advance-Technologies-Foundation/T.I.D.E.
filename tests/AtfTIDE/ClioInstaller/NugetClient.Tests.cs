@@ -54,7 +54,13 @@ namespace AtfTIDE.Tests.ClioInstaller {
 		#endregion
 
 		#region Properties: Private
-
+		
+		private Action InjectWebSocket => () => {
+			IWebSocket ws = NSubstitute.Substitute.For<IWebSocket>();
+			InjectorWebSocket injectorWebSocket = new InjectorWebSocket(ws);
+			_injectedServices.Add(injectorWebSocket.AddMockWebSocket);
+		};
+		
 		private Action<HttpRequestMessage, HttpResponseMessage> MockResponse =>
 			(request, response) => {
 				_handler.AddMockResponse(request, response);
@@ -118,7 +124,7 @@ namespace AtfTIDE.Tests.ClioInstaller {
 			Uri downloadRequestUri = new Uri(_baseAddress, downloadRequestUrl);
 			HttpRequestMessage downloadRequest = new HttpRequestMessage(HttpMethod.Get, downloadRequestUri);
 
-			byte[] bytes = File.ReadAllBytes("ClioInstaller/ResponseJson/clio.8.0.1.23.nupkg");
+			byte[] bytes = await File.ReadAllBytesAsync("ClioInstaller/ResponseJson/clio.8.0.1.23.nupkg");
 			HttpResponseMessage downloadResponse = new HttpResponseMessage(HttpStatusCode.OK) {
 				Content = new ByteArrayContent(bytes)
 			};
@@ -126,7 +132,8 @@ namespace AtfTIDE.Tests.ClioInstaller {
 				{searchRequest, searchResponse},
 				{downloadRequest, downloadResponse}
 			});
-
+			InjectWebSocket();
+			
 			//Act
 			INugetClient client = TideApp.Instance.GetRequiredService<INugetClient>();
 
@@ -144,7 +151,7 @@ namespace AtfTIDE.Tests.ClioInstaller {
 			const string requestPartialUrl = "/v3-flatcontainer/clio/index.json";
 			Uri requestUri = new Uri(_baseAddress, requestPartialUrl);
 			HttpRequestMessage searchRequest = new HttpRequestMessage(HttpMethod.Get, requestUri);
-			string content = File.ReadAllText("ClioInstaller/ResponseJson/clioVersions.json");
+			string content = await File.ReadAllTextAsync("ClioInstaller/ResponseJson/clioVersions.json");
 			HttpResponseMessage searchResponse = new HttpResponseMessage(HttpStatusCode.OK) {
 				Content = new StringContent(content)
 			};
@@ -153,7 +160,7 @@ namespace AtfTIDE.Tests.ClioInstaller {
 			Uri downloadRequestUri = new Uri(_baseAddress, downloadRequestUrl);
 			HttpRequestMessage downloadRequest = new HttpRequestMessage(HttpMethod.Get, downloadRequestUri);
 
-			byte[] bytes = File.ReadAllBytes("ClioInstaller/ResponseJson/clio.8.0.1.23.nupkg");
+			byte[] bytes = await File.ReadAllBytesAsync("ClioInstaller/ResponseJson/clio.8.0.1.23.nupkg");
 			HttpResponseMessage downloadResponse = new HttpResponseMessage(HttpStatusCode.OK) {
 				Content = new ByteArrayContent(bytes)
 			};
@@ -178,12 +185,13 @@ namespace AtfTIDE.Tests.ClioInstaller {
 			const string requestPartialUrl = "/query?q=clio&packageType=DotnetTool";
 			Uri requestUri = new Uri(_baseAddress, requestPartialUrl);
 			HttpRequestMessage request = new HttpRequestMessage(HttpMethod.Get, requestUri);
-			string content = File.ReadAllText("ClioInstaller/ResponseJson/SearchResponse.json");
+			string content = await File.ReadAllTextAsync("ClioInstaller/ResponseJson/SearchResponse.json");
 			HttpResponseMessage response = new HttpResponseMessage(HttpStatusCode.OK) {
 				Content = new StringContent(content)
 			};
 			MockResponse(request, response);
-
+			InjectWebSocket();
+			
 			//Act
 			INugetClient client = TideApp.Instance.GetRequiredService<INugetClient>();
 			ErrorOr<SearchResponse> isErrorResult = await client.SearchAsync();
@@ -196,6 +204,5 @@ namespace AtfTIDE.Tests.ClioInstaller {
 			result.Data.Should().HaveCount(1);
 			result.TotalHits.Should().Be(1);
 		}
-
 	}
 }

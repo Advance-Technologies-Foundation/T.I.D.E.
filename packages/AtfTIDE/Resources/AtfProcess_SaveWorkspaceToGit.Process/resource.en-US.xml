@@ -3,9 +3,6 @@
 	<Group Type="String">
 		<Items>
 			<Item Name="BaseElements.ConditionalSequenceFlow6.Caption" Value="On clone repository Error" />
-			<Item Name="BaseElements.IntermediateCatchTimer1.Caption" Value="delay 2 sec" />
-			<Item Name="BaseElements.IntermediateCatchTimer1.Parameters.StartOffset.Caption" Value="Start in (sec.)" />
-			<Item Name="BaseElements.IntermediateCatchTimer1.Parameters.StartOffset.DisplayValue" Value="2" />
 			<Item Name="BaseElements.LinkEntityToProcessUserTask1.Caption" Value="Attach to Log" />
 			<Item Name="BaseElements.LinkEntityToProcessUserTask1.Parameters.EntityId.Caption" Value="Object" />
 			<Item Name="BaseElements.LinkEntityToProcessUserTask1.Parameters.EntityId.DisplayValue" Value="[#Repository#]" />
@@ -96,7 +93,6 @@
 			<Item Name="BaseElements.UserTask5.Parameters.WaitForExit.DisplayValue" Value="[#Boolean value.True#]" />
 			<Item Name="BaseElements.UserTask5.Parameters.WorkingDirectory.Caption" Value="WorkingDirectory" />
 			<Item Name="BaseElements.UserTask5.Parameters.WorkingDirectory.DisplayValue" Value="[#Clone Repository.Repository Folder Path#]" />
-			<Item Name="BaseElements.UserTask6.Caption" Value="TIDE. Show Terminal" />
 			<Item Name="Caption" Value="Save Workspace to Git" />
 			<Item Name="Description" Value="Restores the current Creatio state and commits it back to the repository." />
 			<Item Name="LaneSets.LaneSet1.Caption" Value="LaneSet 1" />

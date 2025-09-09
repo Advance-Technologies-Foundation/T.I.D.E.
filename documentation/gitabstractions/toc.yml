@@ -4,6 +4,9 @@ items:
   name: GitAbstraction
   type: Namespace
   items:
+  - uid: GitAbstraction.ChangedFile
+    name: ChangedFile
+    type: Class
   - uid: GitAbstraction.ExToErrorParser
     name: ExToErrorParser
     type: Class

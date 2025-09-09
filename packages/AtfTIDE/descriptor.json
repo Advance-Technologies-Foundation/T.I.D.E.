@@ -4,15 +4,24 @@
     "PackageVersion": "1.5.3",
     "Name": "AtfTIDE",
     "Type": 1,
-    "ProjectPath": "Files/AtfTIDE.csproj",
-    "ModifiedOnUtc": "/Date(1754611607000)/",
+    "ModifiedOnUtc": "\/Date(1754611607000)\/",
     "Maintainer": "ATF",
+    "ProjectPath": "Files/AtfTIDE.csproj",
     "DependsOn": [
       {
         "UId": "012e2e14-082b-ac2b-da5a-2fc87bad41d4",
         "PackageVersion": "7.8.0",
-        "Name": "CrtCore"
+        "Name": "CrtCore",
+        "Type": 1
       }
-    ]
+    ],
+    "InstallScripts": {
+      "AfterInstall": [
+        {
+          "Position": 1,
+          "SchemaUId": "9c3a6004-259d-44b7-a5cc-5eb37b18f89b"
+        }
+      ]
+    }
   }
 }

@@ -1,0 +1,665 @@
+﻿### YamlMime:ManagedReference
+items:
+- uid: AtfTIDE.Logging.LiveLogger
+  commentId: T:AtfTIDE.Logging.LiveLogger
+  id: LiveLogger
+  parent: AtfTIDE.Logging
+  children:
+  - AtfTIDE.Logging.LiveLogger.#ctor(AtfTIDE.IWebSocket)
+  - AtfTIDE.Logging.LiveLogger.Log(System.String)
+  - AtfTIDE.Logging.LiveLogger.LogError(System.String)
+  - AtfTIDE.Logging.LiveLogger.LogInfo(System.String)
+  - AtfTIDE.Logging.LiveLogger.LogWarn(System.String)
+  langs:
+  - csharp
+  - vb
+  name: LiveLogger
+  nameWithType: LiveLogger
+  fullName: AtfTIDE.Logging.LiveLogger
+  type: Class
+  source:
+    remote:
+      path: packages/AtfTIDE/Files/cs/Logging/LiveLogger.cs
+      branch: main
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: LiveLogger
+    path: ../packages/AtfTIDE/Files/cs/Logging/LiveLogger.cs
+    startLine: 15
+  assemblies:
+  - AtfTIDE
+  namespace: AtfTIDE.Logging
+  syntax:
+    content: 'public class LiveLogger : ILiveLogger'
+    content.vb: Public Class LiveLogger Implements ILiveLogger
+  inheritance:
+  - System.Object
+  implements:
+  - AtfTIDE.Logging.ILiveLogger
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: AtfTIDE.Logging.LiveLogger.#ctor(AtfTIDE.IWebSocket)
+  commentId: M:AtfTIDE.Logging.LiveLogger.#ctor(AtfTIDE.IWebSocket)
+  id: '#ctor(AtfTIDE.IWebSocket)'
+  parent: AtfTIDE.Logging.LiveLogger
+  langs:
+  - csharp
+  - vb
+  name: LiveLogger(IWebSocket)
+  nameWithType: LiveLogger.LiveLogger(IWebSocket)
+  fullName: AtfTIDE.Logging.LiveLogger.LiveLogger(AtfTIDE.IWebSocket)
+  type: Constructor
+  source:
+    remote:
+      path: packages/AtfTIDE/Files/cs/Logging/LiveLogger.cs
+      branch: main
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: .ctor
+    path: ../packages/AtfTIDE/Files/cs/Logging/LiveLogger.cs
+    startLine: 18
+  assemblies:
+  - AtfTIDE
+  namespace: AtfTIDE.Logging
+  syntax:
+    content: public LiveLogger(IWebSocket webSocket)
+    parameters:
+    - id: webSocket
+      type: AtfTIDE.IWebSocket
+    content.vb: Public Sub New(webSocket As IWebSocket)
+  overload: AtfTIDE.Logging.LiveLogger.#ctor*
+  nameWithType.vb: LiveLogger.New(IWebSocket)
+  fullName.vb: AtfTIDE.Logging.LiveLogger.New(AtfTIDE.IWebSocket)
+  name.vb: New(IWebSocket)
+- uid: AtfTIDE.Logging.LiveLogger.Log(System.String)
+  commentId: M:AtfTIDE.Logging.LiveLogger.Log(System.String)
+  id: Log(System.String)
+  parent: AtfTIDE.Logging.LiveLogger
+  langs:
+  - csharp
+  - vb
+  name: Log(string)
+  nameWithType: LiveLogger.Log(string)
+  fullName: AtfTIDE.Logging.LiveLogger.Log(string)
+  type: Method
+  source:
+    remote:
+      path: packages/AtfTIDE/Files/cs/Logging/LiveLogger.cs
+      branch: main
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: Log
+    path: ../packages/AtfTIDE/Files/cs/Logging/LiveLogger.cs
+    startLine: 22
+  assemblies:
+  - AtfTIDE
+  namespace: AtfTIDE.Logging
+  example: []
+  syntax:
+    content: public void Log(string message)
+    parameters:
+    - id: message
+      type: System.String
+    content.vb: Public Sub Log(message As String)
+  overload: AtfTIDE.Logging.LiveLogger.Log*
+  implements:
+  - AtfTIDE.Logging.ILiveLogger.Log(System.String)
+  nameWithType.vb: LiveLogger.Log(String)
+  fullName.vb: AtfTIDE.Logging.LiveLogger.Log(String)
+  name.vb: Log(String)
+- uid: AtfTIDE.Logging.LiveLogger.LogInfo(System.String)
+  commentId: M:AtfTIDE.Logging.LiveLogger.LogInfo(System.String)
+  id: LogInfo(System.String)
+  parent: AtfTIDE.Logging.LiveLogger
+  langs:
+  - csharp
+  - vb
+  name: LogInfo(string)
+  nameWithType: LiveLogger.LogInfo(string)
+  fullName: AtfTIDE.Logging.LiveLogger.LogInfo(string)
+  type: Method
+  source:
+    remote:
+      path: packages/AtfTIDE/Files/cs/Logging/LiveLogger.cs
+      branch: main
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: LogInfo
+    path: ../packages/AtfTIDE/Files/cs/Logging/LiveLogger.cs
+    startLine: 46
+  assemblies:
+  - AtfTIDE
+  namespace: AtfTIDE.Logging
+  example: []
+  syntax:
+    content: public void LogInfo(string message)
+    parameters:
+    - id: message
+      type: System.String
+    content.vb: Public Sub LogInfo(message As String)
+  overload: AtfTIDE.Logging.LiveLogger.LogInfo*
+  implements:
+  - AtfTIDE.Logging.ILiveLogger.LogInfo(System.String)
+  nameWithType.vb: LiveLogger.LogInfo(String)
+  fullName.vb: AtfTIDE.Logging.LiveLogger.LogInfo(String)
+  name.vb: LogInfo(String)
+- uid: AtfTIDE.Logging.LiveLogger.LogError(System.String)
+  commentId: M:AtfTIDE.Logging.LiveLogger.LogError(System.String)
+  id: LogError(System.String)
+  parent: AtfTIDE.Logging.LiveLogger
+  langs:
+  - csharp
+  - vb
+  name: LogError(string)
+  nameWithType: LiveLogger.LogError(string)
+  fullName: AtfTIDE.Logging.LiveLogger.LogError(string)
+  type: Method
+  source:
+    remote:
+      path: packages/AtfTIDE/Files/cs/Logging/LiveLogger.cs
+      branch: main
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: LogError
+    path: ../packages/AtfTIDE/Files/cs/Logging/LiveLogger.cs
+    startLine: 50
+  assemblies:
+  - AtfTIDE
+  namespace: AtfTIDE.Logging
+  example: []
+  syntax:
+    content: public void LogError(string message)
+    parameters:
+    - id: message
+      type: System.String
+    content.vb: Public Sub LogError(message As String)
+  overload: AtfTIDE.Logging.LiveLogger.LogError*
+  implements:
+  - AtfTIDE.Logging.ILiveLogger.LogError(System.String)
+  nameWithType.vb: LiveLogger.LogError(String)
+  fullName.vb: AtfTIDE.Logging.LiveLogger.LogError(String)
+  name.vb: LogError(String)
+- uid: AtfTIDE.Logging.LiveLogger.LogWarn(System.String)
+  commentId: M:AtfTIDE.Logging.LiveLogger.LogWarn(System.String)
+  id: LogWarn(System.String)
+  parent: AtfTIDE.Logging.LiveLogger
+  langs:
+  - csharp
+  - vb
+  name: LogWarn(string)
+  nameWithType: LiveLogger.LogWarn(string)
+  fullName: AtfTIDE.Logging.LiveLogger.LogWarn(string)
+  type: Method
+  source:
+    remote:
+      path: packages/AtfTIDE/Files/cs/Logging/LiveLogger.cs
+      branch: main
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: LogWarn
+    path: ../packages/AtfTIDE/Files/cs/Logging/LiveLogger.cs
+    startLine: 54
+  assemblies:
+  - AtfTIDE
+  namespace: AtfTIDE.Logging
+  example: []
+  syntax:
+    content: public void LogWarn(string message)
+    parameters:
+    - id: message
+      type: System.String
+    content.vb: Public Sub LogWarn(message As String)
+  overload: AtfTIDE.Logging.LiveLogger.LogWarn*
+  implements:
+  - AtfTIDE.Logging.ILiveLogger.LogWarn(System.String)
+  nameWithType.vb: LiveLogger.LogWarn(String)
+  fullName.vb: AtfTIDE.Logging.LiveLogger.LogWarn(String)
+  name.vb: LogWarn(String)
+references:
+- uid: AtfTIDE.Logging
+  commentId: N:AtfTIDE.Logging
+  href: AtfTIDE.html
+  name: AtfTIDE.Logging
+  nameWithType: AtfTIDE.Logging
+  fullName: AtfTIDE.Logging
+  spec.csharp:
+  - uid: AtfTIDE
+    name: AtfTIDE
+    href: AtfTIDE.html
+  - name: .
+  - uid: AtfTIDE.Logging
+    name: Logging
+    href: AtfTIDE.Logging.html
+  spec.vb:
+  - uid: AtfTIDE
+    name: AtfTIDE
+    href: AtfTIDE.html
+  - name: .
+  - uid: AtfTIDE.Logging
+    name: Logging
+    href: AtfTIDE.Logging.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: AtfTIDE.Logging.ILiveLogger
+  commentId: T:AtfTIDE.Logging.ILiveLogger
+  parent: AtfTIDE.Logging
+  href: AtfTIDE.Logging.ILiveLogger.html
+  name: ILiveLogger
+  nameWithType: ILiveLogger
+  fullName: AtfTIDE.Logging.ILiveLogger
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: AtfTIDE.Logging.LiveLogger.#ctor*
+  commentId: Overload:AtfTIDE.Logging.LiveLogger.#ctor
+  href: AtfTIDE.Logging.LiveLogger.html#AtfTIDE_Logging_LiveLogger__ctor_AtfTIDE_IWebSocket_
+  name: LiveLogger
+  nameWithType: LiveLogger.LiveLogger
+  fullName: AtfTIDE.Logging.LiveLogger.LiveLogger
+  nameWithType.vb: LiveLogger.New
+  fullName.vb: AtfTIDE.Logging.LiveLogger.New
+  name.vb: New
+- uid: AtfTIDE.IWebSocket
+  commentId: T:AtfTIDE.IWebSocket
+  parent: AtfTIDE
+  href: AtfTIDE.IWebSocket.html
+  name: IWebSocket
+  nameWithType: IWebSocket
+  fullName: AtfTIDE.IWebSocket
+- uid: AtfTIDE
+  commentId: N:AtfTIDE
+  href: AtfTIDE.html
+  name: AtfTIDE
+  nameWithType: AtfTIDE
+  fullName: AtfTIDE
+- uid: AtfTIDE.Logging.LiveLogger.Log*
+  commentId: Overload:AtfTIDE.Logging.LiveLogger.Log
+  href: AtfTIDE.Logging.LiveLogger.html#AtfTIDE_Logging_LiveLogger_Log_System_String_
+  name: Log
+  nameWithType: LiveLogger.Log
+  fullName: AtfTIDE.Logging.LiveLogger.Log
+- uid: AtfTIDE.Logging.ILiveLogger.Log(System.String)
+  commentId: M:AtfTIDE.Logging.ILiveLogger.Log(System.String)
+  parent: AtfTIDE.Logging.ILiveLogger
+  isExternal: true
+  href: AtfTIDE.Logging.ILiveLogger.html#AtfTIDE_Logging_ILiveLogger_Log_System_String_
+  name: Log(string)
+  nameWithType: ILiveLogger.Log(string)
+  fullName: AtfTIDE.Logging.ILiveLogger.Log(string)
+  nameWithType.vb: ILiveLogger.Log(String)
+  fullName.vb: AtfTIDE.Logging.ILiveLogger.Log(String)
+  name.vb: Log(String)
+  spec.csharp:
+  - uid: AtfTIDE.Logging.ILiveLogger.Log(System.String)
+    name: Log
+    href: AtfTIDE.Logging.ILiveLogger.html#AtfTIDE_Logging_ILiveLogger_Log_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: AtfTIDE.Logging.ILiveLogger.Log(System.String)
+    name: Log
+    href: AtfTIDE.Logging.ILiveLogger.html#AtfTIDE_Logging_ILiveLogger_Log_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: AtfTIDE.Logging.LiveLogger.LogInfo*
+  commentId: Overload:AtfTIDE.Logging.LiveLogger.LogInfo
+  href: AtfTIDE.Logging.LiveLogger.html#AtfTIDE_Logging_LiveLogger_LogInfo_System_String_
+  name: LogInfo
+  nameWithType: LiveLogger.LogInfo
+  fullName: AtfTIDE.Logging.LiveLogger.LogInfo
+- uid: AtfTIDE.Logging.ILiveLogger.LogInfo(System.String)
+  commentId: M:AtfTIDE.Logging.ILiveLogger.LogInfo(System.String)
+  parent: AtfTIDE.Logging.ILiveLogger
+  isExternal: true
+  href: AtfTIDE.Logging.ILiveLogger.html#AtfTIDE_Logging_ILiveLogger_LogInfo_System_String_
+  name: LogInfo(string)
+  nameWithType: ILiveLogger.LogInfo(string)
+  fullName: AtfTIDE.Logging.ILiveLogger.LogInfo(string)
+  nameWithType.vb: ILiveLogger.LogInfo(String)
+  fullName.vb: AtfTIDE.Logging.ILiveLogger.LogInfo(String)
+  name.vb: LogInfo(String)
+  spec.csharp:
+  - uid: AtfTIDE.Logging.ILiveLogger.LogInfo(System.String)
+    name: LogInfo
+    href: AtfTIDE.Logging.ILiveLogger.html#AtfTIDE_Logging_ILiveLogger_LogInfo_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: AtfTIDE.Logging.ILiveLogger.LogInfo(System.String)
+    name: LogInfo
+    href: AtfTIDE.Logging.ILiveLogger.html#AtfTIDE_Logging_ILiveLogger_LogInfo_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: AtfTIDE.Logging.LiveLogger.LogError*
+  commentId: Overload:AtfTIDE.Logging.LiveLogger.LogError
+  href: AtfTIDE.Logging.LiveLogger.html#AtfTIDE_Logging_LiveLogger_LogError_System_String_
+  name: LogError
+  nameWithType: LiveLogger.LogError
+  fullName: AtfTIDE.Logging.LiveLogger.LogError
+- uid: AtfTIDE.Logging.ILiveLogger.LogError(System.String)
+  commentId: M:AtfTIDE.Logging.ILiveLogger.LogError(System.String)
+  parent: AtfTIDE.Logging.ILiveLogger
+  isExternal: true
+  href: AtfTIDE.Logging.ILiveLogger.html#AtfTIDE_Logging_ILiveLogger_LogError_System_String_
+  name: LogError(string)
+  nameWithType: ILiveLogger.LogError(string)
+  fullName: AtfTIDE.Logging.ILiveLogger.LogError(string)
+  nameWithType.vb: ILiveLogger.LogError(String)
+  fullName.vb: AtfTIDE.Logging.ILiveLogger.LogError(String)
+  name.vb: LogError(String)
+  spec.csharp:
+  - uid: AtfTIDE.Logging.ILiveLogger.LogError(System.String)
+    name: LogError
+    href: AtfTIDE.Logging.ILiveLogger.html#AtfTIDE_Logging_ILiveLogger_LogError_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: AtfTIDE.Logging.ILiveLogger.LogError(System.String)
+    name: LogError
+    href: AtfTIDE.Logging.ILiveLogger.html#AtfTIDE_Logging_ILiveLogger_LogError_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: AtfTIDE.Logging.LiveLogger.LogWarn*
+  commentId: Overload:AtfTIDE.Logging.LiveLogger.LogWarn
+  href: AtfTIDE.Logging.LiveLogger.html#AtfTIDE_Logging_LiveLogger_LogWarn_System_String_
+  name: LogWarn
+  nameWithType: LiveLogger.LogWarn
+  fullName: AtfTIDE.Logging.LiveLogger.LogWarn
+- uid: AtfTIDE.Logging.ILiveLogger.LogWarn(System.String)
+  commentId: M:AtfTIDE.Logging.ILiveLogger.LogWarn(System.String)
+  parent: AtfTIDE.Logging.ILiveLogger
+  isExternal: true
+  href: AtfTIDE.Logging.ILiveLogger.html#AtfTIDE_Logging_ILiveLogger_LogWarn_System_String_
+  name: LogWarn(string)
+  nameWithType: ILiveLogger.LogWarn(string)
+  fullName: AtfTIDE.Logging.ILiveLogger.LogWarn(string)
+  nameWithType.vb: ILiveLogger.LogWarn(String)
+  fullName.vb: AtfTIDE.Logging.ILiveLogger.LogWarn(String)
+  name.vb: LogWarn(String)
+  spec.csharp:
+  - uid: AtfTIDE.Logging.ILiveLogger.LogWarn(System.String)
+    name: LogWarn
+    href: AtfTIDE.Logging.ILiveLogger.html#AtfTIDE_Logging_ILiveLogger_LogWarn_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: AtfTIDE.Logging.ILiveLogger.LogWarn(System.String)
+    name: LogWarn
+    href: AtfTIDE.Logging.ILiveLogger.html#AtfTIDE_Logging_ILiveLogger_LogWarn_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )

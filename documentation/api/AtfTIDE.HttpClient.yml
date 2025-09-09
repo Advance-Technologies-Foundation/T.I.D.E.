@@ -1,0 +1,82 @@
+﻿### YamlMime:ManagedReference
+items:
+- uid: AtfTIDE.HttpClient
+  commentId: N:AtfTIDE.HttpClient
+  id: AtfTIDE.HttpClient
+  children:
+  - AtfTIDE.HttpClient.Extensions
+  - AtfTIDE.HttpClient.GitHubClient
+  - AtfTIDE.HttpClient.GitLabHttpClient
+  - AtfTIDE.HttpClient.GithubTokenHandler
+  - AtfTIDE.HttpClient.IGitHubClient
+  - AtfTIDE.HttpClient.IGitLabHttpClient
+  langs:
+  - csharp
+  - vb
+  name: AtfTIDE.HttpClient
+  nameWithType: AtfTIDE.HttpClient
+  fullName: AtfTIDE.HttpClient
+  type: Namespace
+  assemblies:
+  - AtfTIDE
+references:
+- uid: AtfTIDE.HttpClient.Extensions
+  commentId: T:AtfTIDE.HttpClient.Extensions
+  href: AtfTIDE.HttpClient.Extensions.html
+  name: Extensions
+  nameWithType: Extensions
+  fullName: AtfTIDE.HttpClient.Extensions
+- uid: AtfTIDE.HttpClient.IGitHubClient
+  commentId: T:AtfTIDE.HttpClient.IGitHubClient
+  parent: AtfTIDE.HttpClient
+  href: AtfTIDE.HttpClient.IGitHubClient.html
+  name: IGitHubClient
+  nameWithType: IGitHubClient
+  fullName: AtfTIDE.HttpClient.IGitHubClient
+- uid: AtfTIDE.HttpClient.GitHubClient
+  commentId: T:AtfTIDE.HttpClient.GitHubClient
+  href: AtfTIDE.HttpClient.GitHubClient.html
+  name: GitHubClient
+  nameWithType: GitHubClient
+  fullName: AtfTIDE.HttpClient.GitHubClient
+- uid: AtfTIDE.HttpClient.GithubTokenHandler
+  commentId: T:AtfTIDE.HttpClient.GithubTokenHandler
+  href: AtfTIDE.HttpClient.GithubTokenHandler.html
+  name: GithubTokenHandler
+  nameWithType: GithubTokenHandler
+  fullName: AtfTIDE.HttpClient.GithubTokenHandler
+- uid: AtfTIDE.HttpClient.IGitLabHttpClient
+  commentId: T:AtfTIDE.HttpClient.IGitLabHttpClient
+  parent: AtfTIDE.HttpClient
+  href: AtfTIDE.HttpClient.IGitLabHttpClient.html
+  name: IGitLabHttpClient
+  nameWithType: IGitLabHttpClient
+  fullName: AtfTIDE.HttpClient.IGitLabHttpClient
+- uid: AtfTIDE.HttpClient.GitLabHttpClient
+  commentId: T:AtfTIDE.HttpClient.GitLabHttpClient
+  href: AtfTIDE.HttpClient.GitLabHttpClient.html
+  name: GitLabHttpClient
+  nameWithType: GitLabHttpClient
+  fullName: AtfTIDE.HttpClient.GitLabHttpClient
+- uid: AtfTIDE.HttpClient
+  commentId: N:AtfTIDE.HttpClient
+  href: AtfTIDE.html
+  name: AtfTIDE.HttpClient
+  nameWithType: AtfTIDE.HttpClient
+  fullName: AtfTIDE.HttpClient
+  spec.csharp:
+  - uid: AtfTIDE
+    name: AtfTIDE
+    href: AtfTIDE.html
+  - name: .
+  - uid: AtfTIDE.HttpClient
+    name: HttpClient
+    href: AtfTIDE.HttpClient.html
+  spec.vb:
+  - uid: AtfTIDE
+    name: AtfTIDE
+    href: AtfTIDE.html
+  - name: .
+  - uid: AtfTIDE.HttpClient
+    name: HttpClient
+    href: AtfTIDE.HttpClient.html

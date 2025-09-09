@@ -1,0 +1,489 @@
+﻿### YamlMime:ManagedReference
+items:
+- uid: AtfTIDE.ClioInstaller.INugetClient
+  commentId: T:AtfTIDE.ClioInstaller.INugetClient
+  id: INugetClient
+  parent: AtfTIDE.ClioInstaller
+  children:
+  - AtfTIDE.ClioInstaller.INugetClient.DownloadClioAsync(System.String)
+  - AtfTIDE.ClioInstaller.INugetClient.DownloadClioAsync(System.String,System.String)
+  - AtfTIDE.ClioInstaller.INugetClient.GetMaxVersionAsync(System.String)
+  - AtfTIDE.ClioInstaller.INugetClient.SearchAsync
+  langs:
+  - csharp
+  - vb
+  name: INugetClient
+  nameWithType: INugetClient
+  fullName: AtfTIDE.ClioInstaller.INugetClient
+  type: Interface
+  source:
+    remote:
+      path: packages/AtfTIDE/Files/cs/ClioInstaller/NugetClient.cs
+      branch: main
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: INugetClient
+    path: ../packages/AtfTIDE/Files/cs/ClioInstaller/NugetClient.cs
+    startLine: 18
+  assemblies:
+  - AtfTIDE
+  namespace: AtfTIDE.ClioInstaller
+  syntax:
+    content: public interface INugetClient
+    content.vb: Public Interface INugetClient
+- uid: AtfTIDE.ClioInstaller.INugetClient.DownloadClioAsync(System.String)
+  commentId: M:AtfTIDE.ClioInstaller.INugetClient.DownloadClioAsync(System.String)
+  id: DownloadClioAsync(System.String)
+  parent: AtfTIDE.ClioInstaller.INugetClient
+  langs:
+  - csharp
+  - vb
+  name: DownloadClioAsync(string)
+  nameWithType: INugetClient.DownloadClioAsync(string)
+  fullName: AtfTIDE.ClioInstaller.INugetClient.DownloadClioAsync(string)
+  type: Method
+  source:
+    remote:
+      path: packages/AtfTIDE/Files/cs/ClioInstaller/NugetClient.cs
+      branch: main
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: DownloadClioAsync
+    path: ../packages/AtfTIDE/Files/cs/ClioInstaller/NugetClient.cs
+    startLine: 32
+  assemblies:
+  - AtfTIDE
+  namespace: AtfTIDE.ClioInstaller
+  summary: Downloads the latest Clio package asynchronously.
+  remarks: >-
+    This method constructs the request URI based on the specified version or retrieves the latest version if not
+
+    specified.
+
+    It then sends an HTTP GET request to download the package and saves it to a file.
+  example: []
+  syntax:
+    content: Task<ErrorOr<Success>> DownloadClioAsync(string clioDirectory)
+    parameters:
+    - id: clioDirectory
+      type: System.String
+      description: Directory where clio is to be installed
+    return:
+      type: System.Threading.Tasks.Task{ErrorOr.ErrorOr{ErrorOr.Success}}
+      description: An <xref href="ErrorOr.ErrorOr%601" data-throw-if-not-resolved="false"></xref> indicating the result of the download operation.
+    content.vb: Function DownloadClioAsync(clioDirectory As String) As Task(Of ErrorOr(Of Success))
+  overload: AtfTIDE.ClioInstaller.INugetClient.DownloadClioAsync*
+  nameWithType.vb: INugetClient.DownloadClioAsync(String)
+  fullName.vb: AtfTIDE.ClioInstaller.INugetClient.DownloadClioAsync(String)
+  name.vb: DownloadClioAsync(String)
+- uid: AtfTIDE.ClioInstaller.INugetClient.DownloadClioAsync(System.String,System.String)
+  commentId: M:AtfTIDE.ClioInstaller.INugetClient.DownloadClioAsync(System.String,System.String)
+  id: DownloadClioAsync(System.String,System.String)
+  parent: AtfTIDE.ClioInstaller.INugetClient
+  langs:
+  - csharp
+  - vb
+  name: DownloadClioAsync(string, string)
+  nameWithType: INugetClient.DownloadClioAsync(string, string)
+  fullName: AtfTIDE.ClioInstaller.INugetClient.DownloadClioAsync(string, string)
+  type: Method
+  source:
+    remote:
+      path: packages/AtfTIDE/Files/cs/ClioInstaller/NugetClient.cs
+      branch: main
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: DownloadClioAsync
+    path: ../packages/AtfTIDE/Files/cs/ClioInstaller/NugetClient.cs
+    startLine: 48
+  assemblies:
+  - AtfTIDE
+  namespace: AtfTIDE.ClioInstaller
+  summary: Downloads the specific version of Clio package asynchronously.
+  remarks: >-
+    This method constructs the request URI based on the specified version or retrieves the latest version if not
+
+    specified.
+
+    It then sends an HTTP GET request to download the package and saves it to a file.
+  example: []
+  syntax:
+    content: Task<ErrorOr<Success>> DownloadClioAsync(string clioDirectory, string version)
+    parameters:
+    - id: clioDirectory
+      type: System.String
+      description: Directory where clio is to be installed
+    - id: version
+      type: System.String
+      description: >-
+        The version of the Clio package to download. If not specified, the latest version
+
+        will be downloaded.
+    return:
+      type: System.Threading.Tasks.Task{ErrorOr.ErrorOr{ErrorOr.Success}}
+      description: An <xref href="ErrorOr.ErrorOr%601" data-throw-if-not-resolved="false"></xref> indicating the result of the download operation.
+    content.vb: Function DownloadClioAsync(clioDirectory As String, version As String) As Task(Of ErrorOr(Of Success))
+  overload: AtfTIDE.ClioInstaller.INugetClient.DownloadClioAsync*
+  nameWithType.vb: INugetClient.DownloadClioAsync(String, String)
+  fullName.vb: AtfTIDE.ClioInstaller.INugetClient.DownloadClioAsync(String, String)
+  name.vb: DownloadClioAsync(String, String)
+- uid: AtfTIDE.ClioInstaller.INugetClient.SearchAsync
+  commentId: M:AtfTIDE.ClioInstaller.INugetClient.SearchAsync
+  id: SearchAsync
+  parent: AtfTIDE.ClioInstaller.INugetClient
+  langs:
+  - csharp
+  - vb
+  name: SearchAsync()
+  nameWithType: INugetClient.SearchAsync()
+  fullName: AtfTIDE.ClioInstaller.INugetClient.SearchAsync()
+  type: Method
+  source:
+    remote:
+      path: packages/AtfTIDE/Files/cs/ClioInstaller/NugetClient.cs
+      branch: main
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: SearchAsync
+    path: ../packages/AtfTIDE/Files/cs/ClioInstaller/NugetClient.cs
+    startLine: 58
+  assemblies:
+  - AtfTIDE
+  namespace: AtfTIDE.ClioInstaller
+  summary: Searches for the Clio package asynchronously.
+  example: []
+  syntax:
+    content: Task<ErrorOr<SearchResponse>> SearchAsync()
+    return:
+      type: System.Threading.Tasks.Task{ErrorOr.ErrorOr{AtfTIDE.ClioInstaller.Dto.SearchResponse}}
+      description: >-
+        A task that represents the asynchronous operation.
+
+        The task result contains an <xref href="ErrorOr.ErrorOr%601" data-throw-if-not-resolved="false"></xref> indicating the
+
+        result of the search operation.
+    content.vb: Function SearchAsync() As Task(Of ErrorOr(Of SearchResponse))
+  overload: AtfTIDE.ClioInstaller.INugetClient.SearchAsync*
+- uid: AtfTIDE.ClioInstaller.INugetClient.GetMaxVersionAsync(System.String)
+  commentId: M:AtfTIDE.ClioInstaller.INugetClient.GetMaxVersionAsync(System.String)
+  id: GetMaxVersionAsync(System.String)
+  parent: AtfTIDE.ClioInstaller.INugetClient
+  langs:
+  - csharp
+  - vb
+  name: GetMaxVersionAsync(string)
+  nameWithType: INugetClient.GetMaxVersionAsync(string)
+  fullName: AtfTIDE.ClioInstaller.INugetClient.GetMaxVersionAsync(string)
+  type: Method
+  source:
+    remote:
+      path: packages/AtfTIDE/Files/cs/ClioInstaller/NugetClient.cs
+      branch: main
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: GetMaxVersionAsync
+    path: ../packages/AtfTIDE/Files/cs/ClioInstaller/NugetClient.cs
+    startLine: 68
+  assemblies:
+  - AtfTIDE
+  namespace: AtfTIDE.ClioInstaller
+  summary: Retrieves the maximum version of the specified NuGet package asynchronously.
+  example: []
+  syntax:
+    content: Task<ErrorOr<string>> GetMaxVersionAsync(string packageName)
+    parameters:
+    - id: packageName
+      type: System.String
+      description: The name of the NuGet package.
+    return:
+      type: System.Threading.Tasks.Task{ErrorOr.ErrorOr{System.String}}
+      description: >-
+        A task that represents the asynchronous operation. The task result contains the maximum version of the
+
+        specified package.
+    content.vb: Function GetMaxVersionAsync(packageName As String) As Task(Of ErrorOr(Of String))
+  overload: AtfTIDE.ClioInstaller.INugetClient.GetMaxVersionAsync*
+  nameWithType.vb: INugetClient.GetMaxVersionAsync(String)
+  fullName.vb: AtfTIDE.ClioInstaller.INugetClient.GetMaxVersionAsync(String)
+  name.vb: GetMaxVersionAsync(String)
+references:
+- uid: AtfTIDE.ClioInstaller
+  commentId: N:AtfTIDE.ClioInstaller
+  href: AtfTIDE.html
+  name: AtfTIDE.ClioInstaller
+  nameWithType: AtfTIDE.ClioInstaller
+  fullName: AtfTIDE.ClioInstaller
+  spec.csharp:
+  - uid: AtfTIDE
+    name: AtfTIDE
+    href: AtfTIDE.html
+  - name: .
+  - uid: AtfTIDE.ClioInstaller
+    name: ClioInstaller
+    href: AtfTIDE.ClioInstaller.html
+  spec.vb:
+  - uid: AtfTIDE
+    name: AtfTIDE
+    href: AtfTIDE.html
+  - name: .
+  - uid: AtfTIDE.ClioInstaller
+    name: ClioInstaller
+    href: AtfTIDE.ClioInstaller.html
+- uid: ErrorOr.ErrorOr`1
+  commentId: T:ErrorOr.ErrorOr`1
+  isExternal: true
+  name: ErrorOr<TValue>
+  nameWithType: ErrorOr<TValue>
+  fullName: ErrorOr.ErrorOr<TValue>
+  nameWithType.vb: ErrorOr(Of TValue)
+  fullName.vb: ErrorOr.ErrorOr(Of TValue)
+  name.vb: ErrorOr(Of TValue)
+  spec.csharp:
+  - uid: ErrorOr.ErrorOr`1
+    name: ErrorOr
+    isExternal: true
+  - name: <
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: ErrorOr.ErrorOr`1
+    name: ErrorOr
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TValue
+  - name: )
+- uid: AtfTIDE.ClioInstaller.INugetClient.DownloadClioAsync*
+  commentId: Overload:AtfTIDE.ClioInstaller.INugetClient.DownloadClioAsync
+  href: AtfTIDE.ClioInstaller.INugetClient.html#AtfTIDE_ClioInstaller_INugetClient_DownloadClioAsync_System_String_
+  name: DownloadClioAsync
+  nameWithType: INugetClient.DownloadClioAsync
+  fullName: AtfTIDE.ClioInstaller.INugetClient.DownloadClioAsync
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Threading.Tasks.Task{ErrorOr.ErrorOr{ErrorOr.Success}}
+  commentId: T:System.Threading.Tasks.Task{ErrorOr.ErrorOr{ErrorOr.Success}}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<ErrorOr<Success>>
+  nameWithType: Task<ErrorOr<Success>>
+  fullName: System.Threading.Tasks.Task<ErrorOr.ErrorOr<ErrorOr.Success>>
+  nameWithType.vb: Task(Of ErrorOr(Of Success))
+  fullName.vb: System.Threading.Tasks.Task(Of ErrorOr.ErrorOr(Of ErrorOr.Success))
+  name.vb: Task(Of ErrorOr(Of Success))
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: ErrorOr.ErrorOr`1
+    name: ErrorOr
+    isExternal: true
+  - name: <
+  - uid: ErrorOr.Success
+    name: Success
+    isExternal: true
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: ErrorOr.ErrorOr`1
+    name: ErrorOr
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: ErrorOr.Success
+    name: Success
+    isExternal: true
+  - name: )
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: AtfTIDE.ClioInstaller.INugetClient.SearchAsync*
+  commentId: Overload:AtfTIDE.ClioInstaller.INugetClient.SearchAsync
+  href: AtfTIDE.ClioInstaller.INugetClient.html#AtfTIDE_ClioInstaller_INugetClient_SearchAsync
+  name: SearchAsync
+  nameWithType: INugetClient.SearchAsync
+  fullName: AtfTIDE.ClioInstaller.INugetClient.SearchAsync
+- uid: System.Threading.Tasks.Task{ErrorOr.ErrorOr{AtfTIDE.ClioInstaller.Dto.SearchResponse}}
+  commentId: T:System.Threading.Tasks.Task{ErrorOr.ErrorOr{AtfTIDE.ClioInstaller.Dto.SearchResponse}}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<ErrorOr<SearchResponse>>
+  nameWithType: Task<ErrorOr<SearchResponse>>
+  fullName: System.Threading.Tasks.Task<ErrorOr.ErrorOr<AtfTIDE.ClioInstaller.Dto.SearchResponse>>
+  nameWithType.vb: Task(Of ErrorOr(Of SearchResponse))
+  fullName.vb: System.Threading.Tasks.Task(Of ErrorOr.ErrorOr(Of AtfTIDE.ClioInstaller.Dto.SearchResponse))
+  name.vb: Task(Of ErrorOr(Of SearchResponse))
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: ErrorOr.ErrorOr`1
+    name: ErrorOr
+    isExternal: true
+  - name: <
+  - uid: AtfTIDE.ClioInstaller.Dto.SearchResponse
+    name: SearchResponse
+    href: AtfTIDE.ClioInstaller.Dto.SearchResponse.html
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: ErrorOr.ErrorOr`1
+    name: ErrorOr
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: AtfTIDE.ClioInstaller.Dto.SearchResponse
+    name: SearchResponse
+    href: AtfTIDE.ClioInstaller.Dto.SearchResponse.html
+  - name: )
+  - name: )
+- uid: AtfTIDE.ClioInstaller.INugetClient.GetMaxVersionAsync*
+  commentId: Overload:AtfTIDE.ClioInstaller.INugetClient.GetMaxVersionAsync
+  href: AtfTIDE.ClioInstaller.INugetClient.html#AtfTIDE_ClioInstaller_INugetClient_GetMaxVersionAsync_System_String_
+  name: GetMaxVersionAsync
+  nameWithType: INugetClient.GetMaxVersionAsync
+  fullName: AtfTIDE.ClioInstaller.INugetClient.GetMaxVersionAsync
+- uid: System.Threading.Tasks.Task{ErrorOr.ErrorOr{System.String}}
+  commentId: T:System.Threading.Tasks.Task{ErrorOr.ErrorOr{System.String}}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<ErrorOr<string>>
+  nameWithType: Task<ErrorOr<string>>
+  fullName: System.Threading.Tasks.Task<ErrorOr.ErrorOr<string>>
+  nameWithType.vb: Task(Of ErrorOr(Of String))
+  fullName.vb: System.Threading.Tasks.Task(Of ErrorOr.ErrorOr(Of String))
+  name.vb: Task(Of ErrorOr(Of String))
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: ErrorOr.ErrorOr`1
+    name: ErrorOr
+    isExternal: true
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: ErrorOr.ErrorOr`1
+    name: ErrorOr
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  - name: )

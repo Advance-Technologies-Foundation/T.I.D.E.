@@ -1,0 +1,90 @@
+﻿### YamlMime:ManagedReference
+items:
+- uid: AtfTIDE.QueryExecutor
+  commentId: N:AtfTIDE.QueryExecutor
+  id: AtfTIDE.QueryExecutor
+  children:
+  - AtfTIDE.QueryExecutor.AtfGitChangedFilesQueryExecutor
+  - AtfTIDE.QueryExecutor.ChangedFileDto
+  - AtfTIDE.QueryExecutor.EsqColumnParser
+  - AtfTIDE.QueryExecutor.EsqFilterParser
+  - AtfTIDE.QueryExecutor.IEsqColumnParser
+  - AtfTIDE.QueryExecutor.IEsqFilterParser
+  - AtfTIDE.QueryExecutor.SortColumn
+  langs:
+  - csharp
+  - vb
+  name: AtfTIDE.QueryExecutor
+  nameWithType: AtfTIDE.QueryExecutor
+  fullName: AtfTIDE.QueryExecutor
+  type: Namespace
+  assemblies:
+  - AtfTIDE
+references:
+- uid: AtfTIDE.QueryExecutor.AtfGitChangedFilesQueryExecutor
+  commentId: T:AtfTIDE.QueryExecutor.AtfGitChangedFilesQueryExecutor
+  href: AtfTIDE.QueryExecutor.AtfGitChangedFilesQueryExecutor.html
+  name: AtfGitChangedFilesQueryExecutor
+  nameWithType: AtfGitChangedFilesQueryExecutor
+  fullName: AtfTIDE.QueryExecutor.AtfGitChangedFilesQueryExecutor
+- uid: AtfTIDE.QueryExecutor.ChangedFileDto
+  commentId: T:AtfTIDE.QueryExecutor.ChangedFileDto
+  href: AtfTIDE.QueryExecutor.ChangedFileDto.html
+  name: ChangedFileDto
+  nameWithType: ChangedFileDto
+  fullName: AtfTIDE.QueryExecutor.ChangedFileDto
+- uid: AtfTIDE.QueryExecutor.IEsqColumnParser
+  commentId: T:AtfTIDE.QueryExecutor.IEsqColumnParser
+  parent: AtfTIDE.QueryExecutor
+  href: AtfTIDE.QueryExecutor.IEsqColumnParser.html
+  name: IEsqColumnParser
+  nameWithType: IEsqColumnParser
+  fullName: AtfTIDE.QueryExecutor.IEsqColumnParser
+- uid: AtfTIDE.QueryExecutor.EsqColumnParser
+  commentId: T:AtfTIDE.QueryExecutor.EsqColumnParser
+  href: AtfTIDE.QueryExecutor.EsqColumnParser.html
+  name: EsqColumnParser
+  nameWithType: EsqColumnParser
+  fullName: AtfTIDE.QueryExecutor.EsqColumnParser
+- uid: AtfTIDE.QueryExecutor.SortColumn
+  commentId: T:AtfTIDE.QueryExecutor.SortColumn
+  parent: AtfTIDE.QueryExecutor
+  href: AtfTIDE.QueryExecutor.SortColumn.html
+  name: SortColumn
+  nameWithType: SortColumn
+  fullName: AtfTIDE.QueryExecutor.SortColumn
+- uid: AtfTIDE.QueryExecutor.IEsqFilterParser
+  commentId: T:AtfTIDE.QueryExecutor.IEsqFilterParser
+  parent: AtfTIDE.QueryExecutor
+  href: AtfTIDE.QueryExecutor.IEsqFilterParser.html
+  name: IEsqFilterParser
+  nameWithType: IEsqFilterParser
+  fullName: AtfTIDE.QueryExecutor.IEsqFilterParser
+- uid: AtfTIDE.QueryExecutor.EsqFilterParser
+  commentId: T:AtfTIDE.QueryExecutor.EsqFilterParser
+  href: AtfTIDE.QueryExecutor.EsqFilterParser.html
+  name: EsqFilterParser
+  nameWithType: EsqFilterParser
+  fullName: AtfTIDE.QueryExecutor.EsqFilterParser
+- uid: AtfTIDE.QueryExecutor
+  commentId: N:AtfTIDE.QueryExecutor
+  href: AtfTIDE.html
+  name: AtfTIDE.QueryExecutor
+  nameWithType: AtfTIDE.QueryExecutor
+  fullName: AtfTIDE.QueryExecutor
+  spec.csharp:
+  - uid: AtfTIDE
+    name: AtfTIDE
+    href: AtfTIDE.html
+  - name: .
+  - uid: AtfTIDE.QueryExecutor
+    name: QueryExecutor
+    href: AtfTIDE.QueryExecutor.html
+  spec.vb:
+  - uid: AtfTIDE
+    name: AtfTIDE
+    href: AtfTIDE.html
+  - name: .
+  - uid: AtfTIDE.QueryExecutor
+    name: QueryExecutor
+    href: AtfTIDE.QueryExecutor.html

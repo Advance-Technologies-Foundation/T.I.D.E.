@@ -4,6 +4,7 @@ items:
   commentId: N:AtfTIDE.WebServices
   id: AtfTIDE.WebServices
   children:
+  - AtfTIDE.WebServices.DiscardFileChangesDto
   - AtfTIDE.WebServices.Tide
   langs:
   - csharp
@@ -15,9 +16,38 @@ items:
   assemblies:
   - AtfTIDE
 references:
+- uid: AtfTIDE.WebServices.DiscardFileChangesDto
+  commentId: T:AtfTIDE.WebServices.DiscardFileChangesDto
+  parent: AtfTIDE.WebServices
+  href: AtfTIDE.WebServices.DiscardFileChangesDto.html
+  name: DiscardFileChangesDto
+  nameWithType: DiscardFileChangesDto
+  fullName: AtfTIDE.WebServices.DiscardFileChangesDto
 - uid: AtfTIDE.WebServices.Tide
   commentId: T:AtfTIDE.WebServices.Tide
   href: AtfTIDE.WebServices.Tide.html
   name: Tide
   nameWithType: Tide
   fullName: AtfTIDE.WebServices.Tide
+- uid: AtfTIDE.WebServices
+  commentId: N:AtfTIDE.WebServices
+  href: AtfTIDE.html
+  name: AtfTIDE.WebServices
+  nameWithType: AtfTIDE.WebServices
+  fullName: AtfTIDE.WebServices
+  spec.csharp:
+  - uid: AtfTIDE
+    name: AtfTIDE
+    href: AtfTIDE.html
+  - name: .
+  - uid: AtfTIDE.WebServices
+    name: WebServices
+    href: AtfTIDE.WebServices.html
+  spec.vb:
+  - uid: AtfTIDE
+    name: AtfTIDE
+    href: AtfTIDE.html
+  - name: .
+  - uid: AtfTIDE.WebServices
+    name: WebServices
+    href: AtfTIDE.WebServices.html

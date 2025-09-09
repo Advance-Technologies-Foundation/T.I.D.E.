@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="en-US">
+	<Group Type="String">
+		<Items>
+			<Item Name="Caption" Value="Atf Logs" />
+			<Item Name="LocalizableStrings.Button_ClearLogs_caption.Value" Value="Clear" />
+			<Item Name="LocalizableStrings.RichTextEditor_zunkpu4_caption.Value" Value="Rich text" />
+			<Item Name="LocalizableStrings.RichTextEditor_zunkpu4_label.Value" Value="Log messages" />
+		</Items>
+	</Group>
+</Resources>

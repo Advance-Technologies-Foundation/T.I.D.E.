@@ -40,7 +40,7 @@
     </ItemGroup>
 
     <ItemGroup Label="Nuget packages">
-        <PackageReference Include="coverlet.msbuild" Version="3.2.0">
+        <PackageReference Include="coverlet.msbuild" Version="6.0.4">
             <PrivateAssets>all</PrivateAssets>
             <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
         </PackageReference>
@@ -51,10 +51,10 @@
             <PrivateAssets>all</PrivateAssets>
             <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
         </PackageReference>
-        <PackageReference Include="NUnit" Version="3.13.3" />
-        <PackageReference Include="NUnit3TestAdapter" Version="4.6.0" />
-        <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.13.0" />
-        <PackageReference Include="Castle.Core" version="5.1.1" />
+        <PackageReference Include="NUnit" Version="4.4.0" />
+        <PackageReference Include="NUnit3TestAdapter" Version="5.1.0" />
+        <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.14.1" />
+        <PackageReference Include="Castle.Core" version="5.2.1" />
         <PackageReference Include="Ninject" version="3.3.6" />
         <PackageReference Include="NSubstitute" version="3.1.0" />
         <PackageReference Condition="'$(TargetFramework)' == 'net8.0'" Include="System.Net.Http.Json" Version="8.0.1" />
@@ -62,10 +62,10 @@
             <HintPath>$(TestCoreLibPath)/System.Net.Http.Json.dll</HintPath>
         </Reference>
         <PackageReference Include="System.Runtime" version="4.3.1" />
-        <PackageReference Include="System.Runtime.CompilerServices.Unsafe" Version="6.0.0" />
-        <PackageReference Include="System.Threading.Tasks.Extensions" version="4.5.4" />
+        <PackageReference Include="System.Runtime.CompilerServices.Unsafe" Version="6.1.2" />
+        <PackageReference Include="System.Threading.Tasks.Extensions" version="4.6.3" />
         <PackageReference Include="System.Collections.Immutable" version="8.0.0" />
-        <PackageReference Include="System.IO.Abstractions.TestingHelpers" Version="22.0.12" />
+        <PackageReference Include="System.IO.Abstractions.TestingHelpers" Version="22.0.15" />
 <!--        <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />-->
 <!--        <PackageReference Include="RichardSzalay.MockHttp" Version="7.0.0" />-->
         <Reference Include="*">

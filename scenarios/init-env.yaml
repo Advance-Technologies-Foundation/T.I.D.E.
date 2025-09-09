@@ -1,0 +1,28 @@
+﻿settings:
+  Maintainer: ATF
+  SchemaNamePrefix: Atf
+  
+steps:
+  - action: set-syssetting
+    description: Update sys-setting Maintainer
+    options:
+      Code: Maintainer
+      Value: "{{settings.Maintainer}}"
+      Type: Text
+  
+  - action: set-syssetting
+    description: Update sys-setting SchemaNamePrefix
+    options:
+      Code: SchemaNamePrefix
+      Value: "{{settings.SchemaNamePrefix}}"
+      Type: Text
+
+
+  - action: install-gate
+    description: Install clio-gate
+
+  - action: restart
+    description: restart application
+
+  - action: flushdb
+    description: flush Redis database

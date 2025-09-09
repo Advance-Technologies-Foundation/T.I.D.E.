@@ -5,7 +5,7 @@ items:
   id: PullCommand
   parent: ConsoleGit.Commands
   children:
-  - ConsoleGit.Commands.PullCommand.#ctor(ConsoleGit.CommandLineArgs)
+  - ConsoleGit.Commands.PullCommand.#ctor(ConsoleGit.CommandLineArgs,ConsoleGit.Services.IWebSocketLogger)
   - ConsoleGit.Commands.PullCommand.Execute
   langs:
   - csharp
@@ -17,11 +17,11 @@ items:
   source:
     remote:
       path: ConsoleGit/ConsoleGit/Commands/PullCommand.cs
-      branch: feature/my-feature
+      branch: main
       repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
     id: PullCommand
     path: ../ConsoleGit/ConsoleGit/Commands/PullCommand.cs
-    startLine: 4
+    startLine: 5
   assemblies:
   - ConsoleGit
   namespace: ConsoleGit.Commands
@@ -36,9 +36,11 @@ items:
   - System.IDisposable
   inheritedMembers:
   - ConsoleGit.Commands.BaseRepositoryCommand.Args
+  - ConsoleGit.Commands.BaseRepositoryCommand.Logger
   - ConsoleGit.Commands.BaseRepositoryCommand.InitializedRepository
   - ConsoleGit.Commands.BaseRepositoryCommand.GrantDeleteAccess(System.IO.DirectoryInfo,System.String)
   - ConsoleGit.Commands.BaseRepositoryCommand.CleanRepositoryDirectory
+  - ConsoleGit.Commands.BaseRepositoryCommand.GetAccessPermissionsForFolder(System.String)
   - ConsoleGit.Commands.BaseRepositoryCommand.Dispose(System.Boolean)
   - ConsoleGit.Commands.BaseRepositoryCommand.Dispose
   - System.Object.Equals(System.Object)
@@ -48,38 +50,40 @@ items:
   - System.Object.MemberwiseClone
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.ToString
-- uid: ConsoleGit.Commands.PullCommand.#ctor(ConsoleGit.CommandLineArgs)
-  commentId: M:ConsoleGit.Commands.PullCommand.#ctor(ConsoleGit.CommandLineArgs)
-  id: '#ctor(ConsoleGit.CommandLineArgs)'
+- uid: ConsoleGit.Commands.PullCommand.#ctor(ConsoleGit.CommandLineArgs,ConsoleGit.Services.IWebSocketLogger)
+  commentId: M:ConsoleGit.Commands.PullCommand.#ctor(ConsoleGit.CommandLineArgs,ConsoleGit.Services.IWebSocketLogger)
+  id: '#ctor(ConsoleGit.CommandLineArgs,ConsoleGit.Services.IWebSocketLogger)'
   parent: ConsoleGit.Commands.PullCommand
   langs:
   - csharp
   - vb
-  name: PullCommand(CommandLineArgs)
-  nameWithType: PullCommand.PullCommand(CommandLineArgs)
-  fullName: ConsoleGit.Commands.PullCommand.PullCommand(ConsoleGit.CommandLineArgs)
+  name: PullCommand(CommandLineArgs, IWebSocketLogger)
+  nameWithType: PullCommand.PullCommand(CommandLineArgs, IWebSocketLogger)
+  fullName: ConsoleGit.Commands.PullCommand.PullCommand(ConsoleGit.CommandLineArgs, ConsoleGit.Services.IWebSocketLogger)
   type: Constructor
   source:
     remote:
       path: ConsoleGit/ConsoleGit/Commands/PullCommand.cs
-      branch: feature/my-feature
+      branch: main
       repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
     id: .ctor
     path: ../ConsoleGit/ConsoleGit/Commands/PullCommand.cs
-    startLine: 4
+    startLine: 5
   assemblies:
   - ConsoleGit
   namespace: ConsoleGit.Commands
   syntax:
-    content: public PullCommand(CommandLineArgs args)
+    content: public PullCommand(CommandLineArgs args, IWebSocketLogger logger)
     parameters:
     - id: args
       type: ConsoleGit.CommandLineArgs
-    content.vb: Public Sub New(args As CommandLineArgs)
+    - id: logger
+      type: ConsoleGit.Services.IWebSocketLogger
+    content.vb: Public Sub New(args As CommandLineArgs, logger As IWebSocketLogger)
   overload: ConsoleGit.Commands.PullCommand.#ctor*
-  nameWithType.vb: PullCommand.New(CommandLineArgs)
-  fullName.vb: ConsoleGit.Commands.PullCommand.New(ConsoleGit.CommandLineArgs)
-  name.vb: New(CommandLineArgs)
+  nameWithType.vb: PullCommand.New(CommandLineArgs, IWebSocketLogger)
+  fullName.vb: ConsoleGit.Commands.PullCommand.New(ConsoleGit.CommandLineArgs, ConsoleGit.Services.IWebSocketLogger)
+  name.vb: New(CommandLineArgs, IWebSocketLogger)
 - uid: ConsoleGit.Commands.PullCommand.Execute
   commentId: M:ConsoleGit.Commands.PullCommand.Execute
   id: Execute
@@ -94,11 +98,11 @@ items:
   source:
     remote:
       path: ConsoleGit/ConsoleGit/Commands/PullCommand.cs
-      branch: feature/my-feature
+      branch: main
       repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
     id: Execute
     path: ../ConsoleGit/ConsoleGit/Commands/PullCommand.cs
-    startLine: 6
+    startLine: 7
   assemblies:
   - ConsoleGit
   namespace: ConsoleGit.Commands
@@ -173,6 +177,13 @@ references:
   name: Args
   nameWithType: BaseRepositoryCommand.Args
   fullName: ConsoleGit.Commands.BaseRepositoryCommand.Args
+- uid: ConsoleGit.Commands.BaseRepositoryCommand.Logger
+  commentId: F:ConsoleGit.Commands.BaseRepositoryCommand.Logger
+  parent: ConsoleGit.Commands.BaseRepositoryCommand
+  href: ConsoleGit.Commands.BaseRepositoryCommand.html#ConsoleGit_Commands_BaseRepositoryCommand_Logger
+  name: Logger
+  nameWithType: BaseRepositoryCommand.Logger
+  fullName: ConsoleGit.Commands.BaseRepositoryCommand.Logger
 - uid: ConsoleGit.Commands.BaseRepositoryCommand.InitializedRepository
   commentId: P:ConsoleGit.Commands.BaseRepositoryCommand.InitializedRepository
   parent: ConsoleGit.Commands.BaseRepositoryCommand
@@ -241,6 +252,37 @@ references:
     name: CleanRepositoryDirectory
     href: ConsoleGit.Commands.BaseRepositoryCommand.html#ConsoleGit_Commands_BaseRepositoryCommand_CleanRepositoryDirectory
   - name: (
+  - name: )
+- uid: ConsoleGit.Commands.BaseRepositoryCommand.GetAccessPermissionsForFolder(System.String)
+  commentId: M:ConsoleGit.Commands.BaseRepositoryCommand.GetAccessPermissionsForFolder(System.String)
+  parent: ConsoleGit.Commands.BaseRepositoryCommand
+  isExternal: true
+  href: ConsoleGit.Commands.BaseRepositoryCommand.html#ConsoleGit_Commands_BaseRepositoryCommand_GetAccessPermissionsForFolder_System_String_
+  name: GetAccessPermissionsForFolder(string)
+  nameWithType: BaseRepositoryCommand.GetAccessPermissionsForFolder(string)
+  fullName: ConsoleGit.Commands.BaseRepositoryCommand.GetAccessPermissionsForFolder(string)
+  nameWithType.vb: BaseRepositoryCommand.GetAccessPermissionsForFolder(String)
+  fullName.vb: ConsoleGit.Commands.BaseRepositoryCommand.GetAccessPermissionsForFolder(String)
+  name.vb: GetAccessPermissionsForFolder(String)
+  spec.csharp:
+  - uid: ConsoleGit.Commands.BaseRepositoryCommand.GetAccessPermissionsForFolder(System.String)
+    name: GetAccessPermissionsForFolder
+    href: ConsoleGit.Commands.BaseRepositoryCommand.html#ConsoleGit_Commands_BaseRepositoryCommand_GetAccessPermissionsForFolder_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: ConsoleGit.Commands.BaseRepositoryCommand.GetAccessPermissionsForFolder(System.String)
+    name: GetAccessPermissionsForFolder
+    href: ConsoleGit.Commands.BaseRepositoryCommand.html#ConsoleGit_Commands_BaseRepositoryCommand_GetAccessPermissionsForFolder_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
   - name: )
 - uid: ConsoleGit.Commands.BaseRepositoryCommand.Dispose(System.Boolean)
   commentId: M:ConsoleGit.Commands.BaseRepositoryCommand.Dispose(System.Boolean)
@@ -520,7 +562,7 @@ references:
   fullName: System
 - uid: ConsoleGit.Commands.PullCommand.#ctor*
   commentId: Overload:ConsoleGit.Commands.PullCommand.#ctor
-  href: ConsoleGit.Commands.PullCommand.html#ConsoleGit_Commands_PullCommand__ctor_ConsoleGit_CommandLineArgs_
+  href: ConsoleGit.Commands.PullCommand.html#ConsoleGit_Commands_PullCommand__ctor_ConsoleGit_CommandLineArgs_ConsoleGit_Services_IWebSocketLogger_
   name: PullCommand
   nameWithType: PullCommand.PullCommand
   fullName: ConsoleGit.Commands.PullCommand.PullCommand
@@ -534,12 +576,41 @@ references:
   name: CommandLineArgs
   nameWithType: CommandLineArgs
   fullName: ConsoleGit.CommandLineArgs
+- uid: ConsoleGit.Services.IWebSocketLogger
+  commentId: T:ConsoleGit.Services.IWebSocketLogger
+  parent: ConsoleGit.Services
+  href: ConsoleGit.Services.IWebSocketLogger.html
+  name: IWebSocketLogger
+  nameWithType: IWebSocketLogger
+  fullName: ConsoleGit.Services.IWebSocketLogger
 - uid: ConsoleGit
   commentId: N:ConsoleGit
   href: ConsoleGit.html
   name: ConsoleGit
   nameWithType: ConsoleGit
   fullName: ConsoleGit
+- uid: ConsoleGit.Services
+  commentId: N:ConsoleGit.Services
+  href: ConsoleGit.html
+  name: ConsoleGit.Services
+  nameWithType: ConsoleGit.Services
+  fullName: ConsoleGit.Services
+  spec.csharp:
+  - uid: ConsoleGit
+    name: ConsoleGit
+    href: ConsoleGit.html
+  - name: .
+  - uid: ConsoleGit.Services
+    name: Services
+    href: ConsoleGit.Services.html
+  spec.vb:
+  - uid: ConsoleGit
+    name: ConsoleGit
+    href: ConsoleGit.html
+  - name: .
+  - uid: ConsoleGit.Services
+    name: Services
+    href: ConsoleGit.Services.html
 - uid: ConsoleGit.Commands.BaseRepositoryCommand.Execute
   commentId: M:ConsoleGit.Commands.BaseRepositoryCommand.Execute
   parent: ConsoleGit.Commands.BaseRepositoryCommand

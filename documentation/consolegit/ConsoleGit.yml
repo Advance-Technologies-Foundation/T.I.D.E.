@@ -5,6 +5,7 @@ items:
   id: ConsoleGit
   children:
   - ConsoleGit.CommandLineArgs
+  - ConsoleGit.Program
   langs:
   - csharp
   - vb
@@ -22,6 +23,12 @@ references:
   name: CommandLineArgs
   nameWithType: CommandLineArgs
   fullName: ConsoleGit.CommandLineArgs
+- uid: ConsoleGit.Program
+  commentId: T:ConsoleGit.Program
+  href: ConsoleGit.Program.html
+  name: Program
+  nameWithType: Program
+  fullName: ConsoleGit.Program
 - uid: ConsoleGit
   commentId: N:ConsoleGit
   href: ConsoleGit.html

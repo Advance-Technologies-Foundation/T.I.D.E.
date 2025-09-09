@@ -1,0 +1,23 @@
+﻿### YamlMime:ManagedReference
+items:
+- uid: Terrasoft.Configuration
+  commentId: N:Terrasoft.Configuration
+  id: Terrasoft.Configuration
+  children:
+  - Terrasoft.Configuration.InstallConsoleGitInstallScript
+  langs:
+  - csharp
+  - vb
+  name: Terrasoft.Configuration
+  nameWithType: Terrasoft.Configuration
+  fullName: Terrasoft.Configuration
+  type: Namespace
+  assemblies:
+  - AtfTIDE
+references:
+- uid: Terrasoft.Configuration.InstallConsoleGitInstallScript
+  commentId: T:Terrasoft.Configuration.InstallConsoleGitInstallScript
+  href: Terrasoft.Configuration.InstallConsoleGitInstallScript.html
+  name: InstallConsoleGitInstallScript
+  nameWithType: InstallConsoleGitInstallScript
+  fullName: Terrasoft.Configuration.InstallConsoleGitInstallScript

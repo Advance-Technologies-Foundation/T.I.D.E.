@@ -7,10 +7,16 @@ items:
   children:
   - AtfTIDE.HelperFunctions.AddClioArgsForUser(System.Guid,System.Collections.Generic.Dictionary{System.String,System.String})
   - AtfTIDE.HelperFunctions.ClioArguments
+  - AtfTIDE.HelperFunctions.CreateTempDirectory
   - AtfTIDE.HelperFunctions.FetchRepositoryName(System.Guid,Terrasoft.Core.UserConnection)
+  - AtfTIDE.HelperFunctions.GetArchivePath
+  - AtfTIDE.HelperFunctions.GetClioDirectory
+  - AtfTIDE.HelperFunctions.GetClioFilePath
   - AtfTIDE.HelperFunctions.GetConsoleGitPath
+  - AtfTIDE.HelperFunctions.GetGitConsoleFolderPath
   - AtfTIDE.HelperFunctions.GetRepositoryDirectory(System.String)
   - AtfTIDE.HelperFunctions.GetRepositoryInfo(System.Guid,Terrasoft.Core.UserConnection)
+  - AtfTIDE.HelperFunctions.RunOsProcess(System.Diagnostics.ProcessStartInfo,System.Boolean)
   langs:
   - csharp
   - vb
@@ -21,11 +27,11 @@ items:
   source:
     remote:
       path: packages/AtfTIDE/Files/cs/HelperFunctions.cs
-      branch: feature/my-feature
+      branch: main
       repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
     id: HelperFunctions
     path: ../packages/AtfTIDE/Files/cs/HelperFunctions.cs
-    startLine: 9
+    startLine: 17
   assemblies:
   - AtfTIDE
   namespace: AtfTIDE
@@ -35,141 +41,13 @@ items:
   inheritance:
   - System.Object
   inheritedMembers:
-  - System.Object.ToString
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
-  - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.GetHashCode
   - System.Object.GetType
   - System.Object.MemberwiseClone
-- uid: AtfTIDE.HelperFunctions.GetRepositoryDirectory(System.String)
-  commentId: M:AtfTIDE.HelperFunctions.GetRepositoryDirectory(System.String)
-  id: GetRepositoryDirectory(System.String)
-  parent: AtfTIDE.HelperFunctions
-  langs:
-  - csharp
-  - vb
-  name: GetRepositoryDirectory(string)
-  nameWithType: HelperFunctions.GetRepositoryDirectory(string)
-  fullName: AtfTIDE.HelperFunctions.GetRepositoryDirectory(string)
-  type: Method
-  source:
-    remote:
-      path: packages/AtfTIDE/Files/cs/HelperFunctions.cs
-      branch: feature/my-feature
-      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
-    id: GetRepositoryDirectory
-    path: ../packages/AtfTIDE/Files/cs/HelperFunctions.cs
-    startLine: 11
-  assemblies:
-  - AtfTIDE
-  namespace: AtfTIDE
-  syntax:
-    content: public static DirectoryInfo GetRepositoryDirectory(string repositoryName)
-    parameters:
-    - id: repositoryName
-      type: System.String
-    return:
-      type: System.IO.DirectoryInfo
-    content.vb: Public Shared Function GetRepositoryDirectory(repositoryName As String) As DirectoryInfo
-  overload: AtfTIDE.HelperFunctions.GetRepositoryDirectory*
-  nameWithType.vb: HelperFunctions.GetRepositoryDirectory(String)
-  fullName.vb: AtfTIDE.HelperFunctions.GetRepositoryDirectory(String)
-  name.vb: GetRepositoryDirectory(String)
-- uid: AtfTIDE.HelperFunctions.GetConsoleGitPath
-  commentId: M:AtfTIDE.HelperFunctions.GetConsoleGitPath
-  id: GetConsoleGitPath
-  parent: AtfTIDE.HelperFunctions
-  langs:
-  - csharp
-  - vb
-  name: GetConsoleGitPath()
-  nameWithType: HelperFunctions.GetConsoleGitPath()
-  fullName: AtfTIDE.HelperFunctions.GetConsoleGitPath()
-  type: Method
-  source:
-    remote:
-      path: packages/AtfTIDE/Files/cs/HelperFunctions.cs
-      branch: feature/my-feature
-      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
-    id: GetConsoleGitPath
-    path: ../packages/AtfTIDE/Files/cs/HelperFunctions.cs
-    startLine: 17
-  assemblies:
-  - AtfTIDE
-  namespace: AtfTIDE
-  syntax:
-    content: public static ErrorOr<FileInfo> GetConsoleGitPath()
-    return:
-      type: ErrorOr.ErrorOr{System.IO.FileInfo}
-    content.vb: Public Shared Function GetConsoleGitPath() As ErrorOr(Of FileInfo)
-  overload: AtfTIDE.HelperFunctions.GetConsoleGitPath*
-- uid: AtfTIDE.HelperFunctions.FetchRepositoryName(System.Guid,Terrasoft.Core.UserConnection)
-  commentId: M:AtfTIDE.HelperFunctions.FetchRepositoryName(System.Guid,Terrasoft.Core.UserConnection)
-  id: FetchRepositoryName(System.Guid,Terrasoft.Core.UserConnection)
-  parent: AtfTIDE.HelperFunctions
-  langs:
-  - csharp
-  - vb
-  name: FetchRepositoryName(Guid, UserConnection)
-  nameWithType: HelperFunctions.FetchRepositoryName(Guid, UserConnection)
-  fullName: AtfTIDE.HelperFunctions.FetchRepositoryName(System.Guid, Terrasoft.Core.UserConnection)
-  type: Method
-  source:
-    remote:
-      path: packages/AtfTIDE/Files/cs/HelperFunctions.cs
-      branch: feature/my-feature
-      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
-    id: FetchRepositoryName
-    path: ../packages/AtfTIDE/Files/cs/HelperFunctions.cs
-    startLine: 31
-  assemblies:
-  - AtfTIDE
-  namespace: AtfTIDE
-  syntax:
-    content: public static string FetchRepositoryName(Guid repositoryId, UserConnection userConnection = null)
-    parameters:
-    - id: repositoryId
-      type: System.Guid
-    - id: userConnection
-      type: Terrasoft.Core.UserConnection
-    return:
-      type: System.String
-    content.vb: Public Shared Function FetchRepositoryName(repositoryId As Guid, userConnection As UserConnection = Nothing) As String
-  overload: AtfTIDE.HelperFunctions.FetchRepositoryName*
-- uid: AtfTIDE.HelperFunctions.GetRepositoryInfo(System.Guid,Terrasoft.Core.UserConnection)
-  commentId: M:AtfTIDE.HelperFunctions.GetRepositoryInfo(System.Guid,Terrasoft.Core.UserConnection)
-  id: GetRepositoryInfo(System.Guid,Terrasoft.Core.UserConnection)
-  parent: AtfTIDE.HelperFunctions
-  langs:
-  - csharp
-  - vb
-  name: GetRepositoryInfo(Guid, UserConnection)
-  nameWithType: HelperFunctions.GetRepositoryInfo(Guid, UserConnection)
-  fullName: AtfTIDE.HelperFunctions.GetRepositoryInfo(System.Guid, Terrasoft.Core.UserConnection)
-  type: Method
-  source:
-    remote:
-      path: packages/AtfTIDE/Files/cs/HelperFunctions.cs
-      branch: feature/my-feature
-      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
-    id: GetRepositoryInfo
-    path: ../packages/AtfTIDE/Files/cs/HelperFunctions.cs
-    startLine: 41
-  assemblies:
-  - AtfTIDE
-  namespace: AtfTIDE
-  syntax:
-    content: public static RepositoryInfo GetRepositoryInfo(Guid repositoryId, UserConnection userConnection = null)
-    parameters:
-    - id: repositoryId
-      type: System.Guid
-    - id: userConnection
-      type: Terrasoft.Core.UserConnection
-    return:
-      type: AtfTIDE.RepositoryInfo
-    content.vb: Public Shared Function GetRepositoryInfo(repositoryId As Guid, userConnection As UserConnection = Nothing) As RepositoryInfo
-  overload: AtfTIDE.HelperFunctions.GetRepositoryInfo*
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
 - uid: AtfTIDE.HelperFunctions.ClioArguments
   commentId: F:AtfTIDE.HelperFunctions.ClioArguments
   id: ClioArguments
@@ -184,19 +62,19 @@ items:
   source:
     remote:
       path: packages/AtfTIDE/Files/cs/HelperFunctions.cs
-      branch: feature/my-feature
+      branch: main
       repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
     id: ClioArguments
     path: ../packages/AtfTIDE/Files/cs/HelperFunctions.cs
-    startLine: 65
+    startLine: 18
   assemblies:
   - AtfTIDE
   namespace: AtfTIDE
   syntax:
-    content: public static Dictionary<Guid, Dictionary<string, string>> ClioArguments
+    content: public static readonly Dictionary<Guid, Dictionary<string, string>> ClioArguments
     return:
       type: System.Collections.Generic.Dictionary{System.Guid,System.Collections.Generic.Dictionary{System.String,System.String}}
-    content.vb: Public Shared ClioArguments As Dictionary(Of Guid, Dictionary(Of String, String))
+    content.vb: Public Shared ReadOnly ClioArguments As Dictionary(Of Guid, Dictionary(Of String, String))
 - uid: AtfTIDE.HelperFunctions.AddClioArgsForUser(System.Guid,System.Collections.Generic.Dictionary{System.String,System.String})
   commentId: M:AtfTIDE.HelperFunctions.AddClioArgsForUser(System.Guid,System.Collections.Generic.Dictionary{System.String,System.String})
   id: AddClioArgsForUser(System.Guid,System.Collections.Generic.Dictionary{System.String,System.String})
@@ -211,26 +89,394 @@ items:
   source:
     remote:
       path: packages/AtfTIDE/Files/cs/HelperFunctions.cs
-      branch: feature/my-feature
+      branch: main
       repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
     id: AddClioArgsForUser
     path: ../packages/AtfTIDE/Files/cs/HelperFunctions.cs
-    startLine: 67
+    startLine: 122
   assemblies:
   - AtfTIDE
   namespace: AtfTIDE
+  summary: Adds or updates the stored Clio command line arguments for the specified user.
+  example: []
   syntax:
     content: public static void AddClioArgsForUser(Guid userId, Dictionary<string, string> args)
     parameters:
     - id: userId
       type: System.Guid
+      description: The unique identifier of the user whose arguments are being set.
     - id: args
       type: System.Collections.Generic.Dictionary{System.String,System.String}
+      description: Dictionary of argument key/value pairs to associate with the user.
     content.vb: Public Shared Sub AddClioArgsForUser(userId As Guid, args As Dictionary(Of String, String))
   overload: AtfTIDE.HelperFunctions.AddClioArgsForUser*
   nameWithType.vb: HelperFunctions.AddClioArgsForUser(Guid, Dictionary(Of String, String))
   fullName.vb: AtfTIDE.HelperFunctions.AddClioArgsForUser(System.Guid, System.Collections.Generic.Dictionary(Of String, String))
   name.vb: AddClioArgsForUser(Guid, Dictionary(Of String, String))
+- uid: AtfTIDE.HelperFunctions.CreateTempDirectory
+  commentId: M:AtfTIDE.HelperFunctions.CreateTempDirectory
+  id: CreateTempDirectory
+  parent: AtfTIDE.HelperFunctions
+  langs:
+  - csharp
+  - vb
+  name: CreateTempDirectory()
+  nameWithType: HelperFunctions.CreateTempDirectory()
+  fullName: AtfTIDE.HelperFunctions.CreateTempDirectory()
+  type: Method
+  source:
+    remote:
+      path: packages/AtfTIDE/Files/cs/HelperFunctions.cs
+      branch: main
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: CreateTempDirectory
+    path: ../packages/AtfTIDE/Files/cs/HelperFunctions.cs
+    startLine: 139
+  assemblies:
+  - AtfTIDE
+  namespace: AtfTIDE
+  summary: >-
+    Creates (if absent) and returns a temporary directory used for transient .NET tooling artifacts.
+
+    The directory path is constructed as: GetClioDirectory()/.dotnet_tmp.
+  remarks: Ensures the directory exists before returning the DirectoryInfo instance.
+  example: []
+  syntax:
+    content: public static DirectoryInfo CreateTempDirectory()
+    return:
+      type: System.IO.DirectoryInfo
+      description: <xref href="System.IO.DirectoryInfo" data-throw-if-not-resolved="false"></xref> representing the temporary working directory.
+    content.vb: Public Shared Function CreateTempDirectory() As DirectoryInfo
+  overload: AtfTIDE.HelperFunctions.CreateTempDirectory*
+- uid: AtfTIDE.HelperFunctions.FetchRepositoryName(System.Guid,Terrasoft.Core.UserConnection)
+  commentId: M:AtfTIDE.HelperFunctions.FetchRepositoryName(System.Guid,Terrasoft.Core.UserConnection)
+  id: FetchRepositoryName(System.Guid,Terrasoft.Core.UserConnection)
+  parent: AtfTIDE.HelperFunctions
+  langs:
+  - csharp
+  - vb
+  name: FetchRepositoryName(Guid, UserConnection)
+  nameWithType: HelperFunctions.FetchRepositoryName(Guid, UserConnection)
+  fullName: AtfTIDE.HelperFunctions.FetchRepositoryName(System.Guid, Terrasoft.Core.UserConnection)
+  type: Method
+  source:
+    remote:
+      path: packages/AtfTIDE/Files/cs/HelperFunctions.cs
+      branch: main
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: FetchRepositoryName
+    path: ../packages/AtfTIDE/Files/cs/HelperFunctions.cs
+    startLine: 159
+  assemblies:
+  - AtfTIDE
+  namespace: AtfTIDE
+  summary: Fetches the repository name (column AtfName) by its unique identifier.
+  example: []
+  syntax:
+    content: public static string FetchRepositoryName(Guid repositoryId, UserConnection userConnection = null)
+    parameters:
+    - id: repositoryId
+      type: System.Guid
+      description: Unique identifier of the repository record.
+    - id: userConnection
+      type: Terrasoft.Core.UserConnection
+      description: >-
+        Optional user connection. If <code>null</code>, a new <xref href="Terrasoft.Core.UserConnection" data-throw-if-not-resolved="false"></xref> is resolved via
+
+        <xref href="Terrasoft.Core.Factories.ClassFactory" data-throw-if-not-resolved="false"></xref>.
+    return:
+      type: System.String
+      description: Repository name if found; otherwise an empty string.
+    content.vb: Public Shared Function FetchRepositoryName(repositoryId As Guid, userConnection As UserConnection = Nothing) As String
+  overload: AtfTIDE.HelperFunctions.FetchRepositoryName*
+- uid: AtfTIDE.HelperFunctions.GetArchivePath
+  commentId: M:AtfTIDE.HelperFunctions.GetArchivePath
+  id: GetArchivePath
+  parent: AtfTIDE.HelperFunctions
+  langs:
+  - csharp
+  - vb
+  name: GetArchivePath()
+  nameWithType: HelperFunctions.GetArchivePath()
+  fullName: AtfTIDE.HelperFunctions.GetArchivePath()
+  type: Method
+  source:
+    remote:
+      path: packages/AtfTIDE/Files/cs/HelperFunctions.cs
+      branch: main
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: GetArchivePath
+    path: ../packages/AtfTIDE/Files/cs/HelperFunctions.cs
+    startLine: 175
+  assemblies:
+  - AtfTIDE
+  namespace: AtfTIDE
+  summary: >-
+    Returns the absolute path to the packaged archive file (archive.zip) located under
+
+    <code>Terrasoft.Configuration/Pkg/AtfTIDE/Files/exec/archive.zip</code>.
+  remarks: This zip archive contains ConsoleGit binaries
+  example: []
+  syntax:
+    content: public static string GetArchivePath()
+    return:
+      type: System.String
+      description: The full path to archive.zip (its existence is not guaranteed).
+    content.vb: Public Shared Function GetArchivePath() As String
+  overload: AtfTIDE.HelperFunctions.GetArchivePath*
+- uid: AtfTIDE.HelperFunctions.GetClioDirectory
+  commentId: M:AtfTIDE.HelperFunctions.GetClioDirectory
+  id: GetClioDirectory
+  parent: AtfTIDE.HelperFunctions
+  langs:
+  - csharp
+  - vb
+  name: GetClioDirectory()
+  nameWithType: HelperFunctions.GetClioDirectory()
+  fullName: AtfTIDE.HelperFunctions.GetClioDirectory()
+  type: Method
+  source:
+    remote:
+      path: packages/AtfTIDE/Files/cs/HelperFunctions.cs
+      branch: main
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: GetClioDirectory
+    path: ../packages/AtfTIDE/Files/cs/HelperFunctions.cs
+    startLine: 188
+  assemblies:
+  - AtfTIDE
+  namespace: AtfTIDE
+  summary: Gets the directory information for the Clio installation.
+  example: []
+  syntax:
+    content: public static DirectoryInfo GetClioDirectory()
+    return:
+      type: System.IO.DirectoryInfo
+      description: A <xref href="System.IO.DirectoryInfo" data-throw-if-not-resolved="false"></xref> object representing the Clio directory.
+    content.vb: Public Shared Function GetClioDirectory() As DirectoryInfo
+  overload: AtfTIDE.HelperFunctions.GetClioDirectory*
+- uid: AtfTIDE.HelperFunctions.GetClioFilePath
+  commentId: M:AtfTIDE.HelperFunctions.GetClioFilePath
+  id: GetClioFilePath
+  parent: AtfTIDE.HelperFunctions
+  langs:
+  - csharp
+  - vb
+  name: GetClioFilePath()
+  nameWithType: HelperFunctions.GetClioFilePath()
+  fullName: AtfTIDE.HelperFunctions.GetClioFilePath()
+  type: Method
+  source:
+    remote:
+      path: packages/AtfTIDE/Files/cs/HelperFunctions.cs
+      branch: main
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: GetClioFilePath
+    path: ../packages/AtfTIDE/Files/cs/HelperFunctions.cs
+    startLine: 200
+  assemblies:
+  - AtfTIDE
+  namespace: AtfTIDE
+  summary: Returns the full path to the <code>clio.dll</code> file within the Clio directory (searched recursively).
+  example: []
+  syntax:
+    content: public static string GetClioFilePath()
+    return:
+      type: System.String
+      description: Absolute path to <code>clio.dll</code>; empty string if not found.
+    content.vb: Public Shared Function GetClioFilePath() As String
+  overload: AtfTIDE.HelperFunctions.GetClioFilePath*
+- uid: AtfTIDE.HelperFunctions.GetConsoleGitPath
+  commentId: M:AtfTIDE.HelperFunctions.GetConsoleGitPath
+  id: GetConsoleGitPath
+  parent: AtfTIDE.HelperFunctions
+  langs:
+  - csharp
+  - vb
+  name: GetConsoleGitPath()
+  nameWithType: HelperFunctions.GetConsoleGitPath()
+  fullName: AtfTIDE.HelperFunctions.GetConsoleGitPath()
+  type: Method
+  source:
+    remote:
+      path: packages/AtfTIDE/Files/cs/HelperFunctions.cs
+      branch: main
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: GetConsoleGitPath
+    path: ../packages/AtfTIDE/Files/cs/HelperFunctions.cs
+    startLine: 210
+  assemblies:
+  - AtfTIDE
+  namespace: AtfTIDE
+  summary: Returns the absolute path to the ConsoleGit.dll file.
+  remarks: This file contains ConsoleGit binaries after installation
+  example: []
+  syntax:
+    content: public static ErrorOr<FileInfo> GetConsoleGitPath()
+    return:
+      type: ErrorOr.ErrorOr{System.IO.FileInfo}
+      description: The full path to the ConsoleGit.dll file.
+    content.vb: Public Shared Function GetConsoleGitPath() As ErrorOr(Of FileInfo)
+  overload: AtfTIDE.HelperFunctions.GetConsoleGitPath*
+- uid: AtfTIDE.HelperFunctions.GetGitConsoleFolderPath
+  commentId: M:AtfTIDE.HelperFunctions.GetGitConsoleFolderPath
+  id: GetGitConsoleFolderPath
+  parent: AtfTIDE.HelperFunctions
+  langs:
+  - csharp
+  - vb
+  name: GetGitConsoleFolderPath()
+  nameWithType: HelperFunctions.GetGitConsoleFolderPath()
+  fullName: AtfTIDE.HelperFunctions.GetGitConsoleFolderPath()
+  type: Method
+  source:
+    remote:
+      path: packages/AtfTIDE/Files/cs/HelperFunctions.cs
+      branch: main
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: GetGitConsoleFolderPath
+    path: ../packages/AtfTIDE/Files/cs/HelperFunctions.cs
+    startLine: 226
+  assemblies:
+  - AtfTIDE
+  namespace: AtfTIDE
+  summary: Returns the absolute path to the ConsoleGit folder.
+  remarks: This folder contains ConsoleGit binaries after installation
+  example: []
+  syntax:
+    content: public static string GetGitConsoleFolderPath()
+    return:
+      type: System.String
+      description: The full path to the ConsoleGit folder.
+    content.vb: Public Shared Function GetGitConsoleFolderPath() As String
+  overload: AtfTIDE.HelperFunctions.GetGitConsoleFolderPath*
+- uid: AtfTIDE.HelperFunctions.GetRepositoryDirectory(System.String)
+  commentId: M:AtfTIDE.HelperFunctions.GetRepositoryDirectory(System.String)
+  id: GetRepositoryDirectory(System.String)
+  parent: AtfTIDE.HelperFunctions
+  langs:
+  - csharp
+  - vb
+  name: GetRepositoryDirectory(string)
+  nameWithType: HelperFunctions.GetRepositoryDirectory(string)
+  fullName: AtfTIDE.HelperFunctions.GetRepositoryDirectory(string)
+  type: Method
+  source:
+    remote:
+      path: packages/AtfTIDE/Files/cs/HelperFunctions.cs
+      branch: main
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: GetRepositoryDirectory
+    path: ../packages/AtfTIDE/Files/cs/HelperFunctions.cs
+    startLine: 241
+  assemblies:
+  - AtfTIDE
+  namespace: AtfTIDE
+  summary: Returns (creating if necessary) a temporary workspace directory for the specified repository.
+  remarks: >-
+    Root path is derived from the configured temp directory (GetTempPath()).
+
+    The directory is created if it does not already exist.
+  example: []
+  syntax:
+    content: public static DirectoryInfo GetRepositoryDirectory(string repositoryName)
+    parameters:
+    - id: repositoryName
+      type: System.String
+      description: Logical repository name; used as the folder name.
+    return:
+      type: System.IO.DirectoryInfo
+      description: DirectoryInfo pointing to the repository workspace directory.
+    content.vb: Public Shared Function GetRepositoryDirectory(repositoryName As String) As DirectoryInfo
+  overload: AtfTIDE.HelperFunctions.GetRepositoryDirectory*
+  nameWithType.vb: HelperFunctions.GetRepositoryDirectory(String)
+  fullName.vb: AtfTIDE.HelperFunctions.GetRepositoryDirectory(String)
+  name.vb: GetRepositoryDirectory(String)
+- uid: AtfTIDE.HelperFunctions.GetRepositoryInfo(System.Guid,Terrasoft.Core.UserConnection)
+  commentId: M:AtfTIDE.HelperFunctions.GetRepositoryInfo(System.Guid,Terrasoft.Core.UserConnection)
+  id: GetRepositoryInfo(System.Guid,Terrasoft.Core.UserConnection)
+  parent: AtfTIDE.HelperFunctions
+  langs:
+  - csharp
+  - vb
+  name: GetRepositoryInfo(Guid, UserConnection)
+  nameWithType: HelperFunctions.GetRepositoryInfo(Guid, UserConnection)
+  fullName: AtfTIDE.HelperFunctions.GetRepositoryInfo(System.Guid, Terrasoft.Core.UserConnection)
+  type: Method
+  source:
+    remote:
+      path: packages/AtfTIDE/Files/cs/HelperFunctions.cs
+      branch: main
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: GetRepositoryInfo
+    path: ../packages/AtfTIDE/Files/cs/HelperFunctions.cs
+    startLine: 263
+  assemblies:
+  - AtfTIDE
+  namespace: AtfTIDE
+  summary: >-
+    Fetches the repository information (column AtfName, AtfRepositoryUrl, AtfUserName, AtfAccessToken) by its unique
+
+    identifier.
+  example: []
+  syntax:
+    content: public static RepositoryInfo GetRepositoryInfo(Guid repositoryId, UserConnection userConnection = null)
+    parameters:
+    - id: repositoryId
+      type: System.Guid
+      description: Unique identifier of the repository record.
+    - id: userConnection
+      type: Terrasoft.Core.UserConnection
+      description: >-
+        Optional user connection. If <code>null</code>, a new <xref href="Terrasoft.Core.UserConnection" data-throw-if-not-resolved="false"></xref> is resolved via
+
+        <xref href="Terrasoft.Core.Factories.ClassFactory" data-throw-if-not-resolved="false"></xref>.
+    return:
+      type: AtfTIDE.RepositoryInfo
+      description: <xref href="AtfTIDE.RepositoryInfo" data-throw-if-not-resolved="false"></xref>
+    content.vb: Public Shared Function GetRepositoryInfo(repositoryId As Guid, userConnection As UserConnection = Nothing) As RepositoryInfo
+  overload: AtfTIDE.HelperFunctions.GetRepositoryInfo*
+- uid: AtfTIDE.HelperFunctions.RunOsProcess(System.Diagnostics.ProcessStartInfo,System.Boolean)
+  commentId: M:AtfTIDE.HelperFunctions.RunOsProcess(System.Diagnostics.ProcessStartInfo,System.Boolean)
+  id: RunOsProcess(System.Diagnostics.ProcessStartInfo,System.Boolean)
+  parent: AtfTIDE.HelperFunctions
+  langs:
+  - csharp
+  - vb
+  name: RunOsProcess(ProcessStartInfo, bool)
+  nameWithType: HelperFunctions.RunOsProcess(ProcessStartInfo, bool)
+  fullName: AtfTIDE.HelperFunctions.RunOsProcess(System.Diagnostics.ProcessStartInfo, bool)
+  type: Method
+  source:
+    remote:
+      path: packages/AtfTIDE/Files/cs/HelperFunctions.cs
+      branch: main
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: RunOsProcess
+    path: ../packages/AtfTIDE/Files/cs/HelperFunctions.cs
+    startLine: 283
+  assemblies:
+  - AtfTIDE
+  namespace: AtfTIDE
+  summary: Runs a process and returns the output and error messages.
+  example: []
+  syntax:
+    content: public static OsProcessResult RunOsProcess(ProcessStartInfo startInfo, bool waitForExit = true)
+    parameters:
+    - id: startInfo
+      type: System.Diagnostics.ProcessStartInfo
+      description: The <xref href="System.Diagnostics.ProcessStartInfo" data-throw-if-not-resolved="false"></xref> to use.
+    - id: waitForExit
+      type: System.Boolean
+      description: If <code>true</code>, waits for the process to exit before returning.
+    return:
+      type: AtfTIDE.OsProcessResult
+      description: The <xref href="AtfTIDE.OsProcessResult" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Shared Function RunOsProcess(startInfo As ProcessStartInfo, waitForExit As Boolean = True) As OsProcessResult
+  overload: AtfTIDE.HelperFunctions.RunOsProcess*
+  nameWithType.vb: HelperFunctions.RunOsProcess(ProcessStartInfo, Boolean)
+  fullName.vb: AtfTIDE.HelperFunctions.RunOsProcess(System.Diagnostics.ProcessStartInfo, Boolean)
+  name.vb: RunOsProcess(ProcessStartInfo, Boolean)
 references:
 - uid: AtfTIDE
   commentId: N:AtfTIDE
@@ -249,30 +495,6 @@ references:
   nameWithType.vb: Object
   fullName.vb: Object
   name.vb: Object
-- uid: System.Object.ToString
-  commentId: M:System.Object.ToString
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
-  name: ToString()
-  nameWithType: object.ToString()
-  fullName: object.ToString()
-  nameWithType.vb: Object.ToString()
-  fullName.vb: Object.ToString()
-  spec.csharp:
-  - uid: System.Object.ToString
-    name: ToString
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: System.Object.ToString
-    name: ToString
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
-  - name: (
-  - name: )
 - uid: System.Object.Equals(System.Object)
   commentId: M:System.Object.Equals(System.Object)
   parent: System.Object
@@ -339,51 +561,6 @@ references:
     name: Equals
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
-  - name: (
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-- uid: System.Object.ReferenceEquals(System.Object,System.Object)
-  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
-  name: ReferenceEquals(object, object)
-  nameWithType: object.ReferenceEquals(object, object)
-  fullName: object.ReferenceEquals(object, object)
-  nameWithType.vb: Object.ReferenceEquals(Object, Object)
-  fullName.vb: Object.ReferenceEquals(Object, Object)
-  name.vb: ReferenceEquals(Object, Object)
-  spec.csharp:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
-  - name: (
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-  spec.vb:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
   - name: (
   - uid: System.Object
     name: Object
@@ -468,6 +645,75 @@ references:
     href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
   - name: (
   - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
 - uid: System
   commentId: N:System
   isExternal: true
@@ -475,184 +721,6 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: AtfTIDE.HelperFunctions.GetRepositoryDirectory*
-  commentId: Overload:AtfTIDE.HelperFunctions.GetRepositoryDirectory
-  href: AtfTIDE.HelperFunctions.html#AtfTIDE_HelperFunctions_GetRepositoryDirectory_System_String_
-  name: GetRepositoryDirectory
-  nameWithType: HelperFunctions.GetRepositoryDirectory
-  fullName: AtfTIDE.HelperFunctions.GetRepositoryDirectory
-- uid: System.String
-  commentId: T:System.String
-  parent: System
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.string
-  name: string
-  nameWithType: string
-  fullName: string
-  nameWithType.vb: String
-  fullName.vb: String
-  name.vb: String
-- uid: System.IO.DirectoryInfo
-  commentId: T:System.IO.DirectoryInfo
-  parent: System.IO
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.io.directoryinfo
-  name: DirectoryInfo
-  nameWithType: DirectoryInfo
-  fullName: System.IO.DirectoryInfo
-- uid: System.IO
-  commentId: N:System.IO
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system
-  name: System.IO
-  nameWithType: System.IO
-  fullName: System.IO
-  spec.csharp:
-  - uid: System
-    name: System
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system
-  - name: .
-  - uid: System.IO
-    name: IO
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.io
-  spec.vb:
-  - uid: System
-    name: System
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system
-  - name: .
-  - uid: System.IO
-    name: IO
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.io
-- uid: AtfTIDE.HelperFunctions.GetConsoleGitPath*
-  commentId: Overload:AtfTIDE.HelperFunctions.GetConsoleGitPath
-  href: AtfTIDE.HelperFunctions.html#AtfTIDE_HelperFunctions_GetConsoleGitPath
-  name: GetConsoleGitPath
-  nameWithType: HelperFunctions.GetConsoleGitPath
-  fullName: AtfTIDE.HelperFunctions.GetConsoleGitPath
-- uid: ErrorOr.ErrorOr{System.IO.FileInfo}
-  commentId: T:ErrorOr.ErrorOr{System.IO.FileInfo}
-  parent: ErrorOr
-  definition: ErrorOr.ErrorOr`1
-  href: https://learn.microsoft.com/dotnet/api/system.io.fileinfo
-  name: ErrorOr<FileInfo>
-  nameWithType: ErrorOr<FileInfo>
-  fullName: ErrorOr.ErrorOr<System.IO.FileInfo>
-  nameWithType.vb: ErrorOr(Of FileInfo)
-  fullName.vb: ErrorOr.ErrorOr(Of System.IO.FileInfo)
-  name.vb: ErrorOr(Of FileInfo)
-  spec.csharp:
-  - uid: ErrorOr.ErrorOr`1
-    name: ErrorOr
-    isExternal: true
-  - name: <
-  - uid: System.IO.FileInfo
-    name: FileInfo
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.io.fileinfo
-  - name: '>'
-  spec.vb:
-  - uid: ErrorOr.ErrorOr`1
-    name: ErrorOr
-    isExternal: true
-  - name: (
-  - name: Of
-  - name: " "
-  - uid: System.IO.FileInfo
-    name: FileInfo
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.io.fileinfo
-  - name: )
-- uid: ErrorOr.ErrorOr`1
-  commentId: T:ErrorOr.ErrorOr`1
-  isExternal: true
-  name: ErrorOr<TValue>
-  nameWithType: ErrorOr<TValue>
-  fullName: ErrorOr.ErrorOr<TValue>
-  nameWithType.vb: ErrorOr(Of TValue)
-  fullName.vb: ErrorOr.ErrorOr(Of TValue)
-  name.vb: ErrorOr(Of TValue)
-  spec.csharp:
-  - uid: ErrorOr.ErrorOr`1
-    name: ErrorOr
-    isExternal: true
-  - name: <
-  - name: TValue
-  - name: '>'
-  spec.vb:
-  - uid: ErrorOr.ErrorOr`1
-    name: ErrorOr
-    isExternal: true
-  - name: (
-  - name: Of
-  - name: " "
-  - name: TValue
-  - name: )
-- uid: ErrorOr
-  commentId: N:ErrorOr
-  isExternal: true
-  name: ErrorOr
-  nameWithType: ErrorOr
-  fullName: ErrorOr
-- uid: AtfTIDE.HelperFunctions.FetchRepositoryName*
-  commentId: Overload:AtfTIDE.HelperFunctions.FetchRepositoryName
-  href: AtfTIDE.HelperFunctions.html#AtfTIDE_HelperFunctions_FetchRepositoryName_System_Guid_Terrasoft_Core_UserConnection_
-  name: FetchRepositoryName
-  nameWithType: HelperFunctions.FetchRepositoryName
-  fullName: AtfTIDE.HelperFunctions.FetchRepositoryName
-- uid: System.Guid
-  commentId: T:System.Guid
-  parent: System
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.guid
-  name: Guid
-  nameWithType: Guid
-  fullName: System.Guid
-- uid: Terrasoft.Core.UserConnection
-  commentId: T:Terrasoft.Core.UserConnection
-  parent: Terrasoft.Core
-  isExternal: true
-  name: UserConnection
-  nameWithType: UserConnection
-  fullName: Terrasoft.Core.UserConnection
-- uid: Terrasoft.Core
-  commentId: N:Terrasoft.Core
-  isExternal: true
-  name: Terrasoft.Core
-  nameWithType: Terrasoft.Core
-  fullName: Terrasoft.Core
-  spec.csharp:
-  - uid: Terrasoft
-    name: Terrasoft
-    isExternal: true
-  - name: .
-  - uid: Terrasoft.Core
-    name: Core
-    isExternal: true
-  spec.vb:
-  - uid: Terrasoft
-    name: Terrasoft
-    isExternal: true
-  - name: .
-  - uid: Terrasoft.Core
-    name: Core
-    isExternal: true
-- uid: AtfTIDE.HelperFunctions.GetRepositoryInfo*
-  commentId: Overload:AtfTIDE.HelperFunctions.GetRepositoryInfo
-  href: AtfTIDE.HelperFunctions.html#AtfTIDE_HelperFunctions_GetRepositoryInfo_System_Guid_Terrasoft_Core_UserConnection_
-  name: GetRepositoryInfo
-  nameWithType: HelperFunctions.GetRepositoryInfo
-  fullName: AtfTIDE.HelperFunctions.GetRepositoryInfo
-- uid: AtfTIDE.RepositoryInfo
-  commentId: T:AtfTIDE.RepositoryInfo
-  parent: AtfTIDE
-  href: AtfTIDE.RepositoryInfo.html
-  name: RepositoryInfo
-  nameWithType: RepositoryInfo
-  fullName: AtfTIDE.RepositoryInfo
 - uid: System.Collections.Generic.Dictionary{System.Guid,System.Collections.Generic.Dictionary{System.String,System.String}}
   commentId: T:System.Collections.Generic.Dictionary{System.Guid,System.Collections.Generic.Dictionary{System.String,System.String}}
   parent: System.Collections.Generic
@@ -803,6 +871,14 @@ references:
   name: AddClioArgsForUser
   nameWithType: HelperFunctions.AddClioArgsForUser
   fullName: AtfTIDE.HelperFunctions.AddClioArgsForUser
+- uid: System.Guid
+  commentId: T:System.Guid
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.guid
+  name: Guid
+  nameWithType: Guid
+  fullName: System.Guid
 - uid: System.Collections.Generic.Dictionary{System.String,System.String}
   commentId: T:System.Collections.Generic.Dictionary{System.String,System.String}
   parent: System.Collections.Generic
@@ -850,3 +926,268 @@ references:
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.string
   - name: )
+- uid: System.IO.DirectoryInfo
+  commentId: T:System.IO.DirectoryInfo
+  parent: System.IO
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.io.directoryinfo
+  name: DirectoryInfo
+  nameWithType: DirectoryInfo
+  fullName: System.IO.DirectoryInfo
+- uid: AtfTIDE.HelperFunctions.CreateTempDirectory*
+  commentId: Overload:AtfTIDE.HelperFunctions.CreateTempDirectory
+  href: AtfTIDE.HelperFunctions.html#AtfTIDE_HelperFunctions_CreateTempDirectory
+  name: CreateTempDirectory
+  nameWithType: HelperFunctions.CreateTempDirectory
+  fullName: AtfTIDE.HelperFunctions.CreateTempDirectory
+- uid: System.IO
+  commentId: N:System.IO
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.IO
+  nameWithType: System.IO
+  fullName: System.IO
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.IO
+    name: IO
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.IO
+    name: IO
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io
+- uid: Terrasoft.Core.UserConnection
+  commentId: T:Terrasoft.Core.UserConnection
+  parent: Terrasoft.Core
+  isExternal: true
+  name: UserConnection
+  nameWithType: UserConnection
+  fullName: Terrasoft.Core.UserConnection
+- uid: Terrasoft.Core.Factories.ClassFactory
+  commentId: T:Terrasoft.Core.Factories.ClassFactory
+  isExternal: true
+  name: ClassFactory
+  nameWithType: ClassFactory
+  fullName: Terrasoft.Core.Factories.ClassFactory
+- uid: AtfTIDE.HelperFunctions.FetchRepositoryName*
+  commentId: Overload:AtfTIDE.HelperFunctions.FetchRepositoryName
+  href: AtfTIDE.HelperFunctions.html#AtfTIDE_HelperFunctions_FetchRepositoryName_System_Guid_Terrasoft_Core_UserConnection_
+  name: FetchRepositoryName
+  nameWithType: HelperFunctions.FetchRepositoryName
+  fullName: AtfTIDE.HelperFunctions.FetchRepositoryName
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Terrasoft.Core
+  commentId: N:Terrasoft.Core
+  isExternal: true
+  name: Terrasoft.Core
+  nameWithType: Terrasoft.Core
+  fullName: Terrasoft.Core
+  spec.csharp:
+  - uid: Terrasoft
+    name: Terrasoft
+    isExternal: true
+  - name: .
+  - uid: Terrasoft.Core
+    name: Core
+    isExternal: true
+  spec.vb:
+  - uid: Terrasoft
+    name: Terrasoft
+    isExternal: true
+  - name: .
+  - uid: Terrasoft.Core
+    name: Core
+    isExternal: true
+- uid: AtfTIDE.HelperFunctions.GetArchivePath*
+  commentId: Overload:AtfTIDE.HelperFunctions.GetArchivePath
+  href: AtfTIDE.HelperFunctions.html#AtfTIDE_HelperFunctions_GetArchivePath
+  name: GetArchivePath
+  nameWithType: HelperFunctions.GetArchivePath
+  fullName: AtfTIDE.HelperFunctions.GetArchivePath
+- uid: AtfTIDE.HelperFunctions.GetClioDirectory*
+  commentId: Overload:AtfTIDE.HelperFunctions.GetClioDirectory
+  href: AtfTIDE.HelperFunctions.html#AtfTIDE_HelperFunctions_GetClioDirectory
+  name: GetClioDirectory
+  nameWithType: HelperFunctions.GetClioDirectory
+  fullName: AtfTIDE.HelperFunctions.GetClioDirectory
+- uid: AtfTIDE.HelperFunctions.GetClioFilePath*
+  commentId: Overload:AtfTIDE.HelperFunctions.GetClioFilePath
+  href: AtfTIDE.HelperFunctions.html#AtfTIDE_HelperFunctions_GetClioFilePath
+  name: GetClioFilePath
+  nameWithType: HelperFunctions.GetClioFilePath
+  fullName: AtfTIDE.HelperFunctions.GetClioFilePath
+- uid: AtfTIDE.HelperFunctions.GetConsoleGitPath*
+  commentId: Overload:AtfTIDE.HelperFunctions.GetConsoleGitPath
+  href: AtfTIDE.HelperFunctions.html#AtfTIDE_HelperFunctions_GetConsoleGitPath
+  name: GetConsoleGitPath
+  nameWithType: HelperFunctions.GetConsoleGitPath
+  fullName: AtfTIDE.HelperFunctions.GetConsoleGitPath
+- uid: ErrorOr.ErrorOr{System.IO.FileInfo}
+  commentId: T:ErrorOr.ErrorOr{System.IO.FileInfo}
+  parent: ErrorOr
+  definition: ErrorOr.ErrorOr`1
+  href: https://learn.microsoft.com/dotnet/api/system.io.fileinfo
+  name: ErrorOr<FileInfo>
+  nameWithType: ErrorOr<FileInfo>
+  fullName: ErrorOr.ErrorOr<System.IO.FileInfo>
+  nameWithType.vb: ErrorOr(Of FileInfo)
+  fullName.vb: ErrorOr.ErrorOr(Of System.IO.FileInfo)
+  name.vb: ErrorOr(Of FileInfo)
+  spec.csharp:
+  - uid: ErrorOr.ErrorOr`1
+    name: ErrorOr
+    isExternal: true
+  - name: <
+  - uid: System.IO.FileInfo
+    name: FileInfo
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io.fileinfo
+  - name: '>'
+  spec.vb:
+  - uid: ErrorOr.ErrorOr`1
+    name: ErrorOr
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.IO.FileInfo
+    name: FileInfo
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io.fileinfo
+  - name: )
+- uid: ErrorOr.ErrorOr`1
+  commentId: T:ErrorOr.ErrorOr`1
+  isExternal: true
+  name: ErrorOr<TValue>
+  nameWithType: ErrorOr<TValue>
+  fullName: ErrorOr.ErrorOr<TValue>
+  nameWithType.vb: ErrorOr(Of TValue)
+  fullName.vb: ErrorOr.ErrorOr(Of TValue)
+  name.vb: ErrorOr(Of TValue)
+  spec.csharp:
+  - uid: ErrorOr.ErrorOr`1
+    name: ErrorOr
+    isExternal: true
+  - name: <
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: ErrorOr.ErrorOr`1
+    name: ErrorOr
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TValue
+  - name: )
+- uid: ErrorOr
+  commentId: N:ErrorOr
+  isExternal: true
+  name: ErrorOr
+  nameWithType: ErrorOr
+  fullName: ErrorOr
+- uid: AtfTIDE.HelperFunctions.GetGitConsoleFolderPath*
+  commentId: Overload:AtfTIDE.HelperFunctions.GetGitConsoleFolderPath
+  href: AtfTIDE.HelperFunctions.html#AtfTIDE_HelperFunctions_GetGitConsoleFolderPath
+  name: GetGitConsoleFolderPath
+  nameWithType: HelperFunctions.GetGitConsoleFolderPath
+  fullName: AtfTIDE.HelperFunctions.GetGitConsoleFolderPath
+- uid: AtfTIDE.HelperFunctions.GetRepositoryDirectory*
+  commentId: Overload:AtfTIDE.HelperFunctions.GetRepositoryDirectory
+  href: AtfTIDE.HelperFunctions.html#AtfTIDE_HelperFunctions_GetRepositoryDirectory_System_String_
+  name: GetRepositoryDirectory
+  nameWithType: HelperFunctions.GetRepositoryDirectory
+  fullName: AtfTIDE.HelperFunctions.GetRepositoryDirectory
+- uid: AtfTIDE.RepositoryInfo
+  commentId: T:AtfTIDE.RepositoryInfo
+  parent: AtfTIDE
+  href: AtfTIDE.RepositoryInfo.html
+  name: RepositoryInfo
+  nameWithType: RepositoryInfo
+  fullName: AtfTIDE.RepositoryInfo
+- uid: AtfTIDE.HelperFunctions.GetRepositoryInfo*
+  commentId: Overload:AtfTIDE.HelperFunctions.GetRepositoryInfo
+  href: AtfTIDE.HelperFunctions.html#AtfTIDE_HelperFunctions_GetRepositoryInfo_System_Guid_Terrasoft_Core_UserConnection_
+  name: GetRepositoryInfo
+  nameWithType: HelperFunctions.GetRepositoryInfo
+  fullName: AtfTIDE.HelperFunctions.GetRepositoryInfo
+- uid: System.Diagnostics.ProcessStartInfo
+  commentId: T:System.Diagnostics.ProcessStartInfo
+  parent: System.Diagnostics
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.diagnostics.processstartinfo
+  name: ProcessStartInfo
+  nameWithType: ProcessStartInfo
+  fullName: System.Diagnostics.ProcessStartInfo
+- uid: AtfTIDE.OsProcessResult
+  commentId: T:AtfTIDE.OsProcessResult
+  parent: AtfTIDE
+  href: AtfTIDE.OsProcessResult.html
+  name: OsProcessResult
+  nameWithType: OsProcessResult
+  fullName: AtfTIDE.OsProcessResult
+- uid: AtfTIDE.HelperFunctions.RunOsProcess*
+  commentId: Overload:AtfTIDE.HelperFunctions.RunOsProcess
+  href: AtfTIDE.HelperFunctions.html#AtfTIDE_HelperFunctions_RunOsProcess_System_Diagnostics_ProcessStartInfo_System_Boolean_
+  name: RunOsProcess
+  nameWithType: HelperFunctions.RunOsProcess
+  fullName: AtfTIDE.HelperFunctions.RunOsProcess
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: System.Diagnostics
+  commentId: N:System.Diagnostics
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Diagnostics
+  nameWithType: System.Diagnostics
+  fullName: System.Diagnostics
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Diagnostics
+    name: Diagnostics
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.diagnostics
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Diagnostics
+    name: Diagnostics
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.diagnostics

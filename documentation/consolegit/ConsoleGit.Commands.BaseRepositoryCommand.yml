@@ -5,15 +5,17 @@ items:
   id: BaseRepositoryCommand
   parent: ConsoleGit.Commands
   children:
-  - ConsoleGit.Commands.BaseRepositoryCommand.#ctor(ConsoleGit.CommandLineArgs)
+  - ConsoleGit.Commands.BaseRepositoryCommand.#ctor(ConsoleGit.CommandLineArgs,ConsoleGit.Services.IWebSocketLogger)
   - ConsoleGit.Commands.BaseRepositoryCommand.Args
   - ConsoleGit.Commands.BaseRepositoryCommand.CleanRepositoryDirectory
   - ConsoleGit.Commands.BaseRepositoryCommand.Dispose
   - ConsoleGit.Commands.BaseRepositoryCommand.Dispose(System.Boolean)
   - ConsoleGit.Commands.BaseRepositoryCommand.Execute
   - ConsoleGit.Commands.BaseRepositoryCommand.Finalize
+  - ConsoleGit.Commands.BaseRepositoryCommand.GetAccessPermissionsForFolder(System.String)
   - ConsoleGit.Commands.BaseRepositoryCommand.GrantDeleteAccess(System.IO.DirectoryInfo,System.String)
   - ConsoleGit.Commands.BaseRepositoryCommand.InitializedRepository
+  - ConsoleGit.Commands.BaseRepositoryCommand.Logger
   langs:
   - csharp
   - vb
@@ -24,11 +26,11 @@ items:
   source:
     remote:
       path: ConsoleGit/ConsoleGit/Commands/BaseRepositoryCommand.cs
-      branch: feature/my-feature
+      branch: main
       repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
     id: BaseRepositoryCommand
     path: ../ConsoleGit/ConsoleGit/Commands/BaseRepositoryCommand.cs
-    startLine: 16
+    startLine: 20
   assemblies:
   - ConsoleGit
   namespace: ConsoleGit.Commands
@@ -42,6 +44,10 @@ items:
   - ConsoleGit.Commands.CheckoutCommand
   - ConsoleGit.Commands.CloneCommand
   - ConsoleGit.Commands.CommitCommand
+  - ConsoleGit.Commands.DiscardFilesCommand
+  - ConsoleGit.Commands.GetBranchesCommand
+  - ConsoleGit.Commands.GetChangedFilesCommand
+  - ConsoleGit.Commands.GetDiffCommand
   - ConsoleGit.Commands.PullCommand
   - ConsoleGit.Commands.PushCommand
   implements:
@@ -69,11 +75,11 @@ items:
   source:
     remote:
       path: ConsoleGit/ConsoleGit/Commands/BaseRepositoryCommand.cs
-      branch: feature/my-feature
+      branch: main
       repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
     id: Args
     path: ../ConsoleGit/ConsoleGit/Commands/BaseRepositoryCommand.cs
-    startLine: 27
+    startLine: 31
   assemblies:
   - ConsoleGit
   namespace: ConsoleGit.Commands
@@ -82,38 +88,67 @@ items:
     return:
       type: ConsoleGit.CommandLineArgs
     content.vb: Protected ReadOnly Args As CommandLineArgs
-- uid: ConsoleGit.Commands.BaseRepositoryCommand.#ctor(ConsoleGit.CommandLineArgs)
-  commentId: M:ConsoleGit.Commands.BaseRepositoryCommand.#ctor(ConsoleGit.CommandLineArgs)
-  id: '#ctor(ConsoleGit.CommandLineArgs)'
+- uid: ConsoleGit.Commands.BaseRepositoryCommand.Logger
+  commentId: F:ConsoleGit.Commands.BaseRepositoryCommand.Logger
+  id: Logger
   parent: ConsoleGit.Commands.BaseRepositoryCommand
   langs:
   - csharp
   - vb
-  name: BaseRepositoryCommand(CommandLineArgs)
-  nameWithType: BaseRepositoryCommand.BaseRepositoryCommand(CommandLineArgs)
-  fullName: ConsoleGit.Commands.BaseRepositoryCommand.BaseRepositoryCommand(ConsoleGit.CommandLineArgs)
-  type: Constructor
+  name: Logger
+  nameWithType: BaseRepositoryCommand.Logger
+  fullName: ConsoleGit.Commands.BaseRepositoryCommand.Logger
+  type: Field
   source:
     remote:
       path: ConsoleGit/ConsoleGit/Commands/BaseRepositoryCommand.cs
-      branch: feature/my-feature
+      branch: main
       repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
-    id: .ctor
+    id: Logger
     path: ../ConsoleGit/ConsoleGit/Commands/BaseRepositoryCommand.cs
-    startLine: 33
+    startLine: 32
   assemblies:
   - ConsoleGit
   namespace: ConsoleGit.Commands
   syntax:
-    content: protected BaseRepositoryCommand(CommandLineArgs args)
+    content: protected readonly IWebSocketLogger Logger
+    return:
+      type: ConsoleGit.Services.IWebSocketLogger
+    content.vb: Protected ReadOnly Logger As IWebSocketLogger
+- uid: ConsoleGit.Commands.BaseRepositoryCommand.#ctor(ConsoleGit.CommandLineArgs,ConsoleGit.Services.IWebSocketLogger)
+  commentId: M:ConsoleGit.Commands.BaseRepositoryCommand.#ctor(ConsoleGit.CommandLineArgs,ConsoleGit.Services.IWebSocketLogger)
+  id: '#ctor(ConsoleGit.CommandLineArgs,ConsoleGit.Services.IWebSocketLogger)'
+  parent: ConsoleGit.Commands.BaseRepositoryCommand
+  langs:
+  - csharp
+  - vb
+  name: BaseRepositoryCommand(CommandLineArgs, IWebSocketLogger)
+  nameWithType: BaseRepositoryCommand.BaseRepositoryCommand(CommandLineArgs, IWebSocketLogger)
+  fullName: ConsoleGit.Commands.BaseRepositoryCommand.BaseRepositoryCommand(ConsoleGit.CommandLineArgs, ConsoleGit.Services.IWebSocketLogger)
+  type: Constructor
+  source:
+    remote:
+      path: ConsoleGit/ConsoleGit/Commands/BaseRepositoryCommand.cs
+      branch: main
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: .ctor
+    path: ../ConsoleGit/ConsoleGit/Commands/BaseRepositoryCommand.cs
+    startLine: 38
+  assemblies:
+  - ConsoleGit
+  namespace: ConsoleGit.Commands
+  syntax:
+    content: protected BaseRepositoryCommand(CommandLineArgs args, IWebSocketLogger logger)
     parameters:
     - id: args
       type: ConsoleGit.CommandLineArgs
-    content.vb: Protected Sub New(args As CommandLineArgs)
+    - id: logger
+      type: ConsoleGit.Services.IWebSocketLogger
+    content.vb: Protected Sub New(args As CommandLineArgs, logger As IWebSocketLogger)
   overload: ConsoleGit.Commands.BaseRepositoryCommand.#ctor*
-  nameWithType.vb: BaseRepositoryCommand.New(CommandLineArgs)
-  fullName.vb: ConsoleGit.Commands.BaseRepositoryCommand.New(ConsoleGit.CommandLineArgs)
-  name.vb: New(CommandLineArgs)
+  nameWithType.vb: BaseRepositoryCommand.New(CommandLineArgs, IWebSocketLogger)
+  fullName.vb: ConsoleGit.Commands.BaseRepositoryCommand.New(ConsoleGit.CommandLineArgs, ConsoleGit.Services.IWebSocketLogger)
+  name.vb: New(CommandLineArgs, IWebSocketLogger)
 - uid: ConsoleGit.Commands.BaseRepositoryCommand.InitializedRepository
   commentId: P:ConsoleGit.Commands.BaseRepositoryCommand.InitializedRepository
   id: InitializedRepository
@@ -128,11 +163,11 @@ items:
   source:
     remote:
       path: ConsoleGit/ConsoleGit/Commands/BaseRepositoryCommand.cs
-      branch: feature/my-feature
+      branch: main
       repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
     id: InitializedRepository
     path: ../ConsoleGit/ConsoleGit/Commands/BaseRepositoryCommand.cs
-    startLine: 43
+    startLine: 49
   assemblies:
   - ConsoleGit
   namespace: ConsoleGit.Commands
@@ -157,11 +192,11 @@ items:
   source:
     remote:
       path: ConsoleGit/ConsoleGit/Commands/BaseRepositoryCommand.cs
-      branch: feature/my-feature
+      branch: main
       repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
     id: GrantDeleteAccess
     path: ../ConsoleGit/ConsoleGit/Commands/BaseRepositoryCommand.cs
-    startLine: 49
+    startLine: 55
   assemblies:
   - ConsoleGit
   namespace: ConsoleGit.Commands
@@ -191,11 +226,11 @@ items:
   source:
     remote:
       path: ConsoleGit/ConsoleGit/Commands/BaseRepositoryCommand.cs
-      branch: feature/my-feature
+      branch: main
       repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
     id: CleanRepositoryDirectory
     path: ../ConsoleGit/ConsoleGit/Commands/BaseRepositoryCommand.cs
-    startLine: 72
+    startLine: 78
   assemblies:
   - ConsoleGit
   namespace: ConsoleGit.Commands
@@ -203,6 +238,40 @@ items:
     content: protected void CleanRepositoryDirectory()
     content.vb: Protected Sub CleanRepositoryDirectory()
   overload: ConsoleGit.Commands.BaseRepositoryCommand.CleanRepositoryDirectory*
+- uid: ConsoleGit.Commands.BaseRepositoryCommand.GetAccessPermissionsForFolder(System.String)
+  commentId: M:ConsoleGit.Commands.BaseRepositoryCommand.GetAccessPermissionsForFolder(System.String)
+  id: GetAccessPermissionsForFolder(System.String)
+  parent: ConsoleGit.Commands.BaseRepositoryCommand
+  langs:
+  - csharp
+  - vb
+  name: GetAccessPermissionsForFolder(string)
+  nameWithType: BaseRepositoryCommand.GetAccessPermissionsForFolder(string)
+  fullName: ConsoleGit.Commands.BaseRepositoryCommand.GetAccessPermissionsForFolder(string)
+  type: Method
+  source:
+    remote:
+      path: ConsoleGit/ConsoleGit/Commands/BaseRepositoryCommand.cs
+      branch: main
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: GetAccessPermissionsForFolder
+    path: ../ConsoleGit/ConsoleGit/Commands/BaseRepositoryCommand.cs
+    startLine: 96
+  assemblies:
+  - ConsoleGit
+  namespace: ConsoleGit.Commands
+  syntax:
+    content: protected string GetAccessPermissionsForFolder(string repoDir)
+    parameters:
+    - id: repoDir
+      type: System.String
+    return:
+      type: System.String
+    content.vb: Protected Function GetAccessPermissionsForFolder(repoDir As String) As String
+  overload: ConsoleGit.Commands.BaseRepositoryCommand.GetAccessPermissionsForFolder*
+  nameWithType.vb: BaseRepositoryCommand.GetAccessPermissionsForFolder(String)
+  fullName.vb: ConsoleGit.Commands.BaseRepositoryCommand.GetAccessPermissionsForFolder(String)
+  name.vb: GetAccessPermissionsForFolder(String)
 - uid: ConsoleGit.Commands.BaseRepositoryCommand.Dispose(System.Boolean)
   commentId: M:ConsoleGit.Commands.BaseRepositoryCommand.Dispose(System.Boolean)
   id: Dispose(System.Boolean)
@@ -217,11 +286,11 @@ items:
   source:
     remote:
       path: ConsoleGit/ConsoleGit/Commands/BaseRepositoryCommand.cs
-      branch: feature/my-feature
+      branch: main
       repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
     id: Dispose
     path: ../ConsoleGit/ConsoleGit/Commands/BaseRepositoryCommand.cs
-    startLine: 85
+    startLine: 116
   assemblies:
   - ConsoleGit
   namespace: ConsoleGit.Commands
@@ -249,11 +318,11 @@ items:
   source:
     remote:
       path: ConsoleGit/ConsoleGit/Commands/BaseRepositoryCommand.cs
-      branch: feature/my-feature
+      branch: main
       repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
     id: Execute
     path: ../ConsoleGit/ConsoleGit/Commands/BaseRepositoryCommand.cs
-    startLine: 100
+    startLine: 131
   assemblies:
   - ConsoleGit
   namespace: ConsoleGit.Commands
@@ -280,11 +349,11 @@ items:
   source:
     remote:
       path: ConsoleGit/ConsoleGit/Commands/BaseRepositoryCommand.cs
-      branch: feature/my-feature
+      branch: main
       repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
     id: Dispose
     path: ../ConsoleGit/ConsoleGit/Commands/BaseRepositoryCommand.cs
-    startLine: 102
+    startLine: 133
   assemblies:
   - ConsoleGit
   namespace: ConsoleGit.Commands
@@ -310,11 +379,11 @@ items:
   source:
     remote:
       path: ConsoleGit/ConsoleGit/Commands/BaseRepositoryCommand.cs
-      branch: feature/my-feature
+      branch: main
       repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
     id: Finalize
     path: ../ConsoleGit/ConsoleGit/Commands/BaseRepositoryCommand.cs
-    startLine: 109
+    startLine: 140
   assemblies:
   - ConsoleGit
   namespace: ConsoleGit.Commands
@@ -613,9 +682,38 @@ references:
   name: ConsoleGit
   nameWithType: ConsoleGit
   fullName: ConsoleGit
+- uid: ConsoleGit.Services.IWebSocketLogger
+  commentId: T:ConsoleGit.Services.IWebSocketLogger
+  parent: ConsoleGit.Services
+  href: ConsoleGit.Services.IWebSocketLogger.html
+  name: IWebSocketLogger
+  nameWithType: IWebSocketLogger
+  fullName: ConsoleGit.Services.IWebSocketLogger
+- uid: ConsoleGit.Services
+  commentId: N:ConsoleGit.Services
+  href: ConsoleGit.html
+  name: ConsoleGit.Services
+  nameWithType: ConsoleGit.Services
+  fullName: ConsoleGit.Services
+  spec.csharp:
+  - uid: ConsoleGit
+    name: ConsoleGit
+    href: ConsoleGit.html
+  - name: .
+  - uid: ConsoleGit.Services
+    name: Services
+    href: ConsoleGit.Services.html
+  spec.vb:
+  - uid: ConsoleGit
+    name: ConsoleGit
+    href: ConsoleGit.html
+  - name: .
+  - uid: ConsoleGit.Services
+    name: Services
+    href: ConsoleGit.Services.html
 - uid: ConsoleGit.Commands.BaseRepositoryCommand.#ctor*
   commentId: Overload:ConsoleGit.Commands.BaseRepositoryCommand.#ctor
-  href: ConsoleGit.Commands.BaseRepositoryCommand.html#ConsoleGit_Commands_BaseRepositoryCommand__ctor_ConsoleGit_CommandLineArgs_
+  href: ConsoleGit.Commands.BaseRepositoryCommand.html#ConsoleGit_Commands_BaseRepositoryCommand__ctor_ConsoleGit_CommandLineArgs_ConsoleGit_Services_IWebSocketLogger_
   name: BaseRepositoryCommand
   nameWithType: BaseRepositoryCommand.BaseRepositoryCommand
   fullName: ConsoleGit.Commands.BaseRepositoryCommand.BaseRepositoryCommand
@@ -697,6 +795,12 @@ references:
   name: CleanRepositoryDirectory
   nameWithType: BaseRepositoryCommand.CleanRepositoryDirectory
   fullName: ConsoleGit.Commands.BaseRepositoryCommand.CleanRepositoryDirectory
+- uid: ConsoleGit.Commands.BaseRepositoryCommand.GetAccessPermissionsForFolder*
+  commentId: Overload:ConsoleGit.Commands.BaseRepositoryCommand.GetAccessPermissionsForFolder
+  href: ConsoleGit.Commands.BaseRepositoryCommand.html#ConsoleGit_Commands_BaseRepositoryCommand_GetAccessPermissionsForFolder_System_String_
+  name: GetAccessPermissionsForFolder
+  nameWithType: BaseRepositoryCommand.GetAccessPermissionsForFolder
+  fullName: ConsoleGit.Commands.BaseRepositoryCommand.GetAccessPermissionsForFolder
 - uid: ConsoleGit.Commands.BaseRepositoryCommand.Dispose*
   commentId: Overload:ConsoleGit.Commands.BaseRepositoryCommand.Dispose
   href: ConsoleGit.Commands.BaseRepositoryCommand.html#ConsoleGit_Commands_BaseRepositoryCommand_Dispose_System_Boolean_

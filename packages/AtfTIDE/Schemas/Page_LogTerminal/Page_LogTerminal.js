@@ -105,16 +105,6 @@ define("Page_LogTerminal", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 		]/**SCHEMA_MODEL_CONFIG_DIFF*/,
 		handlers: /**SCHEMA_HANDLERS*/[
 			{
-				request: 'atf.HandleViewModelInitRequest',
-				handler: async (request, next) => {
-					const handlerChain = sdk.HandlerChainService.instance;
-					return await handlerChain.process({
-						type: 'crt.ClosePageRequest',
-						$context: request.$context,
-					});
-				}
-			},
-			{
 				request: 'crt.HandleViewModelInitRequest',
 				handler: async (request, next) => {
 					const { $context } = request;

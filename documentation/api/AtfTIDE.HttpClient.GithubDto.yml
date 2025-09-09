@@ -1,0 +1,61 @@
+﻿### YamlMime:ManagedReference
+items:
+- uid: AtfTIDE.HttpClient.GithubDto
+  commentId: N:AtfTIDE.HttpClient.GithubDto
+  id: AtfTIDE.HttpClient.GithubDto
+  children:
+  - AtfTIDE.HttpClient.GithubDto.CustomProperties
+  - AtfTIDE.HttpClient.GithubDto.Repository
+  langs:
+  - csharp
+  - vb
+  name: AtfTIDE.HttpClient.GithubDto
+  nameWithType: AtfTIDE.HttpClient.GithubDto
+  fullName: AtfTIDE.HttpClient.GithubDto
+  type: Namespace
+  assemblies:
+  - AtfTIDE
+references:
+- uid: AtfTIDE.HttpClient.GithubDto.Repository
+  commentId: T:AtfTIDE.HttpClient.GithubDto.Repository
+  href: AtfTIDE.HttpClient.GithubDto.Repository.html
+  name: Repository
+  nameWithType: Repository
+  fullName: AtfTIDE.HttpClient.GithubDto.Repository
+- uid: AtfTIDE.HttpClient.GithubDto.CustomProperties
+  commentId: T:AtfTIDE.HttpClient.GithubDto.CustomProperties
+  parent: AtfTIDE.HttpClient.GithubDto
+  href: AtfTIDE.HttpClient.GithubDto.CustomProperties.html
+  name: CustomProperties
+  nameWithType: CustomProperties
+  fullName: AtfTIDE.HttpClient.GithubDto.CustomProperties
+- uid: AtfTIDE.HttpClient.GithubDto
+  commentId: N:AtfTIDE.HttpClient.GithubDto
+  href: AtfTIDE.html
+  name: AtfTIDE.HttpClient.GithubDto
+  nameWithType: AtfTIDE.HttpClient.GithubDto
+  fullName: AtfTIDE.HttpClient.GithubDto
+  spec.csharp:
+  - uid: AtfTIDE
+    name: AtfTIDE
+    href: AtfTIDE.html
+  - name: .
+  - uid: AtfTIDE.HttpClient
+    name: HttpClient
+    href: AtfTIDE.HttpClient.html
+  - name: .
+  - uid: AtfTIDE.HttpClient.GithubDto
+    name: GithubDto
+    href: AtfTIDE.HttpClient.GithubDto.html
+  spec.vb:
+  - uid: AtfTIDE
+    name: AtfTIDE
+    href: AtfTIDE.html
+  - name: .
+  - uid: AtfTIDE.HttpClient
+    name: HttpClient
+    href: AtfTIDE.HttpClient.html
+  - name: .
+  - uid: AtfTIDE.HttpClient.GithubDto
+    name: GithubDto
+    href: AtfTIDE.HttpClient.GithubDto.html

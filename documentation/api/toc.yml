@@ -4,6 +4,9 @@ items:
   name: AtfTIDE
   type: Namespace
   items:
+  - uid: AtfTIDE.AppEventListener
+    name: AppEventListener
+    type: Class
   - uid: AtfTIDE.Commands
     name: Commands
     type: Enum
@@ -22,15 +25,165 @@ items:
   - uid: AtfTIDE.IConsoleGit
     name: IConsoleGit
     type: Interface
+  - uid: AtfTIDE.ITextTransformer
+    name: ITextTransformer
+    type: Interface
+  - uid: AtfTIDE.IWebSocket
+    name: IWebSocket
+    type: Interface
+  - uid: AtfTIDE.OsProcessResult
+    name: OsProcessResult
+    type: Class
   - uid: AtfTIDE.RepositoryInfo
     name: RepositoryInfo
+    type: Class
+  - uid: AtfTIDE.SysSchemaMonitor
+    name: SysSchemaMonitor
+    type: Class
+  - uid: AtfTIDE.TideApp
+    name: TideApp
+    type: Class
+  - uid: AtfTIDE.UrlAppender
+    name: UrlAppender
+    type: Class
+- uid: AtfTIDE.ClioInstaller
+  name: AtfTIDE.ClioInstaller
+  type: Namespace
+  items:
+  - uid: AtfTIDE.ClioInstaller.IInstaller
+    name: IInstaller
+    type: Interface
+  - uid: AtfTIDE.ClioInstaller.INugetClient
+    name: INugetClient
+    type: Interface
+  - uid: AtfTIDE.ClioInstaller.Installer
+    name: Installer
+    type: Class
+  - uid: AtfTIDE.ClioInstaller.NugetClient
+    name: NugetClient
+    type: Class
+- uid: AtfTIDE.ClioInstaller.Dto
+  name: AtfTIDE.ClioInstaller.Dto
+  type: Namespace
+  items:
+  - uid: AtfTIDE.ClioInstaller.Dto.Context
+    name: Context
+    type: Class
+  - uid: AtfTIDE.ClioInstaller.Dto.Data
+    name: Data
+    type: Class
+  - uid: AtfTIDE.ClioInstaller.Dto.PackageType
+    name: PackageType
+    type: Class
+  - uid: AtfTIDE.ClioInstaller.Dto.SearchResponse
+    name: SearchResponse
+    type: Class
+  - uid: AtfTIDE.ClioInstaller.Dto.Version
+    name: Version
+    type: Class
+- uid: AtfTIDE.GitBrowser
+  name: AtfTIDE.GitBrowser
+  type: Namespace
+  items:
+  - uid: AtfTIDE.GitBrowser.GitLabBrowser
+    name: GitLabBrowser
+    type: Class
+  - uid: AtfTIDE.GitBrowser.Repository
+    name: Repository
+    type: Class
+- uid: AtfTIDE.HttpClient
+  name: AtfTIDE.HttpClient
+  type: Namespace
+  items:
+  - uid: AtfTIDE.HttpClient.Extensions
+    name: Extensions
+    type: Class
+  - uid: AtfTIDE.HttpClient.GitHubClient
+    name: GitHubClient
+    type: Class
+  - uid: AtfTIDE.HttpClient.GitLabHttpClient
+    name: GitLabHttpClient
+    type: Class
+  - uid: AtfTIDE.HttpClient.GithubTokenHandler
+    name: GithubTokenHandler
+    type: Class
+  - uid: AtfTIDE.HttpClient.IGitHubClient
+    name: IGitHubClient
+    type: Interface
+  - uid: AtfTIDE.HttpClient.IGitLabHttpClient
+    name: IGitLabHttpClient
+    type: Interface
+- uid: AtfTIDE.HttpClient.Converters
+  name: AtfTIDE.HttpClient.Converters
+  type: Namespace
+  items:
+  - uid: AtfTIDE.HttpClient.Converters.JsonStringBoolConverter
+    name: JsonStringBoolConverter
+    type: Class
+- uid: AtfTIDE.HttpClient.GithubDto
+  name: AtfTIDE.HttpClient.GithubDto
+  type: Namespace
+  items:
+  - uid: AtfTIDE.HttpClient.GithubDto.CustomProperties
+    name: CustomProperties
+    type: Class
+  - uid: AtfTIDE.HttpClient.GithubDto.Repository
+    name: Repository
+    type: Class
+- uid: AtfTIDE.Logging
+  name: AtfTIDE.Logging
+  type: Namespace
+  items:
+  - uid: AtfTIDE.Logging.Color
+    name: Color
+    type: Enum
+  - uid: AtfTIDE.Logging.ILiveLogger
+    name: ILiveLogger
+    type: Interface
+  - uid: AtfTIDE.Logging.LiveLogger
+    name: LiveLogger
+    type: Class
+- uid: AtfTIDE.QueryExecutor
+  name: AtfTIDE.QueryExecutor
+  type: Namespace
+  items:
+  - uid: AtfTIDE.QueryExecutor.AtfGitChangedFilesQueryExecutor
+    name: AtfGitChangedFilesQueryExecutor
+    type: Class
+  - uid: AtfTIDE.QueryExecutor.ChangedFileDto
+    name: ChangedFileDto
+    type: Class
+  - uid: AtfTIDE.QueryExecutor.EsqColumnParser
+    name: EsqColumnParser
+    type: Class
+  - uid: AtfTIDE.QueryExecutor.EsqFilterParser
+    name: EsqFilterParser
+    type: Class
+  - uid: AtfTIDE.QueryExecutor.IEsqColumnParser
+    name: IEsqColumnParser
+    type: Interface
+  - uid: AtfTIDE.QueryExecutor.IEsqFilterParser
+    name: IEsqFilterParser
+    type: Interface
+  - uid: AtfTIDE.QueryExecutor.SortColumn
+    name: SortColumn
     type: Class
 - uid: AtfTIDE.WebServices
   name: AtfTIDE.WebServices
   type: Namespace
   items:
+  - uid: AtfTIDE.WebServices.DiscardFileChangesDto
+    name: DiscardFileChangesDto
+    type: Class
   - uid: AtfTIDE.WebServices.Tide
     name: Tide
+    type: Class
+- uid: Terrasoft.Configuration
+  name: Terrasoft.Configuration
+  type: Namespace
+  items:
+  - uid: Terrasoft.Configuration.InstallConsoleGitInstallScript
+    name: InstallConsoleGitInstallScript
     type: Class
 - uid: Terrasoft.Core.Process.Configuration
   name: Terrasoft.Core.Process.Configuration
@@ -50,5 +203,11 @@ items:
     type: Class
   - uid: Terrasoft.Core.Process.Configuration.AtfProcessUserTask_GitPush
     name: AtfProcessUserTask_GitPush
+    type: Class
+  - uid: Terrasoft.Core.Process.Configuration.Branch
+    name: Branch
+    type: Class
+  - uid: Terrasoft.Core.Process.Configuration.BranchesCommandResponse
+    name: BranchesCommandResponse
     type: Class
 memberLayout: SamePage

@@ -1,0 +1,318 @@
+﻿### YamlMime:ManagedReference
+items:
+- uid: AtfTIDE.ClioInstaller.IInstaller
+  commentId: T:AtfTIDE.ClioInstaller.IInstaller
+  id: IInstaller
+  parent: AtfTIDE.ClioInstaller
+  children:
+  - AtfTIDE.ClioInstaller.IInstaller.CheckIsClioInstalled
+  - AtfTIDE.ClioInstaller.IInstaller.GetClioVersion
+  - AtfTIDE.ClioInstaller.IInstaller.InstallClio
+  - AtfTIDE.ClioInstaller.IInstaller.UpdateClio
+  langs:
+  - csharp
+  - vb
+  name: IInstaller
+  nameWithType: IInstaller
+  fullName: AtfTIDE.ClioInstaller.IInstaller
+  type: Interface
+  source:
+    remote:
+      path: packages/AtfTIDE/Files/cs/ClioInstaller/Installer.cs
+      branch: main
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: IInstaller
+    path: ../packages/AtfTIDE/Files/cs/ClioInstaller/Installer.cs
+    startLine: 7
+  assemblies:
+  - AtfTIDE
+  namespace: AtfTIDE.ClioInstaller
+  syntax:
+    content: public interface IInstaller
+    content.vb: Public Interface IInstaller
+- uid: AtfTIDE.ClioInstaller.IInstaller.CheckIsClioInstalled
+  commentId: M:AtfTIDE.ClioInstaller.IInstaller.CheckIsClioInstalled
+  id: CheckIsClioInstalled
+  parent: AtfTIDE.ClioInstaller.IInstaller
+  langs:
+  - csharp
+  - vb
+  name: CheckIsClioInstalled()
+  nameWithType: IInstaller.CheckIsClioInstalled()
+  fullName: AtfTIDE.ClioInstaller.IInstaller.CheckIsClioInstalled()
+  type: Method
+  source:
+    remote:
+      path: packages/AtfTIDE/Files/cs/ClioInstaller/Installer.cs
+      branch: main
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: CheckIsClioInstalled
+    path: ../packages/AtfTIDE/Files/cs/ClioInstaller/Installer.cs
+    startLine: 9
+  assemblies:
+  - AtfTIDE
+  namespace: AtfTIDE.ClioInstaller
+  syntax:
+    content: IErrorOr<bool> CheckIsClioInstalled()
+    return:
+      type: ErrorOr.IErrorOr{System.Boolean}
+    content.vb: Function CheckIsClioInstalled() As IErrorOr(Of Boolean)
+  overload: AtfTIDE.ClioInstaller.IInstaller.CheckIsClioInstalled*
+- uid: AtfTIDE.ClioInstaller.IInstaller.GetClioVersion
+  commentId: M:AtfTIDE.ClioInstaller.IInstaller.GetClioVersion
+  id: GetClioVersion
+  parent: AtfTIDE.ClioInstaller.IInstaller
+  langs:
+  - csharp
+  - vb
+  name: GetClioVersion()
+  nameWithType: IInstaller.GetClioVersion()
+  fullName: AtfTIDE.ClioInstaller.IInstaller.GetClioVersion()
+  type: Method
+  source:
+    remote:
+      path: packages/AtfTIDE/Files/cs/ClioInstaller/Installer.cs
+      branch: main
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: GetClioVersion
+    path: ../packages/AtfTIDE/Files/cs/ClioInstaller/Installer.cs
+    startLine: 10
+  assemblies:
+  - AtfTIDE
+  namespace: AtfTIDE.ClioInstaller
+  syntax:
+    content: IErrorOr<Version> GetClioVersion()
+    return:
+      type: ErrorOr.IErrorOr{System.Version}
+    content.vb: Function GetClioVersion() As IErrorOr(Of Version)
+  overload: AtfTIDE.ClioInstaller.IInstaller.GetClioVersion*
+- uid: AtfTIDE.ClioInstaller.IInstaller.UpdateClio
+  commentId: M:AtfTIDE.ClioInstaller.IInstaller.UpdateClio
+  id: UpdateClio
+  parent: AtfTIDE.ClioInstaller.IInstaller
+  langs:
+  - csharp
+  - vb
+  name: UpdateClio()
+  nameWithType: IInstaller.UpdateClio()
+  fullName: AtfTIDE.ClioInstaller.IInstaller.UpdateClio()
+  type: Method
+  source:
+    remote:
+      path: packages/AtfTIDE/Files/cs/ClioInstaller/Installer.cs
+      branch: main
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: UpdateClio
+    path: ../packages/AtfTIDE/Files/cs/ClioInstaller/Installer.cs
+    startLine: 11
+  assemblies:
+  - AtfTIDE
+  namespace: AtfTIDE.ClioInstaller
+  syntax:
+    content: IErrorOr<Success> UpdateClio()
+    return:
+      type: ErrorOr.IErrorOr{ErrorOr.Success}
+    content.vb: Function UpdateClio() As IErrorOr(Of Success)
+  overload: AtfTIDE.ClioInstaller.IInstaller.UpdateClio*
+- uid: AtfTIDE.ClioInstaller.IInstaller.InstallClio
+  commentId: M:AtfTIDE.ClioInstaller.IInstaller.InstallClio
+  id: InstallClio
+  parent: AtfTIDE.ClioInstaller.IInstaller
+  langs:
+  - csharp
+  - vb
+  name: InstallClio()
+  nameWithType: IInstaller.InstallClio()
+  fullName: AtfTIDE.ClioInstaller.IInstaller.InstallClio()
+  type: Method
+  source:
+    remote:
+      path: packages/AtfTIDE/Files/cs/ClioInstaller/Installer.cs
+      branch: main
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: InstallClio
+    path: ../packages/AtfTIDE/Files/cs/ClioInstaller/Installer.cs
+    startLine: 12
+  assemblies:
+  - AtfTIDE
+  namespace: AtfTIDE.ClioInstaller
+  syntax:
+    content: IErrorOr<Success> InstallClio()
+    return:
+      type: ErrorOr.IErrorOr{ErrorOr.Success}
+    content.vb: Function InstallClio() As IErrorOr(Of Success)
+  overload: AtfTIDE.ClioInstaller.IInstaller.InstallClio*
+references:
+- uid: AtfTIDE.ClioInstaller
+  commentId: N:AtfTIDE.ClioInstaller
+  href: AtfTIDE.html
+  name: AtfTIDE.ClioInstaller
+  nameWithType: AtfTIDE.ClioInstaller
+  fullName: AtfTIDE.ClioInstaller
+  spec.csharp:
+  - uid: AtfTIDE
+    name: AtfTIDE
+    href: AtfTIDE.html
+  - name: .
+  - uid: AtfTIDE.ClioInstaller
+    name: ClioInstaller
+    href: AtfTIDE.ClioInstaller.html
+  spec.vb:
+  - uid: AtfTIDE
+    name: AtfTIDE
+    href: AtfTIDE.html
+  - name: .
+  - uid: AtfTIDE.ClioInstaller
+    name: ClioInstaller
+    href: AtfTIDE.ClioInstaller.html
+- uid: AtfTIDE.ClioInstaller.IInstaller.CheckIsClioInstalled*
+  commentId: Overload:AtfTIDE.ClioInstaller.IInstaller.CheckIsClioInstalled
+  href: AtfTIDE.ClioInstaller.IInstaller.html#AtfTIDE_ClioInstaller_IInstaller_CheckIsClioInstalled
+  name: CheckIsClioInstalled
+  nameWithType: IInstaller.CheckIsClioInstalled
+  fullName: AtfTIDE.ClioInstaller.IInstaller.CheckIsClioInstalled
+- uid: ErrorOr.IErrorOr{System.Boolean}
+  commentId: T:ErrorOr.IErrorOr{System.Boolean}
+  parent: ErrorOr
+  definition: ErrorOr.IErrorOr`1
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: IErrorOr<bool>
+  nameWithType: IErrorOr<bool>
+  fullName: ErrorOr.IErrorOr<bool>
+  nameWithType.vb: IErrorOr(Of Boolean)
+  fullName.vb: ErrorOr.IErrorOr(Of Boolean)
+  name.vb: IErrorOr(Of Boolean)
+  spec.csharp:
+  - uid: ErrorOr.IErrorOr`1
+    name: IErrorOr
+    isExternal: true
+  - name: <
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  spec.vb:
+  - uid: ErrorOr.IErrorOr`1
+    name: IErrorOr
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: ErrorOr.IErrorOr`1
+  commentId: T:ErrorOr.IErrorOr`1
+  isExternal: true
+  name: IErrorOr<TValue>
+  nameWithType: IErrorOr<TValue>
+  fullName: ErrorOr.IErrorOr<TValue>
+  nameWithType.vb: IErrorOr(Of TValue)
+  fullName.vb: ErrorOr.IErrorOr(Of TValue)
+  name.vb: IErrorOr(Of TValue)
+  spec.csharp:
+  - uid: ErrorOr.IErrorOr`1
+    name: IErrorOr
+    isExternal: true
+  - name: <
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: ErrorOr.IErrorOr`1
+    name: IErrorOr
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TValue
+  - name: )
+- uid: ErrorOr
+  commentId: N:ErrorOr
+  isExternal: true
+  name: ErrorOr
+  nameWithType: ErrorOr
+  fullName: ErrorOr
+- uid: AtfTIDE.ClioInstaller.IInstaller.GetClioVersion*
+  commentId: Overload:AtfTIDE.ClioInstaller.IInstaller.GetClioVersion
+  href: AtfTIDE.ClioInstaller.IInstaller.html#AtfTIDE_ClioInstaller_IInstaller_GetClioVersion
+  name: GetClioVersion
+  nameWithType: IInstaller.GetClioVersion
+  fullName: AtfTIDE.ClioInstaller.IInstaller.GetClioVersion
+- uid: ErrorOr.IErrorOr{System.Version}
+  commentId: T:ErrorOr.IErrorOr{System.Version}
+  parent: ErrorOr
+  definition: ErrorOr.IErrorOr`1
+  href: https://learn.microsoft.com/dotnet/api/system.version
+  name: IErrorOr<Version>
+  nameWithType: IErrorOr<Version>
+  fullName: ErrorOr.IErrorOr<System.Version>
+  nameWithType.vb: IErrorOr(Of Version)
+  fullName.vb: ErrorOr.IErrorOr(Of System.Version)
+  name.vb: IErrorOr(Of Version)
+  spec.csharp:
+  - uid: ErrorOr.IErrorOr`1
+    name: IErrorOr
+    isExternal: true
+  - name: <
+  - uid: System.Version
+    name: Version
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.version
+  - name: '>'
+  spec.vb:
+  - uid: ErrorOr.IErrorOr`1
+    name: IErrorOr
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Version
+    name: Version
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.version
+  - name: )
+- uid: AtfTIDE.ClioInstaller.IInstaller.UpdateClio*
+  commentId: Overload:AtfTIDE.ClioInstaller.IInstaller.UpdateClio
+  href: AtfTIDE.ClioInstaller.IInstaller.html#AtfTIDE_ClioInstaller_IInstaller_UpdateClio
+  name: UpdateClio
+  nameWithType: IInstaller.UpdateClio
+  fullName: AtfTIDE.ClioInstaller.IInstaller.UpdateClio
+- uid: ErrorOr.IErrorOr{ErrorOr.Success}
+  commentId: T:ErrorOr.IErrorOr{ErrorOr.Success}
+  parent: ErrorOr
+  definition: ErrorOr.IErrorOr`1
+  name: IErrorOr<Success>
+  nameWithType: IErrorOr<Success>
+  fullName: ErrorOr.IErrorOr<ErrorOr.Success>
+  nameWithType.vb: IErrorOr(Of Success)
+  fullName.vb: ErrorOr.IErrorOr(Of ErrorOr.Success)
+  name.vb: IErrorOr(Of Success)
+  spec.csharp:
+  - uid: ErrorOr.IErrorOr`1
+    name: IErrorOr
+    isExternal: true
+  - name: <
+  - uid: ErrorOr.Success
+    name: Success
+    isExternal: true
+  - name: '>'
+  spec.vb:
+  - uid: ErrorOr.IErrorOr`1
+    name: IErrorOr
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: ErrorOr.Success
+    name: Success
+    isExternal: true
+  - name: )
+- uid: AtfTIDE.ClioInstaller.IInstaller.InstallClio*
+  commentId: Overload:AtfTIDE.ClioInstaller.IInstaller.InstallClio
+  href: AtfTIDE.ClioInstaller.IInstaller.html#AtfTIDE_ClioInstaller_IInstaller_InstallClio
+  name: InstallClio
+  nameWithType: IInstaller.InstallClio
+  fullName: AtfTIDE.ClioInstaller.IInstaller.InstallClio

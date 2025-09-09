@@ -1,0 +1,61 @@
+﻿### YamlMime:ManagedReference
+items:
+- uid: AtfTIDE.Logging
+  commentId: N:AtfTIDE.Logging
+  id: AtfTIDE.Logging
+  children:
+  - AtfTIDE.Logging.Color
+  - AtfTIDE.Logging.ILiveLogger
+  - AtfTIDE.Logging.LiveLogger
+  langs:
+  - csharp
+  - vb
+  name: AtfTIDE.Logging
+  nameWithType: AtfTIDE.Logging
+  fullName: AtfTIDE.Logging
+  type: Namespace
+  assemblies:
+  - AtfTIDE
+references:
+- uid: AtfTIDE.Logging.Color
+  commentId: T:AtfTIDE.Logging.Color
+  parent: AtfTIDE.Logging
+  href: AtfTIDE.Logging.Color.html
+  name: Color
+  nameWithType: Color
+  fullName: AtfTIDE.Logging.Color
+- uid: AtfTIDE.Logging.ILiveLogger
+  commentId: T:AtfTIDE.Logging.ILiveLogger
+  parent: AtfTIDE.Logging
+  href: AtfTIDE.Logging.ILiveLogger.html
+  name: ILiveLogger
+  nameWithType: ILiveLogger
+  fullName: AtfTIDE.Logging.ILiveLogger
+- uid: AtfTIDE.Logging.LiveLogger
+  commentId: T:AtfTIDE.Logging.LiveLogger
+  href: AtfTIDE.Logging.LiveLogger.html
+  name: LiveLogger
+  nameWithType: LiveLogger
+  fullName: AtfTIDE.Logging.LiveLogger
+- uid: AtfTIDE.Logging
+  commentId: N:AtfTIDE.Logging
+  href: AtfTIDE.html
+  name: AtfTIDE.Logging
+  nameWithType: AtfTIDE.Logging
+  fullName: AtfTIDE.Logging
+  spec.csharp:
+  - uid: AtfTIDE
+    name: AtfTIDE
+    href: AtfTIDE.html
+  - name: .
+  - uid: AtfTIDE.Logging
+    name: Logging
+    href: AtfTIDE.Logging.html
+  spec.vb:
+  - uid: AtfTIDE
+    name: AtfTIDE
+    href: AtfTIDE.html
+  - name: .
+  - uid: AtfTIDE.Logging
+    name: Logging
+    href: AtfTIDE.Logging.html

@@ -1,0 +1,133 @@
+﻿### YamlMime:ManagedReference
+items:
+- uid: AtfTIDE.QueryExecutor.IEsqColumnParser
+  commentId: T:AtfTIDE.QueryExecutor.IEsqColumnParser
+  id: IEsqColumnParser
+  parent: AtfTIDE.QueryExecutor
+  children:
+  - AtfTIDE.QueryExecutor.IEsqColumnParser.GetSorting(Terrasoft.Core.Entities.EntitySchemaQuery)
+  langs:
+  - csharp
+  - vb
+  name: IEsqColumnParser
+  nameWithType: IEsqColumnParser
+  fullName: AtfTIDE.QueryExecutor.IEsqColumnParser
+  type: Interface
+  source:
+    remote:
+      path: packages/AtfTIDE/Files/cs/QueryExecutor/EsqColumnParser.cs
+      branch: main
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: IEsqColumnParser
+    path: ../packages/AtfTIDE/Files/cs/QueryExecutor/EsqColumnParser.cs
+    startLine: 6
+  assemblies:
+  - AtfTIDE
+  namespace: AtfTIDE.QueryExecutor
+  syntax:
+    content: public interface IEsqColumnParser
+    content.vb: Public Interface IEsqColumnParser
+- uid: AtfTIDE.QueryExecutor.IEsqColumnParser.GetSorting(Terrasoft.Core.Entities.EntitySchemaQuery)
+  commentId: M:AtfTIDE.QueryExecutor.IEsqColumnParser.GetSorting(Terrasoft.Core.Entities.EntitySchemaQuery)
+  id: GetSorting(Terrasoft.Core.Entities.EntitySchemaQuery)
+  parent: AtfTIDE.QueryExecutor.IEsqColumnParser
+  langs:
+  - csharp
+  - vb
+  name: GetSorting(EntitySchemaQuery)
+  nameWithType: IEsqColumnParser.GetSorting(EntitySchemaQuery)
+  fullName: AtfTIDE.QueryExecutor.IEsqColumnParser.GetSorting(Terrasoft.Core.Entities.EntitySchemaQuery)
+  type: Method
+  source:
+    remote:
+      path: packages/AtfTIDE/Files/cs/QueryExecutor/EsqColumnParser.cs
+      branch: main
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: GetSorting
+    path: ../packages/AtfTIDE/Files/cs/QueryExecutor/EsqColumnParser.cs
+    startLine: 8
+  assemblies:
+  - AtfTIDE
+  namespace: AtfTIDE.QueryExecutor
+  syntax:
+    content: SortColumn GetSorting(EntitySchemaQuery esq)
+    parameters:
+    - id: esq
+      type: Terrasoft.Core.Entities.EntitySchemaQuery
+    return:
+      type: AtfTIDE.QueryExecutor.SortColumn
+    content.vb: Function GetSorting(esq As EntitySchemaQuery) As SortColumn
+  overload: AtfTIDE.QueryExecutor.IEsqColumnParser.GetSorting*
+references:
+- uid: AtfTIDE.QueryExecutor
+  commentId: N:AtfTIDE.QueryExecutor
+  href: AtfTIDE.html
+  name: AtfTIDE.QueryExecutor
+  nameWithType: AtfTIDE.QueryExecutor
+  fullName: AtfTIDE.QueryExecutor
+  spec.csharp:
+  - uid: AtfTIDE
+    name: AtfTIDE
+    href: AtfTIDE.html
+  - name: .
+  - uid: AtfTIDE.QueryExecutor
+    name: QueryExecutor
+    href: AtfTIDE.QueryExecutor.html
+  spec.vb:
+  - uid: AtfTIDE
+    name: AtfTIDE
+    href: AtfTIDE.html
+  - name: .
+  - uid: AtfTIDE.QueryExecutor
+    name: QueryExecutor
+    href: AtfTIDE.QueryExecutor.html
+- uid: AtfTIDE.QueryExecutor.IEsqColumnParser.GetSorting*
+  commentId: Overload:AtfTIDE.QueryExecutor.IEsqColumnParser.GetSorting
+  href: AtfTIDE.QueryExecutor.IEsqColumnParser.html#AtfTIDE_QueryExecutor_IEsqColumnParser_GetSorting_Terrasoft_Core_Entities_EntitySchemaQuery_
+  name: GetSorting
+  nameWithType: IEsqColumnParser.GetSorting
+  fullName: AtfTIDE.QueryExecutor.IEsqColumnParser.GetSorting
+- uid: Terrasoft.Core.Entities.EntitySchemaQuery
+  commentId: T:Terrasoft.Core.Entities.EntitySchemaQuery
+  parent: Terrasoft.Core.Entities
+  isExternal: true
+  name: EntitySchemaQuery
+  nameWithType: EntitySchemaQuery
+  fullName: Terrasoft.Core.Entities.EntitySchemaQuery
+- uid: AtfTIDE.QueryExecutor.SortColumn
+  commentId: T:AtfTIDE.QueryExecutor.SortColumn
+  parent: AtfTIDE.QueryExecutor
+  href: AtfTIDE.QueryExecutor.SortColumn.html
+  name: SortColumn
+  nameWithType: SortColumn
+  fullName: AtfTIDE.QueryExecutor.SortColumn
+- uid: Terrasoft.Core.Entities
+  commentId: N:Terrasoft.Core.Entities
+  isExternal: true
+  name: Terrasoft.Core.Entities
+  nameWithType: Terrasoft.Core.Entities
+  fullName: Terrasoft.Core.Entities
+  spec.csharp:
+  - uid: Terrasoft
+    name: Terrasoft
+    isExternal: true
+  - name: .
+  - uid: Terrasoft.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: Terrasoft.Core.Entities
+    name: Entities
+    isExternal: true
+  spec.vb:
+  - uid: Terrasoft
+    name: Terrasoft
+    isExternal: true
+  - name: .
+  - uid: Terrasoft.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: Terrasoft.Core.Entities
+    name: Entities
+    isExternal: true

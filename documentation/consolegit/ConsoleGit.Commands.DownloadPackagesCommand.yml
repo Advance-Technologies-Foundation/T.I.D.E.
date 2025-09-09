@@ -18,7 +18,7 @@ items:
   source:
     remote:
       path: ConsoleGit/ConsoleGit/Commands/DownloadPackagesCommand.cs
-      branch: feature/my-feature
+      branch: main
       repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
     id: DownloadPackagesCommand
     path: ../ConsoleGit/ConsoleGit/Commands/DownloadPackagesCommand.cs
@@ -67,7 +67,7 @@ items:
   source:
     remote:
       path: ConsoleGit/ConsoleGit/Commands/DownloadPackagesCommand.cs
-      branch: feature/my-feature
+      branch: main
       repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
     id: .ctor
     path: ../ConsoleGit/ConsoleGit/Commands/DownloadPackagesCommand.cs
@@ -110,11 +110,11 @@ items:
   source:
     remote:
       path: ConsoleGit/ConsoleGit/Commands/DownloadPackagesCommand.cs
-      branch: feature/my-feature
+      branch: main
       repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
     id: Dispose
     path: ../ConsoleGit/ConsoleGit/Commands/DownloadPackagesCommand.cs
-    startLine: 235
+    startLine: 273
   assemblies:
   - ConsoleGit
   namespace: ConsoleGit.Commands
@@ -140,11 +140,11 @@ items:
   source:
     remote:
       path: ConsoleGit/ConsoleGit/Commands/DownloadPackagesCommand.cs
-      branch: feature/my-feature
+      branch: main
       repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
     id: Execute
     path: ../ConsoleGit/ConsoleGit/Commands/DownloadPackagesCommand.cs
-    startLine: 254
+    startLine: 292
   assemblies:
   - ConsoleGit
   namespace: ConsoleGit.Commands

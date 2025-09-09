@@ -1,0 +1,54 @@
+﻿### YamlMime:ManagedReference
+items:
+- uid: AtfTIDE.HttpClient.Converters
+  commentId: N:AtfTIDE.HttpClient.Converters
+  id: AtfTIDE.HttpClient.Converters
+  children:
+  - AtfTIDE.HttpClient.Converters.JsonStringBoolConverter
+  langs:
+  - csharp
+  - vb
+  name: AtfTIDE.HttpClient.Converters
+  nameWithType: AtfTIDE.HttpClient.Converters
+  fullName: AtfTIDE.HttpClient.Converters
+  type: Namespace
+  assemblies:
+  - AtfTIDE
+references:
+- uid: AtfTIDE.HttpClient.Converters.JsonStringBoolConverter
+  commentId: T:AtfTIDE.HttpClient.Converters.JsonStringBoolConverter
+  parent: AtfTIDE.HttpClient.Converters
+  href: AtfTIDE.HttpClient.Converters.JsonStringBoolConverter.html
+  name: JsonStringBoolConverter
+  nameWithType: JsonStringBoolConverter
+  fullName: AtfTIDE.HttpClient.Converters.JsonStringBoolConverter
+- uid: AtfTIDE.HttpClient.Converters
+  commentId: N:AtfTIDE.HttpClient.Converters
+  href: AtfTIDE.html
+  name: AtfTIDE.HttpClient.Converters
+  nameWithType: AtfTIDE.HttpClient.Converters
+  fullName: AtfTIDE.HttpClient.Converters
+  spec.csharp:
+  - uid: AtfTIDE
+    name: AtfTIDE
+    href: AtfTIDE.html
+  - name: .
+  - uid: AtfTIDE.HttpClient
+    name: HttpClient
+    href: AtfTIDE.HttpClient.html
+  - name: .
+  - uid: AtfTIDE.HttpClient.Converters
+    name: Converters
+    href: AtfTIDE.HttpClient.Converters.html
+  spec.vb:
+  - uid: AtfTIDE
+    name: AtfTIDE
+    href: AtfTIDE.html
+  - name: .
+  - uid: AtfTIDE.HttpClient
+    name: HttpClient
+    href: AtfTIDE.HttpClient.html
+  - name: .
+  - uid: AtfTIDE.HttpClient.Converters
+    name: Converters
+    href: AtfTIDE.HttpClient.Converters.html

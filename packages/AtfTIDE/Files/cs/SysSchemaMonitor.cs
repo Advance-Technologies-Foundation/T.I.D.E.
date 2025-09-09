@@ -44,24 +44,25 @@ namespace AtfTIDE {
 					continue;
 				}
 				lastCheck = DateTime.UtcNow;
+				ILog logger = LogManager.GetLogger("Common");
 				foreach (Entity entity in changedEntity) {
 					
-					var nameVal = entity.GetTypedColumnValue<string>(name.Name);
-					LogManager.GetLogger("Common").InfoFormat("Metadata String :{0}", nameVal);
+					string nameVal = entity.GetTypedColumnValue<string>(name.Name);
+					logger.InfoFormat("Metadata String :{0}", nameVal);
 					
-					var captionVal = entity.GetTypedColumnValue<string>(caption.Name);
-					LogManager.GetLogger("Common").InfoFormat("Metadata String :{0}", captionVal);
+					string captionVal = entity.GetTypedColumnValue<string>(caption.Name);
+					logger.InfoFormat("Metadata String :{0}", captionVal);
 					
-					var managerVal = entity.GetTypedColumnValue<string>(managerName.Name);
-					LogManager.GetLogger("Common").InfoFormat("Metadata String :{0}", managerVal);
+					string managerVal = entity.GetTypedColumnValue<string>(managerName.Name);
+					logger.InfoFormat("Metadata String :{0}", managerVal);
 					
 					byte[] metadataBytes= entity.GetBytesValue("MetaData");
 					string metadataStr = Encoding.UTF8.GetString(metadataBytes);
-					LogManager.GetLogger("Common").InfoFormat("Metadata String :{0}", metadataStr);
+					logger.InfoFormat("Metadata String :{0}", metadataStr);
 				
 					byte[] descriptorBytes = entity.GetBytesValue("Descriptor");
 					string descriptorStr = Encoding.UTF8.GetString(descriptorBytes);
-					LogManager.GetLogger("Common").InfoFormat("Metadata String :{0}", descriptorStr);
+					logger.InfoFormat("Metadata String :{0}", descriptorStr);
 					
 				}
 				
@@ -73,17 +74,9 @@ namespace AtfTIDE {
 			_stopRequested = true;
 		}
 		
-		
-		
 		private void GetSourceCode(Guid id){
 			var userConnection = ClassFactory.Get<UserConnection>();
 			var sysSchemaSourceEntity = userConnection.EntitySchemaManager.GetInstanceByName(nameof(SysSchemaContent)).CreateEntity(userConnection);
-			
-			
-			
-			
 		}
-		
-		
 	}
 }

@@ -8,5 +8,6 @@
 		public const string SysSettingClioPath = "AtfClioFilePath";
 		internal const string GithubClientName = "GithubClient";
 		internal const string GithubClientTokenHandlerName = "GitHubTokenHandler";
+		internal const string LoggerName = "AtfTide";
 	}
 }

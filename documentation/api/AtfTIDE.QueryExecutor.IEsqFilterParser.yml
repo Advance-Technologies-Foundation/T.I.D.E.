@@ -1,0 +1,330 @@
+﻿### YamlMime:ManagedReference
+items:
+- uid: AtfTIDE.QueryExecutor.IEsqFilterParser
+  commentId: T:AtfTIDE.QueryExecutor.IEsqFilterParser
+  id: IEsqFilterParser
+  parent: AtfTIDE.QueryExecutor
+  children:
+  - AtfTIDE.QueryExecutor.IEsqFilterParser.GetEsqFilterValueByKey(System.String,Terrasoft.Core.Entities.EntitySchemaQuery)
+  - AtfTIDE.QueryExecutor.IEsqFilterParser.GetEsqFilterValueByKey2(System.String,Terrasoft.Core.Entities.EntitySchemaQuery)
+  - AtfTIDE.QueryExecutor.IEsqFilterParser.GetSearchBoxFilterValue(Terrasoft.Core.Entities.EntitySchemaQuery)
+  langs:
+  - csharp
+  - vb
+  name: IEsqFilterParser
+  nameWithType: IEsqFilterParser
+  fullName: AtfTIDE.QueryExecutor.IEsqFilterParser
+  type: Interface
+  source:
+    remote:
+      path: packages/AtfTIDE/Files/cs/QueryExecutor/EsqFilterParser.cs
+      branch: main
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: IEsqFilterParser
+    path: ../packages/AtfTIDE/Files/cs/QueryExecutor/EsqFilterParser.cs
+    startLine: 7
+  assemblies:
+  - AtfTIDE
+  namespace: AtfTIDE.QueryExecutor
+  syntax:
+    content: public interface IEsqFilterParser
+    content.vb: Public Interface IEsqFilterParser
+- uid: AtfTIDE.QueryExecutor.IEsqFilterParser.GetEsqFilterValueByKey(System.String,Terrasoft.Core.Entities.EntitySchemaQuery)
+  commentId: M:AtfTIDE.QueryExecutor.IEsqFilterParser.GetEsqFilterValueByKey(System.String,Terrasoft.Core.Entities.EntitySchemaQuery)
+  id: GetEsqFilterValueByKey(System.String,Terrasoft.Core.Entities.EntitySchemaQuery)
+  parent: AtfTIDE.QueryExecutor.IEsqFilterParser
+  langs:
+  - csharp
+  - vb
+  name: GetEsqFilterValueByKey(string, EntitySchemaQuery)
+  nameWithType: IEsqFilterParser.GetEsqFilterValueByKey(string, EntitySchemaQuery)
+  fullName: AtfTIDE.QueryExecutor.IEsqFilterParser.GetEsqFilterValueByKey(string, Terrasoft.Core.Entities.EntitySchemaQuery)
+  type: Method
+  source:
+    remote:
+      path: packages/AtfTIDE/Files/cs/QueryExecutor/EsqFilterParser.cs
+      branch: main
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: GetEsqFilterValueByKey
+    path: ../packages/AtfTIDE/Files/cs/QueryExecutor/EsqFilterParser.cs
+    startLine: 11
+  assemblies:
+  - AtfTIDE
+  namespace: AtfTIDE.QueryExecutor
+  syntax:
+    content: string GetEsqFilterValueByKey(string key, EntitySchemaQuery esq)
+    parameters:
+    - id: key
+      type: System.String
+    - id: esq
+      type: Terrasoft.Core.Entities.EntitySchemaQuery
+    return:
+      type: System.String
+    content.vb: Function GetEsqFilterValueByKey(key As String, esq As EntitySchemaQuery) As String
+  overload: AtfTIDE.QueryExecutor.IEsqFilterParser.GetEsqFilterValueByKey*
+  nameWithType.vb: IEsqFilterParser.GetEsqFilterValueByKey(String, EntitySchemaQuery)
+  fullName.vb: AtfTIDE.QueryExecutor.IEsqFilterParser.GetEsqFilterValueByKey(String, Terrasoft.Core.Entities.EntitySchemaQuery)
+  name.vb: GetEsqFilterValueByKey(String, EntitySchemaQuery)
+- uid: AtfTIDE.QueryExecutor.IEsqFilterParser.GetEsqFilterValueByKey2(System.String,Terrasoft.Core.Entities.EntitySchemaQuery)
+  commentId: M:AtfTIDE.QueryExecutor.IEsqFilterParser.GetEsqFilterValueByKey2(System.String,Terrasoft.Core.Entities.EntitySchemaQuery)
+  id: GetEsqFilterValueByKey2(System.String,Terrasoft.Core.Entities.EntitySchemaQuery)
+  parent: AtfTIDE.QueryExecutor.IEsqFilterParser
+  langs:
+  - csharp
+  - vb
+  name: GetEsqFilterValueByKey2(string, EntitySchemaQuery)
+  nameWithType: IEsqFilterParser.GetEsqFilterValueByKey2(string, EntitySchemaQuery)
+  fullName: AtfTIDE.QueryExecutor.IEsqFilterParser.GetEsqFilterValueByKey2(string, Terrasoft.Core.Entities.EntitySchemaQuery)
+  type: Method
+  source:
+    remote:
+      path: packages/AtfTIDE/Files/cs/QueryExecutor/EsqFilterParser.cs
+      branch: main
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: GetEsqFilterValueByKey2
+    path: ../packages/AtfTIDE/Files/cs/QueryExecutor/EsqFilterParser.cs
+    startLine: 13
+  assemblies:
+  - AtfTIDE
+  namespace: AtfTIDE.QueryExecutor
+  syntax:
+    content: IEnumerable<string> GetEsqFilterValueByKey2(string key, EntitySchemaQuery esq)
+    parameters:
+    - id: key
+      type: System.String
+    - id: esq
+      type: Terrasoft.Core.Entities.EntitySchemaQuery
+    return:
+      type: System.Collections.Generic.IEnumerable{System.String}
+    content.vb: Function GetEsqFilterValueByKey2(key As String, esq As EntitySchemaQuery) As IEnumerable(Of String)
+  overload: AtfTIDE.QueryExecutor.IEsqFilterParser.GetEsqFilterValueByKey2*
+  nameWithType.vb: IEsqFilterParser.GetEsqFilterValueByKey2(String, EntitySchemaQuery)
+  fullName.vb: AtfTIDE.QueryExecutor.IEsqFilterParser.GetEsqFilterValueByKey2(String, Terrasoft.Core.Entities.EntitySchemaQuery)
+  name.vb: GetEsqFilterValueByKey2(String, EntitySchemaQuery)
+- uid: AtfTIDE.QueryExecutor.IEsqFilterParser.GetSearchBoxFilterValue(Terrasoft.Core.Entities.EntitySchemaQuery)
+  commentId: M:AtfTIDE.QueryExecutor.IEsqFilterParser.GetSearchBoxFilterValue(Terrasoft.Core.Entities.EntitySchemaQuery)
+  id: GetSearchBoxFilterValue(Terrasoft.Core.Entities.EntitySchemaQuery)
+  parent: AtfTIDE.QueryExecutor.IEsqFilterParser
+  langs:
+  - csharp
+  - vb
+  name: GetSearchBoxFilterValue(EntitySchemaQuery)
+  nameWithType: IEsqFilterParser.GetSearchBoxFilterValue(EntitySchemaQuery)
+  fullName: AtfTIDE.QueryExecutor.IEsqFilterParser.GetSearchBoxFilterValue(Terrasoft.Core.Entities.EntitySchemaQuery)
+  type: Method
+  source:
+    remote:
+      path: packages/AtfTIDE/Files/cs/QueryExecutor/EsqFilterParser.cs
+      branch: main
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: GetSearchBoxFilterValue
+    path: ../packages/AtfTIDE/Files/cs/QueryExecutor/EsqFilterParser.cs
+    startLine: 15
+  assemblies:
+  - AtfTIDE
+  namespace: AtfTIDE.QueryExecutor
+  syntax:
+    content: string GetSearchBoxFilterValue(EntitySchemaQuery esq)
+    parameters:
+    - id: esq
+      type: Terrasoft.Core.Entities.EntitySchemaQuery
+    return:
+      type: System.String
+    content.vb: Function GetSearchBoxFilterValue(esq As EntitySchemaQuery) As String
+  overload: AtfTIDE.QueryExecutor.IEsqFilterParser.GetSearchBoxFilterValue*
+references:
+- uid: AtfTIDE.QueryExecutor
+  commentId: N:AtfTIDE.QueryExecutor
+  href: AtfTIDE.html
+  name: AtfTIDE.QueryExecutor
+  nameWithType: AtfTIDE.QueryExecutor
+  fullName: AtfTIDE.QueryExecutor
+  spec.csharp:
+  - uid: AtfTIDE
+    name: AtfTIDE
+    href: AtfTIDE.html
+  - name: .
+  - uid: AtfTIDE.QueryExecutor
+    name: QueryExecutor
+    href: AtfTIDE.QueryExecutor.html
+  spec.vb:
+  - uid: AtfTIDE
+    name: AtfTIDE
+    href: AtfTIDE.html
+  - name: .
+  - uid: AtfTIDE.QueryExecutor
+    name: QueryExecutor
+    href: AtfTIDE.QueryExecutor.html
+- uid: AtfTIDE.QueryExecutor.IEsqFilterParser.GetEsqFilterValueByKey*
+  commentId: Overload:AtfTIDE.QueryExecutor.IEsqFilterParser.GetEsqFilterValueByKey
+  href: AtfTIDE.QueryExecutor.IEsqFilterParser.html#AtfTIDE_QueryExecutor_IEsqFilterParser_GetEsqFilterValueByKey_System_String_Terrasoft_Core_Entities_EntitySchemaQuery_
+  name: GetEsqFilterValueByKey
+  nameWithType: IEsqFilterParser.GetEsqFilterValueByKey
+  fullName: AtfTIDE.QueryExecutor.IEsqFilterParser.GetEsqFilterValueByKey
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Terrasoft.Core.Entities.EntitySchemaQuery
+  commentId: T:Terrasoft.Core.Entities.EntitySchemaQuery
+  parent: Terrasoft.Core.Entities
+  isExternal: true
+  name: EntitySchemaQuery
+  nameWithType: EntitySchemaQuery
+  fullName: Terrasoft.Core.Entities.EntitySchemaQuery
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Terrasoft.Core.Entities
+  commentId: N:Terrasoft.Core.Entities
+  isExternal: true
+  name: Terrasoft.Core.Entities
+  nameWithType: Terrasoft.Core.Entities
+  fullName: Terrasoft.Core.Entities
+  spec.csharp:
+  - uid: Terrasoft
+    name: Terrasoft
+    isExternal: true
+  - name: .
+  - uid: Terrasoft.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: Terrasoft.Core.Entities
+    name: Entities
+    isExternal: true
+  spec.vb:
+  - uid: Terrasoft
+    name: Terrasoft
+    isExternal: true
+  - name: .
+  - uid: Terrasoft.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: Terrasoft.Core.Entities
+    name: Entities
+    isExternal: true
+- uid: AtfTIDE.QueryExecutor.IEsqFilterParser.GetEsqFilterValueByKey2*
+  commentId: Overload:AtfTIDE.QueryExecutor.IEsqFilterParser.GetEsqFilterValueByKey2
+  href: AtfTIDE.QueryExecutor.IEsqFilterParser.html#AtfTIDE_QueryExecutor_IEsqFilterParser_GetEsqFilterValueByKey2_System_String_Terrasoft_Core_Entities_EntitySchemaQuery_
+  name: GetEsqFilterValueByKey2
+  nameWithType: IEsqFilterParser.GetEsqFilterValueByKey2
+  fullName: AtfTIDE.QueryExecutor.IEsqFilterParser.GetEsqFilterValueByKey2
+- uid: System.Collections.Generic.IEnumerable{System.String}
+  commentId: T:System.Collections.Generic.IEnumerable{System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<string>
+  nameWithType: IEnumerable<string>
+  fullName: System.Collections.Generic.IEnumerable<string>
+  nameWithType.vb: IEnumerable(Of String)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of String)
+  name.vb: IEnumerable(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: AtfTIDE.QueryExecutor.IEsqFilterParser.GetSearchBoxFilterValue*
+  commentId: Overload:AtfTIDE.QueryExecutor.IEsqFilterParser.GetSearchBoxFilterValue
+  href: AtfTIDE.QueryExecutor.IEsqFilterParser.html#AtfTIDE_QueryExecutor_IEsqFilterParser_GetSearchBoxFilterValue_Terrasoft_Core_Entities_EntitySchemaQuery_
+  name: GetSearchBoxFilterValue
+  nameWithType: IEsqFilterParser.GetSearchBoxFilterValue
+  fullName: AtfTIDE.QueryExecutor.IEsqFilterParser.GetSearchBoxFilterValue

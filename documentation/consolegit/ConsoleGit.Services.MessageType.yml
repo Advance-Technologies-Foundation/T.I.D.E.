@@ -1,0 +1,139 @@
+﻿### YamlMime:ManagedReference
+items:
+- uid: ConsoleGit.Services.MessageType
+  commentId: T:ConsoleGit.Services.MessageType
+  id: MessageType
+  parent: ConsoleGit.Services
+  children:
+  - ConsoleGit.Services.MessageType.ERR
+  - ConsoleGit.Services.MessageType.INF
+  - ConsoleGit.Services.MessageType.WAR
+  langs:
+  - csharp
+  - vb
+  name: MessageType
+  nameWithType: MessageType
+  fullName: ConsoleGit.Services.MessageType
+  type: Enum
+  source:
+    remote:
+      path: ConsoleGit/ConsoleGit/Services/WebSocketLogger.cs
+      branch: main
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: MessageType
+    path: ../ConsoleGit/ConsoleGit/Services/WebSocketLogger.cs
+    startLine: 42
+  assemblies:
+  - ConsoleGit
+  namespace: ConsoleGit.Services
+  syntax:
+    content: public enum MessageType
+    content.vb: Public Enum MessageType
+- uid: ConsoleGit.Services.MessageType.INF
+  commentId: F:ConsoleGit.Services.MessageType.INF
+  id: INF
+  parent: ConsoleGit.Services.MessageType
+  langs:
+  - csharp
+  - vb
+  name: INF
+  nameWithType: MessageType.INF
+  fullName: ConsoleGit.Services.MessageType.INF
+  type: Field
+  source:
+    remote:
+      path: ConsoleGit/ConsoleGit/Services/WebSocketLogger.cs
+      branch: main
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: INF
+    path: ../ConsoleGit/ConsoleGit/Services/WebSocketLogger.cs
+    startLine: 43
+  assemblies:
+  - ConsoleGit
+  namespace: ConsoleGit.Services
+  syntax:
+    content: INF = 0
+    return:
+      type: ConsoleGit.Services.MessageType
+- uid: ConsoleGit.Services.MessageType.ERR
+  commentId: F:ConsoleGit.Services.MessageType.ERR
+  id: ERR
+  parent: ConsoleGit.Services.MessageType
+  langs:
+  - csharp
+  - vb
+  name: ERR
+  nameWithType: MessageType.ERR
+  fullName: ConsoleGit.Services.MessageType.ERR
+  type: Field
+  source:
+    remote:
+      path: ConsoleGit/ConsoleGit/Services/WebSocketLogger.cs
+      branch: main
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: ERR
+    path: ../ConsoleGit/ConsoleGit/Services/WebSocketLogger.cs
+    startLine: 44
+  assemblies:
+  - ConsoleGit
+  namespace: ConsoleGit.Services
+  syntax:
+    content: ERR = 1
+    return:
+      type: ConsoleGit.Services.MessageType
+- uid: ConsoleGit.Services.MessageType.WAR
+  commentId: F:ConsoleGit.Services.MessageType.WAR
+  id: WAR
+  parent: ConsoleGit.Services.MessageType
+  langs:
+  - csharp
+  - vb
+  name: WAR
+  nameWithType: MessageType.WAR
+  fullName: ConsoleGit.Services.MessageType.WAR
+  type: Field
+  source:
+    remote:
+      path: ConsoleGit/ConsoleGit/Services/WebSocketLogger.cs
+      branch: main
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: WAR
+    path: ../ConsoleGit/ConsoleGit/Services/WebSocketLogger.cs
+    startLine: 45
+  assemblies:
+  - ConsoleGit
+  namespace: ConsoleGit.Services
+  syntax:
+    content: WAR = 2
+    return:
+      type: ConsoleGit.Services.MessageType
+references:
+- uid: ConsoleGit.Services
+  commentId: N:ConsoleGit.Services
+  href: ConsoleGit.html
+  name: ConsoleGit.Services
+  nameWithType: ConsoleGit.Services
+  fullName: ConsoleGit.Services
+  spec.csharp:
+  - uid: ConsoleGit
+    name: ConsoleGit
+    href: ConsoleGit.html
+  - name: .
+  - uid: ConsoleGit.Services
+    name: Services
+    href: ConsoleGit.Services.html
+  spec.vb:
+  - uid: ConsoleGit
+    name: ConsoleGit
+    href: ConsoleGit.html
+  - name: .
+  - uid: ConsoleGit.Services
+    name: Services
+    href: ConsoleGit.Services.html
+- uid: ConsoleGit.Services.MessageType
+  commentId: T:ConsoleGit.Services.MessageType
+  parent: ConsoleGit.Services
+  href: ConsoleGit.Services.MessageType.html
+  name: MessageType
+  nameWithType: MessageType
+  fullName: ConsoleGit.Services.MessageType

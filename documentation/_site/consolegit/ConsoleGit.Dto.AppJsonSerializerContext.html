@@ -104,6 +104,8 @@ Class AppJsonSerializerContext
     <pre><code class="lang-csharp hljs">[JsonSerializable(typeof(string[]))]
 [JsonSerializable(typeof(JsonElement))]
 [JsonSerializable(typeof(WorkspaceSettings))]
+[JsonSerializable(typeof(BranchesCommandResponse))]
+[JsonSerializable(typeof(MyBranch))]
 public class AppJsonSerializerContext : JsonSerializerContext, IJsonTypeInfoResolver</code></pre>
   </div>
 
@@ -228,6 +230,38 @@ public class AppJsonSerializerContext : JsonSerializerContext, IJsonTypeInfoReso
 </h2>
 
 
+  <a id="ConsoleGit_Dto_AppJsonSerializerContext_BranchesCommandResponse_" data-uid="ConsoleGit.Dto.AppJsonSerializerContext.BranchesCommandResponse*"></a>
+
+  <h3 id="ConsoleGit_Dto_AppJsonSerializerContext_BranchesCommandResponse" data-uid="ConsoleGit.Dto.AppJsonSerializerContext.BranchesCommandResponse">
+  BranchesCommandResponse
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Defines the source generated JSON serialization contract metadata for a given type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public JsonTypeInfo&lt;BranchesCommandResponse&gt; BranchesCommandResponse { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.json.serialization.metadata.jsontypeinfo-1">JsonTypeInfo</a>&lt;<a class="xref" href="ConsoleGit.Commands.BranchesCommandResponse.html">BranchesCommandResponse</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="ConsoleGit_Dto_AppJsonSerializerContext_Default_" data-uid="ConsoleGit.Dto.AppJsonSerializerContext.Default*"></a>
 
   <h3 id="ConsoleGit_Dto_AppJsonSerializerContext_Default" data-uid="ConsoleGit.Dto.AppJsonSerializerContext.Default">
@@ -314,6 +348,70 @@ public class AppJsonSerializerContext : JsonSerializerContext, IJsonTypeInfoReso
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.json.serialization.metadata.jsontypeinfo-1">JsonTypeInfo</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.json.jsonelement">JsonElement</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="ConsoleGit_Dto_AppJsonSerializerContext_ListMyBranch_" data-uid="ConsoleGit.Dto.AppJsonSerializerContext.ListMyBranch*"></a>
+
+  <h3 id="ConsoleGit_Dto_AppJsonSerializerContext_ListMyBranch" data-uid="ConsoleGit.Dto.AppJsonSerializerContext.ListMyBranch">
+  ListMyBranch
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Defines the source generated JSON serialization contract metadata for a given type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public JsonTypeInfo&lt;List&lt;MyBranch&gt;&gt; ListMyBranch { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.json.serialization.metadata.jsontypeinfo-1">JsonTypeInfo</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="ConsoleGit.Commands.MyBranch.html">MyBranch</a>&gt;&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="ConsoleGit_Dto_AppJsonSerializerContext_MyBranch_" data-uid="ConsoleGit.Dto.AppJsonSerializerContext.MyBranch*"></a>
+
+  <h3 id="ConsoleGit_Dto_AppJsonSerializerContext_MyBranch" data-uid="ConsoleGit.Dto.AppJsonSerializerContext.MyBranch">
+  MyBranch
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Defines the source generated JSON serialization contract metadata for a given type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public JsonTypeInfo&lt;MyBranch&gt; MyBranch { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.json.serialization.metadata.jsontypeinfo-1">JsonTypeInfo</a>&lt;<a class="xref" href="ConsoleGit.Commands.MyBranch.html">MyBranch</a>&gt;</dt>
     <dd></dd>
   </dl>
 

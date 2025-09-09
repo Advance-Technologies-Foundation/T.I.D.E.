@@ -1,0 +1,601 @@
+﻿### YamlMime:ManagedReference
+items:
+- uid: AtfTIDE.TideApp
+  commentId: T:AtfTIDE.TideApp
+  id: TideApp
+  parent: AtfTIDE
+  children:
+  - AtfTIDE.TideApp.Create
+  - AtfTIDE.TideApp.GetKeyedService``1(System.Object)
+  - AtfTIDE.TideApp.GetRequiredKeyedService``1(System.Object)
+  - AtfTIDE.TideApp.GetRequiredService``1
+  - AtfTIDE.TideApp.GetService``1
+  - AtfTIDE.TideApp.InstallerApp
+  - AtfTIDE.TideApp.Instance
+  langs:
+  - csharp
+  - vb
+  name: TideApp
+  nameWithType: TideApp
+  fullName: AtfTIDE.TideApp
+  type: Class
+  source:
+    remote:
+      path: packages/AtfTIDE/Files/cs/TideApp.cs
+      branch: main
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: TideApp
+    path: ../packages/AtfTIDE/Files/cs/TideApp.cs
+    startLine: 12
+  assemblies:
+  - AtfTIDE
+  namespace: AtfTIDE
+  syntax:
+    content: public class TideApp
+    content.vb: Public Class TideApp
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: AtfTIDE.TideApp.Instance
+  commentId: P:AtfTIDE.TideApp.Instance
+  id: Instance
+  parent: AtfTIDE.TideApp
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: TideApp.Instance
+  fullName: AtfTIDE.TideApp.Instance
+  type: Property
+  source:
+    remote:
+      path: packages/AtfTIDE/Files/cs/TideApp.cs
+      branch: main
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: Instance
+    path: ../packages/AtfTIDE/Files/cs/TideApp.cs
+    startLine: 32
+  assemblies:
+  - AtfTIDE
+  namespace: AtfTIDE
+  syntax:
+    content: public static TideApp Instance { get; }
+    parameters: []
+    return:
+      type: AtfTIDE.TideApp
+    content.vb: Public Shared ReadOnly Property Instance As TideApp
+  overload: AtfTIDE.TideApp.Instance*
+- uid: AtfTIDE.TideApp.InstallerApp
+  commentId: P:AtfTIDE.TideApp.InstallerApp
+  id: InstallerApp
+  parent: AtfTIDE.TideApp
+  langs:
+  - csharp
+  - vb
+  name: InstallerApp
+  nameWithType: TideApp.InstallerApp
+  fullName: AtfTIDE.TideApp.InstallerApp
+  type: Property
+  source:
+    remote:
+      path: packages/AtfTIDE/Files/cs/TideApp.cs
+      branch: main
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: InstallerApp
+    path: ../packages/AtfTIDE/Files/cs/TideApp.cs
+    startLine: 34
+  assemblies:
+  - AtfTIDE
+  namespace: AtfTIDE
+  syntax:
+    content: public IInstaller InstallerApp { get; }
+    parameters: []
+    return:
+      type: AtfTIDE.ClioInstaller.IInstaller
+    content.vb: Public ReadOnly Property InstallerApp As IInstaller
+  overload: AtfTIDE.TideApp.InstallerApp*
+- uid: AtfTIDE.TideApp.Create
+  commentId: M:AtfTIDE.TideApp.Create
+  id: Create
+  parent: AtfTIDE.TideApp
+  langs:
+  - csharp
+  - vb
+  name: Create()
+  nameWithType: TideApp.Create()
+  fullName: AtfTIDE.TideApp.Create()
+  type: Method
+  source:
+    remote:
+      path: packages/AtfTIDE/Files/cs/TideApp.cs
+      branch: main
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: Create
+    path: ../packages/AtfTIDE/Files/cs/TideApp.cs
+    startLine: 82
+  assemblies:
+  - AtfTIDE
+  namespace: AtfTIDE
+  syntax:
+    content: public static TideApp Create()
+    return:
+      type: AtfTIDE.TideApp
+    content.vb: Public Shared Function Create() As TideApp
+  overload: AtfTIDE.TideApp.Create*
+- uid: AtfTIDE.TideApp.GetKeyedService``1(System.Object)
+  commentId: M:AtfTIDE.TideApp.GetKeyedService``1(System.Object)
+  id: GetKeyedService``1(System.Object)
+  parent: AtfTIDE.TideApp
+  langs:
+  - csharp
+  - vb
+  name: GetKeyedService<T>(object)
+  nameWithType: TideApp.GetKeyedService<T>(object)
+  fullName: AtfTIDE.TideApp.GetKeyedService<T>(object)
+  type: Method
+  source:
+    remote:
+      path: packages/AtfTIDE/Files/cs/TideApp.cs
+      branch: main
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: GetKeyedService
+    path: ../packages/AtfTIDE/Files/cs/TideApp.cs
+    startLine: 84
+  assemblies:
+  - AtfTIDE
+  namespace: AtfTIDE
+  syntax:
+    content: public T GetKeyedService<T>(object serviceKey)
+    parameters:
+    - id: serviceKey
+      type: System.Object
+    typeParameters:
+    - id: T
+    return:
+      type: '{T}'
+    content.vb: Public Function GetKeyedService(Of T)(serviceKey As Object) As T
+  overload: AtfTIDE.TideApp.GetKeyedService*
+  nameWithType.vb: TideApp.GetKeyedService(Of T)(Object)
+  fullName.vb: AtfTIDE.TideApp.GetKeyedService(Of T)(Object)
+  name.vb: GetKeyedService(Of T)(Object)
+- uid: AtfTIDE.TideApp.GetRequiredKeyedService``1(System.Object)
+  commentId: M:AtfTIDE.TideApp.GetRequiredKeyedService``1(System.Object)
+  id: GetRequiredKeyedService``1(System.Object)
+  parent: AtfTIDE.TideApp
+  langs:
+  - csharp
+  - vb
+  name: GetRequiredKeyedService<T>(object)
+  nameWithType: TideApp.GetRequiredKeyedService<T>(object)
+  fullName: AtfTIDE.TideApp.GetRequiredKeyedService<T>(object)
+  type: Method
+  source:
+    remote:
+      path: packages/AtfTIDE/Files/cs/TideApp.cs
+      branch: main
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: GetRequiredKeyedService
+    path: ../packages/AtfTIDE/Files/cs/TideApp.cs
+    startLine: 86
+  assemblies:
+  - AtfTIDE
+  namespace: AtfTIDE
+  syntax:
+    content: public T GetRequiredKeyedService<T>(object serviceKey)
+    parameters:
+    - id: serviceKey
+      type: System.Object
+    typeParameters:
+    - id: T
+    return:
+      type: '{T}'
+    content.vb: Public Function GetRequiredKeyedService(Of T)(serviceKey As Object) As T
+  overload: AtfTIDE.TideApp.GetRequiredKeyedService*
+  nameWithType.vb: TideApp.GetRequiredKeyedService(Of T)(Object)
+  fullName.vb: AtfTIDE.TideApp.GetRequiredKeyedService(Of T)(Object)
+  name.vb: GetRequiredKeyedService(Of T)(Object)
+- uid: AtfTIDE.TideApp.GetRequiredService``1
+  commentId: M:AtfTIDE.TideApp.GetRequiredService``1
+  id: GetRequiredService``1
+  parent: AtfTIDE.TideApp
+  langs:
+  - csharp
+  - vb
+  name: GetRequiredService<T>()
+  nameWithType: TideApp.GetRequiredService<T>()
+  fullName: AtfTIDE.TideApp.GetRequiredService<T>()
+  type: Method
+  source:
+    remote:
+      path: packages/AtfTIDE/Files/cs/TideApp.cs
+      branch: main
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: GetRequiredService
+    path: ../packages/AtfTIDE/Files/cs/TideApp.cs
+    startLine: 89
+  assemblies:
+  - AtfTIDE
+  namespace: AtfTIDE
+  syntax:
+    content: public T GetRequiredService<T>()
+    typeParameters:
+    - id: T
+    return:
+      type: '{T}'
+    content.vb: Public Function GetRequiredService(Of T)() As T
+  overload: AtfTIDE.TideApp.GetRequiredService*
+  nameWithType.vb: TideApp.GetRequiredService(Of T)()
+  fullName.vb: AtfTIDE.TideApp.GetRequiredService(Of T)()
+  name.vb: GetRequiredService(Of T)()
+- uid: AtfTIDE.TideApp.GetService``1
+  commentId: M:AtfTIDE.TideApp.GetService``1
+  id: GetService``1
+  parent: AtfTIDE.TideApp
+  langs:
+  - csharp
+  - vb
+  name: GetService<T>()
+  nameWithType: TideApp.GetService<T>()
+  fullName: AtfTIDE.TideApp.GetService<T>()
+  type: Method
+  source:
+    remote:
+      path: packages/AtfTIDE/Files/cs/TideApp.cs
+      branch: main
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: GetService
+    path: ../packages/AtfTIDE/Files/cs/TideApp.cs
+    startLine: 91
+  assemblies:
+  - AtfTIDE
+  namespace: AtfTIDE
+  syntax:
+    content: public T GetService<T>()
+    typeParameters:
+    - id: T
+    return:
+      type: '{T}'
+    content.vb: Public Function GetService(Of T)() As T
+  overload: AtfTIDE.TideApp.GetService*
+  nameWithType.vb: TideApp.GetService(Of T)()
+  fullName.vb: AtfTIDE.TideApp.GetService(Of T)()
+  name.vb: GetService(Of T)()
+references:
+- uid: AtfTIDE
+  commentId: N:AtfTIDE
+  href: AtfTIDE.html
+  name: AtfTIDE
+  nameWithType: AtfTIDE
+  fullName: AtfTIDE
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: AtfTIDE.TideApp.Instance*
+  commentId: Overload:AtfTIDE.TideApp.Instance
+  href: AtfTIDE.TideApp.html#AtfTIDE_TideApp_Instance
+  name: Instance
+  nameWithType: TideApp.Instance
+  fullName: AtfTIDE.TideApp.Instance
+- uid: AtfTIDE.TideApp
+  commentId: T:AtfTIDE.TideApp
+  parent: AtfTIDE
+  href: AtfTIDE.TideApp.html
+  name: TideApp
+  nameWithType: TideApp
+  fullName: AtfTIDE.TideApp
+- uid: AtfTIDE.TideApp.InstallerApp*
+  commentId: Overload:AtfTIDE.TideApp.InstallerApp
+  href: AtfTIDE.TideApp.html#AtfTIDE_TideApp_InstallerApp
+  name: InstallerApp
+  nameWithType: TideApp.InstallerApp
+  fullName: AtfTIDE.TideApp.InstallerApp
+- uid: AtfTIDE.ClioInstaller.IInstaller
+  commentId: T:AtfTIDE.ClioInstaller.IInstaller
+  parent: AtfTIDE.ClioInstaller
+  href: AtfTIDE.ClioInstaller.IInstaller.html
+  name: IInstaller
+  nameWithType: IInstaller
+  fullName: AtfTIDE.ClioInstaller.IInstaller
+- uid: AtfTIDE.ClioInstaller
+  commentId: N:AtfTIDE.ClioInstaller
+  href: AtfTIDE.html
+  name: AtfTIDE.ClioInstaller
+  nameWithType: AtfTIDE.ClioInstaller
+  fullName: AtfTIDE.ClioInstaller
+  spec.csharp:
+  - uid: AtfTIDE
+    name: AtfTIDE
+    href: AtfTIDE.html
+  - name: .
+  - uid: AtfTIDE.ClioInstaller
+    name: ClioInstaller
+    href: AtfTIDE.ClioInstaller.html
+  spec.vb:
+  - uid: AtfTIDE
+    name: AtfTIDE
+    href: AtfTIDE.html
+  - name: .
+  - uid: AtfTIDE.ClioInstaller
+    name: ClioInstaller
+    href: AtfTIDE.ClioInstaller.html
+- uid: AtfTIDE.TideApp.Create*
+  commentId: Overload:AtfTIDE.TideApp.Create
+  href: AtfTIDE.TideApp.html#AtfTIDE_TideApp_Create
+  name: Create
+  nameWithType: TideApp.Create
+  fullName: AtfTIDE.TideApp.Create
+- uid: AtfTIDE.TideApp.GetKeyedService*
+  commentId: Overload:AtfTIDE.TideApp.GetKeyedService
+  href: AtfTIDE.TideApp.html#AtfTIDE_TideApp_GetKeyedService__1_System_Object_
+  name: GetKeyedService
+  nameWithType: TideApp.GetKeyedService
+  fullName: AtfTIDE.TideApp.GetKeyedService
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: AtfTIDE.TideApp.GetRequiredKeyedService*
+  commentId: Overload:AtfTIDE.TideApp.GetRequiredKeyedService
+  href: AtfTIDE.TideApp.html#AtfTIDE_TideApp_GetRequiredKeyedService__1_System_Object_
+  name: GetRequiredKeyedService
+  nameWithType: TideApp.GetRequiredKeyedService
+  fullName: AtfTIDE.TideApp.GetRequiredKeyedService
+- uid: AtfTIDE.TideApp.GetRequiredService*
+  commentId: Overload:AtfTIDE.TideApp.GetRequiredService
+  href: AtfTIDE.TideApp.html#AtfTIDE_TideApp_GetRequiredService__1
+  name: GetRequiredService
+  nameWithType: TideApp.GetRequiredService
+  fullName: AtfTIDE.TideApp.GetRequiredService
+- uid: AtfTIDE.TideApp.GetService*
+  commentId: Overload:AtfTIDE.TideApp.GetService
+  href: AtfTIDE.TideApp.html#AtfTIDE_TideApp_GetService__1
+  name: GetService
+  nameWithType: TideApp.GetService
+  fullName: AtfTIDE.TideApp.GetService

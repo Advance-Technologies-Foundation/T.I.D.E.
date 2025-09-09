@@ -4,13 +4,20 @@ items:
   commentId: N:AtfTIDE
   id: AtfTIDE
   children:
+  - AtfTIDE.AppEventListener
   - AtfTIDE.Commands
   - AtfTIDE.ConsoleGit
   - AtfTIDE.ConsoleGitArgs
   - AtfTIDE.ConsoleGitResult
   - AtfTIDE.HelperFunctions
   - AtfTIDE.IConsoleGit
+  - AtfTIDE.ITextTransformer
+  - AtfTIDE.IWebSocket
+  - AtfTIDE.OsProcessResult
   - AtfTIDE.RepositoryInfo
+  - AtfTIDE.SysSchemaMonitor
+  - AtfTIDE.TideApp
+  - AtfTIDE.UrlAppender
   langs:
   - csharp
   - vb
@@ -21,6 +28,12 @@ items:
   assemblies:
   - AtfTIDE
 references:
+- uid: AtfTIDE.AppEventListener
+  commentId: T:AtfTIDE.AppEventListener
+  href: AtfTIDE.AppEventListener.html
+  name: AppEventListener
+  nameWithType: AppEventListener
+  fullName: AtfTIDE.AppEventListener
 - uid: AtfTIDE.IConsoleGit
   commentId: T:AtfTIDE.IConsoleGit
   parent: AtfTIDE
@@ -61,6 +74,13 @@ references:
   name: HelperFunctions
   nameWithType: HelperFunctions
   fullName: AtfTIDE.HelperFunctions
+- uid: AtfTIDE.OsProcessResult
+  commentId: T:AtfTIDE.OsProcessResult
+  parent: AtfTIDE
+  href: AtfTIDE.OsProcessResult.html
+  name: OsProcessResult
+  nameWithType: OsProcessResult
+  fullName: AtfTIDE.OsProcessResult
 - uid: AtfTIDE.RepositoryInfo
   commentId: T:AtfTIDE.RepositoryInfo
   parent: AtfTIDE
@@ -68,6 +88,39 @@ references:
   name: RepositoryInfo
   nameWithType: RepositoryInfo
   fullName: AtfTIDE.RepositoryInfo
+- uid: AtfTIDE.SysSchemaMonitor
+  commentId: T:AtfTIDE.SysSchemaMonitor
+  href: AtfTIDE.SysSchemaMonitor.html
+  name: SysSchemaMonitor
+  nameWithType: SysSchemaMonitor
+  fullName: AtfTIDE.SysSchemaMonitor
+- uid: AtfTIDE.TideApp
+  commentId: T:AtfTIDE.TideApp
+  parent: AtfTIDE
+  href: AtfTIDE.TideApp.html
+  name: TideApp
+  nameWithType: TideApp
+  fullName: AtfTIDE.TideApp
+- uid: AtfTIDE.ITextTransformer
+  commentId: T:AtfTIDE.ITextTransformer
+  parent: AtfTIDE
+  href: AtfTIDE.ITextTransformer.html
+  name: ITextTransformer
+  nameWithType: ITextTransformer
+  fullName: AtfTIDE.ITextTransformer
+- uid: AtfTIDE.UrlAppender
+  commentId: T:AtfTIDE.UrlAppender
+  href: AtfTIDE.UrlAppender.html
+  name: UrlAppender
+  nameWithType: UrlAppender
+  fullName: AtfTIDE.UrlAppender
+- uid: AtfTIDE.IWebSocket
+  commentId: T:AtfTIDE.IWebSocket
+  parent: AtfTIDE
+  href: AtfTIDE.IWebSocket.html
+  name: IWebSocket
+  nameWithType: IWebSocket
+  fullName: AtfTIDE.IWebSocket
 - uid: AtfTIDE
   commentId: N:AtfTIDE
   href: AtfTIDE.html

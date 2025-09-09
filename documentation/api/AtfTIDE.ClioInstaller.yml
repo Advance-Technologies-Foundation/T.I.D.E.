@@ -1,0 +1,68 @@
+﻿### YamlMime:ManagedReference
+items:
+- uid: AtfTIDE.ClioInstaller
+  commentId: N:AtfTIDE.ClioInstaller
+  id: AtfTIDE.ClioInstaller
+  children:
+  - AtfTIDE.ClioInstaller.IInstaller
+  - AtfTIDE.ClioInstaller.INugetClient
+  - AtfTIDE.ClioInstaller.Installer
+  - AtfTIDE.ClioInstaller.NugetClient
+  langs:
+  - csharp
+  - vb
+  name: AtfTIDE.ClioInstaller
+  nameWithType: AtfTIDE.ClioInstaller
+  fullName: AtfTIDE.ClioInstaller
+  type: Namespace
+  assemblies:
+  - AtfTIDE
+references:
+- uid: AtfTIDE.ClioInstaller.IInstaller
+  commentId: T:AtfTIDE.ClioInstaller.IInstaller
+  parent: AtfTIDE.ClioInstaller
+  href: AtfTIDE.ClioInstaller.IInstaller.html
+  name: IInstaller
+  nameWithType: IInstaller
+  fullName: AtfTIDE.ClioInstaller.IInstaller
+- uid: AtfTIDE.ClioInstaller.Installer
+  commentId: T:AtfTIDE.ClioInstaller.Installer
+  href: AtfTIDE.ClioInstaller.Installer.html
+  name: Installer
+  nameWithType: Installer
+  fullName: AtfTIDE.ClioInstaller.Installer
+- uid: AtfTIDE.ClioInstaller.INugetClient
+  commentId: T:AtfTIDE.ClioInstaller.INugetClient
+  parent: AtfTIDE.ClioInstaller
+  href: AtfTIDE.ClioInstaller.INugetClient.html
+  name: INugetClient
+  nameWithType: INugetClient
+  fullName: AtfTIDE.ClioInstaller.INugetClient
+- uid: AtfTIDE.ClioInstaller.NugetClient
+  commentId: T:AtfTIDE.ClioInstaller.NugetClient
+  href: AtfTIDE.ClioInstaller.NugetClient.html
+  name: NugetClient
+  nameWithType: NugetClient
+  fullName: AtfTIDE.ClioInstaller.NugetClient
+- uid: AtfTIDE.ClioInstaller
+  commentId: N:AtfTIDE.ClioInstaller
+  href: AtfTIDE.html
+  name: AtfTIDE.ClioInstaller
+  nameWithType: AtfTIDE.ClioInstaller
+  fullName: AtfTIDE.ClioInstaller
+  spec.csharp:
+  - uid: AtfTIDE
+    name: AtfTIDE
+    href: AtfTIDE.html
+  - name: .
+  - uid: AtfTIDE.ClioInstaller
+    name: ClioInstaller
+    href: AtfTIDE.ClioInstaller.html
+  spec.vb:
+  - uid: AtfTIDE
+    name: AtfTIDE
+    href: AtfTIDE.html
+  - name: .
+  - uid: AtfTIDE.ClioInstaller
+    name: ClioInstaller
+    href: AtfTIDE.ClioInstaller.html

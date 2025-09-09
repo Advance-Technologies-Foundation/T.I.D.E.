@@ -1,0 +1,792 @@
+﻿### YamlMime:ManagedReference
+items:
+- uid: AtfTIDE.HttpClient.GithubDto.Repository
+  commentId: T:AtfTIDE.HttpClient.GithubDto.Repository
+  id: Repository
+  parent: AtfTIDE.HttpClient.GithubDto
+  children:
+  - AtfTIDE.HttpClient.GithubDto.Repository.CloneUrl
+  - AtfTIDE.HttpClient.GithubDto.Repository.CustomProperties
+  - AtfTIDE.HttpClient.GithubDto.Repository.Description
+  - AtfTIDE.HttpClient.GithubDto.Repository.FullName
+  - AtfTIDE.HttpClient.GithubDto.Repository.Id
+  - AtfTIDE.HttpClient.GithubDto.Repository.Name
+  - AtfTIDE.HttpClient.GithubDto.Repository.NodeId
+  - AtfTIDE.HttpClient.GithubDto.Repository.Private
+  - AtfTIDE.HttpClient.GithubDto.Repository.Url
+  langs:
+  - csharp
+  - vb
+  name: Repository
+  nameWithType: Repository
+  fullName: AtfTIDE.HttpClient.GithubDto.Repository
+  type: Class
+  source:
+    remote:
+      path: packages/AtfTIDE/Files/cs/HttpClient/GithubDto/Repository.cs
+      branch: main
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: Repository
+    path: ../packages/AtfTIDE/Files/cs/HttpClient/GithubDto/Repository.cs
+    startLine: 5
+  assemblies:
+  - AtfTIDE
+  namespace: AtfTIDE.HttpClient.GithubDto
+  syntax:
+    content: public class Repository
+    content.vb: Public Class Repository
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: AtfTIDE.HttpClient.GithubDto.Repository.Id
+  commentId: P:AtfTIDE.HttpClient.GithubDto.Repository.Id
+  id: Id
+  parent: AtfTIDE.HttpClient.GithubDto.Repository
+  langs:
+  - csharp
+  - vb
+  name: Id
+  nameWithType: Repository.Id
+  fullName: AtfTIDE.HttpClient.GithubDto.Repository.Id
+  type: Property
+  source:
+    remote:
+      path: packages/AtfTIDE/Files/cs/HttpClient/GithubDto/Repository.cs
+      branch: main
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: Id
+    path: ../packages/AtfTIDE/Files/cs/HttpClient/GithubDto/Repository.cs
+    startLine: 7
+  assemblies:
+  - AtfTIDE
+  namespace: AtfTIDE.HttpClient.GithubDto
+  syntax:
+    content: >-
+      [JsonPropertyName("id")]
+
+      public uint Id { get; set; }
+    parameters: []
+    return:
+      type: System.UInt32
+    content.vb: >-
+      <JsonPropertyName("id")>
+
+      Public Property Id As UInteger
+  overload: AtfTIDE.HttpClient.GithubDto.Repository.Id*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: id
+- uid: AtfTIDE.HttpClient.GithubDto.Repository.NodeId
+  commentId: P:AtfTIDE.HttpClient.GithubDto.Repository.NodeId
+  id: NodeId
+  parent: AtfTIDE.HttpClient.GithubDto.Repository
+  langs:
+  - csharp
+  - vb
+  name: NodeId
+  nameWithType: Repository.NodeId
+  fullName: AtfTIDE.HttpClient.GithubDto.Repository.NodeId
+  type: Property
+  source:
+    remote:
+      path: packages/AtfTIDE/Files/cs/HttpClient/GithubDto/Repository.cs
+      branch: main
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: NodeId
+    path: ../packages/AtfTIDE/Files/cs/HttpClient/GithubDto/Repository.cs
+    startLine: 10
+  assemblies:
+  - AtfTIDE
+  namespace: AtfTIDE.HttpClient.GithubDto
+  syntax:
+    content: >-
+      [JsonPropertyName("node_id")]
+
+      public string NodeId { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonPropertyName("node_id")>
+
+      Public Property NodeId As String
+  overload: AtfTIDE.HttpClient.GithubDto.Repository.NodeId*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: node_id
+- uid: AtfTIDE.HttpClient.GithubDto.Repository.Name
+  commentId: P:AtfTIDE.HttpClient.GithubDto.Repository.Name
+  id: Name
+  parent: AtfTIDE.HttpClient.GithubDto.Repository
+  langs:
+  - csharp
+  - vb
+  name: Name
+  nameWithType: Repository.Name
+  fullName: AtfTIDE.HttpClient.GithubDto.Repository.Name
+  type: Property
+  source:
+    remote:
+      path: packages/AtfTIDE/Files/cs/HttpClient/GithubDto/Repository.cs
+      branch: main
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: Name
+    path: ../packages/AtfTIDE/Files/cs/HttpClient/GithubDto/Repository.cs
+    startLine: 13
+  assemblies:
+  - AtfTIDE
+  namespace: AtfTIDE.HttpClient.GithubDto
+  syntax:
+    content: >-
+      [JsonPropertyName("name")]
+
+      public string Name { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonPropertyName("name")>
+
+      Public Property Name As String
+  overload: AtfTIDE.HttpClient.GithubDto.Repository.Name*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: name
+- uid: AtfTIDE.HttpClient.GithubDto.Repository.Description
+  commentId: P:AtfTIDE.HttpClient.GithubDto.Repository.Description
+  id: Description
+  parent: AtfTIDE.HttpClient.GithubDto.Repository
+  langs:
+  - csharp
+  - vb
+  name: Description
+  nameWithType: Repository.Description
+  fullName: AtfTIDE.HttpClient.GithubDto.Repository.Description
+  type: Property
+  source:
+    remote:
+      path: packages/AtfTIDE/Files/cs/HttpClient/GithubDto/Repository.cs
+      branch: main
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: Description
+    path: ../packages/AtfTIDE/Files/cs/HttpClient/GithubDto/Repository.cs
+    startLine: 16
+  assemblies:
+  - AtfTIDE
+  namespace: AtfTIDE.HttpClient.GithubDto
+  syntax:
+    content: >-
+      [JsonPropertyName("description")]
+
+      [CanBeNull]
+
+      public string Description { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonPropertyName("description")>
+
+      <CanBeNull>
+
+      Public Property Description As String
+  overload: AtfTIDE.HttpClient.GithubDto.Repository.Description*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: description
+  - type: JetBrains.Annotations.CanBeNullAttribute
+    ctor: JetBrains.Annotations.CanBeNullAttribute.#ctor
+    arguments: []
+- uid: AtfTIDE.HttpClient.GithubDto.Repository.FullName
+  commentId: P:AtfTIDE.HttpClient.GithubDto.Repository.FullName
+  id: FullName
+  parent: AtfTIDE.HttpClient.GithubDto.Repository
+  langs:
+  - csharp
+  - vb
+  name: FullName
+  nameWithType: Repository.FullName
+  fullName: AtfTIDE.HttpClient.GithubDto.Repository.FullName
+  type: Property
+  source:
+    remote:
+      path: packages/AtfTIDE/Files/cs/HttpClient/GithubDto/Repository.cs
+      branch: main
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: FullName
+    path: ../packages/AtfTIDE/Files/cs/HttpClient/GithubDto/Repository.cs
+    startLine: 20
+  assemblies:
+  - AtfTIDE
+  namespace: AtfTIDE.HttpClient.GithubDto
+  syntax:
+    content: >-
+      [JsonPropertyName("full_name")]
+
+      public string FullName { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonPropertyName("full_name")>
+
+      Public Property FullName As String
+  overload: AtfTIDE.HttpClient.GithubDto.Repository.FullName*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: full_name
+- uid: AtfTIDE.HttpClient.GithubDto.Repository.Private
+  commentId: P:AtfTIDE.HttpClient.GithubDto.Repository.Private
+  id: Private
+  parent: AtfTIDE.HttpClient.GithubDto.Repository
+  langs:
+  - csharp
+  - vb
+  name: Private
+  nameWithType: Repository.Private
+  fullName: AtfTIDE.HttpClient.GithubDto.Repository.Private
+  type: Property
+  source:
+    remote:
+      path: packages/AtfTIDE/Files/cs/HttpClient/GithubDto/Repository.cs
+      branch: main
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: Private
+    path: ../packages/AtfTIDE/Files/cs/HttpClient/GithubDto/Repository.cs
+    startLine: 23
+  assemblies:
+  - AtfTIDE
+  namespace: AtfTIDE.HttpClient.GithubDto
+  syntax:
+    content: >-
+      [JsonPropertyName("private")]
+
+      public bool Private { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: >-
+      <JsonPropertyName("private")>
+
+      Public Property [Private] As Boolean
+  overload: AtfTIDE.HttpClient.GithubDto.Repository.Private*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: private
+- uid: AtfTIDE.HttpClient.GithubDto.Repository.Url
+  commentId: P:AtfTIDE.HttpClient.GithubDto.Repository.Url
+  id: Url
+  parent: AtfTIDE.HttpClient.GithubDto.Repository
+  langs:
+  - csharp
+  - vb
+  name: Url
+  nameWithType: Repository.Url
+  fullName: AtfTIDE.HttpClient.GithubDto.Repository.Url
+  type: Property
+  source:
+    remote:
+      path: packages/AtfTIDE/Files/cs/HttpClient/GithubDto/Repository.cs
+      branch: main
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: Url
+    path: ../packages/AtfTIDE/Files/cs/HttpClient/GithubDto/Repository.cs
+    startLine: 26
+  assemblies:
+  - AtfTIDE
+  namespace: AtfTIDE.HttpClient.GithubDto
+  syntax:
+    content: >-
+      [JsonPropertyName("url")]
+
+      public string Url { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonPropertyName("url")>
+
+      Public Property Url As String
+  overload: AtfTIDE.HttpClient.GithubDto.Repository.Url*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: url
+- uid: AtfTIDE.HttpClient.GithubDto.Repository.CloneUrl
+  commentId: P:AtfTIDE.HttpClient.GithubDto.Repository.CloneUrl
+  id: CloneUrl
+  parent: AtfTIDE.HttpClient.GithubDto.Repository
+  langs:
+  - csharp
+  - vb
+  name: CloneUrl
+  nameWithType: Repository.CloneUrl
+  fullName: AtfTIDE.HttpClient.GithubDto.Repository.CloneUrl
+  type: Property
+  source:
+    remote:
+      path: packages/AtfTIDE/Files/cs/HttpClient/GithubDto/Repository.cs
+      branch: main
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: CloneUrl
+    path: ../packages/AtfTIDE/Files/cs/HttpClient/GithubDto/Repository.cs
+    startLine: 29
+  assemblies:
+  - AtfTIDE
+  namespace: AtfTIDE.HttpClient.GithubDto
+  syntax:
+    content: >-
+      [JsonPropertyName("clone_url")]
+
+      public string CloneUrl { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonPropertyName("clone_url")>
+
+      Public Property CloneUrl As String
+  overload: AtfTIDE.HttpClient.GithubDto.Repository.CloneUrl*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: clone_url
+- uid: AtfTIDE.HttpClient.GithubDto.Repository.CustomProperties
+  commentId: P:AtfTIDE.HttpClient.GithubDto.Repository.CustomProperties
+  id: CustomProperties
+  parent: AtfTIDE.HttpClient.GithubDto.Repository
+  langs:
+  - csharp
+  - vb
+  name: CustomProperties
+  nameWithType: Repository.CustomProperties
+  fullName: AtfTIDE.HttpClient.GithubDto.Repository.CustomProperties
+  type: Property
+  source:
+    remote:
+      path: packages/AtfTIDE/Files/cs/HttpClient/GithubDto/Repository.cs
+      branch: main
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: CustomProperties
+    path: ../packages/AtfTIDE/Files/cs/HttpClient/GithubDto/Repository.cs
+    startLine: 32
+  assemblies:
+  - AtfTIDE
+  namespace: AtfTIDE.HttpClient.GithubDto
+  syntax:
+    content: >-
+      [JsonPropertyName("custom_properties")]
+
+      [CanBeNull]
+
+      public CustomProperties CustomProperties { get; set; }
+    parameters: []
+    return:
+      type: AtfTIDE.HttpClient.GithubDto.CustomProperties
+    content.vb: >-
+      <JsonPropertyName("custom_properties")>
+
+      <CanBeNull>
+
+      Public Property CustomProperties As CustomProperties
+  overload: AtfTIDE.HttpClient.GithubDto.Repository.CustomProperties*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: custom_properties
+  - type: JetBrains.Annotations.CanBeNullAttribute
+    ctor: JetBrains.Annotations.CanBeNullAttribute.#ctor
+    arguments: []
+references:
+- uid: AtfTIDE.HttpClient.GithubDto
+  commentId: N:AtfTIDE.HttpClient.GithubDto
+  href: AtfTIDE.html
+  name: AtfTIDE.HttpClient.GithubDto
+  nameWithType: AtfTIDE.HttpClient.GithubDto
+  fullName: AtfTIDE.HttpClient.GithubDto
+  spec.csharp:
+  - uid: AtfTIDE
+    name: AtfTIDE
+    href: AtfTIDE.html
+  - name: .
+  - uid: AtfTIDE.HttpClient
+    name: HttpClient
+    href: AtfTIDE.HttpClient.html
+  - name: .
+  - uid: AtfTIDE.HttpClient.GithubDto
+    name: GithubDto
+    href: AtfTIDE.HttpClient.GithubDto.html
+  spec.vb:
+  - uid: AtfTIDE
+    name: AtfTIDE
+    href: AtfTIDE.html
+  - name: .
+  - uid: AtfTIDE.HttpClient
+    name: HttpClient
+    href: AtfTIDE.HttpClient.html
+  - name: .
+  - uid: AtfTIDE.HttpClient.GithubDto
+    name: GithubDto
+    href: AtfTIDE.HttpClient.GithubDto.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: AtfTIDE.HttpClient.GithubDto.Repository.Id*
+  commentId: Overload:AtfTIDE.HttpClient.GithubDto.Repository.Id
+  href: AtfTIDE.HttpClient.GithubDto.Repository.html#AtfTIDE_HttpClient_GithubDto_Repository_Id
+  name: Id
+  nameWithType: Repository.Id
+  fullName: AtfTIDE.HttpClient.GithubDto.Repository.Id
+- uid: System.UInt32
+  commentId: T:System.UInt32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint32
+  name: uint
+  nameWithType: uint
+  fullName: uint
+  nameWithType.vb: UInteger
+  fullName.vb: UInteger
+  name.vb: UInteger
+- uid: AtfTIDE.HttpClient.GithubDto.Repository.NodeId*
+  commentId: Overload:AtfTIDE.HttpClient.GithubDto.Repository.NodeId
+  href: AtfTIDE.HttpClient.GithubDto.Repository.html#AtfTIDE_HttpClient_GithubDto_Repository_NodeId
+  name: NodeId
+  nameWithType: Repository.NodeId
+  fullName: AtfTIDE.HttpClient.GithubDto.Repository.NodeId
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: AtfTIDE.HttpClient.GithubDto.Repository.Name*
+  commentId: Overload:AtfTIDE.HttpClient.GithubDto.Repository.Name
+  href: AtfTIDE.HttpClient.GithubDto.Repository.html#AtfTIDE_HttpClient_GithubDto_Repository_Name
+  name: Name
+  nameWithType: Repository.Name
+  fullName: AtfTIDE.HttpClient.GithubDto.Repository.Name
+- uid: AtfTIDE.HttpClient.GithubDto.Repository.Description*
+  commentId: Overload:AtfTIDE.HttpClient.GithubDto.Repository.Description
+  href: AtfTIDE.HttpClient.GithubDto.Repository.html#AtfTIDE_HttpClient_GithubDto_Repository_Description
+  name: Description
+  nameWithType: Repository.Description
+  fullName: AtfTIDE.HttpClient.GithubDto.Repository.Description
+- uid: AtfTIDE.HttpClient.GithubDto.Repository.FullName*
+  commentId: Overload:AtfTIDE.HttpClient.GithubDto.Repository.FullName
+  href: AtfTIDE.HttpClient.GithubDto.Repository.html#AtfTIDE_HttpClient_GithubDto_Repository_FullName
+  name: FullName
+  nameWithType: Repository.FullName
+  fullName: AtfTIDE.HttpClient.GithubDto.Repository.FullName
+- uid: AtfTIDE.HttpClient.GithubDto.Repository.Private*
+  commentId: Overload:AtfTIDE.HttpClient.GithubDto.Repository.Private
+  href: AtfTIDE.HttpClient.GithubDto.Repository.html#AtfTIDE_HttpClient_GithubDto_Repository_Private
+  name: Private
+  nameWithType: Repository.Private
+  fullName: AtfTIDE.HttpClient.GithubDto.Repository.Private
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: AtfTIDE.HttpClient.GithubDto.Repository.Url*
+  commentId: Overload:AtfTIDE.HttpClient.GithubDto.Repository.Url
+  href: AtfTIDE.HttpClient.GithubDto.Repository.html#AtfTIDE_HttpClient_GithubDto_Repository_Url
+  name: Url
+  nameWithType: Repository.Url
+  fullName: AtfTIDE.HttpClient.GithubDto.Repository.Url
+- uid: AtfTIDE.HttpClient.GithubDto.Repository.CloneUrl*
+  commentId: Overload:AtfTIDE.HttpClient.GithubDto.Repository.CloneUrl
+  href: AtfTIDE.HttpClient.GithubDto.Repository.html#AtfTIDE_HttpClient_GithubDto_Repository_CloneUrl
+  name: CloneUrl
+  nameWithType: Repository.CloneUrl
+  fullName: AtfTIDE.HttpClient.GithubDto.Repository.CloneUrl
+- uid: AtfTIDE.HttpClient.GithubDto.Repository.CustomProperties*
+  commentId: Overload:AtfTIDE.HttpClient.GithubDto.Repository.CustomProperties
+  href: AtfTIDE.HttpClient.GithubDto.Repository.html#AtfTIDE_HttpClient_GithubDto_Repository_CustomProperties
+  name: CustomProperties
+  nameWithType: Repository.CustomProperties
+  fullName: AtfTIDE.HttpClient.GithubDto.Repository.CustomProperties
+- uid: AtfTIDE.HttpClient.GithubDto.CustomProperties
+  commentId: T:AtfTIDE.HttpClient.GithubDto.CustomProperties
+  parent: AtfTIDE.HttpClient.GithubDto
+  href: AtfTIDE.HttpClient.GithubDto.CustomProperties.html
+  name: CustomProperties
+  nameWithType: CustomProperties
+  fullName: AtfTIDE.HttpClient.GithubDto.CustomProperties

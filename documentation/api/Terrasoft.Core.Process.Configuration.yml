@@ -9,6 +9,8 @@ items:
   - Terrasoft.Core.Process.Configuration.AtfProcessUserTask_GitAddAll
   - Terrasoft.Core.Process.Configuration.AtfProcessUserTask_GitCommit
   - Terrasoft.Core.Process.Configuration.AtfProcessUserTask_GitPush
+  - Terrasoft.Core.Process.Configuration.Branch
+  - Terrasoft.Core.Process.Configuration.BranchesCommandResponse
   langs:
   - csharp
   - vb
@@ -31,6 +33,18 @@ references:
   name: AtfProcessUserTask_DownloadPackages
   nameWithType: AtfProcessUserTask_DownloadPackages
   fullName: Terrasoft.Core.Process.Configuration.AtfProcessUserTask_DownloadPackages
+- uid: Terrasoft.Core.Process.Configuration.BranchesCommandResponse
+  commentId: T:Terrasoft.Core.Process.Configuration.BranchesCommandResponse
+  href: Terrasoft.Core.Process.Configuration.BranchesCommandResponse.html
+  name: BranchesCommandResponse
+  nameWithType: BranchesCommandResponse
+  fullName: Terrasoft.Core.Process.Configuration.BranchesCommandResponse
+- uid: Terrasoft.Core.Process.Configuration.Branch
+  commentId: T:Terrasoft.Core.Process.Configuration.Branch
+  href: Terrasoft.Core.Process.Configuration.Branch.html
+  name: Branch
+  nameWithType: Branch
+  fullName: Terrasoft.Core.Process.Configuration.Branch
 - uid: Terrasoft.Core.Process.Configuration.AtfProcessUserTask_GitAddAll
   commentId: T:Terrasoft.Core.Process.Configuration.AtfProcessUserTask_GitAddAll
   href: Terrasoft.Core.Process.Configuration.AtfProcessUserTask_GitAddAll.html

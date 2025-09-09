@@ -1,0 +1,68 @@
+﻿### YamlMime:ManagedReference
+items:
+- uid: ConsoleGit.Services
+  commentId: N:ConsoleGit.Services
+  id: ConsoleGit.Services
+  children:
+  - ConsoleGit.Services.EventModel
+  - ConsoleGit.Services.IWebSocketLogger
+  - ConsoleGit.Services.MessageType
+  - ConsoleGit.Services.WebSocketLogger
+  langs:
+  - csharp
+  - vb
+  name: ConsoleGit.Services
+  nameWithType: ConsoleGit.Services
+  fullName: ConsoleGit.Services
+  type: Namespace
+  assemblies:
+  - ConsoleGit
+references:
+- uid: ConsoleGit.Services.IWebSocketLogger
+  commentId: T:ConsoleGit.Services.IWebSocketLogger
+  parent: ConsoleGit.Services
+  href: ConsoleGit.Services.IWebSocketLogger.html
+  name: IWebSocketLogger
+  nameWithType: IWebSocketLogger
+  fullName: ConsoleGit.Services.IWebSocketLogger
+- uid: ConsoleGit.Services.WebSocketLogger
+  commentId: T:ConsoleGit.Services.WebSocketLogger
+  href: ConsoleGit.Services.WebSocketLogger.html
+  name: WebSocketLogger
+  nameWithType: WebSocketLogger
+  fullName: ConsoleGit.Services.WebSocketLogger
+- uid: ConsoleGit.Services.MessageType
+  commentId: T:ConsoleGit.Services.MessageType
+  parent: ConsoleGit.Services
+  href: ConsoleGit.Services.MessageType.html
+  name: MessageType
+  nameWithType: MessageType
+  fullName: ConsoleGit.Services.MessageType
+- uid: ConsoleGit.Services.EventModel
+  commentId: T:ConsoleGit.Services.EventModel
+  href: ConsoleGit.Services.EventModel.html
+  name: EventModel
+  nameWithType: EventModel
+  fullName: ConsoleGit.Services.EventModel
+- uid: ConsoleGit.Services
+  commentId: N:ConsoleGit.Services
+  href: ConsoleGit.html
+  name: ConsoleGit.Services
+  nameWithType: ConsoleGit.Services
+  fullName: ConsoleGit.Services
+  spec.csharp:
+  - uid: ConsoleGit
+    name: ConsoleGit
+    href: ConsoleGit.html
+  - name: .
+  - uid: ConsoleGit.Services
+    name: Services
+    href: ConsoleGit.Services.html
+  spec.vb:
+  - uid: ConsoleGit
+    name: ConsoleGit
+    href: ConsoleGit.html
+  - name: .
+  - uid: ConsoleGit.Services
+    name: Services
+    href: ConsoleGit.Services.html

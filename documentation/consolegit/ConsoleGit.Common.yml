@@ -1,0 +1,23 @@
+﻿### YamlMime:ManagedReference
+items:
+- uid: ConsoleGit.Common
+  commentId: N:ConsoleGit.Common
+  id: ConsoleGit.Common
+  children:
+  - ConsoleGit.Common.CommonFunctions
+  langs:
+  - csharp
+  - vb
+  name: ConsoleGit.Common
+  nameWithType: ConsoleGit.Common
+  fullName: ConsoleGit.Common
+  type: Namespace
+  assemblies:
+  - ConsoleGit
+references:
+- uid: ConsoleGit.Common.CommonFunctions
+  commentId: T:ConsoleGit.Common.CommonFunctions
+  href: ConsoleGit.Common.CommonFunctions.html
+  name: CommonFunctions
+  nameWithType: CommonFunctions
+  fullName: ConsoleGit.Common.CommonFunctions

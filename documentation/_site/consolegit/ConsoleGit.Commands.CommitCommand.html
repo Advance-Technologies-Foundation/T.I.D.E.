@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/Advance-Technologies-Foundation/T.I.D.E./new/feature/my-feature/apiSpec/new?filename=ConsoleGit_Commands_CommitCommand.md&amp;value=---%0Auid%3A%20ConsoleGit.Commands.CommitCommand%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="docfx:docurl" content="https://github.com/Advance-Technologies-Foundation/T.I.D.E./new/main/apiSpec/new?filename=ConsoleGit_Commands_CommitCommand.md&amp;value=---%0Auid%3A%20ConsoleGit.Commands.CommitCommand%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -89,7 +89,7 @@
 
 
   <h1 id="ConsoleGit_Commands_CommitCommand" data-uid="ConsoleGit.Commands.CommitCommand" class="text-break">
-Class CommitCommand  <a class="header-action link-secondary" title="View source" href="https://github.com/Advance-Technologies-Foundation/T.I.D.E./blob/feature/my-feature/ConsoleGit/ConsoleGit/Commands/CommitCommand.cs/#L10"><i class="bi bi-code-slash"></i></a>
+Class CommitCommand  <a class="header-action link-secondary" title="View source" href="https://github.com/Advance-Technologies-Foundation/T.I.D.E./blob/main/ConsoleGit/ConsoleGit/Commands/CommitCommand.cs/#L11"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -133,6 +133,9 @@ Class CommitCommand  <a class="header-action link-secondary" title="View source"
       <a class="xref" href="ConsoleGit.Commands.BaseRepositoryCommand.html#ConsoleGit_Commands_BaseRepositoryCommand_Args">BaseRepositoryCommand.Args</a>
     </div>
     <div>
+      <a class="xref" href="ConsoleGit.Commands.BaseRepositoryCommand.html#ConsoleGit_Commands_BaseRepositoryCommand_Logger">BaseRepositoryCommand.Logger</a>
+    </div>
+    <div>
       <a class="xref" href="ConsoleGit.Commands.BaseRepositoryCommand.html#ConsoleGit_Commands_BaseRepositoryCommand_InitializedRepository">BaseRepositoryCommand.InitializedRepository</a>
     </div>
     <div>
@@ -140,6 +143,9 @@ Class CommitCommand  <a class="header-action link-secondary" title="View source"
     </div>
     <div>
       <a class="xref" href="ConsoleGit.Commands.BaseRepositoryCommand.html#ConsoleGit_Commands_BaseRepositoryCommand_CleanRepositoryDirectory">BaseRepositoryCommand.CleanRepositoryDirectory()</a>
+    </div>
+    <div>
+      <a class="xref" href="ConsoleGit.Commands.BaseRepositoryCommand.html#ConsoleGit_Commands_BaseRepositoryCommand_GetAccessPermissionsForFolder_System_String_">BaseRepositoryCommand.GetAccessPermissionsForFolder(string)</a>
     </div>
     <div>
       <a class="xref" href="ConsoleGit.Commands.BaseRepositoryCommand.html#ConsoleGit_Commands_BaseRepositoryCommand_Dispose_System_Boolean_">BaseRepositoryCommand.Dispose(bool)</a>
@@ -181,9 +187,9 @@ Class CommitCommand  <a class="header-action link-secondary" title="View source"
 
   <a id="ConsoleGit_Commands_CommitCommand__ctor_" data-uid="ConsoleGit.Commands.CommitCommand.#ctor*"></a>
 
-  <h3 id="ConsoleGit_Commands_CommitCommand__ctor_ConsoleGit_CommandLineArgs_" data-uid="ConsoleGit.Commands.CommitCommand.#ctor(ConsoleGit.CommandLineArgs)">
-  CommitCommand(CommandLineArgs)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Advance-Technologies-Foundation/T.I.D.E./blob/feature/my-feature/ConsoleGit/ConsoleGit/Commands/CommitCommand.cs/#L10"><i class="bi bi-code-slash"></i></a>
+  <h3 id="ConsoleGit_Commands_CommitCommand__ctor_ConsoleGit_CommandLineArgs_ConsoleGit_Services_IWebSocketLogger_" data-uid="ConsoleGit.Commands.CommitCommand.#ctor(ConsoleGit.CommandLineArgs,ConsoleGit.Services.IWebSocketLogger)">
+  CommitCommand(CommandLineArgs, IWebSocketLogger)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Advance-Technologies-Foundation/T.I.D.E./blob/main/ConsoleGit/ConsoleGit/Commands/CommitCommand.cs/#L11"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Make a commit to a non-bare repository</p>
@@ -191,7 +197,7 @@ Class CommitCommand  <a class="header-action link-secondary" title="View source"
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public CommitCommand(CommandLineArgs args)</code></pre>
+    <pre><code class="lang-csharp hljs">public CommitCommand(CommandLineArgs args, IWebSocketLogger logger)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -199,6 +205,8 @@ Class CommitCommand  <a class="header-action link-secondary" title="View source"
     <dt><code>args</code> <a class="xref" href="ConsoleGit.CommandLineArgs.html">CommandLineArgs</a></dt>
     <dd><p>Arguments</p>
 </dd>
+    <dt><code>logger</code> <a class="xref" href="ConsoleGit.Services.IWebSocketLogger.html">IWebSocketLogger</a></dt>
+    <dd></dd>
   </dl>
 
 
@@ -226,7 +234,7 @@ Class CommitCommand  <a class="header-action link-secondary" title="View source"
 
   <h3 id="ConsoleGit_Commands_CommitCommand_Execute" data-uid="ConsoleGit.Commands.CommitCommand.Execute">
   Execute()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Advance-Technologies-Foundation/T.I.D.E./blob/feature/my-feature/ConsoleGit/ConsoleGit/Commands/CommitCommand.cs/#L12"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Advance-Technologies-Foundation/T.I.D.E./blob/main/ConsoleGit/ConsoleGit/Commands/CommitCommand.cs/#L13"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -261,7 +269,7 @@ Class CommitCommand  <a class="header-action link-secondary" title="View source"
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/Advance-Technologies-Foundation/T.I.D.E./blob/feature/my-feature/ConsoleGit/ConsoleGit/Commands/CommitCommand.cs/#L10" class="edit-link">Edit this page</a>
+          <a href="https://github.com/Advance-Technologies-Foundation/T.I.D.E./blob/main/ConsoleGit/ConsoleGit/Commands/CommitCommand.cs/#L11" class="edit-link">Edit this page</a>
         </div>
 
 

@@ -1,0 +1,542 @@
+﻿### YamlMime:ManagedReference
+items:
+- uid: AtfTIDE.UrlAppender
+  commentId: T:AtfTIDE.UrlAppender
+  id: UrlAppender
+  parent: AtfTIDE
+  children:
+  - AtfTIDE.UrlAppender.GetCreatioPassword
+  - AtfTIDE.UrlAppender.GetCreatioUserName
+  - AtfTIDE.UrlAppender.Transform(System.String)
+  - AtfTIDE.UrlAppender.TransformWithLP(System.String)
+  langs:
+  - csharp
+  - vb
+  name: UrlAppender
+  nameWithType: UrlAppender
+  fullName: AtfTIDE.UrlAppender
+  type: Class
+  source:
+    remote:
+      path: packages/AtfTIDE/Files/cs/UrlAppender.cs
+      branch: main
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: UrlAppender
+    path: ../packages/AtfTIDE/Files/cs/UrlAppender.cs
+    startLine: 26
+  assemblies:
+  - AtfTIDE
+  namespace: AtfTIDE
+  syntax:
+    content: >-
+      [DefaultBinding(typeof(ITextTransformer), Name = "UrlAppender")]
+
+      public class UrlAppender : ITextTransformer
+    content.vb: >-
+      <DefaultBinding(GetType(ITextTransformer), Name:="UrlAppender")>
+
+      Public Class UrlAppender Implements ITextTransformer
+  inheritance:
+  - System.Object
+  implements:
+  - AtfTIDE.ITextTransformer
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  attributes:
+  - type: Terrasoft.Core.Factories.DefaultBindingAttribute
+    ctor: Terrasoft.Core.Factories.DefaultBindingAttribute.#ctor(System.Type)
+    arguments:
+    - type: System.Type
+      value: AtfTIDE.ITextTransformer
+    namedArguments:
+    - name: Name
+      type: System.String
+      value: UrlAppender
+- uid: AtfTIDE.UrlAppender.Transform(System.String)
+  commentId: M:AtfTIDE.UrlAppender.Transform(System.String)
+  id: Transform(System.String)
+  parent: AtfTIDE.UrlAppender
+  langs:
+  - csharp
+  - vb
+  name: Transform(string)
+  nameWithType: UrlAppender.Transform(string)
+  fullName: AtfTIDE.UrlAppender.Transform(string)
+  type: Method
+  source:
+    remote:
+      path: packages/AtfTIDE/Files/cs/UrlAppender.cs
+      branch: main
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: Transform
+    path: ../packages/AtfTIDE/Files/cs/UrlAppender.cs
+    startLine: 29
+  assemblies:
+  - AtfTIDE
+  namespace: AtfTIDE
+  example: []
+  syntax:
+    content: public string Transform(string text)
+    parameters:
+    - id: text
+      type: System.String
+    return:
+      type: System.String
+    content.vb: Public Function Transform(text As String) As String
+  overload: AtfTIDE.UrlAppender.Transform*
+  implements:
+  - AtfTIDE.ITextTransformer.Transform(System.String)
+  nameWithType.vb: UrlAppender.Transform(String)
+  fullName.vb: AtfTIDE.UrlAppender.Transform(String)
+  name.vb: Transform(String)
+- uid: AtfTIDE.UrlAppender.TransformWithLP(System.String)
+  commentId: M:AtfTIDE.UrlAppender.TransformWithLP(System.String)
+  id: TransformWithLP(System.String)
+  parent: AtfTIDE.UrlAppender
+  langs:
+  - csharp
+  - vb
+  name: TransformWithLP(string)
+  nameWithType: UrlAppender.TransformWithLP(string)
+  fullName: AtfTIDE.UrlAppender.TransformWithLP(string)
+  type: Method
+  source:
+    remote:
+      path: packages/AtfTIDE/Files/cs/UrlAppender.cs
+      branch: main
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: TransformWithLP
+    path: ../packages/AtfTIDE/Files/cs/UrlAppender.cs
+    startLine: 40
+  assemblies:
+  - AtfTIDE
+  namespace: AtfTIDE
+  summary: Appends UserName and Password from SysSettings
+  remarks: <ul><li>Uses value from <code>AtfUserNameForClio</code> sysSetting or <b><code>Supervisor</code></b></li><li>Uses value from <code>AtfPasswordForClio</code> sysSetting or <b><code>Supervisor</code></b></li></ul>
+  example: []
+  syntax:
+    content: public string TransformWithLP(string text)
+    parameters:
+    - id: text
+      type: System.String
+      description: ''
+    return:
+      type: System.String
+      description: ''
+    content.vb: Public Function TransformWithLP(text As String) As String
+  overload: AtfTIDE.UrlAppender.TransformWithLP*
+  implements:
+  - AtfTIDE.ITextTransformer.TransformWithLP(System.String)
+  nameWithType.vb: UrlAppender.TransformWithLP(String)
+  fullName.vb: AtfTIDE.UrlAppender.TransformWithLP(String)
+  name.vb: TransformWithLP(String)
+- uid: AtfTIDE.UrlAppender.GetCreatioUserName
+  commentId: M:AtfTIDE.UrlAppender.GetCreatioUserName
+  id: GetCreatioUserName
+  parent: AtfTIDE.UrlAppender
+  langs:
+  - csharp
+  - vb
+  name: GetCreatioUserName()
+  nameWithType: UrlAppender.GetCreatioUserName()
+  fullName: AtfTIDE.UrlAppender.GetCreatioUserName()
+  type: Method
+  source:
+    remote:
+      path: packages/AtfTIDE/Files/cs/UrlAppender.cs
+      branch: main
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: GetCreatioUserName
+    path: ../packages/AtfTIDE/Files/cs/UrlAppender.cs
+    startLine: 50
+  assemblies:
+  - AtfTIDE
+  namespace: AtfTIDE
+  syntax:
+    content: public string GetCreatioUserName()
+    return:
+      type: System.String
+    content.vb: Public Function GetCreatioUserName() As String
+  overload: AtfTIDE.UrlAppender.GetCreatioUserName*
+- uid: AtfTIDE.UrlAppender.GetCreatioPassword
+  commentId: M:AtfTIDE.UrlAppender.GetCreatioPassword
+  id: GetCreatioPassword
+  parent: AtfTIDE.UrlAppender
+  langs:
+  - csharp
+  - vb
+  name: GetCreatioPassword()
+  nameWithType: UrlAppender.GetCreatioPassword()
+  fullName: AtfTIDE.UrlAppender.GetCreatioPassword()
+  type: Method
+  source:
+    remote:
+      path: packages/AtfTIDE/Files/cs/UrlAppender.cs
+      branch: main
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: GetCreatioPassword
+    path: ../packages/AtfTIDE/Files/cs/UrlAppender.cs
+    startLine: 57
+  assemblies:
+  - AtfTIDE
+  namespace: AtfTIDE
+  syntax:
+    content: public string GetCreatioPassword()
+    return:
+      type: System.String
+    content.vb: Public Function GetCreatioPassword() As String
+  overload: AtfTIDE.UrlAppender.GetCreatioPassword*
+references:
+- uid: AtfTIDE
+  commentId: N:AtfTIDE
+  href: AtfTIDE.html
+  name: AtfTIDE
+  nameWithType: AtfTIDE
+  fullName: AtfTIDE
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: AtfTIDE.ITextTransformer
+  commentId: T:AtfTIDE.ITextTransformer
+  parent: AtfTIDE
+  href: AtfTIDE.ITextTransformer.html
+  name: ITextTransformer
+  nameWithType: ITextTransformer
+  fullName: AtfTIDE.ITextTransformer
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: AtfTIDE.UrlAppender.Transform*
+  commentId: Overload:AtfTIDE.UrlAppender.Transform
+  href: AtfTIDE.UrlAppender.html#AtfTIDE_UrlAppender_Transform_System_String_
+  name: Transform
+  nameWithType: UrlAppender.Transform
+  fullName: AtfTIDE.UrlAppender.Transform
+- uid: AtfTIDE.ITextTransformer.Transform(System.String)
+  commentId: M:AtfTIDE.ITextTransformer.Transform(System.String)
+  parent: AtfTIDE.ITextTransformer
+  isExternal: true
+  href: AtfTIDE.ITextTransformer.html#AtfTIDE_ITextTransformer_Transform_System_String_
+  name: Transform(string)
+  nameWithType: ITextTransformer.Transform(string)
+  fullName: AtfTIDE.ITextTransformer.Transform(string)
+  nameWithType.vb: ITextTransformer.Transform(String)
+  fullName.vb: AtfTIDE.ITextTransformer.Transform(String)
+  name.vb: Transform(String)
+  spec.csharp:
+  - uid: AtfTIDE.ITextTransformer.Transform(System.String)
+    name: Transform
+    href: AtfTIDE.ITextTransformer.html#AtfTIDE_ITextTransformer_Transform_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: AtfTIDE.ITextTransformer.Transform(System.String)
+    name: Transform
+    href: AtfTIDE.ITextTransformer.html#AtfTIDE_ITextTransformer_Transform_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: AtfTIDE.UrlAppender.TransformWithLP*
+  commentId: Overload:AtfTIDE.UrlAppender.TransformWithLP
+  href: AtfTIDE.UrlAppender.html#AtfTIDE_UrlAppender_TransformWithLP_System_String_
+  name: TransformWithLP
+  nameWithType: UrlAppender.TransformWithLP
+  fullName: AtfTIDE.UrlAppender.TransformWithLP
+- uid: AtfTIDE.ITextTransformer.TransformWithLP(System.String)
+  commentId: M:AtfTIDE.ITextTransformer.TransformWithLP(System.String)
+  parent: AtfTIDE.ITextTransformer
+  isExternal: true
+  href: AtfTIDE.ITextTransformer.html#AtfTIDE_ITextTransformer_TransformWithLP_System_String_
+  name: TransformWithLP(string)
+  nameWithType: ITextTransformer.TransformWithLP(string)
+  fullName: AtfTIDE.ITextTransformer.TransformWithLP(string)
+  nameWithType.vb: ITextTransformer.TransformWithLP(String)
+  fullName.vb: AtfTIDE.ITextTransformer.TransformWithLP(String)
+  name.vb: TransformWithLP(String)
+  spec.csharp:
+  - uid: AtfTIDE.ITextTransformer.TransformWithLP(System.String)
+    name: TransformWithLP
+    href: AtfTIDE.ITextTransformer.html#AtfTIDE_ITextTransformer_TransformWithLP_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: AtfTIDE.ITextTransformer.TransformWithLP(System.String)
+    name: TransformWithLP
+    href: AtfTIDE.ITextTransformer.html#AtfTIDE_ITextTransformer_TransformWithLP_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: AtfTIDE.UrlAppender.GetCreatioUserName*
+  commentId: Overload:AtfTIDE.UrlAppender.GetCreatioUserName
+  href: AtfTIDE.UrlAppender.html#AtfTIDE_UrlAppender_GetCreatioUserName
+  name: GetCreatioUserName
+  nameWithType: UrlAppender.GetCreatioUserName
+  fullName: AtfTIDE.UrlAppender.GetCreatioUserName
+- uid: AtfTIDE.UrlAppender.GetCreatioPassword*
+  commentId: Overload:AtfTIDE.UrlAppender.GetCreatioPassword
+  href: AtfTIDE.UrlAppender.html#AtfTIDE_UrlAppender_GetCreatioPassword
+  name: GetCreatioPassword
+  nameWithType: UrlAppender.GetCreatioPassword
+  fullName: AtfTIDE.UrlAppender.GetCreatioPassword

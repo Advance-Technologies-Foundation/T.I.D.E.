@@ -1,0 +1,418 @@
+﻿### YamlMime:ManagedReference
+items:
+- uid: AtfTIDE.QueryExecutor.EsqColumnParser
+  commentId: T:AtfTIDE.QueryExecutor.EsqColumnParser
+  id: EsqColumnParser
+  parent: AtfTIDE.QueryExecutor
+  children:
+  - AtfTIDE.QueryExecutor.EsqColumnParser.GetSorting(Terrasoft.Core.Entities.EntitySchemaQuery)
+  langs:
+  - csharp
+  - vb
+  name: EsqColumnParser
+  nameWithType: EsqColumnParser
+  fullName: AtfTIDE.QueryExecutor.EsqColumnParser
+  type: Class
+  source:
+    remote:
+      path: packages/AtfTIDE/Files/cs/QueryExecutor/EsqColumnParser.cs
+      branch: main
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: EsqColumnParser
+    path: ../packages/AtfTIDE/Files/cs/QueryExecutor/EsqColumnParser.cs
+    startLine: 11
+  assemblies:
+  - AtfTIDE
+  namespace: AtfTIDE.QueryExecutor
+  syntax:
+    content: 'public class EsqColumnParser : IEsqColumnParser'
+    content.vb: Public Class EsqColumnParser Implements IEsqColumnParser
+  inheritance:
+  - System.Object
+  implements:
+  - AtfTIDE.QueryExecutor.IEsqColumnParser
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: AtfTIDE.QueryExecutor.EsqColumnParser.GetSorting(Terrasoft.Core.Entities.EntitySchemaQuery)
+  commentId: M:AtfTIDE.QueryExecutor.EsqColumnParser.GetSorting(Terrasoft.Core.Entities.EntitySchemaQuery)
+  id: GetSorting(Terrasoft.Core.Entities.EntitySchemaQuery)
+  parent: AtfTIDE.QueryExecutor.EsqColumnParser
+  langs:
+  - csharp
+  - vb
+  name: GetSorting(EntitySchemaQuery)
+  nameWithType: EsqColumnParser.GetSorting(EntitySchemaQuery)
+  fullName: AtfTIDE.QueryExecutor.EsqColumnParser.GetSorting(Terrasoft.Core.Entities.EntitySchemaQuery)
+  type: Method
+  source:
+    remote:
+      path: packages/AtfTIDE/Files/cs/QueryExecutor/EsqColumnParser.cs
+      branch: main
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: GetSorting
+    path: ../packages/AtfTIDE/Files/cs/QueryExecutor/EsqColumnParser.cs
+    startLine: 14
+  assemblies:
+  - AtfTIDE
+  namespace: AtfTIDE.QueryExecutor
+  example: []
+  syntax:
+    content: public SortColumn GetSorting(EntitySchemaQuery esq)
+    parameters:
+    - id: esq
+      type: Terrasoft.Core.Entities.EntitySchemaQuery
+    return:
+      type: AtfTIDE.QueryExecutor.SortColumn
+    content.vb: Public Function GetSorting(esq As EntitySchemaQuery) As SortColumn
+  overload: AtfTIDE.QueryExecutor.EsqColumnParser.GetSorting*
+  implements:
+  - AtfTIDE.QueryExecutor.IEsqColumnParser.GetSorting(Terrasoft.Core.Entities.EntitySchemaQuery)
+references:
+- uid: AtfTIDE.QueryExecutor
+  commentId: N:AtfTIDE.QueryExecutor
+  href: AtfTIDE.html
+  name: AtfTIDE.QueryExecutor
+  nameWithType: AtfTIDE.QueryExecutor
+  fullName: AtfTIDE.QueryExecutor
+  spec.csharp:
+  - uid: AtfTIDE
+    name: AtfTIDE
+    href: AtfTIDE.html
+  - name: .
+  - uid: AtfTIDE.QueryExecutor
+    name: QueryExecutor
+    href: AtfTIDE.QueryExecutor.html
+  spec.vb:
+  - uid: AtfTIDE
+    name: AtfTIDE
+    href: AtfTIDE.html
+  - name: .
+  - uid: AtfTIDE.QueryExecutor
+    name: QueryExecutor
+    href: AtfTIDE.QueryExecutor.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: AtfTIDE.QueryExecutor.IEsqColumnParser
+  commentId: T:AtfTIDE.QueryExecutor.IEsqColumnParser
+  parent: AtfTIDE.QueryExecutor
+  href: AtfTIDE.QueryExecutor.IEsqColumnParser.html
+  name: IEsqColumnParser
+  nameWithType: IEsqColumnParser
+  fullName: AtfTIDE.QueryExecutor.IEsqColumnParser
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: AtfTIDE.QueryExecutor.EsqColumnParser.GetSorting*
+  commentId: Overload:AtfTIDE.QueryExecutor.EsqColumnParser.GetSorting
+  href: AtfTIDE.QueryExecutor.EsqColumnParser.html#AtfTIDE_QueryExecutor_EsqColumnParser_GetSorting_Terrasoft_Core_Entities_EntitySchemaQuery_
+  name: GetSorting
+  nameWithType: EsqColumnParser.GetSorting
+  fullName: AtfTIDE.QueryExecutor.EsqColumnParser.GetSorting
+- uid: AtfTIDE.QueryExecutor.IEsqColumnParser.GetSorting(Terrasoft.Core.Entities.EntitySchemaQuery)
+  commentId: M:AtfTIDE.QueryExecutor.IEsqColumnParser.GetSorting(Terrasoft.Core.Entities.EntitySchemaQuery)
+  parent: AtfTIDE.QueryExecutor.IEsqColumnParser
+  isExternal: true
+  href: AtfTIDE.QueryExecutor.IEsqColumnParser.html#AtfTIDE_QueryExecutor_IEsqColumnParser_GetSorting_Terrasoft_Core_Entities_EntitySchemaQuery_
+  name: GetSorting(EntitySchemaQuery)
+  nameWithType: IEsqColumnParser.GetSorting(EntitySchemaQuery)
+  fullName: AtfTIDE.QueryExecutor.IEsqColumnParser.GetSorting(Terrasoft.Core.Entities.EntitySchemaQuery)
+  spec.csharp:
+  - uid: AtfTIDE.QueryExecutor.IEsqColumnParser.GetSorting(Terrasoft.Core.Entities.EntitySchemaQuery)
+    name: GetSorting
+    href: AtfTIDE.QueryExecutor.IEsqColumnParser.html#AtfTIDE_QueryExecutor_IEsqColumnParser_GetSorting_Terrasoft_Core_Entities_EntitySchemaQuery_
+  - name: (
+  - uid: Terrasoft.Core.Entities.EntitySchemaQuery
+    name: EntitySchemaQuery
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: AtfTIDE.QueryExecutor.IEsqColumnParser.GetSorting(Terrasoft.Core.Entities.EntitySchemaQuery)
+    name: GetSorting
+    href: AtfTIDE.QueryExecutor.IEsqColumnParser.html#AtfTIDE_QueryExecutor_IEsqColumnParser_GetSorting_Terrasoft_Core_Entities_EntitySchemaQuery_
+  - name: (
+  - uid: Terrasoft.Core.Entities.EntitySchemaQuery
+    name: EntitySchemaQuery
+    isExternal: true
+  - name: )
+- uid: Terrasoft.Core.Entities.EntitySchemaQuery
+  commentId: T:Terrasoft.Core.Entities.EntitySchemaQuery
+  parent: Terrasoft.Core.Entities
+  isExternal: true
+  name: EntitySchemaQuery
+  nameWithType: EntitySchemaQuery
+  fullName: Terrasoft.Core.Entities.EntitySchemaQuery
+- uid: AtfTIDE.QueryExecutor.SortColumn
+  commentId: T:AtfTIDE.QueryExecutor.SortColumn
+  parent: AtfTIDE.QueryExecutor
+  href: AtfTIDE.QueryExecutor.SortColumn.html
+  name: SortColumn
+  nameWithType: SortColumn
+  fullName: AtfTIDE.QueryExecutor.SortColumn
+- uid: Terrasoft.Core.Entities
+  commentId: N:Terrasoft.Core.Entities
+  isExternal: true
+  name: Terrasoft.Core.Entities
+  nameWithType: Terrasoft.Core.Entities
+  fullName: Terrasoft.Core.Entities
+  spec.csharp:
+  - uid: Terrasoft
+    name: Terrasoft
+    isExternal: true
+  - name: .
+  - uid: Terrasoft.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: Terrasoft.Core.Entities
+    name: Entities
+    isExternal: true
+  spec.vb:
+  - uid: Terrasoft
+    name: Terrasoft
+    isExternal: true
+  - name: .
+  - uid: Terrasoft.Core
+    name: Core
+    isExternal: true
+  - name: .
+  - uid: Terrasoft.Core.Entities
+    name: Entities
+    isExternal: true

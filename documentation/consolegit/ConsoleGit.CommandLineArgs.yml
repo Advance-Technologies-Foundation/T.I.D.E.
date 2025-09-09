@@ -6,21 +6,22 @@ items:
   parent: ConsoleGit
   children:
   - ConsoleGit.CommandLineArgs.#ctor
-  - ConsoleGit.CommandLineArgs.ASPXAUTH
-  - ConsoleGit.CommandLineArgs.BPMCSRF
-  - ConsoleGit.CommandLineArgs.BPMLOADER
-  - ConsoleGit.CommandLineArgs.BPMSESSIONID
+  - ConsoleGit.CommandLineArgs.BranchName
   - ConsoleGit.CommandLineArgs.Command
   - ConsoleGit.CommandLineArgs.CommitAuthorEmail
   - ConsoleGit.CommandLineArgs.CommitAuthorName
   - ConsoleGit.CommandLineArgs.CommitMessage
   - ConsoleGit.CommandLineArgs.CreateCookieContainerFromArgs
+  - ConsoleGit.CommandLineArgs.CreatioPassword
   - ConsoleGit.CommandLineArgs.CreatioUrl
+  - ConsoleGit.CommandLineArgs.CreatioUserName
+  - ConsoleGit.CommandLineArgs.Files
   - ConsoleGit.CommandLineArgs.GitUrl
   - ConsoleGit.CommandLineArgs.IsFramework
   - ConsoleGit.CommandLineArgs.PackageName
   - ConsoleGit.CommandLineArgs.Password
   - ConsoleGit.CommandLineArgs.RepoDir
+  - ConsoleGit.CommandLineArgs.Silent
   - ConsoleGit.CommandLineArgs.UserName
   - ConsoleGit.CommandLineArgs.UserType
   langs:
@@ -33,11 +34,11 @@ items:
   source:
     remote:
       path: ConsoleGit/ConsoleGit/ArgParser.cs
-      branch: feature/my-feature
+      branch: main
       repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
     id: CommandLineArgs
     path: ../ConsoleGit/ConsoleGit/ArgParser.cs
-    startLine: 6
+    startLine: 5
   assemblies:
   - ConsoleGit
   namespace: ConsoleGit
@@ -70,11 +71,11 @@ items:
   source:
     remote:
       path: ConsoleGit/ConsoleGit/ArgParser.cs
-      branch: feature/my-feature
+      branch: main
       repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
     id: .ctor
     path: ../ConsoleGit/ConsoleGit/ArgParser.cs
-    startLine: 8
+    startLine: 9
   assemblies:
   - ConsoleGit
   namespace: ConsoleGit
@@ -85,42 +86,35 @@ items:
   nameWithType.vb: CommandLineArgs.New()
   fullName.vb: ConsoleGit.CommandLineArgs.New()
   name.vb: New()
-- uid: ConsoleGit.CommandLineArgs.CreateCookieContainerFromArgs
-  commentId: M:ConsoleGit.CommandLineArgs.CreateCookieContainerFromArgs
-  id: CreateCookieContainerFromArgs
+- uid: ConsoleGit.CommandLineArgs.Silent
+  commentId: P:ConsoleGit.CommandLineArgs.Silent
+  id: Silent
   parent: ConsoleGit.CommandLineArgs
   langs:
   - csharp
   - vb
-  name: CreateCookieContainerFromArgs()
-  nameWithType: CommandLineArgs.CreateCookieContainerFromArgs()
-  fullName: ConsoleGit.CommandLineArgs.CreateCookieContainerFromArgs()
-  type: Method
+  name: Silent
+  nameWithType: CommandLineArgs.Silent
+  fullName: ConsoleGit.CommandLineArgs.Silent
+  type: Property
   source:
     remote:
       path: ConsoleGit/ConsoleGit/ArgParser.cs
-      branch: feature/my-feature
+      branch: main
       repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
-    id: CreateCookieContainerFromArgs
+    id: Silent
     path: ../ConsoleGit/ConsoleGit/ArgParser.cs
-    startLine: 37
+    startLine: 42
   assemblies:
   - ConsoleGit
   namespace: ConsoleGit
-  summary: Creates cookie container with Creatio authentication cookies.
-  remarks: <p><strong></strong></p><ul><li>BPMLOADER, ASPXAUTH, BPMCSRF - main auth cookies</li><li>UserType, BPMSESSIONID - session cookies</li><li>Special handling for ASPXAUTH domain prefix</li></ul>
-  example: []
   syntax:
-    content: public CookieContainer CreateCookieContainerFromArgs()
+    content: public bool Silent { get; init; }
+    parameters: []
     return:
-      type: System.Net.CookieContainer
-      description: Configured CookieContainer for Creatio requests
-    content.vb: Public Function CreateCookieContainerFromArgs() As CookieContainer
-  overload: ConsoleGit.CommandLineArgs.CreateCookieContainerFromArgs*
-  exceptions:
-  - type: System.ArgumentException
-    commentId: T:System.ArgumentException
-    description: Invalid Creatio URL or missing required cookies
+      type: System.Boolean
+    content.vb: Public Property Silent As Boolean
+  overload: ConsoleGit.CommandLineArgs.Silent*
 - uid: ConsoleGit.CommandLineArgs.Command
   commentId: P:ConsoleGit.CommandLineArgs.Command
   id: Command
@@ -135,11 +129,11 @@ items:
   source:
     remote:
       path: ConsoleGit/ConsoleGit/ArgParser.cs
-      branch: feature/my-feature
+      branch: main
       repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
     id: Command
     path: ../ConsoleGit/ConsoleGit/ArgParser.cs
-    startLine: 58
+    startLine: 44
   assemblies:
   - ConsoleGit
   namespace: ConsoleGit
@@ -150,180 +144,6 @@ items:
       type: System.String
     content.vb: Public Property Command As String
   overload: ConsoleGit.CommandLineArgs.Command*
-- uid: ConsoleGit.CommandLineArgs.GitUrl
-  commentId: P:ConsoleGit.CommandLineArgs.GitUrl
-  id: GitUrl
-  parent: ConsoleGit.CommandLineArgs
-  langs:
-  - csharp
-  - vb
-  name: GitUrl
-  nameWithType: CommandLineArgs.GitUrl
-  fullName: ConsoleGit.CommandLineArgs.GitUrl
-  type: Property
-  source:
-    remote:
-      path: ConsoleGit/ConsoleGit/ArgParser.cs
-      branch: feature/my-feature
-      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
-    id: GitUrl
-    path: ../ConsoleGit/ConsoleGit/ArgParser.cs
-    startLine: 59
-  assemblies:
-  - ConsoleGit
-  namespace: ConsoleGit
-  syntax:
-    content: public Uri? GitUrl { get; init; }
-    parameters: []
-    return:
-      type: System.Uri
-    content.vb: Public Property GitUrl As Uri
-  overload: ConsoleGit.CommandLineArgs.GitUrl*
-- uid: ConsoleGit.CommandLineArgs.UserName
-  commentId: P:ConsoleGit.CommandLineArgs.UserName
-  id: UserName
-  parent: ConsoleGit.CommandLineArgs
-  langs:
-  - csharp
-  - vb
-  name: UserName
-  nameWithType: CommandLineArgs.UserName
-  fullName: ConsoleGit.CommandLineArgs.UserName
-  type: Property
-  source:
-    remote:
-      path: ConsoleGit/ConsoleGit/ArgParser.cs
-      branch: feature/my-feature
-      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
-    id: UserName
-    path: ../ConsoleGit/ConsoleGit/ArgParser.cs
-    startLine: 60
-  assemblies:
-  - ConsoleGit
-  namespace: ConsoleGit
-  syntax:
-    content: public string UserName { get; init; }
-    parameters: []
-    return:
-      type: System.String
-    content.vb: Public Property UserName As String
-  overload: ConsoleGit.CommandLineArgs.UserName*
-- uid: ConsoleGit.CommandLineArgs.Password
-  commentId: P:ConsoleGit.CommandLineArgs.Password
-  id: Password
-  parent: ConsoleGit.CommandLineArgs
-  langs:
-  - csharp
-  - vb
-  name: Password
-  nameWithType: CommandLineArgs.Password
-  fullName: ConsoleGit.CommandLineArgs.Password
-  type: Property
-  source:
-    remote:
-      path: ConsoleGit/ConsoleGit/ArgParser.cs
-      branch: feature/my-feature
-      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
-    id: Password
-    path: ../ConsoleGit/ConsoleGit/ArgParser.cs
-    startLine: 61
-  assemblies:
-  - ConsoleGit
-  namespace: ConsoleGit
-  syntax:
-    content: public string Password { get; init; }
-    parameters: []
-    return:
-      type: System.String
-    content.vb: Public Property Password As String
-  overload: ConsoleGit.CommandLineArgs.Password*
-- uid: ConsoleGit.CommandLineArgs.RepoDir
-  commentId: P:ConsoleGit.CommandLineArgs.RepoDir
-  id: RepoDir
-  parent: ConsoleGit.CommandLineArgs
-  langs:
-  - csharp
-  - vb
-  name: RepoDir
-  nameWithType: CommandLineArgs.RepoDir
-  fullName: ConsoleGit.CommandLineArgs.RepoDir
-  type: Property
-  source:
-    remote:
-      path: ConsoleGit/ConsoleGit/ArgParser.cs
-      branch: feature/my-feature
-      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
-    id: RepoDir
-    path: ../ConsoleGit/ConsoleGit/ArgParser.cs
-    startLine: 62
-  assemblies:
-  - ConsoleGit
-  namespace: ConsoleGit
-  syntax:
-    content: public string RepoDir { get; init; }
-    parameters: []
-    return:
-      type: System.String
-    content.vb: Public Property RepoDir As String
-  overload: ConsoleGit.CommandLineArgs.RepoDir*
-- uid: ConsoleGit.CommandLineArgs.CommitMessage
-  commentId: P:ConsoleGit.CommandLineArgs.CommitMessage
-  id: CommitMessage
-  parent: ConsoleGit.CommandLineArgs
-  langs:
-  - csharp
-  - vb
-  name: CommitMessage
-  nameWithType: CommandLineArgs.CommitMessage
-  fullName: ConsoleGit.CommandLineArgs.CommitMessage
-  type: Property
-  source:
-    remote:
-      path: ConsoleGit/ConsoleGit/ArgParser.cs
-      branch: feature/my-feature
-      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
-    id: CommitMessage
-    path: ../ConsoleGit/ConsoleGit/ArgParser.cs
-    startLine: 63
-  assemblies:
-  - ConsoleGit
-  namespace: ConsoleGit
-  syntax:
-    content: public string CommitMessage { get; set; }
-    parameters: []
-    return:
-      type: System.String
-    content.vb: Public Property CommitMessage As String
-  overload: ConsoleGit.CommandLineArgs.CommitMessage*
-- uid: ConsoleGit.CommandLineArgs.CommitAuthorName
-  commentId: P:ConsoleGit.CommandLineArgs.CommitAuthorName
-  id: CommitAuthorName
-  parent: ConsoleGit.CommandLineArgs
-  langs:
-  - csharp
-  - vb
-  name: CommitAuthorName
-  nameWithType: CommandLineArgs.CommitAuthorName
-  fullName: ConsoleGit.CommandLineArgs.CommitAuthorName
-  type: Property
-  source:
-    remote:
-      path: ConsoleGit/ConsoleGit/ArgParser.cs
-      branch: feature/my-feature
-      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
-    id: CommitAuthorName
-    path: ../ConsoleGit/ConsoleGit/ArgParser.cs
-    startLine: 64
-  assemblies:
-  - ConsoleGit
-  namespace: ConsoleGit
-  syntax:
-    content: public string CommitAuthorName { get; set; }
-    parameters: []
-    return:
-      type: System.String
-    content.vb: Public Property CommitAuthorName As String
-  overload: ConsoleGit.CommandLineArgs.CommitAuthorName*
 - uid: ConsoleGit.CommandLineArgs.CommitAuthorEmail
   commentId: P:ConsoleGit.CommandLineArgs.CommitAuthorEmail
   id: CommitAuthorEmail
@@ -338,11 +158,11 @@ items:
   source:
     remote:
       path: ConsoleGit/ConsoleGit/ArgParser.cs
-      branch: feature/my-feature
+      branch: main
       repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
     id: CommitAuthorEmail
     path: ../ConsoleGit/ConsoleGit/ArgParser.cs
-    startLine: 65
+    startLine: 46
   assemblies:
   - ConsoleGit
   namespace: ConsoleGit
@@ -353,6 +173,64 @@ items:
       type: System.String
     content.vb: Public Property CommitAuthorEmail As String
   overload: ConsoleGit.CommandLineArgs.CommitAuthorEmail*
+- uid: ConsoleGit.CommandLineArgs.CommitAuthorName
+  commentId: P:ConsoleGit.CommandLineArgs.CommitAuthorName
+  id: CommitAuthorName
+  parent: ConsoleGit.CommandLineArgs
+  langs:
+  - csharp
+  - vb
+  name: CommitAuthorName
+  nameWithType: CommandLineArgs.CommitAuthorName
+  fullName: ConsoleGit.CommandLineArgs.CommitAuthorName
+  type: Property
+  source:
+    remote:
+      path: ConsoleGit/ConsoleGit/ArgParser.cs
+      branch: main
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: CommitAuthorName
+    path: ../ConsoleGit/ConsoleGit/ArgParser.cs
+    startLine: 48
+  assemblies:
+  - ConsoleGit
+  namespace: ConsoleGit
+  syntax:
+    content: public string CommitAuthorName { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property CommitAuthorName As String
+  overload: ConsoleGit.CommandLineArgs.CommitAuthorName*
+- uid: ConsoleGit.CommandLineArgs.CommitMessage
+  commentId: P:ConsoleGit.CommandLineArgs.CommitMessage
+  id: CommitMessage
+  parent: ConsoleGit.CommandLineArgs
+  langs:
+  - csharp
+  - vb
+  name: CommitMessage
+  nameWithType: CommandLineArgs.CommitMessage
+  fullName: ConsoleGit.CommandLineArgs.CommitMessage
+  type: Property
+  source:
+    remote:
+      path: ConsoleGit/ConsoleGit/ArgParser.cs
+      branch: main
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: CommitMessage
+    path: ../ConsoleGit/ConsoleGit/ArgParser.cs
+    startLine: 50
+  assemblies:
+  - ConsoleGit
+  namespace: ConsoleGit
+  syntax:
+    content: public string CommitMessage { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property CommitMessage As String
+  overload: ConsoleGit.CommandLineArgs.CommitMessage*
 - uid: ConsoleGit.CommandLineArgs.CreatioUrl
   commentId: P:ConsoleGit.CommandLineArgs.CreatioUrl
   id: CreatioUrl
@@ -367,11 +245,11 @@ items:
   source:
     remote:
       path: ConsoleGit/ConsoleGit/ArgParser.cs
-      branch: feature/my-feature
+      branch: main
       repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
     id: CreatioUrl
     path: ../ConsoleGit/ConsoleGit/ArgParser.cs
-    startLine: 66
+    startLine: 52
   assemblies:
   - ConsoleGit
   namespace: ConsoleGit
@@ -382,151 +260,93 @@ items:
       type: System.Uri
     content.vb: Public Property CreatioUrl As Uri
   overload: ConsoleGit.CommandLineArgs.CreatioUrl*
-- uid: ConsoleGit.CommandLineArgs.BPMLOADER
-  commentId: P:ConsoleGit.CommandLineArgs.BPMLOADER
-  id: BPMLOADER
+- uid: ConsoleGit.CommandLineArgs.CreatioUserName
+  commentId: P:ConsoleGit.CommandLineArgs.CreatioUserName
+  id: CreatioUserName
   parent: ConsoleGit.CommandLineArgs
   langs:
   - csharp
   - vb
-  name: BPMLOADER
-  nameWithType: CommandLineArgs.BPMLOADER
-  fullName: ConsoleGit.CommandLineArgs.BPMLOADER
+  name: CreatioUserName
+  nameWithType: CommandLineArgs.CreatioUserName
+  fullName: ConsoleGit.CommandLineArgs.CreatioUserName
   type: Property
   source:
     remote:
       path: ConsoleGit/ConsoleGit/ArgParser.cs
-      branch: feature/my-feature
+      branch: main
       repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
-    id: BPMLOADER
+    id: CreatioUserName
     path: ../ConsoleGit/ConsoleGit/ArgParser.cs
-    startLine: 68
+    startLine: 53
   assemblies:
   - ConsoleGit
   namespace: ConsoleGit
   syntax:
-    content: public string? BPMLOADER { get; init; }
+    content: public string CreatioUserName { get; init; }
     parameters: []
     return:
       type: System.String
-    content.vb: Public Property BPMLOADER As String
-  overload: ConsoleGit.CommandLineArgs.BPMLOADER*
-- uid: ConsoleGit.CommandLineArgs.ASPXAUTH
-  commentId: P:ConsoleGit.CommandLineArgs.ASPXAUTH
-  id: ASPXAUTH
+    content.vb: Public Property CreatioUserName As String
+  overload: ConsoleGit.CommandLineArgs.CreatioUserName*
+- uid: ConsoleGit.CommandLineArgs.CreatioPassword
+  commentId: P:ConsoleGit.CommandLineArgs.CreatioPassword
+  id: CreatioPassword
   parent: ConsoleGit.CommandLineArgs
   langs:
   - csharp
   - vb
-  name: ASPXAUTH
-  nameWithType: CommandLineArgs.ASPXAUTH
-  fullName: ConsoleGit.CommandLineArgs.ASPXAUTH
+  name: CreatioPassword
+  nameWithType: CommandLineArgs.CreatioPassword
+  fullName: ConsoleGit.CommandLineArgs.CreatioPassword
   type: Property
   source:
     remote:
       path: ConsoleGit/ConsoleGit/ArgParser.cs
-      branch: feature/my-feature
+      branch: main
       repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
-    id: ASPXAUTH
+    id: CreatioPassword
     path: ../ConsoleGit/ConsoleGit/ArgParser.cs
-    startLine: 69
+    startLine: 54
   assemblies:
   - ConsoleGit
   namespace: ConsoleGit
   syntax:
-    content: public string? ASPXAUTH { get; init; }
+    content: public string CreatioPassword { get; init; }
     parameters: []
     return:
       type: System.String
-    content.vb: Public Property ASPXAUTH As String
-  overload: ConsoleGit.CommandLineArgs.ASPXAUTH*
-- uid: ConsoleGit.CommandLineArgs.BPMCSRF
-  commentId: P:ConsoleGit.CommandLineArgs.BPMCSRF
-  id: BPMCSRF
+    content.vb: Public Property CreatioPassword As String
+  overload: ConsoleGit.CommandLineArgs.CreatioPassword*
+- uid: ConsoleGit.CommandLineArgs.GitUrl
+  commentId: P:ConsoleGit.CommandLineArgs.GitUrl
+  id: GitUrl
   parent: ConsoleGit.CommandLineArgs
   langs:
   - csharp
   - vb
-  name: BPMCSRF
-  nameWithType: CommandLineArgs.BPMCSRF
-  fullName: ConsoleGit.CommandLineArgs.BPMCSRF
+  name: GitUrl
+  nameWithType: CommandLineArgs.GitUrl
+  fullName: ConsoleGit.CommandLineArgs.GitUrl
   type: Property
   source:
     remote:
       path: ConsoleGit/ConsoleGit/ArgParser.cs
-      branch: feature/my-feature
+      branch: main
       repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
-    id: BPMCSRF
+    id: GitUrl
     path: ../ConsoleGit/ConsoleGit/ArgParser.cs
-    startLine: 70
+    startLine: 56
   assemblies:
   - ConsoleGit
   namespace: ConsoleGit
   syntax:
-    content: public string? BPMCSRF { get; init; }
+    content: public Uri? GitUrl { get; init; }
     parameters: []
     return:
-      type: System.String
-    content.vb: Public Property BPMCSRF As String
-  overload: ConsoleGit.CommandLineArgs.BPMCSRF*
-- uid: ConsoleGit.CommandLineArgs.UserType
-  commentId: P:ConsoleGit.CommandLineArgs.UserType
-  id: UserType
-  parent: ConsoleGit.CommandLineArgs
-  langs:
-  - csharp
-  - vb
-  name: UserType
-  nameWithType: CommandLineArgs.UserType
-  fullName: ConsoleGit.CommandLineArgs.UserType
-  type: Property
-  source:
-    remote:
-      path: ConsoleGit/ConsoleGit/ArgParser.cs
-      branch: feature/my-feature
-      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
-    id: UserType
-    path: ../ConsoleGit/ConsoleGit/ArgParser.cs
-    startLine: 71
-  assemblies:
-  - ConsoleGit
-  namespace: ConsoleGit
-  syntax:
-    content: public string? UserType { get; init; }
-    parameters: []
-    return:
-      type: System.String
-    content.vb: Public Property UserType As String
-  overload: ConsoleGit.CommandLineArgs.UserType*
-- uid: ConsoleGit.CommandLineArgs.BPMSESSIONID
-  commentId: P:ConsoleGit.CommandLineArgs.BPMSESSIONID
-  id: BPMSESSIONID
-  parent: ConsoleGit.CommandLineArgs
-  langs:
-  - csharp
-  - vb
-  name: BPMSESSIONID
-  nameWithType: CommandLineArgs.BPMSESSIONID
-  fullName: ConsoleGit.CommandLineArgs.BPMSESSIONID
-  type: Property
-  source:
-    remote:
-      path: ConsoleGit/ConsoleGit/ArgParser.cs
-      branch: feature/my-feature
-      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
-    id: BPMSESSIONID
-    path: ../ConsoleGit/ConsoleGit/ArgParser.cs
-    startLine: 72
-  assemblies:
-  - ConsoleGit
-  namespace: ConsoleGit
-  syntax:
-    content: public string? BPMSESSIONID { get; init; }
-    parameters: []
-    return:
-      type: System.String
-    content.vb: Public Property BPMSESSIONID As String
-  overload: ConsoleGit.CommandLineArgs.BPMSESSIONID*
+      type: System.Uri
+    content.vb: Public Property GitUrl As Uri
+  overload: ConsoleGit.CommandLineArgs.GitUrl*
 - uid: ConsoleGit.CommandLineArgs.IsFramework
   commentId: P:ConsoleGit.CommandLineArgs.IsFramework
   id: IsFramework
@@ -541,11 +361,11 @@ items:
   source:
     remote:
       path: ConsoleGit/ConsoleGit/ArgParser.cs
-      branch: feature/my-feature
+      branch: main
       repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
     id: IsFramework
     path: ../ConsoleGit/ConsoleGit/ArgParser.cs
-    startLine: 73
+    startLine: 58
   assemblies:
   - ConsoleGit
   namespace: ConsoleGit
@@ -570,11 +390,11 @@ items:
   source:
     remote:
       path: ConsoleGit/ConsoleGit/ArgParser.cs
-      branch: feature/my-feature
+      branch: main
       repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
     id: PackageName
     path: ../ConsoleGit/ConsoleGit/ArgParser.cs
-    startLine: 74
+    startLine: 60
   assemblies:
   - ConsoleGit
   namespace: ConsoleGit
@@ -585,6 +405,216 @@ items:
       type: System.Boolean
     content.vb: Public Property PackageName As Boolean
   overload: ConsoleGit.CommandLineArgs.PackageName*
+- uid: ConsoleGit.CommandLineArgs.Password
+  commentId: P:ConsoleGit.CommandLineArgs.Password
+  id: Password
+  parent: ConsoleGit.CommandLineArgs
+  langs:
+  - csharp
+  - vb
+  name: Password
+  nameWithType: CommandLineArgs.Password
+  fullName: ConsoleGit.CommandLineArgs.Password
+  type: Property
+  source:
+    remote:
+      path: ConsoleGit/ConsoleGit/ArgParser.cs
+      branch: main
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: Password
+    path: ../ConsoleGit/ConsoleGit/ArgParser.cs
+    startLine: 62
+  assemblies:
+  - ConsoleGit
+  namespace: ConsoleGit
+  syntax:
+    content: public string Password { get; init; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Password As String
+  overload: ConsoleGit.CommandLineArgs.Password*
+- uid: ConsoleGit.CommandLineArgs.RepoDir
+  commentId: P:ConsoleGit.CommandLineArgs.RepoDir
+  id: RepoDir
+  parent: ConsoleGit.CommandLineArgs
+  langs:
+  - csharp
+  - vb
+  name: RepoDir
+  nameWithType: CommandLineArgs.RepoDir
+  fullName: ConsoleGit.CommandLineArgs.RepoDir
+  type: Property
+  source:
+    remote:
+      path: ConsoleGit/ConsoleGit/ArgParser.cs
+      branch: main
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: RepoDir
+    path: ../ConsoleGit/ConsoleGit/ArgParser.cs
+    startLine: 64
+  assemblies:
+  - ConsoleGit
+  namespace: ConsoleGit
+  syntax:
+    content: public string RepoDir { get; init; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property RepoDir As String
+  overload: ConsoleGit.CommandLineArgs.RepoDir*
+- uid: ConsoleGit.CommandLineArgs.UserName
+  commentId: P:ConsoleGit.CommandLineArgs.UserName
+  id: UserName
+  parent: ConsoleGit.CommandLineArgs
+  langs:
+  - csharp
+  - vb
+  name: UserName
+  nameWithType: CommandLineArgs.UserName
+  fullName: ConsoleGit.CommandLineArgs.UserName
+  type: Property
+  source:
+    remote:
+      path: ConsoleGit/ConsoleGit/ArgParser.cs
+      branch: main
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: UserName
+    path: ../ConsoleGit/ConsoleGit/ArgParser.cs
+    startLine: 66
+  assemblies:
+  - ConsoleGit
+  namespace: ConsoleGit
+  syntax:
+    content: public string UserName { get; init; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property UserName As String
+  overload: ConsoleGit.CommandLineArgs.UserName*
+- uid: ConsoleGit.CommandLineArgs.UserType
+  commentId: P:ConsoleGit.CommandLineArgs.UserType
+  id: UserType
+  parent: ConsoleGit.CommandLineArgs
+  langs:
+  - csharp
+  - vb
+  name: UserType
+  nameWithType: CommandLineArgs.UserType
+  fullName: ConsoleGit.CommandLineArgs.UserType
+  type: Property
+  source:
+    remote:
+      path: ConsoleGit/ConsoleGit/ArgParser.cs
+      branch: main
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: UserType
+    path: ../ConsoleGit/ConsoleGit/ArgParser.cs
+    startLine: 68
+  assemblies:
+  - ConsoleGit
+  namespace: ConsoleGit
+  syntax:
+    content: public string? UserType { get; init; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property UserType As String
+  overload: ConsoleGit.CommandLineArgs.UserType*
+- uid: ConsoleGit.CommandLineArgs.BranchName
+  commentId: P:ConsoleGit.CommandLineArgs.BranchName
+  id: BranchName
+  parent: ConsoleGit.CommandLineArgs
+  langs:
+  - csharp
+  - vb
+  name: BranchName
+  nameWithType: CommandLineArgs.BranchName
+  fullName: ConsoleGit.CommandLineArgs.BranchName
+  type: Property
+  source:
+    remote:
+      path: ConsoleGit/ConsoleGit/ArgParser.cs
+      branch: main
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: BranchName
+    path: ../ConsoleGit/ConsoleGit/ArgParser.cs
+    startLine: 70
+  assemblies:
+  - ConsoleGit
+  namespace: ConsoleGit
+  syntax:
+    content: public string BranchName { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property BranchName As String
+  overload: ConsoleGit.CommandLineArgs.BranchName*
+- uid: ConsoleGit.CommandLineArgs.Files
+  commentId: P:ConsoleGit.CommandLineArgs.Files
+  id: Files
+  parent: ConsoleGit.CommandLineArgs
+  langs:
+  - csharp
+  - vb
+  name: Files
+  nameWithType: CommandLineArgs.Files
+  fullName: ConsoleGit.CommandLineArgs.Files
+  type: Property
+  source:
+    remote:
+      path: ConsoleGit/ConsoleGit/ArgParser.cs
+      branch: main
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: Files
+    path: ../ConsoleGit/ConsoleGit/ArgParser.cs
+    startLine: 72
+  assemblies:
+  - ConsoleGit
+  namespace: ConsoleGit
+  syntax:
+    content: public string Files { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Files As String
+  overload: ConsoleGit.CommandLineArgs.Files*
+- uid: ConsoleGit.CommandLineArgs.CreateCookieContainerFromArgs
+  commentId: M:ConsoleGit.CommandLineArgs.CreateCookieContainerFromArgs
+  id: CreateCookieContainerFromArgs
+  parent: ConsoleGit.CommandLineArgs
+  langs:
+  - csharp
+  - vb
+  name: CreateCookieContainerFromArgs()
+  nameWithType: CommandLineArgs.CreateCookieContainerFromArgs()
+  fullName: ConsoleGit.CommandLineArgs.CreateCookieContainerFromArgs()
+  type: Method
+  source:
+    remote:
+      path: ConsoleGit/ConsoleGit/ArgParser.cs
+      branch: main
+      repo: https://github.com/Advance-Technologies-Foundation/T.I.D.E..git
+    id: CreateCookieContainerFromArgs
+    path: ../ConsoleGit/ConsoleGit/ArgParser.cs
+    startLine: 93
+  assemblies:
+  - ConsoleGit
+  namespace: ConsoleGit
+  summary: Creates cookie container with Creatio authentication cookies.
+  remarks: <p><strong></strong></p><ul><li>BPMLOADER, ASPXAUTH, BPMCSRF - main auth cookies</li><li>UserType, BPMSESSIONID - session cookies</li><li>Special handling for ASPXAUTH domain prefix</li></ul>
+  example: []
+  syntax:
+    content: public CookieContainer CreateCookieContainerFromArgs()
+    return:
+      type: System.Net.CookieContainer
+      description: Configured CookieContainer for Creatio requests
+    content.vb: Public Function CreateCookieContainerFromArgs() As CookieContainer
+  overload: ConsoleGit.CommandLineArgs.CreateCookieContainerFromArgs*
+  exceptions:
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: Invalid Creatio URL or missing required cookies
 references:
 - uid: ConsoleGit
   commentId: N:ConsoleGit
@@ -899,6 +929,138 @@ references:
   nameWithType.vb: CommandLineArgs.New
   fullName.vb: ConsoleGit.CommandLineArgs.New
   name.vb: New
+- uid: ConsoleGit.CommandLineArgs.Silent*
+  commentId: Overload:ConsoleGit.CommandLineArgs.Silent
+  href: ConsoleGit.CommandLineArgs.html#ConsoleGit_CommandLineArgs_Silent
+  name: Silent
+  nameWithType: CommandLineArgs.Silent
+  fullName: ConsoleGit.CommandLineArgs.Silent
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: ConsoleGit.CommandLineArgs.Command*
+  commentId: Overload:ConsoleGit.CommandLineArgs.Command
+  href: ConsoleGit.CommandLineArgs.html#ConsoleGit_CommandLineArgs_Command
+  name: Command
+  nameWithType: CommandLineArgs.Command
+  fullName: ConsoleGit.CommandLineArgs.Command
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: ConsoleGit.CommandLineArgs.CommitAuthorEmail*
+  commentId: Overload:ConsoleGit.CommandLineArgs.CommitAuthorEmail
+  href: ConsoleGit.CommandLineArgs.html#ConsoleGit_CommandLineArgs_CommitAuthorEmail
+  name: CommitAuthorEmail
+  nameWithType: CommandLineArgs.CommitAuthorEmail
+  fullName: ConsoleGit.CommandLineArgs.CommitAuthorEmail
+- uid: ConsoleGit.CommandLineArgs.CommitAuthorName*
+  commentId: Overload:ConsoleGit.CommandLineArgs.CommitAuthorName
+  href: ConsoleGit.CommandLineArgs.html#ConsoleGit_CommandLineArgs_CommitAuthorName
+  name: CommitAuthorName
+  nameWithType: CommandLineArgs.CommitAuthorName
+  fullName: ConsoleGit.CommandLineArgs.CommitAuthorName
+- uid: ConsoleGit.CommandLineArgs.CommitMessage*
+  commentId: Overload:ConsoleGit.CommandLineArgs.CommitMessage
+  href: ConsoleGit.CommandLineArgs.html#ConsoleGit_CommandLineArgs_CommitMessage
+  name: CommitMessage
+  nameWithType: CommandLineArgs.CommitMessage
+  fullName: ConsoleGit.CommandLineArgs.CommitMessage
+- uid: ConsoleGit.CommandLineArgs.CreatioUrl*
+  commentId: Overload:ConsoleGit.CommandLineArgs.CreatioUrl
+  href: ConsoleGit.CommandLineArgs.html#ConsoleGit_CommandLineArgs_CreatioUrl
+  name: CreatioUrl
+  nameWithType: CommandLineArgs.CreatioUrl
+  fullName: ConsoleGit.CommandLineArgs.CreatioUrl
+- uid: System.Uri
+  commentId: T:System.Uri
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uri
+  name: Uri
+  nameWithType: Uri
+  fullName: System.Uri
+- uid: ConsoleGit.CommandLineArgs.CreatioUserName*
+  commentId: Overload:ConsoleGit.CommandLineArgs.CreatioUserName
+  href: ConsoleGit.CommandLineArgs.html#ConsoleGit_CommandLineArgs_CreatioUserName
+  name: CreatioUserName
+  nameWithType: CommandLineArgs.CreatioUserName
+  fullName: ConsoleGit.CommandLineArgs.CreatioUserName
+- uid: ConsoleGit.CommandLineArgs.CreatioPassword*
+  commentId: Overload:ConsoleGit.CommandLineArgs.CreatioPassword
+  href: ConsoleGit.CommandLineArgs.html#ConsoleGit_CommandLineArgs_CreatioPassword
+  name: CreatioPassword
+  nameWithType: CommandLineArgs.CreatioPassword
+  fullName: ConsoleGit.CommandLineArgs.CreatioPassword
+- uid: ConsoleGit.CommandLineArgs.GitUrl*
+  commentId: Overload:ConsoleGit.CommandLineArgs.GitUrl
+  href: ConsoleGit.CommandLineArgs.html#ConsoleGit_CommandLineArgs_GitUrl
+  name: GitUrl
+  nameWithType: CommandLineArgs.GitUrl
+  fullName: ConsoleGit.CommandLineArgs.GitUrl
+- uid: ConsoleGit.CommandLineArgs.IsFramework*
+  commentId: Overload:ConsoleGit.CommandLineArgs.IsFramework
+  href: ConsoleGit.CommandLineArgs.html#ConsoleGit_CommandLineArgs_IsFramework
+  name: IsFramework
+  nameWithType: CommandLineArgs.IsFramework
+  fullName: ConsoleGit.CommandLineArgs.IsFramework
+- uid: ConsoleGit.CommandLineArgs.PackageName*
+  commentId: Overload:ConsoleGit.CommandLineArgs.PackageName
+  href: ConsoleGit.CommandLineArgs.html#ConsoleGit_CommandLineArgs_PackageName
+  name: PackageName
+  nameWithType: CommandLineArgs.PackageName
+  fullName: ConsoleGit.CommandLineArgs.PackageName
+- uid: ConsoleGit.CommandLineArgs.Password*
+  commentId: Overload:ConsoleGit.CommandLineArgs.Password
+  href: ConsoleGit.CommandLineArgs.html#ConsoleGit_CommandLineArgs_Password
+  name: Password
+  nameWithType: CommandLineArgs.Password
+  fullName: ConsoleGit.CommandLineArgs.Password
+- uid: ConsoleGit.CommandLineArgs.RepoDir*
+  commentId: Overload:ConsoleGit.CommandLineArgs.RepoDir
+  href: ConsoleGit.CommandLineArgs.html#ConsoleGit_CommandLineArgs_RepoDir
+  name: RepoDir
+  nameWithType: CommandLineArgs.RepoDir
+  fullName: ConsoleGit.CommandLineArgs.RepoDir
+- uid: ConsoleGit.CommandLineArgs.UserName*
+  commentId: Overload:ConsoleGit.CommandLineArgs.UserName
+  href: ConsoleGit.CommandLineArgs.html#ConsoleGit_CommandLineArgs_UserName
+  name: UserName
+  nameWithType: CommandLineArgs.UserName
+  fullName: ConsoleGit.CommandLineArgs.UserName
+- uid: ConsoleGit.CommandLineArgs.UserType*
+  commentId: Overload:ConsoleGit.CommandLineArgs.UserType
+  href: ConsoleGit.CommandLineArgs.html#ConsoleGit_CommandLineArgs_UserType
+  name: UserType
+  nameWithType: CommandLineArgs.UserType
+  fullName: ConsoleGit.CommandLineArgs.UserType
+- uid: ConsoleGit.CommandLineArgs.BranchName*
+  commentId: Overload:ConsoleGit.CommandLineArgs.BranchName
+  href: ConsoleGit.CommandLineArgs.html#ConsoleGit_CommandLineArgs_BranchName
+  name: BranchName
+  nameWithType: CommandLineArgs.BranchName
+  fullName: ConsoleGit.CommandLineArgs.BranchName
+- uid: ConsoleGit.CommandLineArgs.Files*
+  commentId: Overload:ConsoleGit.CommandLineArgs.Files
+  href: ConsoleGit.CommandLineArgs.html#ConsoleGit_CommandLineArgs_Files
+  name: Files
+  nameWithType: CommandLineArgs.Files
+  fullName: ConsoleGit.CommandLineArgs.Files
 - uid: System.ArgumentException
   commentId: T:System.ArgumentException
   isExternal: true
@@ -947,129 +1109,3 @@ references:
     name: Net
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.net
-- uid: ConsoleGit.CommandLineArgs.Command*
-  commentId: Overload:ConsoleGit.CommandLineArgs.Command
-  href: ConsoleGit.CommandLineArgs.html#ConsoleGit_CommandLineArgs_Command
-  name: Command
-  nameWithType: CommandLineArgs.Command
-  fullName: ConsoleGit.CommandLineArgs.Command
-- uid: System.String
-  commentId: T:System.String
-  parent: System
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.string
-  name: string
-  nameWithType: string
-  fullName: string
-  nameWithType.vb: String
-  fullName.vb: String
-  name.vb: String
-- uid: ConsoleGit.CommandLineArgs.GitUrl*
-  commentId: Overload:ConsoleGit.CommandLineArgs.GitUrl
-  href: ConsoleGit.CommandLineArgs.html#ConsoleGit_CommandLineArgs_GitUrl
-  name: GitUrl
-  nameWithType: CommandLineArgs.GitUrl
-  fullName: ConsoleGit.CommandLineArgs.GitUrl
-- uid: System.Uri
-  commentId: T:System.Uri
-  parent: System
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.uri
-  name: Uri
-  nameWithType: Uri
-  fullName: System.Uri
-- uid: ConsoleGit.CommandLineArgs.UserName*
-  commentId: Overload:ConsoleGit.CommandLineArgs.UserName
-  href: ConsoleGit.CommandLineArgs.html#ConsoleGit_CommandLineArgs_UserName
-  name: UserName
-  nameWithType: CommandLineArgs.UserName
-  fullName: ConsoleGit.CommandLineArgs.UserName
-- uid: ConsoleGit.CommandLineArgs.Password*
-  commentId: Overload:ConsoleGit.CommandLineArgs.Password
-  href: ConsoleGit.CommandLineArgs.html#ConsoleGit_CommandLineArgs_Password
-  name: Password
-  nameWithType: CommandLineArgs.Password
-  fullName: ConsoleGit.CommandLineArgs.Password
-- uid: ConsoleGit.CommandLineArgs.RepoDir*
-  commentId: Overload:ConsoleGit.CommandLineArgs.RepoDir
-  href: ConsoleGit.CommandLineArgs.html#ConsoleGit_CommandLineArgs_RepoDir
-  name: RepoDir
-  nameWithType: CommandLineArgs.RepoDir
-  fullName: ConsoleGit.CommandLineArgs.RepoDir
-- uid: ConsoleGit.CommandLineArgs.CommitMessage*
-  commentId: Overload:ConsoleGit.CommandLineArgs.CommitMessage
-  href: ConsoleGit.CommandLineArgs.html#ConsoleGit_CommandLineArgs_CommitMessage
-  name: CommitMessage
-  nameWithType: CommandLineArgs.CommitMessage
-  fullName: ConsoleGit.CommandLineArgs.CommitMessage
-- uid: ConsoleGit.CommandLineArgs.CommitAuthorName*
-  commentId: Overload:ConsoleGit.CommandLineArgs.CommitAuthorName
-  href: ConsoleGit.CommandLineArgs.html#ConsoleGit_CommandLineArgs_CommitAuthorName
-  name: CommitAuthorName
-  nameWithType: CommandLineArgs.CommitAuthorName
-  fullName: ConsoleGit.CommandLineArgs.CommitAuthorName
-- uid: ConsoleGit.CommandLineArgs.CommitAuthorEmail*
-  commentId: Overload:ConsoleGit.CommandLineArgs.CommitAuthorEmail
-  href: ConsoleGit.CommandLineArgs.html#ConsoleGit_CommandLineArgs_CommitAuthorEmail
-  name: CommitAuthorEmail
-  nameWithType: CommandLineArgs.CommitAuthorEmail
-  fullName: ConsoleGit.CommandLineArgs.CommitAuthorEmail
-- uid: ConsoleGit.CommandLineArgs.CreatioUrl*
-  commentId: Overload:ConsoleGit.CommandLineArgs.CreatioUrl
-  href: ConsoleGit.CommandLineArgs.html#ConsoleGit_CommandLineArgs_CreatioUrl
-  name: CreatioUrl
-  nameWithType: CommandLineArgs.CreatioUrl
-  fullName: ConsoleGit.CommandLineArgs.CreatioUrl
-- uid: ConsoleGit.CommandLineArgs.BPMLOADER*
-  commentId: Overload:ConsoleGit.CommandLineArgs.BPMLOADER
-  href: ConsoleGit.CommandLineArgs.html#ConsoleGit_CommandLineArgs_BPMLOADER
-  name: BPMLOADER
-  nameWithType: CommandLineArgs.BPMLOADER
-  fullName: ConsoleGit.CommandLineArgs.BPMLOADER
-- uid: ConsoleGit.CommandLineArgs.ASPXAUTH*
-  commentId: Overload:ConsoleGit.CommandLineArgs.ASPXAUTH
-  href: ConsoleGit.CommandLineArgs.html#ConsoleGit_CommandLineArgs_ASPXAUTH
-  name: ASPXAUTH
-  nameWithType: CommandLineArgs.ASPXAUTH
-  fullName: ConsoleGit.CommandLineArgs.ASPXAUTH
-- uid: ConsoleGit.CommandLineArgs.BPMCSRF*
-  commentId: Overload:ConsoleGit.CommandLineArgs.BPMCSRF
-  href: ConsoleGit.CommandLineArgs.html#ConsoleGit_CommandLineArgs_BPMCSRF
-  name: BPMCSRF
-  nameWithType: CommandLineArgs.BPMCSRF
-  fullName: ConsoleGit.CommandLineArgs.BPMCSRF
-- uid: ConsoleGit.CommandLineArgs.UserType*
-  commentId: Overload:ConsoleGit.CommandLineArgs.UserType
-  href: ConsoleGit.CommandLineArgs.html#ConsoleGit_CommandLineArgs_UserType
-  name: UserType
-  nameWithType: CommandLineArgs.UserType
-  fullName: ConsoleGit.CommandLineArgs.UserType
-- uid: ConsoleGit.CommandLineArgs.BPMSESSIONID*
-  commentId: Overload:ConsoleGit.CommandLineArgs.BPMSESSIONID
-  href: ConsoleGit.CommandLineArgs.html#ConsoleGit_CommandLineArgs_BPMSESSIONID
-  name: BPMSESSIONID
-  nameWithType: CommandLineArgs.BPMSESSIONID
-  fullName: ConsoleGit.CommandLineArgs.BPMSESSIONID
-- uid: ConsoleGit.CommandLineArgs.IsFramework*
-  commentId: Overload:ConsoleGit.CommandLineArgs.IsFramework
-  href: ConsoleGit.CommandLineArgs.html#ConsoleGit_CommandLineArgs_IsFramework
-  name: IsFramework
-  nameWithType: CommandLineArgs.IsFramework
-  fullName: ConsoleGit.CommandLineArgs.IsFramework
-- uid: System.Boolean
-  commentId: T:System.Boolean
-  parent: System
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.boolean
-  name: bool
-  nameWithType: bool
-  fullName: bool
-  nameWithType.vb: Boolean
-  fullName.vb: Boolean
-  name.vb: Boolean
-- uid: ConsoleGit.CommandLineArgs.PackageName*
-  commentId: Overload:ConsoleGit.CommandLineArgs.PackageName
-  href: ConsoleGit.CommandLineArgs.html#ConsoleGit_CommandLineArgs_PackageName
-  name: PackageName
-  nameWithType: CommandLineArgs.PackageName
-  fullName: ConsoleGit.CommandLineArgs.PackageName

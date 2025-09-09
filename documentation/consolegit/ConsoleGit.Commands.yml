@@ -6,12 +6,18 @@ items:
   children:
   - ConsoleGit.Commands.AddAllCommand
   - ConsoleGit.Commands.BaseRepositoryCommand
+  - ConsoleGit.Commands.BranchesCommandResponse
   - ConsoleGit.Commands.CheckoutCommand
   - ConsoleGit.Commands.CloneCommand
   - ConsoleGit.Commands.CommitCommand
+  - ConsoleGit.Commands.DiscardFilesCommand
   - ConsoleGit.Commands.DownloadPackagesCommand
   - ConsoleGit.Commands.ErrorCommand
+  - ConsoleGit.Commands.GetBranchesCommand
+  - ConsoleGit.Commands.GetChangedFilesCommand
+  - ConsoleGit.Commands.GetDiffCommand
   - ConsoleGit.Commands.ICommand
+  - ConsoleGit.Commands.MyBranch
   - ConsoleGit.Commands.PullCommand
   - ConsoleGit.Commands.PushCommand
   langs:
@@ -62,6 +68,12 @@ references:
   name: CommitCommand
   nameWithType: CommitCommand
   fullName: ConsoleGit.Commands.CommitCommand
+- uid: ConsoleGit.Commands.DiscardFilesCommand
+  commentId: T:ConsoleGit.Commands.DiscardFilesCommand
+  href: ConsoleGit.Commands.DiscardFilesCommand.html
+  name: DiscardFilesCommand
+  nameWithType: DiscardFilesCommand
+  fullName: ConsoleGit.Commands.DiscardFilesCommand
 - uid: ConsoleGit.Commands.DownloadPackagesCommand
   commentId: T:ConsoleGit.Commands.DownloadPackagesCommand
   href: ConsoleGit.Commands.DownloadPackagesCommand.html
@@ -74,6 +86,38 @@ references:
   name: ErrorCommand
   nameWithType: ErrorCommand
   fullName: ConsoleGit.Commands.ErrorCommand
+- uid: ConsoleGit.Commands.GetBranchesCommand
+  commentId: T:ConsoleGit.Commands.GetBranchesCommand
+  href: ConsoleGit.Commands.GetBranchesCommand.html
+  name: GetBranchesCommand
+  nameWithType: GetBranchesCommand
+  fullName: ConsoleGit.Commands.GetBranchesCommand
+- uid: ConsoleGit.Commands.BranchesCommandResponse
+  commentId: T:ConsoleGit.Commands.BranchesCommandResponse
+  parent: ConsoleGit.Commands
+  href: ConsoleGit.Commands.BranchesCommandResponse.html
+  name: BranchesCommandResponse
+  nameWithType: BranchesCommandResponse
+  fullName: ConsoleGit.Commands.BranchesCommandResponse
+- uid: ConsoleGit.Commands.MyBranch
+  commentId: T:ConsoleGit.Commands.MyBranch
+  parent: ConsoleGit.Commands
+  href: ConsoleGit.Commands.MyBranch.html
+  name: MyBranch
+  nameWithType: MyBranch
+  fullName: ConsoleGit.Commands.MyBranch
+- uid: ConsoleGit.Commands.GetChangedFilesCommand
+  commentId: T:ConsoleGit.Commands.GetChangedFilesCommand
+  href: ConsoleGit.Commands.GetChangedFilesCommand.html
+  name: GetChangedFilesCommand
+  nameWithType: GetChangedFilesCommand
+  fullName: ConsoleGit.Commands.GetChangedFilesCommand
+- uid: ConsoleGit.Commands.GetDiffCommand
+  commentId: T:ConsoleGit.Commands.GetDiffCommand
+  href: ConsoleGit.Commands.GetDiffCommand.html
+  name: GetDiffCommand
+  nameWithType: GetDiffCommand
+  fullName: ConsoleGit.Commands.GetDiffCommand
 - uid: ConsoleGit.Commands.PullCommand
   commentId: T:ConsoleGit.Commands.PullCommand
   href: ConsoleGit.Commands.PullCommand.html
