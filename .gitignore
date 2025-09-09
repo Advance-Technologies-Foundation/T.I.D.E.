@@ -412,3 +412,4 @@ data.??-??.json
 .application/*
 /[A-a]rtifact
 **/init-creatio-ai.yaml
+**/_site
