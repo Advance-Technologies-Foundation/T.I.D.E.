@@ -199,11 +199,12 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 					"disabled": false,
 					"size": "medium",
 					"iconPosition": "left-icon",
-					"visible": true,
+					"visible": false,
 					"icon": "codeblock-icon",
-					clicked: {
-						request: "atf.Button_OpenModalWindowClicked"
-					}
+					"clicked": {
+						"request": "atf.Button_OpenModalWindowClicked"
+					},
+					"clickMode": "default"
 				},
 				"parentName": "CardToggleContainer",
 				"propertyName": "items",
@@ -2074,11 +2075,11 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 				],
 				"values": {
 					"SocketMessageReceivedFunc": {},
-					IsGitTabVisible:{
-						value: false
+					"IsGitTabVisible": {
+						"value": false
 					},
-					IsAdvancedTabVisible:{
-						value: false
+					"IsAdvancedTabVisible": {
+						"value": false
 					},
 					"AllMessages": {
 						"modelConfig": {}

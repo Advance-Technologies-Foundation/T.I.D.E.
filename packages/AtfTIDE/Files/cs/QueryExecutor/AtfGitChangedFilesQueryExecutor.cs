@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Text.Json.Serialization;
-using AtfTIDE.ClioInstaller;
-using Newtonsoft.Json;
+using AtfTIDE.Logging;
 using Terrasoft.Common;
 using Terrasoft.Core;
 using Terrasoft.Core.Entities;
@@ -34,14 +33,20 @@ namespace AtfTIDE.QueryExecutor {
 												.Get<IConsoleGit>("AtfTIDE.ConsoleGit")
 												.Execute(args);
 			
-			var collection = new EntityCollection(userConnection, esq.RootSchema);
+			EntityCollection collection = new EntityCollection(userConnection, esq.RootSchema);
 			if(gitCommandResult.ExitCode != 0) {
-				//TODO: log this error
+				string errorMessage = $"{gitCommandResult.Output} {gitCommandResult.ErrorMessage}"; 
+				TideApp.Instance.GetRequiredService<ILiveLogger>().LogError(errorMessage);
 				return collection;
 			}
-			var files = JsonSerializer.Deserialize<List<ChangedFileDto>>(gitCommandResult.Output.Replace("GetChangedFiles command executed successfully","").Trim());
 
-			foreach (var file in files) {
+			string cleanContent = gitCommandResult.Output
+				.Replace("GetChangedFiles command executed successfully", "")
+				.Trim();
+			
+			List<ChangedFileDto> files = JsonSerializer.Deserialize<List<ChangedFileDto>>(cleanContent);
+
+			foreach (ChangedFileDto file in files) {
 				Entity entity = esq.RootSchema.CreateEntity(userConnection);
 				entity.SetDefColumnValues();
 				entity.SetColumnValue("AtfFileName", file.Path);
