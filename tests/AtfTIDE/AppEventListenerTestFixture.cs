@@ -87,16 +87,16 @@ namespace AtfTIDE.Tests {
 		}
 		
 		
-		private ErrorOr<Success> Success() => Result.Success;
+		//private ErrorOr<Success> Success() => Result.Success;
 
 	}
 	
-	public class A {
-
-		public static ErrorOr<Success> B(){
-			return Result.Success;
-		}
-
-	}
+	// public class A {
+	//
+	// 	public static ErrorOr<Success> B(){
+	// 		return Result.Success;
+	// 	}
+	//
+	// }
 	
 }

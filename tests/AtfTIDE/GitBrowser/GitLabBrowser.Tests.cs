@@ -43,14 +43,14 @@ namespace AtfTIDE.Tests.GitBrowser
 		private static readonly string StudioFreeThemeUrl = Config.StudioFreeThemeUrl;
 
 		[Test]
-		public async Task FindAllRepositoriesOnServer() {
+		public void FindAllRepositoriesOnServer() {
 			GitLabBrowser gitlabBrowser = new GitLabBrowser(GitlabUrl);
 			List<string> repositories = gitlabBrowser.GetAllRepositoriesNames(GitlabToken);
 			repositories.Should().Contain("labKirill");
 		}
 
 		[Test]
-		public async Task FindClioWorkspacesOnServer() {
+		public void FindClioWorkspacesOnServer() {
 			var gitlabBrowser = new GitLabBrowser(GitlabUrl);
 			gitlabBrowser.MaxRepositoryCount = 100;
 			var repositories = gitlabBrowser.FindClioRepositoriesOnServer(GitlabToken);
@@ -60,7 +60,7 @@ namespace AtfTIDE.Tests.GitBrowser
 		}
 
 		[Test]
-		public async Task FindClioWorkspacesOnServer_ShouldBeFalse() {
+		public void FindClioWorkspacesOnServer_ShouldBeFalse() {
 			var gitlabBrowser = new GitLabBrowser(GitlabUrl);
 			gitlabBrowser.MaxRepositoryCount = 100;
 			Repository repository = new Repository();
@@ -71,7 +71,7 @@ namespace AtfTIDE.Tests.GitBrowser
 		}
 
 		[Test]
-		public async Task FindClioWorkspacesOnServerByName() {
+		public void FindClioWorkspacesOnServerByName() {
 			var gitlabBrowser = new GitLabBrowser(GitlabUrl);
 			gitlabBrowser.MaxRepositoryCount = 100;
 			Repository repository = new Repository();
@@ -81,7 +81,7 @@ namespace AtfTIDE.Tests.GitBrowser
 		}
 
 		[Test]
-		public async Task FindClioWorkspacesOnServerById() {
+		public void FindClioWorkspacesOnServerById() {
 			var gitlabBrowser = new GitLabBrowser(GitlabUrl);
 			gitlabBrowser.MaxRepositoryCount = 100;
 			Repository repository = new Repository();
@@ -91,7 +91,7 @@ namespace AtfTIDE.Tests.GitBrowser
 		}
 
 		[Test]
-		public async Task FindClioWorkspacesOnServerByIdShouldBeFalse() {
+		public void FindClioWorkspacesOnServerByIdShouldBeFalse() {
 			var gitlabBrowser = new GitLabBrowser(GitlabUrl);
 			gitlabBrowser.MaxRepositoryCount = 100;
 			Repository repository = new Repository();

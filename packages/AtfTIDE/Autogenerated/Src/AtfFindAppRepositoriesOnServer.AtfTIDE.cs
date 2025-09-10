@@ -41,20 +41,19 @@
 			   
 			    var gitlabBrowser = new GitLabBrowser(gitUrl);
 			    var repositories = gitlabBrowser.FindClioRepositoriesOnServer(gitlabToken);
-			    foreach (var repo in repositories) {
-			        var entitySchemaName = "AtfRepository";
-			            var entitySchema = UserConnection.EntitySchemaManager.GetInstanceByName(entitySchemaName);
-			            var entity = entitySchema.CreateEntity(UserConnection);
-			            entity.SetDefColumnValues();
-			            entity.SetColumnValue("AtfName", repo.Name);
-			            entity.SetColumnValue("AtfAccessToken", gitlabToken);
-			            entity.SetColumnValue("AtfRepositoryUrl", repo.UrlToClone);
-			            entity.SetColumnValue("AtfUserName", userName);
-			           
-			            if (!entity.Save())
-			            {
-			                throw new Exception("Не удалось сохранить запись!");
-			            }
+			    foreach (Repository repo in repositories) {
+			        string entitySchemaName = "AtfRepository";
+		            EntitySchema entitySchema = UserConnection.EntitySchemaManager.GetInstanceByName(entitySchemaName);
+		            Entity entity = entitySchema.CreateEntity(UserConnection);
+		            entity.SetDefColumnValues();
+		            entity.SetColumnValue("AtfName", repo.Name);
+		            entity.SetColumnValue("AtfAccessToken", gitlabToken);
+		            entity.SetColumnValue("AtfRepositoryUrl", repo.UrlToClone);
+		            entity.SetColumnValue("AtfUserName", userName);
+		           
+		            if (!entity.Save()) {
+			            throw new Exception("Failed to save the record!");
+		            }
 			    }
 			   
 			}

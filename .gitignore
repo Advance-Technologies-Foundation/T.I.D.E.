@@ -413,3 +413,4 @@ data.??-??.json
 /[A-a]rtifact
 **/init-creatio-ai.yaml
 **/_site
+!/packages/AtfTIDE/Files/Bin/

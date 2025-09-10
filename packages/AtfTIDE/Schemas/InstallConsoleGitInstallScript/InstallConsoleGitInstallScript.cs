@@ -67,8 +67,8 @@ namespace Terrasoft.Configuration
 						if (length > 0) {
 							//otherwise it is an empty file
 							using (Stream stream = entry.Open()) {
-								FileSystem fs = new FileSystem();
-								using (FileSystemStream fileStream = fs.File.Create(destFilePath)) {
+								//FileSystem fs = new FileSystem();
+								using (FileStream fileStream = System.IO.File.Create(destFilePath)) {
 									stream.CopyTo(fileStream, (int)length);
 									fileStream.Flush();
 									fileStream.Close();
