@@ -190,7 +190,7 @@ define("AtfTIDE_ListPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 					"disabled": false,
 					"size": "large",
 					"iconPosition": "only-text",
-					"visible": false,
+					"visible": true,
 					"clicked": {
 						"request": "crt.OpenPageRequest",
 						"params": {

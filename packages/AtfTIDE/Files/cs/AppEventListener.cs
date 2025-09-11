@@ -41,8 +41,8 @@ namespace AtfTIDE
 				CheckForClioUpdates(userConnection);
 			} else {
 				LogManager.GetLogger(TideConsts.LoggerName).ErrorFormat(CultureInfo.InvariantCulture, "Clio is not installed or the path does not match.");
-				IErrorOr<Success> result = TideApp.Instance.InstallerApp.InstallClio();
-				if(!result.IsError) {
+				IErrorOr<Success> clioResult = TideApp.Instance.InstallerApp.InstallClio();
+				if(!clioResult.IsError) {
 					string clioFilePath = HelperFunctions.GetClioFilePath();
 					SysSettings.SetValue(userConnection, TideConsts.SysSettingClioPath, clioFilePath);
 				}
@@ -77,6 +77,10 @@ namespace AtfTIDE
 						.InfoFormat(CultureInfo.InvariantCulture,  $"Updating SysSetting AtfTideUpdateAvailable to: {updateAvailable}, AtfTideVersion: {version}, NugetMaxTideVersion: {nugetMaxTideVersion}");
 				SysSettings.SetDefValue(userConnection, "AtfTideUpdateAvailable", updateAvailable);
 			}
+			
+			
+			// clio gate -e 
+			
 		}
 
 		/// <summary>
