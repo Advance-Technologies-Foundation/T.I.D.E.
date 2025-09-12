@@ -910,7 +910,7 @@
               "L1": "8b3f29bb-ea14-4ce5-a5c5-293a929b6ba2",
               "L8": {
                 "GS1": 3,
-                "GS2": "[#SysSettings.AtfClioFilePath<String>#] +\" pushw --unlock --TideRepositoryId \"+[#[IsOwnerSchema:false].[IsSchema:false].[Parameter:{0af0dc84-7cfb-4059-8282-d1ef9959d9e9}]#]",
+                "GS2": "[#SysSettings.AtfClioFilePath<String>#] +\" pushw --use-application-installer true --unlock --TideRepositoryId \"+[#[IsOwnerSchema:false].[IsSchema:false].[Parameter:{0af0dc84-7cfb-4059-8282-d1ef9959d9e9}]#]",
                 "GS5": "69282d5a-b25b-4730-8001-c39307b78fc4"
               },
               "L11": false,

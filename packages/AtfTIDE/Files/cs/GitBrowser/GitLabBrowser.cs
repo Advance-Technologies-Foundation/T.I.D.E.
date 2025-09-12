@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
+using AtfTIDE.Logging;
 using Newtonsoft.Json.Linq;
 
 namespace AtfTIDE.GitBrowser
@@ -22,30 +23,36 @@ namespace AtfTIDE.GitBrowser
 	public class GitLabBrowser
 	{
 		private readonly string _gitlabUrl;
+		private readonly ILiveLogger _liveLogger;
 
 		public int MaxRepositoryCount { get; set; } = int.MaxValue;
 
 		public GitLabBrowser(string gitlabUrl) {
 			_gitlabUrl = gitlabUrl;
+			_liveLogger = TideApp.Instance.GetRequiredService<ILiveLogger>();
 		}
 
 		public async Task<List<Repository>> GetAllRepositoriesAsync(string gitlabToken) {
-			var repositories = new ConcurrentBag<Repository>();
+			ConcurrentBag<Repository> repositories = new ConcurrentBag<Repository>();
+			
 			using (System.Net.Http.HttpClient client = new System.Net.Http.HttpClient()) {
 				client.DefaultRequestHeaders.Add("Private-Token", gitlabToken);
 				int page = 1;
 				bool hasMorePages = true;
 				List<Task> tasks = new List<Task>();
 				while (hasMorePages && repositories.Count < MaxRepositoryCount) {
-					var response = await client.GetAsync($"{_gitlabUrl}/api/v4/projects?per_page=100&page={page}");
+					_liveLogger.LogInfo($"Reading repositories... Page: {page}");
+					HttpResponseMessage response = await client.GetAsync($"{_gitlabUrl}/api/v4/projects?per_page=100&page={page}");
 					if (response.IsSuccessStatusCode) {
-						var content = await response.Content.ReadAsStringAsync();
-						var json = JArray.Parse(content);
+						string content = await response.Content.ReadAsStringAsync();
+						JArray json = JArray.Parse(content);
+						
 						if (json.Count == 0) {
 							hasMorePages = false;
-						} else {
+						} 
+						else {
 							tasks.Add(Task.Run(() => {
-								foreach (var repo in json) {
+								foreach (JToken repo in json) {
 									repositories.Add(new Repository {
 										Name = repo["name"].ToString(),
 										UrlToClone = repo["http_url_to_repo"].ToString(),
@@ -62,6 +69,7 @@ namespace AtfTIDE.GitBrowser
 				}
 				await Task.WhenAll(tasks);
 			}
+			_liveLogger.LogInfo($"Finished reading {repositories.Count} repositories");
 			return repositories.ToList();
 		}
 
@@ -79,11 +87,14 @@ namespace AtfTIDE.GitBrowser
 					if (IsClioRepositories(repo,gitlabToken)) {
 						clioRepositories.Add(repo);
 					}
-				});
+			});
 			return clioRepositories;
 		}
 
 		public bool IsClioRepositories(Repository repo, string gitlabToken) {
+			
+			_liveLogger.LogInfo($"Checking repository {repo.Name} for being a Clio repository");
+			
 			using (var client = new System.Net.Http.HttpClient()) {
 				client.DefaultRequestHeaders.Add("Private-Token", gitlabToken);
 				if (string.IsNullOrEmpty(repo.Id)) {
