@@ -14,6 +14,14 @@
         "Name": "CrtCore",
         "Type": 1
       }
-    ]
+    ],
+    "InstallScripts": {
+      "AfterInstall": [
+        {
+          "Position": 1,
+          "SchemaUId": "9c3a6004-259d-44b7-a5cc-5eb37b18f89b"
+        }
+      ]
+    }
   }
 }
