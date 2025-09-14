@@ -1,8 +1,9 @@
 ﻿using System.Text.Json.Serialization;
 
 namespace AtfTIDE.GitBrowser.GitLab{
-
+	
 	public class NameSpace{
+		
 		[JsonPropertyName("id")]
 		public int Id { get; set; }
 		
@@ -19,7 +20,7 @@ namespace AtfTIDE.GitBrowser.GitLab{
 		public string FullPath { get; set; }
 		
 		[JsonPropertyName("parent_id")]
-		public int ParentId { get; set; }
+		public object ParentId { get; set; }
 	}
 
 }

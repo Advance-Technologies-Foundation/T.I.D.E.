@@ -22,8 +22,13 @@ namespace AtfTIDE.GitBrowser.GitLab{
 		[JsonPropertyName("last_activity_at")]
 		public DateTime ModifiedOn { get; set; }
 		
-		[JsonPropertyName("created_at")]
+		[JsonPropertyName("http_url_to_repo")]
 		public Uri CloneUrl { get; set; }
+		
+		[JsonPropertyName("star_count")]
+		public int StartCount { get; set; }
+		
+		
 		
 	}
 

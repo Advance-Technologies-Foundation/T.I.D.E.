@@ -1,12 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using ATF.Repository;
 using ATF.Repository.Providers;
 using AtfTIDE.GitBrowser;
 using AtfTIDE.GitBrowser.GitLab;
+using AtfTIDE.Logging;
 using AtfTIDE.RepositoryModels;
 using Common.Logging;
+using ErrorOr;
 using Terrasoft.Common;
 using Terrasoft.Core;
 using Terrasoft.Core.Entities;
@@ -20,10 +23,12 @@ namespace AtfTIDE.QueryExecutor{
 		private readonly ILog _logger;
 		private readonly UserConnection _userConnection;
 		private const string SchemaName = "AtfVirtual_GitLabProject";
+		private readonly ILiveLogger _liveLogger;
 
 		public AtfVirtual_GitLabProjectQueryExecutor() {
 			_userConnection = ClassFactory.Get<UserConnection>();
 			_logger = LogManager.GetLogger(TideConsts.LoggerName);
+			_liveLogger = TideApp.Instance.GetRequiredService<ILiveLogger>();
 		}
 		
 		private IEnumerable<string> GetNameSpaceFromEsq(IEsqFilterParser esqFilterParser, EntitySchemaQuery esq){
@@ -50,59 +55,45 @@ namespace AtfTIDE.QueryExecutor{
 			IEnumerable<string> nameSpaceFilter = GetNameSpaceFromEsq(esqFilterParser, esq);
 			IEnumerable<string> repositoryNameFilter = GetNameFromEsq(esqFilterParser, esq);
 
-			var defaultGitServer = FindDefaultGitServer(_userConnection);
-			// if (defaultGitServer.Url) {
-			// 	
-			// }
-			//
-			// IGitlabProvider x = TideApp.Instance.GetRequiredService<IGitlabProvider>();
-			// x.Configure(null, "")
-			// 	.GetAllRepositoriesAsync();
-			
-			
-			
-			List<ProjectDto> projects = new List<ProjectDto> {
-				new ProjectDto {
-					ProjectId = 1150,
-					Name = "Apollo",
-					Description =  "Enhance accuracy and quality of <b>Accounts</b> and <b>Contacts</b> in Creatio by data enrichment from \r\n<a href=\"https://www.apollo.io\" target=\"_blank\">Apollo.io</a>",
-					Namespace = new NameSpace{
-						Id = 385, 
-						Name = "Marketplace",
-						Kind = "group",
-						FullPath = "marketplace",
-						Path = "marketplace",
-					},
-					CreatedOn = DateTime.Parse("2023-11-27T08:21:12.719+02:00"),
-					ModifiedOn = DateTime.Parse("2025-09-14T13:30:52.131+03:00"),
-					CloneUrl = new Uri("https://tscore-git.creatio.com/marketplace/apollo.git"),
-				}, 
-				new ProjectDto {
-					ProjectId = 1561,
-					Name = "BGK-Bank",
-					Description =  "Sample repository demonstrating various development approaches, and CI/CD pipeline",
-					Namespace = new NameSpace{
-						Id = 2047, 
-						Name = "Solution Architecture",
-						Kind = "group",
-						FullPath = "solution-architecture",
-						Path = "solution-architecture",
-					},
-					CreatedOn = DateTime.Parse("2025-09-05T20:31:17.045+03:00"),
-					ModifiedOn = DateTime.Parse("2025-09-14T12:28:18.576+03:00"),
-					CloneUrl = new Uri("https://gitlab.com/atf-tide/atf-tide.git"),
-				}
-			};
+			AtfGitServer defaultGitServer = FindDefaultGitServer(_userConnection);
 
+			IEnumerable<ProjectDto> projects = new List<ProjectDto>();
+			
+			if (defaultGitServer.GitRepositoryTypeId == Guid.Parse("b1e6ed87-2bf2-4efd-acad-ce45bc17371d")) {
+				IGitlabProvider x = TideApp.Instance.GetRequiredService<IGitlabProvider>();
+				Uri.TryCreate(defaultGitServer.Url, UriKind.Absolute, out Uri gitlabUrl);
+				Task.Run(async () => {
+					IConfiguredProvider confProvider = x.Configure(gitlabUrl, defaultGitServer.AccessToken);
+					ErrorOr<IEnumerable<ProjectDto>> isErrorOrProjects = await confProvider.GetAllRepositoriesByFilterAsync(keywordsFilterValue ?? string.Empty, esq.RowCount, esq.SkipRowCount);
+					
+					isErrorOrProjects.Match<object>(
+						onValue: value => { 
+							projects = isErrorOrProjects.Value;
+							return null; 
+						},
+						onError: errors => {
+							errors.ForEach(e => {
+								_logger.ErrorFormat("{Code} - {Description}",
+									isErrorOrProjects.FirstError.Code,
+									isErrorOrProjects.FirstError.Description);
+								
+								_liveLogger.LogError($"{isErrorOrProjects.FirstError.Code} - {isErrorOrProjects.FirstError.Description}");
+							});
+							return null;
+						}
+					);
+					
+				}).GetAwaiter().GetResult();
+			}
 			foreach (ProjectDto project in projects) {
 				Entity entity = schema.CreateEntity(_userConnection);
-				FillEntity(entity, project);
+				FillEntity(entity, project, defaultGitServer);
 				collection.Add(entity);
 			}
 			return collection;
 		}
 		
-		private void FillEntity(Entity entity, ProjectDto project) {
+		private void FillEntity(Entity entity, ProjectDto project, AtfGitServer defaultGitServer) {
 			entity.SetColumnValue("CreatedOn", project.CreatedOn);
 			entity.SetColumnValue("ModifiedOn", project.ModifiedOn);
 			EntitySchemaColumn createdByColumn = entity.Schema.Columns.FindByName("CreatedBy");
@@ -112,7 +103,6 @@ namespace AtfTIDE.QueryExecutor{
 			entity.SetColumnBothValues(modifiedByColumn, _userConnection.CurrentUser.ContactId.ToString(), _userConnection.CurrentUser.ContactName);
 			
 			EntitySchemaColumn gColumn = entity.Schema.Columns.FindByName("AtfGitServer");
-			AtfGitServer defaultGitServer = FindDefaultGitServer(_userConnection);
 			entity.SetColumnBothValues(gColumn, defaultGitServer.Id, defaultGitServer.Name);
 			
 			entity.SetColumnValue("ProjectId", project.ProjectId);
