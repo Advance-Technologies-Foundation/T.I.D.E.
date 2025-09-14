@@ -2,7 +2,11 @@
 <Resources Culture="en-US">
 	<Group Type="String">
 		<Items>
+			<Item Name="BaseElements.ConditionalSequenceFlow4.Caption" Value="on Error" />
+			<Item Name="BaseElements.ConditionalSequenceFlow5.Caption" Value="on Error" />
 			<Item Name="BaseElements.ConditionalSequenceFlow6.Caption" Value="On clone repository Error" />
+			<Item Name="BaseElements.ConditionalSequenceFlow7.Caption" Value="on Error" />
+			<Item Name="BaseElements.ConditionalSequenceFlow8.Caption" Value="on Error" />
 			<Item Name="BaseElements.LinkEntityToProcessUserTask1.Caption" Value="Attach to Log" />
 			<Item Name="BaseElements.LinkEntityToProcessUserTask1.Parameters.EntityId.Caption" Value="Object" />
 			<Item Name="BaseElements.LinkEntityToProcessUserTask1.Parameters.EntityId.DisplayValue" Value="[#Repository#]" />
@@ -51,6 +55,12 @@
 			<Item Name="BaseElements.ReadDataUserTask3.Parameters.ResultRowsCount.Caption" Value="Number of records read" />
 			<Item Name="BaseElements.ReadDataUserTask3.Parameters.ResultType.Caption" Value="Type of result" />
 			<Item Name="BaseElements.StartEvent1.Caption" Value="Start" />
+			<Item Name="BaseElements.UserTask10.Caption" Value="Log out PUSH message" />
+			<Item Name="BaseElements.UserTask10.Parameters.LogLevel.Caption" Value="LogLevel" />
+			<Item Name="BaseElements.UserTask10.Parameters.LogLevel.DisplayValue" Value="ERR" />
+			<Item Name="BaseElements.UserTask10.Parameters.LogLevel.Value" Value="ERR" />
+			<Item Name="BaseElements.UserTask10.Parameters.Message.Caption" Value="Message" />
+			<Item Name="BaseElements.UserTask10.Parameters.Message.DisplayValue" Value="&quot;BP GIT PUSH: &quot;+[#Git Push.Output#]+&quot; &quot;+[#Git Push.Error Message#]" />
 			<Item Name="BaseElements.UserTask1.Caption" Value="Clone Repository" />
 			<Item Name="BaseElements.UserTask1.Parameters.ErrorMessage.Caption" Value="Error message" />
 			<Item Name="BaseElements.UserTask1.Parameters.IsError.Caption" Value="Is error" />
@@ -93,6 +103,30 @@
 			<Item Name="BaseElements.UserTask5.Parameters.WaitForExit.DisplayValue" Value="[#Boolean value.True#]" />
 			<Item Name="BaseElements.UserTask5.Parameters.WorkingDirectory.Caption" Value="WorkingDirectory" />
 			<Item Name="BaseElements.UserTask5.Parameters.WorkingDirectory.DisplayValue" Value="[#Clone Repository.Repository Folder Path#]" />
+			<Item Name="BaseElements.UserTask6.Caption" Value="Log out CLONE message" />
+			<Item Name="BaseElements.UserTask6.Parameters.LogLevel.Caption" Value="LogLevel" />
+			<Item Name="BaseElements.UserTask6.Parameters.LogLevel.DisplayValue" Value="ERR" />
+			<Item Name="BaseElements.UserTask6.Parameters.LogLevel.Value" Value="ERR" />
+			<Item Name="BaseElements.UserTask6.Parameters.Message.Caption" Value="Message" />
+			<Item Name="BaseElements.UserTask6.Parameters.Message.DisplayValue" Value="&quot;BP GIT CLONE: &quot;+[#Clone Repository.Output#]+&quot; &quot;+[#Clone Repository.Error message#]" />
+			<Item Name="BaseElements.UserTask7.Caption" Value="Log out RESTOREW message" />
+			<Item Name="BaseElements.UserTask7.Parameters.LogLevel.Caption" Value="LogLevel" />
+			<Item Name="BaseElements.UserTask7.Parameters.LogLevel.DisplayValue" Value="ERR" />
+			<Item Name="BaseElements.UserTask7.Parameters.LogLevel.Value" Value="ERR" />
+			<Item Name="BaseElements.UserTask7.Parameters.Message.Caption" Value="Message" />
+			<Item Name="BaseElements.UserTask7.Parameters.Message.DisplayValue" Value="&quot;BP  CLIO RESTOREW: &quot;+[#Clio restorew.Error Message#]" />
+			<Item Name="BaseElements.UserTask8.Caption" Value="Log out ADD message" />
+			<Item Name="BaseElements.UserTask8.Parameters.LogLevel.Caption" Value="LogLevel" />
+			<Item Name="BaseElements.UserTask8.Parameters.LogLevel.DisplayValue" Value="ERR" />
+			<Item Name="BaseElements.UserTask8.Parameters.LogLevel.Value" Value="ERR" />
+			<Item Name="BaseElements.UserTask8.Parameters.Message.Caption" Value="Message" />
+			<Item Name="BaseElements.UserTask8.Parameters.Message.DisplayValue" Value="&quot;BP GIT ADD FILES: &quot;+[#Git Add All Files.Output#]+&quot; &quot;+[#Git Add All Files.Error Message#]" />
+			<Item Name="BaseElements.UserTask9.Caption" Value="Log out COMMIT message" />
+			<Item Name="BaseElements.UserTask9.Parameters.LogLevel.Caption" Value="LogLevel" />
+			<Item Name="BaseElements.UserTask9.Parameters.LogLevel.DisplayValue" Value="ERR" />
+			<Item Name="BaseElements.UserTask9.Parameters.LogLevel.Value" Value="ERR" />
+			<Item Name="BaseElements.UserTask9.Parameters.Message.Caption" Value="Message" />
+			<Item Name="BaseElements.UserTask9.Parameters.Message.DisplayValue" Value="&quot;BP GIT COMMIT: &quot;+[#Git Commit.Output#]+&quot; &quot;+[#Git Commit.Error message#]" />
 			<Item Name="Caption" Value="Save Workspace to Git" />
 			<Item Name="Description" Value="Restores the current Creatio state and commits it back to the repository." />
 			<Item Name="LaneSets.LaneSet1.Caption" Value="LaneSet 1" />

@@ -1,0 +1,10 @@
+﻿{
+  "Descriptor": {
+    "UId": "52d04570-7feb-49b6-af4a-57b7b87aa253",
+    "Name": "ATFProcessUserTask_LiveLogger",
+    "ModifiedOnUtc": "\/Date(1757704519000)\/",
+    "ManagerName": "ProcessUserTaskSchemaManager",
+    "Caption": "Log out message",
+    "DependsOn": []
+  }
+}

@@ -20,11 +20,18 @@ public class WebSocketLogger : IWebSocketLogger {
 		_client = factory.CreateClient("initializedClient");
 	}
 	private Uri GetRouteUri() {
+		
+		var absolutePath = _client.BaseAddress?.AbsolutePath ?? string.Empty;
+		absolutePath = string.IsNullOrWhiteSpace(absolutePath) || absolutePath.Equals("/", StringComparison.InvariantCulture)
+			? string.Empty
+			: absolutePath + "/";
+		
 		return _args.Value.IsFramework 
-			? new Uri("0/"+WebSocketEndpoint, UriKind.Relative)
-			: new Uri(WebSocketEndpoint, UriKind.Relative);
+			? new Uri(absolutePath+"0/"+WebSocketEndpoint, UriKind.Relative)
+			: new Uri(absolutePath+WebSocketEndpoint, UriKind.Relative);
 	}
 	public async Task LogAsync(MessageType messageType, string message) {
+		
 		HttpRequestMessage requestMessage = new () {
 			RequestUri = GetRouteUri(),
 			Method = HttpMethod.Post,

@@ -268,11 +268,17 @@ namespace GitAbstraction
 			PushOptions options = new PushOptions() {
 				CredentialsProvider = CredentialsProvider
 			};
-			//Remote remote = InitializedRepository.Network.Remotes["origin"];
-
-			InitializedRepository.Network.Push(branch, options);
-			//InitializedRepository.Network.Push(remote, $"refs/heads/{branch.FriendlyName}", options);
-			return Result.Success;
+			try {
+				InitializedRepository.Network.Push(branch, options);
+				return Result.Success;
+			}
+			catch (Exception e) {
+				string reason = e.Message switch {
+					{ } msg when msg.Contains("unexpected http status code: 403") => $"{msg}, most likely reason is protected branch or insufficient access rights to push to the repository.",
+				    var _ => e.Message
+				};
+				return Error.Failure("PushError", $"Failed to push branch <strong style='color:blue'>{branch.FriendlyName}</strong> to remote repository: <strong>{reason}</strong>");
+			}
 		}
 
 		/// <summary>

@@ -53,6 +53,18 @@
 			<Item Name="BaseElements.UserTask2.Parameters.WaitForExit.DisplayValue" Value="[#Boolean value.False#]" />
 			<Item Name="BaseElements.UserTask2.Parameters.WorkingDirectory.Caption" Value="WorkingDirectory" />
 			<Item Name="BaseElements.UserTask2.Parameters.WorkingDirectory.DisplayValue" Value="[#Clone Repository.Repository Folder Path#]" />
+			<Item Name="BaseElements.UserTask3.Caption" Value="Log out clone message" />
+			<Item Name="BaseElements.UserTask3.Parameters.LogLevel.Caption" Value="LogLevel" />
+			<Item Name="BaseElements.UserTask3.Parameters.LogLevel.DisplayValue" Value="ERR" />
+			<Item Name="BaseElements.UserTask3.Parameters.LogLevel.Value" Value="ERR" />
+			<Item Name="BaseElements.UserTask3.Parameters.Message.Caption" Value="Message" />
+			<Item Name="BaseElements.UserTask3.Parameters.Message.DisplayValue" Value="[#Clone Repository.Output#]+&quot; &quot;+[#Clone Repository.Error message#]" />
+			<Item Name="BaseElements.UserTask4.Caption" Value="Log out pushw message" />
+			<Item Name="BaseElements.UserTask4.Parameters.LogLevel.Caption" Value="LogLevel" />
+			<Item Name="BaseElements.UserTask4.Parameters.LogLevel.DisplayValue" Value="ERR" />
+			<Item Name="BaseElements.UserTask4.Parameters.LogLevel.Value" Value="ERR" />
+			<Item Name="BaseElements.UserTask4.Parameters.Message.Caption" Value="Message" />
+			<Item Name="BaseElements.UserTask4.Parameters.Message.DisplayValue" Value="[#clio pushw.Error Message#]" />
 			<Item Name="Caption" Value="TIDE. Load workspace from Git" />
 			<Item Name="Description" Value="Clones and installs repository." />
 			<Item Name="LaneSets.LaneSet1.Caption" Value="LaneSet 1" />

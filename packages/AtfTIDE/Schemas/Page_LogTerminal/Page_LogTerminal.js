@@ -109,9 +109,11 @@ define("Page_LogTerminal", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 				handler: async (request, next) => {
 					const { $context } = request;
 					
-					request.$context.AllMessages = "Initialize action ...<br>"
-											+"Setup connection to server ...<br>"
-											+"Loading ...";
+					// request.$context.AllMessages = "Initialize action ...<br>"
+					// 						+"Setup connection to server ...<br>"
+					// 						+"Loading ...";
+					
+					request.$context.AllMessages = "";
 					
 					$context.SocketMessageReceivedFunc = async function(event, message) {
 						if (message.Header.Sender === "Clio") {

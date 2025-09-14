@@ -24,6 +24,7 @@ public static class Program
 										logging.ClearProviders();
 										logging.AddConfiguration(context.Configuration.GetSection("Logging"));
 										logging.AddConsole();
+										logging.SetMinimumLevel(LogLevel.Warning);
 									})
 									.ConfigureServices(services => {
 										services.AddSingleton<CommandLineArgs>();
@@ -99,14 +100,16 @@ public static class Program
 		);
 		
 		async Task<int> OnFailure(string commandName, List<Error> errors){
-			await host.Services.GetRequiredService<IWebSocketLogger>()
-					.LogAsync(MessageType.ERR, $"{commandName} command failed with error: {errors.FirstOrDefault().Code} - {errors.FirstOrDefault().Description}");
+			foreach (Error error in errors) {
+				await host.Services.GetRequiredService<IWebSocketLogger>()
+					.LogAsync(MessageType.ERR, $"CONSOLE_GIT: {commandName} command failed with error: {error.Code} - {error.Description}");
+			}
 			return 1;
 		}
 		
 		async Task<int> OnSuccess(string commandName){
 			await host.Services.GetRequiredService<IWebSocketLogger>()
-					.LogAsync(MessageType.INF, $"{commandName} command executed successfully");
+					.LogAsync(MessageType.INF, $"CONSOLE_GIT: {commandName} command executed successfully");
 			return 0;
 		}
 	}

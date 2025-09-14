@@ -85,11 +85,8 @@
 				request: 'crt.HandleViewModelInitRequest',
 				handler: async (request, next) => {
 					const { $context } = request;
-
-					request.$context.AllMessages = "Initialize action ...<br>"
-						+"Setup connection to server ...<br>"
-						+"Loading ...";
-
+					
+					request.$context.AllMessages = "";
 					$context.SocketMessageReceivedFunc = async function(event, message) {
 						if (message.Header.Sender === "Clio") {
 							const body = JSON.parse(message.Body)

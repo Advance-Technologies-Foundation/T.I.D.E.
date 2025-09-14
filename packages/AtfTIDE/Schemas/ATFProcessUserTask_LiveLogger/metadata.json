@@ -1,0 +1,44 @@
+﻿{
+  "MetaData": {
+    "Schema": {
+      "ManagerName": "ProcessUserTaskSchemaManager",
+      "UId": "52d04570-7feb-49b6-af4a-57b7b87aa253",
+      "A2": "ATFProcessUserTask_LiveLogger",
+      "A5": "5d9c4234-87b5-4d7a-ab3d-02f1c4caff70",
+      "B1": [],
+      "B2": [],
+      "B3": [],
+      "B6": "57902d1e-ea0c-4991-b367-992c12d68fb2",
+      "B8": "8.3.0.3074",
+      "FJ1": [
+        {
+          "BL1": "Terrasoft.Core.Process.ProcessSchemaParameter",
+          "UId": "032f0ca3-c7b5-3e93-6d32-741a84afb97e",
+          "A2": "LogLevel",
+          "A3": "52d04570-7feb-49b6-af4a-57b7b87aa253",
+          "A4": "52d04570-7feb-49b6-af4a-57b7b87aa253",
+          "L1": "8b3f29bb-ea14-4ce5-a5c5-293a929b6ba2",
+          "L8": {},
+          "L6": true,
+          "L11": false,
+          "L12": 0
+        },
+        {
+          "BL1": "Terrasoft.Core.Process.ProcessSchemaParameter",
+          "UId": "10f4e977-e9b2-0d5d-f18c-284baa018c34",
+          "A2": "Message",
+          "A3": "52d04570-7feb-49b6-af4a-57b7b87aa253",
+          "A4": "52d04570-7feb-49b6-af4a-57b7b87aa253",
+          "L1": "8b3f29bb-ea14-4ce5-a5c5-293a929b6ba2",
+          "L8": {},
+          "L6": true,
+          "L12": 0
+        }
+      ],
+      "FK4": true,
+      "FK7": true,
+      "FK12": "#839DC3",
+      "FK16": true
+    }
+  }
+}

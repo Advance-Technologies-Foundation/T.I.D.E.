@@ -2,6 +2,8 @@
 <Resources Culture="en-US">
 	<Group Type="String">
 		<Items>
+			<Item Name="BaseElements.ConditionalSequenceFlow2.Caption" Value="On Error" />
+			<Item Name="BaseElements.DefaultSequenceFlow1.Caption" Value="No Error" />
 			<Item Name="BaseElements.LinkEntityToProcessUserTask1.Caption" Value="Log" />
 			<Item Name="BaseElements.LinkEntityToProcessUserTask1.Parameters.EntityId.Caption" Value="Object" />
 			<Item Name="BaseElements.LinkEntityToProcessUserTask1.Parameters.EntityId.DisplayValue" Value="[#Repository#]" />
@@ -14,6 +16,12 @@
 			<Item Name="BaseElements.UserTask1.Parameters.Repository.Caption" Value="Repository" />
 			<Item Name="BaseElements.UserTask1.Parameters.Repository.DisplayValue" Value="[#Repository#]" />
 			<Item Name="BaseElements.UserTask1.Parameters.RepositoryFolderPath.Caption" Value="Repository Folder Path" />
+			<Item Name="BaseElements.UserTask2.Caption" Value="Log out output" />
+			<Item Name="BaseElements.UserTask2.Parameters.LogLevel.Caption" Value="LogLevel" />
+			<Item Name="BaseElements.UserTask2.Parameters.LogLevel.DisplayValue" Value="ERR" />
+			<Item Name="BaseElements.UserTask2.Parameters.LogLevel.Value" Value="ERR" />
+			<Item Name="BaseElements.UserTask2.Parameters.Message.Caption" Value="Message" />
+			<Item Name="BaseElements.UserTask2.Parameters.Message.DisplayValue" Value="[#Clone Repository.Error message#]+&quot; &quot;+[#Clone Repository.Output#]" />
 			<Item Name="Caption" Value="TIDE. Clone repository" />
 			<Item Name="LaneSets.LaneSet1.Caption" Value="LaneSet 1" />
 			<Item Name="LaneSets.LaneSet1.Lanes.Lane1.Caption" Value="Lane 1" />

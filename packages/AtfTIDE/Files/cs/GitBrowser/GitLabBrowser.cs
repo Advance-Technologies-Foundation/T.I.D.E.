@@ -32,6 +32,16 @@ namespace AtfTIDE.GitBrowser
 			_liveLogger = TideApp.Instance.GetRequiredService<ILiveLogger>();
 		}
 
+		
+		/// <summary>
+		/// Finds all repositories on GitLab server
+		/// </summary>
+		/// <param name="gitlabToken">Token to use for seraching, optional</param>
+		/// <returns></returns>
+		/// <exception cref="Exception"></exception>
+		/// <remarks>
+		/// Gitlab <see href="https://docs.gitlab.com/api/projects">docs</see>
+		/// </remarks>
 		public async Task<List<Repository>> GetAllRepositoriesAsync(string gitlabToken) {
 			ConcurrentBag<Repository> repositories = new ConcurrentBag<Repository>();
 			

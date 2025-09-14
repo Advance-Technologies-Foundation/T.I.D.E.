@@ -64,6 +64,18 @@
 			<Item Name="BaseElements.UserTask2.Parameters.Output.Caption" Value="Output" />
 			<Item Name="BaseElements.UserTask2.Parameters.Repository.Caption" Value="Repository" />
 			<Item Name="BaseElements.UserTask2.Parameters.Repository.DisplayValue" Value="[#Repository#]" />
+			<Item Name="BaseElements.UserTask3.Caption" Value="Log out clone message" />
+			<Item Name="BaseElements.UserTask3.Parameters.LogLevel.Caption" Value="LogLevel" />
+			<Item Name="BaseElements.UserTask3.Parameters.LogLevel.DisplayValue" Value="ERR" />
+			<Item Name="BaseElements.UserTask3.Parameters.LogLevel.Value" Value="ERR" />
+			<Item Name="BaseElements.UserTask3.Parameters.Message.Caption" Value="Message" />
+			<Item Name="BaseElements.UserTask3.Parameters.Message.DisplayValue" Value="[#Clone Repository.Output#]+&quot; &quot;+[#Clone Repository.Error message#]" />
+			<Item Name="BaseElements.UserTask4.Caption" Value="Log out restorew message" />
+			<Item Name="BaseElements.UserTask4.Parameters.LogLevel.Caption" Value="LogLevel" />
+			<Item Name="BaseElements.UserTask4.Parameters.LogLevel.DisplayValue" Value="ERR" />
+			<Item Name="BaseElements.UserTask4.Parameters.LogLevel.Value" Value="ERR" />
+			<Item Name="BaseElements.UserTask4.Parameters.Message.Caption" Value="Message" />
+			<Item Name="BaseElements.UserTask4.Parameters.Message.DisplayValue" Value="[#Clio restorew.Error Message#]" />
 			<Item Name="BaseElements.UserTask5.Caption" Value="Clio restorew" />
 			<Item Name="BaseElements.UserTask5.Parameters.Arguments.Caption" Value="Arguments" />
 			<Item Name="BaseElements.UserTask5.Parameters.Arguments.DisplayValue" Value="[#System setting.AtfClioFilePath#]+&quot; restorew -a &quot;+[#Read Application.First item of resulting collection.Code#]" />
@@ -79,6 +91,12 @@
 			<Item Name="BaseElements.UserTask5.Parameters.WaitForExit.DisplayValue" Value="[#Boolean value.True#]" />
 			<Item Name="BaseElements.UserTask5.Parameters.WorkingDirectory.Caption" Value="WorkingDirectory" />
 			<Item Name="BaseElements.UserTask5.Parameters.WorkingDirectory.DisplayValue" Value="[#Clone Repository.Repository Folder Path#]" />
+			<Item Name="BaseElements.UserTask6.Caption" Value="Log out message 1" />
+			<Item Name="BaseElements.UserTask6.Parameters.LogLevel.Caption" Value="LogLevel" />
+			<Item Name="BaseElements.UserTask6.Parameters.LogLevel.DisplayValue" Value="ERR" />
+			<Item Name="BaseElements.UserTask6.Parameters.LogLevel.Value" Value="ERR" />
+			<Item Name="BaseElements.UserTask6.Parameters.Message.Caption" Value="Message" />
+			<Item Name="BaseElements.UserTask6.Parameters.Message.DisplayValue" Value="[#Git Add All Files.Output#]+&quot; &quot;+[#Git Add All Files.Error Message#]" />
 			<Item Name="Caption" Value="Export app to local Git copy" />
 			<Item Name="Description" Value="Restores the current Creatio state and commits it back to the repository." />
 			<Item Name="LaneSets.LaneSet1.Caption" Value="LaneSet 1" />
