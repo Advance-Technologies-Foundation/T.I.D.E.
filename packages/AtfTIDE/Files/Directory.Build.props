@@ -4,5 +4,6 @@
 		<Compile Include="$(PkgPath)/AtfTIDE/Schemas/AtfGitServer/AtfGitServer.cs" Condition="Exists('$(PkgPath)/AtfTIDE/Schemas/AtfGitServer/AtfGitServer.cs')" />
 		<Compile Include="$(PkgPath)/AtfTIDE/Schemas/AtfRepository/AtfRepository.cs" Condition="Exists('$(PkgPath)/AtfTIDE/Schemas/AtfRepository/AtfRepository.cs')" />
 		<Compile Include="$(PkgPath)/AtfTIDE/Schemas/AtfRepositoryBranch/AtfRepositoryBranch.cs" Condition="Exists('$(PkgPath)/AtfTIDE/Schemas/AtfRepositoryBranch/AtfRepositoryBranch.cs')" />
+		<Compile Include="$(PkgPath)/AtfTIDE/Schemas/AtfVirtual_GitLabProject/AtfVirtual_GitLabProject.cs" Condition="Exists('$(PkgPath)/AtfTIDE/Schemas/AtfVirtual_GitLabProject/AtfVirtual_GitLabProject.cs')" />
 	</ItemGroup>
 </Project>

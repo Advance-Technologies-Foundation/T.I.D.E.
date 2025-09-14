@@ -1,0 +1,14 @@
+﻿{
+  "Descriptor": {
+    "UId": "8a009515-76bb-4a23-9a5f-815876ba24c5",
+    "Name": "AtfVirtual_GitLabProject",
+    "ModifiedOnUtc": "\/Date(1757852020000)\/",
+    "Parent": {
+      "UId": "1bab9dcf-17d5-49f8-9536-8e0064f1dce0",
+      "Name": "BaseEntity"
+    },
+    "ManagerName": "EntitySchemaManager",
+    "Caption": "GitLab Project",
+    "DependsOn": []
+  }
+}

@@ -1,0 +1,13 @@
+﻿{
+  "Descriptor": {
+    "UId": "c018d2c7-1516-4c0d-a2ac-ac0de8f83344",
+    "Name": "AtfMiniPage_GitlabSearch",
+    "ModifiedOnUtc": "\/Date(1757851911000)\/",
+    "Parent": {
+      "UId": "ecdcc8ff-272c-4957-9381-7d74ce17e140",
+      "Name": "BaseMiniPageTemplate"
+    },
+    "ManagerName": "ClientUnitSchemaManager",
+    "Caption": "New modal page"
+  }
+}

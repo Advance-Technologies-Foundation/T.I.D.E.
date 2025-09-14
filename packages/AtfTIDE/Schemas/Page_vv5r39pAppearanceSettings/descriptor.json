@@ -1,0 +1,10 @@
+﻿{
+  "Descriptor": {
+    "UId": "7f84f595-fddc-4120-8d22-25e2716b889d",
+    "Name": "Page_vv5r39pAppearanceSettings",
+    "ModifiedOnUtc": "\/Date(1757848802000)\/",
+    "ManagerName": "AddonSchemaManager",
+    "Caption": "New modal page (AppearanceSettings)",
+    "DependsOn": []
+  }
+}

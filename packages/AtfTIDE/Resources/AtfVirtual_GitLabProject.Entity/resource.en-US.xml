@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="en-US">
+	<Group Type="String">
+		<Items>
+			<Item Name="Caption" Value="GitLab Project" />
+			<Item Name="Columns.AtfGitServer.Caption" Value="Git Server" />
+			<Item Name="Columns.CloneUrl.Caption" Value="Clone Url" />
+			<Item Name="Columns.CloneUrl.Description" Value="Project clone url (http_url_to_repo)" />
+			<Item Name="Columns.Description.Caption" Value="Description" />
+			<Item Name="Columns.Description.Description" Value="Project description" />
+			<Item Name="Columns.Name.Caption" Value="Name" />
+			<Item Name="Columns.Name.Description" Value="Project name" />
+			<Item Name="Columns.NameSpace.Caption" Value="Name Space" />
+			<Item Name="Columns.NameSpace.Description" Value="Project namespace" />
+			<Item Name="Columns.ProjectId.Caption" Value="Project Id" />
+			<Item Name="Columns.ProjectId.Description" Value="Project Id" />
+			<Item Name="Description" Value="Virtual entity over Gitlab projects" />
+		</Items>
+	</Group>
+</Resources>
