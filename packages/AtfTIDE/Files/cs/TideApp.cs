@@ -2,7 +2,10 @@
 using System.Collections.Generic;
 using System.IO.Abstractions;
 using System.Linq;
+using System.Net.Http.Headers;
 using AtfTIDE.ClioInstaller;
+using AtfTIDE.GitBrowser;
+using AtfTIDE.GitBrowser.GitLab;
 using AtfTIDE.HttpClient;
 using AtfTIDE.Logging;
 using AtfTIDE.QueryExecutor;
@@ -49,6 +52,15 @@ namespace AtfTIDE {
 			serviceCollection.AddSingleton<IEsqFilterParser, EsqFilterParser>();
 			serviceCollection.AddSingleton<IEsqColumnParser, EsqColumnParser>();
 			serviceCollection.AddSingleton<IWebSocket, WebSocket>();
+			
+			serviceCollection.AddTransient<IGitlabProvider, GitlabProvider>();
+			serviceCollection.AddHttpClient("GitLab", client => {;
+				client.Timeout = TimeSpan.FromSeconds(60);
+				ProductInfoHeaderValue userAgentHeader =  new ProductInfoHeaderValue("Creatio_Tide", "1.0");
+				client.DefaultRequestHeaders.UserAgent.Add(userAgentHeader);
+			});
+			
+			
 			serviceCollection.AddGitlabClient();
 			serviceCollection.AddNugetClient();
 			serviceCollection.AddGithubClient();
@@ -90,7 +102,7 @@ namespace AtfTIDE {
 		public T GetRequiredService<T>() => _serviceProvider.Value.GetRequiredService<T>();
 
 		public T GetService<T>() => _serviceProvider.Value.GetService<T>();
-
+		
 		#endregion
 
 	}

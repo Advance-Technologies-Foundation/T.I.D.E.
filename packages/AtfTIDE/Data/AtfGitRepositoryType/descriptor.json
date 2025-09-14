@@ -1,0 +1,35 @@
+﻿{
+  "Descriptor": {
+    "UId": "8173100d-6db2-62db-afde-5c20af271f81",
+    "Name": "AtfGitRepositoryType",
+    "ModifiedOnUtc": "\/Date(1757861453000)\/",
+    "InstallType": 0,
+    "Schema": {
+      "UId": "807d01c4-906e-4df4-885c-c5efe66692b6",
+      "Name": "AtfGitRepositoryType"
+    },
+    "Columns": [
+      {
+        "ColumnUId": "9e53fd7c-dde4-4502-a64c-b9e34148108b",
+        "IsForceUpdate": false,
+        "IsKey": false,
+        "ColumnName": "Description",
+        "DataTypeValueUId": "ddb3a1ee-07e8-4d62-b7a9-d0e618b00fbd"
+      },
+      {
+        "ColumnUId": "736c30a7-c0ec-4fa9-b034-2552b319b633",
+        "IsForceUpdate": false,
+        "IsKey": false,
+        "ColumnName": "Name",
+        "DataTypeValueUId": "ddb3a1ee-07e8-4d62-b7a9-d0e618b00fbd"
+      },
+      {
+        "ColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+        "IsForceUpdate": false,
+        "IsKey": true,
+        "ColumnName": "Id",
+        "DataTypeValueUId": "23018567-a13c-4320-8687-fd6f9e3699bd"
+      }
+    ]
+  }
+}

@@ -1,4 +1,5 @@
-﻿using ATF.Repository;
+﻿using System;
+using ATF.Repository;
 using ATF.Repository.Attributes;
 
 namespace AtfTIDE.RepositoryModels{
@@ -23,6 +24,9 @@ namespace AtfTIDE.RepositoryModels{
 		
 		[SchemaProperty("UserName")]
 		public string UserName { get; set; }
+		
+		[SchemaProperty("GitRepositoryTypeId")]
+		public Guid GitRepositoryTypeId { get; set; }
 		
 	}
 

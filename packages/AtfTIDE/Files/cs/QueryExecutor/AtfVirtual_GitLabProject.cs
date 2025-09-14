@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json.Serialization;
 using ATF.Repository;
 using ATF.Repository.Providers;
+using AtfTIDE.GitBrowser;
+using AtfTIDE.GitBrowser.GitLab;
 using AtfTIDE.RepositoryModels;
 using Common.Logging;
+using Terrasoft.Common;
 using Terrasoft.Core;
 using Terrasoft.Core.Entities;
 using Terrasoft.Core.Factories;
@@ -23,9 +25,42 @@ namespace AtfTIDE.QueryExecutor{
 			_userConnection = ClassFactory.Get<UserConnection>();
 			_logger = LogManager.GetLogger(TideConsts.LoggerName);
 		}
+		
+		private IEnumerable<string> GetNameSpaceFromEsq(IEsqFilterParser esqFilterParser, EntitySchemaQuery esq){
+			string titleFilterValue = esqFilterParser.GetEsqFilterValueByKey("NameSpace", esq);
+			return string.IsNullOrWhiteSpace(titleFilterValue)
+				? Array.Empty<string>()
+				: titleFilterValue.Split(',');
+		}
+		private IEnumerable<string> GetNameFromEsq(IEsqFilterParser esqFilterParser, EntitySchemaQuery esq){
+			string titleFilterValue = esqFilterParser.GetEsqFilterValueByKey("Name", esq);
+			return string.IsNullOrWhiteSpace(titleFilterValue)
+				? Array.Empty<string>()
+				: titleFilterValue.Split(',');
+		}
+		
 		public EntityCollection GetEntityCollection(EntitySchemaQuery esq) {
+			
 			EntitySchema schema = esq.RootSchema;
 			EntityCollection collection = new EntityCollection(_userConnection, schema);
+
+
+			IEsqFilterParser esqFilterParser = TideApp.Instance.GetRequiredService<IEsqFilterParser>();
+			string keywordsFilterValue = esqFilterParser.GetSearchBoxFilterValue(esq);
+			IEnumerable<string> nameSpaceFilter = GetNameSpaceFromEsq(esqFilterParser, esq);
+			IEnumerable<string> repositoryNameFilter = GetNameFromEsq(esqFilterParser, esq);
+
+			var defaultGitServer = FindDefaultGitServer(_userConnection);
+			// if (defaultGitServer.Url) {
+			// 	
+			// }
+			//
+			// IGitlabProvider x = TideApp.Instance.GetRequiredService<IGitlabProvider>();
+			// x.Configure(null, "")
+			// 	.GetAllRepositoriesAsync();
+			
+			
+			
 			List<ProjectDto> projects = new List<ProjectDto> {
 				new ProjectDto {
 					ProjectId = 1150,
@@ -96,55 +131,5 @@ namespace AtfTIDE.QueryExecutor{
 		}
 	}
 
-	public class ProjectDto{
-		[JsonPropertyName("id")]
-		public int ProjectId { get; set; }
-	
-		[JsonPropertyName("description")]
-		public string Description { get; set; }
-		
-		[JsonPropertyName("name")]
-		public string Name { get; set; }
-		
-		[JsonPropertyName("namespace")]
-		public NameSpace Namespace { get; set; }
-		
-		[JsonPropertyName("created_at")]
-		public DateTime CreatedOn { get; set; }
-
-		[JsonPropertyName("last_activity_at")]
-		public DateTime ModifiedOn { get; set; }
-		
-		[JsonPropertyName("created_at")]
-		public Uri CloneUrl { get; set; }
-		
-	}
-	
-	
-	public class NameSpace{
-		[JsonPropertyName("id")]
-		public int Id { get; set; }
-		
-		[JsonPropertyName("name")]
-		public string Name { get; set; }
-		
-		[JsonPropertyName("kind")]
-		public string Kind { get; set; }
-		
-		[JsonPropertyName("path")]
-		public string Path { get; set; }
-		
-		[JsonPropertyName("full_path")]
-		public string FullPath { get; set; }
-		
-		[JsonPropertyName("parent_id")]
-		public int ParentId { get; set; }
-	}
-	
-	
-	
-	
-	
-	
 }
 
