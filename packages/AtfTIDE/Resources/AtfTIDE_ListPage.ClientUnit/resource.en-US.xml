@@ -7,6 +7,7 @@
 			<Item Name="LocalizableStrings.Button_SearchGitlab_caption.Value" Value="Search Gitlab" />
 			<Item Name="LocalizableStrings.Button_ynk6wyx_caption.Value" Value="Open Git Servers list" />
 			<Item Name="LocalizableStrings.MenuItem_InstallConsoleGit_caption.Value" Value="Install console git" />
+			<Item Name="LocalizableStrings.MenuItem_SearchGitlab_caption.Value" Value="Search Gitlab" />
 			<Item Name="LocalizableStrings.MenuItem_UpdateClio_caption.Value" Value="Install / Update clio" />
 			<Item Name="LocalizableStrings.MenuItem_UpdateTide_caption.Value" Value="Update Tide" />
 		</Items>

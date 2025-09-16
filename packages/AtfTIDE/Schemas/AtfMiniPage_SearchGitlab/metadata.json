@@ -1,0 +1,22 @@
+= MetaData.Schema.UId "4c5cad80-7900-4f47-b26c-f24d9a0bce07"
+= MetaData.Schema.A2 "AtfMiniPage_SearchGitlab"
+= MetaData.Schema.A5 "5d9c4234-87b5-4d7a-ab3d-02f1c4caff70"
+= MetaData.Schema.B2.["12e87b16-8338-ea6d-a3be-c7e960775583"].A4 "4c5cad80-7900-4f47-b26c-f24d9a0bce07"
+= MetaData.Schema.B2.["12e87b16-8338-ea6d-a3be-c7e960775583"].A5 "5d9c4234-87b5-4d7a-ab3d-02f1c4caff70"
+= MetaData.Schema.B2.["9e67bb67-9f6f-c98a-3a6a-f0441549530f"].A4 "4c5cad80-7900-4f47-b26c-f24d9a0bce07"
+= MetaData.Schema.B2.["9e67bb67-9f6f-c98a-3a6a-f0441549530f"].A5 "5d9c4234-87b5-4d7a-ab3d-02f1c4caff70"
+= MetaData.Schema.B2.["67cfdae6-3eeb-e869-c4ed-136c8f4e9f04"].A4 "4c5cad80-7900-4f47-b26c-f24d9a0bce07"
+= MetaData.Schema.B2.["67cfdae6-3eeb-e869-c4ed-136c8f4e9f04"].A5 "5d9c4234-87b5-4d7a-ab3d-02f1c4caff70"
+= MetaData.Schema.B2.["65a6dc18-881a-ef93-ff94-aa0286bbedbc"].A4 "4c5cad80-7900-4f47-b26c-f24d9a0bce07"
+= MetaData.Schema.B2.["65a6dc18-881a-ef93-ff94-aa0286bbedbc"].A5 "5d9c4234-87b5-4d7a-ab3d-02f1c4caff70"
+= MetaData.Schema.B2.["27cba32a-df1c-f94e-4e20-3f070f6096a0"].A4 "4c5cad80-7900-4f47-b26c-f24d9a0bce07"
+= MetaData.Schema.B2.["27cba32a-df1c-f94e-4e20-3f070f6096a0"].A5 "5d9c4234-87b5-4d7a-ab3d-02f1c4caff70"
+= MetaData.Schema.B2.["7fa5cea9-ee3a-7056-f24b-42d22a3ddfed"].A4 "4c5cad80-7900-4f47-b26c-f24d9a0bce07"
+= MetaData.Schema.B2.["7fa5cea9-ee3a-7056-f24b-42d22a3ddfed"].A5 "5d9c4234-87b5-4d7a-ab3d-02f1c4caff70"
+~ MetaData.Schema.B2 ["12e87b16-8338-ea6d-a3be-c7e960775583","9e67bb67-9f6f-c98a-3a6a-f0441549530f","67cfdae6-3eeb-e869-c4ed-136c8f4e9f04","65a6dc18-881a-ef93-ff94-aa0286bbedbc","27cba32a-df1c-f94e-4e20-3f070f6096a0","7fa5cea9-ee3a-7056-f24b-42d22a3ddfed"]
+= MetaData.Schema.B6 "57902d1e-ea0c-4991-b367-992c12d68fb2"
+= MetaData.Schema.B8 "8.3.0.3074"
+= MetaData.Schema.HD1 "ac545d45-b915-46c9-ad64-806407e620a4"
++ MetaData.Schema.HD15 1
+= MetaData.Schema.HD6 "define('{0}Structure', ['{0}Resources'], function(resources) {{return {{schemaUId:'{2}',schemaName:'{3}',parentSchemaUId:'{4}',extendParent:{5},type:Terrasoft.SchemaType.ANGULAR_SCHEMA,entitySchema:'',name:'',extend:'Terrasoft.model.BaseViewModel',schema:{{leftPanel:[],rightPanel:[],actions:[],analytics:[]}},methods:{{}},controlsConfig:{{}},customBindings:{{}},bindings:{{}},parameters:{{}},schemaVersion:1,optionalProperties:{{}},schemaDifferences:function(){{\n{1}\n}}}};}});"
++ MetaData.Schema.B7 false

@@ -105,6 +105,7 @@ namespace AtfTIDE.QueryExecutor{
 			EntitySchemaColumn gColumn = entity.Schema.Columns.FindByName("AtfGitServer");
 			entity.SetColumnBothValues(gColumn, defaultGitServer.Id, defaultGitServer.Name);
 			
+			entity.SetColumnValue("Id", Guid.NewGuid());
 			entity.SetColumnValue("ProjectId", project.ProjectId);
 			entity.SetColumnValue("Name", project.Name);
 			entity.SetColumnValue("Description", project.Description);

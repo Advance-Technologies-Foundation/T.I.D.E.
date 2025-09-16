@@ -172,9 +172,10 @@ define("AtfTIDE_ListPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 					"iconPosition": "only-text",
 					"visible": true,
 					"clicked": {
-						"request": "crt.OpenPageRequest",
+						"request": "crt.OpenSelectionWindowRequest",
 						"params": {
-							"schemaName": "AtfMiniPage_GitlabSearch"
+							"schemaName": "AtfMiniPage_SeatrchGitlab",
+							"entitySchemaName": "AtfVirtual_GitLabProject"
 						}
 					},
 					"clickMode": "default"
@@ -279,6 +280,22 @@ define("AtfTIDE_ListPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 				"parentName": "ActionButton",
 				"propertyName": "menuItems",
 				"index": 3
+			},
+			{
+				"operation": "insert",
+				"name": "MenuItem_SearchGitlab",
+				"values": {
+					"type": "crt.MenuItem",
+					"caption": "#ResourceString(MenuItem_SearchGitlab_caption)#",
+					"visible": true,
+					"icon": "view-eye-icon",
+					"clicked": {
+						"request": "atf.SearchGitlab"
+					},
+				},
+				"parentName": "ActionButton",
+				"propertyName": "menuItems",
+				"index": 4
 			},
 			{
 				"operation": "insert",
@@ -658,6 +675,31 @@ define("AtfTIDE_ListPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 					const endpoint = "rest/Tide/InstallConsoleGit";
 					const httpClientService = new sdk.HttpClientService();
 					const response = await httpClientService.get(endpoint);
+				}
+			},
+			{
+				request: "atf.SearchGitlab",
+				handler: async (request, next) => {
+					const handlerChain = sdk.HandlerChainService.instance;
+					await handlerChain.process({
+						type: "crt.OpenSelectionWindowRequest",
+						$context: request.$context,
+						scopes: [...request.scopes],
+						schemaName: 'AtfMiniPage_SearchGitlab',
+						entitySchemaName: "AtfVirtual_GitLabProject",
+						showNotification: true,
+						afterClosed: async (result) => {
+							if (!result.canceled) {
+								const lookupValues = await result.getLookupValues();
+								console.log(lookupValues);
+								const value = lookupValues[0];
+								if (value) {
+									alert(value?.displayValue ?? '');
+								}
+							}
+						},
+					});
+					return next?.handle(request);
 				}
 			}
 			

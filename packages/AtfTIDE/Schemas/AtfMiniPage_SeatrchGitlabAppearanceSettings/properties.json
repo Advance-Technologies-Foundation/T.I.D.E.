@@ -1,0 +1,8 @@
+﻿{
+  "Properties": {
+    "AddonName": "AppearanceSettings",
+    "CreatedInVersion": "8.3.0.3074",
+    "TargetSchemaManagerName": "ClientUnitSchemaManager",
+    "TargetSchemaUId": "4c5cad80-7900-4f47-b26c-f24d9a0bce07"
+  }
+}

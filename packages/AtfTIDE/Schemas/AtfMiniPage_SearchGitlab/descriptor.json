@@ -1,0 +1,13 @@
+﻿{
+  "Descriptor": {
+    "UId": "4c5cad80-7900-4f47-b26c-f24d9a0bce07",
+    "Name": "AtfMiniPage_SearchGitlab",
+    "ModifiedOnUtc": "\/Date(1757928582000)\/",
+    "Parent": {
+      "UId": "ac545d45-b915-46c9-ad64-806407e620a4",
+      "Name": "BaseLookupPageTemplate"
+    },
+    "ManagerName": "ClientUnitSchemaManager",
+    "Caption": "Search Gitlab"
+  }
+}
