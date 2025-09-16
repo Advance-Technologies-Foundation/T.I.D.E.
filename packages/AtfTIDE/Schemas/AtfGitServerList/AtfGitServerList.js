@@ -51,38 +51,6 @@ define("AtfGitServerList", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHEMA
 			},
 			{
 				"operation": "remove",
-				"name": "SearchFilter",
-				"properties": [
-					"targetAttributes"
-				]
-			},
-			{
-				"operation": "merge",
-				"name": "SearchFilter",
-				"values": {
-					"_filterOptions": {
-						"expose": [
-							{
-								"attribute": "SearchFilter_Items",
-								"converters": [
-									{
-										"converter": "crt.SearchFilterAttributeConverter",
-										"args": [
-											"Items"
-										]
-									}
-								]
-							}
-						],
-						"from": [
-							"SearchFilter_SearchValue",
-							"SearchFilter_FilteredColumnsGroups"
-						]
-					}
-				}
-			},
-			{
-				"operation": "remove",
 				"name": "RightFilterContainer"
 			},
 			{
@@ -125,6 +93,19 @@ define("AtfGitServerList", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHEMA
 							"code": "PDS_AccessToken",
 							"caption": "#ResourceString(PDS_AccessToken)#",
 							"dataValueType": 28
+						},
+						{
+							"id": "f3527aa4-0dcc-f5c8-f7ff-c750d472d24e",
+							"code": "PDS_Default",
+							"caption": "#ResourceString(PDS_Default)#",
+							"dataValueType": 12,
+							"width": 194
+						},
+						{
+							"id": "729d6795-b786-b5fe-f54a-c092a5d08068",
+							"code": "PDS_GitRepositoryType",
+							"caption": "#ResourceString(PDS_GitRepositoryType)#",
+							"dataValueType": 10
 						}
 					],
 					"placeholder": false,
@@ -233,6 +214,16 @@ define("AtfGitServerList", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHEMA
 						"modelConfig": {
 							"path": "PDS.AccessToken"
 						}
+					},
+					"PDS_Default": {
+						"modelConfig": {
+							"path": "PDS.Default"
+						}
+					},
+					"PDS_GitRepositoryType": {
+						"modelConfig": {
+							"path": "PDS.GitRepositoryType"
+						}
 					}
 				}
 			},
@@ -289,6 +280,12 @@ define("AtfGitServerList", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHEMA
 						},
 						"AccessToken": {
 							"path": "AccessToken"
+						},
+						"Default": {
+							"path": "Default"
+						},
+						"GitRepositoryType": {
+							"path": "GitRepositoryType"
 						}
 					}
 				}

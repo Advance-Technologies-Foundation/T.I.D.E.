@@ -4,6 +4,7 @@
     "Name": "AtfPageSidebar_LogsSidebar",
     "ModifiedOnUtc": "\/Date(1758015803000)\/",
     "ManagerName": "AddonSchemaManager",
-    "Caption": "Atf Logs (Sidebar)"
+    "Caption": "Atf Logs (Sidebar)",
+    "DependsOn": []
   }
 }
