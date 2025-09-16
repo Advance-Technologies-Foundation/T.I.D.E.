@@ -52,27 +52,46 @@ clio install-tide -e <target_environment>
 # Overview
 TIDE provides you a user interface for synchronizing changes to Git repositories. It'll use clio and Git to synchronize the changes between Creatio instance and source control repository. 
 
-To start working, log in to Creatio, go to *All apps -> TIDE*. Press [...] (Actions) -> *Install console git*. Wait about 30 sec for the operation to complete.
-
 To authenticate Git operations on your behalf, you'll need to generate a personal access token for your repository. See [creating access token](/access-tokens.md). 
 
-TIDE allows you to work with multiple Git repositories. You do all source control operations within a context of a repository.
+TIDE allows you to work with multiple Git repositories. You do all source control operations within a context of a repository. You can see the list of repositories in the *TIDE* section.
 
 # Connecting to a Repository
-1. Press *New* button, go to *General information* tab.
+1. Press *Add Repository* button, go to *General information* tab.
 2. *User name* - your user email.
 3. *Access token* - paste your personal access token.
 4. *Repository Url* - paste repository clone URL. 
 5. Press *Save* 
 
 # Installing Application from Git
-1. Press *Load from Git* to download the application packages from repository and install the application to Creatio.
+1. Press *Update from Git* to download the application packages from repository and install the application to Creatio.
 2. Now you can start making changes using Creatio no-code tools.
 
 # Synchronizing Changes
-1. Press *Save to Git* to commit changes to Git
+Go to *Source Control* tab.
+1. Press *Commit to Git* to commit changes to Git
 2. Enter commit message
 
+# Reviewing Changes
+1. Press Load changes to local copy from Creatio
+2. Now review all changed files
+
+# Branching (experimental)
+> **_NOTE:_**  New branches have to be created outside TIDE.
+1. Go to *Branches* tab
+2. Press *Synchronize branches with repository* to update the list of available branches.
+3. Press *Set active branch* to set current working branch.
 
 # Troubleshooting
-Open Process log, see what business processes from package *AtfTIDE* were executed. Select a process -> Execution diagram to see its execution details.
+You can access log by clicking *View logs* button at the top of the toolbar. The logs will be shown in the right-hand side panel.
+
+## Possible Issues
+During installation, TIDE installs to the target Creatio two additional components:
+1. Git console. 
+2. clio-gate.
+If your source control operations are failing, check that those two components are installed. 
+
+Also check if your token is valid and has read/write permissions.
+
+## Business Processes 
+Open Process log, see what business processes from package *AtfTIDE* were executed. Select a process -> *Execution diagram* to see its execution details. You can [enable business process tracing](https://academy.creatio.com/docs/user/bpm_tools/business_process_administration/trace_process_parameters/trace_process) to get more details.
