@@ -24,7 +24,18 @@ define("AtfTIDE_ListPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 				"operation": "merge",
 				"name": "AddButton",
 				"values": {
-					"size": "large"
+					"caption": "#ResourceString(AddButton_caption)#",
+					"size": "large",
+					"visible": true,
+					"clickMode": "default"
+				}
+			},
+			{
+				"operation": "merge",
+				"name": "DataImportButton",
+				"values": {
+					"caption": "#ResourceString(DataImportButton_caption)#",
+					"visible": false
 				}
 			},
 			{
@@ -162,30 +173,6 @@ define("AtfTIDE_ListPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 			},
 			{
 				"operation": "insert",
-				"name": "Button_SearchGitlab",
-				"values": {
-					"type": "crt.Button",
-					"caption": "#ResourceString(Button_SearchGitlab_caption)#",
-					"color": "default",
-					"disabled": false,
-					"size": "large",
-					"iconPosition": "only-text",
-					"visible": true,
-					"clicked": {
-						"request": "crt.OpenSelectionWindowRequest",
-						"params": {
-							"schemaName": "AtfMiniPage_SeatrchGitlab",
-							"entitySchemaName": "AtfVirtual_GitLabProject"
-						}
-					},
-					"clickMode": "default"
-				},
-				"parentName": "ActionButtonsContainer",
-				"propertyName": "items",
-				"index": 0
-			},
-			{
-				"operation": "insert",
 				"name": "Button_Install_Updates",
 				"values": {
 					"type": "crt.Button",
@@ -202,7 +189,7 @@ define("AtfTIDE_ListPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 				},
 				"parentName": "ActionButtonsContainer",
 				"propertyName": "items",
-				"index": 1
+				"index": 0
 			},
 			{
 				"operation": "insert",
@@ -225,7 +212,7 @@ define("AtfTIDE_ListPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 				},
 				"parentName": "ActionButtonsContainer",
 				"propertyName": "items",
-				"index": 3
+				"index": 2
 			},
 			{
 				"operation": "insert",
@@ -291,7 +278,7 @@ define("AtfTIDE_ListPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 					"icon": "view-eye-icon",
 					"clicked": {
 						"request": "atf.SearchGitlab"
-					},
+					}
 				},
 				"parentName": "ActionButton",
 				"propertyName": "menuItems",
