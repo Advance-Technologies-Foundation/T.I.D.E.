@@ -29,6 +29,10 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 				}
 			},
 			{
+				"operation": "remove",
+				"name": "CardButtonToggleGroup"
+			},
+			{
 				"operation": "merge",
 				"name": "CardContentWrapper",
 				"values": {
@@ -102,12 +106,14 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 				"operation": "merge",
 				"name": "CardToggleTabPanel",
 				"values": {
+					"mode": "tab",
 					"styleType": "default",
 					"bodyBackgroundColor": "primary-contrast-500",
 					"selectedTabTitleColor": "auto",
 					"tabTitleColor": "auto",
 					"underlineSelectedTabColor": "auto",
-					"headerBackgroundColor": "auto"
+					"headerBackgroundColor": "auto",
+					"visible": false
 				}
 			},
 			{
@@ -174,7 +180,7 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 				"values": {
 					"type": "crt.Button",
 					"caption": "#ResourceString(Button_SaveToGit_Green_caption)#",
-					"color": "accent",
+					"color": "warn",
 					"disabled": false,
 					"size": "large",
 					"iconPosition": "left-icon",
@@ -188,27 +194,6 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 				"parentName": "CardToggleContainer",
 				"propertyName": "items",
 				"index": 1
-			},
-			{
-				"operation": "insert",
-				"name": "Button_OpenModalWindow",
-				"values": {
-					"type": "crt.Button",
-					"caption": "#ResourceString(Button_OpenModalWindow_caption)#",
-					"color": "outline",
-					"disabled": false,
-					"size": "medium",
-					"iconPosition": "left-icon",
-					"visible": false,
-					"icon": "codeblock-icon",
-					"clicked": {
-						"request": "atf.Button_OpenModalWindowClicked"
-					},
-					"clickMode": "default"
-				},
-				"parentName": "CardToggleContainer",
-				"propertyName": "items",
-				"index": 2
 			},
 			{
 				"operation": "insert",
@@ -315,7 +300,7 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 					},
 					"color": "primary",
 					"borderRadius": "medium",
-					"visible": true,
+					"visible": false,
 					"alignItems": "stretch"
 				},
 				"parentName": "SideContainer",
@@ -999,7 +984,8 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 						}
 					},
 					"clickMode": "default",
-					"icon": null
+					"icon": null,
+					"menuItems": []
 				},
 				"parentName": "FlexContainer_mirw4pt",
 				"propertyName": "items",
@@ -1007,24 +993,15 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 			},
 			{
 				"operation": "insert",
-				"name": "Button_GetDiff",
+				"name": "MenuItem_mw2qo3j",
 				"values": {
-					"type": "crt.Button",
-					"caption": "#ResourceString(Button_GetDiff_caption)#",
-					"color": "accent",
-					"disabled": false,
-					"size": "large",
-					"iconPosition": "only-text",
-					"clicked": {
-						"request": "atf.OnGetDiffCLicked"
-					},
-					"visible": true,
-					"icon": null,
-					"clickMode": "default"
+					"type": "crt.MenuItem",
+					"caption": "#ResourceString(MenuItem_mw2qo3j_caption)#",
+					"visible": true
 				},
-				"parentName": "FlexContainer_mirw4pt",
-				"propertyName": "items",
-				"index": 1
+				"parentName": "Button_LoadChangesToLocalCopy",
+				"propertyName": "menuItems",
+				"index": 0
 			},
 			{
 				"operation": "insert",
@@ -1050,7 +1027,7 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 				},
 				"parentName": "FlexContainer_mirw4pt",
 				"propertyName": "items",
-				"index": 2
+				"index": 1
 			},
 			{
 				"operation": "insert",
@@ -1077,7 +1054,7 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 				},
 				"parentName": "FlexContainer_mirw4pt",
 				"propertyName": "items",
-				"index": 3
+				"index": 2
 			},
 			{
 				"operation": "insert",
@@ -2094,6 +2071,15 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 					"PDS_AtfRepositoryUrl_yidr394": {
 						"modelConfig": {
 							"path": "PDS.AtfRepositoryUrl"
+						},
+						"validators": {
+							GitLinkValidator: {
+								type: "atf.ShouldEndWithGitAndBeAlink",
+								disabled: false,
+								params: {
+									message: "Must be an <b>HTTP(S)</b> and must end with <b>.git</b>",
+								}
+							}
 						}
 					},
 					"PDS_AtfAccessToken_nzu843o": {
@@ -2412,20 +2398,6 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 				}
 			},
 			
-			//Button_OpenModalWindow
-			{
-				request: 'atf.Button_OpenModalWindowClicked',
-				handler: async (request, next) => {
-					const handlerChain = sdk.HandlerChainService.instance;
-					await handlerChain.process({
-						type: 'crt.OpenPageRequest',
-						$context: request.$context,
-						scopes: [...request.scopes],
-						schemaName: "Page_LogTerminal"
-					});
-				}
-			},
-			
 			{
 				request: 'crt.HandleViewModelInitRequest',
 				handler: async (request, next) => {
@@ -2441,15 +2413,6 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 
 
 					$context.SocketMessageReceivedFunc = async function(event, message) {
-						// if (message.Header.Sender === "Clio") {
-						// 	const body = JSON.parse(message.Body)
-						// 	if(body.commandName ==='Show logs') {
-						// 		const allMessages = await request.$context.AllMessages ?? "";
-						// 		// request.$context.AllMessages = body.message?.trim() +  "\r\n" + allMessages;
-						// 		request.$context.AllMessages = body.message?.trim() + "<br/>" + "\r\n" + allMessages;
-						// 	}
-						// }
-						
 						if (message.Header.Sender === "ATFProcessUserTask_ShowTerminal") {
 							const body = JSON.parse(message.Body)
 							if(body.commandName && body.commandName === "ShowLogTerminal"){
@@ -2548,6 +2511,32 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 
 		]/**SCHEMA_HANDLERS*/,
 		converters: /**SCHEMA_CONVERTERS*/{}/**SCHEMA_CONVERTERS*/,
-		validators: /**SCHEMA_VALIDATORS*/{}/**SCHEMA_VALIDATORS*/
+		validators: /**SCHEMA_VALIDATORS*/{
+			"atf.ShouldEndWithGitAndBeAlink":{
+				"validator": function (config) {
+					return function (control) {
+						if (!control.value) {
+							//return Promise.resolve(null)
+							return null;
+						}
+						const regExp = /^https?:\/\/.+\.git$/i;
+						const isValid = regExp.test(control.value);
+						
+						if(isValid){
+							//return Promise.resolve(null);
+							return null;
+						}else{
+							return {"atf.ShouldEndWithGitAndBeAlink": { message: "Should be a link and end with .git" }}
+						}
+					};
+				},
+				"params": [
+					{
+						"name": "message"
+					}
+				],
+				"async": false
+			}
+		}/**SCHEMA_VALIDATORS*/
 	};
 });

@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="en-US">
+	<Group Type="String">
+		<Items>
+			<Item Name="Caption" Value="New modal page" />
+			<Item Name="LocalizableStrings.DataGrid_pofhyrzDS_AtfGitServerName.Value" Value="Server Name" />
+			<Item Name="LocalizableStrings.DataGrid_pofhyrzDS_Name.Value" Value="Repository Name" />
+			<Item Name="LocalizableStrings.SearchFilter_Element_placeholder.Value" Value="Search Gitlab" />
+		</Items>
+	</Group>
+</Resources>

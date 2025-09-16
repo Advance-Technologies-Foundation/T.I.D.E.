@@ -2,7 +2,7 @@
 <Resources Culture="en-US">
 	<Group Type="String">
 		<Items>
-			<Item Name="AddonConfig.Sidebars.69cb3f98-6a0e-6535-84c3-4d21f57900e0.Title" Value="Atf Logs" />
+			<Item Name="AddonConfig.Sidebars.69cb3f98-6a0e-6535-84c3-4d21f57900e0.Title" Value="View logs" />
 			<Item Name="Caption" Value="Atf Logs (Sidebar)" />
 		</Items>
 	</Group>

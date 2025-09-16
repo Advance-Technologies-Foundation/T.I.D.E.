@@ -5,6 +5,9 @@
 			<Item Name="Caption" Value="AtfGitServer" />
 			<Item Name="Columns.AccessToken.Caption" Value="Access Token" />
 			<Item Name="Columns.Code.Caption" Value="Code" />
+			<Item Name="Columns.Default.Caption" Value="Default" />
+			<Item Name="Columns.GitRepositoryType.Caption" Value="Git repository type" />
+			<Item Name="Columns.GitRepositoryType.Description" Value="Provider for git (Gitlab, GitHub, BitBucket, etc)" />
 			<Item Name="Columns.Url.Caption" Value="Url" />
 			<Item Name="Columns.UserName.Caption" Value="User Name" />
 			<Item Name="Description" Value="Server list to look for repositories in" />

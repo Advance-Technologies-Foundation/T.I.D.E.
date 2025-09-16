@@ -3,9 +3,12 @@
 	<Group Type="String">
 		<Items>
 			<Item Name="Caption" Value="T.I.D.E. list page" />
+			<Item Name="LocalizableStrings.AddButton_caption.Value" Value="Add Repository" />
 			<Item Name="LocalizableStrings.Button_Install_Updates_caption.Value" Value="Install Updates" />
 			<Item Name="LocalizableStrings.Button_ynk6wyx_caption.Value" Value="Open Git Servers list" />
+			<Item Name="LocalizableStrings.DataImportButton_caption.Value" Value="Import" />
 			<Item Name="LocalizableStrings.MenuItem_InstallConsoleGit_caption.Value" Value="Install console git" />
+			<Item Name="LocalizableStrings.MenuItem_SearchGitlab_caption.Value" Value="Search Gitlab" />
 			<Item Name="LocalizableStrings.MenuItem_UpdateClio_caption.Value" Value="Install / Update clio" />
 			<Item Name="LocalizableStrings.MenuItem_UpdateTide_caption.Value" Value="Update Tide" />
 		</Items>

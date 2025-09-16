@@ -1,0 +1,22 @@
+﻿{
+  "PackageData": [
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "Value": "6afcfe48-5485-4443-b7be-9f41fb1702bb"
+        },
+        {
+          "SchemaColumnUId": "34391227-ac90-4b55-9739-6720e97a0594",
+          "Value": "5cec6e27-9f73-4ede-91fe-2b73645b65ac",
+          "DisplayValue": "Git Repository Type"
+        },
+        {
+          "SchemaColumnUId": "9e46bb69-9788-423c-b7cd-4c624081082d",
+          "Value": "eb5da70c-cc97-4e91-97ee-ba76d75c314c",
+          "DisplayValue": "TIDE"
+        }
+      ]
+    }
+  ]
+}

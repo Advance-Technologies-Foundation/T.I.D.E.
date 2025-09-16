@@ -4,6 +4,7 @@
     "Name": "AtfProcess_SaveWorkspaceToGit",
     "ModifiedOnUtc": "\/Date(1757709395000)\/",
     "ManagerName": "ProcessSchemaManager",
-    "Caption": "Save Workspace to Git"
+    "Caption": "Save Workspace to Git",
+    "DependsOn": []
   }
 }

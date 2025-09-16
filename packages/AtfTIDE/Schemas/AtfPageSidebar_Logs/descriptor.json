@@ -2,7 +2,7 @@
   "Descriptor": {
     "UId": "4b67a6a1-cf07-497c-a67e-2c4ad9574c46",
     "Name": "AtfPageSidebar_Logs",
-    "ModifiedOnUtc": "\/Date(1757421581000)\/",
+    "ModifiedOnUtc": "\/Date(1758015800000)\/",
     "Parent": {
       "UId": "b11e72c4-3787-407e-9415-9d499413d5b8",
       "Name": "BaseSidebarTemplate"

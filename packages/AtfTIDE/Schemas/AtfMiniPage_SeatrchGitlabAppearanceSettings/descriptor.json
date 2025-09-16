@@ -1,0 +1,10 @@
+﻿{
+  "Descriptor": {
+    "UId": "61f8c327-c19c-4897-a839-4be97a59900e",
+    "Name": "AtfMiniPage_SeatrchGitlabAppearanceSettings",
+    "ModifiedOnUtc": "\/Date(1757877721000)\/",
+    "ManagerName": "AddonSchemaManager",
+    "Caption": "Search Gitlab (AppearanceSettings)",
+    "DependsOn": []
+  }
+}
