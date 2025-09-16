@@ -45,10 +45,10 @@ Make waves in development with T.I.D.E. 🌊!
 
 # Installing TIDE
 
-Using [clio](https://github.com/Advance-Technologies-Foundation/clio)
-```
-clio install-tide -e <target_environment>
-```
+1. Go to [TIDE Releases](https://github.com/Advance-Technologies-Foundation/T.I.D.E./releases).
+2. Download application package. 
+3. Install to Creatio via Application Hub: New application -> Install from file -> Select file.
+
 # Overview
 TIDE provides you a user interface for synchronizing changes to Git repositories. It'll use clio and Git to synchronize the changes between Creatio instance and source control repository. 
 
@@ -59,7 +59,7 @@ TIDE allows you to work with multiple Git repositories. You do all source contro
 # Connecting to a Repository
 1. Press *Add Repository* button, go to *General information* tab.
 2. *User name* - your user email.
-3. *Access token* - paste your personal access token.
+3. *Access Тoken* - paste your personal access token.
 4. *Repository Url* - paste repository clone URL. 
 5. Press *Save* 
 
@@ -73,8 +73,10 @@ Go to *Source Control* tab.
 2. Enter commit message
 
 # Reviewing Changes
-1. Press Load changes to local copy from Creatio
-2. Now review all changed files
+Go to *Source Control* tab.
+1. Press Load changes from Creatio.
+2. List of changed files will be populated.
+3. Now review all changed files.
 
 # Branching (experimental)
 > **_NOTE:_**  New branches have to be created outside TIDE.
@@ -89,6 +91,7 @@ You can access log by clicking *View logs* button at the top of the toolbar. The
 During installation, TIDE installs to the target Creatio two additional components:
 1. Git console. 
 2. clio-gate.
+
 If your source control operations are failing, check that those two components are installed. 
 
 Also check if your token is valid and has read/write permissions.
