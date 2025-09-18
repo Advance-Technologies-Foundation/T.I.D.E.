@@ -49,8 +49,14 @@ esac
 
 new_version="$major.$minor.$patch"
 
+
 # Set new version in project files
 ../scripts/set-version.sh "$new_version"
+
+# Commit and push changes to GitHub
+git add -A
+git commit -m "chore: set version $new_version"
+git push origin main
 
 
 rm -rf ../publish/*
