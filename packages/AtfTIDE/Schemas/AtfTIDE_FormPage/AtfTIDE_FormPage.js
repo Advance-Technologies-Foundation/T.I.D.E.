@@ -92,7 +92,8 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 					"selectedTabTitleColor": "auto",
 					"tabTitleColor": "auto",
 					"underlineSelectedTabColor": "auto",
-					"headerBackgroundColor": "auto"
+					"headerBackgroundColor": "auto",
+					"allowToggleClose": true
 				}
 			},
 			{
@@ -1040,13 +1041,7 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 					"iconPosition": "left-icon",
 					"visible": true,
 					"clicked": {
-						"request": "atf.CaptureClioArgs",
-						"params": {
-							"processName": "AtfProcess_SaveWorkspaceToGit",
-							"processRunType": "ForTheSelectedPage",
-							"showNotification": true,
-							"recordIdProcessParameterName": "Repository"
-						}
+						"request": "atf.SaveToGitButtonClick"
 					},
 					"clickMode": "default",
 					"icon": "save-button-icon"
@@ -1568,209 +1563,6 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 			},
 			{
 				"operation": "insert",
-				"name": "FlexContainer_yh1guh4",
-				"values": {
-					"type": "crt.FlexContainer",
-					"direction": "row",
-					"items": [],
-					"fitContent": true,
-					"visible": true,
-					"color": "transparent",
-					"borderRadius": "none",
-					"padding": {
-						"top": "large",
-						"right": "none",
-						"bottom": "large",
-						"left": "none"
-					},
-					"alignItems": "stretch",
-					"justifyContent": "start",
-					"gap": "small",
-					"wrap": "wrap"
-				},
-				"parentName": "TabContainer_Advanced",
-				"propertyName": "items",
-				"index": 2
-			},
-			{
-				"operation": "insert",
-				"name": "Button_SetActiveBranch",
-				"values": {
-					"type": "crt.Button",
-					"caption": "#ResourceString(Button_SetActiveBranch_caption)#",
-					"color": "warn",
-					"disabled": false,
-					"size": "large",
-					"iconPosition": "left-icon",
-					"visible": true,
-					"clicked": {
-						"request": "crt.RunBusinessProcessRequest",
-						"params": {
-							"processName": "AtfProcess_SetActiveBranch",
-							"processRunType": "ForTheSelectedRecords",
-							"showNotification": true,
-							"dataSourceName": "GridDetail_t9wy0f2DS",
-							"parameterMappings": {
-								"Branch": "Id"
-							},
-							"filters": "$GridDetail_t9wy0f2 | crt.ToCollectionFilters : 'GridDetail_t9wy0f2' : $GridDetail_t9wy0f2_SelectionState | crt.SkipIfSelectionEmpty : $GridDetail_t9wy0f2_SelectionState",
-							"sorting": "$GridDetail_t9wy0f2Sorting",
-							"selectionStateAttributeName": "GridDetail_t9wy0f2_SelectionState"
-						}
-					},
-					"clickMode": "default",
-					"icon": "checkmark-icon"
-				},
-				"parentName": "FlexContainer_yh1guh4",
-				"propertyName": "items",
-				"index": 0
-			},
-			{
-				"operation": "insert",
-				"name": "Button_SyncBranchesWithRepo",
-				"values": {
-					"type": "crt.Button",
-					"caption": "#ResourceString(Button_SyncBranchesWithRepo_caption)#",
-					"color": "accent",
-					"disabled": false,
-					"size": "large",
-					"iconPosition": "left-icon",
-					"visible": true,
-					"clicked": {
-						"request": "crt.RunBusinessProcessRequest",
-						"params": {
-							"processName": "ATFSyncronizeBranchesWithRepo",
-							"processRunType": "ForTheSelectedPage",
-							"showNotification": true,
-							"recordIdProcessParameterName": "RepositoryId"
-						}
-					},
-					"clickMode": "default",
-					"icon": "reload-icon"
-				},
-				"parentName": "FlexContainer_yh1guh4",
-				"propertyName": "items",
-				"index": 1
-			},
-			{
-				"operation": "insert",
-				"name": "GridDetail_t9wy0f2DS",
-				"values": {
-					"type": "crt.DataGrid",
-					"features": {
-						"rows": {
-							"selection": false,
-							"numeration": false
-						},
-						"editable": {
-							"enable": false,
-							"itemsCreation": false,
-							"floatingEditPanel": false
-						}
-					},
-					"items": "$GridDetail_t9wy0f2",
-					"visible": true,
-					"fitContent": true,
-					"primaryColumnName": "GridDetail_t9wy0f2DS_Id",
-					"columns": [
-						{
-							"id": "73135d14-5d9c-c1b8-26da-c0ea4cdf7454",
-							"code": "GridDetail_t9wy0f2DS_AtfName",
-							"caption": "#ResourceString(GridDetail_t9wy0f2DS_AtfName)#",
-							"dataValueType": 28
-						}
-					],
-					"placeholder": false,
-					"activeRow": "$GridDetail_t9wy0f2_ActiveRow",
-					"selectionState": "$GridDetail_t9wy0f2_SelectionState",
-					"_selectionOptions": {
-						"attribute": "GridDetail_t9wy0f2_SelectionState"
-					},
-					"bulkActions": []
-				},
-				"parentName": "TabContainer_Advanced",
-				"propertyName": "items",
-				"index": 3
-			},
-			{
-				"operation": "insert",
-				"name": "GridDetail_t9wy0f2_AddTagsBulkAction",
-				"values": {
-					"type": "crt.MenuItem",
-					"caption": "Add tag",
-					"icon": "tag-icon",
-					"clicked": {
-						"request": "crt.AddTagsInRecordsRequest",
-						"params": {
-							"dataSourceName": "GridDetail_t9wy0f2DS",
-							"filters": "$GridDetail_t9wy0f2 | crt.ToCollectionFilters : 'GridDetail_t9wy0f2' : $GridDetail_t9wy0f2_SelectionState | crt.SkipIfSelectionEmpty : $GridDetail_t9wy0f2_SelectionState"
-						}
-					},
-					"items": []
-				},
-				"parentName": "GridDetail_t9wy0f2DS",
-				"propertyName": "bulkActions",
-				"index": 0
-			},
-			{
-				"operation": "insert",
-				"name": "GridDetail_t9wy0f2_RemoveTagsBulkAction",
-				"values": {
-					"type": "crt.MenuItem",
-					"caption": "Remove tag",
-					"icon": "delete-button-icon",
-					"clicked": {
-						"request": "crt.RemoveTagsInRecordsRequest",
-						"params": {
-							"dataSourceName": "GridDetail_t9wy0f2DS",
-							"filters": "$GridDetail_t9wy0f2 | crt.ToCollectionFilters : 'GridDetail_t9wy0f2' : $GridDetail_t9wy0f2_SelectionState | crt.SkipIfSelectionEmpty : $GridDetail_t9wy0f2_SelectionState"
-						}
-					}
-				},
-				"parentName": "GridDetail_t9wy0f2_AddTagsBulkAction",
-				"propertyName": "items",
-				"index": 0
-			},
-			{
-				"operation": "insert",
-				"name": "GridDetail_t9wy0f2_ExportToExcelBulkAction",
-				"values": {
-					"type": "crt.MenuItem",
-					"caption": "Export to Excel",
-					"icon": "export-button-icon",
-					"clicked": {
-						"request": "crt.ExportDataGridToExcelRequest",
-						"params": {
-							"viewName": "GridDetail_t9wy0f2DS",
-							"filters": "$GridDetail_t9wy0f2 | crt.ToCollectionFilters : 'GridDetail_t9wy0f2' : $GridDetail_t9wy0f2_SelectionState | crt.SkipIfSelectionEmpty : $GridDetail_t9wy0f2_SelectionState"
-						}
-					}
-				},
-				"parentName": "GridDetail_t9wy0f2DS",
-				"propertyName": "bulkActions",
-				"index": 1
-			},
-			{
-				"operation": "insert",
-				"name": "GridDetail_t9wy0f2_DeleteBulkAction",
-				"values": {
-					"type": "crt.MenuItem",
-					"caption": "Delete",
-					"icon": "delete-button-icon",
-					"clicked": {
-						"request": "crt.DeleteRecordsRequest",
-						"params": {
-							"dataSourceName": "GridDetail_t9wy0f2DS",
-							"filters": "$GridDetail_t9wy0f2 | crt.ToCollectionFilters : 'GridDetail_t9wy0f2' : $GridDetail_t9wy0f2_SelectionState | crt.SkipIfSelectionEmpty : $GridDetail_t9wy0f2_SelectionState"
-						}
-					}
-				},
-				"parentName": "GridDetail_t9wy0f2DS",
-				"propertyName": "bulkActions",
-				"index": 2
-			},
-			{
-				"operation": "insert",
 				"name": "ExpansionPanel_srhpdgo",
 				"values": {
 					"type": "crt.ExpansionPanel",
@@ -1779,7 +1571,7 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 					"title": "#ResourceString(ExpansionPanel_srhpdgo_title)#",
 					"toggleType": "default",
 					"togglePosition": "before",
-					"expanded": false,
+					"expanded": true,
 					"labelColor": "auto",
 					"fullWidthHeader": false,
 					"titleWidth": 20,
@@ -1790,12 +1582,12 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 						"right": "none"
 					},
 					"fitContent": true,
-					"visible": false,
+					"visible": true,
 					"alignItems": "stretch"
 				},
 				"parentName": "TabContainer_Advanced",
 				"propertyName": "items",
-				"index": 4
+				"index": 2
 			},
 			{
 				"operation": "insert",
@@ -1875,33 +1667,6 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 			},
 			{
 				"operation": "insert",
-				"name": "GridDetailRefreshBtn_bpq27gy",
-				"values": {
-					"type": "crt.Button",
-					"caption": "#ResourceString(GridDetailRefreshBtn_bpq27gy_caption)#",
-					"icon": "reload-icon",
-					"iconPosition": "only-icon",
-					"color": "default",
-					"size": "medium",
-					"clicked": {
-						"request": "crt.LoadDataRequest",
-						"params": {
-							"config": {
-								"loadType": "reload",
-								"useLastLoadParameters": true
-							},
-							"dataSourceName": "GridDetail_t9wy0f2DS"
-						}
-					},
-					"visible": false,
-					"clickMode": "default"
-				},
-				"parentName": "FlexContainer_rlolpw6",
-				"propertyName": "items",
-				"index": 1
-			},
-			{
-				"operation": "insert",
 				"name": "GridDetailSettingsBtn_n0jlqjb",
 				"values": {
 					"type": "crt.Button",
@@ -1912,11 +1677,11 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 					"size": "medium",
 					"clickMode": "menu",
 					"menuItems": [],
-					"visible": false
+					"visible": true
 				},
 				"parentName": "FlexContainer_rlolpw6",
 				"propertyName": "items",
-				"index": 2
+				"index": 1
 			},
 			{
 				"operation": "insert",
@@ -1960,34 +1725,30 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 			},
 			{
 				"operation": "insert",
-				"name": "GridDetailSearchFilter_m373eyy",
+				"name": "Button_SyncBranchesWithRepo",
 				"values": {
-					"type": "crt.SearchFilter",
-					"placeholder": "#ResourceString(GridDetailSearchFilter_m373eyy_placeholder)#",
-					"iconOnly": true,
-					"_filterOptions": {
-						"expose": [
-							{
-								"attribute": "GridDetailSearchFilter_m373eyy_GridDetail_t9wy0f2",
-								"converters": [
-									{
-										"converter": "crt.SearchFilterAttributeConverter",
-										"args": [
-											"GridDetail_t9wy0f2"
-										]
-									}
-								]
-							}
-						],
-						"from": [
-							"GridDetailSearchFilter_m373eyy_SearchValue",
-							"GridDetailSearchFilter_m373eyy_FilteredColumnsGroups"
-						]
-					}
+					"type": "crt.Button",
+					"caption": "#ResourceString(Button_SyncBranchesWithRepo_caption)#",
+					"color": "outline",
+					"disabled": false,
+					"size": "large",
+					"iconPosition": "left-icon",
+					"visible": true,
+					"clicked": {
+						"request": "crt.RunBusinessProcessRequest",
+						"params": {
+							"processName": "ATFSyncronizeBranchesWithRepo",
+							"processRunType": "ForTheSelectedPage",
+							"showNotification": true,
+							"recordIdProcessParameterName": "RepositoryId"
+						}
+					},
+					"clickMode": "default",
+					"icon": "reload-icon"
 				},
 				"parentName": "FlexContainer_rlolpw6",
 				"propertyName": "items",
-				"index": 3
+				"index": 2
 			},
 			{
 				"operation": "insert",
@@ -2017,7 +1778,7 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 				},
 				"parentName": "FlexContainer_rlolpw6",
 				"propertyName": "items",
-				"index": 4
+				"index": 3
 			},
 			{
 				"operation": "insert",
@@ -2031,16 +1792,167 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 					],
 					"gap": {
 						"columnGap": "large",
-						"rowGap": 0
+						"rowGap": "none"
 					},
 					"styles": {
 						"overflow-x": "hidden"
 					},
-					"items": []
+					"items": [],
+					"visible": true,
+					"color": "transparent",
+					"borderRadius": "none",
+					"padding": {
+						"top": "none",
+						"right": "none",
+						"bottom": "none",
+						"left": "none"
+					},
+					"alignItems": "stretch"
 				},
 				"parentName": "ExpansionPanel_srhpdgo",
 				"propertyName": "items",
 				"index": 0
+			},
+			{
+				"operation": "insert",
+				"name": "GridDetail_t9wy0f2DS",
+				"values": {
+					"type": "crt.DataGrid",
+					"features": {
+						"rows": {
+							"selection": false,
+							"numeration": false
+						},
+						"editable": {
+							"enable": false,
+							"itemsCreation": false,
+							"floatingEditPanel": false
+						}
+					},
+					"items": "$GridDetail_t9wy0f2",
+					"visible": true,
+					"fitContent": true,
+					"primaryColumnName": "GridDetail_t9wy0f2DS_Id",
+					"columns": [
+						{
+							"id": "6cc4ce6c-f8be-33b4-7943-a3f0794adeae",
+							"code": "GridDetail_t9wy0f2DS_AtfName",
+							"caption": "#ResourceString(GridDetail_t9wy0f2DS_AtfName)#",
+							"dataValueType": 28
+						}
+					],
+					"placeholder": false,
+					"activeRow": "$GridDetail_t9wy0f2_ActiveRow",
+					"selectionState": "$GridDetail_t9wy0f2_SelectionState",
+					"_selectionOptions": {
+						"attribute": "GridDetail_t9wy0f2_SelectionState"
+					},
+					"bulkActions": [],
+					"rowToolbarItems": [
+						{
+							"type": "crt.MenuItem",
+							"caption": "#ResourceString(RunProcess_SetActiveBranch_caption)#",
+							"visible": true,
+							"clicked": {
+								"request": "crt.RunBusinessProcessRequest",
+								"params": {
+									"processName": "AtfProcess_SetActiveBranch",
+									"showNotification": true,
+									"processParameters": {
+										"Branch": "$GridDetail_t9wy0f2.GridDetail_t9wy0f2DS_Id"
+									}
+								}
+							},
+							"icon": "checkmark-icon"
+						}
+					],
+					"layoutConfig": {
+						"column": 1,
+						"colSpan": 2,
+						"row": 1,
+						"rowSpan": 16
+					}
+				},
+				"parentName": "GridContainer_oxp83zc",
+				"propertyName": "items",
+				"index": 0
+			},
+			{
+				"operation": "insert",
+				"name": "GridDetail_t9wy0f2_AddTagsBulkAction",
+				"values": {
+					"type": "crt.MenuItem",
+					"caption": "Add tag",
+					"icon": "tag-icon",
+					"clicked": {
+						"request": "crt.AddTagsInRecordsRequest",
+						"params": {
+							"dataSourceName": "GridDetail_t9wy0f2DS",
+							"filters": "$GridDetail_t9wy0f2 | crt.ToCollectionFilters : 'GridDetail_t9wy0f2' : $GridDetail_t9wy0f2_SelectionState | crt.SkipIfSelectionEmpty : $GridDetail_t9wy0f2_SelectionState"
+						}
+					},
+					"items": []
+				},
+				"parentName": "GridDetail_t9wy0f2DS",
+				"propertyName": "bulkActions",
+				"index": 0
+			},
+			{
+				"operation": "insert",
+				"name": "GridDetail_t9wy0f2_RemoveTagsBulkAction",
+				"values": {
+					"type": "crt.MenuItem",
+					"caption": "Remove tag",
+					"icon": "delete-button-icon",
+					"clicked": {
+						"request": "crt.RemoveTagsInRecordsRequest",
+						"params": {
+							"dataSourceName": "GridDetail_t9wy0f2DS",
+							"filters": "$GridDetail_t9wy0f2 | crt.ToCollectionFilters : 'GridDetail_t9wy0f2' : $GridDetail_t9wy0f2_SelectionState | crt.SkipIfSelectionEmpty : $GridDetail_t9wy0f2_SelectionState"
+						}
+					}
+				},
+				"parentName": "GridDetail_t9wy0f2_AddTagsBulkAction",
+				"propertyName": "items",
+				"index": 0
+			},
+			{
+				"operation": "insert",
+				"name": "GridDetail_t9wy0f2_ExportToExcelBulkAction",
+				"values": {
+					"type": "crt.MenuItem",
+					"caption": "Export to Excel",
+					"icon": "export-button-icon",
+					"clicked": {
+						"request": "crt.ExportDataGridToExcelRequest",
+						"params": {
+							"viewName": "GridDetail_t9wy0f2DS",
+							"filters": "$GridDetail_t9wy0f2 | crt.ToCollectionFilters : 'GridDetail_t9wy0f2' : $GridDetail_t9wy0f2_SelectionState | crt.SkipIfSelectionEmpty : $GridDetail_t9wy0f2_SelectionState"
+						}
+					}
+				},
+				"parentName": "GridDetail_t9wy0f2DS",
+				"propertyName": "bulkActions",
+				"index": 1
+			},
+			{
+				"operation": "insert",
+				"name": "GridDetail_t9wy0f2_DeleteBulkAction",
+				"values": {
+					"type": "crt.MenuItem",
+					"caption": "Delete",
+					"icon": "delete-button-icon",
+					"clicked": {
+						"request": "crt.DeleteRecordsRequest",
+						"params": {
+							"dataSourceName": "GridDetail_t9wy0f2DS",
+							"filters": "$GridDetail_t9wy0f2 | crt.ToCollectionFilters : 'GridDetail_t9wy0f2' : $GridDetail_t9wy0f2_SelectionState | crt.SkipIfSelectionEmpty : $GridDetail_t9wy0f2_SelectionState"
+						}
+					}
+				},
+				"parentName": "GridDetail_t9wy0f2DS",
+				"propertyName": "bulkActions",
+				"index": 2
 			}
 		]/**SCHEMA_VIEW_CONFIG_DIFF*/,
 		viewModelConfigDiff: /**SCHEMA_VIEW_MODEL_CONFIG_DIFF*/[
@@ -2092,10 +2004,18 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 							"path": "GridDetail_t9wy0f2DS",
 							"filterAttributes": [
 								{
-									"name": "GridDetailSearchFilter_m373eyy_GridDetail_t9wy0f2",
-									"loadOnChange": true
+									"loadOnChange": true,
+									"name": "GridDetail_t9wy0f2_PredefinedFilter"
 								}
-							]
+							],
+							"sortingConfig": {
+								"default": [
+									{
+										"direction": "asc",
+										"columnName": "AtfName"
+									}
+								]
+							}
 						},
 						"viewModelConfig": {
 							"attributes": {
@@ -2197,6 +2117,9 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 						"modelConfig": {
 							"path": "PDS.AtfAutoSync"
 						}
+					},
+					"GridDetail_t9wy0f2_PredefinedFilter": {
+						"value": null
 					}
 				}
 			},
