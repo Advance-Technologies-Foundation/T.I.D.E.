@@ -159,7 +159,7 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 					"size": "large",
 					"iconPosition": "left-icon",
 					"visible": true,
-					"icon": "export-data-button-icon",
+					"icon": "upload-button-icon",
 					"clicked": {
 						"request": "atf.CaptureClioArgs",
 						"params": {
@@ -186,7 +186,7 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 					"size": "large",
 					"iconPosition": "left-icon",
 					"visible": true,
-					"icon": "import-data-button-icon",
+					"icon": "save-button-icon",
 					"clicked": {
 						"request": "atf.SaveToGitButtonClick"
 					},
@@ -972,7 +972,7 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 					"color": "primary",
 					"disabled": false,
 					"size": "large",
-					"iconPosition": "only-text",
+					"iconPosition": "left-icon",
 					"visible": true,
 					"clicked": {
 						"request": "atf.OnLoadChangesToLocalCopyClick",
@@ -985,7 +985,7 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 						}
 					},
 					"clickMode": "default",
-					"icon": null,
+					"icon": "download-button-icon",
 					"menuItems": []
 				},
 				"parentName": "FlexContainer_mirw4pt",
@@ -998,7 +998,8 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 				"values": {
 					"type": "crt.MenuItem",
 					"caption": "#ResourceString(MenuItem_mw2qo3j_caption)#",
-					"visible": true
+					"visible": true,
+					"icon": "codeblock-icon"
 				},
 				"parentName": "Button_LoadChangesToLocalCopy",
 				"propertyName": "menuItems",
@@ -1006,40 +1007,10 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 			},
 			{
 				"operation": "insert",
-				"name": "Button_saveToGit_Red",
+				"name": "MenuItem_LoadFromLocalCopyToCreatio",
 				"values": {
-					"type": "crt.Button",
-					"caption": "#ResourceString(Button_saveToGit_Red_caption)#",
-					"color": "warn",
-					"disabled": false,
-					"size": "large",
-					"iconPosition": "only-text",
-					"visible": true,
-					"clicked": {
-						"request": "atf.CaptureClioArgs",
-						"params": {
-							"processName": "AtfProcess_SaveWorkspaceToGit",
-							"processRunType": "ForTheSelectedPage",
-							"showNotification": true,
-							"recordIdProcessParameterName": "Repository"
-						}
-					},
-					"clickMode": "default"
-				},
-				"parentName": "FlexContainer_mirw4pt",
-				"propertyName": "items",
-				"index": 1
-			},
-			{
-				"operation": "insert",
-				"name": "Button_InstallLocalCopy",
-				"values": {
-					"type": "crt.Button",
-					"caption": "#ResourceString(Button_InstallLocalCopy_caption)#",
-					"color": "outline",
-					"disabled": false,
-					"size": "large",
-					"iconPosition": "only-text",
+					"type": "crt.MenuItem",
+					"caption": "#ResourceString(MenuItem_LoadFromLocalCopyToCreatio_caption)#",
 					"visible": true,
 					"clicked": {
 						"request": "atf.LoadWorkspaceFromLocalCopy",
@@ -1051,11 +1022,39 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 							"recordIdProcessParameterName": "Repository"
 						}
 					},
-					"clickMode": "default"
+					"clickMode": "default",
+					"icon": "upload-button-icon"
+				},
+				"parentName": "Button_LoadChangesToLocalCopy",
+				"propertyName": "menuItems",
+				"index": 1
+			},
+			{
+				"operation": "insert",
+				"name": "Button_saveToGit_Red",
+				"values": {
+					"type": "crt.Button",
+					"caption": "#ResourceString(Button_saveToGit_Red_caption)#",
+					"color": "warn",
+					"disabled": false,
+					"size": "large",
+					"iconPosition": "left-icon",
+					"visible": true,
+					"clicked": {
+						"request": "atf.CaptureClioArgs",
+						"params": {
+							"processName": "AtfProcess_SaveWorkspaceToGit",
+							"processRunType": "ForTheSelectedPage",
+							"showNotification": true,
+							"recordIdProcessParameterName": "Repository"
+						}
+					},
+					"clickMode": "default",
+					"icon": "save-button-icon"
 				},
 				"parentName": "FlexContainer_mirw4pt",
 				"propertyName": "items",
-				"index": 2
+				"index": 1
 			},
 			{
 				"operation": "insert",
