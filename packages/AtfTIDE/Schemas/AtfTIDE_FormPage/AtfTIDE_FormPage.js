@@ -1041,13 +1041,7 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 					"iconPosition": "left-icon",
 					"visible": true,
 					"clicked": {
-						"request": "atf.CaptureClioArgs",
-						"params": {
-							"processName": "AtfProcess_SaveWorkspaceToGit",
-							"processRunType": "ForTheSelectedPage",
-							"showNotification": true,
-							"recordIdProcessParameterName": "Repository"
-						}
+						"request": "atf.SaveToGitButtonClick"
 					},
 					"clickMode": "default",
 					"icon": "save-button-icon"
