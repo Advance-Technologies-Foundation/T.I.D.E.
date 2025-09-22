@@ -51,6 +51,7 @@
 			<Item Name="LocalizableStrings.MenuItem_mw2qo3j_caption.Value" Value="Show changes" />
 			<Item Name="LocalizableStrings.RichTextEditor_zxkz64z_caption.Value" Value="Rich text" />
 			<Item Name="LocalizableStrings.RichTextEditor_zxkz64z_label.Value" Value="Rich text" />
+			<Item Name="LocalizableStrings.RunProcess_SetActiveBranch_caption.Value" Value="Set branch as active" />
 			<Item Name="LocalizableStrings.TabContainer_Advanced_caption.Value" Value="BRANCHES" />
 			<Item Name="LocalizableStrings.TabContainer_Git_caption.Value" Value="SOURCE CONTROL" />
 			<Item Name="LocalizableStrings.TabContainer_mcnezxd_caption.Value" Value="Tab 2" />
