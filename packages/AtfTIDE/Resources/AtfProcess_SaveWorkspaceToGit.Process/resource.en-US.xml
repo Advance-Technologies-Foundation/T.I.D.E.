@@ -33,6 +33,27 @@
 			<Item Name="BaseElements.ReadDataUserTask1.Parameters.ResultIntegerFunction.Caption" Value="Function result (Integer)" />
 			<Item Name="BaseElements.ReadDataUserTask1.Parameters.ResultRowsCount.Caption" Value="Number of records read" />
 			<Item Name="BaseElements.ReadDataUserTask1.Parameters.ResultType.Caption" Value="Type of result" />
+			<Item Name="BaseElements.ReadDataUserTask2.Caption" Value="Read branch" />
+			<Item Name="BaseElements.ReadDataUserTask2.Parameters.AggregationColumnName.Caption" Value="Name of aggregate function column" />
+			<Item Name="BaseElements.ReadDataUserTask2.Parameters.CanReadUncommitedData.Caption" Value="Read uncommitted data" />
+			<Item Name="BaseElements.ReadDataUserTask2.Parameters.ConsiderTimeInFilter.Caption" Value="Consider time in the filter" />
+			<Item Name="BaseElements.ReadDataUserTask2.Parameters.ConsiderTimeInFilter.DisplayValue" Value="true" />
+			<Item Name="BaseElements.ReadDataUserTask2.Parameters.DataSourceFilters.Caption" Value="Data source of filters" />
+			<Item Name="BaseElements.ReadDataUserTask2.Parameters.EntityColumnMetaPathes.Caption" Value="Columns to read" />
+			<Item Name="BaseElements.ReadDataUserTask2.Parameters.FunctionType.Caption" Value="Aggregate function type" />
+			<Item Name="BaseElements.ReadDataUserTask2.Parameters.IgnoreDisplayValues.Caption" Value="Do not read displayed values of lookup columns" />
+			<Item Name="BaseElements.ReadDataUserTask2.Parameters.NumberOfRecords.Caption" Value="Number of records to read" />
+			<Item Name="BaseElements.ReadDataUserTask2.Parameters.OrderInfo.Caption" Value="Columns order" />
+			<Item Name="BaseElements.ReadDataUserTask2.Parameters.ReadSomeTopRecords.Caption" Value="Read first" />
+			<Item Name="BaseElements.ReadDataUserTask2.Parameters.ResultCompositeObjectList.Caption" Value="Collection of records" />
+			<Item Name="BaseElements.ReadDataUserTask2.Parameters.ResultCount.Caption" Value="Number of records" />
+			<Item Name="BaseElements.ReadDataUserTask2.Parameters.ResultDateTimeFunction.Caption" Value="Function result (Date/Time)" />
+			<Item Name="BaseElements.ReadDataUserTask2.Parameters.ResultEntity.Caption" Value="First item of resulting collection" />
+			<Item Name="BaseElements.ReadDataUserTask2.Parameters.ResultEntityCollection.Caption" Value="Resulting collection" />
+			<Item Name="BaseElements.ReadDataUserTask2.Parameters.ResultFloatFunction.Caption" Value="Function result (Decimal)" />
+			<Item Name="BaseElements.ReadDataUserTask2.Parameters.ResultIntegerFunction.Caption" Value="Function result (Integer)" />
+			<Item Name="BaseElements.ReadDataUserTask2.Parameters.ResultRowsCount.Caption" Value="Number of records read" />
+			<Item Name="BaseElements.ReadDataUserTask2.Parameters.ResultType.Caption" Value="Type of result" />
 			<Item Name="BaseElements.ReadDataUserTask3.Caption" Value="Read Application" />
 			<Item Name="BaseElements.ReadDataUserTask3.Parameters.AggregationColumnName.Caption" Value="Name of aggregate function column" />
 			<Item Name="BaseElements.ReadDataUserTask3.Parameters.CanReadUncommitedData.Caption" Value="Read uncommitted data" />
@@ -61,6 +82,17 @@
 			<Item Name="BaseElements.UserTask10.Parameters.LogLevel.Value" Value="ERR" />
 			<Item Name="BaseElements.UserTask10.Parameters.Message.Caption" Value="Message" />
 			<Item Name="BaseElements.UserTask10.Parameters.Message.DisplayValue" Value="&quot;BP GIT PUSH: &quot;+[#Git Push.Output#]+&quot; &quot;+[#Git Push.Error Message#]" />
+			<Item Name="BaseElements.UserTask12.Caption" Value="Checkout active branch" />
+			<Item Name="BaseElements.UserTask12.Parameters.ErrorMessage.Caption" Value="Error message" />
+			<Item Name="BaseElements.UserTask12.Parameters.IsError.Caption" Value="Is error" />
+			<Item Name="BaseElements.UserTask12.Parameters.RepositoryBranch.Caption" Value="Repository Branch" />
+			<Item Name="BaseElements.UserTask12.Parameters.RepositoryBranch.DisplayValue" Value="[#Read branch.First item of resulting collection.Id#]" />
+			<Item Name="BaseElements.UserTask13.Caption" Value="Log out Checkout branch message" />
+			<Item Name="BaseElements.UserTask13.Parameters.LogLevel.Caption" Value="LogLevel" />
+			<Item Name="BaseElements.UserTask13.Parameters.LogLevel.DisplayValue" Value="ERR" />
+			<Item Name="BaseElements.UserTask13.Parameters.LogLevel.Value" Value="ERR" />
+			<Item Name="BaseElements.UserTask13.Parameters.Message.Caption" Value="Message" />
+			<Item Name="BaseElements.UserTask13.Parameters.Message.DisplayValue" Value="&quot;BP  Checkout branch: &quot;+[#Checkout active branch.Error message#]" />
 			<Item Name="BaseElements.UserTask1.Caption" Value="Clone Repository" />
 			<Item Name="BaseElements.UserTask1.Parameters.ErrorMessage.Caption" Value="Error message" />
 			<Item Name="BaseElements.UserTask1.Parameters.IsError.Caption" Value="Is error" />
