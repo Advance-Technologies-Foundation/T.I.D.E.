@@ -2,6 +2,7 @@
 <Resources Culture="en-US">
 	<Group Type="String">
 		<Items>
+			<Item Name="BaseElements.ConditionalSequenceFlow2.Caption" Value="No active branch" />
 			<Item Name="BaseElements.ConditionalSequenceFlow4.Caption" Value="on Error" />
 			<Item Name="BaseElements.ConditionalSequenceFlow5.Caption" Value="on Error" />
 			<Item Name="BaseElements.ConditionalSequenceFlow6.Caption" Value="On clone repository Error" />
@@ -33,7 +34,7 @@
 			<Item Name="BaseElements.ReadDataUserTask1.Parameters.ResultIntegerFunction.Caption" Value="Function result (Integer)" />
 			<Item Name="BaseElements.ReadDataUserTask1.Parameters.ResultRowsCount.Caption" Value="Number of records read" />
 			<Item Name="BaseElements.ReadDataUserTask1.Parameters.ResultType.Caption" Value="Type of result" />
-			<Item Name="BaseElements.ReadDataUserTask2.Caption" Value="Read branch" />
+			<Item Name="BaseElements.ReadDataUserTask2.Caption" Value="Read active branch" />
 			<Item Name="BaseElements.ReadDataUserTask2.Parameters.AggregationColumnName.Caption" Value="Name of aggregate function column" />
 			<Item Name="BaseElements.ReadDataUserTask2.Parameters.CanReadUncommitedData.Caption" Value="Read uncommitted data" />
 			<Item Name="BaseElements.ReadDataUserTask2.Parameters.ConsiderTimeInFilter.Caption" Value="Consider time in the filter" />
