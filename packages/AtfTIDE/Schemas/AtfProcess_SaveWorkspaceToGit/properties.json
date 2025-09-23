@@ -5,6 +5,7 @@
     "IsCreatedInSvg": "True",
     "IsInterpretable": "True",
     "IsTracing": "False",
+    "OptionalProperties": "{}",
     "Tag": "Business Process",
     "UseForceCompile": "False",
     "Version": "0"
