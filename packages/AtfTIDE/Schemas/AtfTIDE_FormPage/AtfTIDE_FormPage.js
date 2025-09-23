@@ -2120,7 +2120,8 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 					},
 					"GridDetail_t9wy0f2_PredefinedFilter": {
 						"value": null
-					}
+					},
+					MySubscription:{}
 				}
 			},
 			{
@@ -2319,12 +2320,39 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 					});
 				}
 			},
-			
+
+			{
+				request: 'crt.HandleViewModelResumeRequest',
+				handler: async (request, next) => {
+					const messageChannelService = new sdk.MessageChannelService();
+					request.$context.MySubscription = await messageChannelService.subscribe("AtfTide",
+						(message)=> {
+							const body = message.body.message;
+							const commandName = message.body.commandName;
+
+							const handlerChain = sdk.HandlerChainService.instance;
+							switch (commandName){
+								case 'LoadDataRequest':
+									return handlerChain.process({
+										type: 'crt.LoadDataRequest',
+										$context: request.$context,
+										scopes: request.scopes,
+										dataSourceName: body,
+										config: {
+											loadType: "reload",
+											useLastLoadParameters: true
+										}
+									});
+							}
+						}
+					);
+				}
+			},
 			{
 				request: 'crt.HandleViewModelInitRequest',
 				handler: async (request, next) => {
 					const { $context } = request;
-
+					const messageChannelService = new sdk.MessageChannelService();
 					const sysSettingsService = new sdk.SysSettingsService();
 					
 					const showGitTab = await sysSettingsService.getByCode('AtfShowGitTab');
@@ -2333,22 +2361,27 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 					const showAdvancedTab = await sysSettingsService.getByCode('AtfShowAdvancedTab');
 					request.$context.IsAdvancedTabVisible = showAdvancedTab.value;
 
+					request.$context.MySubscription = await messageChannelService.subscribe("AtfTide",
+						(message) => {
+							const body = message.body.message;
+							const commandName = message.body.commandName;
 
-					$context.SocketMessageReceivedFunc = async function(event, message) {
-						if (message.Header.Sender === "ATFProcessUserTask_ShowTerminal") {
-							const body = JSON.parse(message.Body)
-							if(body.commandName && body.commandName === "ShowLogTerminal"){
-								const handlerChain = sdk.HandlerChainService.instance;
-								await handlerChain.process({
-									type: 'crt.OpenPageRequest',
-									$context: request.$context,
-									scopes: [...request.scopes],
-									schemaName: "Page_LogTerminal"
-								});
+							const handlerChain = sdk.HandlerChainService.instance;
+							switch (commandName){
+								case 'LoadDataRequest':
+									return handlerChain.process({
+										type: 'crt.LoadDataRequest',
+										$context: request.$context,
+										scopes: request.scopes,
+										dataSourceName: body, 
+										config: {
+											loadType: "reload",
+											useLastLoadParameters: true
+										}
+									});
 							}
 						}
-					}
-					Terrasoft.ServerChannel.on(Terrasoft.EventName.ON_MESSAGE, (await $context.SocketMessageReceivedFunc), $context);
+					);
 					request.$context.FileChangesVisible = false;
 					const endpoint = "/rest/Tide/CaptureClioArgs";
 					const httpClientService = new sdk.HttpClientService();

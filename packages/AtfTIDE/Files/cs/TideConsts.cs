@@ -9,5 +9,6 @@
 		internal const string GithubClientName = "GithubClient";
 		internal const string GithubClientTokenHandlerName = "GitHubTokenHandler";
 		internal const string LoggerName = "AtfTide";
+		internal const string SenderName = "AtfTide";
 	}
 }

@@ -9,6 +9,7 @@ using AtfTIDE.GitBrowser.GitLab;
 using AtfTIDE.HttpClient;
 using AtfTIDE.Logging;
 using AtfTIDE.QueryExecutor;
+using AtfTIDE.Services;
 using Common.Logging;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -52,6 +53,7 @@ namespace AtfTIDE {
 			serviceCollection.AddSingleton<IEsqFilterParser, EsqFilterParser>();
 			serviceCollection.AddSingleton<IEsqColumnParser, EsqColumnParser>();
 			serviceCollection.AddSingleton<IWebSocket, WebSocket>();
+			serviceCollection.AddTransient<IUiCommandService, UiCommandService>();
 			
 			serviceCollection.AddTransient<IGitlabProvider, GitlabProvider>();
 			serviceCollection.AddHttpClient("GitLab", client => {;
