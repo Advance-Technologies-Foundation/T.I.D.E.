@@ -26,3 +26,30 @@ steps:
 
   - action: flushdb
     description: flush Redis database
+
+  - action: fsm
+    description: fsm - Creatio
+    options:
+      IsFsm: "on"
+
+  - action: ping
+    description: ping - Creatio
+
+  - action: push-workspace
+    description: push-workspace - Creatio
+    options:
+      use-application-installer: true
+
+  - action: unlock-package
+    description: unlock-package - CrtContract
+    options:
+      Name: AtfTIDE
+
+  - action: compile-configuration
+    description: compile-configuration - Creatio
+
+  - action: ping
+    description: ping - Creatio
+
+  - action: dconf
+    description: dconf - download bins from Creatio

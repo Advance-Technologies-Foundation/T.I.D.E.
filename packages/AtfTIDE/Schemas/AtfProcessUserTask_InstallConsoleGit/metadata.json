@@ -1,0 +1,21 @@
+﻿{
+  "MetaData": {
+    "Schema": {
+      "ManagerName": "ProcessUserTaskSchemaManager",
+      "UId": "063cb363-b36b-49f8-ba53-86ac6f2fad63",
+      "A2": "AtfProcessUserTask_InstallConsoleGit",
+      "A5": "3e8bd2e8-c0fa-4f4d-9036-b990832677c5",
+      "B1": [],
+      "B2": [],
+      "B3": [],
+      "B6": "57902d1e-ea0c-4991-b367-992c12d68fb2",
+      "B8": "8.3.2.1258",
+      "FJ1": [],
+      "FK4": true,
+      "FK7": true,
+      "FK12": "#839DC3",
+      "FK13": true,
+      "FK16": true
+    }
+  }
+}

@@ -1,0 +1,10 @@
+﻿{
+  "Descriptor": {
+    "UId": "063cb363-b36b-49f8-ba53-86ac6f2fad63",
+    "Name": "AtfProcessUserTask_InstallConsoleGit",
+    "ModifiedOnUtc": "\/Date(1759756935000)\/",
+    "ManagerName": "ProcessUserTaskSchemaManager",
+    "Caption": "Install ConsoleGit",
+    "DependsOn": []
+  }
+}

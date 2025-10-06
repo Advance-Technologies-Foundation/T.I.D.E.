@@ -1,0 +1,10 @@
+﻿{
+  "Descriptor": {
+    "UId": "055c79b9-dcf5-4b69-8e38-1b2cc2e44db0",
+    "Name": "AtfProcess_InitializeEnvironment",
+    "ModifiedOnUtc": "\/Date(1759757626000)\/",
+    "ManagerName": "ProcessSchemaManager",
+    "Caption": "Initialize environment",
+    "DependsOn": []
+  }
+}
