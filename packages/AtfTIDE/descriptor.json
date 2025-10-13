@@ -1,7 +1,7 @@
 {
   "Descriptor": {
     "UId": "57902d1e-ea0c-4991-b367-992c12d68fb2",
-    "PackageVersion": "1.5.18.4",
+    "PackageVersion": "1.5.17",
     "Name": "AtfTIDE",
     "Type": 1,
     "ProjectPath": "Files/AtfTIDE.csproj",
