@@ -20,8 +20,8 @@
 		  <PrivateAssets>all</PrivateAssets>
 		  <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 		</PackageReference>
-		<PackageReference Include="NUnit3TestAdapter" Version="5.1.0" />
-		<PackageReference Include="System.IO.Abstractions.TestingHelpers" Version="22.0.15" />
+		<PackageReference Include="NUnit3TestAdapter" Version="5.2.0" />
+		<PackageReference Include="System.IO.Abstractions.TestingHelpers" Version="22.0.16" />
 	  	<ProjectReference Include="..\ArchiveUtilities\ArchiveUtilities.csproj" />
 		<Using Include="NUnit.Framework"/>
 	</ItemGroup>

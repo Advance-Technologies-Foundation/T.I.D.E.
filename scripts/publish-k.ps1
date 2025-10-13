@@ -21,7 +21,7 @@
 #>
 param(
     [Parameter(Mandatory=$false)][alias("v")]
-    [ValidatePattern("^\d+\.\d+\.\d+(\.\d+)?$", ErrorMessage="Version must be in format: Major.Minor.Patch[.Build]")]
+    [ValidatePattern("^\d+\.\d+\.\d+(\.\d+)?$")]
     [string]$version
 )
 
@@ -41,6 +41,26 @@ if (-not $version) {
     $fullver = $version;
 }
 
-clio publish-app --app-name AtfTide --app-version $fullver --app-hub .\Artifacts --repo-path .;
+& clio set-app-version "$scriptPath\.." -v $fullver;
+& clio set-pkg-version "$scriptPath\..\packages\AtfTIDE" -v $fullver;
+& clio publish-app --app-name AtfTide --app-version $fullver --app-hub "$scriptPath\..\Artifacts" --repo-path "$scriptPath\..";
 
 
+# Add cliogate.gz to AtfTide_fullver.zip
+Add-Type -AssemblyName System.IO.Compression.FileSystem
+$zipPath = Join-Path $scriptPath "\..\Artifacts\AtfTide\$fullver\AtfTide_$fullver.zip"
+$gzPath = Join-Path $scriptPath "\..\cliogate\cliogate.gz"
+if ((Test-Path $zipPath -PathType Leaf) -and (Test-Path $gzPath -PathType Leaf)) {
+    Add-Type -AssemblyName System.IO.Compression
+    Add-Type -AssemblyName System.IO.Compression.FileSystem
+    $zip = [System.IO.Compression.ZipFile]::Open($zipPath, [System.IO.Compression.ZipArchiveMode]::Update)
+    try {
+        $entry = $zip.GetEntry("cliogate.gz")
+        if ($entry) { $entry.Delete() }
+        [System.IO.Compression.ZipFileExtensions]::CreateEntryFromFile($zip, $gzPath, "cliogate.gz")
+    } finally {
+        $zip.Dispose()
+    }
+} else {
+    Write-Error "Either zip file or cliogate.gz not found."
+}
