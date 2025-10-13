@@ -32,7 +32,6 @@ $scriptPath = Split-Path -Parent $MyInvocation.MyCommand.Path
 # Remove non en-US Resources
 & "$scriptPath\delete-resources.ps1"
 
-
 if (-not $version) {
     $version = dotnet gitversion /output json /showvariable MajorMinorPatch;
     $build = dotnet gitversion /output json /showvariable CommitsSinceVersionSource;
@@ -41,6 +40,17 @@ if (-not $version) {
     $fullver = $version;
 }
 
+# Build NetFramework
+dotnet build-server shutdown
+$build_cmd = Join-Path $scriptPath "..\tasks\build-framework.cmd";
+& $build_cmd;
+
+# Build .NET
+dotnet build-server shutdown
+Join-Path $scriptPath "..\tasks\build-netcore.cmd.cmd";
+& $build_cmd;
+
+# Set application version and package verison, then publish using Clio
 & clio set-app-version "$scriptPath\.." -v $fullver;
 & clio set-pkg-version "$scriptPath\..\packages\AtfTIDE" -v $fullver;
 & clio publish-app --app-name AtfTide --app-version $fullver --app-hub "$scriptPath\..\Artifacts" --repo-path "$scriptPath\..";
