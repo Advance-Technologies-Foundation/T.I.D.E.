@@ -248,11 +248,35 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 			},
 			{
 				"operation": "insert",
+				"name": "Input_ActiveBranch",
+				"values": {
+					"type": "crt.Input",
+					"label": "$Resources.Strings.PDS_AtfActiveBranch_zvr5u2c",
+					"labelPosition": "above",
+					"control": "$PDS_AtfActiveBranch_zvr5u2c",
+					"visible": true,
+					"readonly": true,
+					"placeholder": "",
+					"tooltip": "",
+					"multiline": false,
+					"layoutConfig": {
+						"column": 1,
+						"colSpan": 1,
+						"row": 3,
+						"rowSpan": 1
+					}
+				},
+				"parentName": "SideAreaProfileContainer",
+				"propertyName": "items",
+				"index": 2
+			},
+			{
+				"operation": "insert",
 				"name": "Button_LinkWithApplication",
 				"values": {
 					"layoutConfig": {
 						"column": 1,
-						"row": 3,
+						"row": 4,
 						"colSpan": 1,
 						"rowSpan": 1
 					},
@@ -276,7 +300,7 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 				},
 				"parentName": "SideAreaProfileContainer",
 				"propertyName": "items",
-				"index": 2
+				"index": 3
 			},
 			{
 				"operation": "insert",
@@ -1421,24 +1445,6 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 			},
 			{
 				"operation": "insert",
-				"name": "Input_ActiveBranch",
-				"values": {
-					"type": "crt.Input",
-					"label": "$Resources.Strings.PDS_AtfActiveBranch_zvr5u2c",
-					"labelPosition": "above",
-					"control": "$PDS_AtfActiveBranch_zvr5u2c",
-					"visible": true,
-					"readonly": true,
-					"placeholder": "",
-					"tooltip": "",
-					"multiline": false
-				},
-				"parentName": "TabContainer_Advanced",
-				"propertyName": "items",
-				"index": 0
-			},
-			{
-				"operation": "insert",
 				"name": "GridContainer_lp9rdsy",
 				"values": {
 					"type": "crt.GridContainer",
@@ -1455,7 +1461,7 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 				},
 				"parentName": "TabContainer_Advanced",
 				"propertyName": "items",
-				"index": 1
+				"index": 0
 			},
 			{
 				"operation": "insert",
@@ -1587,7 +1593,7 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 				},
 				"parentName": "TabContainer_Advanced",
 				"propertyName": "items",
-				"index": 2
+				"index": 1
 			},
 			{
 				"operation": "insert",
@@ -2121,7 +2127,7 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 					"GridDetail_t9wy0f2_PredefinedFilter": {
 						"value": null
 					},
-					MySubscription:{}
+					"MySubscription": {}
 				}
 			},
 			{

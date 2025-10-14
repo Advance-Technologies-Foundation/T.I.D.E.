@@ -2,12 +2,13 @@
   "Descriptor": {
     "UId": "9f761e8a-5728-4e7a-8177-2ace96221846",
     "Name": "AtfTIDE_FormPage",
-    "ModifiedOnUtc": "\/Date(1758537037000)\/",
+    "ModifiedOnUtc": "\/Date(1760434267000)\/",
     "Parent": {
       "UId": "3b2e117f-8c6b-4ca5-80a2-7ebb497cddf9",
       "Name": "PageWithTabsFreedomTemplate"
     },
     "ManagerName": "ClientUnitSchemaManager",
-    "Caption": "T.I.D.E. form page"
+    "Caption": "T.I.D.E. form page",
+    "DependsOn": []
   }
 }
