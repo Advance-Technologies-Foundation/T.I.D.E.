@@ -14,20 +14,20 @@ namespace ConsoleGit.Commands;
 /// <seealso href="https://github.com/libgit2/libgit2sharp/wiki/git-branch"/>
 public class GetBranchesCommand(CommandLineArgs args, IWebSocketLogger logger) : BaseRepositoryCommand(args, logger) {
 	public override ErrorOr<Success> Execute() {
-
-		
+		InitializedRepository.Fetch();
 		ErrorOr<IEnumerable<Branch>> branches = InitializedRepository.ListLocalBranches();
-		
 		if(branches.IsError){
 			return branches.Errors;
 		}
 		BranchesCommandResponse model = new() {
 			Branches = branches.Value
-			                   .Select(b => b.FriendlyName.TrimStart("origin/".ToCharArray()))
-			                   .Distinct()
-			                   .Where(v=> !v.StartsWith("HEAD"))
-			                   .Select(v => new MyBranch { Name = v })
-			                   .ToList()
+			.Select(b => b.FriendlyName.StartsWith("origin/", StringComparison.Ordinal)
+				? b.FriendlyName.Substring("origin/".Length)
+				: b.FriendlyName)
+			.Distinct()
+			.Where(v => !v.StartsWith("HEAD", StringComparison.Ordinal))
+			.Select(v => new MyBranch { Name = v })
+			.ToList()
 		};
 
 		string json = JsonSerializer.Serialize(model, AppJsonSerializerContext.Default.BranchesCommandResponse);
