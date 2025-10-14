@@ -221,62 +221,11 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 			},
 			{
 				"operation": "insert",
-				"name": "ComboBox_Application",
-				"values": {
-					"layoutConfig": {
-						"column": 1,
-						"row": 2,
-						"colSpan": 1,
-						"rowSpan": 1
-					},
-					"type": "crt.ComboBox",
-					"label": "$Resources.Strings.PDS_AtfApplication_8tomm9h",
-					"labelPosition": "auto",
-					"control": "$PDS_AtfApplication_8tomm9h",
-					"listActions": [],
-					"showValueAsLink": true,
-					"controlActions": [],
-					"visible": false,
-					"readonly": false,
-					"placeholder": "",
-					"tooltip": "#ResourceString(ComboBox_Application_tooltip)#",
-					"valueDetails": null
-				},
-				"parentName": "SideAreaProfileContainer",
-				"propertyName": "items",
-				"index": 1
-			},
-			{
-				"operation": "insert",
-				"name": "Input_ActiveBranch",
-				"values": {
-					"type": "crt.Input",
-					"label": "$Resources.Strings.PDS_AtfActiveBranch_zvr5u2c",
-					"labelPosition": "above",
-					"control": "$PDS_AtfActiveBranch_zvr5u2c",
-					"visible": true,
-					"readonly": true,
-					"placeholder": "",
-					"tooltip": "",
-					"multiline": false,
-					"layoutConfig": {
-						"column": 1,
-						"colSpan": 1,
-						"row": 3,
-						"rowSpan": 1
-					}
-				},
-				"parentName": "SideAreaProfileContainer",
-				"propertyName": "items",
-				"index": 2
-			},
-			{
-				"operation": "insert",
 				"name": "Button_LinkWithApplication",
 				"values": {
 					"layoutConfig": {
 						"column": 1,
-						"row": 4,
+						"row": 2,
 						"colSpan": 1,
 						"rowSpan": 1
 					},
@@ -297,6 +246,57 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 						}
 					},
 					"clickMode": "default"
+				},
+				"parentName": "SideAreaProfileContainer",
+				"propertyName": "items",
+				"index": 1
+			},
+			{
+				"operation": "insert",
+				"name": "ComboBox_Application",
+				"values": {
+					"layoutConfig": {
+						"column": 1,
+						"row": 3,
+						"colSpan": 1,
+						"rowSpan": 1
+					},
+					"type": "crt.ComboBox",
+					"label": "$Resources.Strings.PDS_AtfApplication_8tomm9h",
+					"labelPosition": "auto",
+					"control": "$PDS_AtfApplication_8tomm9h",
+					"listActions": [],
+					"showValueAsLink": true,
+					"controlActions": [],
+					"visible": false,
+					"readonly": false,
+					"placeholder": "",
+					"tooltip": "#ResourceString(ComboBox_Application_tooltip)#",
+					"valueDetails": null
+				},
+				"parentName": "SideAreaProfileContainer",
+				"propertyName": "items",
+				"index": 2
+			},
+			{
+				"operation": "insert",
+				"name": "Input_ActiveBranch",
+				"values": {
+					"type": "crt.Input",
+					"label": "$Resources.Strings.PDS_AtfActiveBranch_zvr5u2c",
+					"labelPosition": "above",
+					"control": "$PDS_AtfActiveBranch_zvr5u2c",
+					"visible": true,
+					"readonly": true,
+					"placeholder": "",
+					"tooltip": "",
+					"multiline": false,
+					"layoutConfig": {
+						"column": 1,
+						"colSpan": 1,
+						"row": 4,
+						"rowSpan": 1
+					}
 				},
 				"parentName": "SideAreaProfileContainer",
 				"propertyName": "items",
@@ -2127,7 +2127,20 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 					"GridDetail_t9wy0f2_PredefinedFilter": {
 						"value": null
 					},
-					"MySubscription": {}
+					"MySubscription": {},
+					"PDS_AtfApplication_8tomm9h_List": {
+						"isCollection": true,
+						"modelConfig": {
+							"sortingConfig": {
+								"default": [
+									{
+										"columnName": "Name",
+										"direction": "asc"
+									}
+								]
+							}
+						}
+					}
 				}
 			},
 			{
