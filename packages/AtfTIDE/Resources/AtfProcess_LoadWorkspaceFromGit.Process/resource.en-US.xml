@@ -31,6 +31,9 @@
 			<Item Name="BaseElements.ReadDataUserTask2.Parameters.ResultRowsCount.Caption" Value="Number of records read" />
 			<Item Name="BaseElements.ReadDataUserTask2.Parameters.ResultType.Caption" Value="Type of result" />
 			<Item Name="BaseElements.StartEvent1.Caption" Value="Start" />
+			<Item Name="BaseElements.SubProcess1.Caption" Value="Syncronize branches" />
+			<Item Name="BaseElements.SubProcess1.Parameters.RepositoryId.Caption" Value="Repository" />
+			<Item Name="BaseElements.SubProcess1.Parameters.RepositoryId.DisplayValue" Value="[#Repository#]" />
 			<Item Name="BaseElements.UserTask1.Caption" Value="Clone Repository" />
 			<Item Name="BaseElements.UserTask1.Parameters.ErrorMessage.Caption" Value="Error message" />
 			<Item Name="BaseElements.UserTask1.Parameters.IsError.Caption" Value="Is error" />
