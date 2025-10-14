@@ -52,8 +52,8 @@
             <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
         </PackageReference>
         <PackageReference Include="NUnit" Version="4.4.0" />
-        <PackageReference Include="NUnit3TestAdapter" Version="5.1.0" />
-        <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.14.1" />
+        <PackageReference Include="NUnit3TestAdapter" Version="5.2.0" />
+        <PackageReference Include="Microsoft.NET.Test.Sdk" Version="18.0.0" />
         <PackageReference Include="Castle.Core" version="5.2.1" />
         <PackageReference Include="Ninject" version="3.3.6" />
         <PackageReference Include="NSubstitute" version="3.1.0" />
@@ -65,7 +65,7 @@
         <PackageReference Include="System.Runtime.CompilerServices.Unsafe" Version="6.1.2" />
         <PackageReference Include="System.Threading.Tasks.Extensions" version="4.6.3" />
         <PackageReference Include="System.Collections.Immutable" version="8.0.0" />
-        <PackageReference Include="System.IO.Abstractions.TestingHelpers" Version="22.0.15" />
+        <PackageReference Include="System.IO.Abstractions.TestingHelpers" Version="22.0.16" />
 <!--        <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />-->
 <!--        <PackageReference Include="RichardSzalay.MockHttp" Version="7.0.0" />-->
         <Reference Include="*">
