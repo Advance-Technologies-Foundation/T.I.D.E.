@@ -1,0 +1,9 @@
+﻿{
+  "Descriptor": {
+    "UId": "1063d109-2a46-4709-a2dd-bcb76d409956",
+    "Name": "AtfProcessUserTask_GetActiveBranchName",
+    "ModifiedOnUtc": "\/Date(1760475510000)\/",
+    "ManagerName": "ProcessUserTaskSchemaManager",
+    "Caption": "Get active branch name"
+  }
+}

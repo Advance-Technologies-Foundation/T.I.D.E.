@@ -2,9 +2,8 @@
   "Descriptor": {
     "UId": "3d3314ee-1601-4d0e-83e0-e3f5a9f0beaa",
     "Name": "ATFSyncronizeBranchesWithRepo",
-    "ModifiedOnUtc": "\/Date(1758615555000)\/",
+    "ModifiedOnUtc": "\/Date(1760476480000)\/",
     "ManagerName": "ProcessSchemaManager",
-    "Caption": "ATFSyncronizeBranchesWithRepo",
-    "DependsOn": []
+    "Caption": "ATFSyncronizeBranchesWithRepo"
   }
 }

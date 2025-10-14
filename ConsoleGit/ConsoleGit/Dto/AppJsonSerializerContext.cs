@@ -8,5 +8,6 @@ namespace ConsoleGit.Dto;
 [JsonSerializable(typeof(JsonElement))]
 [JsonSerializable(typeof(WorkspaceSettings))]
 [JsonSerializable(typeof(BranchesCommandResponse))]
+[JsonSerializable(typeof(ActiveBranchResponse))]
 [JsonSerializable(typeof(MyBranch))]
 public partial class AppJsonSerializerContext : JsonSerializerContext { }

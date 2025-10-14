@@ -62,6 +62,7 @@ public static class Program
 										services.AddScoped<AddAllCommand>();
 										services.AddScoped<CommitCommand>();
 										services.AddScoped<DownloadPackagesCommand>();
+										services.AddScoped<GetActiveBranchCommand>();
 										services.AddScoped<GetBranchesCommand>();
 										services.AddScoped<GetDiffCommand>();
 										services.AddScoped<GetChangedFilesCommand>();
@@ -85,6 +86,7 @@ public static class Program
 									"AddAll" =>host.Services.GetRequiredService<AddAllCommand>(),
 									"Commit" =>host.Services.GetRequiredService<CommitCommand>(),
 									"DownloadPackages" =>host.Services.GetRequiredService<DownloadPackagesCommand>(),
+									"GetActiveBranch" => host.Services.GetRequiredService<GetActiveBranchCommand>(),
 									"GetBranches" =>host.Services.GetRequiredService<GetBranchesCommand>(),
 									"GetDiff" =>host.Services.GetRequiredService<GetDiffCommand>(),
 									"GetChangedFiles" =>host.Services.GetRequiredService<GetChangedFilesCommand>(),

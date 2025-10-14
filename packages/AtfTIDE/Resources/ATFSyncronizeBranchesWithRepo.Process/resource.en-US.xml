@@ -2,6 +2,16 @@
 <Resources Culture="en-US">
 	<Group Type="String">
 		<Items>
+			<Item Name="BaseElements.ChangeDataUserTask1.Caption" Value="Set active branch name" />
+			<Item Name="BaseElements.ChangeDataUserTask1.Parameters.ConsiderTimeInFilter.Caption" Value="Consider time in the filter" />
+			<Item Name="BaseElements.ChangeDataUserTask1.Parameters.ConsiderTimeInFilter.DisplayValue" Value="true" />
+			<Item Name="BaseElements.ChangeDataUserTask1.Parameters.DataSourceFilters.Caption" Value="Data source filters" />
+			<Item Name="BaseElements.ChangeDataUserTask1.Parameters.EntitySchemaUId.Caption" Value="Object" />
+			<Item Name="BaseElements.ChangeDataUserTask1.Parameters.IgnoreErrors.Caption" Value="Continue execution on errors" />
+			<Item Name="BaseElements.ChangeDataUserTask1.Parameters.IgnoreErrors.DisplayValue" Value="false" />
+			<Item Name="BaseElements.ChangeDataUserTask1.Parameters.IsMatchConditions.Caption" Value="If object meets the following conditions" />
+			<Item Name="BaseElements.ChangeDataUserTask1.Parameters.IsMatchConditions.DisplayValue" Value="true" />
+			<Item Name="BaseElements.ChangeDataUserTask1.Parameters.RecordColumnValues.Caption" Value="Set column values" />
 			<Item Name="BaseElements.ConditionalSequenceFlow2.Caption" Value="On error" />
 			<Item Name="BaseElements.DeleteDataUserTask1.Caption" Value="Delete branches" />
 			<Item Name="BaseElements.DeleteDataUserTask1.Parameters.ConsiderTimeInFilter.Caption" Value="Consider time in the filter" />
@@ -40,6 +50,18 @@
 			<Item Name="BaseElements.UserTask3.Parameters.DataSourceName.Caption" Value="Data source name" />
 			<Item Name="BaseElements.UserTask3.Parameters.DataSourceName.DisplayValue" Value="GridDetail_t9wy0f2DS" />
 			<Item Name="BaseElements.UserTask3.Parameters.DataSourceName.Value" Value="GridDetail_t9wy0f2DS" />
+			<Item Name="BaseElements.UserTask4.Caption" Value="Get active branch name" />
+			<Item Name="BaseElements.UserTask4.Parameters.ActiveBranchName.Caption" Value="Active branch name" />
+			<Item Name="BaseElements.UserTask4.Parameters.ErrorMessage.Caption" Value="ErrorMessage" />
+			<Item Name="BaseElements.UserTask4.Parameters.IsError.Caption" Value="IsError" />
+			<Item Name="BaseElements.UserTask4.Parameters.Repository.Caption" Value="Repository" />
+			<Item Name="BaseElements.UserTask4.Parameters.Repository.DisplayValue" Value="[#Repository#]" />
+			<Item Name="BaseElements.UserTask5.Caption" Value="Log out get-branches message - Copy" />
+			<Item Name="BaseElements.UserTask5.Parameters.LogLevel.Caption" Value="LogLevel" />
+			<Item Name="BaseElements.UserTask5.Parameters.LogLevel.DisplayValue" Value="ERR" />
+			<Item Name="BaseElements.UserTask5.Parameters.LogLevel.Value" Value="ERR" />
+			<Item Name="BaseElements.UserTask5.Parameters.Message.Caption" Value="Message" />
+			<Item Name="BaseElements.UserTask5.Parameters.Message.DisplayValue" Value="[#Get active branch name.ErrorMessage#]" />
 			<Item Name="Caption" Value="ATFSyncronizeBranchesWithRepo" />
 			<Item Name="LaneSets.LaneSet1.Caption" Value="LaneSet 1" />
 			<Item Name="LaneSets.LaneSet1.Lanes.Lane1.Caption" Value="Lane 1" />
