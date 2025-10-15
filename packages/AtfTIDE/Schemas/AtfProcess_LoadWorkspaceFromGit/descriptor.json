@@ -2,9 +2,8 @@
   "Descriptor": {
     "UId": "69282d5a-b25b-4730-8001-c39307b78fc4",
     "Name": "AtfProcess_LoadWorkspaceFromGit",
-    "ModifiedOnUtc": "\/Date(1757705096000)\/",
+    "ModifiedOnUtc": "\/Date(1760471195000)\/",
     "ManagerName": "ProcessSchemaManager",
-    "Caption": "TIDE. Load workspace from Git",
-    "DependsOn": []
+    "Caption": "TIDE. Load workspace from Git"
   }
 }

@@ -37,8 +37,7 @@
                         "UId": "afd14bf6-55a7-0c08-7e65-ab6990c35f23",
                         "BRE1": "Lookup",
                         "BRE2": "AttributeValue",
-                        "BRX1": "PDS_AtfApplication_8tomm9h",
-                        "BRX2": "null"
+                        "BRX1": "PDS_AtfApplication_8tomm9h"
                       },
                       "BCO3": 1
                     }
@@ -71,6 +70,54 @@
               }
             ],
             "BR3": "BusinessRule_152baca"
+          },
+          {
+            "JI0": "Terrasoft.Core.BusinessRules.BusinessRule",
+            "UId": "d73f1dc0-72e4-41b2-7db8-fa0842f8c615",
+            "BR1": [
+              {
+                "JI0": "Terrasoft.Core.BusinessRules.Models.BusinessRuleCase",
+                "UId": "2f827ecb-74b7-2cba-a9e1-c6296b975f87",
+                "BRC1": {
+                  "JI0": "Terrasoft.Core.BusinessRules.Models.Conditions.BusinessRuleGroupCondition",
+                  "UId": "358e6d18-04a4-ab30-739c-45978c50a227",
+                  "BGC1": 1,
+                  "BGC2": [
+                    {
+                      "JI0": "Terrasoft.Core.BusinessRules.Models.Conditions.BusinessRuleCondition",
+                      "UId": "4b350f34-5743-b778-5198-ab2c8ee29172",
+                      "BCO1": {
+                        "JI0": "Terrasoft.Core.BusinessRules.Models.Expressions.BusinessRuleAttributeExpression",
+                        "UId": "74b2d54f-2d63-5a7a-c0c9-0b32325928b4",
+                        "BRE1": "MediumText",
+                        "BRE2": "AttributeValue",
+                        "BRX1": "PDS_AtfActiveBranch_zvr5u2c"
+                      }
+                    }
+                  ]
+                },
+                "BRC2": [
+                  {
+                    "JI0": "Terrasoft.Core.BusinessRules.Models.Actions.BusinessRuleActionHideElement",
+                    "UId": "58f8ac91-788b-72a8-cc16-29ccc49560d4",
+                    "BRA4": "Input_ActiveBranch"
+                  }
+                ]
+              }
+            ],
+            "BR2": [
+              {
+                "JI0": "Terrasoft.Core.BusinessRules.Models.Trigger",
+                "UId": "383977f6-2f38-2717-c03b-b3718340b6e3",
+                "BRT2": 2
+              },
+              {
+                "JI0": "Terrasoft.Core.BusinessRules.Models.Trigger",
+                "UId": "14aa5526-a415-1c24-0eca-49df64220eac",
+                "BRT1": "PDS_AtfActiveBranch_zvr5u2c"
+              }
+            ],
+            "BR3": "BusinessRule_b34edb8"
           }
         ]
       }

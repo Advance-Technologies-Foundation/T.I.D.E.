@@ -3,31 +3,28 @@
 	<Group Type="String">
 		<Items>
 			<Item Name="Caption" Value="T.I.D.E. form page" />
-			<Item Name="LocalizableStrings.addRecord_blfd98c_caption.Value" Value="Add new" />
-			<Item Name="LocalizableStrings.addRecord_j3557wo_caption.Value" Value="Add new" />
 			<Item Name="LocalizableStrings.AtfName_tooltip.Value" Value="Repository name" />
 			<Item Name="LocalizableStrings.Button_2shb3kw_caption.Value" Value="LOAD FROM GIT" />
 			<Item Name="LocalizableStrings.Button_8c6g2be_caption.Value" Value="Set active branch" />
-			<Item Name="LocalizableStrings.Button_cht5usd_caption.Value" Value="Button" />
 			<Item Name="LocalizableStrings.Button_DiscardChanges_caption.Value" Value="Discard selected changes" />
+			<Item Name="LocalizableStrings.Button_LOADFROMGIT_caption.Value" Value="UPDATE FROM GIT" />
 			<Item Name="LocalizableStrings.Button_LinkWithApplication_caption.Value" Value="Link with application" />
 			<Item Name="LocalizableStrings.Button_LoadChangesToLocalCopy_caption.Value" Value="Load changes from Creatio" />
-			<Item Name="LocalizableStrings.Button_LOADFROMGIT_caption.Value" Value="UPDATE FROM GIT" />
+			<Item Name="LocalizableStrings.Button_SaveToGit_Green_caption.Value" Value="COMMIT TO GIT" />
+			<Item Name="LocalizableStrings.Button_SyncBranchesWithRepo_caption.Value" Value="Syncronize branches with repository" />
+			<Item Name="LocalizableStrings.Button_cht5usd_caption.Value" Value="Button" />
 			<Item Name="LocalizableStrings.Button_nemrkb0_caption.Value" Value="SAVE TO GIT     " />
 			<Item Name="LocalizableStrings.Button_q2spave_caption.Value" Value="Set Active branch" />
 			<Item Name="LocalizableStrings.Button_rs966jg_caption.Value" Value="Button" />
-			<Item Name="LocalizableStrings.Button_SaveToGit_Green_caption.Value" Value="COMMIT TO GIT" />
 			<Item Name="LocalizableStrings.Button_saveToGit_Red_caption.Value" Value="Commit to Git" />
-			<Item Name="LocalizableStrings.Button_SetActiveBranch_caption.Value" Value="Set active branch" />
-			<Item Name="LocalizableStrings.Button_SyncBranchesWithRepo_caption.Value" Value="Syncronize branches with repository" />
 			<Item Name="LocalizableStrings.Button_v3hmd7w_caption.Value" Value="Link with repository" />
 			<Item Name="LocalizableStrings.ComboBox_8yu6sy5_tooltip.Value" Value="Application that is associated with the repository" />
 			<Item Name="LocalizableStrings.ComboBox_Application_tooltip.Value" Value="Application that is associated with the repository" />
 			<Item Name="LocalizableStrings.ExpansionPanel_ApplicationHash_title.Value" Value="Application Hash" />
+			<Item Name="LocalizableStrings.ExpansionPanel_State_title.Value" Value="State" />
 			<Item Name="LocalizableStrings.ExpansionPanel_qif7wzo_title.Value" Value="Expansion panel" />
 			<Item Name="LocalizableStrings.ExpansionPanel_rgvl3td_title.Value" Value="Changed files" />
 			<Item Name="LocalizableStrings.ExpansionPanel_srhpdgo_title.Value" Value="Repository Branch" />
-			<Item Name="LocalizableStrings.ExpansionPanel_State_title.Value" Value="State" />
 			<Item Name="LocalizableStrings.ExpansionPanel_w1nj9pl_title.Value" Value="Auth settings" />
 			<Item Name="LocalizableStrings.GridDetailAddBtn_3ky6mp6_caption.Value" Value="New" />
 			<Item Name="LocalizableStrings.GridDetailAddBtn_fzbi431_caption.Value" Value="New" />
@@ -35,9 +32,7 @@
 			<Item Name="LocalizableStrings.GridDetailExportDataBtn_cqxwofy_caption.Value" Value="Export to Excel" />
 			<Item Name="LocalizableStrings.GridDetailImportDataBtn_j7mr4n2_caption.Value" Value="Data import" />
 			<Item Name="LocalizableStrings.GridDetailImportDataBtn_nk414hp_caption.Value" Value="Data import" />
-			<Item Name="LocalizableStrings.GridDetailRefreshBtn_bpq27gy_caption.Value" Value="Refresh" />
 			<Item Name="LocalizableStrings.GridDetailRefreshBtn_qhby3xs_caption.Value" Value="Refresh" />
-			<Item Name="LocalizableStrings.GridDetailSearchFilter_m373eyy_placeholder.Value" Value="Search" />
 			<Item Name="LocalizableStrings.GridDetailSearchFilter_z1pzuec_placeholder.Value" Value="Search" />
 			<Item Name="LocalizableStrings.GridDetailSettingsBtn_5ijlpwq_caption.Value" Value="Actions" />
 			<Item Name="LocalizableStrings.GridDetailSettingsBtn_n0jlqjb_caption.Value" Value="Actions" />
@@ -57,6 +52,8 @@
 			<Item Name="LocalizableStrings.TabContainer_mcnezxd_caption.Value" Value="Tab 2" />
 			<Item Name="LocalizableStrings.TabContainer_p9aexbq_caption.Value" Value="Tab 1" />
 			<Item Name="LocalizableStrings.WebInput_RepositoryUrl_tooltip.Value" Value="Repository URL to " />
+			<Item Name="LocalizableStrings.addRecord_blfd98c_caption.Value" Value="Add new" />
+			<Item Name="LocalizableStrings.addRecord_j3557wo_caption.Value" Value="Add new" />
 		</Items>
 	</Group>
 </Resources>

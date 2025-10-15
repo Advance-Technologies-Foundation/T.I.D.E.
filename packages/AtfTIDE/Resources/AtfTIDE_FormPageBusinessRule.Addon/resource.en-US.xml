@@ -3,6 +3,7 @@
 	<Group Type="String">
 		<Items>
 			<Item Name="AddonConfig.Rules.15fc4ebf-5b2f-5904-c4c8-1ea519af0d3e.Caption" Value="Show app when seletced" />
+			<Item Name="AddonConfig.Rules.d73f1dc0-72e4-41b2-7db8-fa0842f8c615.Caption" Value="Show elements: Active branch" />
 			<Item Name="Caption" Value="T.I.D.E. form page (Business rules)" />
 		</Items>
 	</Group>
