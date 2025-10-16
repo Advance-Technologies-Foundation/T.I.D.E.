@@ -50,6 +50,9 @@ namespace GitAbstraction
 
 		private Lazy<Repository> RepositoryLazy => new Lazy<Repository>(() => new Repository(RepoDirectory.FullName));
 
+		private bool IsRepositoryReady => RepoDirectory.Exists && (Repository.IsValid(RepoDirectory.FullName) ||
+			Repository.IsValid(Path.Combine(RepoDirectory.FullName, ".git")));
+
 		#endregion
 
 		#region Methods: Private
@@ -139,8 +142,7 @@ namespace GitAbstraction
 				cloneOptions.FetchOptions.CredentialsProvider = CredentialsProvider;
 				string result = Repository.Clone(GitUrl.ToString(), RepoDirectory.FullName, cloneOptions);
 				return result;
-			}
-			catch (Exception e) {
+			} catch (Exception e) {
 				string errorMessage = $"""
 									Failed to clone repository to: {RepoDirectory.FullName}
 									Permissions: {GetAccessPermissionsForFolder(RepoDirectory.FullName)}
@@ -151,8 +153,6 @@ namespace GitAbstraction
 			}
 		}
 
-		
-		
 		private static  string GetAccessPermissionsForFolder(string repoDir) {
 			DirectoryInfo directoryInfo = new DirectoryInfo(repoDir);
 			if(directoryInfo.Exists) {
@@ -172,28 +172,29 @@ namespace GitAbstraction
 			}
 			return $"{directoryInfo.FullName} does not exist.";
 		}
-		
+
 		public ErrorOr<Success> Fetch() {
+			if (!IsRepositoryReady) {
+				Clone();
+			}
 			string logMessage = "";
 			try {
 				Remote remote = InitializedRepository.Network.Remotes["origin"];
 				IEnumerable<string> refSpecs = remote.FetchRefSpecs.Select(x => x.Specification);
-				FetchOptions fetchOptions = new () {
+				FetchOptions fetchOptions = new() {
 					CredentialsProvider = CredentialsProvider,
-					Prune = true,	// Automatically prune deleted branches
-					Depth = 1		// Shallow fetch
+					Prune = true,   // Automatically prune deleted branches
+					Depth = 1       // Shallow fetch
 				};
-				
+
 				Commands.Fetch(InitializedRepository, remote.Name, refSpecs, fetchOptions, logMessage);
 				Console.Out.WriteLine(logMessage);
 				return Result.Success;
-			}
-			catch (Exception e) {
+			} catch (Exception e) {
 				Console.Error.WriteLine($"Error fetching from remote repository: {e.Message}");
 				return Error.Failure("FetchError", $"Failed to fetch from remote repository: {logMessage}\r\n {e.Message}");
 			}
 		}
-
 
 		public void Dispose() {
 			Dispose(true);

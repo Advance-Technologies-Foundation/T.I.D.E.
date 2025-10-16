@@ -39,6 +39,9 @@ namespace Terrasoft.Core.Process.Configuration
 			RepositoryInfo repoInfo = HelperFunctions.GetRepositoryInfo(Repository, UserConnection);
 			ConsoleGitArgs args = new ConsoleGitArgs {
 				Command = Commands.GetBranches,
+				GitUrl = repoInfo.GitUrl,
+				Password = repoInfo.Password,
+				UserName = repoInfo.UserName,
 				RepoDir = HelperFunctions.GetRepositoryDirectory(repoInfo.Name).ToString(),
 				Silent = true
 			};

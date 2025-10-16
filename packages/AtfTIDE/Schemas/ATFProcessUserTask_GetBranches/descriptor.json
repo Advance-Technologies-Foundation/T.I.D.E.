@@ -2,9 +2,8 @@
   "Descriptor": {
     "UId": "0510a0cf-480a-4e3e-9dbd-0dcff795d52c",
     "Name": "ATFProcessUserTask_GetBranches",
-    "ModifiedOnUtc": "\/Date(1734647562000)\/",
+    "ModifiedOnUtc": "\/Date(1760606403000)\/",
     "ManagerName": "ProcessUserTaskSchemaManager",
-    "Caption": "Get branches",
-    "DependsOn": []
+    "Caption": "Get branches"
   }
 }

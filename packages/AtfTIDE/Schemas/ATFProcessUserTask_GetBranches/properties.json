@@ -1,6 +1,7 @@
 ﻿{
   "Properties": {
     "CreatedInVersion": "8.2.2.412",
-    "IsInteractive": "True"
+    "IsInteractive": "True",
+    "OptionalProperties": "{}"
   }
 }

@@ -8,7 +8,7 @@ using LibGit2Sharp;
 namespace ConsoleGit.Commands;
 
 /// <summary>
-/// Pushes the specified branch to the remote repository.
+/// Gets lists of git branch.
 /// </summary>
 /// <param name="args">Arguments</param>
 /// <seealso href="https://github.com/libgit2/libgit2sharp/wiki/git-branch"/>
