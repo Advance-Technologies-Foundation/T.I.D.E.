@@ -7,6 +7,7 @@
     "IsSSPAvailable": "False",
     "IsTrackChangesInDB": "False",
     "IsVirtual": "False",
+    "OptionalProperties": "{}",
     "UseLiveEditing": "True"
   }
 }
