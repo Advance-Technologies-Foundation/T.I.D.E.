@@ -273,8 +273,9 @@ namespace AtfTIDE{
                 repositoryEntity.GetTypedColumnValue<string>("AtfName"),
                 repositoryEntity.GetTypedColumnValue<string>("AtfRepositoryUrl"),
                 repositoryEntity.GetTypedColumnValue<string>("AtfUserName"),
-                repositoryEntity.GetTypedColumnValue<string>("AtfAccessToken")
-            );
+                repositoryEntity.GetTypedColumnValue<string>("AtfAccessToken"),
+				repositoryEntity.GetTypedColumnValue<string>("AtfActiveBranch")
+			);
         }
 
         /// <summary>
@@ -357,11 +358,12 @@ namespace AtfTIDE{
     public class RepositoryInfo{
         #region Constructors: Public
 
-        public RepositoryInfo(string name, string gitUrl, string userName, string password) {
+        public RepositoryInfo(string name, string gitUrl, string userName, string password, string branchName) {
             Name = name;
             GitUrl = gitUrl;
             UserName = userName;
             Password = password;
+            BranchName = branchName;
         }
 
         #endregion
@@ -372,6 +374,7 @@ namespace AtfTIDE{
         public string Password { get; }
         public string UserName { get; }
         public string Name { get; }
+        public string BranchName { get; }
 
         #endregion
     }

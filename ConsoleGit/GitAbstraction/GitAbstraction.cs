@@ -115,10 +115,12 @@ namespace GitAbstraction
 		///  Clones the repository to the specified directory.
 		/// </summary>
 		/// <returns>
+		/// <param name="branchName">
+		///  Branch name for checkout.
 		///  An <see cref="ErrorOr{T}" /> containing the path to the cloned repository or an error.
 		/// </returns>
 		/// <seealso href="https://github.com/libgit2/libgit2sharp/wiki/git-clone">libgit2sharp Wiki Clone</seealso>
-		public ErrorOr<string> Clone() {
+		public ErrorOr<string> Clone(string branchName = null) {
 			if (RepoDirectory.Exists) {
 				DeleteDirectoryRecursively(RepoDirectory);
 				//RepoDirectory.Delete(true);
@@ -129,6 +131,7 @@ namespace GitAbstraction
 			CloneOptions cloneOptions = new CloneOptions() {
 				Checkout = true,
 				RecurseSubmodules = true,
+				BranchName = string.IsNullOrWhiteSpace(branchName) ? null : branchName,
 				FetchOptions = {
 					CredentialsProvider = CredentialsProvider,
 					Depth = 5, // Shallow clone
@@ -136,12 +139,9 @@ namespace GitAbstraction
 				}
 			};
 			try {
-				if (Credentials == null) {
-					return Repository.Clone(GitUrl.ToString(), RepoDirectory.FullName);
-				}
-				cloneOptions.FetchOptions.CredentialsProvider = CredentialsProvider;
-				string result = Repository.Clone(GitUrl.ToString(), RepoDirectory.FullName, cloneOptions);
-				return result;
+				return Credentials == null
+						? Repository.Clone(GitUrl.ToString(), RepoDirectory.FullName)
+						: Repository.Clone(GitUrl.ToString(), RepoDirectory.FullName, cloneOptions);
 			} catch (Exception e) {
 				string errorMessage = $"""
 									Failed to clone repository to: {RepoDirectory.FullName}
