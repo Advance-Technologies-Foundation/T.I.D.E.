@@ -32,15 +32,10 @@ namespace Terrasoft.Core.Process.Configuration
 				Command = AtfTIDE.Commands.Checkout,
 				GitUrl = repositoryInfo.GitUrl,
 				BranchName = repositoryInfo.BranchName,
-				//BranchName = entity.GetTypedColumnValue<string>("AtfName"),
 				Password = repositoryInfo.Password,
 				UserName = repositoryInfo.UserName,
 				RepoDir = HelperFunctions.GetRepositoryDirectory(repositoryInfo.Name).ToString(),
 			};
-
-			if (!string.IsNullOrEmpty(repositoryInfo.BranchName)) {
-				args.BranchName = repositoryInfo.BranchName;
-			}
 
 			ConsoleGitResult gitCommandResult = ClassFactory
 			                                    .Get<IConsoleGit>("AtfTIDE.ConsoleGit")
