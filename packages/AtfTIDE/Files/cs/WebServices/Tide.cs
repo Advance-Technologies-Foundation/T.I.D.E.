@@ -56,7 +56,9 @@ namespace AtfTIDE.WebServices{
             }
 
             // Recursively delete all subdirectories
-            foreach (DirectoryInfo subDirectory in directory.GetDirectories()) DeleteDirectoryRecursively(subDirectory);
+            foreach (DirectoryInfo subDirectory in directory.GetDirectories()) {
+                DeleteDirectoryRecursively(subDirectory);
+            }
 
             // Delete the empty directory
             directory.Delete(false);
@@ -153,13 +155,18 @@ namespace AtfTIDE.WebServices{
         [WebInvoke(Method = "GET", RequestFormat = WebMessageFormat.Json,
             BodyStyle = WebMessageBodyStyle.Bare, ResponseFormat = WebMessageFormat.Json)]
         public void CaptureClioArgs() {
-            HttpRequest request = HttpContextAccessor.GetInstance().Request;
-            HttpCookieCollection cookies = request.Cookies;
             Dictionary<string, string> sysInfo = new Dictionary<string, string>();
             string systemUrl = WebUtilities.GetBaseApplicationUrl(HttpContextAccessor.GetInstance().Request);
-            sysInfo.Add("IsFramework", systemUrl.EndsWith("/0", StringComparison.InvariantCulture) ? "true" : "false");
-            sysInfo.Add("SystemUrl", systemUrl);
-            foreach (string cookieName in cookies.Keys) sysInfo.Add(cookieName, cookies[cookieName].Value);
+            sysInfo["IsFramework"]= systemUrl.EndsWith("/0", StringComparison.InvariantCulture) ? "true" : "false";
+            sysInfo["SystemUrl"]= systemUrl;
+            
+            //We no longer use this, we pass credentials stored in sysSettings
+            //HttpRequest request = HttpContextAccessor.GetInstance().Request;
+            //HttpCookieCollection cookies = request.Cookies;
+            // foreach (string cookieName in cookies.Keys) {
+            //     sysInfo[cookieName] = cookies[cookieName].Value;
+            // }
+
             HelperFunctions.AddClioArgsForUser(UserConnection.CurrentUser.Id, sysInfo);
 
 #if NETSTANDARD2_0
