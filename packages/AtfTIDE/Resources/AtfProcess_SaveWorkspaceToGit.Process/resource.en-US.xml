@@ -77,23 +77,6 @@
 			<Item Name="BaseElements.ReadDataUserTask3.Parameters.ResultRowsCount.Caption" Value="Number of records read" />
 			<Item Name="BaseElements.ReadDataUserTask3.Parameters.ResultType.Caption" Value="Type of result" />
 			<Item Name="BaseElements.StartEvent1.Caption" Value="Start" />
-			<Item Name="BaseElements.UserTask10.Caption" Value="Log out PUSH message" />
-			<Item Name="BaseElements.UserTask10.Parameters.LogLevel.Caption" Value="LogLevel" />
-			<Item Name="BaseElements.UserTask10.Parameters.LogLevel.DisplayValue" Value="ERR" />
-			<Item Name="BaseElements.UserTask10.Parameters.LogLevel.Value" Value="ERR" />
-			<Item Name="BaseElements.UserTask10.Parameters.Message.Caption" Value="Message" />
-			<Item Name="BaseElements.UserTask10.Parameters.Message.DisplayValue" Value="&quot;BP GIT PUSH: &quot;+[#Git Push.Output#]+&quot; &quot;+[#Git Push.Error Message#]" />
-			<Item Name="BaseElements.UserTask12.Caption" Value="Checkout active branch" />
-			<Item Name="BaseElements.UserTask12.Parameters.ErrorMessage.Caption" Value="Error message" />
-			<Item Name="BaseElements.UserTask12.Parameters.IsError.Caption" Value="Is error" />
-			<Item Name="BaseElements.UserTask12.Parameters.RepositoryBranch.Caption" Value="Repository Branch" />
-			<Item Name="BaseElements.UserTask12.Parameters.RepositoryBranch.DisplayValue" Value="[#Read branch.First item of resulting collection.Id#]" />
-			<Item Name="BaseElements.UserTask13.Caption" Value="Log out Checkout branch message" />
-			<Item Name="BaseElements.UserTask13.Parameters.LogLevel.Caption" Value="LogLevel" />
-			<Item Name="BaseElements.UserTask13.Parameters.LogLevel.DisplayValue" Value="ERR" />
-			<Item Name="BaseElements.UserTask13.Parameters.LogLevel.Value" Value="ERR" />
-			<Item Name="BaseElements.UserTask13.Parameters.Message.Caption" Value="Message" />
-			<Item Name="BaseElements.UserTask13.Parameters.Message.DisplayValue" Value="&quot;BP  Checkout branch: &quot;+[#Checkout active branch.Error message#]" />
 			<Item Name="BaseElements.UserTask1.Caption" Value="Clone Repository" />
 			<Item Name="BaseElements.UserTask1.Parameters.ErrorMessage.Caption" Value="Error message" />
 			<Item Name="BaseElements.UserTask1.Parameters.IsError.Caption" Value="Is error" />
@@ -101,6 +84,30 @@
 			<Item Name="BaseElements.UserTask1.Parameters.Repository.Caption" Value="Repository" />
 			<Item Name="BaseElements.UserTask1.Parameters.Repository.DisplayValue" Value="[#Repository#]" />
 			<Item Name="BaseElements.UserTask1.Parameters.RepositoryFolderPath.Caption" Value="Repository Folder Path" />
+			<Item Name="BaseElements.UserTask10.Caption" Value="Log out PUSH message" />
+			<Item Name="BaseElements.UserTask10.Parameters.LogLevel.Caption" Value="LogLevel" />
+			<Item Name="BaseElements.UserTask10.Parameters.LogLevel.DisplayValue" Value="ERR" />
+			<Item Name="BaseElements.UserTask10.Parameters.LogLevel.Value" Value="ERR" />
+			<Item Name="BaseElements.UserTask10.Parameters.Message.Caption" Value="Message" />
+			<Item Name="BaseElements.UserTask10.Parameters.Message.DisplayValue" Value="&quot;BP GIT PUSH: &quot;+[#Git Push.Output#]+&quot; &quot;+[#Git Push.Error Message#]" />
+			<Item Name="BaseElements.UserTask11.Caption" Value="Update detail data" />
+			<Item Name="BaseElements.UserTask11.Parameters.CommandName.Caption" Value="Command name" />
+			<Item Name="BaseElements.UserTask11.Parameters.CommandName.DisplayValue" Value="LoadDataRequest" />
+			<Item Name="BaseElements.UserTask11.Parameters.CommandName.Value" Value="LoadDataRequest" />
+			<Item Name="BaseElements.UserTask11.Parameters.DataSourceName.Caption" Value="Data source name" />
+			<Item Name="BaseElements.UserTask11.Parameters.DataSourceName.DisplayValue" Value="GridDetail_62r7nr2DS" />
+			<Item Name="BaseElements.UserTask11.Parameters.DataSourceName.Value" Value="GridDetail_62r7nr2DS" />
+			<Item Name="BaseElements.UserTask12.Caption" Value="Checkout active branch" />
+			<Item Name="BaseElements.UserTask12.Parameters.ErrorMessage.Caption" Value="Error message" />
+			<Item Name="BaseElements.UserTask12.Parameters.IsError.Caption" Value="Is error" />
+			<Item Name="BaseElements.UserTask12.Parameters.RepositoryBranch.Caption" Value="Repository Branch" />
+			<Item Name="BaseElements.UserTask12.Parameters.RepositoryBranch.DisplayValue" Value="[#Read active branch.First item of resulting collection.Id#]" />
+			<Item Name="BaseElements.UserTask13.Caption" Value="Log out Checkout branch message" />
+			<Item Name="BaseElements.UserTask13.Parameters.LogLevel.Caption" Value="LogLevel" />
+			<Item Name="BaseElements.UserTask13.Parameters.LogLevel.DisplayValue" Value="ERR" />
+			<Item Name="BaseElements.UserTask13.Parameters.LogLevel.Value" Value="ERR" />
+			<Item Name="BaseElements.UserTask13.Parameters.Message.Caption" Value="Message" />
+			<Item Name="BaseElements.UserTask13.Parameters.Message.DisplayValue" Value="&quot;BP  Checkout branch: &quot;+[#Checkout active branch.Error message#]" />
 			<Item Name="BaseElements.UserTask2.Caption" Value="Git Add All Files" />
 			<Item Name="BaseElements.UserTask2.Parameters.ErrorMessage.Caption" Value="Error Message" />
 			<Item Name="BaseElements.UserTask2.Parameters.IsError.Caption" Value="Is Error" />

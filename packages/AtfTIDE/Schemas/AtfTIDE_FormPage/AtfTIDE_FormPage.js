@@ -2004,8 +2004,8 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 						},
 						"validators": {
 							"requiredValidator": {
-					            "type": "crt.Required"
-					        }
+								"type": "crt.Required"
+							}
 						}
 					},
 					"GridDetail_t9wy0f2": {
@@ -2380,7 +2380,7 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 				request: 'crt.HandleViewModelResumeRequest',
 				handler: async (request, next) => {
 					const messageChannelService = new sdk.MessageChannelService();
-					request.$context.MySubscription = await messageChannelService.subscribe("AtfTide",
+					/*request.$context.MySubscription = await messageChannelService.subscribe("AtfTide",
 						(message)=> {
 							const body = message.body.message;
 							const commandName = message.body.commandName;
@@ -2400,7 +2400,7 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 									});
 							}
 						}
-					);
+					);*/
 				}
 			},
 			{
@@ -2409,7 +2409,7 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 					const { $context } = request;
 					const messageChannelService = new sdk.MessageChannelService();
 					const sysSettingsService = new sdk.SysSettingsService();
-					
+					const id = await request.$context.Id;
 					const showGitTab = await sysSettingsService.getByCode('AtfShowGitTab');
 					request.$context.IsGitTabVisible = showGitTab.value;
 					
@@ -2417,7 +2417,7 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 					request.$context.IsAdvancedTabVisible = showAdvancedTab.value;
 
 					request.$context.MySubscription = await messageChannelService.subscribe("AtfTide",
-						(message) => {
+						(message) =>  {
 							const body = message.body.message;
 							const commandName = message.body.commandName;
 
@@ -2425,6 +2425,11 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 							switch (commandName){
 								case 'LoadDataRequest':
 									return handlerChain.process({
+										type: 'atf.OnGetDiffCLicked',
+										$context: request.$context,
+										scopes: [...request.scopes],
+									});
+									/*return handlerChain.process({
 										type: 'crt.LoadDataRequest',
 										$context: request.$context,
 										scopes: request.scopes,
@@ -2433,7 +2438,7 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 											loadType: "reload",
 											useLastLoadParameters: true
 										}
-									});
+									});*/
 							}
 						}
 					);

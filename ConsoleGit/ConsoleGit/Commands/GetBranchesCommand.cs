@@ -14,7 +14,10 @@ namespace ConsoleGit.Commands;
 /// <seealso href="https://github.com/libgit2/libgit2sharp/wiki/git-branch"/>
 public class GetBranchesCommand(CommandLineArgs args, IWebSocketLogger logger) : BaseRepositoryCommand(args, logger) {
 	public override ErrorOr<Success> Execute() {
-		InitializedRepository.Fetch();
+		var fetchErrors = InitializedRepository.Fetch();
+		if(fetchErrors.IsError){
+			return fetchErrors.Errors;
+		}
 		ErrorOr<IEnumerable<Branch>> branches = InitializedRepository.ListLocalBranches();
 		if(branches.IsError){
 			return branches.Errors;

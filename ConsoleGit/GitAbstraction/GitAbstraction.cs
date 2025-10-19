@@ -174,11 +174,14 @@ namespace GitAbstraction
 		}
 
 		public ErrorOr<Success> Fetch() {
-			if (!IsRepositoryReady) {
-				Clone();
-			}
 			string logMessage = "";
 			try {
+				if (!IsRepositoryReady) {
+					var cloneComand = Clone();
+					if (cloneComand.IsError) {
+						return cloneComand.Errors;
+					}
+				}
 				Remote remote = InitializedRepository.Network.Remotes["origin"];
 				IEnumerable<string> refSpecs = remote.FetchRefSpecs.Select(x => x.Specification);
 				FetchOptions fetchOptions = new() {
