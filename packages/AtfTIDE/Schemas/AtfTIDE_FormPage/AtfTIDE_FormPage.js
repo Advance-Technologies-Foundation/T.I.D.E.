@@ -2349,11 +2349,6 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 						showNotification: true,
 						recordIdProcessParameterName: request.recordIdProcessParameterName,
 					});
-					await handlerChain.process({
-						type: 'atf.OnGetDiffCLicked',
-						$context: request.$context,
-						scopes: [...request.scopes]
-					});
 					return next?.handle(request);
 				}
 			},
@@ -2373,34 +2368,6 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 						processRunType: request.processRunType,
 						recordIdProcessParameterName: request.recordIdProcessParameterName,
 					});
-				}
-			},
-
-			{
-				request: 'crt.HandleViewModelResumeRequest',
-				handler: async (request, next) => {
-					const messageChannelService = new sdk.MessageChannelService();
-					/*request.$context.MySubscription = await messageChannelService.subscribe("AtfTide",
-						(message)=> {
-							const body = message.body.message;
-							const commandName = message.body.commandName;
-
-							const handlerChain = sdk.HandlerChainService.instance;
-							switch (commandName){
-								case 'LoadDataRequest':
-									return handlerChain.process({
-										type: 'crt.LoadDataRequest',
-										$context: request.$context,
-										scopes: request.scopes,
-										dataSourceName: body,
-										config: {
-											loadType: "reload",
-											useLastLoadParameters: true
-										}
-									});
-							}
-						}
-					);*/
 				}
 			},
 			{
@@ -2429,16 +2396,6 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 										$context: request.$context,
 										scopes: [...request.scopes],
 									});
-									/*return handlerChain.process({
-										type: 'crt.LoadDataRequest',
-										$context: request.$context,
-										scopes: request.scopes,
-										dataSourceName: body, 
-										config: {
-											loadType: "reload",
-											useLastLoadParameters: true
-										}
-									});*/
 							}
 						}
 					);
