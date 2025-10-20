@@ -7,7 +7,7 @@ public class CloneCommand(CommandLineArgs args, IWebSocketLogger logger) : BaseR
 
 	public override ErrorOr<Success> Execute(){
 		try {
-			return InitializedRepository.Clone().MatchFirst<ErrorOr<Success>>(
+			return InitializedRepository.Clone(Args.BranchName).MatchFirst<ErrorOr<Success>>(
 				_ => Result.Success,
 				failure => failure
 			);

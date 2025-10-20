@@ -3,16 +3,6 @@ using Terrasoft.Core.Factories;
 
 namespace Terrasoft.Core.Process.Configuration
 {
-
-	using System;
-	using System.Collections.Generic;
-	using System.Collections.ObjectModel;
-	using System.Globalization;
-	using Terrasoft.Common;
-	using Terrasoft.Core;
-	using Terrasoft.Core.Configuration;
-	using Terrasoft.Core.DB;
-	using Terrasoft.Core.Entities;
 	using Terrasoft.Core.Process;
 
 	#region Class: AtfProcessUserTask_CloneRepository
@@ -37,7 +27,11 @@ namespace Terrasoft.Core.Process.Configuration
 				UserName = repositoryInfo.UserName,
 				RepoDir = HelperFunctions.GetRepositoryDirectory(repositoryInfo.Name).ToString(),
 			};
-			
+
+			if (!string.IsNullOrEmpty(repositoryInfo.BranchName)) {
+				args.BranchName = repositoryInfo.BranchName;
+			}
+
 			ConsoleGitResult gitCommandResult = ClassFactory
 				.Get<IConsoleGit>("AtfTIDE.ConsoleGit")
 				.Execute(args);
@@ -52,9 +46,6 @@ namespace Terrasoft.Core.Process.Configuration
 			return true;
 		}
 	}
-
-	
-	
 	
 	#endregion
 

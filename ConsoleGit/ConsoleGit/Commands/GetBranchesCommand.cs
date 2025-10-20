@@ -8,13 +8,16 @@ using LibGit2Sharp;
 namespace ConsoleGit.Commands;
 
 /// <summary>
-/// Pushes the specified branch to the remote repository.
+/// Gets lists of git branch.
 /// </summary>
 /// <param name="args">Arguments</param>
 /// <seealso href="https://github.com/libgit2/libgit2sharp/wiki/git-branch"/>
 public class GetBranchesCommand(CommandLineArgs args, IWebSocketLogger logger) : BaseRepositoryCommand(args, logger) {
 	public override ErrorOr<Success> Execute() {
-		InitializedRepository.Fetch();
+		var fetchErrors = InitializedRepository.Fetch();
+		if(fetchErrors.IsError){
+			return fetchErrors.Errors;
+		}
 		ErrorOr<IEnumerable<Branch>> branches = InitializedRepository.ListLocalBranches();
 		if(branches.IsError){
 			return branches.Errors;

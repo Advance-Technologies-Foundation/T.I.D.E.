@@ -1623,7 +1623,7 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 				"values": {
 					"type": "crt.FlexContainer",
 					"direction": "row",
-					"gap": "none",
+					"gap": "extra-small",
 					"alignItems": "center",
 					"items": [],
 					"layoutConfig": {
@@ -1758,29 +1758,28 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 			},
 			{
 				"operation": "insert",
-				"name": "GridContainer_7bizhk0",
+				"name": "Button_avep4v6",
 				"values": {
-					"type": "crt.GridContainer",
-					"columns": [
-						"minmax(32px, 1fr)"
-					],
-					"rows": "minmax(max-content, 32px)",
-					"gap": {
-						"columnGap": "large",
-						"rowGap": "none"
-					},
-					"items": [],
-					"fitContent": true,
+					"type": "crt.Button",
+					"caption": "#ResourceString(Button_avep4v6_caption)#",
+					"color": "outline",
+					"disabled": false,
+					"size": "large",
+					"iconPosition": "left-icon",
 					"visible": true,
-					"color": "transparent",
-					"borderRadius": "none",
-					"padding": {
-						"top": "none",
-						"right": "none",
-						"bottom": "none",
-						"left": "medium"
+					"clicked": {
+						"request": "atf.RunSetActiveBranchBP",
+						"params": {
+							"processName": "AtfProcess_SetActiveBranch",
+							"processRunType": "ForTheSelectedPage",
+							"showNotification": true,
+							"processParameters": {
+								"Branch": "$GridDetail_t9wy0f2_ActiveRow"
+							}
+						}
 					},
-					"alignItems": "stretch"
+					"clickMode": "default",
+					"icon": "checkmark-icon"
 				},
 				"parentName": "FlexContainer_rlolpw6",
 				"propertyName": "items",
@@ -1994,7 +1993,7 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 								"type": "atf.ShouldEndWithGitAndBeAlink",
 								"disabled": false,
 								"params": {
-									"message": "Must be an <b>HTTP(S)</b> and must end with <b>.git</b>"
+									"message": "Must be an 'HTTP(S)' and must end with '.git'"
 								}
 							}
 						}
@@ -2002,6 +2001,11 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 					"PDS_AtfAccessToken_nzu843o": {
 						"modelConfig": {
 							"path": "PDS.AtfAccessToken"
+						},
+						"validators": {
+							"requiredValidator": {
+								"type": "crt.Required"
+							}
 						}
 					},
 					"GridDetail_t9wy0f2": {
@@ -2300,6 +2304,38 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 				}
 			},
 			{
+				request: 'atf.RunSetActiveBranchBP',
+				handler: async (request, next) =>{
+					const handlerChain = sdk.HandlerChainService.instance;
+					const activeBranchId = await request.$context['GridDetail_t9wy0f2_ActiveRow'];
+					if(!activeBranchId) {
+						const dialogResult = await handlerChain.process({
+							type: 'crt.ShowDialogRequest',
+							$context: this.$context,
+							dialogConfig: {
+								data: {
+									title: "Error",
+									message: "Please select branch recod"
+								}
+							}
+						});
+						return;
+					} 
+					await handlerChain.process({
+						type: 'crt.RunBusinessProcessRequest',
+						$context: request.$context,
+						scopes: [...request.scopes],
+						processName: request.processName,
+						processRunType: request.processRunType,
+						saveAtProcessStart: true,
+						showNotification: true,
+						processParameters: {
+							Branch: activeBranchId
+						}
+					});
+				}
+			},
+			{
 				request: 'atf.OnLoadChangesToLocalCopyClick',
 				handler: async (request, next) => {
 					const handlerChain = sdk.HandlerChainService.instance;
@@ -2312,11 +2348,6 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 						saveAtProcessStart: true,
 						showNotification: true,
 						recordIdProcessParameterName: request.recordIdProcessParameterName,
-					});
-					await handlerChain.process({
-						type: 'atf.OnGetDiffCLicked',
-						$context: request.$context,
-						scopes: [...request.scopes]
 					});
 					return next?.handle(request);
 				}
@@ -2339,41 +2370,13 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 					});
 				}
 			},
-
-			{
-				request: 'crt.HandleViewModelResumeRequest',
-				handler: async (request, next) => {
-					const messageChannelService = new sdk.MessageChannelService();
-					request.$context.MySubscription = await messageChannelService.subscribe("AtfTide",
-						(message)=> {
-							const body = message.body.message;
-							const commandName = message.body.commandName;
-
-							const handlerChain = sdk.HandlerChainService.instance;
-							switch (commandName){
-								case 'LoadDataRequest':
-									return handlerChain.process({
-										type: 'crt.LoadDataRequest',
-										$context: request.$context,
-										scopes: request.scopes,
-										dataSourceName: body,
-										config: {
-											loadType: "reload",
-											useLastLoadParameters: true
-										}
-									});
-							}
-						}
-					);
-				}
-			},
 			{
 				request: 'crt.HandleViewModelInitRequest',
 				handler: async (request, next) => {
 					const { $context } = request;
 					const messageChannelService = new sdk.MessageChannelService();
 					const sysSettingsService = new sdk.SysSettingsService();
-					
+					const id = await request.$context.Id;
 					const showGitTab = await sysSettingsService.getByCode('AtfShowGitTab');
 					request.$context.IsGitTabVisible = showGitTab.value;
 					
@@ -2381,7 +2384,7 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 					request.$context.IsAdvancedTabVisible = showAdvancedTab.value;
 
 					request.$context.MySubscription = await messageChannelService.subscribe("AtfTide",
-						(message) => {
+						(message) =>  {
 							const body = message.body.message;
 							const commandName = message.body.commandName;
 
@@ -2389,14 +2392,9 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 							switch (commandName){
 								case 'LoadDataRequest':
 									return handlerChain.process({
-										type: 'crt.LoadDataRequest',
+										type: 'atf.OnGetDiffCLicked',
 										$context: request.$context,
-										scopes: request.scopes,
-										dataSourceName: body, 
-										config: {
-											loadType: "reload",
-											useLastLoadParameters: true
-										}
+										scopes: [...request.scopes],
 									});
 							}
 						}

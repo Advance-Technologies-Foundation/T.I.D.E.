@@ -50,6 +50,9 @@ namespace GitAbstraction
 
 		private Lazy<Repository> RepositoryLazy => new Lazy<Repository>(() => new Repository(RepoDirectory.FullName));
 
+		private bool IsRepositoryReady => RepoDirectory.Exists && (Repository.IsValid(RepoDirectory.FullName) ||
+			Repository.IsValid(Path.Combine(RepoDirectory.FullName, ".git")));
+
 		#endregion
 
 		#region Methods: Private
@@ -112,10 +115,12 @@ namespace GitAbstraction
 		///  Clones the repository to the specified directory.
 		/// </summary>
 		/// <returns>
+		/// <param name="branchName">
+		///  Branch name for checkout.
 		///  An <see cref="ErrorOr{T}" /> containing the path to the cloned repository or an error.
 		/// </returns>
 		/// <seealso href="https://github.com/libgit2/libgit2sharp/wiki/git-clone">libgit2sharp Wiki Clone</seealso>
-		public ErrorOr<string> Clone() {
+		public ErrorOr<string> Clone(string branchName = null) {
 			if (RepoDirectory.Exists) {
 				DeleteDirectoryRecursively(RepoDirectory);
 				//RepoDirectory.Delete(true);
@@ -126,6 +131,7 @@ namespace GitAbstraction
 			CloneOptions cloneOptions = new CloneOptions() {
 				Checkout = true,
 				RecurseSubmodules = true,
+				BranchName = string.IsNullOrWhiteSpace(branchName) ? null : branchName,
 				FetchOptions = {
 					CredentialsProvider = CredentialsProvider,
 					Depth = 5, // Shallow clone
@@ -133,14 +139,10 @@ namespace GitAbstraction
 				}
 			};
 			try {
-				if (Credentials == null) {
-					return Repository.Clone(GitUrl.ToString(), RepoDirectory.FullName);
-				}
-				cloneOptions.FetchOptions.CredentialsProvider = CredentialsProvider;
-				string result = Repository.Clone(GitUrl.ToString(), RepoDirectory.FullName, cloneOptions);
-				return result;
-			}
-			catch (Exception e) {
+				return Credentials == null
+						? Repository.Clone(GitUrl.ToString(), RepoDirectory.FullName)
+						: Repository.Clone(GitUrl.ToString(), RepoDirectory.FullName, cloneOptions);
+			} catch (Exception e) {
 				string errorMessage = $"""
 									Failed to clone repository to: {RepoDirectory.FullName}
 									Permissions: {GetAccessPermissionsForFolder(RepoDirectory.FullName)}
@@ -151,8 +153,6 @@ namespace GitAbstraction
 			}
 		}
 
-		
-		
 		private static  string GetAccessPermissionsForFolder(string repoDir) {
 			DirectoryInfo directoryInfo = new DirectoryInfo(repoDir);
 			if(directoryInfo.Exists) {
@@ -172,28 +172,32 @@ namespace GitAbstraction
 			}
 			return $"{directoryInfo.FullName} does not exist.";
 		}
-		
+
 		public ErrorOr<Success> Fetch() {
 			string logMessage = "";
 			try {
+				if (!IsRepositoryReady) {
+					var cloneComand = Clone();
+					if (cloneComand.IsError) {
+						return cloneComand.Errors;
+					}
+				}
 				Remote remote = InitializedRepository.Network.Remotes["origin"];
 				IEnumerable<string> refSpecs = remote.FetchRefSpecs.Select(x => x.Specification);
-				FetchOptions fetchOptions = new () {
+				FetchOptions fetchOptions = new() {
 					CredentialsProvider = CredentialsProvider,
-					Prune = true,	// Automatically prune deleted branches
-					Depth = 1		// Shallow fetch
+					Prune = true,   // Automatically prune deleted branches
+					Depth = 1       // Shallow fetch
 				};
-				
+
 				Commands.Fetch(InitializedRepository, remote.Name, refSpecs, fetchOptions, logMessage);
 				Console.Out.WriteLine(logMessage);
 				return Result.Success;
-			}
-			catch (Exception e) {
+			} catch (Exception e) {
 				Console.Error.WriteLine($"Error fetching from remote repository: {e.Message}");
 				return Error.Failure("FetchError", $"Failed to fetch from remote repository: {logMessage}\r\n {e.Message}");
 			}
 		}
-
 
 		public void Dispose() {
 			Dispose(true);
