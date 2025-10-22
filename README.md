@@ -64,7 +64,8 @@ TIDE allows you to work with multiple Git repositories. You do all source contro
 5. Press *Save* 
 
 # Installing Application from Git
-1. Press *Update from Git* to download the application packages from repository and install the application to Creatio.
+1. Set your active [branch](#branching)
+2. Press *Update from Git* to download the application packages from repository and install the application to Creatio.
 2. Now you can start making changes using Creatio no-code tools.
 
 # Synchronizing Changes
@@ -78,11 +79,11 @@ Go to *Source Control* tab.
 2. List of changed files will be populated.
 3. Now review all changed files.
 
-# Branching (experimental)
+# Branching
 > **_NOTE:_**  New branches have to be created outside TIDE.
 1. Go to *Branches* tab
 2. Press *Synchronize branches with repository* to update the list of available branches.
-3. Press *Set active branch* to set current working branch.
+3. Press *Set active branch* to set current working branch. Active branch will be displayed on the left side on the repository page.
 
 # Troubleshooting
 You can access log by clicking *View logs* button at the top of the toolbar. The logs will be shown in the right-hand side panel.
@@ -92,7 +93,7 @@ During installation, TIDE installs to the target Creatio two additional componen
 1. Git console. 
 2. clio-gate.
 
-If your source control operations are failing, check that those two components are installed. 
+If your source control operations are failing, check that those two components are installed. TIDE -> Actions -> Install console git
 
 Also check if your token is valid and has read/write permissions.
 
