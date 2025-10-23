@@ -1,16 +1,16 @@
-﻿{
+{
   "Descriptor": {
     "UId": "57902d1e-ea0c-4991-b367-992c12d68fb2",
-    "PackageVersion": "1.5.17",
+    "PackageVersion": "1.5.20",
     "Name": "AtfTIDE",
     "Type": 1,
-    "ModifiedOnUtc": "\/Date(1760440754000)\/",
+    "ModifiedOnUtc": "\/Date(1761205237968)\/",
     "Maintainer": "ATF",
     "ProjectPath": "Files/AtfTIDE.csproj",
     "DependsOn": [
       {
         "UId": "012e2e14-082b-ac2b-da5a-2fc87bad41d4",
-        "PackageVersion": "7.8.0",
+        "PackageVersion": "1.5.20",
         "Name": "CrtCore",
         "Type": 1
       }
