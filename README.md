@@ -68,22 +68,27 @@ TIDE allows you to work with multiple Git repositories. You do all source contro
 2. Press *Update from Git* to download the application packages from repository and install the application to Creatio.
 2. Now you can start making changes using Creatio no-code tools.
 
-# Synchronizing Changes
-Go to *Source Control* tab.
-1. Press *Commit to Git* to commit changes to Git
-2. Enter commit message
-
-# Reviewing Changes
+#Source Control
+## Reviewing Changes
 Go to *Source Control* tab.
 1. Press Load changes from Creatio.
 2. List of changed files will be populated.
 3. Now review all changed files.
+4. You can commit all changes at once or pick files to be committed by selecting the checkbox in the change list.
 
-# Branching
+> **_NOTE:_**  In Creatio prior to 8.3.2 the text changes made by UI editor may have appeared in a random order inside Creatio schemas. This behavior was changed to save changes in order. During the first commit with version 8.3.2 you may see more changes than expected, it's fine. The next synchronization will not introduce additional changes.
+
+## Synchronizing Changes
+Go to *Source Control* tab.
+1. Press *Commit to Git* to commit changes to Git
+2. Enter commit message
+
+## Branching
 > **_NOTE:_**  New branches have to be created outside TIDE.
-1. Go to *Branches* tab
-2. Press *Synchronize branches with repository* to update the list of available branches.
-3. Press *Set active branch* to set current working branch. Active branch will be displayed on the left side on the repository page.
+
+Go to *Branches* tab
+1. Press *Synchronize branches with repository* to update the list of available branches.
+2. Press *Set active branch* to set current working branch. Active branch will be displayed on the left side on the repository page.
 
 # Troubleshooting
 You can access log by clicking *View logs* button at the top of the toolbar. The logs will be shown in the right-hand side panel.
