@@ -167,7 +167,7 @@ namespace AtfTIDE {
 		private static void ConfigureEnvironmentVariables(ProcessStartInfo startInfo, IDictionary<string, string> envVariable){
 
 #if DEBUG			
-			var logger = LogManager.GetLogger("TIDE");
+			var logger = LogManager.GetLogger(TideConsts.LoggerName);
 			StringBuilder sb = new StringBuilder();
 #endif
 			
@@ -301,6 +301,7 @@ namespace AtfTIDE {
 
 		Clone,
 		AddAll,
+		AddSome,
 		Push,
 		Pull,
 		Commit,

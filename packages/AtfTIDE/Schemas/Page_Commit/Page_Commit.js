@@ -2,6 +2,7 @@ define("Page_Commit", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_DEPS*/
 	return {
 		viewConfigDiff: /**SCHEMA_VIEW_CONFIG_DIFF*/[
 			{
+				//TEST 111
 				"operation": "merge",
 				"name": "PageTitle",
 				"values": {
@@ -56,6 +57,30 @@ define("Page_Commit", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_DEPS*/
 			},
 			{
 				"operation": "insert",
+				"name": "AtfInput_FileToCommit",
+				"values": {
+					"layoutConfig": {
+						"column": 1,
+						"colSpan": 1,
+						"row": 3,
+						"rowSpan": 1
+					},
+					"type": "crt.Input",
+					"label": "Files to Commit",
+					"control": "$PageParameters_FilesToCommit",
+					"placeholder": "",
+					"tooltip": "",
+					"readonly": true,
+					"multiline": true,
+					"labelPosition": "above",
+					"visible": true
+				},
+				"parentName": "MainContainer",
+				"propertyName": "items",
+				"index": 1
+			},
+			{
+				"operation": "insert",
 				"name": "Button_DO",
 				"values": {
 					"type": "crt.Button",
@@ -89,6 +114,11 @@ define("Page_Commit", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_DEPS*/
 						"modelConfig": {
 							"path": "PageParameters.RepositoryId"
 						}
+					},
+					"PageParameters_FilesToCommit": {
+						"modelConfig": {
+							"path": "PageParameters.FilesToCommit"
+						}
 					}
 				}
 			}
@@ -115,15 +145,17 @@ define("Page_Commit", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_DEPS*/
 					// });
 					
 					const commitMessage = await request.$context.PageParameters_TextParameter1_pka9oej;
+					const filesToCommit = await request.$context.PageParameters_FilesToCommit;
 					await handlerChain.process({
 						type: "crt.RunBusinessProcessRequest",
 						$context: request.$context,
 						scopes: [...request.scopes],
 						processName: "AtfProcess_SaveWorkspaceToGit",
-						"showNotification": true,
+						showNotification: true,
 						processParameters:{
-							"Repository": repositoryId,
-							"CommitMessage": commitMessage
+							Repository: repositoryId,
+							CommitMessage: commitMessage,
+							FileToCommit: filesToCommit
 						}
 					});
 					return await handlerChain.process({

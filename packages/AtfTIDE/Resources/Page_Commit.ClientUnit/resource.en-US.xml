@@ -6,6 +6,7 @@
 			<Item Name="LocalizableStrings.Button_DO_caption.Value" Value="Commit " />
 			<Item Name="LocalizableStrings.Input_lw2u8hn_placeholder.Value" Value="Fill commit message" />
 			<Item Name="LocalizableStrings.PageTitle_caption.Value" Value="Commit changes" />
+			<Item Name="Parameters.6193c2ca-204d-769d-fc14-7728bfe98ed3.Caption" Value="File To Commit" />
 			<Item Name="Parameters.96d5dcfb-9c49-aed2-050c-07d099a853f0.Caption" Value="Commit message" />
 		</Items>
 	</Group>

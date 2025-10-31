@@ -318,6 +318,7 @@ namespace GitAbstraction
 			Commands.Stage(InitializedRepository, "*");
 			return Result.Success;
 		}
+		
 
 		/// <summary>
 		/// Stage (add) a file in a repository that is checked out to the file system:
@@ -328,6 +329,14 @@ namespace GitAbstraction
 		public ErrorOr<Success> AddFile(string filePath) {
 			InitializedRepository.Index.Add(filePath);
 			InitializedRepository.Index.Write();
+			return Result.Success;
+		}
+		public ErrorOr<Success> AddFiles(IEnumerable<string> filesPath) {
+			foreach (string filePath in filesPath) {
+				if (!string.IsNullOrWhiteSpace(filePath)) {
+					Commands.Stage(InitializedRepository, filePath);
+				}
+			}
 			return Result.Success;
 		}
 

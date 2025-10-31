@@ -2,12 +2,14 @@
 <Resources Culture="en-US">
 	<Group Type="String">
 		<Items>
+			<Item Name="BaseElements.ConditionalSequenceFlow11.Caption" Value="Commit selected files" />
 			<Item Name="BaseElements.ConditionalSequenceFlow2.Caption" Value="No active branch" />
 			<Item Name="BaseElements.ConditionalSequenceFlow4.Caption" Value="on Error" />
 			<Item Name="BaseElements.ConditionalSequenceFlow5.Caption" Value="on Error" />
 			<Item Name="BaseElements.ConditionalSequenceFlow6.Caption" Value="On clone repository Error" />
 			<Item Name="BaseElements.ConditionalSequenceFlow7.Caption" Value="on Error" />
 			<Item Name="BaseElements.ConditionalSequenceFlow8.Caption" Value="on Error" />
+			<Item Name="BaseElements.DefaultSequenceFlow9.Caption" Value="Commit all files" />
 			<Item Name="BaseElements.LinkEntityToProcessUserTask1.Caption" Value="Attach to Log" />
 			<Item Name="BaseElements.LinkEntityToProcessUserTask1.Parameters.EntityId.Caption" Value="Object" />
 			<Item Name="BaseElements.LinkEntityToProcessUserTask1.Parameters.EntityId.DisplayValue" Value="[#Repository#]" />
@@ -77,13 +79,6 @@
 			<Item Name="BaseElements.ReadDataUserTask3.Parameters.ResultRowsCount.Caption" Value="Number of records read" />
 			<Item Name="BaseElements.ReadDataUserTask3.Parameters.ResultType.Caption" Value="Type of result" />
 			<Item Name="BaseElements.StartEvent1.Caption" Value="Start" />
-			<Item Name="BaseElements.UserTask1.Caption" Value="Clone Repository" />
-			<Item Name="BaseElements.UserTask1.Parameters.ErrorMessage.Caption" Value="Error message" />
-			<Item Name="BaseElements.UserTask1.Parameters.IsError.Caption" Value="Is error" />
-			<Item Name="BaseElements.UserTask1.Parameters.Output.Caption" Value="Output" />
-			<Item Name="BaseElements.UserTask1.Parameters.Repository.Caption" Value="Repository" />
-			<Item Name="BaseElements.UserTask1.Parameters.Repository.DisplayValue" Value="[#Repository#]" />
-			<Item Name="BaseElements.UserTask1.Parameters.RepositoryFolderPath.Caption" Value="Repository Folder Path" />
 			<Item Name="BaseElements.UserTask10.Caption" Value="Log out PUSH message" />
 			<Item Name="BaseElements.UserTask10.Parameters.LogLevel.Caption" Value="LogLevel" />
 			<Item Name="BaseElements.UserTask10.Parameters.LogLevel.DisplayValue" Value="ERR" />
@@ -108,6 +103,27 @@
 			<Item Name="BaseElements.UserTask13.Parameters.LogLevel.Value" Value="ERR" />
 			<Item Name="BaseElements.UserTask13.Parameters.Message.Caption" Value="Message" />
 			<Item Name="BaseElements.UserTask13.Parameters.Message.DisplayValue" Value="&quot;BP  Checkout branch: &quot;+[#Checkout active branch.Error message#]" />
+			<Item Name="BaseElements.UserTask14.Caption" Value="Git Add Some Files" />
+			<Item Name="BaseElements.UserTask14.Parameters.ErrorMessage.Caption" Value="Error Message" />
+			<Item Name="BaseElements.UserTask14.Parameters.Files.Caption" Value="Files" />
+			<Item Name="BaseElements.UserTask14.Parameters.Files.DisplayValue" Value="[#Files to commit#]" />
+			<Item Name="BaseElements.UserTask14.Parameters.IsError.Caption" Value="Is Error" />
+			<Item Name="BaseElements.UserTask14.Parameters.Output.Caption" Value="Output" />
+			<Item Name="BaseElements.UserTask14.Parameters.Repository.Caption" Value="Repository" />
+			<Item Name="BaseElements.UserTask14.Parameters.Repository.DisplayValue" Value="[#Repository#]" />
+			<Item Name="BaseElements.UserTask15.Caption" Value="Log out ADD message - Copy" />
+			<Item Name="BaseElements.UserTask15.Parameters.LogLevel.Caption" Value="LogLevel" />
+			<Item Name="BaseElements.UserTask15.Parameters.LogLevel.DisplayValue" Value="ERR" />
+			<Item Name="BaseElements.UserTask15.Parameters.LogLevel.Value" Value="ERR" />
+			<Item Name="BaseElements.UserTask15.Parameters.Message.Caption" Value="Message" />
+			<Item Name="BaseElements.UserTask15.Parameters.Message.DisplayValue" Value="&quot;BP GIT ADD FILES: &quot;+[#Git Add All Files.Output#]+&quot; &quot;+[#Git Add All Files.Error Message#]" />
+			<Item Name="BaseElements.UserTask1.Caption" Value="Clone Repository" />
+			<Item Name="BaseElements.UserTask1.Parameters.ErrorMessage.Caption" Value="Error message" />
+			<Item Name="BaseElements.UserTask1.Parameters.IsError.Caption" Value="Is error" />
+			<Item Name="BaseElements.UserTask1.Parameters.Output.Caption" Value="Output" />
+			<Item Name="BaseElements.UserTask1.Parameters.Repository.Caption" Value="Repository" />
+			<Item Name="BaseElements.UserTask1.Parameters.Repository.DisplayValue" Value="[#Repository#]" />
+			<Item Name="BaseElements.UserTask1.Parameters.RepositoryFolderPath.Caption" Value="Repository Folder Path" />
 			<Item Name="BaseElements.UserTask2.Caption" Value="Git Add All Files" />
 			<Item Name="BaseElements.UserTask2.Parameters.ErrorMessage.Caption" Value="Error Message" />
 			<Item Name="BaseElements.UserTask2.Parameters.IsError.Caption" Value="Is Error" />
@@ -174,6 +190,8 @@
 			<Item Name="NotificationCaption.Caption" Value="Process instance caption" />
 			<Item Name="NotificationCaption.DisplayValue" Value="[#Process name#]" />
 			<Item Name="Parameters.CommitMessage.Caption" Value="CommitMessage" />
+			<Item Name="Parameters.FileToCommit.Caption" Value="Files to commit" />
+			<Item Name="Parameters.FileToCommit.Sys_Description" Value="Coma separated list of files to stage and commit" />
 			<Item Name="Parameters.Repository.Caption" Value="Repository" />
 			<Item Name="Parameters.Repository.Sys_Description" Value="Repository" />
 		</Items>

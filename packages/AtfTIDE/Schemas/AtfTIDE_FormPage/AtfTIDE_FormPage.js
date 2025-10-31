@@ -1214,6 +1214,18 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 							"dataSourceName": "GridDetail_62r7nr2DS"
 						}
 					},
+					"features": {
+						"rows": {
+							"selection": true,
+							"numeration": false,
+							"toolbar": false
+						},
+						"editable": {
+							"enable": false,
+							"floatingEditPanel": false,
+							"itemsCreation": false
+						}
+					},
 					"visible": true,
 					"clickMode": "default"
 				},
@@ -2292,13 +2304,23 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 				handler: async (request, next) =>{
 					const handlerChain = sdk.HandlerChainService.instance;
 					const id = await request.$context.Id;
+
+
+					const changedFiles = await handlerChain.process({
+						type: 'atf.GetSelectedFiles',
+						$context: request.$context,
+						scopes: [...request.scopes],
+					});
+					
+					const changedFilesStr = changedFiles.join(',');
 					return await handlerChain.process({
 						type: 'crt.OpenPageRequest',
 						$context: request.$context,
 						scopes: [...request.scopes],
 						schemaName: "Page_Commit",
 						parameters: {
-							RepositoryId: id
+							RepositoryId: id,
+							FilesToCommit: changedFilesStr
 						}
 					});
 				}
@@ -2430,18 +2452,154 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 				}
 			},
 			{
-				request: 'atf.DiscardChanges',
+				request: 'atf.GetSelectedFiles',
 				handler: async (request, next) => {
-					const selectedRows = request.$context.attributes.GridDetail_62r7nr2_SelectedRows;
-					let filesToDiscard = [];
-					for (let i = 0; i < selectedRows.length; i++) {
-						const id = request.$context.attributes.GridDetail_62r7nr2[i].attributes.GridDetail_62r7nr2DS_Id;
-						if(id === selectedRows[i]){
-							const fileName = request.$context.attributes.GridDetail_62r7nr2[i].attributes.GridDetail_62r7nr2DS_AtfFileName;
-							console.log(fileName);
-							filesToDiscard.push(fileName);
+					let selectedFiles = [];
+					//New after 8.3.2
+					const selectedState = request.$context.attributes.GridDetail_62r7nr2_SelectionState;
+					if(selectedState && selectedState.selected && selectedState.selected.length > 0){
+						for (let i = 0; i < selectedState.selected.length; i++) {
+							for(let j = 0; j < request.$context.attributes.GridDetail_62r7nr2.length; j++){
+								const id = request.$context.attributes["GridDetail_62r7nr2"][j].attributes["GridDetail_62r7nr2DS_Id"];
+								if(id === selectedState.selected[i]){
+									const fileName = request.$context.attributes.GridDetail_62r7nr2[j].attributes.GridDetail_62r7nr2DS_AtfFileName;
+									selectedFiles.push(fileName);
+								}
+							}
+						}
+					} else {
+						//OLD
+						const selectedRows = request.$context.attributes.GridDetail_62r7nr2_SelectedRows;
+						for (let i = 0; i < selectedRows.length; i++) {
+							const id = request.$context.attributes.GridDetail_62r7nr2[i].attributes.GridDetail_62r7nr2DS_Id;
+							if(id === selectedRows[i]){
+								const fileName = request.$context.attributes.GridDetail_62r7nr2[i].attributes.GridDetail_62r7nr2DS_AtfFileName;
+								selectedFiles.push(fileName);
+							}
 						}
 					}
+					return selectedFiles;
+				}
+			},
+			{
+				request: 'atf.ShowInfoDialog',
+				handler: async (request, next) => {
+
+					const dialogConfig = {
+						titleCaption: "!!! WARNING !!!",
+						messageCaption: "Selected changes will be permanently deleted and cannot be undone. Selected schemas and files will be restored to their state in git. Do you want to continue?",
+						cancelButtonCaption: "Cancel",
+						revertButtonCaption: "Revert"
+					};
+					
+					const dialogResult = await handlerChain.process({
+						type: 'crt.ShowDialogRequest',
+						$context: request.$context,
+						dialogConfig: {
+							data: {
+								title: dialogConfig.titleCaption,
+								message: dialogConfig.messageCaption,
+								actions: [
+									{
+										key: 'Cancel',
+										config: {
+											color: 'default',
+											caption: dialogConfig.cancelButtonCaption
+										}
+									},
+									{
+										key: 'Revert',
+										config: {
+											color: 'warning',
+											caption: dialogConfig.revertButtonCaption
+										}
+									}
+								]
+							}
+						}
+					});
+					return dialogResult;
+				}
+			},
+			{
+				request: 'atf.DiscardChanges',
+				handler: async (request, next) => {
+
+					//Asks user a question
+					const handlerChain = sdk.HandlerChainService.instance;
+					const dialogConfig = {
+						titleCaption: "!!! WARNING !!!",
+						messageCaption: "Selected changes will be permanently deleted and cannot be undone. Selected schemas and files will be restored to their state in git. Do you want to continue?",
+						cancelButtonCaption: "Cancel",
+						revertButtonCaption: "Revert"
+					};
+
+					const dialogResult = await handlerChain.process({
+						type: 'crt.ShowDialogRequest',
+						$context: request.$context,
+						dialogConfig: {
+							data: {
+								title: dialogConfig.titleCaption,
+								message: dialogConfig.messageCaption,
+								actions: [
+									{
+										key: 'Cancel',
+										config: {
+											color: 'default',
+											caption: dialogConfig.cancelButtonCaption
+										}
+									},
+									{
+										key: 'Revert',
+										config: {
+											color: 'warn',
+											caption: dialogConfig.revertButtonCaption
+										}
+									}
+								]
+							}
+						}
+					});
+					
+					
+					if(dialogResult !== 'Revert'){
+						return next?.handle(request);
+					}
+					let filesToDiscard = [];
+					
+					//New after 8.3.2
+					const selectedState = request.$context.attributes.GridDetail_62r7nr2_SelectionState;
+					
+					//request.$context.attributes["GridDetail_62r7nr2"][0].attributes["GridDetail_62r7nr2DS_AtfFileName"]
+					
+					if(selectedState && selectedState.selected && selectedState.selected.length > 0){
+						for (let i = 0; i < selectedState.selected.length; i++) {
+							
+							for(let j = 0; j < request.$context.attributes.GridDetail_62r7nr2.length; j++){
+								const id = request.$context.attributes["GridDetail_62r7nr2"][j].attributes["GridDetail_62r7nr2DS_Id"];
+								if(id === selectedState.selected[i]){
+									const fileName = request.$context.attributes.GridDetail_62r7nr2[j].attributes.GridDetail_62r7nr2DS_AtfFileName;
+									console.log(fileName);
+									filesToDiscard.push(fileName);
+								}
+								
+							}
+							
+						}
+					}else{
+						//OLD
+						const selectedRows = request.$context.attributes.GridDetail_62r7nr2_SelectedRows; 					
+						for (let i = 0; i < selectedRows.length; i++) {
+							const id = request.$context.attributes.GridDetail_62r7nr2[i].attributes.GridDetail_62r7nr2DS_Id;
+							if(id === selectedRows[i]){
+								const fileName = request.$context.attributes.GridDetail_62r7nr2[i].attributes.GridDetail_62r7nr2DS_AtfFileName;
+								console.log(fileName);
+								filesToDiscard.push(fileName);
+							}
+						}
+					}
+					
+					
 					var endpoint = `/rest/Tide/DiscardFileChanges`;
 					const httpClientService = new sdk.HttpClientService();
 					
@@ -2452,7 +2610,17 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 					
 					const response = await httpClientService.post(endpoint, body);
 					if(response && response.body==="OK"){
-						const handlerChain = sdk.HandlerChainService.instance;
+						await handlerChain.process({
+							type: 'crt.RunBusinessProcessRequest',
+							$context: request.$context,
+							scopes: [...request.scopes],
+							processName: "AtfProcess_LoadWorkspaceFromLocalCopy",
+							processRunType: "ForTheSelectedPage",
+							saveAtProcessStart: true,
+							showNotification: true,
+							recordIdProcessParameterName: "Repository"
+						});
+						
 						await handlerChain.process({
 							type: 'atf.OnGetDiffCLicked',
 							$context: request.$context,
@@ -2468,7 +2636,6 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 								useLastLoadParameters: true
 							}
 						});
-						
 					}
 					return next?.handle(request);
 				},
@@ -2480,7 +2647,7 @@ define("AtfTIDE_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_D
 					return next?.handle(request);
 				}
 			}
-
+			
 		]/**SCHEMA_HANDLERS*/,
 		converters: /**SCHEMA_CONVERTERS*/{}/**SCHEMA_CONVERTERS*/,
 		validators: /**SCHEMA_VALIDATORS*/{

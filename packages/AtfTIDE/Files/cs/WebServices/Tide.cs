@@ -205,13 +205,17 @@ namespace AtfTIDE.WebServices{
                 , Files = string.Join(",", dto.Files)
             };
 
-
             ConsoleGitResult gitCommandResult = ClassFactory
                 .Get<IConsoleGit>("AtfTIDE.ConsoleGit")
                 .Execute(args);
             return "OK";
         }
 
+        
+        
+        
+        
+        
         /// <summary>
         ///     Returns a Git diff for the repository identified by <paramref name="repositoryId" />.
         /// </summary>

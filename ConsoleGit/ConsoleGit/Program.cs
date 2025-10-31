@@ -60,6 +60,7 @@ public static class Program
 										services.AddScoped<CheckoutCommand>();
 										services.AddScoped<PushCommand>();
 										services.AddScoped<AddAllCommand>();
+										services.AddScoped<AddSomeCommand>();
 										services.AddScoped<CommitCommand>();
 										services.AddScoped<DownloadPackagesCommand>();
 										services.AddScoped<GetActiveBranchCommand>();
@@ -84,6 +85,7 @@ public static class Program
 									"Checkout" => host.Services.GetRequiredService<CheckoutCommand>(),
 									"Push" => host.Services.GetRequiredService<PushCommand>(),
 									"AddAll" =>host.Services.GetRequiredService<AddAllCommand>(),
+									"AddSome" =>host.Services.GetRequiredService<AddSomeCommand>(),
 									"Commit" =>host.Services.GetRequiredService<CommitCommand>(),
 									"DownloadPackages" =>host.Services.GetRequiredService<DownloadPackagesCommand>(),
 									"GetActiveBranch" => host.Services.GetRequiredService<GetActiveBranchCommand>(),

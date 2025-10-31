@@ -1,0 +1,9 @@
+﻿{
+  "Descriptor": {
+    "UId": "683313d5-dd3e-4428-8ccb-a7989644ff98",
+    "Name": "AtfProcessUserTask_GitAddSome",
+    "ModifiedOnUtc": "\/Date(1761866837000)\/",
+    "ManagerName": "ProcessUserTaskSchemaManager",
+    "Caption": "Git Add Some Files"
+  }
+}

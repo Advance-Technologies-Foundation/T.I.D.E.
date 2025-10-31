@@ -10,6 +10,7 @@
         <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
         <NoWarn>CA1416,CS8618</NoWarn>
         <ApplicationIcon>tide.ico</ApplicationIcon>
+        <Version>1.0.1</Version>
     </PropertyGroup>
 
     <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
